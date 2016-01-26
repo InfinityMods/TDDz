@@ -1,0 +1,48 @@
+IF
+  Global("tz_creature","dd9007",0)
+THEN
+  RESPONSE #100
+    CreateCreature("sahoty01",[93.719],4)
+    CreateCreature("sahoty01",[258.814],4)
+    CreateCreature("sahoty01",[2584.1357],4)
+    CreateCreature("sahoty01",[2733.1302],4)
+    CreateCreature("sahoty01",[3185.1336],4)
+    CreateCreature("sahoty01",[3300.1628],4)
+    CreateCreature("sahoty01",[4646.1840],4)
+    CreateCreature("sahoty01",[4354.2061],4)
+    CreateCreature("trolgi01",[771.1085],4)
+    CreateCreature("trolsp01",[1010.1231],4)
+    CreateCreature("trolgi01",[761.1372],4)
+    CreateCreature("trolgi01",[1848.1470],4)
+    CreateCreature("trolsp01",[1995.1480],4)
+    CreateCreature("trolsp01",[2063.1693],4)
+    CreateCreature("trolgi01",[2298.1819],4)
+    CreateCreature("trolgi01",[3239.2416],4)
+    CreateCreature("trolgi01",[3313.2392],4)
+    CreateCreature("trolgi01",[3156.2609],4)
+    CreateCreature("cyc01",[4695.2866],4)
+    CreateCreature("cyc01",[4427.2553],4)
+    CreateCreature("cyc01",[4240.2457],4)
+    CreateCreature("cyc01",[3904.2662],4)
+    CreateCreature("spidph01",[1171.527],4)
+    CreateCreature("spidph01",[1335.607],4)
+    CreateCreature("spidph01",[1266.716],4)
+    CreateCreature("spidph01",[1482.789],4)
+    CreateCreature("spidph01",[2586.2328],4)
+    CreateCreature("spidph01",[2914.2382],4)
+    CreateCreature("spidph01",[2826.2516],4)
+    SetGlobal("tz_creature","dd9007",1)
+END
+
+IF
+  Global("tz_jailboyhord","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("tz_jailboyhord","GLOBAL",2)
+    StartCutSceneMode()
+    Wait(4)
+    FadeToColor([20.0],3)
+    Wait(3)
+    StartCutScene("releaseq")
+END
+

@@ -1,0 +1,7 @@
+BEGIN ~DD0334SH~
+
+IF ~True()~ THEN BEGIN 0
+  SAY @0
+  IF ~~ THEN REPLY @1 DO ~StartStore("DD0334",LastTalkedToBy())~ EXIT
+  IF ~~ THEN REPLY @2 EXIT
+END

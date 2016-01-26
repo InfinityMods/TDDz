@@ -1,0 +1,18 @@
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId(Player1)  // 
+    FadeToColor([20.0],0)
+    LeaveAreaLUA("DD1200","GTRSK002",[337.394],12)
+    ActionOverride(Player2,LeaveAreaLUA("DD1200","GTRSK002",[337.394],12))
+    ActionOverride(Player3,LeaveAreaLUA("DD1200","GTRSK002",[337.394],12))
+    ActionOverride(Player4,LeaveAreaLUA("DD1200","GTRSK002",[337.394],12))
+    ActionOverride(Player5,LeaveAreaLUA("DD1200","GTRSK002",[337.394],12))
+    ActionOverride(Player6,LeaveAreaLUA("DD1200","GTRSK002",[337.394],12))
+    MultiPlayerSync()
+    SetMasterArea("DD1200")
+    FadeFromColor([20.0],0)
+    EndCutSceneMode()
+END
+

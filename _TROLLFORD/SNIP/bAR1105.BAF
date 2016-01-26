@@ -1,0 +1,31 @@
+IF
+	Global("tz_jailboyhord","GLOBAL",4)
+	!Exists("dinan2")
+THEN
+	RESPONSE #100
+		SetGlobal("tz_jailboyhord","GLOBAL",5)
+		CreateCreature("dinan2",[708.619],4) // Dinan
+		CreateCreature("dinmum2",[708.629],4) // Johanna
+END
+
+IF
+	Global("tz_dinquest2","GLOBAL",1)
+THEN
+	RESPONSE #100
+		SetGlobal("tz_dinquest2","GLOBAL",2)
+		Wait(4)
+		ActionOverride("dinan2",StartDialogueNoSet([PC]))
+END
+
+IF
+	Global("tz_kerisreturn","GLOBAL",1)
+	!Exists("dinan3")
+
+THEN
+	RESPONSE #100
+		SetGlobal("tz_kerisreturn","GLOBAL",2)
+		ActionOverride("dinan2",DestroySelf())
+		CreateCreature("dinan3",[708.639],4) // Dinan
+END
+
+

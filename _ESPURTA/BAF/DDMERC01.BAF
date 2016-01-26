@@ -1,0 +1,11 @@
+IF
+  Global("tz_talk","LOCALS",0)
+  See([PC])
+THEN
+  RESPONSE #100
+    SetGlobal("tz_talk","LOCALS",1)
+    MoveToObject(LastSeenBy(Myself))
+    Wait(1)
+    StartDialogue("DDmerc01",LastSeenBy(Myself))
+END
+

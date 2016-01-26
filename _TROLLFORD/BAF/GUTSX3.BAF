@@ -1,0 +1,13 @@
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId(Player1)
+    ActionOverride(Player3,MoveToObject("quadkid2"))
+    Wait(2)
+    ActionOverride(Player3,ForceSpell("quadkid2",WIZARD_BURNING_HANDS))
+    Wait(2)
+    SetGlobal("tz_gutsflee","GLOBAL",1)
+    EndCutSceneMode()
+END
+

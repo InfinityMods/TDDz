@@ -1,0 +1,8 @@
+IF
+  Global("tz_creature","dd9x03",0)
+THEN
+  RESPONSE #100
+    CreateCreature("calitemp",[655.701],4)
+    SetGlobal("tz_creature","dd9x03",1)
+END
+

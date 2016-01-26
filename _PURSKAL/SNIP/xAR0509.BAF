@@ -1,0 +1,19 @@
+IF
+  Global("tz_spawn","AR0509",0)
+  LevelGT(Player1,10)
+THEN
+  RESPONSE #100
+    CreateCreature("DDpkmap",[350.513],12)  // ~Salesman~
+    SetGlobal("tz_spawn","AR0509",1)
+END
+
+
+IF
+  PartyHasItem("DDpkmap")
+  Global("tz_reveal_Purskal","AR0509",0)
+THEN
+  RESPONSE #100
+    RevealAreaOnMap("DD1900")
+    SetGlobal("tz_reveal_Purskal","AR0509",1)
+END
+

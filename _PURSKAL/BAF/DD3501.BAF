@@ -1,0 +1,74 @@
+IF
+  Global("tz_spawn","DD3501",0)
+THEN
+  RESPONSE #100
+    CreateCreature("thork4",[893.1829],4)
+    CreateCreature("pkghost1",[1221.1666],4)
+    CreateCreature("SKELWAx2",[1190.1402],4)
+    CreateCreature("SKELWAx2",[1086.1502],4)
+    CreateCreature("SKELWAx2",[1544.1243],4)
+    CreateCreature("SKELWAx3",[928.1215],4)
+    CreateCreature("ZOMBSExx",[1409.1437],4)
+    CreateCreature("ZOMBSExx",[1258.1064],4)
+    CreateCreature("ZOMBSExx",[1493.1074],4)
+    CreateCreature("SKELWAx3",[555.757],0)
+    CreateCreature("SKELWAx2",[988.885],4)
+    CreateCreature("SKELWAx2",[706.551],4)
+    CreateCreature("ZOMBSExx",[1103.606],4)
+    CreateCreature("ZOMBSExx",[854.514],4)
+    CreateCreature("ZOMBSExx",[914.415],4)
+    CreateCreature("ZOMBSExx",[1160.384],4)
+    CreateCreature("ZOMBSExx",[1101.482],4)
+    CreateCreature("ZOMBSExx",[1141.587],4)
+    CreateCreature("ZOMBSExx",[973.334],4)
+    CreateCreature("ZOMBSExx",[411.1610],4)
+    CreateCreature("ZOMBSExx",[508.1680],4)
+    CreateCreature("ZOMBSExx",[1322.1868],4)
+    CreateCreature("ZOMBSExx",[1400.1965],4)
+    CreateCreature("ZOMBSExx",[1645.1448],4)
+    CreateCreature("ZOMBSExx",[1680.1383],4)
+    CreateCreature("ZOMBSExx",[1718.1442],4)
+    CreateCreature("SKELWAx2",[603.1438],4)
+    CreateCreature("SKELWAx2",[1726.1893],4)
+    CreateCreature("SKELWAx2",[1544.1899],4)
+    CreateCreature("SKELWAx2",[798.1087],4)
+    CreateCreature("SKELWAx2",[687.1136],4)
+    CreateCreature("SKELWAx2",[316.1009],4)
+    CreateCreature("pkghost2",[302.1455],4)
+    CreateCreature("pkghost2",[1896.1543],4)
+    CreateCreature("pkghost2",[1936.1490],4)
+    CreateCreature("pkghost2",[552.998],4)
+    CreateCreature("pkghost3",[1550.780],4)
+    CreateCreature("pkghost2",[1834.1097],4)
+    CreateCreature("pkghost2",[2289.1332],4)
+    CreateCreature("pkghost2",[2357.1420],4)
+    CreateCreature("SKELWAx3",[2399.840],4)
+    SetGlobal("tz_spawn","DD3501",1)
+END
+
+IF
+  Global("tz_pkghost3see","GLOBAL",1)
+THEN
+  RESPONSE #100
+    ClearAllActions()
+    StartCutSceneMode()
+    StartCutScene("cutscarl")
+    SetGlobal("tz_pkghost3see","GLOBAL",2)
+END
+
+IF
+  Global("tz_pkghost3call","GLOBAL",1)
+THEN
+  RESPONSE #100
+    CreateVisualEffect("SPHORWIL",[1471.790])
+    CreateVisualEffect("SPHORWIL",[1576.820])
+    CreateVisualEffect("SPHORWIL",[1284.992])
+    CreateVisualEffect("SPHORWIL",[1493.1061])
+    Wait(1)
+    CreateCreature("SKELWAx2",[1471.790],4)
+    CreateCreature("SKELWAx2",[1576.820],4)
+    CreateCreature("pkghost2",[1284.992],4)
+    CreateCreature("pkghost2",[1493.1061],4)
+    SetGlobal("tz_pkghost3call","GLOBAL",2)
+END
+

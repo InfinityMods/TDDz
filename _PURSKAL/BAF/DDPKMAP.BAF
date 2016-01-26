@@ -1,0 +1,7 @@
+IF
+  Global("tz_destroyself","LOCALS",1)
+THEN
+  RESPONSE #100
+    EscapeAreaDestroy(25)
+END
+

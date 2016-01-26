@@ -1,0 +1,155 @@
+IF
+	Global("tz_cutdemonriat","GLOBAL",0)
+THEN
+	RESPONSE #100
+		SetGlobal("tz_cutdemonriat","GLOBAL",1)
+		Wait(3)
+		FadeToColor([20.0],0)
+		Wait(2)
+		StartCutSceneMode()
+		StartCutScene("demriat1")
+END
+
+IF
+	Global("tz_arvacuthelp","GLOBAL",1)
+THEN
+	RESPONSE #100
+		SetGlobal("tz_arvacuthelp","GLOBAL",2)
+		Wait(4)
+		CreateVisualEffectObject("spportal",Player1)
+		Wait(2)
+		CreateCreatureObject("avracut1",Player1,0,0,0)
+END
+
+IF
+	Global("tz_riatriat","GLOBAL",1)
+THEN
+	RESPONSE #100
+		CreateCreature("demnabr1",[490.1312],4)
+		CreateCreature("demnabr2",[1475.1651],4)
+		CreateCreature("dempitr1",[2663.853],4)
+		CreateCreature("dempitr2",[3962.1617],4)
+		CreateCreature("dembalr1",[1542.3073],4)
+		CreateCreature("demgrdrx",[1418.1759],4)
+		CreateCreature("demgrdrx",[1249.1623],4)
+		CreateCreature("demgrdrx",[1573.1575],4)
+		CreateCreature("demgrdrx",[660.1296],4)
+		CreateCreature("demgrdrx",[462.1471],4)
+		CreateCreature("demgrdrx",[2652.790],4)
+		CreateCreature("demgrdrx",[2461.9921],4)
+		CreateCreature("demgrdrx",[2672.1056],4)
+		CreateCreature("demgrdrx",[1512.2950],4)
+		CreateCreature("demgrdrx",[1744.3005],4)
+		SetGlobal("tz_riatriat","GLOBAL",2)
+END
+
+IF
+	Global("tz_Demridrt","GLOBAL",0)
+	Dead("demnabr1")
+	Dead("demnabr2")
+	Dead("dempitr1")
+	Dead("dempitr2")
+	Dead("dembalr1")
+THEN
+	RESPONSE #100
+		SetGlobal("tz_Demridrt","GLOBAL",1)
+END
+
+IF
+	Global("tz_Demridrt","GLOBAL",1)
+THEN
+	RESPONSE #100
+		Wait(5)
+		SetGlobal("tz_Demridrt","GLOBAL",2)
+		FadeToColor([20.0],0)
+		Wait(2)
+		MoveViewPoint([2405.2506],INSTANT)
+		ActionOverride(Player2,JumpToPoint([2435.2506]))
+		ActionOverride(Player3,JumpToPoint([2405.2526]))
+		ActionOverride(Player4,JumpToPoint([2455.2536]))
+		ActionOverride(Player5,JumpToPoint([2405.2516]))
+		ActionOverride(Player6,JumpToPoint([2475.2506]))
+		ActionOverride(Player1,JumpToPoint([2405.2506]))
+		Wait(3)
+		FadeFromColor([20.0],0)
+		Wait(2)
+END
+
+IF
+	Global("tz_Demridrt","GLOBAL",2)
+THEN
+	RESPONSE #100
+		Wait(4)
+		CreateVisualEffect("spdimndr",[2251.2415])
+		Wait(1)
+		CreateCreature("avrabatt",[2251.2415],4)
+		SetGlobal("tz_Demridrt","GLOBAL",3)
+END
+
+IF
+	Global("tz_orgothcity","GLOBAL",1)
+THEN
+	RESPONSE #100
+		Wait(3)
+		CreateVisualEffect("spplanar",[2670.2285])
+		Wait(1)
+		CreateVisualEffect("spportal",[2670.2285])
+		Wait(1)
+		CreateVisualEffect("spplanar",[2670.2285])
+		Wait(1)
+		CreateVisualEffect("spportal",[2670.2285])
+		CreateVisualEffect("spplanar",[2670.2285])
+		Wait(1)
+		CreateVisualEffect("spportal",[2670.2285])
+		CreateVisualEffect("spplanar",[2670.2285])
+		CreateVisualEffect("spdimndr",[2670.2285])
+		Wait(2)
+		CreateCreature("orgoth02",[2670.2285],4)
+		SetGlobal("tz_orgothcity","GLOBAL",2)
+END
+
+IF
+	Global("tz_orgothdead","GLOBAL",1)
+THEN
+	RESPONSE #100
+		SetGlobal("tz_orgothdead","GLOBAL",2)
+		StartCutSceneMode()
+		StartCutScene("orthavra")
+END
+
+IF
+	Global("tz_orgothguilt","GLOBAL",1)
+THEN
+	RESPONSE #100
+		ActionOverride("orgoth02",StartDialog("orgyield",Player1))
+		SetGlobal("tz_orgothguilt","GLOBAL",2)
+END
+
+IF
+	Global("tz_riatshow","GLOBAL",1)
+THEN
+	RESPONSE #100
+		SetGlobal("tz_riatshow","GLOBAL",2)
+		StartCutSceneMode()
+		StartCutScene("magfiter")
+END
+
+IF
+	Global("tz_orgothover","GLOBAL",1)
+THEN
+	RESPONSE #100
+		ActionOverride("avbatt02",StartDialog("avthanx",Player1))
+		SetGlobal("tz_orgothover","GLOBAL",2)
+END
+
+IF
+	Global("tz_riatnew","GLOBAL",1)
+THEN
+	RESPONSE #100
+		SetGlobal("tz_riatnew","GLOBAL",2)
+		FadeToColor([20.0],0)
+		Wait(2)
+		StartCutSceneMode()
+		StartCutScene("riatretn")
+END
+

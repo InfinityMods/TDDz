@@ -1,0 +1,48 @@
+IF
+  Global("tz_mesee","LOCALS",0)
+  See([PC])
+THEN
+  RESPONSE #100
+    StartDialogNoSet([PC])
+    SetGlobal("tz_mesee","LOCALS",1)
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  Global("tz_prep","LOCALS",0)
+THEN
+  RESPONSE #100
+    ForceSpell(Myself,2627)
+    SetGlobal("tz_prep","LOCALS",1)
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+THEN
+  RESPONSE #100
+    EquipMostDamagingMelee()
+    Attack(NearestEnemyOf(Myself))
+END
+
+IF
+  Heard([ANYONE],111)
+THEN
+  RESPONSE #100
+    MoveToObject(NearestEnemyOf(Myself))
+END
+
+IF
+  AttackedBy([GOODCUTOFF],DEFAULT)
+  !Allegiance(Myself,ENEMY)
+THEN
+  RESPONSE #100
+    Enemy()
+END
+
+IF
+  AttackedBy([ANYONE],DEFAULT)
+THEN
+  RESPONSE #100
+    Attack(LastAttackerOf(Myself))
+END
+

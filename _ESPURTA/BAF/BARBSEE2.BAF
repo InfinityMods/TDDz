@@ -1,0 +1,56 @@
+IF
+  Global("tz_mornin","GLOBAL",0)
+  See([PC])
+  Range([PC],10)
+THEN
+  RESPONSE #100
+    StartDialogNoSet([PC])
+    SetGlobal("tz_mornin","GLOBAL",1)
+END
+
+IF
+  Global("tz_mornin","GLOBAL",1)
+THEN
+  RESPONSE #100
+    EscapeArea()
+END
+
+IF
+  AttackedBy([ANYONE],DEFAULT)
+THEN
+  RESPONSE #100
+    Attack(LastAttackerOf(Myself))
+END
+
+IF
+  See([0.0.YUANTI])
+THEN
+  RESPONSE #100
+    Attack([0.0.YUANTI])
+END
+
+IF
+  AttackedBy([GOODCUTOFF],DEFAULT)
+  Allegiance(Myself,NEUTRAL)
+THEN
+  RESPONSE #100
+    Shout(99)
+    Enemy()
+END
+
+IF
+  HitBy([GOODCUTOFF],CRUSHING)
+THEN
+  RESPONSE #100
+    Shout(99)
+    Continue()
+END
+
+IF
+  Heard([ANYONE],99)
+  Allegiance(Myself,NEUTRAL)
+THEN
+  RESPONSE #100
+    Enemy()
+END
+

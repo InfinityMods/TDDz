@@ -1,0 +1,165 @@
+IF
+  Global("tz_spawn","DD1900",0)
+THEN
+  RESPONSE #100
+    CreateCreature("pkdog",[3964.1397],4)
+    CreateCreature("pkdog",[3171.1174],4)
+    CreateCreature("pkdog",[1861.839],4)
+    CreateCreature("pkdog",[1495.1175],4)
+    CreateCreature("pkchat1",[3524.1109],4)
+    CreateCreature("pkchat2",[3401.1077],4)
+    CreateCreature("pkchat3",[3823.894],4)
+    CreateCreature("pkgard1",[3933.1174],4)
+    CreateCreature("pkladdy",[2550.1258],4)
+    CreateCreature("pkladdy",[3245.1255],4)
+    CreateCreature("pkladdy",[3836.494],4)
+    CreateCreature("pkladdy",[2392.1027],4)
+    CreateCreature("pkladdy",[1673.1078],4)
+    CreateCreature("pkladdy",[1236.754],4)
+    CreateCreature("deer01",[750.194],4)
+    CreateCreature("rabbit01",[138.596],4)
+    CreateCreature("rabbit01",[174.1383],4)
+    CreateCreature("rabbit01",[1447.1383],4)
+    CreateCreature("grhog01",[1812.2269],4)
+    CreateCreature("grhog01",[868.2758],4)
+    CreateCreature("squirl",[2800.2461],4)
+    CreateCreature("squirl",[4343.2230],4)
+    CreateCreature("squirl",[4814.1539],4)
+    CreateCreature("pkgard2",[2365.771],4)
+    CreateCreature("pkgard2",[2313.755],4)
+    CreateCreature("pkgard2",[2335.762],4)
+    CreateCreature("pkgard2",[2350.802],4)
+    CreateCreature("pkgard2",[2329.765],4)
+    SetGlobal("tz_spawn","DD1900",1)
+    TriggerActivation("Door1903",FALSE)
+END
+
+IF
+  Global("tz_thork1","GLOBAL",1)
+THEN
+  RESPONSE #100
+    CreateCreature("pkorfa",[2253.3216],4)
+    SetGlobal("tz_thork1","GLOBAL",2)
+END
+
+IF
+  Global("tz_thork1","GLOBAL",3)
+THEN
+  RESPONSE #100
+    GiveItemCreate("orfalog",Player1,0,0,0)
+    SetGlobal("tz_thork1","GLOBAL",4)
+END
+
+IF
+  Global("tz_thork1","GLOBAL",4)
+THEN
+  RESPONSE #100
+    CreateCreature("pkmarcus",[518.1718],4)
+    SetGlobal("tz_thork1","GLOBAL",5)
+END
+
+IF
+  Global("tz_thork1","GLOBAL",6)
+THEN
+  RESPONSE #100
+    SetGlobal("tz_thork1","GLOBAL",7)
+    CreateCreature("pkbird",[550.1750],4)
+    StartCutSceneMode()
+    StartCutScene("cutmarc")
+END
+
+IF
+  Global("tz_thork1","GLOBAL",9)
+THEN
+  RESPONSE #100
+    GiveItemCreate("budgie",Player1,0,0,0)
+    SetGlobal("tz_thork1","GLOBAL",10)
+END
+
+IF
+  Global("tz_thork1","GLOBAL",13)
+THEN
+  RESPONSE #100
+    SetGlobal("tz_thork1","GLOBAL",14)
+    CreateCreature("thork2",[2350.802],4)
+END
+
+IF
+  Global("tz_thorkrid","GLOBAL",4)
+THEN
+  RESPONSE #100
+    TriggerActivation("Door1903",TRUE)
+    SetGlobal("tz_thorkrid","GLOBAL",5)
+    StartCutSceneMode()
+    StartCutScene("cutrid")
+END
+
+IF
+  AreaCheckObject("DD1900",Player1)
+  Global("tz_pklichagain","GLOBAL",2)
+THEN
+  RESPONSE #100
+    Explore()
+    DayNight(MIDNIGHT)
+    Weather(RAIN)
+    CreateCreature("wtthork6",[3066.1413],4)
+    CreateCreature("thorkd1",[3294.1261],4)
+    CreateCreature("thorkd2",[2994.1187],4)
+    CreateCreature("thorkd3",[3199.1619],4)
+    CreateCreature("thorkd4",[2909.1400],4)
+    ClearAllActions()
+    StartCutSceneMode()
+    StartCutScene("cutthor6")
+    SetGlobal("tz_pklichagain","GLOBAL",3)
+END
+
+IF
+  Global("tz_pkcatch","GLOBAL",2)
+THEN
+  RESPONSE #100
+    AddexperienceParty(DD1900_BAF_100000) // TDD xp=100000
+    SetGlobal("tz_pkcatch","GLOBAL",3)
+END
+
+IF
+  Global("tz_pkcatch","GLOBAL",3)
+THEN
+  RESPONSE #100
+    CreateCreature("pkmess",[2300.1371],0)
+    SetGlobal("tz_pkcatch","GLOBAL",4)
+END
+
+IF
+  Global("tz_pkmessrun","GLOBAL",4)
+THEN
+  RESPONSE #100
+    CreateCreature("pkloth2",[2258.819],4)
+    SetGlobal("tz_pkmessrun","GLOBAL",5)
+END
+
+IF
+  Global("tz_pkmessrun","GLOBAL",6)
+THEN
+  RESPONSE #100
+    StartCutSceneMode()
+    StartCutScene("pklothx")
+END
+
+IF
+  Global("tz_pkmessrun","GLOBAL",8) // Erolas ending
+THEN
+  RESPONSE #100
+    AddexperienceParty(DD1900_BAF_25000) // TDD xp=25000
+    ReputationInc(1)
+    CreateCreature("pkmess2",[2530.1377],4)
+    SetGlobal("tz_pkmessrun","GLOBAL",9)
+END
+
+IF
+  Global("tz_pkmessrun","GLOBAL",11) // Final
+THEN
+  RESPONSE #100
+    GiveItemCreate("quakeham",Player1,0,0,0)
+    SetGlobal("tz_pkmessrun","GLOBAL",12)
+END
+

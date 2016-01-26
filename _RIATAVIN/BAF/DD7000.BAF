@@ -1,0 +1,29 @@
+IF
+  Global("tz_riatavinblitz","GLOBAL",2)
+THEN
+  RESPONSE #100
+    SetGlobal("tz_riatavinblitz","GLOBAL",3)
+    CreateCreature("maprinvi",[366.3059],4)
+END
+
+IF
+  Global("tz_maprinvisee","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("tz_maprinvisee","GLOBAL",2)
+    StartCutSceneMode()
+    CutSceneId(Player1)
+    FadeToColor([20.0],0)
+    Wait(2)
+    StartCutScene("riatcutd")
+END
+
+IF
+  Global("tz_add_map_notes","DD7000",0)
+THEN
+  RESPONSE #100
+    SetGlobal("tz_add_map_notes","DD7000",1)
+    AddMapNote([617.1076],@10000)
+    AddMapNote([134.3217],@10001)
+END
+

@@ -1,0 +1,16 @@
+IF
+  See(NearestEnemyOf(Myself))
+  Range(NearestEnemyOf(Myself),15)
+THEN
+  RESPONSE #100
+    EquipMostDamagingMelee()
+    Attack(NearestEnemyOf(Myself))
+END
+
+IF
+  Global("tz_eightdead","GLOBAL",3)
+THEN
+  RESPONSE #100
+    DestroySelf()
+END
+

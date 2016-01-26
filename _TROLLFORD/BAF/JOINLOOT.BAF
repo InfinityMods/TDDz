@@ -1,0 +1,28 @@
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId(Player1)
+    Explore()
+    MoveViewObject("qloot1",VERY_FAST)
+    ActionOverride("qloot2",MoveToPoint([470.927]))
+    ActionOverride("qloot3",MoveToPoint([770.1016]))
+    ActionOverride("qloot4",MoveToPoint([772.1158]))
+    Wait(10)
+    ActionOverride("qloot2",FaceObject(Player1))
+    ActionOverride("qloot1",FaceObject(Player1))
+    ActionOverride("qloot3",FaceObject(Player1))
+    ActionOverride("qloot4",FaceObject(Player1))
+    ActionOverride(Player2,FaceObject("qloot1"))
+    ActionOverride(Player3,FaceObject("qloot1"))
+    ActionOverride(Player4,FaceObject("qloot1"))
+    ActionOverride(Player5,FaceObject("qloot1"))
+    ActionOverride(Player6,FaceObject("qloot1"))
+    FaceObject("qloot1")
+    Wait(2)
+    DisplayStringHead("qloot1",@10153)
+    Wait(4)
+    SetGlobal("tz_lootjoin","GLOBAL",2)
+    EndCutSceneMode()
+END
+

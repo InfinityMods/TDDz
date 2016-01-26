@@ -1,0 +1,19 @@
+BEGIN ~BGHQ1~
+
+IF ~!Allegiance(Myself,ENEMY)~ THEN BEGIN 0
+  SAY @0
+  IF ~~ THEN REPLY @1 GOTO 1
+  IF ~Kit(LastTalkedToBy(),ASSASIN)~ THEN REPLY @2 GOTO 2
+  IF ~~ THEN REPLY @3 EXIT
+END
+
+IF ~~ THEN BEGIN 1 // from: 0.0
+  SAY @4
+  IF ~~ THEN REPLY @5 EXIT
+  IF ~~ THEN REPLY @6 EXIT
+END
+
+IF ~~ THEN BEGIN 2 // from: 0.1
+  SAY @7
+  IF ~~ THEN EXIT
+END

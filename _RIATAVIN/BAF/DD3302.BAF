@@ -1,0 +1,23 @@
+IF
+  Global("tz_DD3302","DD3302",0)
+THEN
+  RESPONSE #100
+    CreateCreature("bgtav1A",[1817.1182],4)
+    CreateCreature("bgtav1B",[1010.807],4)
+    CreateCreature("bgtavst2",[1480.1019],4)
+    CreateCreature("bgtavst1",[1411.954],4)
+    CreateCreature("bgtavst2",[1450.1327],4)
+    CreateCreature("bgtavst1",[1285.1183],4)
+    CreateCreature("bgtavst2",[982.940],4)
+    CreateCreature("bgtavst1",[1194.772],4)
+    CreateCreature("bgtavst1",[1657.698],4)
+    CreateCreature("bgtavst1",[1766.776],4)
+    CreateCreature("bgtavst2",[2052.814],4)
+    CreateCreature("bgtavst1",[2042.1005],4)
+    CreateCreature("bgtavst2",[287.1153],4)
+    CreateCreature("bgtavst2",[581.1134],4)
+    CreateCreature("bgtavst1",[1183.1477],4)
+    CreateCreature("bgtavst2",[1120.1652],4)
+    SetGlobal("tz_DD3302","DD3302",1)
+END
+

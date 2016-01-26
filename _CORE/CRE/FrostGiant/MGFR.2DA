@@ -1,0 +1,41 @@
+Mno2/Frost Giant (TDD)
+***
+						SOUND
+ATTACK          		gfrst01 gfrst02 nosound
+ATTACK          		0 0 0
+AWAKE           		***
+AWAKE           		0
+CAST            		***
+CAST            		0
+CONJURE         		***
+CONJURE         		0
+DAMAGE          		gfrst07 gfrst08
+DAMAGE          		0 0
+DIE             		gfrst09
+DIE             		0
+HEAD_TURN       		***
+HEAD_TURN       		0
+READY           		***
+READY           		0
+SHOOT           		***
+SHOOT           		0
+TWITCH          		***
+TWITCH          		0
+WALK            		***
+WALK            		0
+ATTACK_SLASH    		gfrst03a gfrst03b gfrst03c 
+ATTACK_SLASH    		0 0 0
+ATTACK_BACKSLASH		gfrst04a gfrst04b gfrst04c
+ATTACK_BACKSLASH		0 0
+ATTACK_JAB      		gfrst10 gfrst03d
+ATTACK_JAB      		0 0
+EMERGE          		***
+EMERGE          		0
+HIDE            		***
+HIDE            		0
+SLEEP          			***
+SLEEP          			0
+Battle_Cry			gfrst01 gfrst02
+Battle_Cry			0 0
+Selection                       gfrst11a gfrst11b
+Selection                       0 0

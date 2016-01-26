@@ -1,0 +1,54 @@
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId(Player1)
+    Wait(2)
+    LeaveAreaLUA("dd0200","",[168.1942],12)
+    MultiPlayerSync()
+    SetMasterArea("dd0200")
+    MultiPlayerSync()
+    FadeFromColor([20.0],0)
+    EndCutSceneMode()
+END
+
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId(Player2)
+    LeaveAreaLUA("dd0200","",[168.1942],12)
+END
+
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId(Player3)
+    LeaveAreaLUA("dd0200","",[168.1942],12)
+END
+
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId(Player4)
+    LeaveAreaLUA("dd0200","",[168.1942],12)
+END
+
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId(Player5)
+    LeaveAreaLUA("dd0200","",[168.1942],12)
+END
+
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId(Player6)
+    LeaveAreaLUA("dd0200","",[168.1942],12)
+END
+

@@ -1,0 +1,9 @@
+IF
+  Global("tz_quadkid3","LOCALS",0)
+  See([PC])
+THEN
+  RESPONSE #100
+    SetGlobal("tz_quadkid3","LOCALS",1)
+    StartDialogNoSet([PC])
+END
+

@@ -1,0 +1,45 @@
+IF
+  Global("tz_creature","dd9004",0)
+THEN
+  RESPONSE #100
+    CreateCreature("trolgi01",[572.1268],4)
+    CreateCreature("trolsi01",[1023.1044],4)
+    CreateCreature("trolgi01",[830.727],4)
+    CreateCreature("trolgi01",[1022.668],4)
+    CreateCreature("trolsi01",[2216.1100],4)
+    CreateCreature("trolsi01",[2059.1216],4)
+    CreateCreature("trolgi01",[1564.1214],4)
+    CreateCreature("trolgi01",[1554.1990],4)
+    CreateCreature("trolgi01",[1668.2048],4)
+    CreateCreature("orc01",[1193.1158],4)
+    CreateCreature("orc04",[991.1109],4)
+    CreateCreature("orc02",[889.1482],4)
+    CreateCreature("orc01",[1008.1538],4)
+    CreateCreature("orc01",[2763.2300],4)
+    CreateCreature("orc02",[2545.2006],4)
+    CreateCreature("orc01",[2648.1817],4)
+    CreateCreature("orc04",[2518.1797],4)
+    CreateCreature("spidph01",[1562.621],4)
+    CreateCreature("spidph01",[1699.486],4)
+    CreateCreature("spidph01",[1879.511],4)
+    CreateCreature("spidph01",[2303.681],4)
+    CreateCreature("spidph01",[2493.804],4)
+    CreateCreature("spidph01",[2364.986],4)
+    CreateCreature("spidph01",[1596.679],4)
+    CreateCreature("spidph01",[2484.774],4)
+    CreateCreature("spidph01",[2742.758],4)
+    CreateCreature("spidph01",[2856.627],4)
+    CreateCreature("quadkid1",[410.644],4)
+    CreateCreature("quadtol1",[513.686],4)
+    SetGlobal("tz_creature","dd9004",1)
+END
+
+IF
+  Global("tz_trolboyslay","GLOBAL",0)
+THEN
+  RESPONSE #100
+    SetGlobal("tz_trolboyslay","GLOBAL",1)
+    StartCutSceneMode()
+    StartCutScene("trolboys")
+END
+

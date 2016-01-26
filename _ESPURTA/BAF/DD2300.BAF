@@ -1,0 +1,35 @@
+IF
+  Global("tz_spawn","DD2300",0)
+THEN
+  RESPONSE #100
+    SetGlobal("tz_spawn","DD2300",1)
+    CreateCreature("DDfarm01",[1970.1638],0)
+    CreateCreature("DDsold06",[429.2243],0)
+    CreateCreature("DDsold06",[1608.511],0)
+    CreateCreature("DDsold06",[3659.195],0)
+    CreateCreature("DDsold04",[1428.3093],0)
+    CreateCreature("DDsold04",[1604.3125],0)
+    CreateCreature("DDsold01",[1940.2467],0)
+    CreateCreature("DDsold01",[1504.2277],0)
+    CreateCreature("DDsold01",[1835.1949],0)
+    CreateCreature("DDsold01",[2322.2237],0)
+    CreateCreature("DDsold01",[3010.2575],0)
+    CreateCreature("DDsold01",[4662.2208],0)
+    CreateCreature("DDsold02",[3825.2447],0)
+    CreateCreature("DDsold03",[3487.1949],0)
+    CreateCreature("DDmerc01",[1526.3010],0) // ReveaArea DD1800
+    CreateCreature("DDsold01",[1940.2467],0)
+    CreateCreature("DDTROLL1",[643.377],0)
+    CreateCreature("DDTROLL1",[643.377],0)
+    CreateCreature("DDTROLL1",[2361.295],0)
+    CreateCreature("DDYUAN02",[2361.295],0)
+    CreateCreature("DDTROLL1",[4848.620],0)
+    CreateCreature("DDYUAN01",[4848.620],0)
+    CreateCreature("DDYUAN01",[690.2705],0)
+    CreateCreature("DDYUAN03",[690.2705],0)
+    CreateCreature("DDfrost1",[4179.638],0)
+    CreateCreature("DDTROLL1",[2486.3420],0)
+    CreateCreature("DDfrost1",[3798.3426],0)
+    CreateCreature("DDTROLL1",[4939.3117],0)
+END
+

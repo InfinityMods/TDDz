@@ -1,0 +1,6 @@
+BEGIN ~BGSH06~
+
+IF ~!Allegiance(Myself,ENEMY)~ THEN BEGIN 0
+  SAY @0
+  IF ~~ THEN EXIT
+END

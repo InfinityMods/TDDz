@@ -1,0 +1,10 @@
+IF
+  Global("tz_pkmine","GLOBAL",1)
+THEN
+  RESPONSE #100
+    MoveToPoint([2062.1892])
+    Wait(1)
+    CreateCreatureObject("pkagalb",Myself,0,0,0)
+    DestroySelf()
+END
+

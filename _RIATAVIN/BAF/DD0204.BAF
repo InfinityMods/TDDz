@@ -1,0 +1,8 @@
+IF
+  Global("tz_creature","DD0204",0)
+THEN
+  RESPONSE #100
+    CreateCreature("overgold",[595.588],4)
+    SetGlobal("tz_creature","DD0204",1)
+END
+

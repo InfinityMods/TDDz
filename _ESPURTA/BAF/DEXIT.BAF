@@ -1,0 +1,19 @@
+IF
+  Global("tz_dexit","GLOBAL",0)
+  See([PC])
+  Range([PC],20)
+THEN
+  RESPONSE #100
+    StartDialogNoSet([PC])
+END
+
+IF
+  Global("tz_dexit","GLOBAL",1)
+THEN
+  RESPONSE #100
+    MoveToPoint([3315.625])
+    SetGlobal("tz_dexit","GLOBAL",2)
+    Wait(4)
+    DestroySelf()
+END
+

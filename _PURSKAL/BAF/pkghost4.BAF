@@ -1,0 +1,65 @@
+IF
+  Global("tz_pkghost4see","GLOBAL",0)
+  See([PC])
+THEN
+  RESPONSE #100
+    SetGlobal("tz_pkghost4see","GLOBAL",1)
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  !GlobalTimerNotExpired("tz_BPT","LOCALS")
+  !Range(NearestEnemyOf(Myself),10)
+  Global("tz_pkghost1","LOCALS",0)
+THEN
+  RESPONSE #100
+    ForceSpell(NearestEnemyOf(Myself),MIST_CHAOS)
+    SetGlobal("tz_pkghost1","LOCALS",1)
+    SetGlobalTimer("tz_BPT","LOCALS",8)
+END
+
+IF
+  See(SecondNearestEnemyOf(Myself))
+  !GlobalTimerNotExpired("tz_BPT","LOCALS")
+  !Range(NearestEnemyOf(Myself),10)
+  Global("tz_pkghost1b","LOCALS",0)
+THEN
+  RESPONSE #100
+    ForceSpell(SecondNearestEnemyOf(Myself),MIST_HORROR)
+    SetGlobal("tz_pkghost1b","LOCALS",1)
+    SetGlobalTimer("tz_BPT","LOCALS",8)
+END
+
+IF
+  See(ThirdNearestEnemyOf(Myself))
+  !GlobalTimerNotExpired("tz_BPT","LOCALS")
+  !Range(ThirdNearestEnemyOf(Myself),10)
+  Global("tz_pkghost1c","LOCALS",0)
+THEN
+  RESPONSE #100
+    ForceSpell(ThirdNearestEnemyOf(Myself),PSIONIC_MIND_BLAST)
+    SetGlobal("tz_pkghost1c","LOCALS",1)
+    SetGlobalTimer("tz_BPT","LOCALS",8)
+END
+
+IF
+  See(FourthNearestEnemyOf(Myself))
+  !GlobalTimerNotExpired("tz_BPT","LOCALS")
+  !Range(FourthNearestEnemyOf(Myself),10)
+  Global("tz_pkghost1d","LOCALS",0)
+THEN
+  RESPONSE #100
+    ForceSpell(FourthNearestEnemyOf(Myself),POWERWORD_STUN)
+    SetGlobal("tz_pkghost1d","LOCALS",1)
+    SetGlobalTimer("tz_BPT","LOCALS",8)
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  Range(NearestEnemyOf(Myself),10)
+THEN
+  RESPONSE #100
+    EquipMostDamagingMelee()
+    Attack(NearestEnemyOf(Myself))
+END
+

@@ -1,0 +1,22 @@
+IF
+  Global("tz_DD9201","GLOBAL",0)
+THEN
+  RESPONSE #100
+    CreateCreature("pktent1",[1022.643],4)
+    CreateCreature("pktent2",[698.517],4)
+    CreateCreature("pktent3",[833.705],4)
+    CreateCreature("pktent4",[435.478],4)
+    CreateCreature("pktent5",[586.698],4)
+    CreateCreature("thork1",[945.499],4)
+    SetGlobal("tz_DD9201","GLOBAL",1)
+END
+
+IF
+  Global("tz_thork1","GLOBAL",12)
+THEN
+  RESPONSE #100
+    TakePartyItem("budgie")
+    TakePartyItem("orfalog")
+    SetGlobal("tz_thork1","GLOBAL",13)
+END
+

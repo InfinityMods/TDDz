@@ -1,0 +1,10 @@
+IF
+  Global("tz_orgoinvisee","GLOBAL",0)
+  See([PC])
+  Range([PC],25)
+THEN
+  RESPONSE #100
+    DestroySelf()
+    SetGlobal("tz_orgoinvisee","GLOBAL",1)
+END
+

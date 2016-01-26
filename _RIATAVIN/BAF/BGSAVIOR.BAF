@@ -1,0 +1,28 @@
+IF
+  Global("tz_gwitness","GLOBAL",7)
+  See([PC])
+  Range([PC],10)
+THEN
+  RESPONSE #100
+    StartDialogNoSet([PC])
+    SetGlobal("tz_gwitness","GLOBAL",9)
+END
+
+IF
+  Global("tz_gwitness","GLOBAL",8)
+  See([PC])
+  Range([PC],10)
+THEN
+  RESPONSE #100
+    StartDialogNoSet([PC])
+    SetGlobal("tz_gwitness","GLOBAL",9)
+END
+
+IF
+  Global("tz_gwitness","GLOBAL",10)
+THEN
+  RESPONSE #100
+    EscapeArea()
+    SetGlobal("tz_gwitness","GLOBAL",11)
+END
+

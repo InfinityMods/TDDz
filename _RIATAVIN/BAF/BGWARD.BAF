@@ -1,0 +1,24 @@
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId(Player1)   
+    ActionOverride(Player2,FaceObject("bgsh02"))
+    ActionOverride(Player3,FaceObject("bgsh02"))
+    ActionOverride(Player4,FaceObject("bgsh02"))
+    ActionOverride(Player5,FaceObject("bgsh02"))
+    ActionOverride(Player6,FaceObject("bgsh02"))
+    ActionOverride("bgsh02",FaceObject(Player1))
+    Wait(1)
+    DisplayStringHead("bgsh02",@10035)
+    Wait(5)
+    ActionOverride("bgsh02",ForceSpell(Player1,WIZARD_FINGER_OF_DEATH_IGNORE_RESISTANCE))
+    ActionOverride("bgsh02",ForceSpell(Player2,WIZARD_FINGER_OF_DEATH_IGNORE_RESISTANCE))
+    ActionOverride("bgsh02",ForceSpell(Player3,WIZARD_FINGER_OF_DEATH_IGNORE_RESISTANCE))
+    ActionOverride("bgsh02",ForceSpell(Player4,WIZARD_FINGER_OF_DEATH_IGNORE_RESISTANCE))
+    ActionOverride("bgsh02",ForceSpell(Player5,WIZARD_FINGER_OF_DEATH_IGNORE_RESISTANCE))
+    ActionOverride("bgsh02",ForceSpell(Player6,WIZARD_FINGER_OF_DEATH_IGNORE_RESISTANCE))
+    EndCutSceneMode()
+    SetGlobal("tz_bgenchant","GLOBAL",4)
+END
+

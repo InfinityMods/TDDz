@@ -1,0 +1,40 @@
+IF
+  Global("TZ_DUERGARESCAPE","DD9601",0)
+THEN
+  RESPONSE #100
+    CreateCreature("TROLGI01",[593.418],4)
+    CreateCreature("TROLGI01",[1186.435],4)
+    CreateCreature("trolicdd",[906.1101],4)
+    CreateCreature("trolicdd",[1242.1147],4)
+    CreateCreature("trolicdd",[1504.808],4)
+    CreateCreature("trolicdd",[948.688],4)
+    CreateCreature("trolicdd",[1012.880],4)
+    CreateCreature("trolicdd",[292.572],4)
+    CreateCreature("trolicdd",[900.381],4)
+    CreateCreature("Wolfwwdd",[1225.1024],4)
+    CreateCreature("Wolfwwdd",[1239.756],4)
+    CreateCreature("Wolfwwdd",[610.791],4)
+    CreateCreature("Wolfwwdd",[754.706],4)
+    CreateCreature("wolfexit",[1681.322],4)
+    SetGlobal("TZ_DUERGARESCAPE","DD9601",1)
+END
+
+IF
+  Global("TZ_EXITDD9601","GLOBAL",0)
+  Dead("wolfexit")
+THEN
+  RESPONSE #100
+    SetGlobal("TZ_EXITDD9601","GLOBAL",1)
+END
+
+IF
+  Global("TZ_EXITDD9601","GLOBAL",1)
+THEN
+  RESPONSE #100
+    DisplayStringHead(Player1,@10095)
+    Wait(2)
+    StartCutSceneMode()
+    StartCutScene("cutexitx")
+    SetGlobal("TZ_EXITDD9601","GLOBAL",2)
+END
+

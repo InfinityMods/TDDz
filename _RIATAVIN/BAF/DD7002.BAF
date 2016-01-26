@@ -1,0 +1,34 @@
+IF
+  Global("tz_creature","dd7002",0)
+THEN
+  RESPONSE #100
+    SetGlobal("tz_creature","dd7002",1)
+    CreateCreature("mistcd01",[261.657],4)
+    CreateCreature("mistcd01",[542.1290],4)
+    CreateCreature("mistva01",[665.3125],4)
+    CreateCreature("mistcd01",[1321.1823],4)
+    CreateCreature("mistpo01",[1467.1855],4)
+    CreateCreature("mistcd01",[1633.1463],4)
+    CreateCreature("mistho01",[1774.1411],4)
+    CreateCreature("mistcd01",[1846.1517],4)
+    CreateCreature("mistpo01",[2282.1278],4)
+    CreateCreature("mistcd01",[1330.356],4)
+    CreateCreature("mistcd01",[1448.397],4)
+    CreateCreature("mistcd01",[1626.1209],4)
+    CreateCreature("mistcd01",[1623.1261],4)
+    CreateCreature("mistpo01",[1075.1065],4)
+    CreateCreature("mistva01",[1239.1032],4)
+    CreateCreature("mistcd01",[1594.1062],4)
+    CreateCreature("mistho01",[1006.1256],4)
+END
+
+IF
+  Global("tz_add_map_notes","DD7002",0)
+THEN
+  RESPONSE #100
+    SetGlobal("tz_add_map_notes","DD7002",1)
+    AddMapNote([1777.1382],@10003)
+    AddMapNote([2083.858],@10004)
+    AddMapNote([1206.835],@10005)
+END
+

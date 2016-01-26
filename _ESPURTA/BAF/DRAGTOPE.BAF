@@ -1,0 +1,304 @@
+IF
+  Global("TZ_TOPAZPISSED","GLOBAL",1)
+THEN
+  RESPONSE #100
+    Enemy()
+    Setglobaltimer("tz_WINGBUFFET","GLOBAL",8)
+    Setglobaltimer("tz_TOPAZDRAGONBREATH","GLOBAL",1)
+    Setglobaltimer("tz_TOPAZFEAR","LOCALS",1)
+    Setglobaltimer("tz_TpEscape","LOCALS",TWO_ROUNDS)
+    Setglobaltimer("tz_topaz2","LOCALS",FOUR_ROUNDS)
+    Setglobal("TZ_CONTINGENCY","LOCALS",0)
+    Setglobal("TZ_TOPAZPISSED","GLOBAL",2)
+    Continue()
+END
+
+IF
+  See(Nearestenemyof(Myself))
+  Global("TZ_TOPAZ1","LOCALS",0)
+  Global("TZ_TOPAZHATE","GLOBAL",0)
+THEN
+  RESPONSE #100
+    Setglobal("tz_topazhate","GLOBAL",1)
+    Displaystring(Myself,26328)
+    Changeclass(Myself,MAGE)
+    Reallyforcespell(Myself,BEHOLDER_SPELL_TURNING)
+    Reallyforcespell(Myself,WIZARD_PROTECTION_FROM_ENERGY)
+    Reallyforcespell(Myself,WIZARD_STONE_SKIN)
+    Forcespell(Myself,WIZARD_PROTECTION_FROM_MAGIC_WEAPONS)
+    Setglobal("tz_topaz1","LOCALS",1)
+END
+
+IF
+  Hplt(Myself,175)
+  Global("tz_TOPAZINJURED","LOCALS",0)
+THEN
+  RESPONSE #100
+    Reallyforcespell(Myself,WIZARD_PROTECTION_FROM_MAGIC_WEAPONS)
+    Forcespell(Myself,CLERIC_CURE_CRITICAL_WOUNDS)
+    Setglobal("tz_TOPAZINJURED","LOCALS",1)
+END
+
+IF
+  Hplt(Myself,160)
+  Global("tz_TOPAZDEATH","LOCALS",0)
+THEN
+  RESPONSE #100
+    Changeclass(Myself,MAGE)
+    Reallyforcespell(Lastseenby(Myself),TOPAZ_DRAGON_BREATH)
+    Forcespell(Myself,WIZARD_STONE_SKIN)
+    Applyspell(Myself,BEHOLDER_SPELL_TURNING)
+    Forcespell(Myself,CLERIC_CURE_CRITICAL_WOUNDS)
+    Reallyforcespell(Myself,WIZARD_PROTECTION_FROM_MAGIC_ENERGY)
+    Forcespell(Nearestenemyof(Myself),DRAGON_WING_BUFFET)
+    Setglobal("tz_TOPAZDEATH","LOCALS",1)
+END
+
+IF
+  Hplt(Myself,100)
+  Global("tz_TOPAZDEATHX","LOCALS",0)
+THEN
+  RESPONSE #100
+    Changeclass(Myself,MAGE)
+    Reallyforcespell(Myself,WIZARD_PROTECTION_FROM_MAGIC_WEAPONS)
+    Forcespell(Myself,CLERIC_HEAL)
+    Forcespell(Myself,WIZARD_STONE_SKIN)
+    Setglobal("tz_TOPAZDEATHX","LOCALS",1)
+END
+
+IF
+  Allegiance(Myself,ENEMY)
+  !Checkstatgt(Myself,0,STONESKINS)
+  !Globaltimernotexpired("tz_Prot1","LOCALS")
+THEN
+  RESPONSE #100
+    Setglobaltimer("tz_Prot1","LOCALS",SIX_ROUNDS)
+    Changeclass(Myself,MAGE)
+    Forcespell(Myself,WIZARD_STONE_SKIN)
+    Reallyforcespell(Myself,WIZARD_IMPROVED_INVISIBILITY)
+    Reallyforcespell(Secondnearestenemyof(Myself),TOPAZ_DRAGON_BREATH)
+    Continue()
+END
+
+IF
+  See(Thirdnearestenemyof(Myself))
+  !Globaltimernotexpired("tz_TOPAZFEAR","LOCALS")
+THEN
+  RESPONSE #100
+    Reallyforcespell(Secondnearestenemyof(Myself),DRAGON_FEAR)
+    Setglobaltimer("tz_TOPAZFEAR","LOCALS",SIX_ROUNDS)
+    Setglobaltimer("tz_WINGBUFFET","GLOBAL",TWO_ROUNDS)
+    Reallyforcespell(Secondnearestenemyof(Myself),DRAGON_WING_BUFFET)
+    Applyspell(Myself,DRAGON_WING_BUFFET)
+    Continue()
+END
+
+IF
+  Actionlistempty()
+  See(Nearestenemyof(Myself))
+  !Globaltimernotexpired("tz_topaz2","LOCALS")
+THEN
+  RESPONSE #100
+    Reallyforcespell(Nearestenemyof(Myself),WIZARD_ICE_STORM)
+    Forcespell(Myself,WIZARD_PROTECTION_FROM_MAGIC_ENERGY)
+    Setglobaltimer("tz_topaz2","LOCALS",NINE_ROUNDS)
+END
+
+IF
+  !Globaltimernotexpired("tz_WINGBUFFET","GLOBAL")
+  Range(Nearestenemyof(Myself),10)
+  Range(Secondnearestenemyof(Myself),15)
+THEN
+  RESPONSE #100
+    Forcespell(Secondnearestenemyof(Myself),DRAGON_WING_BUFFET)
+    Applyspell(Myself,DRAGON_WING_BUFFET)
+    Setglobaltimer("tz_WINGBUFFET","GLOBAL",TWO_ROUNDS)
+END
+
+IF
+  See(Secondnearestenemyof(Myself))
+  !Range(Lastseenby(Myself),30)
+  !Globaltimernotexpired("tz_TOPAZDRAGONBREATH","GLOBAL")
+THEN
+  RESPONSE #100    
+	Reallyforcespell(Lastseenby(Myself),TOPAZ_DRAGON_BREATH)
+    Reallyforcespell(Nearestenemyof(Myself),DRAGON_WING_BUFFET)
+    Setglobaltimer("tz_WINGBUFFET","GLOBAL",TWO_ROUNDS)
+    Setglobaltimer("tz_TOPAZDRAGONBREATH","GLOBAL",THREE_ROUNDS)
+END
+
+IF
+  Actionlistempty()
+  See(Nearestenemyof(Myself))
+  !Globaltimernotexpired("tz_TOPAZOffense","LOCALS")
+THEN
+  RESPONSE #100
+    Displaystring(Myself,39968)
+    Changeclass(Myself,MAGE)
+    Reallyforcespell(Lastseenby(Myself),WIZARD_GREATER_MALISON)
+    Wait(1)
+    Reallyforcespell(Lastseenby(Myself),WIZARD_CHAOS)
+    Reallyforcespell(Lastseenby(Myself),WIZARD_CONE_OF_COLD)
+    Setglobaltimer("tz_TOPAZOffense","LOCALS",FIVE_ROUNDS)
+END
+
+IF
+  Tookdamage()
+  Global("tz_Contingency","LOCALS",0)
+THEN
+  RESPONSE #100
+    Displaystring(Myself,40252)
+    Reallyforcespell(Myself,WIZARD_PROTECTION_FROM_MAGIC_WEAPONS)
+    Setglobal("tz_Contingency","LOCALS",1)
+END
+
+IF
+  Statecheck(Myself,STATE_SILENCED)
+THEN
+  RESPONSE #100
+    Spellnodec(Myself,WIZARD_VOCALIZE)
+END
+
+IF
+  !Globaltimernotexpired("tz_TpDispel","LOCALS")
+  !Statecheck(Lastseenby(Myself),STATE_SILENCED)
+  !Statecheck(Lastseenby(Myself),STATE_STUNNED)
+  !Statecheck(Lastseenby(Myself),STATE_SLEEPING)
+  Or(9)
+    Statecheck(Lastseenby(Myself),STATE_INVISIBLE)
+    Statecheck(Lastseenby(Myself),STATE_IMPROVEDINVISIBILITY)
+    Statecheck(Lastseenby(Myself),STATE_HASTED)
+    Statecheck(Lastseenby(Myself),STATE_BLESS)
+    Statecheck(Lastseenby(Myself),STATE_DRAWUPONHOLYMIGHT)
+    Statecheck(Lastseenby(Myself),STATE_BLUR)
+    Statecheck(Lastseenby(Myself),STATE_MIRRORIMAGE)
+    Checkstatgt(Lastseenby(Myself),0,IMPROVEDHASTE)
+    Checkstatgt(Lastseenby(Myself),0,STONESKINS)
+THEN
+  RESPONSE #100
+    Setglobaltimer("tz_TpDispel","LOCALS",FIVE_ROUNDS)
+    Changeclass(Myself,MAGE)
+    Forcespell(Lastseenby(Myself),WIZARD_REMOVE_MAGIC)
+    Reallyforcespell(Nearestenemyof(Myself),DRAGON_WING_BUFFET)
+    Continue()
+END
+
+IF
+  See(Nearestenemyof(Myself))
+  !Globaltimernotexpired("tz_TpEscape","LOCALS")
+  !Statecheck(Myself,STATE_HASTED)
+THEN
+  RESPONSE #100
+    Changeclass(Myself,MAGE)
+    Displaystring(Myself,25951)
+    Reallyforcespell(Myself,WIZARD_HASTE)
+    Reallyforcespell(Myself,WIZARD_IMPROVED_INVISIBILITY)
+    Reallyforcespell(Myself,WIZARD_MIRROR_IMAGE)
+    Setglobaltimer("tz_TpEscape","LOCALS",NINE_ROUNDS)
+    Equipmostdamagingmelee()
+    Forcespell(Secondnearestenemyof(Myself),DRAGON_WING_BUFFET)
+    Applyspell(Myself,DRAGON_WING_BUFFET)
+    Setglobaltimer("tz_WINGBUFFET","GLOBAL",TWO_ROUNDS)
+    Attackreevaluate(Nearestenemyof(Myself),30)
+    Attackoneround(Lastseenby(Myself))
+END
+
+IF
+  Actionlistempty()
+  See(Nearestenemyof(Myself))
+  !Globaltimernotexpired("tz_TOPAZDOMINATE","LOCALS")
+THEN
+  RESPONSE #100
+    Reallyforcespell(Lastseenby(Myself),WIZARD_DOMINATION)
+    Setglobaltimer("tz_TOPAZDOMINATE","LOCALS",THREE_ROUNDS)
+END
+
+IF
+  Actionlistempty()
+  Gender(Lastseenby(Myself),SUMMONED)
+  !Checkstatgt(Lastseenby(Myself),25,INT)
+  !Levelgt(Lastseenby(Myself),12)
+  !Globaltimernotexpired("tz_Death","LOCALS")
+THEN
+  RESPONSE #100
+    Setglobaltimer("tz_Death","LOCALS",FOUR_ROUNDS)
+    Reallyforcespell(Lastseenby(Myself),WIZARD_DEATH_SPELL)
+END
+
+IF
+  Actionlistempty()
+  Or(6)
+    Gender(Lastseenby(Myself),ILLUSIONARY)
+    Spellcast([PC],WIZARD_PROJECT_IMAGE)
+    Spellcast([PC],WIZARD_SIMULACRUM)
+    Spellcast([PC],WIZARD_MISLEAD)
+    Statecheck(Lastseenby(Myself),STATE_BLUR)
+    Statecheck(Lastseenby(Myself),STATE_MIRRORIMAGE)
+  !Globaltimernotexpired("tz_TrueSight","LOCALS")
+THEN
+  RESPONSE #100
+    Setglobaltimer("tz_TrueSight","LOCALS",FOUR_ROUNDS)
+    Reallyforcespell(Myself,WIZARD_TRUE_SIGHT)
+END
+
+IF
+  Actionlistempty()
+  Or(6)
+    Class(Lastseenby(Myself),PALADIN_ALL)
+    Class(Lastseenby(Myself),DRUID_ALL)
+    Class(Lastseenby(Myself),CLERIC_ALL)
+    Class(Lastseenby(Myself),BARD_ALL)
+    Class(Lastseenby(Myself),SORCERER)
+    !Statecheck(Lastseenby(Myself),STATE_SILENCED)
+  !Hasbounceeffects(Lastseenby(Myself))
+  !Globaltimernotexpired("tz_dbSilence","LOCALS")
+THEN
+  RESPONSE #100
+    Setglobaltimer("tz_dbSilence","LOCALS",FOUR_ROUNDS)
+    Reallyforcespell(Lastseenby(Myself),DRAGON_SILENCE)
+END
+
+IF
+  See(Nearestenemyof(Myself))
+  !Hasbounceeffects(Myself)
+  Or(3)
+    See(Nearestenemyoftype([PC.GENERAL_ITEM.0.BARD_ALL]))
+    See(Nearestenemyoftype([PC.GENERAL_ITEM.0.SORCERER]))
+    !Statecheck(Lastseenby(Myself),STATE_SILENCED)
+  !Globaltimernotexpired("tz_SpellTurn","LOCALS")
+THEN
+  RESPONSE #100
+    Setglobaltimer("tz_SpellTurn","LOCALS",THREE_ROUNDS)
+    Reallyforcespell(Myself,BEHOLDER_SPELL_TURNING)
+END
+
+IF
+  Actionlistempty()
+  See(Nearestenemyof(Myself))
+THEN
+  RESPONSE #100
+    Equipmostdamagingmelee()
+    Attackreevaluate(Nearestenemyof(Myself),35)
+  RESPONSE #10
+    Forcespell(Lastseenby(Myself),COM_ICE_SHARD)
+    Reallyforcespell(Nearestenemyof(Myself),DRAGON_WING_BUFFET)
+END
+
+IF
+  Actionlistempty()
+  Allegiance(Myself,ENEMY)
+THEN
+  RESPONSE #100
+    Attackreevaluate(Lastseenby(Myself),30)
+END
+
+IF
+  Or(2)
+    !Detect([PC])
+    !Detect(Lastattackerof(Myself))
+  Allegiance(Myself,ENEMY)
+THEN
+  RESPONSE #100
+    Movetoobject(Player1)
+END
+

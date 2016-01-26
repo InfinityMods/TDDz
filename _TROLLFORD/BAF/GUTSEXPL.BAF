@@ -1,0 +1,18 @@
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId(Player1)
+    MoveViewObject("quadkid2",VERY_FAST)
+    DisplayStringHead("quadkid2",@10150)
+    Wait(1)
+    CreateVisualEffectObject("spbldtop","quadkid2")
+    CreateVisualEffectObject("spbldbtm","quadkid2")
+    DisplayStringHead("quadkid2",@10150)
+    CreateVisualEffectObject("spbldtop","quadkid2")
+    CreateVisualEffectObject("spbldbtm","quadkid2")
+    CreateCreatureObject("trollsm2","quadkid2",0,0,0)  // ~Troll~
+    ApplySpell("quadkid2",WIZARD_FINGER_OF_DEATH_IGNORE_RESISTANCE)
+    EndCutSceneMode()
+END
+

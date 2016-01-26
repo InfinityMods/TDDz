@@ -1,0 +1,193 @@
+IF
+  Global("tz_creature","DD3300",0)
+THEN
+  RESPONSE #100
+    CreateCreature("townc01",[1997.2532],4)
+    CreateCreature("bginfo2",[955.1331],4)
+    CreateCreature("bginfo1",[2093.1417],4)
+    CreateCreature("bginfo2",[1927.2364],4)
+    CreateCreature("bginfo1",[2629.3272],4)
+    CreateCreature("bginfo2",[4448.3089],4)
+    CreateCreature("bginfo1",[3787.1827],4)
+    CreateCreature("bggard1",[1833.2019],4)
+    CreateCreature("bggard1",[3320.2338],4)
+    CreateCreature("bggard1",[4692.3131],4)
+    CreateCreature("bggard1",[1475.3009],4)
+    CreateCreature("bggard1",[1562.3009],4)
+    CreateCreature("bggard1",[503.1387],4)
+    CreateCreature("bggard1",[2346.468],4)
+    CreateCreature("horse",[638.1975],4)
+    CreateCreature("horse",[739.2012],4)
+    CreateCreature("bgcom2",[1326.1752],4)
+    CreateCreature("bgcom1",[1504.1478],4)
+    CreateCreature("bgcom1",[3068.932],4)
+    CreateCreature("bgcom2",[3109.2508],4)
+    CreateCreature("bgcom2",[3475.2625],4)
+    CreateCreature("bgcom1",[1942.2827],4)
+    CreateCreature("bgboy1",[1481.2472],4)
+    CreateCreature("bgboy1",[3523.2638],4)
+    CreateCreature("bgboy1",[4454.3103],4)
+    CreateCreature("bgboy1",[3734.1711],4)
+    CreateCreature("bgboy1",[3000.1084],4)
+    CreateCreature("bgboy1",[790.854],4)
+    CreateCreature("bgboy1",[352.1864],4)
+    CreateCreature("bgsell1",[3402.2019],4)
+    CreateCreature("bgsell2",[2108.1156],4)
+    CreateCreature("bggreet",[1794.521],4)
+    CreateCreature("bgwit1",[1760.1505],4)
+    CreateCreature("bgwit2",[1882.1574],4)
+    CreateCreature("bgwit3",[1942.1462],4)
+    CreateCreature("bgstab1",[1875.1505],4)
+    CreateCreature("bghq1",[3463.1209],4)
+    CreateCreature("bghq2",[3643.1326],4)
+    CreateCreature("bghq3",[3595.1168],4)
+    CreateCreature("riatmov1",[4864.1741],4)
+    CreateCreature("riatmov2",[4938.1686],4)
+    CreateCreature("riatmov3",[4927.1798],4)
+    CreateCreature("riatmov4",[5024.1622],4)
+    CreateCreature("riatmov5",[5003.1893],4)
+    SetGlobal("tz_creature","DD3300",1)
+END
+
+IF
+  Global("tz_container_spawn","DD3300",0)
+THEN
+  RESPONSE #100
+    SetGlobal("tz_container_spawn","DD3300",1)
+    ActionOverride("container1",CreateItem("MISC07",15,0,0))
+    ActionOverride("container18",CreateItem("MISC20",2,0,0))
+    ActionOverride("container17",CreateItem("WAND04",9,0,0))
+    ActionOverride("container14",CreateItem("HELM04",0,0,0))
+    ActionOverride("container5",CreateItem("HALB01",0,0,0))
+    ActionOverride("container5",CreateItem("HALB01",0,0,0))
+  RESPONSE #100
+    SetGlobal("tz_container_spawn","DD3300",1)
+    ActionOverride("container1",CreateItem("MISC07",15,0,0))
+    ActionOverride("container17",CreateItem("MISC20",2,0,0))
+    ActionOverride("container13",CreateItem("WAND04",9,0,0))
+    ActionOverride("container15",CreateItem("HELM04",0,0,0))
+    ActionOverride("container6",CreateItem("HALB01",0,0,0))
+    ActionOverride("container6",CreateItem("HALB01",0,0,0))
+  RESPONSE #100
+    SetGlobal("tz_container_spawn","DD3300",1)
+    ActionOverride("container1",CreateItem("MISC07",15,0,0))
+    ActionOverride("container3",CreateItem("MISC20",2,0,0))
+    ActionOverride("container5",CreateItem("WAND04",9,0,0))
+    ActionOverride("container4",CreateItem("HELM04",0,0,0))
+    ActionOverride("container8",CreateItem("HALB01",0,0,0))
+    ActionOverride("container8",CreateItem("HALB01",0,0,0))
+END
+
+IF
+  Global("tz_Riat_donations","DD3300",0)
+THEN
+  RESPONSE #100
+    SetGlobal("tz_Riat_donations","DD3300",3)
+END
+
+IF
+  GlobalLT("tz_Riat_donations","DD3300",2)
+THEN
+  RESPONSE #100
+    ReputationInc(-1)
+    SetGlobal("tz_Riat_donations","DD3300",3)
+END
+
+IF
+  GlobalGT("tz_Riat_donations","DD3300",9)
+THEN
+  RESPONSE #100
+    ReputationInc(1)
+    SetGlobal("tz_Riat_donations","DD3300",3)
+END
+
+IF
+  Global("tz_bgwitness","GLOBAL",1)
+THEN
+  RESPONSE #100
+    CreateCreature("bgsavior",[1867.2434],4)
+    SetGlobal("tz_bgwitness","GLOBAL",2)
+END
+
+IF
+  Global("tz_bgwitness","GLOBAL",3)
+THEN
+  RESPONSE #100
+    SetGlobal("tz_bgwitness","GLOBAL",4)
+    ClearAllActions()
+    StartCutSceneMode()
+    StartCutScene("cutstabH")
+END
+
+IF
+  Global("tz_gwitness","GLOBAL",6)
+THEN
+  RESPONSE #100
+    CreateCreature("bgstab1b",[1885.1505],4)
+    SetGlobal("tz_gwitness","GLOBAL",8)
+END
+
+IF
+  Global("tz_gwitness","GLOBAL",14)
+THEN
+  RESPONSE #100
+    AddexperienceParty(2000)
+    ReputationInc(1)
+    SetGlobal("tz_gwitness","GLOBAL",15)
+END
+
+IF
+  AreaCheckObject("DD3300",Player1)
+  Global("tz_bgenchant","GLOBAL",2)
+THEN
+  RESPONSE #100
+    SetGlobal("tz_bgenchant","GLOBAL",3)
+END
+
+IF
+  AreaCheckObject("DD3300",Player1)
+  Global("tz_bgarival","GLOBAL",1)
+THEN
+  RESPONSE #100
+    ClearAllActions()
+    TriggerActivation("Tran3320",FALSE)
+    CloseDoor("Door3320")
+    Lock("Door3320")
+    StartCutSceneMode()
+    StartCutScene("bgarival")
+END
+
+IF
+  Global("tz_bgarival","GLOBAL",2)
+THEN
+  RESPONSE #100
+    SetGlobal("tz_bgarival","GLOBAL",3)
+    SetGlobalTimer("tz_RiatavinPlague","GLOBAL",TWO_DAYS)
+END
+
+IF
+  OR(2)
+    TimeOfDay(DUSK)
+    TimeOfDay(NIGHT)
+  Global("tz_BlackBladesEncounter","DD3300",0)
+  !Exists("DDmerc02")
+  !Exists("DDBLBL01")
+THEN
+  RESPONSE #100
+    CreateCreature("DDmerc02",[1871.3512],4)
+    CreateCreature("DDBLBL01",[1928.3583],10)
+END
+
+IF
+  OR(2)
+    TimeOfDay(DAY)
+    TimeOfDay(MORNING)
+  Exists("DDMERC02")
+  Exists("DDBLBL01")
+  Global("tz_BlackBladesEncounter","DD3300",0)
+THEN
+  RESPONSE #100
+    ActionOverride("DDmerc02",DestroySelf())
+    ActionOverride("DDBLBL01",DestroySelf())
+END
+

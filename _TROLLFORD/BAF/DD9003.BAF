@@ -1,0 +1,15 @@
+IF
+  Global("tz_creature","dd9003",0)
+THEN
+  RESPONSE #100
+    CreateCreature("orc01",[697.1127],4)
+    CreateCreature("orc01",[629.1004],4)
+    CreateCreature("orc02",[709.951],4)
+    CreateCreature("orc01",[828.1036],4)
+    CreateCreature("orc02",[836.902],4)
+    CreateCreature("orc01",[1005.883],4)
+    CreateCreature("trolgi01",[1087.668],4)
+    CreateCreature("trolgi01",[1395.833],4)
+    SetGlobal("tz_creature","dd9003",1)
+END
+

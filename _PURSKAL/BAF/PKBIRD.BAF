@@ -1,0 +1,7 @@
+IF
+  Global("tz_thork1","GLOBAL",8)
+THEN
+  RESPONSE #100
+    DestroySelf()
+END
+

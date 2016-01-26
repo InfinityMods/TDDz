@@ -1,0 +1,10 @@
+IF
+  See([PC])
+  Range([PC],20)
+  Global("tz_pashtravsee","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("tz_pashtravsee","LOCALS",1)
+    StartDialogNoSet([PC])
+END
+

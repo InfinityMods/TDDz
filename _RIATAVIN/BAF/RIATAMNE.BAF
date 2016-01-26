@@ -1,0 +1,40 @@
+IF
+  Global("tz_riatamnesee","LOCALS",0)
+THEN
+  RESPONSE #100
+    MoveToObject(Player1)
+    SetGlobal("tz_riatamnesee","LOCALS",1)
+END
+
+IF
+  Global("tz_riatamnesee","LOCALS",1)
+  See(Player1)
+  Range(Player1,10)
+THEN
+  RESPONSE #100
+    SetGlobal("tz_riatamnesee","LOCALS",2)
+    StartDialogNoSet(Player1)
+END
+
+IF
+  Heard([ANYONE],111)
+THEN
+  RESPONSE #100
+    MoveToObject(NearestEnemyOf(Myself))
+END
+
+IF
+  AttackedBy([GOODCUTOFF],DEFAULT)
+  !Allegiance(Myself,ENEMY)
+THEN
+  RESPONSE #100
+    Enemy()
+END
+
+IF
+  AttackedBy([ANYONE],DEFAULT)
+THEN
+  RESPONSE #100
+    Attack(LastAttackerOf(Myself))
+END
+

@@ -1,0 +1,26 @@
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId(Player1)
+    Explore()
+    ScreenShake([4173.665],5)
+    Wait(5)
+    ScreenShake([4173.665],5)
+    ActionOverride("hillfro1",MoveToPoint([3882.983]))
+    ActionOverride("hillfro2",MoveToPoint([4039.1018]))
+    ActionOverride("hillfro3",MoveToPoint([4187.1068]))
+    ScreenShake([4173.665],5)
+    Wait(6)
+    ActionOverride("hillfro1",FaceObject(Player1))
+    ActionOverride("hillfro1",FaceObject(Player1))
+    ActionOverride("hillfro1",FaceObject(Player1))
+    ActionOverride(Player2,FaceObject("hillfro1"))
+    ActionOverride(Player3,FaceObject("hillfro1"))
+    ActionOverride(Player4,FaceObject("hillfro1"))
+    ActionOverride(Player5,FaceObject("hillfro1"))
+    FaceObject("hillfro1")
+    ActionOverride("hillfro1",StartDialogNoSet([PC]))
+    EndCutSceneMode()
+END
+

@@ -1,0 +1,66 @@
+IF
+  Global("tz_dwardx","DD4003",0)
+THEN
+  RESPONSE #100
+    CreateCreature("duegrune",[587.491],4)
+    CreateCreature("duegmin1",[1035.548],4)
+    CreateCreature("duegmin1",[704.782],4)
+    CreateCreature("duegmin1",[906.567],4)
+    CreateCreature("duegmin1",[802.675],4)
+    CreateCreature("duegmin2",[1076.652],4)
+    CreateCreature("duegmin2",[831.775],4)
+    CreateCreature("TROLGI01",[1638.644],4)
+    CreateCreature("duegmin1",[1925.889],4)
+    CreateCreature("duegmin2",[2130.860],4)
+    CreateCreature("duegmin2",[1991.860],4)
+    CreateCreature("TROLGI01",[1984.1445],4)
+    CreateCreature("TROLSI01",[2114.1525],4)
+    CreateCreature("SKELWA02",[715.1032],4)
+    CreateCreature("SKELWA02",[756.1165],4)
+    CreateCreature("SKELWA03",[544.1171],4)
+    CreateCreature("duegske1",[958.2253],4)
+    CreateCreature("SKELWA02",[659.1788],4)
+    CreateCreature("SKELWA02",[720.1821],4)
+    CreateCreature("SKELWA03",[603.1860],4)
+    CreateCreature("duegmin2",[2831.778],4)
+    CreateCreature("duegmin2",[3177.733],4)
+    CreateCreature("duegmin2",[3165.526],4)
+    CreateCreature("duegmin2",[3315.624],4)
+    CreateCreature("duegmin1",[3065.914],4)
+    CreateCreature("duegmin1",[2938.910],4)
+    CreateCreature("duegmin1",[3297.507],4)
+    CreateCreature("duegexit",[2934.1097],4)
+    TriggerActivation("To4002",FALSE)
+    SetGlobal("tz_dwardx","DD4003",1)
+END
+
+IF
+  Global("tz_duegskel","GLOBAL",1)
+THEN
+  RESPONSE #100
+    CreateCreature("SKELWA02",[682.2160],4)
+    CreateCreature("SKELWA02",[737.2285],4)
+    CreateCreature("SKELWA02",[840.2381],4)
+    CreateCreature("SKELWA02",[939.2096],4)
+    CreateCreature("SKELWA03",[1135.2196],4)
+    CreateCreature("SKELWA03",[644.2074],4)
+    CreateVisualEffect("SPPLANAR",[682.2160])
+    CreateVisualEffect("SPPLANAR",[737.2285])
+    CreateVisualEffect("SPPLANAR",[840.2381])
+    CreateVisualEffect("SPPLANAR",[939.2096])
+    CreateVisualEffect("SPPLANAR",[1135.2196])
+    CreateVisualEffect("SPPLANAR",[644.2074])
+    SetGlobal("tz_duegskel","GLOBAL",2)
+END
+
+IF
+  Global("tz_duegdemon","GLOBAL",0)
+  PartyHasItem("scrx41")
+THEN
+  RESPONSE #100
+    CreateCreature("duegabis",[3133.2230],4)
+    CreateVisualEffect("SPPORTAL",[3133.2230])
+    TriggerActivation("To4002",TRUE)
+    SetGlobal("tz_duegdemon","GLOBAL",1)
+END
+

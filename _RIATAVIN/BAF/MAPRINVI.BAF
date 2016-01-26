@@ -1,0 +1,10 @@
+IF
+  Global("tz_maprinvisee","GLOBAL",0)
+  See([PC])
+  Range([PC],25)
+THEN
+  RESPONSE #100
+    SetGlobal("tz_maprinvisee","GLOBAL",1)
+    DestroySelf()
+END
+

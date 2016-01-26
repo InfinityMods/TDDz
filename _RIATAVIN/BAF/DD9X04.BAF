@@ -1,0 +1,25 @@
+IF
+  Global("tz_creature","dd9x04",0)
+THEN
+  RESPONSE #100
+    CreateCreature("skelded",[424.761],4)
+    CreateCreature("skelded",[325.1068],4)
+    CreateCreature("skelded",[428.1005],4)
+    CreateCreature("skelded",[193.834],4)
+    CreateCreature("priscali",[799.407],4)
+    CreateCreature("priscali",[1252.425],4)
+    CreateCreature("priscali",[1146.331],4)
+    CreateCreature("priscali",[1005.259],4)
+    CreateCreature("priscali",[633.846],4)
+    CreateCreature("priscali",[511.768],4)
+    SetGlobal("tz_creature","dd9x04",1)
+END
+
+IF
+  Global("tz_caliprisonspawn","GLOBAL",1)
+THEN
+  RESPONSE #100
+    CreateCreature("caliprig",[896.501],4)
+    SetGlobal("tz_caliprisonspawn","GLOBAL",2)
+END
+

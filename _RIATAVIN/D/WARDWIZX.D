@@ -1,0 +1,56 @@
+BEGIN ~WARDWIZX~
+
+IF ~RandomNum(5,1)~ THEN BEGIN 0
+  SAY @0
+  IF ~~ THEN REPLY @1 GOTO 11
+  IF ~~ THEN REPLY @2 EXIT
+END
+
+IF ~RandomNum(5,2)~ THEN BEGIN 2
+  SAY @3
+  IF ~~ THEN REPLY @4 GOTO 14
+  IF ~~ THEN REPLY @5 EXIT
+  IF ~~ THEN REPLY @6 GOTO 13
+END
+
+IF ~RandomNum(5,3)~ THEN BEGIN 6
+  SAY @7
+  IF ~~ THEN EXIT
+END
+
+IF ~RandomNum(5,4)~ THEN BEGIN 7 // from:
+  SAY @8
+  IF ~~ THEN EXIT
+END
+
+IF ~RandomNum(5,5)~ THEN BEGIN 8 // from:
+  SAY @9
+  IF ~~ THEN REPLY @10 GOTO 12
+  IF ~~ THEN REPLY @11 EXIT //EXTERN ~WARDWIZ1~ 10
+END
+
+IF ~~ THEN BEGIN 11
+  SAY @12
+  IF ~~ THEN EXIT
+END
+
+IF ~~ THEN BEGIN 12 // from: 8.0
+  SAY @13
+  IF ~~ THEN EXIT
+END
+
+IF ~~ THEN BEGIN 13 // from: 2.2
+  SAY @14
+  IF ~~ THEN EXIT
+END
+
+IF ~~ THEN BEGIN 14 // from: 2.0
+  SAY @15
+  IF ~~ THEN REPLY @16 GOTO 15
+  IF ~~ THEN REPLY @17 EXIT
+END
+
+IF ~~ THEN BEGIN 15 // from: 14.0
+  SAY @18
+  IF ~~ THEN EXIT
+END

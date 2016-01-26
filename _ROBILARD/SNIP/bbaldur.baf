@@ -1,0 +1,96 @@
+IF
+  InParty("robilard")  // ~Robillard~
+  Global("tz_Robilardattack01","GLOBAL",0)
+THEN
+  RESPONSE #100
+    SetGlobalTimer("tz_Robattack01","GLOBAL",THREE_DAYS)
+    SetGlobal("tz_Robilardattack01","GLOBAL",1)
+END
+
+IF
+  InParty("Robilard")  // ~Robillard~
+  Global("tz_Robilardattack01","GLOBAL",1)
+  GlobalTimerExpired("tz_Robattack01","GLOBAL")
+  AreaType(OUTDOOR)
+THEN
+  RESPONSE #100
+    CreateVisualEffectObject("spdimndr",Player1)
+    Wait(2)
+    CreateCreatureObject("roborb01",Player1,0,0,0)  // ~Waterdeep Assassination Wizard~
+    SetGlobal("tz_Robilardattack01","GLOBAL",2)
+END
+
+IF
+  Dead("roborb01")  // ~Waterdeep Assassination Wizard~
+  InParty("robilard")  // ~Robillard~
+  Global("tz_Robilardattack01","GLOBAL",2)
+THEN
+  RESPONSE #100
+    SetGlobal("tz_RobilardAttack01","GLOBAL",3)
+	SetGlobalTimer("tz_Robattack02","GLOBAL",THREE_DAYS)
+    ActionOverride("robilard",StartDialogue("orbrob01",Player1))
+END
+
+IF
+  InParty("robilard")  // ~Robillard~
+  GlobalTimerExpired("tz_Robattack02","GLOBAL")
+  Global("tz_Robilardattack01","GLOBAL",3)
+  LevelGT(Player1,16)
+THEN
+  RESPONSE #100
+    CreateVisualEffectObject("spplanar",Player1)
+    CreateVisualEffectObject("spportal",Player1)
+    Wait(1)
+    CreateVisualEffectObject("spdimndr",Player1)
+    Wait(1)
+    CreateCreatureObject("lv16rob1",Player1,0,0,0)  // ~Bregan D'aerth Assassin~
+    CreateCreatureObject("lv16rob2",Player1,0,0,0)  // ~Bregan D'aerth Assassin~
+    CreateCreatureObject("lv16rob3",Player1,0,0,0)  // ~Bregan D'aerth Assassin~
+    CreateCreatureObject("lv16rob4",Player1,0,0,0)  // ~Bregan D'aerth Assassin~
+    SetGlobal("tz_Robilardattack01","GLOBAL",4)
+END
+
+IF
+  Dead("lv16rob4")  // ~Bregan D'aerth Assassin~
+  Dead("lv16rob3")  // ~Bregan D'aerth Assassin~
+  Dead("lv16rob2")  // ~Bregan D'aerth Assassin~
+  Dead("lv16rob1")  // ~Bregan D'aerth Assassin~
+  Global("tz_Robilardattack01","GLOBAL",4)
+  !Dead("robilard")  // ~Robillard~
+THEN
+  RESPONSE #100
+    SetGlobal("tz_Robilardattack01","GLOBAL",5)
+    ActionOverride("robilard",StartDialogue("drowrob1",Player1))
+END
+
+IF
+  Global("tz_Robilardattack01","GLOBAL",5)
+  InParty("robilard")  // ~Robillard~
+THEN
+  RESPONSE #100
+    SetGlobalTimer("tz_robishowdown","GLOBAL",FOUR_DAYS)
+    SetGlobal("tz_Robilardattack01","GLOBAL",6)
+END
+
+IF
+  Global("tz_Robilardattack01","GLOBAL",6)
+  GlobalTimerExpired("tz_robishowdown","GLOBAL")
+  InParty("robilard")  // ~Robillard~
+THEN
+  RESPONSE #100
+    SetGlobal("tz_Robilardattack01","GLOBAL",7)
+    StartCutSceneMode()
+    StartCutScene("robimov1")
+END
+
+IF
+  InParty("robilard")  // ~Robillard~
+  Dead("robend01")  // ~Host Tower Archmage~
+  Dead("robend02")  // ~Host Tower Archmage~
+  Global("tz_Robilardattack01","GLOBAL",7)
+  !Dead("robilard")  // ~Robillard~
+THEN
+  RESPONSE #100
+    SetGlobal("tz_Robilardattack01","GLOBAL",8)
+    ActionOverride("robilard",StartDialogue("endedrob",Player1))
+END

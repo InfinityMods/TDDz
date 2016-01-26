@@ -1,0 +1,141 @@
+IF
+  Global("tz_creature","dd9005",0)
+THEN
+  RESPONSE #100
+    CreateCreature("quadkid2",[1762.2233],4)
+    CreateCreature("mummy01",[2085.1918],4)
+    CreateCreature("mummy01",[1968.2021],4)
+    CreateCreature("mummy01",[2035.2139],4)
+    CreateCreature("mummy01",[2150.2089],4)
+    CreateCreature("trolgi01",[2607.2269],4)
+    CreateCreature("trolgi01",[2609.2404],4)
+    CreateCreature("trolgi01",[2846.2365],4)
+    CreateCreature("trolgi01",[2995.2244],4)
+    CreateCreature("zombju01",[1593.1619],4)
+    CreateCreature("zombju01",[1733.1587],4)
+    CreateCreature("zombju01",[1952.1502],4)
+    CreateCreature("zombju01",[1879.1606],4)
+    CreateCreature("trolgi01",[3302.939],4)
+    CreateCreature("trolsp01",[3423.2260],4)
+    CreateCreature("trolgi01",[3493.2165],4)
+    CreateCreature("trolsp01",[2183.903],4)
+    CreateCreature("trolsp01",[2938.742],4)
+    CreateCreature("trolgi01",[3030.708],4)
+    CreateCreature("mummy01",[2671.1480],4)
+    CreateCreature("mummy01",[2851.155],4)
+    CreateCreature("mummy01",[2736.971],4)
+    CreateCreature("mummy01",[3636.1252],4)
+    CreateCreature("mistcd01",[3059.1255],4)
+    CreateCreature("sahoty01",[2756.784],4)
+    CreateCreature("sahoty01",[2704.868],4)
+    CreateCreature("sahoty01",[2858.966],4)
+    CreateCreature("sahoty01",[2983.964],4)
+    CreateCreature("weregr01",[2526.1379],4)
+    CreateCreature("weregr01",[2539.1328],4)
+    CreateCreature("weregr01",[2475.1325],4)
+    CreateCreature("weregr01",[617.620],4)
+    CreateCreature("weregr01",[776.604],4)
+    CreateCreature("weregr01",[858.750],4)
+    CreateCreature("weregr01",[700.753],4)
+    CreateCreature("trolgi01",[3336.451],4)
+    CreateCreature("trolsp01",[3469.373],4)
+    CreateCreature("trolsp01",[3429.449],4)
+    CreateCreature("trolsp01",[2011.702],4)
+    CreateCreature("trolsp01",[2005.537],4)
+    CreateCreature("trolsp01",[2250.707],4)
+    CreateCreature("sahoty01",[1177.1411],4)
+    CreateCreature("sahoty01",[1285.1313],4)
+    CreateCreature("sahoty01",[260.1143],4)
+    CreateCreature("sahoty01",[436.1136],4)
+    CreateCreature("sahoty01",[620.1277],4)
+    CreateCreature("quadkid3",[794.2093],4)
+    CreateCreature("irontomb",[3448.416],0)
+    CreateCreature("dinan",[2395.684],4)
+    SetGlobal("tz_creature","dd9005",1)
+END
+
+IF
+  Global("tz_trolstomach","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("tz_trolstomach","GLOBAL",2)
+    ClearAllActions()
+    StartCutSceneMode()
+    StartCutScene("gutsexpl")
+END
+
+IF
+  Global("tz_trollgutcure1","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("tz_trollgutcure1","GLOBAL",2)
+    ClearAllActions()
+    StartCutSceneMode()
+    StartCutScene("gutsx1")
+END
+
+IF
+  Global("tz_trollgutcure2","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("tz_trollgutcure2","GLOBAL",2)
+    ClearAllActions()
+    StartCutSceneMode()
+    StartCutScene("gutsx2")
+END
+
+IF
+  Global("tz_trollgutcure3","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("tz_trollgutcure3","GLOBAL",2)
+    ClearAllActions()
+    StartCutSceneMode()
+    StartCutScene("gutsx3")
+END
+
+IF
+  Global("tz_trollgutcure4","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("tz_trollgutcure4","GLOBAL",2)
+    ClearAllActions()
+    StartCutSceneMode()
+    StartCutScene("gutsx4")
+END
+
+IF
+  Global("tz_trollgutcure5","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("tz_trollgutcure5","GLOBAL",2)
+    ClearAllActions()
+    StartCutSceneMode()
+    StartCutScene("gutsx5")
+END
+
+IF
+  Global("tz_trollgutcure6","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("tz_trollgutcure6","GLOBAL",2)
+    ClearAllActions()
+    StartCutSceneMode()
+    StartCutScene("gutsx6")
+END
+
+IF
+  Global("tz_gutsflee","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("tz_gutsflee","GLOBAL",2)
+    ActionOverride("quadkid2",StartDialogue("gutthanx",Player1))
+END
+
+IF
+  Dead("irontomb")
+THEN
+  RESPONSE #100
+    Unlock("Door14")
+    Continue()
+END

@@ -1,0 +1,14 @@
+IF
+  Global("tz_creature","dd7004",0)
+THEN
+  RESPONSE #100
+    CreateCreature("spidsw01",[1190.692],4)
+    CreateCreature("spidsw01",[847.684],4)
+    CreateCreature("spidph01",[846.886],4)
+    CreateCreature("spidsw01",[559.616],4)
+    CreateCreature("spidph01",[541.421],4)
+    CreateCreature("spidsw01",[710.382],4)
+    CreateCreature("spidph01",[820.492],4)
+    SetGlobal("tz_creature","dd7004",1)
+END
+

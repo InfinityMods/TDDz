@@ -1,0 +1,28 @@
+IF
+  Global("tz_pkghost1","GLOBAL",0)
+  See([PC])
+  Range([PC],15)
+THEN
+  RESPONSE #100
+    StartDialogNoSet([PC])
+    SetGlobal("tz_pkghost1","GLOBAL",1)
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  Range(NearestEnemyOf(Myself),12)
+  Global("tz_pkghost1","LOCALS",0)
+THEN
+  RESPONSE #100
+    ForceSpell(NearestEnemyOf(Myself),FRIGHTFUL_MOAN)
+    SetGlobal("tz_pkghost1","LOCALS",1)
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  !Range(NearestEnemyOf(Myself),8)
+THEN
+  RESPONSE #100
+    Attack(NearestEnemyOf(Myself))
+END
+

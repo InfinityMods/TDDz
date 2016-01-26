@@ -1,0 +1,25 @@
+/*IF
+	Global("Robillard","GLOBAL",0)
+THEN
+	RESPONSE #100
+		SetGlobal("Robillard","GLOBAL",1)
+		CreateCreature("ROBILARD",[3341.2880],8) // Robillard
+END*/
+
+IF
+	Global("tz_pkdead1help","GLOBAL",1)
+THEN
+	RESPONSE #100
+		CreateCreature("Alagar",[1250.3308],4) // Alagar
+		SetGlobal("tz_pkdead1help","GLOBAL",2)
+END
+
+IF
+	Global("tz_pkdead1help","GLOBAL",3)
+THEN
+	RESPONSE #100
+		SetGlobal("tz_pkdead1help","GLOBAL",4)
+		Continue()
+END
+
+

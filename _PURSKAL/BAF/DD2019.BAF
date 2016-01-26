@@ -1,0 +1,52 @@
+IF
+  Global("tz_DD2019","GLOBAL",0)
+THEN
+  RESPONSE #100
+    CreateCreature("pkdead1",[497.283],4)
+    CreateCreature("pkFatty2",[503.347],4)
+    CreateCreature("pknobw2",[396.317],4)
+    ActionOverride("pkdead1",PlayDead(999999999))
+    SetGlobal("tz_DD2019","GLOBAL",1)
+END
+
+IF
+  Global("tz_pkdead1help","GLOBAL",4)
+THEN
+  RESPONSE #100
+    CreateCreature("pkfatxy2",[540.347],4)
+    SetGlobal("tz_pkdead1help","GLOBAL",5)
+END
+
+IF
+  Global("tz_pkdead1help","GLOBAL",7)
+THEN
+  RESPONSE #100
+    CreateVisualEffect("SPPLANAR",[497.283])
+    CreateVisualEffect("SPPLANAR",[470.283])
+    Wait(1)
+    CreateVisualEffect("SPPLANAR",[470.283])
+    CreateVisualEffect("SPGENHLA",[497.283])
+    SetGlobal("tz_pkdead1help","GLOBAL",8)
+    Wait(1)
+    FadeToColor([20.0],0)
+    Wait(2)
+    FadeFromColor([20.0],0)
+END
+
+IF
+  Global("tz_pkdead1help","GLOBAL",8)
+THEN
+  RESPONSE #100
+    CreateCreature("pkdead1a",[497.265],4)
+    SetGlobal("tz_pkdead1help","GLOBAL",9)
+END
+
+IF
+  Global("tz_pkdead1help","GLOBAL",10)
+THEN
+  RESPONSE #100
+    SetGlobal("tz_pkdead1help","GLOBAL",11)
+    AddexperienceParty(DD2019_BAF_29000) // TDD xp=29000
+    ReputationInc(1)
+END
+

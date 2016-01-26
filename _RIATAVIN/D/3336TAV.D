@@ -1,0 +1,51 @@
+BEGIN ~3336TAV~
+
+IF ~True()~ THEN BEGIN 0
+  SAY @0
+  IF ~~ THEN REPLY @1 DO ~StartStore("drinks",LastTalkedToBy())~ EXIT
+  IF ~~ THEN REPLY @2 GOTO 8
+  IF ~~ THEN REPLY @3 EXIT
+END
+
+IF ~~ THEN BEGIN 8 // from: 0.1
+  SAY @4
+  IF ~~ THEN REPLY @5 EXIT
+  IF ~~ THEN REPLY @6 DO ~TakePartyGold(10)~ GOTO 9
+END
+
+IF ~~ THEN BEGIN 9 // from: 8.1
+  SAY @7
+  IF ~~ THEN REPLY @8 EXIT
+  IF ~PartyGoldGT(99)~ THEN REPLY @9 DO ~TakePartyGold(100)~ GOTO 10
+  IF ~PartyGoldLT(100)~ THEN REPLY @10 GOTO 15
+END
+
+IF ~~ THEN BEGIN 10 // from: 9.1
+  SAY @11
+  IF ~~ THEN REPLY @12 GOTO 11
+END
+
+IF ~~ THEN BEGIN 11 // from: 10.0
+  SAY @13
+  IF ~~ THEN REPLY @14 GOTO 12
+END
+
+IF ~~ THEN BEGIN 12 // from: 11.0
+  SAY @15
+  IF ~~ THEN REPLY @16 GOTO 13
+END
+
+IF ~~ THEN BEGIN 13 // from: 12.0
+  SAY @17
+  IF ~~ THEN REPLY @18 GOTO 14
+END
+
+IF ~~ THEN BEGIN 14 // from: 13.0
+  SAY @19
+  IF ~~ THEN REPLY @20 JOURNAL @50100 EXIT
+END
+
+IF ~~ THEN BEGIN 15 // from: 9.2
+  SAY @21
+  IF ~~ THEN EXIT
+END

@@ -1,0 +1,78 @@
+IF
+  Global("tz_creature","dd0200",0)
+THEN
+  RESPONSE #100
+    CreateCreature("nameless",[557.1144],4) // TODO NOW
+    CreateCreature("wardabi1",[1064.944],4)
+    CreateCreature("wardabi2",[1419.1831],4)
+    CreateCreature("wardtief",[2513.2202],4)
+    CreateCreature("wardwiz1",[309.3423],4)
+    CreateCreature("wardwiz2",[1372.3194],4)
+    CreateCreature("wardwiz3",[2240.3233],4)
+    CreateCreature("wardwiz4",[2925.3275],4)
+    CreateCreature("wardwiz1",[2439.2648],4)
+    CreateCreature("wardwiz4",[2300.2148],4)
+    CreateCreature("wardwiz2",[1702.1886],4)
+    CreateCreature("wardwiz3",[1550.2717],4)
+    CreateCreature("wardwiz1",[127.1827],4)
+    CreateCreature("bggard1",[2376.2395],4)
+    CreateCreature("bggard1",[2619.2872],4)
+    CreateCreature("bggard1",[2062.2872],4)
+    CreateCreature("bggard1",[3115.3629],4)
+    CreateCreature("bggard1",[1952.3711],4)
+    CreateCreature("bggard1",[1232.3309],4)
+    CreateCreature("bggard1",[280.3271],4)
+    CreateCreature("bggard1",[1763.2253],4)
+    CreateCreature("bggard1",[1696.1678],4)
+    CreateCreature("bggard1",[1256.1090],4)
+    CreateCreature("bggard1",[415.1275],4)
+    CreateCreature("bggard1",[154.1758],4)
+    CreateCreature("wardwiz5",[370.2002],4)
+    CreateCreature("wardwiz5",[1036.2290],4)
+    CreateCreature("wardwiz3",[1488.2205],4)
+    CreateCreature("wardwiz5",[2006.2057],4)
+    CreateCreature("wardwiz2",[1568.1438],4)
+    CreateCreature("wardwiz3",[2227.1483],4)
+    CreateCreature("wardwiz2",[2018.1057],4)
+    CreateCreature("wardwiz5",[2345.1035],4)
+    CreateCreature("wardwiz4",[3203.1733],4)
+    CreateCreature("wardwiz2",[2899.1745],4)
+    CreateCreature("bggard1",[2145.1158],4)
+    CreateCreature("bggard1",[2408.1608],4)
+    CreateCreature("bggard1",[2746.1848],4)
+    CreateCreature("riatamne",[217.1191],4)
+    CreateCreature("riatench",[1420.990],4) // Bobbin
+    SetGlobal("tz_creature","dd0200",1)
+END
+
+IF
+  Global("tz_enterhhelbhall","GLOBAL",8)
+THEN
+  RESPONSE #100
+    CreateCreature("genietrv",[1154.1604],4)
+    SetGlobal("tz_enterhhelbhall","GLOBAL",9)
+END
+
+IF
+  Global("tz_calimmove","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("tz_calimmove","GLOBAL",2)
+    FadeToColor([20.0],0)
+    Wait(2)
+    ActionOverride("genietrv",DestroySelf())
+    Wait(1)
+    StartCutSceneMode()
+    StartCutScene("calimove")
+END
+
+IF
+  Global("tz_planarward","GLOBAL",0)
+THEN
+  RESPONSE #100
+    CreateVisualEffect("wardname",[557.1144])
+    CreateVisualEffect("wardabi",[1064.944])
+    CreateVisualEffect("wardabi",[1419.1831])
+    CreateVisualEffect("wardwing",[2513.2202])
+END
+

@@ -1,0 +1,73 @@
+IF
+  See([0.0.SPIDER])
+THEN
+  RESPONSE #100
+    Attack([0.0.SPIDER])
+END
+
+IF
+  See([0.0.SHADOW])
+THEN
+  RESPONSE #100
+    Attack([0.0.SHADOW])
+END
+
+IF
+  See([0.0.ZOMBIE])
+THEN
+  RESPONSE #100
+    Attack([0.0.ZOMBIE])
+END
+
+IF
+  See([0.0.LICH])
+THEN
+  RESPONSE #100
+    Attack([0.0.LICH])
+END
+
+IF
+  See([0.0.SPECTRE])
+THEN
+  RESPONSE #100
+    Attack([0.0.SPECTRE])
+END
+
+IF
+  See([0.0.SKELETON])
+THEN
+  RESPONSE #100
+    Attack([0.0.SKELETON])
+END
+
+IF
+  See([0.0.GHOUL])
+THEN
+  RESPONSE #100
+    Attack([0.0.GHOUL])
+END
+
+IF
+  See([0.0.CARRIONCRAWLER])
+THEN
+  RESPONSE #100
+    Attack([0.0.CARRIONCRAWLER])
+END
+
+IF
+  !Range(Player1,8)
+THEN
+  RESPONSE #100
+    MoveToObject(Player1)
+END
+
+IF
+  Global("tz_thork4","GLOBAL",0)
+  See([PC])
+  Range([PC],15)
+THEN
+  RESPONSE #100
+    StartDialogNoSet([PC])
+    SetGlobal("tz_thork4","GLOBAL",1)
+END
+

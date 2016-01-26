@@ -1,0 +1,38 @@
+IF
+  Global("tz_icepack","GLOBAL",0)
+THEN
+  RESPONSE #100
+    CreateCreature("icetrolx",[713.567],4)  // ~Ice Troll~
+    CreateCreature("frost01",[428.592],4)  // ~Frost Giant~
+    CreateCreature("icetrolz",[505.808],4)  // ~Ice Troll~
+    CreateCreature("icetrolz",[340.748],4)  // ~Ice Troll~
+    CreateCreature("icetrolz",[500.689],4)  // ~Ice Troll~
+    CreateCreature("icetrolx",[909.738],4)  // ~Ice Troll~
+    CreateCreature("fwormx",[1058.400],4)  // ~Frost Worm~
+    CreateCreature("frost01",[800.750],4)  // ~Frost Giant~
+    SetGlobal("tz_icepack","GLOBAL",1)
+END
+
+IF
+  Dead("fwormx")  // ~Frost Worm~
+  CombatCounter(0)
+  Global("tz_BPCmonNow","DX2001",0)
+THEN
+  RESPONSE #100
+    SetGlobal("tz_BPCmonNow","DX2001",1)
+    SetGlobalTimer("tz_BPNotThatFast","DX2001",FOUR_ROUNDS)
+END
+
+IF
+  GlobalTimerExpired("tz_BPNotThatFast","DX2001")
+  Global("tz_icepack","GLOBAL",1)
+  Dead("fwormx")  // ~Frost Worm~
+THEN
+  RESPONSE #100
+    SetGlobal("tz_icepack","GLOBAL",2)
+    DisplayStringHead(Player1,@10143)
+    Wait(2)
+    StartCutSceneMode()
+    StartCutScene("cutpack")
+END
+

@@ -1,0 +1,8 @@
+IF
+  Global("tz_creature","dd0206",0)
+THEN
+  RESPONSE #100
+    CreateCreature("wardwizs",[421.283],4)
+    SetGlobal("tz_creature","dd0206",1)
+END
+

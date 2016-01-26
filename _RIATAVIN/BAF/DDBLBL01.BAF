@@ -1,0 +1,55 @@
+IF
+  Detect([PC])
+  Global("tz_BlackBladesEncounter","DD3300",0)
+THEN
+  RESPONSE #100
+    ActionOverride("DDMERC02",StartDialogue("DDMERC02","DDBLBL01"))
+END
+
+IF
+  HPLT(Myself,44)
+  HasItem("POTN52",Myself)
+THEN
+  RESPONSE #100
+    UseItem("POTN52",Myself)
+END
+
+IF
+  Detect(NearestEnemyOf(Myself))
+  !StateCheck(Myself,STATE_INVISIBLE)
+  !StateCheck(Myself,STATE_IMPROVEDINVISIBILITY)
+  HasItem("POTN10",Myself)
+THEN
+  RESPONSE #100
+    UseItem("POTN10",Myself)
+END
+
+IF
+  !StateCheck(Myself,STATE_INVISIBLE)
+  !StateCheck(Myself,STATE_IMPROVEDINVISIBILITY)
+  !See(NearestEnemyOf(Myself))
+  Detect(NearestEnemyOf(Myself))
+  HasItem("SCRL6K",Myself)
+THEN
+  RESPONSE #100
+    UseItem("SCRL6K",Myself)
+END
+
+IF
+  Detect([PC])
+  !See([PC])
+  !HasItem("SCRL6K",Myself)
+THEN
+  RESPONSE #100
+    RunAwayFrom([PC],180)
+    Wait(1)
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+THEN
+  RESPONSE #100
+    EquipMostDamagingMelee()
+    Attack(NearestEnemyOf(Myself))
+END
+

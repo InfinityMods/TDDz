@@ -1,0 +1,59 @@
+IF
+  Global("tz_pklich1","GLOBAL",0)
+  See([PC])
+THEN
+  RESPONSE #100
+    SetGlobal("tz_pklich1","GLOBAL",1)
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  Global("tz_licha1","LOCALS",0)
+  HPGT(Myself,0)
+THEN
+  RESPONSE #100
+    ApplySpell(Myself,WIZARD_STONE_SKIN)
+    ApplySpell(Myself,WIZARD_PROTECTION_FROM_MAGIC_WEAPONS)
+    ApplySpell(Myself,WIZARD_SPELL_TRAP)
+    SetGlobal("tz_licha1","LOCALS",1)
+    SetGlobalTimer("tz_CHE","LOCALS",THREE_TURNS)
+    SetGlobal("tz_SCH","LOCALS",2)
+END
+
+IF
+  Allegiance(Myself,ENEMY)
+  Detect([PC])
+  !See(LastSeenBy(Myself))
+  !HaveSpell(WIZARD_TRUE_SIGHT)
+  Delay(10)
+THEN
+  RESPONSE #100
+    ReallyForceSpell(Myself,WIZARD_TRUE_SIGHT)
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  CheckStatLT(Myself,1,STONESKINS)
+  TookDamage()
+  Global("tz_Prep2","LOCALS",0)
+  HPGT(Myself,0)
+THEN
+  RESPONSE #100
+    ApplySpell(NearestEnemyOf(Myself),WIZARD_SPELL_TURNING)
+    ApplySpell(SecondNearestEnemyOf(Myself),WIZARD_MISLEAD)
+    SetGlobal("tz_Prep2","LOCALS",1)
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  CheckStatLT(Myself,1,STONESKINS)
+  TookDamage()
+  Global("tz_Prep2","LOCALS",1)
+  HPGT(Myself,0)
+THEN
+  RESPONSE #100
+    DisplayString(Myself,40252)  // ~Contingency - Protection from Magical Weapons~
+    ApplySpell(Myself,WIZARD_PROTECTION_FROM_MAGIC_WEAPONS)
+    SetGlobal("tz_Prep2","LOCALS",2)
+END
+

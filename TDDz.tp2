@@ -1,0 +1,112 @@
+BACKUP ~TDDz/Backup~
+AUTHOR ~shadowlich~
+VERSION ~v1.0~
+
+ALWAYS
+	INCLUDE ~%MOD_FOLDER%/Lib/Helpers.tpa~ LAM ForceClearTempFolder
+END
+
+AUTO_EVAL_STRINGS
+//AUTO_TRA ~TDDz/Translations/%s~
+AUTO_TRA ~TDDz/TEMP/Translations~
+
+LANGUAGE 	~English~ 
+			~English~ 
+			~TDDz/Translations/English/Tp2.tra~ 
+			~TDDz/Translations/English/Setup.tra~ 			
+
+LANGUAGE 	~Russian(aerie-ru)~
+			~Russian~
+			~TDDz/Language/Russian/setup.tra~
+			~TDDz/Language/Russian/tp2.tra~
+
+LANGUAGE 	~Polish(by SoM, part of CoB Clan, in co-operation with TB Team)~
+			~Polish~
+			~TDDz/Language/Polish/setup.tra~
+			~TDDz/Language/Polish/tp2.tra~
+
+LANGUAGE 	~German(Leonardo Watson)~
+			~German~
+			~TDDz/Language/German/setup.tra~
+			~TDDz/Language/German/tp2.tra~					
+
+LANGUAGE 	~Francais(Isaya)~
+			~French~
+			~TDDz/Language/French/setup00.tra~
+			~TDDz/Language/French/tp2.tra~
+
+LANGUAGE 	~Italian(ilot)~
+			~Italian~
+			~TDDz/Language/Italian/setup.tra~
+			~TDDz/Language/Italian/tp2.tra~
+         
+LANGUAGE 	~Spanish(Clan REO)~
+			~Spanish~
+			~TDDz/Language/Spanish/setup.tra~
+			~TDDz/Language/Spanish/tp2.tra~
+
+// TODO: TTPOT.itm has weird name in vanilla BG2EE...is it normal???
+			
+
+// Notes:
+// - DDTROLL1.BAF makes trolls killable
+// - Is GTRSK002 useless? ex: LeaveAreaLUA("dd9007","GTRSK002",[381.331],12)
+// - Used by script: SCRX41.ITM-Rary's Mnemonic Enhancer @MADEEL.sto, DD4003.are@1380, DD4003.baf
+
+
+// TODO BLOOD.itm @BGCTBOSS.CRE, @BGSHBOSS.CRE, @DD8001D.ARE
+// TODO DDPOTNP1.itm @AR0402.baf
+
+BEGIN @901000 
+	REQUIRE_PREDICATE GAME_IS ~bg2ee eet~ ~~	
+	
+	INCLUDE ~%MOD_FOLDER%/Lib/Importer.tpa~
+		LAF ImportComponent STR_VAR aComp = ~CORE~ END
+	INCLUDE ~%MOD_FOLDER%/Lib/Helpers.tpa~ 
+		LAM DeleteTempFolder
+	
+BEGIN @901001
+	REQUIRE_PREDICATE GAME_IS ~bg2ee eet~ ~~
+	REQUIRE_COMPONENT "setup-TDDz.tp2" "0" "You must have TDD - Core installed"
+		
+	INCLUDE ~%MOD_FOLDER%/Lib/Importer.tpa~ 
+		LAF ImportComponent STR_VAR aComp = ~TROLLFORD~ END
+	INCLUDE ~%MOD_FOLDER%/Lib/Helpers.tpa~ 
+		LAM DeleteTempFolder
+	
+BEGIN @901002
+	REQUIRE_PREDICATE GAME_IS ~bg2ee eet~ ~~
+	REQUIRE_COMPONENT "setup-TDDz.tp2" "0" "You must have TDD - Core installed"
+
+	INCLUDE ~%MOD_FOLDER%/Lib/Importer.tpa~ 
+		LAF ImportComponent STR_VAR aComp = ~ESPURTA~ END
+	INCLUDE ~%MOD_FOLDER%/Lib/Helpers.tpa~ 
+		LAM DeleteTempFolder
+		
+BEGIN @901003
+	REQUIRE_PREDICATE GAME_IS ~bg2ee eet~ ~~	
+	REQUIRE_COMPONENT "setup-TDDz.tp2" "0" "You must have TDD - Core installed"
+		
+	INCLUDE ~%MOD_FOLDER%/Lib/Importer.tpa~ 
+		LAF ImportComponent STR_VAR aComp = ~PURSKAL~ END
+	INCLUDE ~%MOD_FOLDER%/Lib/Helpers.tpa~ 
+		LAM DeleteTempFolder
+
+BEGIN @901004
+	REQUIRE_PREDICATE GAME_IS ~bg2ee eet~ ~~	
+	REQUIRE_COMPONENT "setup-TDDz.tp2" "0" "You must have TDD - Core installed"		
+		
+	INCLUDE ~%MOD_FOLDER%/Lib/Importer.tpa~ 
+		LAF ImportComponent STR_VAR aComp = ~RIATAVIN~ END
+	INCLUDE ~%MOD_FOLDER%/Lib/Helpers.tpa~ 
+		LAM DeleteTempFolder
+	
+//BEGIN @901010
+//	REQUIRE_PREDICATE GAME_IS ~bg2ee eet~ ~~	
+//	REQUIRE_COMPONENT "setup-TDDz.tp2" "0" "You must have TDD - Core installed"
+//		
+//	INCLUDE ~%MOD_FOLDER%/Lib/Importer.tpa~ 
+//		LAF ImportComponent STR_VAR aComp = ~Robilard~ END
+//	INCLUDE ~%MOD_FOLDER%/Lib/Helpers.tpa~ 
+//		LAM DeleteTempFolder
+	

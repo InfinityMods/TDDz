@@ -1,0 +1,38 @@
+IF
+  Global("tz_talk","LOCALS",0)
+  Global("tz_fight","LOCALS",0)
+  See([PC])
+THEN
+  RESPONSE #100
+    SetGlobal("tz_talk","LOCALS",1)
+    Dialog([PC])
+END
+
+IF
+  Global("tz_fight","LOCALS",0)
+  HitBy([ANYONE],CRUSHING)
+THEN
+  RESPONSE #100
+    Enemy()
+    SetGlobal("tz_fight","LOCALS",1)
+END
+
+IF
+  Global("tz_fight","LOCALS",1)
+  See(NearestEnemyOf(Myself))
+THEN
+  RESPONSE #100
+    EquipMostDamagingMelee()
+    Attack(NearestEnemyOf(Myself))
+END
+
+IF
+  Global("tz_fight","LOCALS",1)
+  HitBy([GOODCUTOFF],CRUSHING)
+THEN
+  RESPONSE #100
+    RunAwayFrom(LastHitter(Myself),180)
+  RESPONSE #100
+    Attack(LastHitter(Myself))
+END
+

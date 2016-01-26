@@ -1,0 +1,43 @@
+/*IF
+	Global("Adario","GLOBAL",0)
+THEN
+	RESPONSE #100
+		SetGlobal("Adario","GLOBAL",1)
+		CreateCreature("ADARIO12",[786.1528],0) // Adario Kalvaras
+END*/
+
+IF
+	Global("tz_spawn_Forp","AR0406",0)
+	XPGT(Player1,779999)
+THEN
+	RESPONSE #100		
+		CreateCreature("DDgull01",[1487.1649],8) // Forp
+		SetGlobal("tz_spawn_Forp","AR0406",1)
+END
+
+/*
+IF
+	Global("wmSpawnJoluv","GLOBAL",0)
+THEN
+	RESPONSE #100
+		CreateCreature("wmart1",[1337.1751],4) // Joluv
+		SetGlobal("wmSpawnJoluv","GLOBAL",1)
+END
+
+IF
+        Global("CopperGuards","GLOBAL",1)
+	Global("TDDCre","AR0406",0)
+THEN
+	RESPONSE #100
+		CreateCreature("beargr",[3295.1631],4) // Grizzly Bear
+		CreateCreature("beargr",[2987.1840],4) // Grizzly Bear
+		CreateCreature("beargr",[3260.2006],4) // Grizzly Bear
+		CreateCreature("beargr",[3519.1775],4) // Grizzly Bear
+		CreateCreature("ddogre01",[2482.1333],4) // Ogre
+		CreateCreature("ddogre01",[2607.1334],4) // Ogre
+		CreateCreature("icmin01",[3422.2131],4) // Minotaur
+		CreateCreature("icmin01",[3724.1926],0) // Minotaur
+		SetGlobal("TDDCre","AR0406",1)
+END
+*/
+

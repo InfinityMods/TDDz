@@ -1,0 +1,24 @@
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId(Player1)
+    ActionOverride("bgshbad1",FaceObject("bgshboss"))
+    ActionOverride("bgshbad2",FaceObject("bgshboss"))
+    ActionOverride("bgshbad3",FaceObject("bgshboss"))
+    ActionOverride("bgshbad4",FaceObject("bgshboss"))
+    ActionOverride("bgshbad5",FaceObject("bgshboss"))
+    ActionOverride("bgshbad6",FaceObject("bgshboss"))
+    ActionOverride(Player2,FaceObject("bgshboss"))
+    ActionOverride(Player3,FaceObject("bgshboss"))
+    ActionOverride(Player4,FaceObject("bgshboss"))
+    ActionOverride(Player5,FaceObject("bgshboss"))
+    ActionOverride(Player6,FaceObject("bgshboss"))
+    FaceObject("bgshboss")
+    ActionOverride("bgshboss",FaceObject(Player1))
+    Wait(2)
+    ActionOverride("bgshboss",ForceSpell(Player1,WIZARD_DISPEL_MAGIC_VISUALS_ONLY))
+    Wait(2)
+    EndCutSceneMode()
+END
+

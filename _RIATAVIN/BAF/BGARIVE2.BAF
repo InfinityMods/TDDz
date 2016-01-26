@@ -1,0 +1,18 @@
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId(Player1)  
+    Wait(1)
+    MoveViewPoint([274.749],FAST)
+    Wait(4)
+    MultiPlayerSync()
+    MoveViewPoint([419.591],FAST)
+    ActionOverride("bgctboss",MoveToPoint([419.591]))
+    Wait(3)
+    DisplayStringHead("bgctboss",@10013)
+    CreateCreature("enteri01",[1158.366],4)  // ~Artemis Entreri~
+    Wait(3)
+    StartCutScene("bgarive3")
+END
+

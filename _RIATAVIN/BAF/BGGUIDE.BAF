@@ -1,0 +1,31 @@
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId("bggreet")
+    FadeToColor([30.0],0)
+    Wait(1)
+    Explore()
+    MoveViewPoint([3518.2082],INSTANT)
+    ActionOverride(Player1,JumpToPoint([3518.2100]))
+    ActionOverride(Player2,JumpToPoint([3518.2100]))
+    ActionOverride(Player3,JumpToPoint([3518.2100]))
+    ActionOverride(Player4,JumpToPoint([3518.2100]))
+    ActionOverride(Player5,JumpToPoint([3518.2100]))
+    ActionOverride(Player6,JumpToPoint([3518.2100]))
+    JumpToPoint([3518.2082])
+    Wait(2)
+    ActionOverride(Player1,FaceObject("bggreet"))
+    ActionOverride(Player2,FaceObject("bggreet"))
+    ActionOverride(Player3,FaceObject("bggreet"))
+    ActionOverride(Player4,FaceObject("bggreet"))
+    ActionOverride(Player5,FaceObject("bggreet"))
+    ActionOverride(Player6,FaceObject("bggreet"))
+    FaceObject(Player1)
+    Wait(1)
+    FadeFromColor([30.0],0)
+    Wait(1)
+    StartDialogNoSet([PC])
+    EndCutSceneMode()
+END
+

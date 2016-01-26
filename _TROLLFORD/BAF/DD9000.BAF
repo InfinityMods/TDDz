@@ -1,0 +1,83 @@
+IF
+  Global("tz_creature","DD9000",0)
+THEN
+  RESPONSE #100	
+    CreateCreature("ogredd1",[999.866],4)
+    CreateCreature("ogredd1",[1972.706],4)
+    CreateCreature("ogredd1",[1351.702],4)
+    CreateCreature("ogredd1",[1310.434],4)
+    CreateCreature("ogredd1",[1205.1066],4)
+    CreateCreature("ogredd1",[1517.939],4)
+    CreateCreature("ogredd1",[905.3320],4)
+    CreateCreature("ogredd1",[2763.2282],4)
+    CreateCreature("ogredd1",[3064.2084],4)
+    CreateCreature("minttrog",[983.3178],4)
+    CreateCreature("minttrog",[1065.3381],4)
+    CreateCreature("minttrog",[871.3485],4)
+    CreateCreature("minttrog",[4206.1861],4)
+    CreateCreature("minttrog",[4422.2015],4)
+    CreateCreature("minttrog",[4199.2043],4)
+    CreateCreature("minttrog",[4467.2174],4)
+    CreateCreature("minttrog",[4106.2230],4)
+    CreateCreature("cyc01",[3173.3345],4)
+    CreateCreature("cyc01",[3020.3410],4)
+    CreateCreature("cyc01",[2791.3395],4)
+    CreateCreature("cyc01",[3187.3094],4)
+    CreateCreature("cyc01",[3321.2105],4)
+    CreateCreature("cyc01",[3089.2205],4)
+    CreateCreature("cyc01",[3114.2402],4)
+    CreateCreature("orc01",[908.2290],4)
+    CreateCreature("orc01",[923.2219],4)
+    CreateCreature("orc02",[1031.2233],4)
+    CreateCreature("orc02",[1144.2331],4)
+    CreateCreature("orc01",[1158.2253],4)
+    CreateCreature("orc01",[1062.2167],4)
+    CreateCreature("orc03",[1214.2156],4)
+    CreateCreature("orc04",[1334.2265],4)
+    CreateCreature("orc01",[1264.2014],4)
+    CreateCreature("orc01",[2513.1541],4)
+    CreateCreature("orc01",[2744.1305],4)
+    CreateCreature("orc02",[2916.1272],4)
+    CreateCreature("orc04",[2968.1434],4)
+    CreateCreature("orc01",[2912.1593],4)
+    CreateCreature("frosinvi",[4013.1050],4)
+	CreateCreature("hillfro1",[4173.665],4)
+    CreateCreature("hillfro2",[4317.694],4)
+    CreateCreature("hillfro3",[4409.801],4)
+    SetGlobal("tz_creature","DD9000",1)
+END
+
+IF
+  Global("tz_frostinvsee","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("tz_frostinvsee","GLOBAL",2)
+    StartCutSceneMode()
+    StartCutScene("frostent")
+END
+
+IF
+  Global("tz_dinquest2","GLOBAL",4)
+THEN
+  RESPONSE #100
+    CreateCreature("sacorc01",[3927.3146],4)
+    CreateCreature("sacorc02",[3964.3254],4)
+    CreateCreature("sacorc03",[4068.3270],4)
+    CreateCreature("sacorc04",[4023.3343],4)
+    CreateCreature("sacorc05",[4102.3380],4)
+    CreateCreature("sacorc06",[3984.3193],4)
+    CreateCreature("sacorc07",[4038.3428],4)
+    CreateCreature("sacorc08",[3711.3045],4)
+    CreateCreature("sacorc9",[3795.3052],4)
+    CreateCreature("sacorc10",[3803.3167],4)
+    CreateCreature("keris2",[4091.2996],4)
+    SetGlobal("tz_dinquest2","GLOBAL",5)
+END
+
+IF
+  Dead("sacorc01")
+  !Global("tz_kerisreturn","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("tz_kerisreturn","GLOBAL",1)
+END

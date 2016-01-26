@@ -1,0 +1,31 @@
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId("bgsavior")
+    MoveViewPoint([1875.1550],VERY_FAST)
+    ActionOverride(Player1,MoveToPoint([1875.1570]))
+    ActionOverride(Player2,MoveToPoint([1865.1570]))
+    ActionOverride(Player3,MoveToPoint([1855.1570]))
+    ActionOverride(Player4,MoveToPoint([1885.1570]))
+    ActionOverride(Player5,MoveToPoint([1870.1580]))
+    ActionOverride(Player6,MoveToPoint([1860.1580]))
+    MoveToPoint([1867.1511])
+    ActionOverride(Player1,FaceObject("bgstab1"))
+    ActionOverride(Player2,FaceObject("bgstab1"))
+    ActionOverride(Player3,FaceObject("bgstab1"))
+    ActionOverride(Player4,FaceObject("bgstab1"))
+    ActionOverride(Player5,FaceObject("bgstab1"))
+    ActionOverride(Player6,FaceObject("bgstab1"))
+    FaceObject("bgstab1")
+    Wait(1)
+    ForceSpell("bgstab1",CLERIC_RESTORATION)
+    Wait(2)
+    ForceSpell("bgstab1",CLERIC_RESTORATION)
+    Wait(2)
+    ForceSpell("bgstab1",CLERIC_RESTORATION)
+    Wait(1)
+    SetGlobal("tz_bgwitness","GLOBAL",5)
+    EndCutSceneMode()
+END
+

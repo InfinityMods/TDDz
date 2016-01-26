@@ -1,0 +1,267 @@
+@901000 = ~TDD - Core~
+@901001 = ~TDD - Trollford~
+@901002 = ~TDD - Espurta~ 
+@901003 = ~TDD - Purskal~ 
+@901004 = ~TDD - Riatavin~ 
+@901010 = ~TDD - Robilard~
+@999999 = ~Intruders! Kill the intruders!~
+
+/////////////////////////////////////////////////////////////////////////////////////
+// Dialogues - unified Journal entries
+/////////////////////////////////////////////////////////////////////////////////////
+
+//3336TAV.DLG
+@50100 = ~I spoke to an informative named Bellach. He says that word on the street suspect that Calimport's Artemis Entreri may be behind the killing of Riatavin. Myself I am not so sure for there is no evidence apart from the clean kills.~
+
+//BAURIAN.DLG
+@50101 = ~I have entered the world of the Tartarus. The land is yet to be explored but from what I can see it looks like clumps of land with bottomless pits all around.~
+@50102 = ~Baurian, a Cleric of Talos, has brought me to the realm of Tartarus. Here I must slay the demon, get its talon, and return.~
+
+//BANDED.DLG
+@50103 = ~The banshee has been set free from her torment at my very hands but her evil deed was done. The demon will rise in the depths of hell in the not too distant future and if I wish to kill the beast at a vulnerable stage of its material existence and gain its claw that can grant you your disguise from the Drow, then I must travel to the planet's core. Clerics of Talos more than likely know about this. Their temple might be a good place to start looking.~
+
+//CAVDIEAR.DLG
+@50104 = ~The deadly assassin, Artemis Entreri, has finally been brought to justice as he fell before my very eyes. A few words that he spoke still ring in my ears. He stated as clearly as I have ever heard that it would not be our last meeting, and that I would never be free. Some would say the threat was hollow, but Entreri has a history of speaking with conviction.~
+
+//DDMARY.DLG
+@50106 = ~The Darkest Day has reached its conclusion.~
+@50116 = ~Mary Magus's House~
+
+//DRAGGLD1.DLG
+@50105 = ~I found, in the cavern of the Bregan D'aerth, a metallic Gold Dragon. Despite the dragon's attempt to make peace, our dark elf appearance was a catalyst for the dragon to attack.~
+
+//KARAN01.DLG
+@50107 = ~Seems that even after achieving the tasks of late the eternal nightmare is not over. More evil seems to lurk in the distance and the high order of the land seem to want to talk to me about it.~
+
+//SANDRAIN.DLG
+@50109 = ~I met an elderly elf named Sandrain who has become somewhat of a hobbit for crimes of his past kin. He told me of the dangers the banshee may cause and offered me aid in return. I am sure that ridding the banshee may place his security from the other creatures at risk. Despite that I must do what I need to proceed.~
+
+//ZCAPWARN.DLG
+@50108 = ~Seems that for no reason the Nelanther Pirates attacks the docks of the Athkatla trade. Despite my feeling they were intent on killing everyone in sight so to fight was my only option. It is almost as if they were under influence from a powerful source and that source is no doubt the reason that I was falsely accused.~
+
+/////////////
+// BGT/Compat
+/////////////
+
+//LEAVE***.D
+/*@203301 = ~Staying with you is going to get me an early grave. Thin I'll take my axe down south, and suck up some of the good merchant coin.~
+@203302 = ~I like danger as much as the next fellow, but staying with you is a death wish. Time to aim my arrows in another direction.~
+@203303 = ~My lust for battle has been satiated for the meantime. I believe I'll venture to warmer climates before the seasons change again. Perhaps the fresh air will envigorate by blades again.~
+@203304 = ~Monty and I have decided that it is past time we reported back to our superiors.  Farwell, <CLASS> , and may ineptitude embrace your enemies.~
+@203305 = ~I'm getting too old for all this excitement. And now my ulcer is acting up on me again. Time for a heavy draught of painkiller, and a warm soothing bath. I wish you all the best, <CHARNAME>.~
+*/
+/////////////////////////////////////////////////////////
+// Scripts
+/////////////////////////////////////////////////////////
+@10000 = ~Tower Entrance~
+@10001 = ~Area Exit~
+@10002 = ~Downstairs~
+@10003 = ~To Lab~
+@10004 = ~To Basement~
+@10005 = ~Upstairs~
+@10006 = ~Exit~
+@10007 = ~You are making a mistake, old man! A big mistake... for the real fiend is still loose.~
+@10008 = ~Enough! You are leaving for Spellhold and will be sailing on a slave vessel. Good riddance, and I hope the guards treated you well; you will get no easy ride to Spellhold.~
+@10009 = ~As you read the words in the book, the relic disintegrates, leaving a stream of dust where it once was. The sky begins to lighten and you get the feeling the clouds will pass soon. The Darkest Day has ended... for now.~
+@10010 = ~You hear a sharp "CLINK" in the distance. A magical barrier is now blocking both exits.~
+@10011 = ~The magical barrier surrounding the exits has been removed upon the creature's death.~
+@10012 = ~Yes, yes. I'm ready now. Let's go.~
+@10013 = ~The coast is clear, master.~
+@10014 = ~You have done well, my dear. All seems to be falling into place.~
+@10015 = ~But you know that those sent to Athkatla are extremely powerful. My cleric sensed that one possessed the blood of a god in his veins.~
+@10016 = ~That is the idea my dear. Athkatla will sense the aura that they now have on them, thanks to you. They will realize it makes sense that one so potentially powerful would attempt to cause so much chaos, and they will take the fall. Riatavin will lose all ties with Athkatla as they have the aura of Riatavin locals. Athkatla will lose trade from a main supplier, and Calimport will be back in total control of the seas.~
+@10017 = ~So what happens now, master?~
+@10018 = ~Ha ha! Yes, I like the sound of "master." The gem has done wonders, indeed. The whole of Riatavin's force has bent to my will thanks to this simple gem. At a single command, they would rush in to war with Athkatla, you know? You are the only one who remains free of my will, for I needed you for the tasks.~
+@10019 = ~We had a deal, Entreri! You were going to grant our town riches from the finest Calimport guild for this deed. You will release your grasp on my soldiers now!~
+@10020 = ~Ah, but my dear... They are not your soldiers at all, and they never were. Your captain never made it to Athkatla for my dagger found his spine as soon as he departed.~
+@10021 = ~After that, I was in control. You never even tasted power during the act.~
+@10022 = ~What happened to" Artemis Entreri works alone?"~
+@10023 = ~'When it comes to Calimport, I attain all the aid I can. When it gets personal, my dear, then I work alone. This is a personal moment, in which case you are breaking the trend. We can't have that, now can we?'~
+@10024 = ~You fiend! We had a deal! You will pay dearly for such a foul act.~ [WARRIOR3]
+@10025 = ~Yes, come and taste Death. Let the Master of Death show you a fast exit from this sorry existence.~
+@10026 = ~Now to finish the job. With Athkatla awaiting the travellers, I must prepare to further the break in the chain. The travellers have no choice but to travel to Athkatla, and seek a solution. If they fail, then every civilian in this town will die by my hand and the travellers will be skinned.~
+@10027 = ~They will complete their duty or they will face a painful death. I shall make sure that Riatavin's force will be just behind to strike at Athkatla.~
+@10028 = ~We have spent hours in the Council discussing events of the present, and much has been covered over the past several hours.~
+@10029 = ~Then surely you can see your error in judgment?~
+@10030 = ~The Council has conferred and debated. They have come up with a decision....~
+@10031 = ~You are guilty of murdering the innocent traders and nobles of Riatavin. In addition, you are guilty of plotting against the cities of Athkatla and Riatavin.~
+@10032 = ~However, due to a lack of evidence, you will not be sentenced to death. Instead, your punishment shall be to spend the rest of your life within the security of Spellhold.~
+@10033 = ~You are making a real mistake, old man.~
+@10034 = ~You shall leave for Spellhold in a few hours. In the meantime, you shall get what you deserve from the guards. Farewell. A shame that one so potentially useful is doomed.~
+@10035 = ~You were warned to stay out. Now you shall pay for your ignorance.~
+@10036 = ~Master, I have come as quickly as I could. Your plan has failed and the magic users in Athkatla can sense the evil here in Riatavin.~
+@10037 = ~WHAT!? You foolish old man! All you had to do was make sure they believed it was the travellers that caused this!~
+@10038 = ~Please! It was the travelling party that did this. They must have been more powerful than I had imagined at first.~
+@10039 = ~So they shall die by my blade, I can assure you. But you have failed miserably, old fool! You shall pay the price of failing Artemis Entreri.~
+@10040 = ~I must initiate the contingency plan, for none must know that Calimport is responsible. This jewel is so useful in attaining allies! I shall have Nelanther pirates storm the docks of Athkatla. They will cripple the trade zone, and take the full blame for doing so. Meanwhile, I have a score to settle; and, as always, Entreri works alone. Fear not travellers, for when we shall meet, it will be short and swift.~
+@10041 = ~I fear that we have made an error in our judgement, brothers.~
+@10042 = ~Do explain.~
+@10043 = ~I sense that the evil is not on its way. But.. it is still in Amn and still very strong. It seems that the sentenced group was not evil as they were accused. We must tell the council of this mistake, as well as of the continued existence of the evil. Riatavin must be searched high and low.~
+@10044 = ~NO! I must tell the master that his plan has failed before Athkatla searches Riatavin.~
+@10045 = ~Yet you come further. It is amazing how far one will come to be devoured.~
+@10046 = ~To hell with you demon fiend. Talking and trying to find answers is getting us nowhere.~
+@10047 = ~Demon!! How dare you call me a demon! They are beasts of another plane, but we rule here. We have been reborn due to the power of our returned leader, and we shall roam once more the lands of Faerun.~
+@10048 = ~I have heard of the Returned many times. What exactly is he? Your tomb has been accidentally breached, but I fail to see how this returns your urge to terrorize Faerun.~
+@10049 = ~He has returned from his soul prison, and this time he is to stay and rule these lands.~
+@10050 = ~Wait. Are you saying that your so-called master has returned from a soul prison? A relic of sorts? Do you not realize the consequences of your claim? If he has returned from a soul prison, then how many others have returned and why? I have heard of these relics, and they usually contain hoards of evil spirits. I have little doubt that if more have been released, your master is the least of Faerun's troubles.~
+@10051 = ~How dare you underestimate the leader. The mighty Beghael will not have the pleasure of crushing you, for I will do it as a personal pleasure.~
+@10052 = ~Seize that person, right there.~
+@10053 = ~What the--? What do you want old man? I've done nothing wrong.~
+@10054 = ~Nothing wrong, you say?! I'll have you know that I can sense a persons aura a mile away, and I sense that *you* are the cause of the trade problems. You are the cause of the Riatavin deaths, and you shall be prevented from causing any more evil deeds.~
+@10055 = ~What? You've got it terribly wrong. I have no aura about me. Wait a minute, the wench! She placed an aura on me saying it would display my intentions of helping, but-- but she has tricked me!~
+@10056 = ~Your lies are not going to be heard. Here and now you shall find the justice you deserve with time in prison. GUARDS! Detain this man in the jail.~
+@10057 = ~You dare to force your way in to these ancient tombs? You have disturbed us in our time of rejuvenation, and you shall pay a dear price.~
+@10058 = ~You dare to threaten us? You have killed many innocents, and it is you that shall pay the price by my blade.~
+@10059 = ~Strong words, but it is a means of living. We feed from the young to maintain our strength; they are just a means of life. You are the foolish one to be threatening me.~
+@10060 = ~Grrr... You have talked enough filth already. You will die by my blade, fiend. CHAAARGE!~
+@10061 = ~No! Thorknar! You shall die a painful death, fiend!~
+@10062 = ~No! Thorknar! You shall die a painful death, fiend!~
+@10063 = ~You must control him!~
+@10064 = ~You traitor!~
+@10065 = ~Damn you, Thorknar!~
+@10066 = ~He's not Thorknar. He's the beast that has brought this plague. He's also the one who killed Thorknar.~
+@10067 = ~Yes, I am growing increasingly sick of this vile orc body. I need no mask to roam these lands.~
+@10068 = ~What the hell is it?~
+@10069 = ~It's a vile Lich, the undead beast that has caused this plague.~
+@10070 = ~I would use more caution when mentioning the name of your superior, weakling! I could crush you here and now! But... No, I will amplify your suffering. you shall be but one in my army of minions. You shall aid me in my corruption of the lands.~
+@10071 = ~I shall tear my own heart out before I walk by your side fiend!~
+@10072 = ~But you fail to understand. You cannot resist me. Come to me... Come... Come and stand by your masters side.~
+@10073 = ~No, I will not... I... I...~
+@10074 = ~You see. you cannot resist. Now turn. Kill your friends. I know you possess powers of a great nature. I can sense the blood of a god in you. Go, slay your village friends. Show your devotion to me.~
+@10075 = ~No, I will not... I... I...~
+@10076 = ~I shall give you an example of what I desire.~
+@10077 = ~Your turn. Slaughter these weak fools! Show me your worth.~
+@10078 = ~Go then and kill! Your friends cannot help you know, for they are frozen in my wake. They shall watch you slaughter this entire village single handedly!~
+@10079 = ~Beghael, you have lost the point of your release. You had your tasks to complete, but you have lost you way. The master does not take kindly to those who don't complete tasks.~
+@10080 = ~What? You cannot be so foolish. You were released, and now you are going to become slaves for the deed? I am not so weak.~
+@10081 = ~You have no choice Beghael. You are a possession of the relic, and the master can put you back to your immortal suffering as soon as he wishes. You would be wise to obey.~
+@10082 = ~Take this as your last warning Beghael! The master uses you as a tool. If you refuse, then you are of no use to him and you shall be disposed of.~
+@10083 = ~You are all weak; too weak to be in my sight. You have had your warning. Now leave, or I shall feed on your very souls.~
+@10084 = ~This is your last chance to comply Beghael.~
+@10085 = ~What? Die you petty, weak fools!~
+@10086 = ~Why wont you die!?~
+@10087 = ~You had your chance. We shall show you pain.~
+@10088 = ~You traitor!~
+@10089 = ~Take good note of what you have seen here, and have no doubt. Everyone will face the master at some stage. You cannot run, you cannot hide, and you cannot win. Spread the word, but people will see the future soon enough for themselves.~
+@10090 = ~I SEEEEE you!!!~
+@10091 = ~You little! Me SMASH!~
+@10092 = ~You stay STILL! RRrr... Me crush you head!~
+@10093 = ~We must move fast.~
+@10094 = ~I have the eye. It must be pointed toward the light.~
+@10095 = ~Let's leave these hell-forsaken tunnels for good.~
+@10096 = ~GrrRRrr...~
+@10097 = ~MooOOOOO!!!~
+@10098 = ~Looks like we're out of herbs again, dear. I'm going out to pick some.~
+@10099 = ~Alright, but please... be careful. There is so much going on right now... just watch out.~
+@10100 = ~Oh, don't worry so much. I'll be back in a little while.~
+@10101 = ~Look! There's one! Get her!~
+@10102 = ~No! Go away! I don't want any trouble!~
+@10103 = ~Ha! That was easy enough. Let's see if she has any loot on her.~
+@10104 = ~Larala! Larala, it's been close to two hours! Where are you!? Larala!~
+@10105 = ~Oh no... no, Larala! What has happened?... (sniffle)~
+@10106 = ~NO! This isn't right! Please, bring her back... somebody...~
+@10107 = ~Please...~
+@10108 = ~I am here. Pray. I will resurrect her.~
+@10109 = ~Oh my! Thank you! Thank you! Bring her back... please...~
+@10110 = ~Silence!~
+@10111 = ~This body will have to do for now... there is little more I can do.~
+@10112 = ~The force is too powerful; I cannot control it! Prepare yourselves!~
+@10113 = ~I can feel one of the four burning at my fingertips.~
+@10114 = ~Offering rides to the Hall of Knowledge!~
+@10115 = ~Come one, come all!~
+@10116 = ~Excellent! You have done well, <CHARNAME>. Mercenaries have been hunting me for twenty years now, and these are the first that I have had the pleasure of confronting myself.~
+@10117 = ~So... are you up for a fight, mercenaries? Or will you never return to kill me again? The cowled wizards are surely paying you a large sum, and I'd hate to prevent you from getting it (*snicker*).~
+@10118 = ~We will fight you! We back down to no one... especially for 10,000 gold!~
+@10119 = ~So you wish a fight? Very well, attack me. This should be an interesting game.~
+@10120 = ~As you can see, my wards were not totally removed. Are there any others who would like to attack me?~
+@10121 = ~Umm... yeah, I guess...~
+@10122 = ~(*Sigh*)... <CHARNAME>, would you be so good as to take care of them? Their attitude truly bores me.~
+@10123 = ~Wha-What? <CHARNAME> is in your service!? Damn, I should have known he was playing both sides!~
+@10124 = ~Are you stupid enough to think I couldn't here you just outside my door? You told them of the trap! This cannot be allowed!~
+@10125 = ~You have attempted to betray me... and YOU have attempted to kill me. Both of you will be punished.~
+@10126 = ~The first punishment goes to the one who sought to endanger my well-being.~
+@10127 = ~From now on, you shall be known as <CHARNAME> the Flamboyant to all who approach you and all who know you.~
+@10128 = ~As for the mercenaries... You will live for one week as gophers. Feel free to roam about the inn.~
+@10129 = ~Finding food and a place to sleep is your own business. I imagine Paul the Cat should have some fun with you, too.~
+@10130 = ~And... oh, yes... You! Yes, you; the mercenaries! You will never be able to utter a single word to a cowled wizard again.~
+@10131 = ~That is all. If any of you have any more problems, confront me. I won't do anything, but it should be interesting to hear your arguments.~
+@10132 = ~RrraaAAGGHH!!!~
+@10133 = ~Here I come again, stupid!~
+@10134 = ~Haha! This is fun!~
+@10135 = ~BabababaBOOM!~
+@10136 = ~I'm showin' off for the adventurers now!~
+@10137 = ~What the hell is it?~
+@10138 = ~Hurry! There is a raid coming to the docks!~
+@10139 = ~A raid!? From who?~
+@10140 = ~By the Nelanther Pirates... and all of them, from what we saw.~
+@10141 = ~He speaks the truth. It shows the terrible mistake you made in blaming us.~
+@10142 = ~Damn! We are most sorry for our wrong-doing, but we must prepare. They are almost upon us. Look! I can see them in the distance. Prepare to meet steel on steel!~
+@10143 = ~I can sense the power nearby. We must continue through the cave.~
+@10144 = ~You have displayed much bravery and battle prowess this day, travellers. You have aided this dock from peril and the treatment you received will be hard to forgive.~
+@10145 = ~Your accusations were wrong, yet aiding you has resulted in its advantages.~
+@10146 = ~And this day, you have gained favour from the Shadow Thieves. We present you with this artifact, to show our guild's appreciation. There is honour even amongst us rogues, and being on good terms with one as powerful as you should be in our interest.~
+@10147 = ~Indeed. You have pleased no one more than the Radiant Heart. We have brought a finely crafted item to show our appreciation. At such short notice, the Radiant Heart alone would have struggled today.~
+@10148 = ~Despite my feeling of being cheated, the city clearly knows its error. I accept your gifts and hope that we may walk these streets again without bias.~
+@10149 = ~You shall be treated as well as you deserve, for we shall see to it. As for a lack of attention, I am not so sure. In such a short time, I have heard that many groups are seeking you for tasks that adventurers like yourself would be most suited to. Seems your adventuring days are very much alive and I hope our gifts will aid you greatly.~
+@10150 = ~No... No. NOOOOOOOO!~
+@10151 = ~This door is locked. You will need a key of some sort to get into the next room.~
+@10152 = ~As you insert the key into the door, the key disappears in a small flash of light, and the door opens by itself.~
+@10153 = ~You had your chance. We shall show you pain.~
+@10154 = ~My name is Paul! You will feel my wra-ooh... Ouch! That hurt!~
+@10155 = ~Victory is at hand, feeble peoples! Mwahaha!~
+@10156 = ~Purr... prrr...~
+@10157 = ~It has been a success. The spirits have been driven to the demi plane. My work here is done.~
+@10158 = ~Thank you, kind Priest of Lathander. This village is in great debt.~
+@10159 = ~Not at all, friend. It's all in a day's work. I shall take my leave now. Farewell travellers.~
+@10160 = ~You are too useful to let rot on the bellies of rats.~
+@10161 = ~You shall make excellent tools for the master.~
+@10162 = ~Resurrection is a wonderful thing.~
+@10163 = ~You are the Master's spirit-wraiths now, and you shall serve him as he wishes. Are you clear?~
+@10164 = ~Fully.~
+@10165 = ~I shall serve.~
+@10166 = ~Deadly and obedient; The Master shall treasure you in his goal for the return.~
+@10167 = ~PLEASE! NO!! I am sorry... so sorry... Please don't kill me... Please...~
+@10168 = ~Silence, pig! I am granting great mercy on you. I should peel the skin from your body and let you be devoured by insects, but I let you die a much more pleasant death. I am sure the smell of your skin burning will be most pleasant to me. For you, however, I am not so sure.~
+@10169 = ~Do it! I wish to see the pleasure in your eyes, Viconia. I want to see the lust in you as you make him suffer, for it pleases me so much. Burn him alive. Show me your desire for revenge! Show me what I desire.~
+@10170 = ~Feel the pain you deserve, pig! Burn!~
+@10171 = ~We have scryed the cause of the chaos and trade problems, not to mention deaths.~
+@10172 = ~We must take action.~
+@10173 = ~Show us the fiend so we can end this.~
+@10174 = ~I need not show you, but we shall end it here and now. Join with me in this chant for we shall strip this sick individual of his soul and put these troubles to a stop.~
+@10175 = ~*Cough-Cough* My chest... it... it feels like it is bursting!~
+@10176 = ~What-- What is happening? I am dying! No! Ah-- Aahhh!~
+@10177 = ~Grr...~
+@10178 = ~Silence, petty demons!~
+@10179 = ~Well, it's been a long time since I saw the likes of you. I must say that I have waited many generations for this moment.~
+@10180 = ~Do you have any idea who I am? I have waited longer than you, I can assure. You would be wise to step aside.~
+@10181 = ~You dare to threaten me? I am as old as time. I saw the birth of the very planet that you wish to rule. I also know of your kind.~
+@10182 = ~I know that you and time are just about indestructible. But I just witnessed your birth, and your time has yet to come.~
+@10183 = ~I can assure you that you are just another object that shall fall to me, petty demon.~
+@10184 = ~Demon! DEMON! I am no demon, fool. These petty creatures serve me as they have no choice. This is my plane for I am Tartarus, Slayer of Demons. You dare compare me to these... wretches?~
+@10185 = ~Convinced, fool?~
+@10186 = ~Ha ha ha! Such a display is pitiful in comparison to what I can achieve!~
+@10187 = ~Enough of this charade. You have something I want. Your claw is for what I have waited. It is my portal from this realm, and you shall perish for that gift.~
+@10188 = ~Finally someone has given me the spirits required for my birth. The time has come for me to claim my realm.~
+@10189 = ~I believe we have found the Tyrant's lair.~
+@10190 = ~Ahh! Help me!~
+@10191 = ~Get away from me, you filthy swine.~
+@10192 = ~Well, a beautiful Drow elf with some fight in her. I'll show you to respect me, you dark bitch.~
+@10193 = ~Stay away, swine! I am bound hands behind back. If you are a man, you will let my hands free and show me your worth in combat.~
+@10194 = ~I ain't after a fight, Drow. I'll show you what I'm after all night long!~
+@10195 = ~No... No. NOOOOOOOO!~
+@10196 = ~Viconia, are you all right? I heard your screams. Did they torture you?~
+@10197 = ~Torture would have been just as well. The guard... he... he raped me. The filthy human raped me with my hands tied behind my back. There was nothing I could do.~
+@10198 = ~By the gods! I am so sorry Viconia. We must find a way to avenge this!~
+@10199 = ~I have been violated by a human. I shall not rest until I hang his skin on my wall as a reminder of how evil the surface races can be.~
+@10200 = ~I am pleased that we can have this time together, but I must assure you that this is simply a release. Nothing more shall come of this.~
+@10201 = ~I am pleased with that choice, though who knows what time may bring?~
+@10202 = ~And know that we play by my rules. I shall show you some things that actually made Menzoberranzan desirable. I was well know for my skill in that department.~
+@10203 = ~Your mind is stunned suddenly. Darkness overwhelms you and visions take you out of your body...~
+@10204 = ~The body parts have vanished into thin air. They are replaced with a warm figurine.~
+@10205 = ~You begin to feel greatly fatigued. Your vision blurs and you cannot think clearly. It seems you have caught some sort of disease.~
+// DROWCONV.BAF (previously hardcoded in the BAF file)
+// To update for other languages, you can recover from existing files
+// Same as @8 in TOPESLAV.TRA
+@10206 = ~No, not now.~
+// Same as @20151 in TP2.TRA (question mark to replace by dot)
+@10207 = ~Yes.~

@@ -1,0 +1,32 @@
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId("Edheldor")
+    FadeToColor([30.0],0)
+    Wait(1)
+    JumpToPoint([519.277])
+    MoveViewObject(Myself,INSTANT)
+    Face(6)
+    Wait(1)
+    FadeFromColor([30.0],0)
+    Wait(2)
+    CreateVisualEffect("spcrtwpn",[519.277])
+    Wait(2)
+    Swing()
+    Wait(2)
+    CreateVisualEffect("spcrtwpn",[519.277])
+    Wait(2)
+    Swing()
+    Wait(3)
+    FadeToColor([30.0],0)
+    Wait(1)
+    JumpToPoint([310.272])
+    Face(14)
+    MoveViewObject(LastTalkedToBy,INSTANT)
+    Wait(1)
+    FadeFromColor([30.0],0)
+    StartDialogNoSet(LastTalkedToBy)
+    EndCutSceneMode()
+END
+

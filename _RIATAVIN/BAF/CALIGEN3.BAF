@@ -1,0 +1,25 @@
+IF
+  See(NearestEnemyOf(Myself))
+  StateCheck(Myself,STATE_INVISIBLE)
+  Global("tz_DjinniCloudkill","LOCALS",0)
+THEN
+  RESPONSE #100
+    ForceSpell(Myself,WIZARD_CLOUDKILL)
+    SetGlobal("tz_DjinniCloudkill","LOCALS",1)
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  StateCheck(Myself,STATE_INVISIBLE)
+THEN
+  RESPONSE #100
+    AttackReevaluate(NearestEnemyOf(Myself),15)
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+THEN
+  RESPONSE #100
+    ForceSpell(Myself,WIZARD_INVISIBILITY)
+END
+

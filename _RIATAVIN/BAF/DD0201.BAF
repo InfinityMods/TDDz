@@ -1,0 +1,62 @@
+IF
+  Global("tz_creature","DD0201",0)
+THEN
+  RESPONSE #100
+    CreateCreature("elmin01",[775.674],4)
+    CreateCreature("khelb01",[936.747],4)
+    CreateCreature("wardmaga",[910.666],4)
+    CreateCreature("wardmagb",[663.846],4)
+    SetGlobal("tz_creature","DD0201",1)
+END
+
+IF
+  Global("tz_enterhhelbhall","GLOBAL",0)
+THEN
+  RESPONSE #100
+    SetGlobal("tz_enterhhelbhall","GLOBAL",1)
+    StartCutSceneMode()
+    StartCutScene("movekhel")
+END
+
+IF
+  Global("tz_enterhhelbhall","GLOBAL",2)
+THEN
+  RESPONSE #100
+    ActionOverride("wardmagb",StartDialogue("wardmagb",Player1))
+    SetGlobal("tz_enterhhelbhall","GLOBAL",3)
+END
+
+IF
+  Global("tz_enterhhelbhall","GLOBAL",4)
+THEN
+  RESPONSE #100
+    SetGlobal("tz_enterhhelbhall","GLOBAL",5)
+    ActionOverride("khelb01",StartDialogue("khelb01b",Player1))
+END
+
+IF
+  Global("tz_enterhhelbhall","GLOBAL",6)
+THEN
+  RESPONSE #100
+    ActionOverride("elmin01",StartDialogue("elmin01b",Player1))
+    SetGlobal("tz_enterhhelbhall","GLOBAL",7)
+END
+
+IF
+  Global("tz_calipitfight1","GLOBAL",15)
+THEN
+  RESPONSE #100
+    CreateCreature("elmin02",[669.828],4)
+    CreateCreature("khelb02",[760.763],4)
+    CreateCreature("wardmagc",[855.685],4)
+    SetGlobal("tz_calipitfight1","GLOBAL",16)
+END
+
+IF
+  Global("tz_calipitfight1","GLOBAL",16)
+THEN
+  RESPONSE #100
+    ActionOverride("elmin02",StartDialogNoSet(Player1))
+    SetGlobal("tz_calipitfight1","GLOBAL",17)
+END
+

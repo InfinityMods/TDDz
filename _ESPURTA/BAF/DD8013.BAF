@@ -1,0 +1,46 @@
+IF
+  Global("tz_DD8013","GLOBAL",0)
+THEN
+  RESPONSE #100
+    CreateCreature("dragtope",[0.0],4)
+    SetGlobal("tz_DD8013","GLOBAL",1)
+END
+
+IF
+  Global("tz_topazhate","GLOBAL",1)
+THEN
+  RESPONSE #100
+    CreateCreature("icegolem",[662.736],4)
+    SetGlobal("tz_topazhate","GLOBAL",2)
+END
+
+IF
+  Global("tz_topazcut","GLOBAL",0)
+THEN
+  RESPONSE #100
+    ActionOverride("dragtope",PlayDead(60))
+    SetGlobal("tz_topazcut","GLOBAL",1)
+    StartCutSceneMode()
+    StartCutScene("topazcut")
+END
+
+IF
+  PartyHasItem("topazeye")
+  Global("tz_topeeye","GLOBAL",0)
+THEN
+  RESPONSE #100
+    DisplayStringHead(Player1,@10094)
+    Wait(5)
+    CreateVisualEffect("SPPORTAL",[789.519])
+    CreateVisualEffect("SPPORTAL",[963.605])
+    CreateVisualEffect("SPPORTAL",[799.766])
+    CreateVisualEffect("SPPORTAL",[547.752])
+    CreateVisualEffect("SPPORTAL",[1109.735])
+    CreateVisualEffect("SPPORTAL",[800.923])
+    Wait(2)
+    StartCutSceneMode()
+    StartCutScene("topemove")
+    TakePartyItem("topazeye")
+    SetGlobal("tz_topeeye","GLOBAL",1)
+END
+

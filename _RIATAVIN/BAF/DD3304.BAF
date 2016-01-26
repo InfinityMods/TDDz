@@ -1,0 +1,9 @@
+IF
+  Global("tz_dd3304","DD3304",0)
+THEN
+  RESPONSE #100
+    CreateCreature("3303grd1",[257.428],4)
+    CreateCreature("3303grd2",[457.460],4)
+    SetGlobal("tz_dd3304","DD3304",1)
+END
+

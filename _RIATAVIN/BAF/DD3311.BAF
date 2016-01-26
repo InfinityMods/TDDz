@@ -1,0 +1,8 @@
+IF
+  Global("tz_dd3311","DD3311",0)
+THEN
+  RESPONSE #100
+    CreateCreature("slilmat",[434.296],4)
+    SetGlobal("tz_DD3311","DD3311",1)
+END
+

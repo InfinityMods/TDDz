@@ -1,0 +1,143 @@
+IF
+  Global("tz_creature","dd9x00",0)
+THEN
+  RESPONSE #100
+    CreateCreature("genietrv",[3754.2663],4)
+    CreateCreature("calmeet1",[3365.2655],4)
+    CreateCreature("beggar3",[3317.2230],4)
+    CreateCreature("beggar3",[2654.2899],4)
+    CreateCreature("beggar3",[1611.3063],4)
+    CreateCreature("beggar3",[1397.2056],4)
+    CreateCreature("beggar3",[894.2711],4)
+    CreateCreature("beggar3",[1794.1716],4)
+    CreateCreature("beggar3",[1033.1384],4)
+    CreateCreature("beggar3",[2056.739],4)
+    CreateCreature("beggar2",[3041.2248],4)
+    CreateCreature("beggar2",[1807.3043],4)
+    CreateCreature("beggar2",[1053.2552],4)
+    CreateCreature("beggar2",[902.2532],4)
+    CreateCreature("beggar2",[1830.1361],4)
+    CreateCreature("beggar2",[2564.1594],4)
+    CreateCreature("calipes1",[2653.2684],4)
+    CreateCreature("calipes1",[1310.3370],4)
+    CreateCreature("calipes1",[2093.2147],4)
+    CreateCreature("calipes1",[1334.1167],4)
+    CreateCreature("calipes1",[1810.564],4)
+    CreateCreature("calipes1",[3051.1145],4)
+    CreateCreature("calipes1",[1291.3249],4)
+    CreateCreature("dbeggar2",[2058.3122],4)
+    CreateCreature("dbeggar2",[1981.2824],4)
+    CreateCreature("dbeggar2",[1628.2499],4)
+    CreateCreature("dbeggar2",[1308.2323],4)
+    CreateCreature("dbeggar2",[1830.1984],4)
+    CreateCreature("dbeggar2",[2035.1615],4)
+    CreateCreature("dbeggar2",[1574.1405],4)
+    CreateCreature("dbeggar2",[856.1489],4)
+    CreateCreature("dbeggar2",[2344.1496],4)
+    CreateCreature("dbeggar2",[2766.1680],4)
+    CreateCreature("dbeggar2",[3098.1372],4)
+    CreateCreature("dbeggar2",[2863.1165],4)
+    CreateCreature("calithug",[1674.3290],4)
+    CreateCreature("calithug",[1748.3276],4)
+    CreateCreature("calithug",[1686.3229],4)
+    CreateCreature("calithug",[1774.3216],4)
+    CreateCreature("calithug",[1553.3275],4)
+    CreateCreature("calithug",[1942.1428],4)
+    CreateCreature("calithug",[1997.1466],4)
+    CreateCreature("calithug",[1850.1399],4)
+    CreateCreature("calithug",[2023.1533],4)
+    CreateCreature("calithug",[2128.1490],4)
+    CreateCreature("calithug",[757.1453],4)
+    CreateCreature("calithug",[719.1530],4)
+    CreateCreature("calithug",[785.1492],4)
+    CreateCreature("calithug",[1810.504],4)
+    CreateCreature("calithug",[1018.547],4)
+    CreateCreature("calithug",[1069.567],4)
+    CreateCreature("calithug",[1122.591],4)
+    CreateCreature("calithug",[1202.548],4)
+    CreateCreature("calicom1",[3691.1800],4)
+    CreateCreature("calicom2",[3717.1919],4)
+    CreateCreature("calicom1",[3531.1983],4)
+    CreateCreature("calicom2",[3151.1958],4)
+    CreateCreature("calicom2",[3131.1674],4)
+    CreateCreature("calicom2",[3322.1562],4)
+    CreateCreature("calicom1",[2830.1941],4)
+    CreateCreature("calshop1",[3039.1969],4)
+    CreateCreature("calshop2",[3602.1703],4)
+    CreateCreature("horsecal",[2881.3618],4)
+    CreateCreature("horsecal",[2919.3520],4)
+    CreateCreature("horsecal",[3020.3620],4)
+    CreateCreature("horsecal",[3032.3497],4)
+    CreateCreature("horsecal",[3174.3577],4)
+    CreateCreature("horsecal",[3107.3396],4)
+    CreateCreature("calwere1",[2837.366],4)
+    CreateCreature("calwere2",[2865.444],4)
+    SetGlobal("tz_creature","dd9x00",1)
+    SetGlobal("tz_buggeroffgen","GLOBAL",1)
+END
+
+IF
+  Global("tz_buggeroffgen","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("tz_buggeroffgen","GLOBAL",2)
+    ActionOverride("genietrv",StartDialogue("genielev",Player1))
+END
+
+IF
+  Global("tz_buggeroffgen","GLOBAL",3)
+THEN
+  RESPONSE #100
+    ActionOverride("calmeet1",StartDialogue("calmeet1",Player1))
+    SetGlobal("tz_buggeroffgen","GLOBAL",4)
+END
+
+IF
+  Global("tz_pashapassing","GLOBAL",1)
+THEN
+  RESPONSE #100
+    CreateCreature("horse",[113.77],4)
+    CreateCreature("horse",[62.197],4)
+    CreateCreature("horse",[236.176],4)
+    CreateCreature("pashtrav",[247.308],4)
+    CreateCreature("travgrd4",[368.78],4)
+    CreateCreature("travgrd5",[524.74],4)
+    CreateCreature("travmage",[433.143],4)
+    CreateCreature("travgrd1",[296.174],4)
+    CreateCreature("travmag2",[144.217],4)
+    CreateCreature("travgrd2",[31.320],4)
+    CreateCreature("travgrd3",[247.308],4)
+    SetGlobal("tz_pashapassing","GLOBAL",2)
+END
+
+IF
+  Global("tz_pashacircle","GLOBAL",1)
+THEN
+  RESPONSE #100
+    CreateCreature("salam02",[1162.1219],4)
+    SetGlobal("tz_pashacircle","GLOBAL",2)
+END
+
+IF
+  Global("tz_pashacircle","GLOBAL",3)
+THEN
+  RESPONSE #100
+    SetGlobal("tz_pashacircle","GLOBAL",4)
+    FadeToColor([20.0],0)
+    Wait(2)
+    StartCutSceneMode()
+    StartCutScene("calipit")
+END
+
+IF
+  Global("tz_caliwolfswapn","GLOBAL",1)
+THEN
+  RESPONSE #100
+    CreateCreature("caliwolf",[4105.158],4)
+    CreateCreature("caliwolf",[4241.306],4)
+    CreateCreature("caliwolf",[4058.343],4)
+    CreateCreature("caliwolf",[4123.495],4)
+    CreateCreature("caliwolf",[3795.107],4)
+    SetGlobal("tz_caliwolfswapn","GLOBAL",2)
+END
+

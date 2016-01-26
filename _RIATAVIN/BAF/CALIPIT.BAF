@@ -1,0 +1,55 @@
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId(Player1)
+    Wait(2)
+    //LeaveAreaLUA("dd9x00c1","GTRSK002",[507.694],12) // Notes: DD9X00C1 => DDC19X
+    LeaveAreaLUA("DDC19X","GTRSK002",[507.694],12)
+    MultiPlayerSync()
+    SetMasterArea("DDC19X")
+    MultiPlayerSync()
+    FadeFromColor([20.0],0)
+    EndCutSceneMode()
+END
+
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId(Player2)
+    LeaveAreaLUA("DDC19X","GTRSK002",[435.732],12)
+END
+
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId(Player3)
+    LeaveAreaLUA("DDC19X","GTRSK002",[600.673],12)
+END
+
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId(Player4)
+    LeaveAreaLUA("DDC19X","GTRSK002",[343.796],12)
+END
+
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId(Player5)
+    LeaveAreaLUA("DDC19X","GTRSK002",[652.652],12)
+END
+
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId(Player6)
+    LeaveAreaLUA("DDC19X","GTRSK002",[883.668],12)
+END
+

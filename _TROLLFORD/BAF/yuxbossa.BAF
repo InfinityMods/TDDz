@@ -1,0 +1,45 @@
+IF
+  Range([PC],15)
+  NumberOfTimesTalkedTo(0)
+THEN
+  RESPONSE #100
+    StartDialogNoSet([PC])
+END
+
+IF
+  Global("tz_yuxprep","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobalTimer("tz_deadbring","GLOBAL",14)
+    SetGlobalTimer("tz_mirror","GLOBAL",10)
+    SetGlobalTimer("tz_maze","GLOBAL",20)
+    SetGlobal("tz_yuxprep","LOCALS",1)
+END
+
+IF
+  Global("tz_animate","LOCALS",0)
+  GlobalTimerExpired("tz_mirror","GLOBAL")
+THEN
+  RESPONSE #100
+    ForceSpell(NearestEnemyOf(Myself),WIZARD_ANIMATE_DEAD)
+    SetGlobal("tz_animate","LOCALS",1)
+END
+
+IF
+  Global("tz_mirror","LOCALS",0)
+  GlobalTimerExpired("tz_deadbring","GLOBAL")
+THEN
+  RESPONSE #100
+    ForceSpell(NearestEnemyOf(Myself),WIZARD_MIRROR_IMAGE)
+    SetGlobal("tz_mirror","LOCALS",1)
+END
+
+IF
+  Global("tz_maze","LOCALS",0)
+  GlobalTimerExpired("tz_maze","GLOBAL")
+THEN
+  RESPONSE #100
+    ForceSpell(NearestEnemyOf(Myself),WIZARD_MAZE)
+    SetGlobal("tz_maze","LOCALS",1)
+END
+

@@ -1,0 +1,31 @@
+IF
+  Global("tz_serpant","DD1800",0)
+THEN
+  RESPONSE #100
+    CreateCreature("snaksw1",[1446.481],4)
+    CreateCreature("snaksw1",[1358.564],4)
+    CreateCreature("snaksw1",[1365.649],4)
+    CreateCreature("snaksw4",[537.378],4)
+    CreateCreature("snaksw2",[436.509],4)
+    CreateCreature("snaksw2",[365.549],4)
+    CreateCreature("snaksw3",[481.182],4)
+    CreateCreature("snaksw2",[1192.539],4)
+    CreateCreature("snaksw2",[1122.599],4)
+    CreateCreature("snaksw2",[1034.734],4)
+    CreateCreature("snaksw2",[627.286],4)
+    CreateCreature("snaksw3",[1188.283],4)
+    CreateCreature("snaksw3",[1354.734],4)
+    CreateCreature("snaksw3",[1153.726],4)
+    CreateCreature("snaksw3",[470.160],4)
+    SetGlobal("tz_serpant","DD1800",1)
+END
+
+IF
+  PartyHasItem("snakscr")
+  Global("tz_update_map","DD1800",0)
+THEN
+  RESPONSE #100
+    RevealAreaOnMap("DD2500")
+    SetGlobal("tz_update_map","DD1800",1)
+END
+

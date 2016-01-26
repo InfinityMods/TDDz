@@ -1,0 +1,33 @@
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId(Player1)
+    CreateVisualEffectObject("spplanar",Player1)
+    Wait(2)
+    CreateCreatureObject("caliheal",Player1,0,0,0)
+    Wait(2)
+    ActionOverride(Player2,FaceObject("caliheal"))
+    ActionOverride(Player3,FaceObject("caliheal"))
+    ActionOverride(Player4,FaceObject("caliheal"))
+    ActionOverride(Player5,FaceObject("caliheal"))
+    ActionOverride(Player6,FaceObject("caliheal"))
+    FaceObject("caliheal")
+    Wait(1)
+    ActionOverride("caliheal",ReallyForceSpell(Player1,CLERIC_CURE_CRITICAL_WOUNDS))
+    ActionOverride("caliheal",ReallyForceSpell(Player2,CLERIC_CURE_CRITICAL_WOUNDS))
+    ActionOverride("caliheal",ReallyForceSpell(Player3,CLERIC_CURE_CRITICAL_WOUNDS))
+    ActionOverride("caliheal",ReallyForceSpell(Player4,CLERIC_CURE_CRITICAL_WOUNDS))
+    ActionOverride("caliheal",ReallyForceSpell(Player5,CLERIC_CURE_CRITICAL_WOUNDS))
+    ActionOverride("caliheal",ReallyForceSpell(Player6,CLERIC_CURE_CRITICAL_WOUNDS))
+    Wait(4)
+    ActionOverride("caliheal",ReallyForceSpell(Myself,CLERIC_CURE_CRITICAL_WOUNDS))
+    CreateVisualEffectObject("spplanar","caliheal")
+    Wait(2)
+    ActionOverride("caliheal",DestroySelf())
+    Wait(1)
+    IncrementGlobal("tz_calipitfight1","GLOBAL",1)
+//    SetGlobal("calipitfight1","GLOBAL",3)
+    EndCutSceneMode()
+END
+

@@ -1,0 +1,60 @@
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId(Player1)
+    FadeToColor([20.0],0)
+    Wait(2)
+    LeaveAreaLUA("DD9x00","",[3488.2683],0)
+    MultiPlayerSync()
+    SetMasterArea("DD9x00")
+    MultiPlayerSync()
+    Wait(1)
+    StartCutScene("CALIMOV1")
+END
+
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId(Player2)
+    Wait(2)
+    LeaveAreaLUA("DD9x00","",[3488.2683],0)
+END
+
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId(Player3)
+    Wait(2)
+    LeaveAreaLUA("DD9x00","",[3488.2683],0)
+END
+
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId(Player4)
+    Wait(2)
+    LeaveAreaLUA("DD9x00","",[3488.2683],0)
+END
+
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId(Player5)
+    Wait(2)
+    LeaveAreaLUA("DD9x00","",[3488.2683],0)
+END
+
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId(Player6)
+    Wait(2)
+    LeaveAreaLUA("DD9x00","",[3488.2683],0)
+END
+

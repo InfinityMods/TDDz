@@ -1,0 +1,147 @@
+//=============================================================================
+DEFINE_ACTION_MACRO UpdateTooltip
+BEGIN
+	COPY_EXISTING ~TOOLTIP.2DA~ ~override~
+		SET required_columns = 6 // input parameter
+		SET rows=2
+		SET rows_prev=0
+		SET col_cnt=0
+		WHILE "%rows%">1 BEGIN
+			col_cnt = col_cnt + 1
+			rows_prev = rows
+			COUNT_2DA_ROWS col_cnt rows
+		END
+		col_cnt = col_cnt - 1
+		SET ccc = col_cnt - 1
+
+		PATCH_IF 1 BEGIN
+			SPRINT str_add ""
+			SPRINT str ~%ccc%~
+			FOR(cnt="%col_cnt%"; cnt<="%required_columns%"; cnt+=1) BEGIN
+				SPRINT str "%str%"^"          %cnt%"
+				SPRINT str_add "%str_add%"^"         -1"
+			END
+
+			READ_2DA_ENTRY 0 0 3 "test"
+			PATCH_IF( "%test%"=1 ) BEGIN
+				SET_2DA_ENTRY 0 0 3 "0                  1"
+			END
+
+			PATCH_IF("%ccc%"<"%required_columns%") BEGIN
+				SET_2DA_ENTRY 0 ccc ccc "%str%"
+				FOR(j=1; j<="%rows_prev%"; j+=1) BEGIN
+					READ_2DA_ENTRY j ccc col_cnt "last"
+					SPRINT str "%last%"^"%str_add%"
+					SET_2DA_ENTRY j ccc col_cnt "%str%"
+				END
+			END
+		END
+	BUT_ONLY_IF_IT_CHANGES
+
+	APPEND ~TOOLTIP.2DA~ ~ARQUINXX          15527        15529       -1         -1         -1         -1kkkkkk~
+	APPEND ~TOOLTIP.2DA~ ~BEARKNFX          15527        15529       -1         -1         -1         -1kkkkkk~
+	APPEND ~TOOLTIP.2DA~ ~POLAW4A           66666666        77777777       88888888      88888880      88888881      88888882kkkkkk~
+	APPEND ~TOOLTIP.2DA~ ~ARDEADX           77777772        -1          -1       -1       -1       -1kkkkkk~
+	APPEND ~TOOLTIP.2DA~ ~EREBOS            66666660        77777773       -1       -1       -1       -1kkkkkk~
+	APPEND ~TOOLTIP.2DA~ ~GHARBOOT          77777774        -1          -1       -1       -1       -1kkkkkk~
+	APPEND ~TOOLTIP.2DA~ ~HEAVENST          66666661        77777775       -1       -1       -1       -1kkkkkk~
+	APPEND ~TOOLTIP.2DA~ ~KIBADAY           66666662        77777776       -1       -1       -1       -1kkkkkk~
+	APPEND ~TOOLTIP.2DA~ ~KIBAXX            66666662        77777776       -1       -1       -1       -1kkkkkk~
+	APPEND ~TOOLTIP.2DA~ ~LV16ROB           66666663        77777778       -1       -1       -1       -1kkkkkk~
+	APPEND ~TOOLTIP.2DA~ ~MHSWD             66666664        77777779       -1       -1       -1       -1kkkkkk~
+	APPEND ~TOOLTIP.2DA~ ~MISTY             77777780        77777781       -1       -1       -1       -1kkkkkk~
+	APPEND ~TOOLTIP.2DA~ ~MITALBRE          66666665        77777782       77777783       88888883       -1       -1kkkkkk~
+	APPEND ~TOOLTIP.2DA~ ~MOONLITE          66666667        77777784       -1       -1       -1       -1kkkkkk~
+	APPEND ~TOOLTIP.2DA~ ~MOORSX            66666668        77777785       -1       -1       -1       -1kkkkkk~
+	APPEND ~TOOLTIP.2DA~ ~QUAKEHAM          66666669        77777786       -1       -1       -1       -1kkkkkk~
+	APPEND ~TOOLTIP.2DA~ ~QUOST             66666670        77777787       77777788       -1       -1       -1kkkkkk~
+	APPEND ~TOOLTIP.2DA~ ~ROBE2             77777789        77777790       -1       -1       -1       -1kkkkkk~
+	APPEND ~TOOLTIP.2DA~ ~STAFDRAG          66666671        77777791       77777792       88888884       -1       -1kkkkkk~
+	APPEND ~TOOLTIP.2DA~ ~STAFFBES          66666672        77777778       77777793       -1       -1       -1kkkkkk~
+	APPEND ~TOOLTIP.2DA~ ~TYRANT            66666673        77777794       77777795       -1       -1       -1kkkkkk~
+
+	COPY_EXISTING ~TOOLTIP.2DA~ ~override~ 
+		SET present_cols = 7 // number of items in appended rows
+		SET rows=2
+		SET rows_prev=0
+		SET col_cnt=0
+		WHILE "%rows%">1 BEGIN
+			col_cnt = col_cnt + 1
+			rows_prev = rows
+			COUNT_2DA_ROWS col_cnt rows
+		END
+		col_cnt = col_cnt - 1
+		SET ccc = col_cnt - 1
+
+		SPRINT str_add ""
+		FOR(cnt="%present_cols%"; cnt<"%col_cnt%"; cnt+=1) BEGIN
+			SPRINT str_add "%str_add%"^"         -1"
+		END
+		REPLACE_TEXTUALLY ~kkkkkk~ "%str_add%"
+
+		REPLACE ~66666666~ @20035
+		REPLACE ~77777777~ @20036
+		REPLACE ~88888888~ @20037
+		REPLACE ~88888880~ @20038
+		REPLACE ~88888881~ @20039
+		REPLACE ~88888882~ @20040
+
+		REPLACE ~77777772~ @20041
+		
+		REPLACE ~66666660~ @20042
+		REPLACE ~77777773~ @20043
+		
+		REPLACE ~77777774~ @20044
+		
+		REPLACE ~66666661~ @20045
+		REPLACE ~77777775~ @20046
+		
+		REPLACE ~66666662~ @20047
+		REPLACE ~77777776~ @20048
+		
+		REPLACE ~66666663~ @20049
+		REPLACE ~77777778~ @20050
+		
+		REPLACE ~66666664~ @20051
+		REPLACE ~77777779~ @20052
+		
+		REPLACE ~77777780~ @20053
+		REPLACE ~77777781~ @20054
+		
+		REPLACE ~66666665~ @20055
+		REPLACE ~77777782~ @20056
+		REPLACE ~77777783~ @20057
+		REPLACE ~88888883~ @20058
+		
+		REPLACE ~66666667~ @20059
+		REPLACE ~77777784~ @20060
+		
+		REPLACE ~66666668~ @20061
+		REPLACE ~77777785~ @20062
+		
+		REPLACE ~66666669~ @20063
+		REPLACE ~77777786~ @20064
+		
+		REPLACE ~66666670~ @20065
+		REPLACE ~77777787~ @20066
+		REPLACE ~77777788~ @20067
+		
+		REPLACE ~77777789~ @20068
+		REPLACE ~77777790~ @20069
+		
+		REPLACE ~66666671~ @20070
+		REPLACE ~77777791~ @20071
+		REPLACE ~77777792~ @20072
+		REPLACE ~88888884~ @20073
+		
+		REPLACE ~66666672~ @20074
+		REPLACE ~77777793~ @20075
+		
+		REPLACE ~66666673~ @20076
+		REPLACE ~77777794~ @20077
+		REPLACE ~77777795~ @20078
+ 
+	COPY_EXISTING tooltip.2da override
+		SET_2DA_ENTRY 0 0 3 ~ ~
+	BUT_ONLY_IF_IT_CHANGES
+END

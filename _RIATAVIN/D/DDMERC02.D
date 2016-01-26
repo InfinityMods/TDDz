@@ -1,0 +1,11 @@
+BEGIN ~DDMERC02~
+
+IF ~Global("tz_BlackBladesEncounter","DD3300",0)~ THEN BEGIN 0
+  SAY @0
+  IF ~~ THEN EXTERN ~DDBLBL01~ 0
+END
+
+IF ~~ THEN BEGIN 1 // from: DDBLBL01:0.0
+  SAY @1
+  IF ~~ THEN EXTERN ~DDBLBL01~ 1
+END

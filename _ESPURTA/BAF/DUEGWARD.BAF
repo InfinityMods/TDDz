@@ -1,0 +1,19 @@
+IF
+  Global("TZ_DWARD","GLOBAL",0)
+  See([PC])
+  Range([PC],20)
+THEN
+  RESPONSE #100
+    StartDialogNoSet([PC])
+END
+
+IF
+  Global("TZ_DWARD","GLOBAL",1)
+THEN
+  RESPONSE #100
+    MoveToPoint([1086.822])
+    SetGlobal("TZ_DWARD","GLOBAL",2)
+    Wait(4)
+    DestroySelf()
+END
+

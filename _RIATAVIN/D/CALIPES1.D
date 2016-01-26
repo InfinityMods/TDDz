@@ -1,0 +1,69 @@
+BEGIN ~CALIPES1~
+
+IF ~RandomNum(4,1)~ THEN BEGIN 0
+  SAY @0
+  IF ~~ THEN REPLY @1 EXIT
+  IF ~~ THEN REPLY @2 GOTO 1
+END
+
+IF ~~ THEN BEGIN 1 // from: 0.1
+  SAY @3
+  IF ~~ THEN EXIT
+END
+
+IF ~RandomNum(4,2)~ THEN BEGIN 2
+  SAY @4
+  IF ~~ THEN REPLY @5 GOTO 3
+  IF ~~ THEN REPLY @6 GOTO 14
+END
+
+IF ~~ THEN BEGIN 3 // from: 2.0
+  SAY @7
+  IF ~~ THEN REPLY @8 GOTO 4
+  IF ~~ THEN REPLY @9 GOTO 5
+END
+
+IF ~~ THEN BEGIN 4 // from: 3.0
+  SAY @10
+  IF ~~ THEN EXIT
+END
+
+IF ~~ THEN BEGIN 5 // from: 3.1
+  SAY @11
+  IF ~~ THEN DO ~TakePartyGold(15)~ EXIT
+END
+
+IF ~RandomNum(4,3)~ THEN BEGIN 6
+  SAY @12
+  IF ~~ THEN REPLY @13 EXIT
+  IF ~~ THEN REPLY @14 DO ~TakePartyGold(5)~ EXIT
+  IF ~~ THEN REPLY @15 DO ~TakePartyGold(30)~ EXIT
+END
+
+IF ~RandomNum(4,4)~ THEN BEGIN 7
+  SAY @16
+  IF ~~ THEN REPLY @17 GOTO 12
+  IF ~~ THEN REPLY @18 GOTO 12
+END
+
+IF ~~ THEN BEGIN 12 // from: 7.1 7.0
+  SAY @19
+  IF ~~ THEN REPLY @20 GOTO 13
+  IF ~~ THEN REPLY @21 GOTO 15
+END
+
+IF ~~ THEN BEGIN 13 // from: 12.0
+  SAY @22
+  IF ~CheckStatGT(LastTalkedToBy(),12,INT)~ THEN REPLY @23 EXIT
+  IF ~~ THEN REPLY @24 DO ~TakePartyGold(50)~ EXIT
+END
+
+IF ~~ THEN BEGIN 14 // from: 2.1
+  SAY @25
+  IF ~~ THEN EXIT
+END
+
+IF ~~ THEN BEGIN 15 // from: 12.1
+  SAY @26
+  IF ~~ THEN EXIT
+END

@@ -1,0 +1,16 @@
+IF
+  Global("tz_barbwake","DD2001",0)
+THEN
+  RESPONSE #100
+    CreateCreature("barbmess",[188.285],4)
+    ApplySpell(Player1,CLERIC_RESTORATION)
+    ApplySpell(Player2,CLERIC_RESTORATION)
+    ApplySpell(Player3,CLERIC_RESTORATION)
+    ApplySpell(Player4,CLERIC_RESTORATION)
+    ApplySpell(Player5,CLERIC_RESTORATION)
+    ApplySpell(Player6,CLERIC_RESTORATION)
+    SetGlobal("tz_barbwake","DD2001",1)
+    SetGlobal("tz_barbvillage","GLOBAL",1)
+    SetGlobal("tz_eightdead","GLOBAL",3)
+END
+

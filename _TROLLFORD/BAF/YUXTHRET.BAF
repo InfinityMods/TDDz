@@ -1,0 +1,18 @@
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId(Player1)
+    ScreenShake([2555.405],3)
+    ActionOverride(Player2,FaceObject("yuxbossa"))
+    ActionOverride(Player3,FaceObject("yuxbossa"))
+    ActionOverride(Player4,FaceObject("yuxbossa"))
+    ActionOverride(Player5,FaceObject("yuxbossa"))
+    ActionOverride(Player6,FaceObject("yuxbossa"))
+    FaceObject("yuxbossa")
+    ActionOverride("yuxbossa",MoveToPoint([2312.577]))
+    Wait(7)
+    SetGlobal("tz_yuxinvisee","GLOBAL",3)
+    EndCutSceneMode()
+END
+

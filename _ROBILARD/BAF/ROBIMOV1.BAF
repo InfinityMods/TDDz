@@ -1,0 +1,19 @@
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId(Player1)
+    Wait(4)
+    CreateVisualEffectObject("spplanar",Player1)
+    CreateVisualEffectObject("spportal",Player2)
+    CreateVisualEffectObject("spplanar",Player3)
+    CreateVisualEffectObject("spplanar",Player4)
+    CreateVisualEffectObject("spportal",Player5)
+    CreateVisualEffectObject("spplanar",Player6)
+    Wait(2)
+    CreateCreatureObjectOffset("robend01",Player1,[-150.0])
+    CreateCreatureObjectOffset("robend02",Player1,[150.0])
+    Wait(2)
+    EndCutSceneMode()
+END
+

@@ -1,0 +1,130 @@
+IF
+	OnCreation()
+	Global("tz_Undead_Hordes","DD3503",0)
+THEN
+	RESPONSE #100
+		SetGlobal("tz_Undead_Hordes","DD3503",1)
+		CreateCreature("SKELWAx2",[2461.1075],4)
+		CreateCreature("SKELWAx2",[2296.1068],4)
+		CreateCreature("SKELWAx2",[2174.1148],4)
+		CreateCreature("SKELWAx2",[2163.1258],4)
+		CreateCreature("SKELWAx2",[2262.1402],4)
+		CreateCreature("SKELWAx2",[1732.1460],4)
+		CreateCreature("SKELWAx2",[1797.1560],4)
+		CreateCreature("SKELWAx2",[2123.672],4)
+		CreateCreature("SKELWAx2",[2403.783],4)
+		CreateCreature("pkghost2",[1827.1008],4)
+		CreateCreature("pkghost2",[1713.1161],4)
+		CreateCreature("pkghost2",[2447.429],4)
+		CreateCreature("pkghost2",[2218.398],4)
+		CreateCreature("pkghost2",[1422.1646],4)
+		CreateCreature("pkghost2",[1707.1738],4)
+		CreateCreature("pkghost2",[2641.548],4)
+		CreateCreature("ZOMBSExx",[2482.5481],4)
+		CreateCreature("ZOMBSExx",[1361.1778],4)
+		CreateCreature("ZOMBSExx",[1539.1770],4)
+		CreateCreature("ZOMBSExx",[1635.1837],4)
+		CreateCreature("pkghost4",[1237.881],4)
+		CreateCreature("pklich1",[396.551],4)
+END
+
+IF
+	Global("tz_Undead_Hordes","DD3503",1)
+	!Difficulty(EASIEST)
+	!Difficulty(EASY)
+THEN
+	RESPONSE #100
+		SetGlobal("tz_Undead_Hordes","DD3503",2)
+		CreateCreature("SKELWAx2",[2210.500],4)
+		CreateCreature("SKELWAx2",[2300.850],4)
+		CreateCreature("pkghost2",[2000.950],4)
+		CreateCreature("pkghost2",[1600.1200],4)
+		CreateCreature("pkghost2",[-2.-2],0)
+		CreateCreature("pkghost2",[-1.-1],0)
+END
+
+IF
+	Global("tz_pkghost4see","GLOBAL",1)
+THEN
+	RESPONSE #100
+		SetGlobal("tz_pkghost4see","GLOBAL",2)
+		ClearAllActions()
+		StartCutSceneMode()
+		StartCutScene("cutdarks")
+END
+
+IF
+	Global("tz_pkghost4call","GLOBAL",1)
+THEN
+	RESPONSE #100
+		CreateVisualEffect("SPHORWIL",[1237.881])
+		CreateVisualEffect("SPHORWIL",[1429.843])
+		CreateVisualEffect("SPHORWIL",[1622.841])
+		CreateVisualEffect("SPHORWIL",[1431.1118])
+		CreateVisualEffect("SPHORWIL",[1303.1027])
+		Wait(1)
+		CreateCreature("shadfx1",[1237.881],4)
+		CreateCreature("shadfx1",[1429.843],4)
+		CreateCreature("shadfx1",[1622.841],4)
+		CreateCreature("shadfx1",[1431.1118],4)
+		CreateCreature("shadfx1",[1303.1027],4)
+		SetGlobal("tz_pkghost4call","GLOBAL",2)
+END
+
+IF
+	Global("tz_pklich1","GLOBAL",1)
+THEN
+	RESPONSE #100
+		SetGlobal("tz_pklich1","GLOBAL",2)
+		ClearAllActions()
+		StartCutSceneMode()
+		StartCutScene("cutpklic")
+END
+
+IF
+	Global("tz_pklich1see","GLOBAL",1)
+THEN
+	RESPONSE #100
+		CreateCreature("NIGHTWLK",[493.766],4)
+		CreateVisualEffect("SPHORWIL",[493.766])
+		SetGlobal("tz_pklich1see","GLOBAL",2)
+END
+
+IF
+	Dead("pklich1")
+	Global("tz_pklich1deadb","GLOBAL",0)
+THEN
+	RESPONSE #100
+		SetGlobal("tz_pklich1deadb","GLOBAL",1)
+		SetGlobal("tz_BPLichPain","GLOBAL",1)
+		CreateVisualEffect("SPCLOUD1",[418.621])
+		CreateVisualEffect("SPCLOUD1",[523.550])
+		CreateVisualEffect("SPCLOUD1",[717.471])
+		CreateVisualEffect("SPCLOUD1",[621.597])
+		CreateVisualEffect("SPCLOUD1",[509.765])
+		CreateVisualEffect("SPCLOUD1",[852.570])
+		CreateVisualEffect("SPCLOUD1",[718.779])
+		CreateVisualEffect("SPSUMGTE",[598.653])
+		Wait(3)
+END
+
+IF
+	Global("tz_BPLichPain","GLOBAL",1)
+	PartyHasItem("BELTXX")
+THEN
+	RESPONSE #100
+		SetGlobal("tz_BPLichPain","GLOBAL",2)
+		SetGlobalTimer("tz_BPGrabQuick","GLOBAL",TWO_ROUNDS)
+END
+
+IF
+	Global("tz_BPLichPain","GLOBAL",2)
+	GlobalTimerExpired("tz_BPGrabQuick","GLOBAL")
+THEN
+	RESPONSE #100
+		SetGlobal("tz_BPLichPain","GLOBAL",3)
+		ClearAllActions()
+		StartCutSceneMode()
+		StartCutScene("cutpkex")
+END
+

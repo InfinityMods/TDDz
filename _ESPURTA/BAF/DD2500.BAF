@@ -1,0 +1,76 @@
+IF
+  Global("tz_barbcamp","DD2500",0)
+THEN
+  RESPONSE #100
+    CreateCreature("snaksw5",[516.417],4)
+    CreateCreature("snaksw6",[594.318],4)
+    CreateCreature("snaksw7",[857.290],4)
+    CreateCreature("snaksw8",[877.511],4)
+    CreateCreature("snaksw9",[668.300],4)
+    CreateCreature("snaksw10",[879.592],4)
+    CreateCreature("snaksw11",[877.700],4)
+    CreateCreature("snaksw12",[1039.401],4)
+    CreateCreature("barb1",[530.440],4)
+    CreateCreature("barb1",[620.340],4)
+    CreateCreature("barb2",[500.300],4)
+    CreateCreature("barb2",[600.240],4)
+    CreateCreature("barb2",[690.520],4)
+    CreateCreature("barb3",[530.400],4)
+    SetGlobal("tz_barbcamp","DD2500",1)
+END
+
+IF
+  Global("tz_barbvillage","GLOBAL",1)
+THEN
+  RESPONSE #100
+    CreateCreature("barbgrd",[737.1171],4)
+    CreateCreature("barbgrd",[658.1079],4)
+    CreateCreature("barb4",[660.1150],4)
+    CreateCreature("barbgrd2",[698.227],4)
+    CreateCreature("barbgrd2",[970.334],4)
+    CreateCreature("barbgrd2",[991.486],4)
+    CreateCreature("barbgrd2",[978.1970],4)
+    CreateCreature("barbgrd2",[903.2091],4)
+    CreateCreature("barbgrd2",[591.1912],4)
+    CreateCreature("barbgrd2",[1041.1456],4)
+    CreateCreature("barbgrd2",[1991.1894],4)
+    CreateCreature("barbgrd2",[1843.1319],4)
+    CreateCreature("barbgood",[968.202],4)
+    CreateCreature("barbheal",[777.1882],4)
+    SetGlobal("tz_barbvillage","GLOBAL",2)
+END
+
+IF
+  Global("tz_barbhelp","GLOBAL",1)
+THEN
+  RESPONSE #100
+    CreateCreature("bargood",[887.1904],4)
+    CreateCreature("barheal",[909.238],4)
+    SetGlobal("tz_barbhelp","GLOBAL",2)
+END
+
+IF
+  Global("tz_kinglife","GLOBAL",4)
+THEN
+  RESPONSE #100
+    CreateCreature("Barborn",[779.1097],4)
+    SetGlobal("tz_kinglife","GLOBAL",5)
+END
+
+IF
+  Global("tz_kinglife","GLOBAL",6)
+THEN
+  RESPONSE #100
+    CreateCreature("barbkin2",[747.1270],4)
+    TakePartyItem("heafnall")
+    SetGlobal("tz_kinglife","GLOBAL",7)
+END
+
+IF
+  Global("tz_kinglife","GLOBAL",8)
+THEN
+  RESPONSE #100
+    GiveItemCreate("iceplat",Player1,0,0,0)
+    SetGlobal("tz_kinglife","GLOBAL",9)
+END
+

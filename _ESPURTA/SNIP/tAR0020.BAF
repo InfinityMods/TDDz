@@ -1,0 +1,63 @@
+/*IF
+        !Global("KagainPartyBG1","GLOBAL",1)
+	Global("#HTDDKagain","GLOBAL",0)
+THEN
+	RESPONSE #100
+		SetGlobal("#HTDDKagain","GLOBAL",1)
+		CreateCreature("KAGAIN11",[547.494],12) // Kagain
+		Continue()
+END
+
+IF
+	Global("1700_Revealed","AR0020",0)
+THEN
+	RESPONSE #100
+		SetGlobal("1700_Revealed","AR0020",1)
+		Explore()
+		RevealAreaOnMap("AR1700")
+		Continue()
+END
+
+IF
+	CombatCounter(0)
+	Global("HallOfKnowledge","GLOBAL",1)
+	Global("hall_spawn","AR0020",0)
+THEN
+	RESPONSE #100
+		SetGlobal("hall_spawn","AR0020",1)
+		CreateCreature("DDHALL01",[689.509],9) // Krent
+		Continue()
+END*/
+
+IF
+	CombatCounter(0)
+	Global("tz_spawn_Kender","AR0020",0)
+	XPGT(Player1,34999)
+THEN
+	RESPONSE #100
+		SetGlobal("tz_spawn_Kender","AR0020",1)
+		CreateCreature("DDkend01",[276.595],3) // Kender
+		Continue()
+END
+
+IF
+	PartyHasItem("DDmap01") // Map
+	Global("tz_reveal_Eshpurta","AR0020",0)
+THEN
+	RESPONSE #100
+		SetGlobal("tz_reveal_Eshpurta","AR0020",1)
+		RevealAreaOnMap("DD2300")
+		Continue()
+END
+/*
+IF
+	Global("bgarival","GLOBAL",3)
+	!GlobalTimerExpired("RiatavinPlague","GLOBAL")
+THEN
+	RESPONSE #100
+		SetGlobal("bgarival","GLOBAL",5)
+		CreateCreature("riatgate",[766.467],4) // Gatesman
+		Continue()
+END
+
+*/

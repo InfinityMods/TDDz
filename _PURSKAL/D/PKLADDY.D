@@ -1,0 +1,34 @@
+BEGIN ~PKLADDY~
+
+IF ~RandomNum(3,1)~ THEN BEGIN 0
+  SAY @0
+  IF ~~ THEN EXIT
+END
+
+IF ~RandomNum(3,2)~ THEN BEGIN 1
+  SAY @1
+  IF ~~ THEN REPLY @2 GOTO 2
+  IF ~~ THEN REPLY @3 GOTO 3
+  IF ~~ THEN REPLY @4 GOTO 2
+  IF ~~ THEN REPLY @5 GOTO 4
+END
+
+IF ~~ THEN BEGIN 2 // from: 1.2 1.0
+  SAY @6
+  IF ~~ THEN EXIT
+END
+
+IF ~~ THEN BEGIN 3 // from: 1.1
+  SAY @7
+  IF ~~ THEN EXIT
+END
+
+IF ~~ THEN BEGIN 4 // from: 1.3
+  SAY @8
+  IF ~~ THEN EXIT
+END
+
+IF ~RandomNum(3,3)~ THEN BEGIN 5
+  SAY @9
+  IF ~~ THEN EXIT
+END

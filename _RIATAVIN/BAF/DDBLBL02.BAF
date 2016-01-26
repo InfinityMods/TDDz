@@ -1,0 +1,47 @@
+IF
+  OnCreation()
+THEN
+  RESPONSE #100
+    Enemy()
+END
+
+IF
+  HasItem("POTN52",Myself)
+  HPPercentLT(Myself,50)
+THEN
+  RESPONSE #100
+    UseItem("POTN52",Myself)
+END
+
+IF
+  See(WeakestOf(Myself))
+THEN
+  RESPONSE #100
+    EquipMostDamagingMelee()
+    Attack(WeakestOf(Myself))
+  RESPONSE #100
+    Continue()
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  !Range(NearestEnemyOf(Myself),9)
+  !HasBounceEffects(NearestEnemyOf(Myself))
+THEN
+  RESPONSE #100
+    EquipRanged()
+    Attack(NearestEnemyOf(Myself))
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  OR(3)
+    OutOfAmmo()
+    Range(NearestEnemyOf(Myself),9)
+    HasBounceEffects(NearestEnemyOf(Myself))
+THEN
+  RESPONSE #100
+    EquipMostDamagingMelee()
+    Attack(NearestEnemyOf(Myself))
+END
+

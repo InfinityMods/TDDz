@@ -1,0 +1,12 @@
+IF
+  Global("tz_creature","dd9x01",0)
+THEN
+  RESPONSE #100
+    CreateCreature("calimart",[696.593],4)
+    CreateCreature("calistel",[1056.692],4)
+    CreateCreature("calistel",[919.799],4)
+    CreateCreature("calistel",[493.253],4)
+    CreateCreature("calistel",[317.383],4)
+    SetGlobal("tz_creature","dd9x01",1)
+END
+

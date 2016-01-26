@@ -1,0 +1,17 @@
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId(Player1)
+    MoveViewPoint([550.1750],INSTANT)
+    Wait(2)
+    CreateVisualEffect("SPMAZE2",[550.1750])
+    Wait(2)
+    FadeToColor([20.0],0)
+    Wait(2)
+    FadeFromColor([20.0],0)
+    SetGlobal("tz_thork1","GLOBAL",8)
+    ActionOverride("marcus",StartDialogNoSet(Player1))
+    EndCutSceneMode()
+END
+

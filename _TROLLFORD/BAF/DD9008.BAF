@@ -1,0 +1,37 @@
+IF
+  Global("tz_creature","dd9008",0)
+THEN
+  RESPONSE #100
+    CreateCreature("qloot1",[665.944],4)
+    CreateCreature("qloot2",[1024.618],4)
+    CreateCreature("qloot3",[921.559],4)
+    CreateCreature("qloot4",[834.527],4)
+    SetGlobal("tz_creature","dd9008",1)
+END
+
+IF
+  Global("tz_lootjoin","GLOBAL",1)
+THEN
+  RESPONSE #100
+    ClearAllActions()
+    StartCutSceneMode()
+    StartCutScene("joinloot")	
+END
+
+IF
+  Global("tz_lootjoin","GLOBAL",2)
+THEN
+  RESPONSE #100
+    ActionOverride("qloot1",ReallyForceSpell(Player1,WIZARD_CLOUDKILL))
+    SetGlobal("tz_lootjoin","GLOBAL",3)
+END
+
+IF
+  Dead("qloot1")
+  Global("tz_jailboyhord","GLOBAL",0)
+THEN
+  RESPONSE #100
+    SetGlobal("tz_jailboyhord","GLOBAL",1)
+END
+
+

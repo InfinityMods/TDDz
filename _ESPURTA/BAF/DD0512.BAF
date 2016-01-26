@@ -1,0 +1,8 @@
+IF
+  Global("tz_spawn","DD0512",0)
+THEN
+  RESPONSE #100
+    SetGlobal("tz_spawn","DD0512",1)
+    CreateCreature("DDTEMPL1",[550.346],2)
+END
+

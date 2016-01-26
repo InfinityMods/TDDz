@@ -1,0 +1,12 @@
+IF
+  Global("tz_creature","dd9x02",0)
+THEN
+  RESPONSE #100
+    CreateCreature("cgames",[131.305],4)
+    CreateCreature("cgames2",[386.146],4)
+    CreateCreature("cgames3",[720.250],4)
+    CreateCreature("cgames4",[729.476],4)
+    CreateCreature("cgames5",[441.481],4)
+    SetGlobal("tz_creature","dd9x02",1)
+END
+

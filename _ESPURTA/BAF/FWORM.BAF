@@ -1,0 +1,17 @@
+IF
+  See(NearestEnemyOf(Myself))
+  Range(NearestEnemyOf(Myself),15)
+THEN
+  RESPONSE #100
+    EquipMostDamagingMelee()
+    Attack(NearestEnemyOf(Myself))
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  Range(NearestEnemyOf(Myself),60)
+THEN
+  RESPONSE #100
+    ForceSpell(NearestEnemyOf(Myself),WIZARD_CONE_OF_COLD)
+END
+

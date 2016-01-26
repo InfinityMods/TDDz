@@ -1,0 +1,52 @@
+/*IF
+	OnCreation()
+THEN
+	RESPONSE #100
+		AmbientActivate("AM0902L2",TRUE)
+		AmbientActivate("AM0902L4",TRUE)
+		AmbientActivate("AM0902L1",TRUE)
+		AmbientActivate("AM0902L3",TRUE)
+END
+
+IF
+	Global("WeslunSpawn","AR0902",0)
+THEN
+	RESPONSE #100
+		CreateCreature("DDPLOTA2",[1528.737],0) // Weslun Tane
+		SetGlobal("WeslunSpawn","AR0902",1)
+END
+
+IF
+	Global("DDPLOT_talk","GLOBAL",0)
+THEN
+	RESPONSE #100
+		SetGlobal("DDPLOT_talk","GLOBAL",1)
+END
+
+IF
+	OR(2)
+		Dead("DDPLOTA2") // Weslun Tane
+		!Exists("DDPLOTA2")
+	Global("TURN_GREEN","AR0902",0)
+THEN
+	RESPONSE #100
+		ChangeEnemyAlly(Player1,PC)
+		ChangeEnemyAlly(Player2,PC)
+		ChangeEnemyAlly(Player3,PC)
+		ChangeEnemyAlly(Player4,PC)
+		ChangeEnemyAlly(Player5,PC)
+		ChangeEnemyAlly(Player6,PC)
+		SetGlobal("TURN_GREEN","AR0902",1)
+END
+*/
+
+
+IF
+	Global("tz_pkmessrun","GLOBAL",2)
+THEN
+	RESPONSE #100
+		CreateCreature("pkloth1",[1123.1279],4) // Erolas
+		SetGlobal("tz_pkmessrun","GLOBAL",3)
+END
+
+

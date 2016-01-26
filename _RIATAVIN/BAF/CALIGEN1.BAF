@@ -1,0 +1,43 @@
+IF
+  See([PC])
+  Delay(18)
+THEN
+  RESPONSE #100
+    ReallyForceSpell(SixthNearest([PC]),WIZARD_FIREBALL)
+END
+
+IF
+  See([PC])
+  Delay(4)
+THEN
+  RESPONSE #100
+    ReallyForceSpell(SecondNearest([PC]),WIZARD_AGANNAZAR_SCORCHER)
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  HaveSpell(WIZARD_FLAME_ARROW)
+  Global("tz_arrow","LOCALS",0)
+THEN
+  RESPONSE #100
+    ForceSpell(NearestEnemyOf(Myself),WIZARD_FLAME_ARROW)
+    SetGlobal("tz_arrow","LOCALS",1)
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  Delay(11)
+  GlobalLT("tz_EfreetiInvisibility","LOCALS",3)
+THEN
+  RESPONSE #100
+    IncrementGlobal("tz_EfreetiInvisibility","LOCALS",1)
+    ForceSpell(Myself,WIZARD_INVISIBILITY)
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+THEN
+  RESPONSE #100
+    AttackReevaluate(NearestEnemyOf(Myself),5)
+END
+

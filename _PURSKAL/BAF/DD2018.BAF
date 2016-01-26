@@ -1,0 +1,10 @@
+IF
+  Global("tz_DD2018","GLOBAL",0)
+THEN
+  RESPONSE #100
+    CreateCreature("pkHOhom1",[424.276],4)
+    CreateCreature("pkHOhom2",[539.370],4)
+    CreateCreature("pkHOhom3",[276.403],4)
+    SetGlobal("tz_DD2018","GLOBAL",1)
+END
+

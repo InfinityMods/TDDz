@@ -1,0 +1,19 @@
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId(Player1)  // 
+    FadeToColor([20.0],0)
+    SetGlobal("tz_wolfget","GLOBAL",3)
+    LeaveAreaLUA("DX2001","GTRSK002",[233.909],12)
+    ActionOverride(Player2,LeaveAreaLUA("DX2001","GTRSK002",[233.909],12))
+    ActionOverride(Player3,LeaveAreaLUA("DX2001","GTRSK002",[233.909],12))
+    ActionOverride(Player4,LeaveAreaLUA("DX2001","GTRSK002",[233.909],12))
+    ActionOverride(Player5,LeaveAreaLUA("DX2001","GTRSK002",[233.909],12))
+    ActionOverride(Player6,LeaveAreaLUA("DX2001","GTRSK002",[233.909],12))
+    MultiPlayerSync()
+    SetMasterArea("DX2001")
+    FadeFromColor([20.0],0)
+    EndCutSceneMode()
+END
+

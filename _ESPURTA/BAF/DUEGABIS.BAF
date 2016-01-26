@@ -1,0 +1,49 @@
+IF
+  See([PC])
+  Range([PC],20)
+  Global("TZ_DUEGABISTALK","GLOBAL",0)
+THEN
+  RESPONSE #100
+    StartDialogNoSet([PC])
+    SetGlobal("TZ_DUEGABISTALK","GLOBAL",1)
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  Range(NearestEnemyOf(Myself),15)
+  Global("TZ_DUEGABISA","GLOBAL",0)
+THEN
+  RESPONSE #100
+    ForceSpell(NearestEnemyOf(Myself),WIZARD_FIREBALL)
+    SetGlobal("TZ_DUEGABISA","GLOBAL",1)
+END
+
+IF
+  HPLT(Myself,30)
+  Global("TZ_DUEGABISB","GLOBAL",0)
+THEN
+  RESPONSE #100
+    ApplySpell(Myself,WIZARD_HASTE)
+    ApplySpell(Myself,CLERIC_CURE_CRITICAL_WOUNDS)
+    SetGlobal("TZ_DUEGABISB","GLOBAL",1)
+END
+
+// TODO FIND ABISHAI COMBAT SCRIPT
+//IF
+//  See(NearestEnemyOf(Myself))
+//  Range(NearestEnemyOf(Myself),7)
+//  Global("TZ_DUEGABISC","GLOBAL",0)
+//THEN
+//  RESPONSE #100
+//    ForceSpell(NearestEnemyOf(Myself),WIZARD_WISH)
+//    SetGlobal("TZ_DUEGABISC","GLOBAL",1)
+//END
+
+IF
+  See(NearestEnemyOf(Myself))
+THEN
+  RESPONSE #100
+    EquipMostDamagingMelee()
+    Attack(NearestEnemyOf(Myself))
+END
+

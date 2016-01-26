@@ -1,0 +1,24 @@
+IF
+  Global("tz_eightdead","GLOBAL",0)
+  Dead("snaksw5")
+  Dead("snaksw6")
+  Dead("snaksw7")
+  Dead("snaksw8")
+  Dead("snaksw9")
+  Dead("snaksw10")
+  Dead("snaksw11")
+  Dead("snaksw12")
+THEN
+  RESPONSE #100
+    MoveToObject([PC])
+    StartDialogNoSet([PC])
+    SetGlobal("tz_eightdead","GLOBAL",1)
+END
+
+IF
+  Global("tz_eightdead","GLOBAL",3)
+THEN
+  RESPONSE #100
+    DestroySelf()
+END
+

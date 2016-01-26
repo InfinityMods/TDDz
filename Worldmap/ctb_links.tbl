@@ -1,0 +1,32 @@
+
+//TDD-CtB Cross Links Table
+SRC_AREA  SRC_NWSE  TARGET_ARE  ENTRY_NAME  TRV_TIME  DEF_ENTRY  ENC1     ENC2     ENC3     ENC4     ENC5     ENC_PROB
+
+DD2500    N         AR3520      ExitSW      23        2          AR0042   AR0044   AR0043   N        N        50
+AR3520    W         DD2500      N           23        1          AR0042   AR0044   AR0043   N        N        50
+
+DD1800    N         AR3520      ExitSW      27        2          AR0042   AR0044   AR0043   N        N        50
+AR3520    S         DD1800      N           27        1          AR0042   AR0044   AR0043   N        N        50
+
+DD1800    N         AR3587      ExitE       28        2          AR0042   AR0044   AR0043   N        N        55
+AR3587    E         DD1800      N           28        8          AR0042   AR0044   AR0043   N        N        55
+
+DD1900    N         AR3597      ExitNE      1         4          N        N        N        N        N        0
+AR3597    S         DD1900      N           1         1          N        N        N        N        N        0
+
+DD3300    E         AR3534      ExitW       9         8          AR0042   N        AR0043   N        N        25
+AR3534    W         DD3300      N           9         2          AR0042   N        AR0043   N        N        25
+
+DD3300    W         AR3570      ExitNE      3         8          AR0044   N        AR0043   N        N        35
+AR3570    N         DD3300      N           3         2          AR0044   N        AR0043   N        N        35
+
+AR3534    W         DD7000      Exit1600    8         1          AR0042   N        AR0043   N        N        75
+AR3540    S         DD7000      Exit1600    4         1          AR0044   N        AR0043   N        N        15
+AR3570    N         DD7000      Exit1600    14        1          AR0044   N        AR0043   N        N        35
+
+AR3540    S         DD8000      N           20        1          AR0044   N        AR0043   AR0042   N        85
+DD8000    N         AR3540      ExitSW      20        4          AR0044   N        AR0043   AR0042   N        85
+
+AR3570    N         DD8000      N           21        1          AR0044   N        AR0043   AR0042   N        75
+DD8000    N         AR3570      ExitNE      21        4          AR0044   N        AR0043   AR0042   N        75
+

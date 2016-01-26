@@ -1,0 +1,23 @@
+//=============================================================================
+DEFINE_ACTION_MACRO ForceClearTempFolder
+BEGIN			
+	AT_NOW ~%MOD_FOLDER%/ForceClearTempFolder.bat~
+END
+
+
+//=============================================================================
+DEFINE_ACTION_MACRO DeleteTempFolder
+BEGIN			
+	AT_NOW ~%MOD_FOLDER%/DeleteTempFolder.bat~
+END
+
+//=============================================================================
+DEFINE_ACTION_FUNCTION Accept STR_VAR sender = ~~ target = ~~
+BEGIN	
+	ACTION_IF NOT ~%sender%~ STRING_EQUAL_CASE ~%target%~ BEGIN
+		AT_NOW ~echo !!!!! Accept Error: %sender% vs %target% !!!!! & PAUSE~				
+		COPY_EXISTING ~shadowFramework_Error.txt~ ~%MOD_FOLDER%/shadowFramework_Error.txt~	
+	END
+	
+END
+

@@ -1,0 +1,23 @@
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId(Player1)
+    Wait(4)
+    FadeToColor([20.0],0)
+    Wait(2)
+    MoveViewPoint([2405.2506],INSTANT)
+    ActionOverride(Player2,JumpToPoint([2435.2506]))
+    ActionOverride(Player3,JumpToPoint([2405.2526]))
+    ActionOverride(Player4,JumpToPoint([2455.2536]))
+    ActionOverride(Player5,JumpToPoint([2405.2516]))
+    ActionOverride(Player6,JumpToPoint([2475.2506]))
+    JumpToPoint([2405.2506])
+    ActionOverride("orgoth02",JumpToPoint([2670.2285]))
+    Wait(2)
+    FadeFromColor([20.0],0)
+    Wait(2)
+    EndCutSceneMode()
+    SetGlobal("tz_orgothguilt","GLOBAL",1)
+END
+

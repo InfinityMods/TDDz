@@ -1,0 +1,10 @@
+IF
+  Global("tz_dd3335","GLOBAL",0)
+THEN
+  RESPONSE #100
+    CreateCreatureImpassable("sleepfh",[708.386],4)
+    CreateCreatureImpassable("sleepdw",[794.660],4)
+    CreateCreatureImpassable("sleepdw",[920.536],4)
+    SetGlobal("tz_dd3335","GLOBAL",1)
+END
+

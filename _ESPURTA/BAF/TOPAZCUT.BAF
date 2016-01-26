@@ -1,0 +1,27 @@
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId(Player1)
+    Explore()
+    MoveViewPoint([809.541],FAST)
+    NoAction()
+    MoveToPointNoInterrupt([793.700])
+    ActionOverride(Player2,MoveToPoint([876.732]))
+    ActionOverride(Player3,MoveToPoint([690.737]))
+    ActionOverride(Player4,MoveToPoint([598.719]))
+    ActionOverride(Player5,MoveToPoint([1012.653]))
+    ActionOverride(Player6,MoveToPoint([980.750]))
+    FaceObject("dragtope")
+    ActionOverride(Player2,FaceObject("dragtope"))
+    ActionOverride(Player3,FaceObject("dragtope"))
+    ActionOverride(Player4,FaceObject("dragtope"))
+    ActionOverride(Player5,FaceObject("dragtope"))
+    ActionOverride(Player6,FaceObject("dragtope"))
+    ActionOverride("dragtope",FaceObject(Player1))
+    DisplayStringHead(Myself,@10189)
+    Wait(3)
+    ActionOverride("dragtope",StartDialogNoSet(Player1))
+    EndCutSceneMode()
+END
+

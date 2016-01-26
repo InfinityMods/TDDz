@@ -1,0 +1,17 @@
+IF
+  Global("tz_creature","DD9001",0)
+THEN
+  RESPONSE #100
+    SetGlobal("tz_creature","DD9001",1)
+    CreateCreature("Pibble",[371.302],4)
+END
+
+IF
+  Global("tz_dinquest2","GLOBAL",2)
+THEN
+  RESPONSE #100
+    SetGlobal("tz_dinquest2","GLOBAL",3)
+    ActionOverride("pibble",DestroySelf())
+    CreateCreature("pibble2",[391.302],4)
+END
+

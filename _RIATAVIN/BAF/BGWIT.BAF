@@ -1,0 +1,7 @@
+IF
+  See("bgstab1")
+THEN
+  RESPONSE #100
+    FaceObject("bgstab1")
+END
+

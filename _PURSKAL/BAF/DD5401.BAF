@@ -1,0 +1,50 @@
+IF
+  Global("tz_spawn","DD5401",0)
+THEN
+  RESPONSE #100
+    CreateCreature("deadb01",[1397.983],4)
+    CreateCreature("deadb01",[1609.669],4)
+    CreateCreature("deadb01",[1243.939],4)
+    CreateCreature("deadb01",[349.641],4)
+    CreateCreature("deadb01",[717.1295],4)
+    CreateCreature("deadb01",[915.1893],4)
+    CreateCreature("deadb01",[2319.1479],4)
+    CreateCreature("deadb01",[2161.669],4)
+    CreateCreature("deadb01",[1116.969],4)
+    CreateCreature("thork3",[1433.560],4)
+    CreateCreature("pkagal",[1281.458],4)
+    SetGlobal("tz_spawn","DD5401",1)
+END
+
+IF
+  Global("tz_pklich1deadb","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("tz_pklich1deadb","GLOBAL",2)
+    CreateCreature("wtthork5",[1354.650],4)
+END
+
+IF
+  Global("tz_pkagal","GLOBAL",1)
+THEN
+  RESPONSE #100
+    ApplySpell("pkagalB",WIZARD_LARLOCH_MINOR_DRAIN)
+    SetGlobal("tz_pkagal","GLOBAL",2)
+END
+
+IF
+  Global("tz_pkmine","GLOBAL",1)
+THEN
+  RESPONSE #100
+    CreateVisualEffect("FLIESL",[1635.705])
+    CreateVisualEffect("FLIESL",[1480.999])
+    CreateVisualEffect("FLIESL",[1342.908])
+    CreateVisualEffect("FLIESL",[1272.995])
+    CreateVisualEffect("FLIESL",[1230.866])
+    CreateVisualEffect("FLIESL",[1197.1377])
+    CreateVisualEffect("FLIESL",[764.1121])
+    CreateVisualEffect("FLIESL",[1353.1788])
+    CreateVisualEffect("FLIESL",[2348.1384])
+    CreateVisualEffect("FLIESL",[2391.1057])
+END
+

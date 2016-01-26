@@ -1,0 +1,10 @@
+IF
+  Global("tz_bghq3see","GLOBAL",0)
+  See([PC])
+  Range([PC],10)
+THEN
+  RESPONSE #100
+    StartDialogNoSet([PC])
+    SetGlobal("tz_bghq3see","GLOBAL",1)
+END
+

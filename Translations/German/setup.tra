@@ -1,0 +1,264 @@
+@901000 = ~TDD - Core~
+@901001 = ~TDD - Trollfurth~
+@901002 = ~TDD - Eshpurta~ 
+@901003 = ~TDD - Purskal~ 
+@901004 = ~TDD - Riatavin~ 
+@901010 = ~TDD - Robilard~
+@999999 = ~Eindringlinge! Tötet die Eindringlinge!~
+
+/////////////////////////////////////////////////////////////////////////////////////
+// Dialogues - unified Journal entries
+/////////////////////////////////////////////////////////////////////////////////////
+
+//3336TAV.DLG
+@50100 = ~Ich sprach mit einem Informanten namens Bellach. Er teilte mir mit, dass Gerüchten zufolge Artemis Entreri aus Calimshafen hinter den Morden in Riatavin stecken könnte. Ich für meinen Teil bin mir da gar nicht so sicher, da es keine ausreichenden Beweise dafür gibt.~
+
+//BAURIAN.DLG
+@50101 = ~Ich habe die Welt des Tartarus betreten. Ich muss sie erst noch vollständig erkunden, aber was ich bisher erkennen kann, sind zerklüftete Felsen und bodenlosen Löcher.~
+@50102 = ~Baurian, ein Kleriker des Talos, brachte mich in das Reich von Tartarus. Hier muss ich den Dämon besiegen, seine Klaue an mich bringen und zurückkehren.~
+
+//BANDED.DLG
+@50103 = ~Die Banshee wurde durch meine Hand von ihren Leiden erlöst, doch ihre böse Tat hatte sie schon vollbracht. Der Dämon wird in nicht allzu ferner Zukunft in den Tiefen der Hölle wiedergeboren werden. Daher sollte ich mich zum Kern des Planeten begeben. Ich muss die Bestie noch in einem verwundbaren Stadium ihrer materiellen Existenz vernichten. Mit dessen Klaue kann ich mich dann unerkannt unter die Drow mischen. Die Kleriker des Talos müssten mehr darüber wissen. Es wird wohl das beste sein, wenn ich in diesem Tempel zu suchen anfange.~
+
+//CAVDIEAR.DLG
+@50104 = ~Der berüchtigte Meuchelmörder Artemis Entreri wurde endlich zur Strecke gebracht und fiel vor meinen eigenen Augen. Einige seiner Worte klingen noch immer in meinen Ohren. Er sagte mir klar und deutlich, dass dies nicht unser letztes Zusammentreffen sein würde und ich niemals frei sein könnte. Einige würden sagen, dass es sich nur um eine leere Drohung gehandelt hat. Jedoch ist er dafür bekannt, dass er keine leeren Versprechungen macht.~
+
+//DDMARY.DLG
+@50106 = ~Der Dunkelste Tag hat nun sein Ende erreicht.~
+@50116 = ~Mary Magus Haus~
+
+//DRAGGLD1.DLG
+@50105 = ~In den Kavernen der Bregan D'aerth fand ich einen goldenen Drachen. Trotz des Versuchs des Drachen, Frieden zu machen, war unsere Dunkelelfenerscheinung ein Auslöser, um anzugreifen.~
+
+//KARAN01.DLG
+@50107 = ~Selbst nach der Erledigung der letzten Aufgaben scheint dieser Albtraum immer noch kein Ende nehmen zu wollen. Noch mehr Böses scheint in der Ferne zu lauern und die höchsten Orden des Landes wollen mit mir darüber sprechen.~
+
+//SANDRAIN.DLG
+@50109 = ~Ich traf einen älteren Elfen namens Sandrain. Er wurde in so etwas ähnliches wie einen Hobbit verwandelt, für längst vergangene Verbrechen seiner Rasse. Er erzählte mir von den Gefahren, die von der Banshee ausgingen, und bot mir seine Hilfe an. Ich bin mir sicher, dass er dann nicht mehr so sicher sein wird, wenn die Banshee nicht mehr ist. Aber ungeachtet dessen muss ich tun, was getan werden muss.~
+
+//ZCAPWARN.DLG
+@50108 = ~Es scheint so, als hätten die Nelanther Piraten grundlos den Hafen von Athkatla angegriffen. Entgegen meiner Erwartung schienen sie alles töten zu wollen, was ihnen vor die Augen kam. Daher blieb nur noch der Kampf als Lösung. Ich hatte fast das Gefühl, als stünden sie unter dem Einfluss einer fremden Macht. Und diese Macht ist ohne Zweifel der Grund dafür, dass ich fälschlicherweise beschuldigt wurde.~
+
+/////////////
+// BGT/Compat
+/////////////
+
+//LEAVE***.D
+/*@203301 = ~Wenn ich noch länger bei Euch bleibe, wird mich das frühzeitig ins Grab bringen. Ich werde jetzt meine Axt nehmen und nach Süden ziehen. Dort verdiene ich mir dann ein paar Münzen.~
+@203302 = ~Ich liebe die Gefahr so wie meinen Nächsten, doch bei Euch zu bleiben grenzt an Selbstmord. Zeit, meine Pfeile in eine andere Richtung zu richten.~
+@203303 = ~Meine Kampfeslust ist in der Zwischenzeit gesättigt. Ich glaube, ich werde in eine Gegend mit wärmerem Klima ziehen, bevor sich die Jahreszeiten wieder ändern. Vielleicht wird die frische Luft auch meinen Klingen guttun.~
+@203304 = ~Monty und ich haben beschlossen, dass es an der Zeit ist, wieder zu unseren Vorgesetzten zu gehen. Lebt wohl, <CLASS> , und möge Ungeschicklichkeit Eure Feinde befallen.~
+@203305 = ~Ich werde langsam zu alt für solche Abenteuer. Und mein Magengeschwür beginnt auch wieder zu rebellieren. Zeit für eine Überdosis Schmerzmittel und ein warmes, linderndes Bad. Ich wünsche Euch nur das Beste, <CHARNAME>.~
+*/
+/////////////////////////////////////////////////////////
+// Scripts
+/////////////////////////////////////////////////////////
+@10000 = ~Turmeingang~
+@10001 = ~Ausgang des Gebiets~
+@10002 = ~Treppauf~
+@10003 = ~Zum Labor~
+@10004 = ~Zum Kellergeschoss~
+@10005 = ~Treppab~
+@10006 = ~Ausgang~
+@10007 = ~Ihr macht einen Fehler, alter Mann! Einen schweren Fehler... die wahren Schuldigen sind noch auf freiem Fuß.~
+@10008 = ~Genug! Ihr werdet auf einem Sklavenschiff zur Zauberfeste gebracht. Gute Reise, die Seeleute werden Euch gebührend behandeln. Ihr werdet keine schöne Reise zur Zauberfeste haben.~
+@10009 = ~Während Ihr die Worte in dem Buch lest, löst sich die Reliquie auf und hinterlässt nur ein Häufchen Staub. Der Himmel beginnt sich aufzuhellen und Ihr bekommt das Gefühl, dass sich die Wolken auch bald verziehen werden. Der Dunkelste Tag ist zu Ende... vorerst.~
+@10010 = ~Ihr hört in einiger Entfernung ein lautes "KLINK". Eine magische Barriere blockiert nun beide Ausgänge.~
+@10011 = ~Die magischen Barrieren, welche die Ausgänge blockiert haben, lösten sich nach dem Tod der Kreatur auf.~
+@10012 = ~Ja, ja! Ich bin jetzt fertig. Gehen wir.~
+@10013 = ~Die Küste ist frei, Meister.~
+@10014 = ~Das habt Ihr gut gemacht, mein Lieber. Alles scheint nach Plan zu verlaufen.~
+@10015 = ~Aber Ihr solltet wissen, dass jene, die nach Athkatla geschickt wurden, äusserst mächtig sind. Mein Kleriker spürte, dass einer von ihnen das Blut eines Gottes in seinen Adern hat.~
+@10016 = ~Das war der Plan, mein Lieber. Athkatla wird Dank Euch die Aura bemerken, die auf ihnen liegt. Sie werden zu dem Schluss kommen, dass jemand, der so mächtig ist, so viel Chaos verursachen kann. Riatavin wird alle Verbindungen zu Athkatla verlieren, weil sie die Aura aus Riatavin haben. Athkatla wird seine Hauptlieferanten verlieren und Calimshafen wird die uneingeschränkte Kontrolle über die Meere haben.~
+@10017 = ~Und was soll jetzt geschehen, Meister?~
+@10018 = ~Ha ha! Ja, mir gefällt der Klang des Wortes "Meister." Der Edelstein hat in der Tat wahre Wunder vollbracht. Die gesamten Streitkräfte von Riatavin haben sich Dank dieses einfachen Edelsteins meinem Willen unterworfen. Mit nur einem einzigen Befehl würden sie Athkatla angreifen. Wisst Ihr das? Ihr seid der einzige, der noch über seinen eigenen Willen verfügt, denn ich brauchte Euch noch für diverse Aufgaben.~
+@10019 = ~Wir hatten eine Abmachung, Entreri! Ihr wolltet unserer Stadt für diese Tat die Reichtümer der Gilden von Calimshafen überlassen. Ihr werdet Euren Einfluss auf meine Soldaten sofort beenden!~
+@10020 = ~Aber nicht doch, mein Lieber... Das sind doch gar nicht Eure Soldaten, und sie waren es auch nie. Euer Anführer hat es nie nach Athkatla geschafft, da mein Dolch bereits in seinem Rücken steckte, als er sich auf den Weg machte.~
+@10021 = ~Danach hatte ich die Kontrolle. Ihr habt keine Ahnung, was wahre Macht bedeutet.~
+@10022 = ~Ich dachte, Artemis Entreri arbeitet immer allein?~
+@10023 = ~Wenn es um Calimshafen geht, dann nehme ich jede Hilfe, die ich kriegen kann. Wenn es persönlich wird, mein Lieber, dann arbeite ich immer allein. Dies ist solch ein persönlicher Moment, und da Ihr noch übrig seid, kann ich das so nicht hinnehmen. Deswegen werden wir das jetzt schnell beenden, oder?~
+@10024 = ~Ihr Unmensch! Wir hatten eine Abmachung! Ihr werdet für diese krumme Tour bezahlen.~ [WARRIOR3]
+@10025 = ~Ja, kommt und spürt den Hauch des Todes. Der Meister des Todes wird Euch einen schnellen Weg aus Eurer miserablen Existenz weisen.~
+@10026 = ~Jetzt aber wieder zur Tagesordnung. Während Athkatla die Reisenden empfangen wird, muss ich weitere Vorbereitungen treffen. Die Reisenden haben gar keine andere Wahl, als nach Athkatla aufzubrechen, um eine Lösung zu finden. Wenn sie versagen sollten, dann wird jeder Zivilist in dieser Stadt durch meine Hand sterben. Und die Reisenden werden gehäutet.~
+@10027 = ~Sie werden ihre Aufgabe erfüllen oder eines qualvollen Todes sterben. Ich werde mich vergewissern, dass Riatavins Streitkräfte bereit sind, gegen Athkatla zu ziehen.~
+@10028 = ~Der Rat hat stundenlang über die letzten Ereignisse diskutiert und sich die letzten Stunden gemeinsam beraten.~
+@10029 = ~Dann habt Ihr also Eure Fehleinschätzung eingesehen?~
+@10030 = ~Der Rat hat sich beraten und debattiert. Und er ist zu einer Entscheidung gekommen...~
+@10031 = ~Ihr seid des Mordes an den Händlern und Edelleuten von Riatavin schuldig. Ausserdem seid Ihr schuldig, die Städte Athkatla und Riatavin gegeneinander ausgespielt zu haben.~
+@10032 = ~Da die Beweise jedoch nicht ausreichend sind, werdet Ihr nicht zum Tode verurteilt. Stattdessen werdet Ihr den Rest Eures Lebens in der Zauberfeste verbringen.~
+@10033 = ~Ihr macht wirklich einen grossen Fehler, alter Mann.~
+@10034 = ~In ein paar Stunden werdet Ihr zu Zauberfeste auslaufen. In der Zwischenzeit werdet Ihr in das Gefängnis von Athkatla gebracht. Lebt wohl. Eine Schande, dass jemand mit so viel Möglichkeiten so enden muss.~
+@10035 = ~Ihr wurdet gewarnt, draussen zu bleiben. Jetzt werdet Ihr für Eure Ignoranz bezahlen.~
+@10036 = ~Meister, ich bin so schnell gekommen wie ich konnte. Euer Plan ist fehlgeschlagen und die Magiekundigen von Athkatla können das Böse hier in Riatavin spüren.~
+@10037 = ~WAS!? Ihr närrischer, alter Mann! Alles was Ihr tun solltet, war ihnen Glauben zu machen, dass diese Abenteurergruppe dahinter steckt!~
+@10038 = ~Bitte! Das hat diese Gruppe verursacht. Sie müssen noch mächtiger sein, als ich es vorher angenommen hatte.~
+@10039 = ~Dann werden sie durch meine Klinge sterben, das versichere ich Euch. Aber Ihr habt kläglich versagt, alter Narr! Jetzt werdet Ihr den Preis dafür bezahlen, dass Ihr Artemis Entreri enttäuscht habt.~
+@10040 = ~Ich muss den Notfallplan anwenden, damit niemand herausbekommt, dass Calimshafen dahinter steckt. Dieses Juwel ist unglaublich nützlich, um Verbündete anzuheuern! Ich werde die Nelanther Piraten die Docks von Athkatla stürmen lassen. Sie werden den Handel lähmen und dafür verantwortlich gemacht werden. Zwischendurch habe ich noch etwas zu erledigen. Und wie es immer schon war: Entreri arbeitet allein! Keine Sorge, Reisende, wenn wir uns treffen sollten, dann wird es kurz und schmerzlos enden.~
+@10041 = ~Ich fürchte, dass wir ein Fehlurteil gefällt haben, Brüder.~
+@10042 = ~Erklärt Euch!~
+@10043 = ~Ich spüre, dass das Böse noch nicht verschwunden ist. Aber... es ist immer noch in Amn und immer noch sehr stark. Es scheint, als wäre die verurteilte Gruppe nicht der Grund des Übels. Wir müssem dem Rat von dem Fehler und dem immer noch existierenden Bösen berichten. Riatavin muss gründlich durchgekämmt werden.~
+@10044 = ~NEIN! Ich muss meinem Meister Bericht erstatten, dass sein Plan fehlgeschlagen ist, bevor Athkatla Riatavin durchsuchen lässt.~
+@10045 = ~Dennoch kommt Ihr weiter. Es ist erstaunlich, wie jemand, der verdammt ist, so weit kommen kann.~
+@10046 = ~Zur Hölle mit Euch, Ihr dämonischer Unhold. Nur zu reden und Antworten zu suchen wird uns nicht weiter bringen.~
+@10047 = ~Dämon!! Wie könnt Ihr es wagen, mich Dämon zu nennen! Das sind Bestien einer anderen Ebene, aber hier herrschen wir. Wir wurden wegen der Macht unserers zurückgekehrten Meisters wiedergeboren. Und wieder einmal werden wir die Ländereien von Faerûn heimsuchen.~
+@10048 = ~Ich habe von dem Zurückgekehrten schon oft gehört. Was ist er eigentlich genau? Euer Grab ist zufälligerweise aufgebrochen worden, aber ich verstehe nicht, warum diese Rückkehr Euch dazu drängt, Faerûn zu terrorisieren.~
+@10049 = ~Er ist aus seinem Seelengefängnis zurückgekehrt, und dieses Mal wird er bleiben und hier herrschen.~
+@10050 = ~Wartet. Wollt Ihr damit sagen, dass Euer sogenannter Meister aus einem Seelengefängnis zurückgekehrt ist? Vielleicht aus einer Art Reliquie? Habt Ihr denn die Konsequenzen Eures Tuns nicht erkannt? Wenn er aus seinem Seelengefängnis entkommen konnnte, wie viele andere sind dann mit ihm gekommen und warum? Ich habe von diesen Reliquien gehört, meistens beherbergen sie Unmengen von bösen Geistern. Ich habe keine Zweifel daran, dass Euer Meister das kleinste Problem in Faerûn sein wird, wenn noch mehr freigelassen wurden.~
+@10051 = ~Ihr wagt es, den Meister zu unterschätzen? Der mächtige Beghael wird nicht das Vergnügen haben, Euch zu vernichten. Denn ich werde dies zu meiner eigenen Freude tun.~
+@10052 = ~Ergreift diese Person dort.~
+@10053 = ~Was zum...? Was wollt Ihr, alter Mann? Ich habe nichts Unrechtes getan.~
+@10054 = ~Nichts Unrechtes getan, sagt Ihr?! Ich muss Euch sagen, dass ich die Aura einer Person über grosse Distanzen wahrnehmen kann. Ich spüre, dass "Ihr" die Quelle der Handelsprobleme seid. Ihr seid die Ursache für die Morde in Riatavin und Ihr werdet nicht mehr dazu kommen, noch mehr Unheil anzurichten.~
+@10055 = ~Was? Ihr scheint einen grossen Fehler zu machen. Ich habe keine Aura, die mich umgibt. Wartet einen Minute, dieser Amroch! Er hat die Aura auf mich gelegt und mir weismachen wollen, sie würde meine guten Absichten erkennen lassen, aber... aber er hat mich reingelegt!~
+@10056 = ~Eure Lügen werden ungehört bleiben. Hier und jetzt werdet Ihr verurteilt und ins Gefängnis geworfen. WACHEN! Werft diesen Gruppe ins Gefängnis.~
+@10057 = ~Ihr wagt es, Euren Weg durch diese alten Gräber zu nehmen? Ihr habt uns in unserer Zeit der Verjüngung gestört und Ihr werdet einen hohen Preis dafür bezahlen.~
+@10058 = ~Ihr wagt es, uns zu drohen? Ihr habt viele Unschuldige getötet, und Ihr werdet den Preis durch meine Klinge bezahlen.~
+@10059 = ~Starke Worte, aber so sind die Lebenden. Wir saugen die jungen aus, um unsere Stärke zu erhalten, sie sind nur ein Mittel zum Zweck. Ihr seid töricht, wenn Ihr mich bedroht.~
+@10060 = ~Grrr... Ihr habt schon genug dummes Zeug geredet. Ihr werdet durch meine Hand sterben, Unhold. AAANGRIFF!~
+@10061 = ~Nein! Thorknar! Ihr werdet eines schmerzhaften Todes sterben, Unhold!~
+@10062 = ~Nein! Thorknar! Ihr werdet eines schmerzhaften Todes sterben, Unhold!~
+@10063 = ~Ihr müsst ihn kontrollieren!~
+@10064 = ~Ihr Verräter!~
+@10065 = ~Verdammt seid Ihr, Thorknar!~
+@10066 = ~Er ist nicht Thorknar. Er ist das Monster, das diese Plage verursacht hat. Er ist auch derjenige, der Thorknar getötet hat.~
+@10067 = ~Ja, es geht mir langsam auf die Nerven, mich in diesem schäbigen Orkkörper aufzuhalten. Ich brauche keine Tarnung, um die Lande zu verwüsten.~
+@10068 = ~Was zur Hölle ist das?~
+@10069 = ~Er ist ein böser Leichnam, diese untote Bestie hat diese Plage verursacht.~
+@10070 = ~Ich wäre etwas vorsichtiger in Eurer Wortwahl gegenüber Eurem Herren, Schwächling! Ich könnte Euch hier und jetzt zerschmettern! Aber... Nein, ich werde Euer Leiden verstärken. Ihr sollt einer meiner vielen Diener werden. Ihr werdet mich bei der Verwüstung der Landstriche unterstützen.~
+@10071 = ~Lieber schneide ich mir mein Herz selbst heraus, bevor ich mich an Eure Seite stelle, Bestie!~
+@10072 = ~Aber Ihr scheint nicht zu verstehen. Ihr könnt mir nicht widerstehen. Kommt zu mir... Kommt... Kommt und stellt Euch auf die Seite Eures Meisters.~
+@10073 = ~Nein, ich werde nicht... Ich... Ich...~
+@10074 = ~Seht Ihr! Ihr könnt nicht widerstehen. Jetzt kehrt um. Tötet Eure Freunde. Ich weiss, dass in Euch grosse Kräfte schlummern. Ich kann das Blut eines Gottes in Euch spüren. Geht, vernichtet Eure Freunde. Zeigt mir Eure Unterwerfung.~
+@10075 = ~Nein, ich werde nicht... Ich... Ich...~
+@10076 = ~Ich werde Euch ein Beispiel dafür geben, was ich wünsche.~
+@10077 = ~Nun zu Euch. Schlachtet diese schwachen Narren ab! Beweist mir Euren Wert.~
+@10078 = ~Und nun geht los und tötet! Eure Freunde können Euch jetzt nicht helfen, da sie unter meinem Bann stehen. Sie werden Euch zusehen, wie Ihr das ganze Dorf alleine auslöscht!~
+@10079 = ~Beghael, Ihr habt Eure Freisetzung schamlos ausgenutzt. Ihr hattet eine Aufgabe zu erfüllen, doch seid Ihr vom Weg abgekommen. Der Meister sieht es nicht gerne, wenn seine Aufgaben nicht erfüllt werden.~
+@10080 = ~Was? So dumm könnt ihr doch gar nicht sein. Ihr wurdet auch freigesetzt, doch jetzt werdet Ihr deswegen auch noch zu Sklaven? Ich bin nicht so schwach.~
+@10081 = ~Ihr habt keine Wahl, Beghael. Ihr seid ein Werkzeug der Reliquie, und der Meister kann Euch jederzeit zu Eurem ewigen Leiden wieder zurückschicken. Es wäre sehr weise, wenn Ihr gehorchen würdet.~
+@10082 = ~Nehmt dies als letzte Warnung, Beghael! Der Meister benutzt Euch als Werkzeug. Wenn Ihr Euch widersetzt, dann seid Ihr für ihn nutzlos und werdet beseitigt werden.~
+@10083 = ~Ihr seid alle schwach! Zu schwach, um mir unter die Augen zu treten. Ihr wurdet gewarnt. Jetzt geht, oder ich werde Eure Seelen verschlingen.~
+@10084 = ~Dies ist Eure allerletzte Chance, einzulenken, Beghael!~
+@10085 = ~Was? Sterbt, Ihr erbärmlichen, kläglichen Narren!~
+@10086 = ~Warum sterbt Ihr nicht!?~
+@10087 = ~Ihr hattet Eure Chance. Wir werden Euch zeigen, was Leiden bedeutet.~
+@10088 = ~Ihr Verräter!~
+@10089 = ~Merkt Euch gut, was Ihr hier gesehen habt und habt keine Zweifel. Jeder wird dem Meister zu gegebner Zeit gegenüber stehen. Ihr könnt nicht davonlaufen, Ihr könnt Euch nicht verstecken und Ihr könnt nicht gewinnen. Sagt es allen weiter. Jedoch werden es die anderen sowieso bald selbst merken.~
+@10090 = ~ICH SEHE Euch!!!~
+@10091 = ~Ihr winzig! Ich zerquetschen!~
+@10092 = ~Du stillhalten! RRrr... Ich quetschen Deine Kopf!~
+@10093 = ~Wir müssen schnell sein.~
+@10094 = ~Ich habe das Auge. Es muss in das Licht gehalten werden.~
+@10095 = ~Lasst uns endlich aus diese höllenverlassenen Tunneln verschwinden.~
+@10096 = ~GrrRRrr...~
+@10097 = ~Muuuuuhhhhh!!!~
+@10098 = ~Sieht so aus, als hätten wir keine Kräuter mehr, Liebling. Ich werde nach draussen gehen und welche sammeln.~
+@10099 = ~Alles klar, aber bitte... sei vorsichtig. Es geht momentan ziemlich viel herum... sei auf der Hut.~
+@10100 = ~Oh, mach Dir nicht so viele Sorgen. Ich werde in Kürze wieder zurück sein.~
+@10101 = ~Seht! Da ist eine! Schiesst sie ab!~
+@10102 = ~Nein! Geht weg! Ich will keinen Ärger haben!~
+@10103 = ~Ha! Das war einfach. Mal sehen, ob sie etwas wertvolles bei sich hat.~
+@10104 = ~Larala! Larala, jetzt ist es schon zwei Stunden her! Wo bist Du!? Larala!~
+@10105 = ~Oh, nein... nein, Larala! Was ist passiert?... (schluchz)~
+@10106 = ~NEIN! Das ist nicht Recht! Bitte, bringt sie mir zurück... jemand...~
+@10107 = ~Bitte...~
+@10108 = ~Ich bin hier. Betet. Ich werde sie wieder auferwecken.~
+@10109 = ~Oh, ihr Götter! Danke! Vielen Dank! Bringt sie zurück... Bitte...~
+@10110 = ~Schwegt!~
+@10111 = ~Dieser Körper wird vorübergehend reichen müssen... mehr kann ich im Moment nicht tun.~
+@10112 = ~Die Kraft ist zu übermächtig! Ich kann sie nicht kontrollieren! Bereitet Euch vor!~
+@10113 = ~Ich kann einen der vier an meinen Figerspitzen brennen fühlen.~
+@10114 = ~Offenbarung reitet zur Halle des Wissens!~
+@10115 = ~Kommt her, kommt alle!~
+@10116 = ~Ausgezeichnet! Das habt Ihr sehr gut gemacht, <CHARNAME>. Söldner haben mich nun schon seit 20 Jahren gejagt. Bei diesen hatte ich das erste Mal die Gelegenheit, ihnen selbst gegenüber zu stehen.~
+@10117 = ~Dann... wollt Ihr also kämpfen, Söldner? Oder wollt Ihr nicht lieber doch umkehren? Die verhüllten Magier bezahlen Euch sicher eine hohe Summe und es würde mir gar nicht gefallen, wenn ihr sie nicht bekommen würdet (*kicher*).~
+@10118 = ~Wir werden Euch bekämpfen! Wir kuschen vor niemandem... es sei denn, jemand bietet uns 10.000 Goldstücke!~
+@10119 = ~Dann wollt Ihr also einen Kampf? Na schön, greift mich an! Das wird ein interessantes Spiel.~
+@10120 = ~Wie Ihr sicherlich bemerkt habt, sind meine Schutzzauber nicht vollständig entfernt worden. Ist sonst noch jemand hier, der mich angreifen will?~
+@10121 = ~Ähmm... ja, ich schätze...~
+@10122 = ~(*Seufz*)... <CHARNAME>, würdet Ihr wohl so gut sein und Euch Ihrer annehmen? Ihre Einstellung langweilt mich wirklich.~
+@10123 = ~Wa... Was? <CHARNAME> steht in Euren Diensten!? Verdammt, ich hätte es mir denken können, dass ein doppeltes Spiel mit uns gespielt wurde!~
+@10124 = ~Habt Ihr wirklich gedacht, dass ich Euch hinter der Tür nicht höre? Ihr habt ihnen von der Falle erzählt! Das war ein schwerer Fehler!~
+@10125 = ~Ihr habt versucht, mich zu betrügen... und IHR habt versucht, mich umzubringen. Ihr beide werdet dafür bestraft werden.~
+@10126 = ~Die erste Strafe geht an diejenigen, die versucht haben, mein Wohl zu gefährden.~
+@10127 = ~Von jetzt an sollt Ihr unter allen, die Euch kennen und noch kennen lernen werden, als <CHARNAME> der Prächtige bekannt sein.~ ~Von jetzt an sollt Ihr unter allen, die Euch kennen und noch kennen lernen werden, als <CHARNAME> die Prächtige bekannt sein.~
+@10128 = ~Und was die Söldner betrifft... Ihr werdet für eine Woche als Ratten leben. Ihr könnt Euch in dem Gasthaus frei bewegen.~
+@10129 = ~Nahrung und einen Schlafplatz zu finden liegt ganz bei Euch. Ich kann mir vorstellen, dass unser Kater Paul viel Spass mit Euch haben wird.~
+@10130 = ~Und... oh, ja... Ihr! Ja, Ihr! Die Söldner! Ihr werdet nie wieder in der Lage sein, auch nur ein einziges Wort gegenüber den verhüllten Magiern zu äußern.~
+@10131 = ~Das ist alles. Wenn ihr noch irgendwelche Probleme haben solltet, dann konfrontiert mich damit. Ich werde nichts tun, aber es wird interessant werden, Eure Argumente zu hören.~
+@10132 = ~RrraaAAGGHH!!!~
+@10133 = ~Und noch einmal, Dummkopf!~
+@10134 = ~Haha! Das macht Spass!~
+@10135 = ~BabababaBOOM!~
+@10136 = ~Ich gebe jetzt für die Abenteurer an!~
+@10137 = ~Was zur Hölle ist das?~
+@10138 = ~Beeilt Euch! Der Hafen wird angegriffen!~
+@10139 = ~Ein Angriff!? Vom wem?~
+@10140 = ~Von den Nelanther-Piraten... und zwar alle von ihnen, wie wir vermuten.~
+@10141 = ~Er spricht die Wahrheit. Das zeigt Euren schrecklichen Fehler, den Ihr begangen habt, indem Ihr uns beschuldigt habt.~
+@10142 = ~Verdammt! Wir sind untröstlich wegen unserer Fehleinschätzung, aber wir müssen uns vorbereiten. Sie sind schon fast da. Seht! Ich kann sie in der Ferne schon erkennen. Bereitet Euch auf einen harten Kampf vor!~
+@10143 = ~Ich kann die Kraft in der Nähe spüren. Wir müssen weiter durch die Höhle.~
+@10144 = ~Ihr habt an diesem Tag viel Mut und Tapferkeit bewiesen! Ihr habt diesen Hafen vor der Zerstörung bewahrt und die Unannehmlickeiten, die Euch beschert wurden, sind nur schwer zu vergeben.~
+@10145 = ~Eure Beschuldigungen waren haltlos, dennoch hatte meine Unterstützung ihre Vorteile.~
+@10146 = ~An diesem Tag habt Ihr Euch das Wohlergehen der Schattendiebe verdient. Wir belohnen Euch mit diesem Artefakt, um die Anerkennung unserer Gilde auszudrücken. Selbst unter uns Dieben gibt es einen Ehrenkodex, und sich mit jemandem, der so mächtig ist wie Ihr, gut zu stellen, liegt in unserem Interesse.~
+@10147 = ~In der Tat. Ihr habt auch dem Orden des Strahlenden Herzens einen grossen Dienst erwiesen. Wir haben für Euch einen sehr wertvollen Gegenstand, um Euch unsere Dankbarkeit zu zeigen. Alleine hätte es der Orden nicht geschafft.~
+@10148 = ~Trotz meines Gefühls, betrogen worden zu sein, erkennt die Stadt ihren Fehler eindeutig an. Ich akzeptiere Eure Geschenke und hoffe, dass wir wieder ohne Ärger durch die Strassen gehen können.~
+@10149 = ~Ihr werdet so behandelt werden, wie Ihr es wahrlich verdient. Ich habe gehört, dass in letzter Zeit viele Gruppierungen nach Euch suchen. Sie scheinen Aufgaben zu haben, die eines wahren Abenteurers würdig sind. Es scheint, als wären Eure Tage als Abenteurer noch lange nicht vorbei und ich hoffe, diese Geschenke werden Euch eine Hilfe sein.~
+@10150 = ~Nein... Nein. NEEEIIIIIIIN!~
+@10151 = ~Diese Tür ist verschlossen. Ihr braucht einen Schlüssel, um in den nächsten Raum zu gelangen.~
+@10152 = ~Als Ihr den Schlüssel in die Tür steckt, verschwindet der Schlüssel mit einem Lichtblitz und die Tür öffnet sich.~
+@10153 = ~Ihr hattet Eure Chance. Jetzt werden wir Euch leiden lassen.~
+@10154 = ~Mein Name ist Paul! Ihr werdet spüren, wie... Autsch! Das tut weh!~
+@10155 = ~Der Sieg ist nahe, schwache Leute! Hahaha!~
+@10156 = ~Purr... prrr...~
+@10157 = ~Es war ein Erfolg. Die Geister wurden in ein Zwischenreich verbannt. Meine Arbeit hier ist getan.~
+@10158 = ~Ich danke Euch, freundlicher Priester des Lathander. Dieses Dorf steht tief in Eurer Schuld.~
+@10159 = ~Aber nicht doch, Freund. Das war doch selbstverständlich. Ich werde mich jetzt wieder auf den Weg machen. Lebt wohl, Reisender.~ ~Aber nicht doch, Freundin. Das war doch selbstverständlich. Ich werde mich jetzt wieder auf den Weg machen. Lebt wohl, Reisende.~
+@10160 = ~Ihr seid zu nützlich, um Euch den Bäuchen der Ratten zu überlassen.~
+@10161 = ~Ihr werdet ausgezeichnete Werkzeuge für den Meister sein.~
+@10162 = ~Auferstehung ist doch etwas Wunderbares.~
+@10163 = ~Ihr seid jetzt des Meisters Geisterwachen, und Ihr werdet ihm nach seinen Wünschen dienen. Habt Ihr verstanden?~
+@10164 = ~Voll und ganz.~
+@10165 = ~Ich werde dienen.~
+@10166 = ~Tödlich und gehorsam. Der Meister wird Euch seine Wertschätzung nach seiner Rückkehr entgegenbringen.~
+@10167 = ~BITTE! NEIN!! Es tut mir Leid... so Leid... Bitte, tötet mich nicht... Bitte...~
+@10168 = ~Still, Schwein! Ich gewähre Euch ein grosse Gnade. Ich sollte Euch die Haut abziehen und Euch von Insekten quälen lassen, aber ich werde Euch einen viel amüsanteren Tod erleben lassen. Der Geruch Eures brennenden Fleisches wird mir sehr angenehm vorkommen. Bei Euch glaube ich das weniger.~
+@10169 = ~Tut es! Ich will das Vergügen in Euren Augen sehen, Viconia. Ich will die Begierde in Euch sehen, wenn Ihr ihn leiden lasst, denn das freut mich am meisten. Verbrennt ihn lebendig. Zeigt mir Eure Rachsucht! Zeigt mir, was ich sehen möchte.~
+@10170 = ~Spüre die Schmerzen, die Du verdienst, Schwein! Brenne!~
+@10171 = ~Wir haben die Ursache für das Chaos und die Handelsprobleme herausgefunden. Ganz zu schweigen von den Morden.~
+@10172 = ~Wir müssen Maßnahmen ergreifen.~
+@10173 = ~Zeigt uns den Übeltäter, damit wir dies beenden können.~
+@10174 = ~Ich brauche ihn Euch nicht zu zeigen, aber wir werden es hier und jetzt beenden. Schliessen wir uns in diesem Zauber zusammen, wir werden diese kranke Person ihrer Seele berauben und diese Schwierigkeiten beenden.~
+@10175 = ~*Keuch-Keuch* Meine Brust... sie... sie fühlt sich an, als würde sie brennen!~
+@10176 = ~W-Was passiert? Ich sterbe! Nein! Ah... Aahhh!~
+@10177 = ~Grr...~
+@10178 = ~Schweigt, ihr erbärmlichen Dämonen!~
+@10179 = ~Lange Zeit ist es her, seit dem ich Euresgleichen gesehen habe. Ich muss Euch sagen, dass ich viele Generationen auf diesen Moment gewartet habe.~
+@10180 = ~Habt Ihr überhaupt eine Ahnung, wer ich bin? Ich habe länger als Ihr gewartet, das kann ich Euch versichern. Ihr wäret gut beraten, wenn Ihr zur Seite treten würdet.~
+@10181 = ~Ihr wagt es, mir zu drohen? Ich bin so alt wie die Zeit selbst. Ich sah bereits die Geburt der Planeten, die Ihr gerne beherrschen würdet. Ich weiss auch, wer Ihr seid.~
+@10182 = ~Ich weiss, dass Ihr und die Zeit nahezu unzerstörbar seid. Aber ich wurde Zeuge Eurer Geburt und Eure Zeit wird noch kommen.~
+@10183 = ~Ich kann Euch versichern, dass Ihr nur ein weiteres Opfer sein werdet, das vor mir fallen wird, unbedeutender Dämon.~
+@10184 = ~Dämon! DÄMON! Ich bin kein Dämon, Narr. Diese lächerlichen Kreaturen dienen mir, weil sie gar keine andere Wahl haben. Dies ist mein Reich und ich bin Tartarus, Zerstörer der Dämonen. Ihr wagt es, mich mit diesen Missgeburten zu vergleichen?~ ~Dämon! DÄMON! Ich bin kein Dämon, Närrin. Diese lächerlichen Kreaturen dienen mir, weil sie gar keine andere Wahl haben. Dies ist mein Reich und ich bin Tartarus, Zerstörer der Dämonen. Ihr wagt es, mich mit diesen Missgeburten zu vergleichen?~
+@10185 = ~Überzeugt, Narr?~ ~Überzeugt, Närrin?~
+@10186 = ~Ha ha ha! Solch eine Demonstration ist erbärmlich, im Vergleich zu dem, was ich erreichen kann!~
+@10187 = ~Genug mit dieser Charade. Ihr habt etwas, das ich will. Es ist Eure Klaue, auf die ich gewartet habe. Sie ist mein Portal aus dieser Ebene, und Ihr werdet für dieses Geschenk umkommen.~
+@10188 = ~Endlich hat mir jemand die Seelen gegeben, die für meine Geburt notwendig waren. Die Zeit ist gekommen, dass ich Anspruch auf mein Reich erhebe.~
+@10189 = ~Ich glaube, dass wir den Unterschlupf des Tyrannen gefunden haben.~
+@10190 = ~Ahh! Helft mir!~
+@10191 = ~Geht weg von mir, Ihr widerliches Schwein.~
+@10192 = ~Eine wunderschöne dunkle Elfin und auch noch unbeugsam. Ich werde Euch lehren, mich zu respektieren, Ihr dunkle Schlampe.~
+@10193 = ~Bleibt mir vom Leib, Ihr Schwein! Meine Hände sind auf den Rücken gefesselt. Wenn Ihr ein richtiger Mann wäret, dann würdet Ihr mich losbinden und mir Euren Wert im Kampf zeigen.~
+@10194 = ~Ich bin nicht auf einen Kampf aus, Drow. Ich werde Euch zeigen, nach was es mich jetzt gelüstet!~
+@10195 = ~Nein... Nein. NEEEIIIIIN!~
+@10196 = ~Viconia, geht es Euch gut? Ich habe Euch schreien hören. Haben sie Euch gefoltert?~
+@10197 = ~Folter war ebenfalls dabei. Der Wächter... er... er hat mich vergewaltigt. Der dreckige Mensch vergewaltigte mich mit meinen hinter meinem Rücken gebundenen Händen. Ich konnte mich nicht dagegen wehren.~
+@10198 = ~Bei den Göttern! Das tut mir ja so Leid, Viconia. Wir werden einen Weg finden, Euch zu rächen!~
+@10199 = ~Ich bin von einem Menschen verletzt worden. Ich werde nicht eher ruhen, bis seine Haut bei mir an der Wand hängt, damit ich immer daran erinnert werde, wie böse Oberflächenbewohner sein können.~
+@10200 = ~Ich bin erfreut, dass wir diese Zeit zusammen haben, aber Ihr könnt das Geschehene nicht wieder rückgängig machen.~
+@10201 = ~Ich bin mit dieser Wahl zufrieden, aber wer weiß schon, was die Zeit bringen wird?~
+@10202 = ~Euch ist schon klar, dass wir nach meinen Regeln spielen. Ich werde Euch einige Dinge zeigen, die selbst Menzoberranzan in einem anderen Licht erscheinen lassen. Ich war wegen meiner Fähigkeiten sehr bekannt.~
+@10203 = ~Euer Verstand ist plötzlich betäubt. Die Dunkelheit überwältigt Euch und Visionen tragen Euch aus Eurem Körper...~
+@10204 = ~Die Teile des Körpers haben sich in Luft aufgelöst. Sie wurden durch eine warme Figur ersetzt.~
+@10205 = ~Ihr beginnt, Euch sehr erschöpft zu fühlen. Alles beginnt zu verschwimmen und Ihr könnt nicht mehr klar denken. Es scheint, als hättet Ihr Euch mit einer Art Krankheit angesteckt.~
+@10206 = ~Nein, jetzt nicht.~
+@10207 = ~Ja. ~
+

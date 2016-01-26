@@ -1,0 +1,11 @@
+BEGIN ~3308GRD2~
+
+IF ~Gender(LastTalkedToBy,MALE)~ THEN BEGIN 0
+  SAY @0
+  IF ~~ THEN EXIT
+END
+
+IF ~Gender(LastTalkedToBy,FEMALE)~ THEN BEGIN 1
+  SAY @1
+  IF ~~ THEN EXIT
+END

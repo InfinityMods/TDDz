@@ -1,0 +1,30 @@
+IF
+  See([PC])
+  Range([PC],15)
+  Global("tz_heaflife","GLOBAL",0)
+  Global("tz_heafdead","GLOBAL",0)
+THEN
+  RESPONSE #100
+    StartDialogNoSet([PC])
+    SetGlobal("tz_heaflife","GLOBAL",1)
+    SetGlobal("tz_heafdead","GLOBAL",1)
+END
+
+IF
+  Global("tz_kinglife","GLOBAL",3)
+THEN
+  RESPONSE #100
+    DestroySelf()
+    SetGlobal("tz_kinglife","GLOBAL",4)
+END
+
+IF
+  Global("tz_kingdead","GLOBAL",2)
+THEN
+  RESPONSE #100
+    DisplayStringHead(Myself,@10012)
+    Enemy()
+    Attack(Player1)
+    SetGlobal("tz_kingdead","GLOBAL",3)
+END
+

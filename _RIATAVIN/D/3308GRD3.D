@@ -1,0 +1,6 @@
+BEGIN ~3308GRD3~
+
+IF ~True()~ THEN BEGIN 0
+  SAY @0
+  IF ~~ THEN EXIT
+END

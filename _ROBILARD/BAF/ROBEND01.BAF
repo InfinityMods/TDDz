@@ -1,0 +1,94 @@
+IF
+  Global("tz_robend01see","LOCALS",0)
+  See([PC])
+  Range([PC],25)
+THEN
+  RESPONSE #100
+    SetGlobal("tz_robend01see","LOCALS",1)
+    StartDialogNoSet([PC])
+END
+
+IF
+  Global("tz_prep01","LOCALS",0)
+THEN
+  RESPONSE #100
+    ReallyForceSpell(Myself,WIZARD_SPELL_TRAP)
+    ReallyForceSpell(Myself,WIZARD_IMPROVED_MANTLE)
+    ReallyForceSpell(Myself,WIZARD_STONE_SKIN)
+    SetGlobal("tz_prep01","LOCALS",1)
+END
+
+IF
+  Global("tz_prep02","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("tz_prep02","LOCALS",1)
+    ForceSpell(NearestEnemyOf(Myself),WIZARD_TIME_STOP)
+END
+
+IF
+  Global("tz_prep03","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("tz_prep03","LOCALS",1)
+    ForceSpell(Myself,WIZARD_SUMMON_EFREET)
+    ForceSpell(Myself,WIZARD_SUMMON_DJINNI)
+    ForceSpell(NearestEnemyOf(Myself),WIZARD_GREATER_MALISON)
+END
+
+IF
+  HasItem("zzscrl01",Myself)
+THEN
+  RESPONSE #100
+    UseItem("zzscrl01",Myself)
+END
+
+IF
+  HasItem("zzscrl02",Myself)
+THEN
+  RESPONSE #100
+    UseItem("zzscrl02",NearestEnemyOf(Myself))
+END
+
+IF
+  HaveSpell(WIZARD_FINGER_OF_DEATH)
+THEN
+  RESPONSE #100
+    Spell(NearestEnemyOf(Myself),WIZARD_FINGER_OF_DEATH)
+END
+
+IF
+  HaveSpell(WIZARD_IMPRISONMENT)
+THEN
+  RESPONSE #100
+    Spell(NearestEnemyOf(Myself),WIZARD_IMPRISONMENT)
+END
+
+IF
+  HaveSpell(WIZARD_LIGHTNING_BOLT)
+THEN
+  RESPONSE #100
+    Spell(NearestEnemyOf(Myself),WIZARD_LIGHTNING_BOLT)
+END
+
+IF
+  HaveSpell(WIZARD_MAGIC_MISSILE)
+THEN
+  RESPONSE #100
+    Spell(NearestEnemyOf(Myself),WIZARD_MAGIC_MISSILE)
+END
+
+IF
+  HaveSpell(WIZARD_INVISIBLE_STALKER)
+THEN
+  RESPONSE #100
+    Spell(NearestEnemyOf(Myself),WIZARD_INVISIBLE_STALKER)
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+THEN
+  RESPONSE #100
+    Attack(NearestEnemyOf(Myself))
+END
+

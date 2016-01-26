@@ -1,0 +1,61 @@
+IF
+  Global("tz_eightdead","GLOBAL",2)
+THEN
+  RESPONSE #100
+    CutSceneId(Player1)
+    FadeToColor([20.0],0)
+    Wait(1)
+    LeaveAreaLUA("DD2001","GTRSK002",[328.321],12)
+    MultiPlayerSync()
+    SetMasterArea("DD2001")
+    MultiPlayerSync()
+    Wait(1)
+    FadeFromColor([20.0],0)
+    EndCutSceneMode()
+END
+
+IF
+  Global("tz_eightdead","GLOBAL",2)
+THEN
+  RESPONSE #100
+    CutSceneId(Player2)
+    Wait(1)
+    LeaveAreaLUA("DD2001","GTRSK002",[369.306],12)
+END
+
+IF
+  Global("tz_eightdead","GLOBAL",2)
+THEN
+  RESPONSE #100
+    CutSceneId(Player3)
+    Wait(1)
+    LeaveAreaLUA("DD2001","GTRSK002",[342.396],12)
+END
+
+IF
+  Global("tz_eightdead","GLOBAL",2)
+THEN
+  RESPONSE #100
+    CutSceneId(Player4)
+    Wait(1)
+    LeaveAreaLUA("DD2001","GTRSK002",[324.243],12)
+END
+
+IF
+  Global("tz_eightdead","GLOBAL",2)
+THEN
+  RESPONSE #100
+    CutSceneId(Player5)
+    Wait(1)
+    LeaveAreaLUA("DD2001","GTRSK002",[265.215],12)
+END
+
+IF
+  Global("tz_eightdead","GLOBAL",2)
+THEN
+  RESPONSE #100
+    CutSceneId(Player6)
+    Wait(1)
+    LeaveAreaLUA("DD2001","GTRSK002",[203.178],12)
+END
+

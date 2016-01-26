@@ -1,0 +1,17 @@
+IF
+  See([PC])
+  Global("tz_GotKingBack","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("tz_GotKingBack","LOCALS",1)
+    StartDialogNoSet([PC])
+END
+
+IF
+  Global("tz_kinglife","GLOBAL",9)
+THEN
+  RESPONSE #100
+    EscapeArea()
+    SetGlobal("tz_kinglife","GLOBAL",10)
+END
+

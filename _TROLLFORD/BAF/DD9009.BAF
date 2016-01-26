@@ -1,0 +1,45 @@
+IF
+  Global("tz_creature","dd9009",0)
+THEN
+  RESPONSE #100
+    CreateCreature("trolgi01",[1068.307],4)
+    CreateCreature("trolgi01",[1105.462],4)
+    CreateCreature("trolgi01",[1387.531],4)
+    CreateCreature("trolgi01",[1484.628],4)
+    CreateCreature("trolgi01",[1330.648],4)
+    CreateCreature("trolgi01",[1418.734],4)
+    CreateCreature("orc01",[1903.801],4)
+    CreateCreature("orc04",[1929.855],4)
+    CreateCreature("orc01",[1877.902],4)
+    CreateCreature("orc04",[1805.967],4)
+    CreateCreature("orc01",[1699.990],4)
+    CreateCreature("orc01",[1576.941],4)
+    CreateCreature("yuxinvi",[2555.405],4)
+    SetGlobal("tz_creature","dd9009",1)
+END
+
+IF
+  Global("tz_yuxinvisee","GLOBAL",1)
+THEN
+  RESPONSE #100
+    ActionOverride("yuxinvi",DestroySelf())
+    CreateCreature("yuxbossa",[2075.721],4)
+    SetGlobal("tz_yuxinvisee","GLOBAL",2)
+END
+
+IF
+  Global("tz_yuxinvisee","GLOBAL",2)
+THEN
+  RESPONSE #100
+    StartCutSceneMode()
+    StartCutScene("yuxthret")
+END
+
+IF
+  Global("tz_yuxinvisee","GLOBAL",3)
+THEN
+  RESPONSE #100
+    ActionOverride("yuxbossa",StartDialogNoSet([PC]))
+    SetGlobal("tz_yuxinvisee","GLOBAL",4)
+END
+

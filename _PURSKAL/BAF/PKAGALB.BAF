@@ -1,0 +1,8 @@
+IF
+  See([PC])
+  Range([PC],10)
+THEN
+  RESPONSE #100
+    StartDialogNoSet([PC])
+END
+

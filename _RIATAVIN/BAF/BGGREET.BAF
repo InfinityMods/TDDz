@@ -1,0 +1,33 @@
+IF
+  !Range(Player1,7)
+THEN
+  RESPONSE #100
+    MoveToObject(Player1)
+END
+
+IF
+  Global("tz_bggreetchat","GLOBAL",0)
+  See(Player1)
+  Range(Player1,9)
+THEN
+  RESPONSE #100
+    StartDialogNoSet([PC])
+    SetGlobal("tz_bggreetchat","GLOBAL",1)
+END
+
+IF
+  Global("tz_bggreet","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("tz_bggreet","GLOBAL",2)
+    StartCutSceneMode()
+    StartCutScene("bgguide")
+END
+
+IF
+  Global("tz_bggreet","GLOBAL",3)
+THEN
+  RESPONSE #100
+    EscapeArea()
+END
+

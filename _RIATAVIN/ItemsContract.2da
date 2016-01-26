@@ -1,0 +1,38 @@
+RESNAME 	NAME1	NAME2	UNIDENTIFIED_DESC	DESC	ICON		UNDROPPABLE COMMENTS
+AEGISRNG	+		20964	+					20965	0			+			Aegis of Torment
+AMAROS		20967	20968	20969				20970	BUCCEPIE	+			Amaros
+AMAUNMAC	+		20971	+					20972	0			+			Smoldering Mace of Ember
+AMULRAT		+		+		+					+		+			+
+ARAMIS		+		20975	+					20976	0			+			Staff of Aramis
+ARQUINXX	+		20983	+					20984	ARQUINB		+			Axe of Arquin
+B3-18		+		+		+					+		+			+			
+CALHEART	21024	21024	21024				21024	+			++++++++	Heart				
+CALIWOLF	+		+		+					+		+			++++++++	
+CERBSW2H	+		21030	+					21031	0			+			Psionic Denial;TODO DDBERBAR.sto
+DDNOIMPR	+		+		+					+		+			++++++++	
+ELVHUNTB	+		21141	+					21142	0			+			Huntsman's Soft Touch;TODO DDBERNAR.sto
+ENTERI1		+		21143	+					+		+			+			Entreri Saber
+ENTERI2		+		21144	+					+		+			+			Entreri Jeweled Dagger
+ENTROBE		+		21145	+					21146	IENTROBE	+			Entropic Robe
+FLAMPLAT	+		21162	+					21163	+			SCRL75		Plate of Smoldering, DONT_USE_USE_TDD_SPELL
+HAMFORCE	+		21180	+					21181	IGSLEEP		+			Hammer of Force
+IOUNX3		+		21195	+					21196	0			+			Tredyhedron of the Mind
+IOUNX7		+		21197	+					21198	0			+			Ioun Stone Of Hard Skin
+IOUNX8		+		21199	+					21200	0			+			Static Stone
+KEYOR		21076	21209	21210				21211	+			++++++++	Wardstone for Orgoth's Tower
+KEYOR2		21076	21209	21210				21212	+			++++++++	Wardstone for Orgoth's Tower
+LEATRAT		+		+		+					+		+			+
+MAGBOTXX	21227	21227	21228				21228	MAGBOTTX	+			Enchanted Beverage
+MARKBOWX	+		21231	+					21232	0			+			Bow of Elegance +4
+MIELIKKI	+		21233	+					21234	IQUIVER0	SCRL75		Quiver of Mielikki; TODO BUG
+MONGOVIA	+		21256	+					21257	MONGOVE		+			Mace of Mongovia
+ORGOBODY	21265	21265	+					21266	+			++++++++	Body of Prison Slave
+ORGOHEAL	21267	21267	21268				21268	+			++++++++	Healing Salve
+ORRSHLD		+		21269	+					21270	IORRSHLD	+			Orrick's Rhino Beetle Shield
+PLATBLUE	+		21277	+					21278	0			++++++++	Blue Dragon Scale; Forge from 3314FRGE.dlg
+SHOON		+		21349	+					21350	SHOON		+			Staff of Shoon
+SWZZZ1		+		21386	+					21387	+			+			Elemental Life
+UHALB5A		+		21422	+					21423	+			+			Tundra Halberd +4
+UMSTR5A		+		21426	+					21427	+			+			Morning Star of Action +4
+USHLD3B		+		21428	+					21429	+			+			Storming Shield +3
+WATBLOOD	21435	21435	21436				21436	+			++++++++	Blood of a Wererat

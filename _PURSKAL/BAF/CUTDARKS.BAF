@@ -1,0 +1,32 @@
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId("pkghost4")
+    MoveViewPoint([1237.881],VERY_FAST)
+    Wait(3)
+    DisplayStringHead("pkghost4",@10045)
+    Wait(6)
+    MoveViewObject(Player1,INSTANT)
+    DisplayStringHead(Player1,@10046)
+    Wait(6)
+    MoveViewObject("pkghost4",INSTANT)
+    DisplayStringHead("pkghost4",@10047)
+    Wait(7)
+    MoveViewObject(Player1,INSTANT)
+    DisplayStringHead(Player1,@10048)
+    Wait(10)
+    MoveViewObject("pkghost4",INSTANT)
+    DisplayStringHead("pkghost4",@10049)
+    Wait(10)
+    MoveViewObject(Player1,INSTANT)
+    DisplayStringHead(Player1,@10050)
+    Wait(12)
+    MoveViewObject("pkghost4",INSTANT)
+    DisplayStringHead("pkghost4",@10051)
+    Wait(2)
+    SetGlobal("tz_pkghost4call","GLOBAL",1)
+    Wait(3)
+    EndCutSceneMode()
+END
+

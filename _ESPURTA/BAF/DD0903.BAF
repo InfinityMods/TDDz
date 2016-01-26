@@ -1,0 +1,18 @@
+IF
+  Global("tz_spawn","DD0903",0)
+THEN
+  RESPONSE #100
+    CreateCreature("DDcapt01",[466.509],0)
+    CreateCreature("DDciti01",[297.1055],3)
+    CreateCreature("DDciti01",[855.509],5)
+    CreateCreature("DDciti01",[1757.494],8)
+    CreateCreature("DDciti01",[1273.1054],10)
+    CreateCreature("DDstab01",[291.1430],9)
+    CreateCreature("DDassi01",[1032.929],14)
+    CreateCreature("DDassi01",[927.993],13)
+    CreateCreature("DDmayo01",[968.943],1)
+    CreateCreature("DDguar01",[1906.1461],4)
+    CreateCreature("DDguar01",[1758.1592],7)
+    SetGlobal("tz_spawn","DD0903",1)
+END
+

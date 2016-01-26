@@ -1,0 +1,22 @@
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId(Player1)
+    StorePartyLocations()
+    FadeToColor([30.0],0)
+    Wait(1)
+    Rest()
+    Wait(1)
+    //LeaveAreaLUAPanic("dd3319ct","",[593.591],0)
+    //LeaveAreaLUA("dd3319ct","",[593.591],8) // NOTES: bug => change DD3319CT by DDCT01
+    LeaveAreaLUAPanic("DDCT01","",[593.591],8)
+    MultiPlayerSync()
+    CreateCreature("bgctboss",[274.749],0)
+    ApplySpell(Player1,1964)
+    Explore()
+    MoveViewPoint([0.0],INSTANT)
+    FadeFromColor([30.0],0)
+    StartCutScene("bgarive2")
+END
+

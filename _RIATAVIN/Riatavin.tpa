@@ -1,0 +1,152 @@
+DEFINE_ACTION_MACRO FinalizeImport
+BEGIN
+	COPY ~%MOD_FOLDER%/%COMP_FOLDER%/_copy/DD3334.are~ ~override~ // phantom door removed
+	
+	COPY_EXISTING ~DD3300.ARE~ ~override~
+		SAY 0X1B88 @20085
+		SAY 0X1C4C @20086
+		SAY 0X1D10 @20087
+	
+	COPY_EXISTING ~MIELIKKI.itm~ ~override~
+		WRITE_SHORT 0x1C	5 // Categorie: Arrows	
+	
+	// => TODO dd3319CT.ARE, bgarive2.BAF, BGCTBOSS.cre
+	
+	// TODO
+	// Notes: DD9X01.are
+	// SCRX76.ITM (Otiluke's Acid Cloud)
+	// SCRX77.ITM (Otiluke's Death Screen)
+	// SCRX81.ITM (Khelben's Dweomerdoom)
+	
+	// TODO
+	// Notes: DD0206.are
+	// SCRX1.ITM (Azragan's Channeling)
+	// SCRX19.ITM (Black Death)
+	// SCRX27.ITM (Soul of Kalan-Zhar)
+	// SCRX33.ITM (Gravity
+	// SCRX72.ITM (Emotion: Fear)
+	// SCRX74.ITM (Melf's Prismatic Shards)		
+	
+		// TODO
+		//~DDCT01~ // aka DD3319CT => DD3318
+		//~DD0201~
+		//~DD9X00~ // => DD9X01, DD9X02, DD9X03, DD9X04,  DD9X05, dd9x00c1 (aka DDC19X)
+		//~DDC19X~		
+		//~DD3319~ // DD3319C1 ? DD3319CT?		
+	
+	LAM HandleSpellScrollsContract
+	LAM HandleItemsContract	
+	
+	EXTEND_TOP ~AR0406.bcs~ ~%MOD_FOLDER%/%COMP_FOLDER%/Snip/bAR0406.baf~
+		
+	COPY ~override/DD3300CT.are~ ~override/DDCT33.are~ 
+		DELETE ~override/DD3300CT.are~
+	COPY ~override/DD3300C1.are~ ~override/DDC133.are~ 
+		DELETE ~override/DD3300C1.are~
+	
+	OUTER_TEXT_SPRINT sender ~%COMP_FOLDER%~ 
+	INCLUDE ~TDDz/Lib/Helpers.tpa~ LAF Accept STR_VAR sender target = ~_RIATAVIN~ END
+END
+
+
+//=============================================================================
+DEFINE_ACTION_MACRO HandleItemsContract
+BEGIN
+	COPY ~%MOD_FOLDER%/%COMP_FOLDER%/ItemsContract.2da~ ~%MOD_FOLDER%/TEMP/%COMP_FOLDER%/ItemsContract.2da~
+		COUNT_2DA_ROWS 7 count
+		WHILE (count > 1) BEGIN
+			READ_2DA_ENTRY (count -1) 0 7 resname				
+			READ_2DA_ENTRY (count -1) 6 7 undroppable
+			SET count = count -1
+						
+			PATCH_IF NOT ~%undroppable%~ STRING_EQUAL ~+~ BEGIN			
+				TO_UPPER resname				
+				INNER_ACTION BEGIN					
+					ACTION_IF ~%undroppable%~ STRING_EQUAL ~.~ 
+						BEGIN OUTER_SPRINT value ~SCRL75~ END 
+						ELSE BEGIN OUTER_SPRINT value ~%undroppable%~ END
+					
+					ACTION_MATCH ~%resname%~ 
+					WITH
+						~AEGISRNG~ 
+							BEGIN 
+								COPY_EXISTING ~CALITEMP.sto~ ~override~ WRITE_ASCII 0x278 ~%value%~ #8 
+								COPY_EXISTING ~DDBERNAR.sto~ ~override~ WRITE_ASCII 0x4C4 ~%value%~ #8 
+							END
+						~AMAUNMAC~ BEGIN COPY_EXISTING ~CALITEMP.sto~ ~override~ WRITE_ASCII 0x31C ~%value%~ #8 END // TODO ~MADEEL.sto
+						~AMAROS~ 	BEGIN COPY_EXISTING ~DD7002.are~ 	~override~ WRITE_ASCII 0x1750 	~%value%~ #8 END
+						~ARAMIS~ 	BEGIN COPY_EXISTING ~3307WIZ.sto~ 	~override~ WRITE_ASCII 0x1F8 	~%value%~ #8 END
+						~ARQUINXX~ 	BEGIN COPY_EXISTING ~3314FRGE.sto~ 	~override~ WRITE_ASCII 0x428 	~%value%~ #8 END
+						~CERBSW2H~ 	BEGIN COPY_EXISTING ~3307WIZ.sto~ 	~override~ WRITE_ASCII 0x84C 	~%value%~ #8 END						
+						~ELVHUNTB~ 	BEGIN COPY_EXISTING ~DD7002.are~ 	~override~ WRITE_ASCII 0x1764 	~%value%~ #8 END
+						~ENTROBE~ 	BEGIN COPY_EXISTING ~3307WIZ.sto~ 	~override~ WRITE_ASCII 0x214 	~%value%~ #8 END
+						~HAMFORCE~ 	BEGIN COPY_EXISTING ~3307WIZ.sto~ 	~override~ WRITE_ASCII 0x444 	~%value%~ #8 END
+						~FLAMPLAT~ 	BEGIN COPY_EXISTING ~3314FRGE.sto~ 	~override~ WRITE_ASCII 0x47C 	~%value%~ #8 END						
+						~IOUNX3~ 	BEGIN COPY_EXISTING ~DD7001.are~ 	~override~ WRITE_ASCII 0x8F8 	~%value%~ #8 END
+						~IOUNX7~ 	BEGIN COPY_EXISTING ~CALITEMP.sto~ 	~override~ WRITE_ASCII 0x2E4 	~%value%~ #8 END
+						~IOUNX8~ 	BEGIN COPY_EXISTING ~CALITEMP.sto~ 	~override~ WRITE_ASCII 0x300 	~%value%~ #8 END						
+						~MARKBOWX~ 
+							BEGIN 
+								COPY_EXISTING ~CALIMART.sto~ ~override~ WRITE_ASCII 0x770 ~%value%~ #8 
+								COPY_EXISTING ~DDBERNAR.sto~ ~override~ WRITE_ASCII 0x33C ~%value%~ #8 
+							END
+						~MAGBOTXX~ 
+							BEGIN 
+								COPY_EXISTING ~DDPOTEN1.sto~ ~override~ WRITE_ASCII 0x6B4 ~%value%~ #8 
+								COPY_EXISTING ~WARDWIZS.sto~ ~override~ WRITE_ASCII 0x230 ~%value%~ #8 
+							END
+						~MIELIKKI~ 	BEGIN COPY_EXISTING ~3314FRGE.sto~ 	~override~ WRITE_ASCII 0x498 ~%value%~ #8 END
+						~MONGOVE~ 	BEGIN COPY_EXISTING ~3314FRGE.sto~ 	~override~ WRITE_ASCII 0x460 ~%value%~ #8 END
+						~ORRSHLD~ 	BEGIN COPY_EXISTING ~CALITEMP.sto~ 	~override~ WRITE_ASCII 0x338 ~%value%~ #8 END						
+						~SHOON~ 	BEGIN COPY_EXISTING ~DD7001.are~ 	~override~ WRITE_ASCII 0x920 ~%value%~ #8 END						
+						~SWZZZ1~ 	BEGIN COPY_EXISTING ~CALIMART.sto~ 	~override~ WRITE_ASCII 0x71C ~%value%~ #8 END
+						~SWZZZ1~ 	BEGIN COPY_EXISTING ~CALIMART.sto~ 	~override~ WRITE_ASCII 0x71C ~%value%~ #8 END
+						~USHLD3B~ 	BEGIN COPY_EXISTING ~DD7004.are~ 	~override~ WRITE_ASCII 0x8C4 ~%value%~ #8 END
+						~UMSTR5A~ 	BEGIN COPY_EXISTING ~CALIMART.sto~ 	~override~ WRITE_ASCII 0x754 ~%value%~ #8 END						
+						DEFAULT
+					END
+				END
+			END
+		END
+	BUT_ONLY	
+END
+
+
+//=============================================================================
+DEFINE_ACTION_MACRO HandleSpellScrollsContract
+BEGIN
+	COPY ~%MOD_FOLDER%/_CORE/SpellScrollsContract.2da~ ~%MOD_FOLDER%/TEMP/%COMP_FOLDER%/SpellScrollsContract.2da~
+		COUNT_2DA_ROWS 8 count
+		WHILE (count > 1) BEGIN
+			READ_2DA_ENTRY (count -1) 0 8 resname				
+			READ_2DA_ENTRY (count -1) 6 8 undroppable
+			SET count = count -1
+						
+			PATCH_IF NOT ~%undroppable%~ STRING_EQUAL ~+~ BEGIN			
+				TO_UPPER resname				
+				INNER_ACTION BEGIN					
+					ACTION_IF ~%undroppable%~ STRING_EQUAL ~.~ // '.' means undroppable
+						BEGIN OUTER_SPRINT value ~SCRL75~ END 
+						ELSE BEGIN OUTER_SPRINT value ~%undroppable%~ END
+					
+					ACTION_MATCH ~%resname%~ 
+					WITH
+						~SCRX1~ 	
+							BEGIN 
+								COPY_EXISTING ~3307WIZ.sto~ 	~override~ WRITE_ASCII 0x188 	~%value%~ #8
+								COPY_EXISTING ~WARDWIZS.sto~ 	~override~ WRITE_ASCII 0x188 	~%value%~ #8
+							END						
+						~SCRX15~	BEGIN COPY_EXISTING ~3307WIZ.sto~ 	~override~ WRITE_ASCII 0x1A4 	~%value%~ #8 END						
+						~SCRX17~ 	BEGIN COPY_EXISTING ~3307WIZ.sto~ 	~override~ WRITE_ASCII 0x1C0 	~%value%~ #8 END		
+						~SCRX26~ 	BEGIN COPY_EXISTING ~3307WIZ.sto~ 	~override~ WRITE_ASCII 0x1DC 	~%value%~ #8 END						
+						~SCRX35~ 	BEGIN COPY_EXISTING ~DD7001.are~ 	~override~ WRITE_ASCII 0x934 	~%value%~ #8 END						
+						~SCRX65~ 	BEGIN COPY_EXISTING ~DD7002.are~ 	~override~ WRITE_ASCII 0x187C	~%value%~ #8 END						
+						DEFAULT			
+					END
+				END
+			END
+		END
+	BUT_ONLY	
+END
+
+

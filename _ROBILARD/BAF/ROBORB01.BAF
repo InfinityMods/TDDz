@@ -1,0 +1,64 @@
+IF
+  Global("tz_roborb01see","GLOBAL",0)
+  See(NearestEnemyOf(Myself))
+  Range(NearestEnemyOf(Myself),25)
+THEN
+  RESPONSE #100
+    SetGlobal("tz_roborb01see","GLOBAL",1)
+    StartDialogNoSet([PC])
+END
+
+IF
+  Global("tz_prep01","LOCALS",0)
+THEN
+  RESPONSE #100
+    ReallyForceSpell(Myself,WIZARD_SPELL_TRAP)
+    ReallyForceSpell(Myself,WIZARD_IMPROVED_MANTLE)
+    ReallyForceSpell(Myself,WIZARD_STONE_SKIN)
+    SetGlobal("tz_prep01","LOCALS",1)
+END
+
+IF
+  Global("tz_prep02","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("tz_prep02","LOCALS",1)
+    ForceSpell(NearestEnemyOf(Myself),WIZARD_FIREBALL)
+END
+
+IF
+  Global("tz_prep03","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("tz_prep03","LOCALS",1)
+    ReallyForceSpell(Myself,1737)
+END
+
+IF
+  HasItem("zzscrl01",Myself)
+THEN
+  RESPONSE #100
+    UseItem("zzscrl01",Myself)
+END
+
+IF
+  HasItem("zzscrl02",Myself)
+THEN
+  RESPONSE #100
+    UseItem("zzscrl02",NearestEnemyOf(Myself))
+END
+
+IF
+  HaveSpell(WIZARD_MAGIC_MISSILE)
+THEN
+  RESPONSE #100
+    Spell(NearestEnemyOf(Myself),WIZARD_MAGIC_MISSILE)
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+THEN
+  RESPONSE #100
+    Attack(NearestEnemyOf(Myself))
+END
+

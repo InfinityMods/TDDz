@@ -1,0 +1,7 @@
+IF
+	Global("tz_Robillard","GLOBAL",0)
+THEN
+	RESPONSE #100
+		SetGlobal("tz_Robillard","GLOBAL",1)
+		CreateCreature("ROBILARD",[3341.2880],8) // Robillard
+END

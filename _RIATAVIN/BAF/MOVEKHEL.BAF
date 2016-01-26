@@ -1,0 +1,12 @@
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId(Player1)
+    MoveViewPoint([636.757],VERY_FAST)
+    MoveToPoint([636.757])
+    Wait(5)
+    SetGlobal("tz_enterhhelbhall","GLOBAL",2)
+    EndCutSceneMode()
+END
+

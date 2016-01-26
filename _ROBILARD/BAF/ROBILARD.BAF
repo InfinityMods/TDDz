@@ -1,0 +1,18 @@
+IF
+  InParty(Myself)
+  Global("tz_BeenInParty","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("tz_BeenInParty","LOCALS",1)
+END
+
+IF
+  !InParty(Myself)
+  Global("tz_BeenInParty","LOCALS",1)
+  Global("tz_KickedOut","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetDialogue("ROBILP")
+    Dialog([PC])
+END
+

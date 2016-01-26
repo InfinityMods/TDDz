@@ -1,0 +1,13 @@
+IF
+  Global("tz_dd3336","GLOBAL",0)
+THEN
+  RESPONSE #100
+    CreateCreature("drunk2",[384.311],4)
+    CreateCreature("mtown6",[109.316],4)
+    CreateCreature("mtown6",[185.415],4)
+    CreateCreature("mtown6",[320.326],4)
+    CreateCreature("ftown7",[250.250],4)
+    CreateCreature("3336tav",[194.13],4)
+    SetGlobal("tz_dd3336","GLOBAL",1)
+END
+

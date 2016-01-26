@@ -1,0 +1,9 @@
+IF
+  Global("tz_thorkrid","GLOBAL",1)
+THEN
+  RESPONSE #100
+    DestroySelf()
+    Wait(2)
+    SetGlobal("tz_thorkrid","GLOBAL",2)
+END
+

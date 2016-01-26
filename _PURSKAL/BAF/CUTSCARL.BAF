@@ -1,0 +1,29 @@
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId("pkghost3")
+    MoveViewPoint([1518.835],FAST)
+    Wait(3)
+    DisplayStringHead("pkghost3",@10057)
+    Wait(6)
+    DisplayStringHead("thork4",@10058)
+    Wait(6)
+    DisplayStringHead("pkghost3",@10059)
+    Wait(5)
+    DisplayStringHead("thork4",@10060)
+    Wait(5)
+    ActionOverride("thork4",MoveToPoint([1540.800]))
+    Wait(3)
+    CreateVisualEffect("SPHORWIL",[1520.800])
+    CreateVisualEffect("SPHORWIL",[1560.800])
+    CreateVisualEffect("SPHORWIL",[1540.780])
+    CreateVisualEffect("SPHORWIL",[1540.750])
+    ForceSpell("thork4",CUTSCENE_POWERWORD_KILL)
+    Wait(2)
+    DisplayStringHead(Player1,@10061)
+    SetGlobal("tz_pkghost3call","GLOBAL",1)
+    Wait(3)
+    EndCutSceneMode()
+END
+

@@ -1,0 +1,15 @@
+IF
+  See([PC])
+  Global("tz_Display","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("tz_Display","LOCALS",1)
+    DisplayStringHead(Myself,@10090)
+  RESPONSE #100
+    SetGlobal("tz_Display","LOCALS",1)
+    DisplayStringHead(Myself,@10091)
+  RESPONSE #100
+    SetGlobal("tz_Display","LOCALS",1)
+    DisplayStringHead(Myself,@10092)
+END
+

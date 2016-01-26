@@ -1,0 +1,22 @@
+IF
+  Global("tz_DD3318","DD3318",0)
+THEN
+  RESPONSE #100
+    CreateCreature("bgSH01",[657.822],4)
+    CreateCreature("bgSH02",[718.603],4)
+    CreateCreature("bgSH03",[945.551],4)
+    CreateCreature("bgSH04",[636.418],4)
+    CreateCreature("bgSH05",[359.548],4)
+    CreateCreature("bgSH06",[203.665],4)
+    CreateCreature("bgSH07",[486.623],4)
+    SetGlobal("tz_DD3318","DD3318",1)
+END
+
+IF
+  Global("tz_bgenchant","GLOBAL",3)
+THEN
+  RESPONSE #100
+    StartCutSceneMode()
+    StartCutScene("bgward")
+END
+

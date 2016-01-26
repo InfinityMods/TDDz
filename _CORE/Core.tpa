@@ -1,0 +1,54 @@
+//=============================================================================
+DEFINE_ACTION_MACRO FinalizeImport
+BEGIN		
+	APPEND ~GTIMES.IDS~ ~12 TWO_ROUNDS~ 	UNLESS ~TWO_ROUNDS~
+	APPEND ~GTIMES.IDS~ ~18 THREE_ROUNDS~ 	UNLESS ~THREE_ROUNDS~
+	APPEND ~GTIMES.IDS~ ~24 FOUR_ROUNDS~ 	UNLESS ~FOUR_ROUNDS~
+	APPEND ~GTIMES.IDS~ ~30 FIVE_ROUNDS~ 	UNLESS ~FIVE_ROUNDS~
+	APPEND ~GTIMES.IDS~ ~36 SIX_ROUNDS~ 	UNLESS ~SIX_ROUNDS~
+	APPEND ~GTIMES.IDS~ ~54 NINE_ROUNDS~ 	UNLESS ~NINE_ROUNDS~
+	
+	LAM InstallFrostGiantAnimation
+	LAM InstallIronGolemAnimation
+	LAM InstallCyclopsAnimation	
+	
+	INCLUDE ~%MOD_FOLDER%/Lib/Items.tpa~ 
+		LAM UpdateTooltip
+		
+	INCLUDE ~%MOD_FOLDER%/Worldmap/Worldmap.tpa~
+		LAM NotifyWorldmap	
+		
+	OUTER_TEXT_SPRINT sender ~%COMP_FOLDER%~
+	INCLUDE ~%MOD_FOLDER%/Lib/Helpers.tpa~ LAF Accept STR_VAR sender target = ~_CORE~ END
+END
+
+//=============================================================================
+DEFINE_ACTION_MACRO InstallIronGolemAnimation
+BEGIN
+	APPEND ~EXTANIM.2DA~ ~57936 0 1 1 0 0 0 0 0 0 NONE NONE NONE 8 4 MGIR NONE 0 0 NONE~ UNLESS ~57936~	
+	APPEND ~ANIMATE.IDS~ ~0xE250 IC_GOLEM_IRON~ UNLESS ~0xE250~	
+	
+	COPY ~%MOD_FOLDER%/%COMP_FOLDER%/Cre/IronGolem/BAM~ ~override~
+END
+
+//=============================================================================
+DEFINE_ACTION_MACRO InstallFrostGiantAnimation
+BEGIN
+	APPEND ~EXTANIM.2DA~ ~57935 0 1 1 0 0 0 47 0 0 NONE NONE NONE 8 5 MGFR NONE 0 0 NONE~ UNLESS ~57935~
+	APPEND ~ANIMATE.IDS~ ~0xE24F IC_GIANT_FROST~ UNLESS ~0xE24F~
+	APPEND ~EXTSPEED.2DA~ ~57935	8~ UNLESS ~57935~
+		
+	COPY ~%MOD_FOLDER%/%COMP_FOLDER%/Cre/FrostGiant/BAM~ ~override~
+	COPY ~%MOD_FOLDER%/%COMP_FOLDER%/Cre/FrostGiant/MGFR.2DA~ ~override~
+	COPY ~%MOD_FOLDER%/%COMP_FOLDER%/Cre/FrostGiant/OGG~ ~TDDz/Audio~	
+END
+
+//=============================================================================
+DEFINE_ACTION_MACRO InstallCyclopsAnimation
+BEGIN
+	APPEND ~ANIMATE.IDS~ ~0xE000 IC_CYCLOPS~ UNLESS ~0xE000~
+			
+	COPY ~%MOD_FOLDER%/%COMP_FOLDER%/Cre/Cyclops/BAM~ ~override~	
+	COPY ~%MOD_FOLDER%/%COMP_FOLDER%/Cre/Cyclops/MCYC.2DA~ ~override~
+	COPY ~%MOD_FOLDER%/%COMP_FOLDER%/Cre/Cyclops/OGG~ ~TDDz/Audio~
+END

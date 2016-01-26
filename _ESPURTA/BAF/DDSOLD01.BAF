@@ -1,0 +1,103 @@
+IF
+  Global("tz_go_hostile","LOCALS",0)
+  Global("tz_soldiers_hostile","DD2300",1)
+THEN
+  RESPONSE #100
+    Enemy()
+    SetGlobal("tz_go_hostile","LOCALS",1)
+END
+
+IF
+  Global("tz_go_hostile","LOCALS",0)
+  Global("tz_soldiers_hostile","DD2300",0)
+  HitBy([PC],CRUSHING)
+THEN
+  RESPONSE #100
+    Enemy()
+    SetGlobal("tz_go_hostile","LOCALS",1)
+    SetGlobal("tz_soldiers_hostile","DD2300",1)
+END
+
+IF
+  OR(2)
+    Name("DDsold01",Myself)
+    Name("DDsold06",Myself)
+  !See(NearestEnemyOf(Myself))
+THEN
+  RESPONSE #100
+    RandomWalk()
+END
+
+IF
+  HasItem("POTN52",Myself)
+  HPPercentLT(Myself,50)
+THEN
+  RESPONSE #100
+    UseItem("POTN52",Myself)
+END
+
+IF
+  !HasItem("POTN52",Myself)
+  HasItem("POTN08",Myself)
+  HPPercentLT(Myself,50)
+THEN
+  RESPONSE #100
+    UseItem("POTN08",Myself)
+END
+
+IF
+  See([ENEMY.0.TROLL])
+  !Range([ENEMY.0.TROLL],8)
+THEN
+  RESPONSE #100
+    EquipRanged()
+    Attack([ENEMY.0.TROLL])
+END
+
+IF
+  See([ENEMY.0.TROLL])
+  Range([ENEMY.0.TROLL],8)
+THEN
+  RESPONSE #100
+    EquipMostDamagingMelee()
+    Attack([ENEMY.0.TROLL])
+END
+
+IF
+  !Range([PC],8)
+  Global("tz_go_hostile","LOCALS",1)
+  See([PC])
+THEN
+  RESPONSE #100
+    EquipRanged()
+    Attack([PC])
+END
+
+IF
+  Range([PC],9)
+  Global("tz_go_hostile","LOCALS",1)
+  See([PC])
+THEN
+  RESPONSE #100
+    EquipMostDamagingMelee()
+    Attack([PC])
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  !Range(NearestEnemyOf(Myself),8)
+THEN
+  RESPONSE #100
+    EquipRanged()
+    Attack(NearestEnemyOf(Myself))
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  Range(NearestEnemyOf(Myself),9)
+THEN
+  RESPONSE #100
+    EquipMostDamagingMelee()
+    Attack(NearestEnemyOf(Myself))
+END
+

@@ -1,0 +1,12 @@
+IF
+  Global("tz_creature","dd9x05",0)
+THEN
+  RESPONSE #100
+    CreateCreature("gencali1",[1023.607],4)
+    CreateCreature("gencali2",[719.393],4)
+    CreateCreature("gencali2",[853.494],4)
+    CreateCreature("gencali2",[665.639],4)
+    CreateCreature("gencali2",[534.788],4)
+    SetGlobal("tz_creature","dd9x05",1)
+END
+

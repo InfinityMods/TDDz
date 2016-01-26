@@ -1,0 +1,46 @@
+IF
+  Global("tz_creature","dd7001",0)
+THEN
+  RESPONSE #100
+    SetGlobal("tz_creature","dd7001",1)
+    CreateCreature("orgo01",[612.486],4)
+END
+
+IF
+  Global("tz_orgothquite","GLOBAL",0)
+  InParty("jaheira")
+THEN
+  RESPONSE #100
+    SetGlobal("tz_orgothquite","GLOBAL",1)
+    ActionOverride("jaheira",StartDialogue("orquite",Player1))
+END
+
+IF
+  Global("tz_orgothquite","GLOBAL",0)
+  InParty("anomen")
+  !InParty("jaheira")
+THEN
+  RESPONSE #100
+    SetGlobal("tz_orgothquite","GLOBAL",1)
+    ActionOverride("anomen",StartDialogue("orquite",Player1))
+END
+
+IF
+  Global("tz_orgothquite","GLOBAL",0)
+  InParty("aerie")
+  !InParty("anomen")
+  !InParty("jaheira")
+THEN
+  RESPONSE #100
+    SetGlobal("tz_orgothquite","GLOBAL",1)
+    ActionOverride("aerie",StartDialogue("orquite",Player1))
+END
+
+IF
+  Global("tz_add_map_notes","DD7001",0)
+THEN
+  RESPONSE #100
+    SetGlobal("tz_add_map_notes","DD7001",1)
+    AddMapNote([382.1021],@10002)
+END
+

@@ -1,0 +1,13 @@
+IF
+  Global("tz_creature","DD0203",0)
+THEN
+  RESPONSE #100
+    CreateCreature("wardwiz1",[1480.1355],4)
+    CreateCreature("wardwiz5",[1728.989],4)
+    CreateCreature("wardwiz4",[1420.1062],4)
+    CreateCreature("wardwiz2",[967.1022],4)
+    CreateCreature("wardwiz3",[1010.8014],4)
+    CreateCreature("wardwiz1",[1080.553],4)
+    SetGlobal("tz_creature","DD0203",1)
+END
+
