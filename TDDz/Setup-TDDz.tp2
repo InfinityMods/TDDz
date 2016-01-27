@@ -5,6 +5,8 @@ VERSION ~v1.0~
 ALWAYS
 	INCLUDE ~%MOD_FOLDER%/Lib/Helpers.tpa~ LAM ForceClearTempFolder
 	
+	INCLUDE ~%MOD_FOLDER%/Lib/a7_tools.tpa~
+	
 	ACTION_IF (GAME_IS ~eet~) AND (FILE_CONTAINS ~override/EET.flag~ ~EET_JOURNAL~) BEGIN
 		OUTER_SET bg2_chapter = 14
 	END ELSE BEGIN
@@ -28,33 +30,33 @@ LANGUAGE 	~English~
 
 LANGUAGE 	~Russian(aerie-ru)~
 			~Russian~
-			~TDDz/Language/Russian/setup.tra~
-			~TDDz/Language/Russian/tp2.tra~
+			~TDDz/Translations/Russian/setup.tra~
+			~TDDz/Translations/Russian/tp2.tra~
 
 LANGUAGE 	~Polish(by SoM, part of CoB Clan, in co-operation with TB Team)~
 			~Polish~
-			~TDDz/Language/Polish/setup.tra~
-			~TDDz/Language/Polish/tp2.tra~
+			~TDDz/Translations/Polish/setup.tra~
+			~TDDz/Translations/Polish/tp2.tra~
 
 LANGUAGE 	~German(Leonardo Watson)~
 			~German~
-			~TDDz/Language/German/setup.tra~
-			~TDDz/Language/German/tp2.tra~					
+			~TDDz/Translations/German/setup.tra~
+			~TDDz/Translations/German/tp2.tra~					
 
 LANGUAGE 	~Francais(Isaya)~
 			~French~
-			~TDDz/Language/French/setup00.tra~
-			~TDDz/Language/French/tp2.tra~
+			~TDDz/Translations/French/setup00.tra~
+			~TDDz/Translations/French/tp2.tra~
 
 LANGUAGE 	~Italian(ilot)~
 			~Italian~
-			~TDDz/Language/Italian/setup.tra~
-			~TDDz/Language/Italian/tp2.tra~
+			~TDDz/Translations/Italian/setup.tra~
+			~TDDz/Translations/Italian/tp2.tra~
          
 LANGUAGE 	~Spanish(Clan REO)~
 			~Spanish~
-			~TDDz/Language/Spanish/setup.tra~
-			~TDDz/Language/Spanish/tp2.tra~
+			~TDDz/Translations/Spanish/setup.tra~
+			~TDDz/Translations/Spanish/tp2.tra~
 
 // TODO: TTPOT.itm has weird name in vanilla BG2EE...is it normal???
 			

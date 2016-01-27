@@ -70,11 +70,12 @@ BEGIN
 			READ_2DA_ENTRY (count -1) 4 7 desc
 			READ_2DA_ENTRY (count -1) 5 7 iconS
 			READ_2DA_ENTRY (count -1) 6 7 undroppable
+			READ_2DA_ENTRY (count -1) 8 7 path_to_file
 			SET count = count -1
 						
 			INNER_ACTION BEGIN					
 				ACTION_IF ~%undroppable%~ STRING_EQUAL ~+~ || ~%undroppable%~ STRING_EQUAL ~++++++++~ BEGIN 
-					COPY ~TDD/Itm/%resname%.itm~ ~override~ 					
+					COPY ~TDD/%path_to_file%/%resname%.itm~ ~override~ 					
 						PATCH_IF IS_AN_INT name1 BEGIN SET strref = RESOLVE_STR_REF ((AT name1)) WRITE_LONG NAME1 %strref% END
 						PATCH_IF IS_AN_INT name2 BEGIN SET strref = RESOLVE_STR_REF ((AT name2)) WRITE_LONG NAME2 %strref% END
 						PATCH_IF IS_AN_INT unidentifiedDesc BEGIN SET strref = RESOLVE_STR_REF ((AT unidentifiedDesc)) WRITE_LONG UNIDENTIFIED_DESC %strref% END

@@ -1,26 +1,26 @@
-RESNAME NAME1	NAME2	UNIDENTIFIED_DESC	DESC	ICON		UNDROPPABLE 	NAME					COMMENTS
-SCRX1	+		20821	+					20822	CHANNELA	+			Azragans_Channeling		.R/WARDWIZS.sto@188;R/3307WIZ.sto@188;TODO MADDEL.sto
-SCRX3	+		20825	+					20826	TSTRA		+			True_Strike				.P/DD3501.are@0xA98;TODO MADEEL.STO,ARP006.BAF
-SCRX4	+		20827	+					20828	TORMA		+			Torment					.T/DD9005.are@1FB0;TODO MADEEL.STO,ARP029.BAF
-SCRX7	+		20831	+					20832	FOCUSA		+			Endurance				.P/DD3503.are@0xAD4;TODO MADEEL.STO
-SCRX8	+		20835	+					20836	ENDA		+			Aura_of_Focus			.P/DD3501.are@0xB24;TODO MADEEL.STO
-SCRX10	+		20839	+					20840	ADRENA		+			Adrenaline_Rush			.E/BARHEAL.sto@1CC;TODO MADEEL.sto
-SCRX12	+		20841	+					20842	SHARDA		+			Ice_ShardD				.T/D9008.are@0x4C0;TODO MADEEL.STO,ARPo05.baf 
-SCRX13	+		20843	+					20844	WEAKXA		+			Weaken					.P/DD3501.are@0xC14;TODO MADEEL.STO
-SCRX15	+		20850	+					20851	MASSA		+			Mass_Teleport			.R/3307WIZ.sto@1A4;T/DD9005.are@2280;TODO MADEEL.sto@260
-SCRX17	+		20871	+					20872	SPWI61XA	+			Monster_Summoning_IV	.R/3307WIZ.sto@1C0;TODO MADDEL.sto
-SCRX22	+		20865	+					20866	MELTA		+			Armor_Melt				.P/DD3501.ARE@0xA5C;TODO MADEEL.STO
-SCRX25	+		20873	+					20874	SPORCXA		+			Orcish_Horde			.E/BARHEAL.sto@1B0;TODO MADEEL.sto
-SCRX26	+		20875	+					20876	HEMOA		+			Hemophilia	 			.R/3307WIZ.sto@1DC;TODO MADDEL.sto
-SCRX29	+		20879	+					20880	IRONA		+			Iron_Body				.E/DD1800.are@54C;TODO MADEEL.sto
-SCRX32	+		20888	+					20889	SUFFA		+			Suffocation				.P/DD3503.are@0xC00;TODO MADEEL.sto,ARPO28.baf
-SCRX35	+		20900	+					20901	ARMYA		+			Army_of_Darkness		.R/DD7001.are@934;TODO MADEEL.sto
-SCRX41	+		20935	+					20936	RARENA		++++++++	Rarys_Mnemonic_Enhancer	(Used in script) E/DD4003.are@0x1380;E/DD4003.baf;MADEEL.sto
-SCRX51	+		20804	+					20804	SPMINTIA	+			Eyes_of_Wrath			.E/BARHEAL.sto@1E8;TODO MADEEL.sto
-SCRX60	+		20522	+					20523	SPMI113A	+			Mordenkainens_Phantom_Shield_Maidens	.T/QLOOT4.cre@680;TODO MADEEL.STO,ARP028.BAF
-SCRX64	+		20944	+					20945	SPMI118A	+			Mordenkainens_Force_Missiles			.T/DD9009.are@AB0;TODO MADEEL.sto
-SCRX65	+		20530	+					20531	SPMI119A	+			Otilukes_Diamond_Screen	.R/DD7002.are@187C;TODO MADEEL.sto,ARPO05.baf,ARPO28.baf
-SCRX68	+		20536	+					20537	SPMI122A	+			Inaccury				.T/DD9009.are@AEC;TODO MADEEL.sto
-SCRX73	+		20546	+					20457	SPMI127A	+			Emotion_Hope			.T/DD9009.are@1FC4;TODO MADEEL.sto
+RESNAME NAME1	NAME2	UNIDENTIFIED_DESC	DESC	ICON		UNDROPPABLE 	NAME								PATH_TO_FILE					COMMENTS
+SCRX1	+		20821	+					20822	CHANNELA	+			Azragans_Channeling						itm								.R/WARDWIZS.sto@188;R/3307WIZ.sto@188;TODO MADDEL.sto
+SCRX3	+		20825	+					20826	TSTRA		+			True_Strike								itm								.P/DD3501.are@0xA98;TODO MADEEL.STO,ARP006.BAF
+SCRX4	+		20827	+					20828	TORMA		+			Torment									itm								.T/DD9005.are@1FB0;TODO MADEEL.STO,ARP029.BAF
+SCRX7	+		20831	+					20832	FOCUSA		+			Endurance								itm								.P/DD3503.are@0xAD4;TODO MADEEL.STO
+SCRX8	+		20835	+					20836	ENDA		+			Aura_of_Focus							itm								.P/DD3501.are@0xB24;TODO MADEEL.STO
+SCRX10	+		20839	+					20840	ADRENA		+			Adrenaline_Rush							itm								.E/BARHEAL.sto@1CC;TODO MADEEL.sto
+SCRX12	+		20841	+					20842	SHARDA		+			Ice_ShardD								itm								.T/D9008.are@0x4C0;TODO MADEEL.STO,ARPo05.baf 
+SCRX13	+		20843	+					20844	WEAKXA		+			Weaken									itm								.P/DD3501.are@0xC14;TODO MADEEL.STO
+SCRX15	+		20850	+					20851	MASSA		+			Mass_Teleport							itm								.R/3307WIZ.sto@1A4;T/DD9005.are@2280;TODO MADEEL.sto@260
+SCRX17	+		20871	+					20872	SPWI61XA	+			Monster_Summoning_IV					Compat/RoT						.R/3307WIZ.sto@1C0;TODO MADDEL.sto
+SCRX22	+		20865	+					20866	MELTA		+			Armor_Melt								itm								.P/DD3501.ARE@0xA5C;TODO MADEEL.STO
+SCRX25	+		20873	+					20874	SPORCXA		+			Orcish_Horde							itm								.E/BARHEAL.sto@1B0;TODO MADEEL.sto
+SCRX26	+		20875	+					20876	HEMOA		+			Hemophilia	 							itm								.R/3307WIZ.sto@1DC;TODO MADDEL.sto
+SCRX29	+		20879	+					20880	IRONA		+			Iron_Body								itm								.E/DD1800.are@54C;TODO MADEEL.sto
+SCRX32	+		20888	+					20889	SUFFA		+			Suffocation								itm								.P/DD3503.are@0xC00;TODO MADEEL.sto,ARPO28.baf
+SCRX35	+		20900	+					20901	ARMYA		+			Army_of_Darkness						itm								.R/DD7001.are@934;TODO MADEEL.sto
+SCRX41	+		20935	+					20936	RARENA		++++++++	Rarys_Mnemonic_Enhancer					itm								(Used in script) E/DD4003.are@0x1380;E/DD4003.baf;MADEEL.sto
+SCRX51	+		20804	+					20804	SPMINTIA	+			Eyes_of_Wrath							itm								.E/BARHEAL.sto@1E8;TODO MADEEL.sto
+SCRX60	+		20522	+					20523	SPMI113A	+			Mordenkainens_Phantom_Shield_Maidens	itm								.T/QLOOT4.cre@680;TODO MADEEL.STO,ARP028.BAF
+SCRX64	+		20944	+					20945	SPMI118A	+			Mordenkainens_Force_Missiles			itm								.T/DD9009.are@AB0;TODO MADEEL.sto
+SCRX65	+		20530	+					20531	SPMI119A	+			Otilukes_Diamond_Screen					itm								.R/DD7002.are@187C;TODO MADEEL.sto,ARPO05.baf,ARPO28.baf
+SCRX68	+		20536	+					20537	SPMI122A	+			Inaccury								itm								.T/DD9009.are@AEC;TODO MADEEL.sto
+SCRX73	+		20546	+					20457	SPMI127A	+			Emotion_Hope							itm								.T/DD9009.are@1FC4;TODO MADEEL.sto
 
 

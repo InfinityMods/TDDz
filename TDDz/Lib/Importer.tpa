@@ -388,6 +388,11 @@ END
 //=============================================================================
 DEFINE_ACTION_MACRO HandleTileset
 BEGIN	
-	LAF HANDLE_TILESETS END
+	//LAF HANDLE_TILESETS END
+	LAF HANDLE_TILECONV
+				STR_VAR
+					input_path    = EVAL "%MOD_FOLDER%/tiz"
+					output_path	  = "override"
+	END
 	AT_NOW ~del /f /q .\TDDz\Tiz\*.tiz 2> .\TDDz\Tiz\error.txt~ EXACT // we redirect ugly error message when there is not file to delete		
 END
