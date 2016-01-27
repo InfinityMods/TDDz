@@ -384,7 +384,11 @@ END
 //=============================================================================
 DEFINE_ACTION_MACRO HandleAudio
 BEGIN
-	LAF HANDLE_AUDIO END	
+	LAF HANDLE_AUDIO 
+			STR_VAR
+				    oggdec_path = EVAL "%MOD_FOLDER%/tools/oggdec"
+					sox_path = EVAL "%MOD_FOLDER%/tools/sox"
+	END	
 	AT_NOW ~del /f /q .\TDDz\Audio\*.ogg 2> .\TDDz\Audio\error.txt~ EXACT // we redirect ugly error message when there is not file to delete		
 END
 
