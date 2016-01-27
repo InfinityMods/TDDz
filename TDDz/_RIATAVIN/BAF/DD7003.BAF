@@ -28,7 +28,7 @@ THEN
   RESPONSE #100
     SetGlobal("tz_orgoinvisee","GLOBAL",2)
     StartCutSceneMode()
-    StartCutScene("cutorgo1") // TODO
+    StartCutScene("cutorgo1")
 END
 
 IF
