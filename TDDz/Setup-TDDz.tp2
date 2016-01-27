@@ -4,6 +4,17 @@ VERSION ~v1.0~
 
 ALWAYS
 	INCLUDE ~%MOD_FOLDER%/Lib/Helpers.tpa~ LAM ForceClearTempFolder
+	
+	ACTION_IF (GAME_IS ~eet~) AND (FILE_CONTAINS ~override/EET.flag~ ~EET_JOURNAL~) BEGIN
+		OUTER_SET bg2_chapter = 14
+	END ELSE BEGIN
+		OUTER_SET bg2_chapter = 0
+	END
+		OUTER_FOR (i=1; i<=10; i=i+1) BEGIN
+		OUTER_SET bg2_chapter = bg2_chapter + 1
+		OUTER_SPRINT name_source ~bg2_chapter_%i%~
+		OUTER_SET EVAL ~%name_source%~ = bg2_chapter
+	END
 END
 
 AUTO_EVAL_STRINGS
@@ -92,14 +103,14 @@ BEGIN @901003
 	INCLUDE ~%MOD_FOLDER%/Lib/Helpers.tpa~ 
 		LAM DeleteTempFolder
 
-BEGIN @901004
-	REQUIRE_PREDICATE GAME_IS ~bg2ee eet~ ~~	
-	REQUIRE_COMPONENT "setup-TDDz.tp2" "0" "You must have TDD - Core installed"		
-		
-	INCLUDE ~%MOD_FOLDER%/Lib/Importer.tpa~ 
-		LAF ImportComponent STR_VAR aComp = ~RIATAVIN~ END
-	INCLUDE ~%MOD_FOLDER%/Lib/Helpers.tpa~ 
-		LAM DeleteTempFolder
+//BEGIN @901004
+//	REQUIRE_PREDICATE GAME_IS ~bg2ee eet~ ~~	
+//	REQUIRE_COMPONENT "setup-TDDz.tp2" "0" "You must have TDD - Core installed"		
+//		
+//	INCLUDE ~%MOD_FOLDER%/Lib/Importer.tpa~ 
+//		LAF ImportComponent STR_VAR aComp = ~RIATAVIN~ END
+//	INCLUDE ~%MOD_FOLDER%/Lib/Helpers.tpa~ 
+//		LAM DeleteTempFolder
 	
 //BEGIN @901010
 //	REQUIRE_PREDICATE GAME_IS ~bg2ee eet~ ~~	

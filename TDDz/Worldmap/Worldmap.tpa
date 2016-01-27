@@ -12,15 +12,12 @@ BEGIN
 			
 		COPY ~Worldmap/map_mods_links.tbl~ ~Worldmap~
 			APPEND_FILE ~%MOD_FOLDER%/Worldmap/%tutu_OrEmpty%links.tbl~
-			PATCH_IF (FILE_EXISTS ~data/SoS-RULE.BIF~) BEGIN
-				APPEND_FILE ~TDD/Worldmap/sos_links.tbl~
-			END
-			PATCH_IF (FILE_EXISTS ~data/ROT-RULE.BIF~) BEGIN
-				APPEND_FILE ~TDD/Worldmap/rot_links.tbl~
-			END
-			PATCH_IF (FILE_EXISTS ~data/CTB-RULE.BIF~) BEGIN
-				APPEND_FILE ~TDD/Worldmap/ctb_links.tbl~
-			END
+			PATCH_IF (FILE_EXISTS ~data/SoS-RULE.BIF~) // TODO TDDz does not use/create data/SoS-RULE.BIF nor any SoS compatibility yet
+				BEGIN APPEND_FILE ~TDD/Worldmap/sos_links.tbl~ END
+			PATCH_IF (FILE_EXISTS ~data/ROT-RULE.BIF~) // TODO TDDz does not use/create data/ROT-RULE.BIF nor any ROT compatibility yet
+				BEGIN APPEND_FILE ~TDD/Worldmap/rot_links.tbl~ END
+			PATCH_IF (FILE_EXISTS ~data/CTB-RULE.BIF~) // TODO TDDz does not use/create data/CTB-RULE.BIF nor any CTB compatibility yet
+				BEGIN APPEND_FILE ~TDD/Worldmap/ctb_links.tbl~ END
 			
 		COPY ~Worldmap/map_mods_trans.tra~ ~Worldmap~
 			APPEND_FILE_EVALUATE ~%MOD_FOLDER%/Worldmap/%LANGUAGE%/worldmap.tra~
