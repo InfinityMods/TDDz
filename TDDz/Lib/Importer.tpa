@@ -5,9 +5,12 @@ DEFINE_ACTION_FUNCTION ImportComponent STR_VAR aComp = ~~
 BEGIN	
 	OUTER_TEXT_SPRINT COMP_FOLDER ~_%aComp%~
 	
+	MKDIR ~%MOD_FOLDER%/TEMP~
+	
 	MKDIR ~%MOD_FOLDER%/TEMP/%COMP_FOLDER%/~
 	GET_DIRECTORY_ARRAY component_existing_folders ~%MOD_FOLDER%/%COMP_FOLDER%~ ~.*~
 	
+	MKDIR ~%MOD_FOLDER%/TEMP/Translations~
 	LAM ImportTranslationsBeforeAnySAYandCOMPILE_FromTDD
 	LAF ImportResources_FromTDD STR_VAR res_type = ~BAM~ res_dest = ~override~ END
 	LAF CopyResources STR_VAR res_type = ~BAM~ res_dest = ~override~ END

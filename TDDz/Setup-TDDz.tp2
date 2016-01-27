@@ -76,7 +76,7 @@ BEGIN @901000
 	INCLUDE ~%MOD_FOLDER%/Lib/Importer.tpa~
 		LAF ImportComponent STR_VAR aComp = ~CORE~ END
 	INCLUDE ~%MOD_FOLDER%/Lib/Helpers.tpa~ 
-		LAM DeleteTempFolder
+		LAF DeleteTempFolder STR_VAR aComp = ~CORE~ END
 	
 BEGIN @901001
 	REQUIRE_PREDICATE GAME_IS ~bg2ee eet~ ~~
@@ -85,7 +85,7 @@ BEGIN @901001
 	INCLUDE ~%MOD_FOLDER%/Lib/Importer.tpa~ 
 		LAF ImportComponent STR_VAR aComp = ~TROLLFORD~ END
 	INCLUDE ~%MOD_FOLDER%/Lib/Helpers.tpa~ 
-		LAM DeleteTempFolder
+		LAF DeleteTempFolder STR_VAR aComp = ~TROLLFORD~ END
 	
 BEGIN @901002
 	REQUIRE_PREDICATE GAME_IS ~bg2ee eet~ ~~
@@ -94,7 +94,7 @@ BEGIN @901002
 	INCLUDE ~%MOD_FOLDER%/Lib/Importer.tpa~ 
 		LAF ImportComponent STR_VAR aComp = ~ESPURTA~ END
 	INCLUDE ~%MOD_FOLDER%/Lib/Helpers.tpa~ 
-		LAM DeleteTempFolder
+		LAF DeleteTempFolder STR_VAR aComp = ~ESPURTA~ END
 		
 BEGIN @901003
 	REQUIRE_PREDICATE GAME_IS ~bg2ee eet~ ~~	
@@ -103,7 +103,7 @@ BEGIN @901003
 	INCLUDE ~%MOD_FOLDER%/Lib/Importer.tpa~ 
 		LAF ImportComponent STR_VAR aComp = ~PURSKAL~ END
 	INCLUDE ~%MOD_FOLDER%/Lib/Helpers.tpa~ 
-		LAM DeleteTempFolder
+		LAF DeleteTempFolder STR_VAR aComp = ~PURSKAL~ END
 
 //BEGIN @901004
 //	REQUIRE_PREDICATE GAME_IS ~bg2ee eet~ ~~	
@@ -112,7 +112,7 @@ BEGIN @901003
 //	INCLUDE ~%MOD_FOLDER%/Lib/Importer.tpa~ 
 //		LAF ImportComponent STR_VAR aComp = ~RIATAVIN~ END
 //	INCLUDE ~%MOD_FOLDER%/Lib/Helpers.tpa~ 
-//		LAM DeleteTempFolder
+//		LAF DeleteTempFolder STR_VAR aComp = ~RIATAVIN~ END
 	
 //BEGIN @901010
 //	REQUIRE_PREDICATE GAME_IS ~bg2ee eet~ ~~	
@@ -121,5 +121,5 @@ BEGIN @901003
 //	INCLUDE ~%MOD_FOLDER%/Lib/Importer.tpa~ 
 //		LAF ImportComponent STR_VAR aComp = ~Robilard~ END
 //	INCLUDE ~%MOD_FOLDER%/Lib/Helpers.tpa~ 
-//		LAM DeleteTempFolder
+//		LAF DeleteTempFolder STR_VAR aComp = ~Robilard~ END
 	
