@@ -8,6 +8,7 @@ BEGIN
 	APPEND ~GTIMES.IDS~ ~36 SIX_ROUNDS~ 	UNLESS ~SIX_ROUNDS~
 	APPEND ~GTIMES.IDS~ ~54 NINE_ROUNDS~ 	UNLESS ~NINE_ROUNDS~
 	
+	LAM ImportSpellScrolls_FromTDD		
 	LAM InstallFrostGiantAnimation
 	LAM InstallIronGolemAnimation
 	LAM InstallCyclopsAnimation	
@@ -19,7 +20,7 @@ BEGIN
 		LAM NotifyWorldmap	
 		
 	OUTER_TEXT_SPRINT sender ~%COMP_FOLDER%~
-	INCLUDE ~%MOD_FOLDER%/Lib/Helpers.tpa~ LAF Accept STR_VAR sender target = ~_CORE~ END
+	INCLUDE ~%MOD_FOLDER%/Lib/Helpers.tpa~ LAF Accept STR_VAR sender target = ~_CORE~ END	
 END
 
 //=============================================================================
@@ -51,4 +52,50 @@ BEGIN
 	COPY ~%MOD_FOLDER%/%COMP_FOLDER%/Cre/Cyclops/BAM~ ~override~	
 	COPY ~%MOD_FOLDER%/%COMP_FOLDER%/Cre/Cyclops/MCYC.2DA~ ~override~
 	COPY ~%MOD_FOLDER%/%COMP_FOLDER%/Cre/Cyclops/OGG~ ~TDDz/Audio~
+END
+
+
+
+
+//=============================================================================
+DEFINE_ACTION_MACRO ImportSpellScrolls_FromTDD
+BEGIN
+	COPY ~%MOD_FOLDER%/_CORE/SpellScrollsContract.2da~ ~%MOD_FOLDER%/TEMP/%COMP_FOLDER%/SpellScrollsContract.2da~
+		COUNT_2DA_ROWS 8 count
+		WHILE (count > 1) BEGIN
+			READ_2DA_ENTRY (count -1) 0 7 resname
+			READ_2DA_ENTRY (count -1) 1 7 name1
+			READ_2DA_ENTRY (count -1) 2 7 name2
+			READ_2DA_ENTRY (count -1) 3 7 unidentifiedDesc
+			READ_2DA_ENTRY (count -1) 4 7 desc
+			READ_2DA_ENTRY (count -1) 5 7 iconS
+			READ_2DA_ENTRY (count -1) 6 7 undroppable
+			SET count = count -1
+						
+			INNER_ACTION BEGIN					
+				ACTION_IF ~%undroppable%~ STRING_EQUAL ~+~ || ~%undroppable%~ STRING_EQUAL ~++++++++~ BEGIN 
+					COPY ~TDD/Itm/%resname%.itm~ ~override~ 					
+						PATCH_IF IS_AN_INT name1 BEGIN SET strref = RESOLVE_STR_REF ((AT name1)) WRITE_LONG NAME1 %strref% END
+						PATCH_IF IS_AN_INT name2 BEGIN SET strref = RESOLVE_STR_REF ((AT name2)) WRITE_LONG NAME2 %strref% END
+						PATCH_IF IS_AN_INT unidentifiedDesc BEGIN SET strref = RESOLVE_STR_REF ((AT unidentifiedDesc)) WRITE_LONG UNIDENTIFIED_DESC %strref% END
+						PATCH_IF IS_AN_INT desc BEGIN SET strref = RESOLVE_STR_REF ((AT desc)) WRITE_LONG DESC %strref% END
+						PATCH_IF NOT ~%iconS%~ STRING_EQUAL ~+~ BEGIN 
+							PATCH_IF IS_AN_INT iconS 
+								BEGIN SPRINT iconS ~%resname%~ END
+							WRITE_ASCII 0x3A ~%iconS%~ #8
+							
+							INNER_ACTION BEGIN
+								ACTION_IF NOT FILE_EXISTS_IN_GAME ~%iconS%.bam~ BEGIN
+									ACTION_IF FILE_EXISTS ~TDD/BAM/%iconS%.bam~ BEGIN 
+										COPY ~TDD/BAM/%iconS%.bam~ ~override~ 
+									END ELSE BEGIN 
+										PRINT ~Warning: missing ressource from TDD and BG2EE: %iconS%.bam~ 
+										AT_NOW ~pause~
+									END
+								END
+							END									
+						END						
+				END
+			END
+		END
 END
