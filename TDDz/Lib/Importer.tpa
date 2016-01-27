@@ -56,7 +56,8 @@ END
 
 //=============================================================================
 DEFINE_ACTION_MACRO ImportARE_FromTDD
-BEGIN	
+BEGIN
+	INCLUDE ~%MOD_FOLDER%/Lib/Areas.tpa~
 	ACTION_IF FILE_EXISTS ~%MOD_FOLDER%/%COMP_FOLDER%/AreasContract.2da~ BEGIN
 		COPY ~%MOD_FOLDER%/%COMP_FOLDER%/AreasContract.2da~ ~%MOD_FOLDER%/TEMP/%COMP_FOLDER%/AreasContract.2da~
 			COUNT_2DA_ROWS 1 count
@@ -69,13 +70,15 @@ BEGIN
 				READ_2DA_ENTRY (count -1) 5 7 lmmap
 				READ_2DA_ENTRY (count -1) 6 7 srmap
 				INNER_ACTION BEGIN 
-					COPY ~TDD/ARE/%resname%.ARE~ ~override~ 
+					COPY ~TDD/ARE/%resname%.ARE~ ~override~
+						LPM SetAnimationsInCombatFlag
+						
 					ACTION_IF NOT ~%mos%~ STRING_EQUAL ~+~ BEGIN ACTION_IF IS_AN_INT mos BEGIN COPY ~TDD/MOS/%resname%.MOS~ ~override~ END ELSE BEGIN COPY ~TDD/MOS/%mos%.MOS~ ~override~ END END
 					ACTION_IF NOT ~%wed%~ STRING_EQUAL ~+~ BEGIN ACTION_IF IS_AN_INT wed BEGIN COPY ~TDD/WED/%resname%.WED~ ~override~ END ELSE BEGIN COPY ~TDD/WED/%wed%.WED~ ~override~ END END
 					ACTION_IF NOT ~%tiz%~ STRING_EQUAL ~+~ BEGIN ACTION_IF IS_AN_INT tiz BEGIN COPY ~TDD/TIZ/%resname%.TIZ~ ~override~ END ELSE BEGIN COPY ~TDD/TIZ/%tiz%.TIZ~ ~%MOD_FOLDER%/TIZ/%tiz%.TIZ~ END END
 					ACTION_IF NOT ~%htmap%~ STRING_EQUAL ~+~ BEGIN ACTION_IF IS_AN_INT htmap BEGIN COPY ~TDD/MOS/%resname%HT.BMP~ ~override~ END ELSE BEGIN COPY ~TDD/MOS/%htmap%.BMP~ ~override~ END END
 					ACTION_IF NOT ~%lmmap%~ STRING_EQUAL ~+~ BEGIN ACTION_IF IS_AN_INT lmmap BEGIN COPY ~TDD/MOS/%resname%LM.BMP~ ~override~ END ELSE BEGIN COPY ~TDD/MOS/%lmmap%.BMP~ ~override~ END END
-					ACTION_IF NOT ~%srmap%~ STRING_EQUAL ~+~ BEGIN ACTION_IF IS_AN_INT srmap BEGIN COPY ~TDD/MOS/%resname%SR.BMP~ ~override~ END ELSE BEGIN COPY ~TDD/MOS/%srmap%.BMP~ ~override~ END END										
+					ACTION_IF NOT ~%srmap%~ STRING_EQUAL ~+~ BEGIN ACTION_IF IS_AN_INT srmap BEGIN COPY ~TDD/MOS/%resname%SR.BMP~ ~override~ END ELSE BEGIN COPY ~TDD/MOS/%srmap%.BMP~ ~override~ END END
 				END
 				SET count = count -1
 			END		
@@ -155,9 +158,7 @@ BEGIN
 										BEGIN COPY ~TDD/BAM/%iconS%.bam~ ~override~ END 
 								END									
 							END
-							PATCH_IF ~%undroppable%~ STRING_EQUAL ~.~ BEGIN READ_BYTE 0x18 THIS WRITE_BYTE 0x18 (%THIS% BAND 0b11111011) END
-						
-						
+							PATCH_IF ~%undroppable%~ STRING_EQUAL ~.~ BEGIN READ_BYTE 0x18 THIS WRITE_BYTE 0x18 (%THIS% BAND 0b11111011) END							
 					END
 				END		
 			BUT_ONLY

@@ -1,0 +1,12 @@
+//=============================================================================
+DEFINE_PATCH_MACRO SetAnimationsInCombatFlag
+BEGIN		
+	READ_LONG 0xAC animationsCount
+	PATCH_IF %animationsCount% > 0 BEGIN
+		READ_LONG 0xB0 animationsBaseOffset
+		FOR(i=0;i<%animationsCount%;++i) BEGIN
+			READ_BYTE (%animationsBaseOffset% + 0x4C*i +0x35) THIS
+			WRITE_BYTE (%animationsBaseOffset% + 0x4C*i +0x35) (%THIS% BOR BIT4) // set "Don't remove in combat" flag
+		END
+	END
+END

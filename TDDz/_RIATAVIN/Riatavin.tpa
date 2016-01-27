@@ -1,14 +1,26 @@
 DEFINE_ACTION_MACRO FinalizeImport
 BEGIN
-	COPY ~%MOD_FOLDER%/%COMP_FOLDER%/_copy/DD3334.are~ ~override~ // phantom door removed
+	INCLUDE ~%MOD_FOLDER%/Lib/Areas.tpa~
 	
-	COPY_EXISTING ~DD3300.ARE~ ~override~
+	COPY ~%MOD_FOLDER%/%COMP_FOLDER%/_copy/DD3334.are~ ~override~ // Fixed: phantom door removed
+		LPM SetAnimationsInCombatFlag
+		
+	COPY_EXISTING ~DD3300.ARE~ ~override~		
 		SAY 0X1B88 @20085
 		SAY 0X1C4C @20086
 		SAY 0X1D10 @20087
+		LPM SetAnimationsInCombatFlag
+		
+	COPY ~override/DD3300CT.are~ ~override/DDCT33.are~
+		LPM SetAnimationsInCombatFlag
+	DELETE ~override/DD3300CT.are~
+	
+	COPY ~override/DD3300C1.are~ ~override/DDC133.are~
+		LPM SetAnimationsInCombatFlag
+	DELETE ~override/DD3300C1.are~
 	
 	COPY_EXISTING ~MIELIKKI.itm~ ~override~
-		WRITE_SHORT 0x1C	5 // Categorie: Arrows	
+		WRITE_SHORT 0x1C	5 // Fixed: set categorie to Arrows	
 	
 	// => TODO dd3319CT.ARE, bgarive2.BAF, BGCTBOSS.cre
 	
@@ -37,12 +49,7 @@ BEGIN
 	LAM HandleSpellScrollsContract
 	LAM HandleItemsContract	
 	
-	EXTEND_TOP ~AR0406.bcs~ ~%MOD_FOLDER%/%COMP_FOLDER%/Snip/bAR0406.baf~
-		
-	COPY ~override/DD3300CT.are~ ~override/DDCT33.are~ 
-		DELETE ~override/DD3300CT.are~
-	COPY ~override/DD3300C1.are~ ~override/DDC133.are~ 
-		DELETE ~override/DD3300C1.are~
+	EXTEND_TOP ~AR0406.bcs~ ~%MOD_FOLDER%/%COMP_FOLDER%/Snip/bAR0406.baf~			
 	
 	OUTER_TEXT_SPRINT sender ~%COMP_FOLDER%~ 
 	INCLUDE ~TDDz/Lib/Helpers.tpa~ LAF Accept STR_VAR sender target = ~_RIATAVIN~ END

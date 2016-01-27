@@ -1,6 +1,8 @@
 //=============================================================================
 DEFINE_ACTION_MACRO FinalizeImport
 BEGIN
+	INCLUDE ~%MOD_FOLDER%/Lib/Areas.tpa~
+
 	APPEND ~GTIMES.IDS~ ~12 TWO_ROUNDS~ 		UNLESS ~TWO_ROUNDS~
 	APPEND ~GTIMES.IDS~ ~180 THREE_TURNS~      	UNLESS ~THREE_TURNS~
 	
@@ -24,7 +26,8 @@ BEGIN
 	ELSE BEGIN
 		COPY ~%MOD_FOLDER%/%COMP_FOLDER%/Snip/xAR0509.baf~ ~%MOD_FOLDER%/TEMP/%COMP_FOLDER%/AR0509.baf~		
 		COPY_EXISTING ~AR0509.ARE~ ~override~ 
-			WRITE_ASCII 0x94 ~AR0509~ #8		
+			WRITE_ASCII 0x94 ~AR0509~ #8
+			LPM SetAnimationsInCombatFlag
 	END
 	
 	OUTER_TEXT_SPRINT sender ~%COMP_FOLDER%~
