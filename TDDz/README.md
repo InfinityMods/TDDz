@@ -16,40 +16,40 @@ https://forums.beamdog.com/discussion/38136/how-one-christmas-can-change-everyth
 
 
 I splitted TDD into components:
-	. _CORE: worldmap aned everything that is shared by others components
+	. _CORE: worldmap and everything that is shared by others components
 	. _ESPURTA
 	. _PURSKAL
 	. _TROLLFORD
 	. maybe Riatavin and more...
+
 For now, I focus on adventure, I have no time nor experience to deal/test rules modifications, new spells or kits.
 
-
-- How to install TDDz?
+* How to install TDDz? *
 	.Download TDDv1.14 and unzip it, move the folder TDD into your BG2EE folder (Setup-TDD.exe and Setup-TDD.tp2 are not required)
 	.Do not, DO NOT let BiG World Fixpack patch it (rename or move its BiG World Fixpack/TDD folder); TDDz patches/fixes TDD files by its own.
 	.Run Setup-TDDz.exe as any other weidu mod
 	
-- How to change CRE xp?
-	.In TDDz, you'll find foldder for each component (_CORE, _ESPURTA, _PURSKAL, _TROLLFORD), edit CreaturesContract.2da, change its XP column ("+" means no change; a value < 1000  change the XP by value PERCENT; a value >= 1000 will SET it)
+* How to change CRE xp? *
+	.In TDDz, you'll find folder for each component (_CORE, _ESPURTA, _PURSKAL, _TROLLFORD), edit CreaturesContract.2da, change its XP column ("+" means no change; a value < 1000  change the XP by value PERCENT; a value >= 1000 will SET it)
 	
-- How to change scripted xp?
-	.In TDDz, you'll find foldder for each component (_CORE, _ESPURTA, _PURSKAL, _TROLLFORD), edit Xp.2da, change its XP column ("+" means no change; a value < 1000  change the XP by value PERCENT; a value >= 1000 will SET it)
+* How to change scripted xp? *
+	.In TDDz, you'll find folder for each component (_CORE, _ESPURTA, _PURSKAL, _TROLLFORD), edit Xp.2da, change its XP column ("+" means no change; a value < 1000  change the XP by value PERCENT; a value >= 1000 will SET it)
 
-- How to make ITM undroppable?
-	.In TDDz, you'll find foldder for each component (_CORE, _ESPURTA, _PURSKAL, _TROLLFORD), edit ItemsContract.2da, change its UNDROPPABLE column ("+" means no change; "." make it undroppable, i.e. CRE keep the item but STO, ARE, BAF, any others, it is replaced by SCRL75.ITM, an Identify Sroll). Avoid to modifiy "++++++++" value than means they should stay unchanged (ex: Espurta map)
+* How to make ITM undroppable? *
+	.In TDDz, you'll find folder for each component (_CORE, _ESPURTA, _PURSKAL, _TROLLFORD), edit ItemsContract.2da, change its UNDROPPABLE column ("+" means no change; "." make it undroppable, i.e. CRE keep the item but STO, ARE, BAF, any others, it is replaced by SCRL75.ITM, an Identify Scroll). Avoid to modifiy "++++++++" value than means they should stay unchanged (ex: Espurta map)
 
-- How to replace ITM?
-	.In TDDz, you'll find foldder for each component (_CORE, _ESPURTA, _PURSKAL, _TROLLFORD), edit ItemsContract.2da, change its UNDROPPABLE column ("+" means no change; any value other than "+" or "1" is considered as a RESNAME, the item is replaced everywhere by this item). Avoid to modifiy "++++++++" value than means they should stay unchanged (ex: Espurta map)
+* How to replace ITM? *
+	.In TDDz, you'll find folder for each component (_CORE, _ESPURTA, _PURSKAL, _TROLLFORD), edit ItemsContract.2da, change its UNDROPPABLE column ("+" means no change; any value other than "+" or "1" is considered as a RESNAME, the item is replaced everywhere by this item). Avoid to modifiy "++++++++" value than means they should stay unchanged (ex: Espurta map)
 	
-- How to replace TROOOOOOOOLLLLLLS, I mean CRE?
-	.In TDDz, you'll find foldder for each component (_CORE, _ESPURTA, _PURSKAL, _TROLLFORD), edit CreaturesContract.2da, change its RESNAME column, add scripts, add deathvar but MODIFY existing deathvar at your own risks.
+* How to replace TROOOOOOOOLLLLLLS, I mean CRE? *
+	.In TDDz, you'll find folder for each component (_CORE, _ESPURTA, _PURSKAL, _TROLLFORD), edit CreaturesContract.2da, change its RESNAME column, add scripts, add deathvar but MODIFY existing deathvar at your own risks.
 	
-- How to report bugs?	
+* How to report bugs? *
 	.Contact me at Beamdog forum or SHS forum
 	
 	
 
-- Notes:
+* Notes: *
 	.These lines are to translate in setup.tra:
 		@901000 = ~TDD - Core~
 		@901001 = ~TDD - Trollford~
