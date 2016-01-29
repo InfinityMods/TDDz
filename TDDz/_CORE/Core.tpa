@@ -90,8 +90,9 @@ BEGIN
 									ACTION_IF FILE_EXISTS ~TDD/BAM/%iconS%.bam~ BEGIN 
 										COPY ~TDD/BAM/%iconS%.bam~ ~override~ 
 									END ELSE BEGIN 
-										PRINT ~Warning: missing ressource from TDD and BG2EE: %iconS%.bam~ 
-										AT_NOW ~pause~
+										PRINT ~Warning: missing ressource from TDD and BG2EE: %iconS%.bam, to continue, please press Enter~ 
+										//AT_NOW ~pause~
+										ACTION_READLN  ~pause~
 									END
 								END
 							END									

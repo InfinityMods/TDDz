@@ -124,7 +124,7 @@ END
 //=============================================================================
 DEFINE_ACTION_MACRO ImportITM_FromTDD
 BEGIN
-	ACTION_IF FILE_EXISTS ~%MOD_FOLDER%/Importer.exe~ BEGIN	
+	ACTION_IF (~%WEIDU_OS%~ STRING_EQUAL_CASE ~win32~) AND (FILE_EXISTS ~%MOD_FOLDER%/Importer.exe~) BEGIN	
 		AT_NOW ~START /b /wait "" "%MOD_FOLDER%/Importer.exe" "%MOD_FOLDER%/%COMP_FOLDER%/ItemsContract.2da" "TDD/ITM" "%MOD_FOLDER%/TEMP/%COMP_FOLDER%/ItemsByContract.tpa" "ITM"~ EXACT
 		INCLUDE ~%MOD_FOLDER%/TEMP/%COMP_FOLDER%/ItemsByContract.tpa~ LAM ImportItems
 	END
@@ -175,7 +175,7 @@ END
 //=============================================================================
 DEFINE_ACTION_MACRO ImportSPL_FromTDD
 BEGIN	
-	ACTION_IF FILE_EXISTS ~%MOD_FOLDER%/Importer.exe~ BEGIN	
+	ACTION_IF (~%WEIDU_OS%~ STRING_EQUAL_CASE ~win32~) AND (FILE_EXISTS ~%MOD_FOLDER%/Importer.exe~) BEGIN	
 		AT_NOW ~START /b /wait "" "%MOD_FOLDER%/Importer.exe" "%MOD_FOLDER%/%COMP_FOLDER%/SpellsContract.2da" "TDD/SPL" "%MOD_FOLDER%/TEMP/%COMP_FOLDER%/SpellsByContract.tpa" "SPL"~ EXACT
 		INCLUDE ~%MOD_FOLDER%/TEMP/%COMP_FOLDER%/SpellsByContract.tpa~ LAM ImportSpells
 	END
@@ -209,7 +209,7 @@ END
 //=============================================================================
 DEFINE_ACTION_MACRO ImportSTO_FromTDD
 BEGIN	
-	ACTION_IF FILE_EXISTS ~%MOD_FOLDER%/Importer.exe~ BEGIN	
+	ACTION_IF (~%WEIDU_OS%~ STRING_EQUAL_CASE ~win32~) AND (FILE_EXISTS ~%MOD_FOLDER%/Importer.exe~) BEGIN	
 		AT_NOW ~START /b /wait "" "%MOD_FOLDER%/Importer.exe" "%MOD_FOLDER%/%COMP_FOLDER%/StoresContract.2da" "TDD/STO" "%MOD_FOLDER%/TEMP/%COMP_FOLDER%/StoresByContract.tpa" "STO" "%MOD_FOLDER%/%COMP_FOLDER%/StoresContract.2da" "TDD/STO" ~ EXACT
 		INCLUDE ~%MOD_FOLDER%/TEMP/%COMP_FOLDER%/StoresByContract.tpa~ LAM ImportStores
 	END
@@ -238,7 +238,7 @@ END
 //=============================================================================
 DEFINE_ACTION_MACRO ImportCRE_FromTDD
 BEGIN	
-	ACTION_IF FILE_EXISTS ~%MOD_FOLDER%/Importer.exe~ BEGIN
+	ACTION_IF (~%WEIDU_OS%~ STRING_EQUAL_CASE ~win32~) AND (FILE_EXISTS ~%MOD_FOLDER%/Importer.exe~) BEGIN
 		AT_NOW ~START /b /wait "" "%MOD_FOLDER%/Importer.exe" "%MOD_FOLDER%/%COMP_FOLDER%/CreaturesContract.2da" "TDD/CRE" "%MOD_FOLDER%/TEMP/%COMP_FOLDER%/CreaturesByContract.tpa" "CRE"~ EXACT
 		INCLUDE ~%MOD_FOLDER%/TEMP/%COMP_FOLDER%/CreaturesByContract.tpa~ LAM ImportCreatures
 	END 

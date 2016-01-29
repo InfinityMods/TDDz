@@ -87,7 +87,7 @@ BEGIN
 			END ~~
 		COPY - ~TDDz/Worldmap/links.tbl~ ~.../TDDz/Worldmap/~
 			REPLACE_EVALUATE CASE_INSENSITIVE ~^\([A-Z0-9#_]+\)[ %TAB%]+\([A-Z]+\)[ %TAB%]+\([A-Z0-9#_]+\)[ %TAB%]+\([A-Z0-9#_]+\)[ %TAB%]+\([0-9]+\)[ %TAB%]+\([0-9]+\)[ %TAB%]+\([A-Z0-9#_]+\)[ %TAB%]+\([A-Z0-9#_]+\)[ %TAB%]+\([A-Z0-9#_]+\)[ %TAB%]+\([A-Z0-9#_]+\)[ %TAB%]+\([A-Z0-9#_]+\)[ %TAB%]+\([0-9]+\)~ BEGIN
-				PATCH_FOR_EACH var IN MATCH7 MATCH8 MATCH9 MATCH10 MATCH11 BEGIN
+				PATCH_FOR_EACH var IN MATCH4 MATCH7 MATCH8 MATCH9 MATCH10 MATCH11 BEGIN
 					SPRINT match EVAL ~%%var%%~
 					PATCH_IF ~%match%~ STRING_EQUAL_CASE ~N~ BEGIN
 						SPRINT EVAL ~%var%~ ~~

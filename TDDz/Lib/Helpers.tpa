@@ -30,7 +30,9 @@ END
 DEFINE_ACTION_FUNCTION Accept STR_VAR sender = ~~ target = ~~
 BEGIN	
 	ACTION_IF NOT ~%sender%~ STRING_EQUAL_CASE ~%target%~ BEGIN
-		AT_NOW ~echo !!!!! Accept Error: %sender% vs %target% !!!!! & PAUSE~				
+		//AT_NOW ~echo !!!!! Accept Error: %sender% vs %target% !!!!! & PAUSE~				
+		PRINT ~!!!!! Accept Error: %sender% vs %target% !!!!!, to continue, please press Enter~
+		ACTION_READLN  ~pause~
 		COPY_EXISTING ~shadowFramework_Error.txt~ ~%MOD_FOLDER%/shadowFramework_Error.txt~	
 	END
 	
