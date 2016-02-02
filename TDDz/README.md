@@ -16,56 +16,37 @@ https://forums.beamdog.com/discussion/38136/how-one-christmas-can-change-everyth
 
 
 I splitted TDD into components:
-<<<<<<< HEAD
-    . _CORE: worldmap aned everything that is shared by others components
     . _CORE: worldmap and everything that is shared by others components
     . _ESPURTA
     . _PURSKAL
     . _TROLLFORD
     ...
-For now, I focus on adventure, I have no time nor experience to deal/test rules modifications, new spells or kits.
-=======
-	. _CORE: worldmap and everything that is shared by others components
-	. _ESPURTA
-	. _PURSKAL
-	. _TROLLFORD
-	. maybe Riatavin and more...
->>>>>>> 16fb1f301ac642ff70136dd4c0bd8193d46a1236
 
 For now, I focus on adventure, I have no time nor experience to deal/test rules modifications, new spells or kits.
 
-<<<<<<< HEAD
-- How to install TDDz?
 * How to install TDDz? *
     .Download TDDv1.14 and unzip it, move the folder TDD into your BG2EE folder (Setup-TDD.exe and Setup-TDD.tp2 are not required)
     .Do not, DO NOT let BiG World Fixpack patch it (rename or move its BiG World Fixpack/TDD folder); TDDz patches/fixes TDD files by its own.
     .Run Setup-TDDz.exe as any other weidu mod
     
-- How to change CRE xp?
 * How to change CRE xp? *
 	. In TDDz, there is a folder for each component (_CORE, _ESPURTA, _PURSKAL...), edit CreaturesContract.2da, modify its XP column ("+" means no change; a value < 1000 increases/decreases XP by value PERCENT; a value >= 1000 will SET it)
 	
-- How to change scripted xp?
 * How to change scripted xp? *
 	. In TDDz, there is a folder for each component, edit XpContract.2da, modify the XP column ("+" means no change; a value < 1000 increases/decreases XP by value PERCENT; a value >= 1000 will SET it)
 
-- How to make ITM undroppable?
 * How to make ITM undroppable? *
 	. In TDDz, there is a folder for each component, edit ItemsContract.2da, change its UNDROPPABLE column ("+" means no change; "." make it undroppable, i.e. CRE keep the item but in STO, ARE, BAF, any others, it is replaced by SCRL75.itm-Identify Scroll). Avoid to modifiy "++++++++" value than means they should stay unchanged (ex: Espurta map)
 
-- How to replace ITM?
 * How to replace ITM? *
 	. In TDDz, there is a folder for each component, edit ItemsContract.2da, change its UNDROPPABLE column ("+" means no change; any value other than "+" or "." is considered as a RESNAME, the item is replaced everywhere by this item). Avoid to modifiy "++++++++" value than means they should stay unchanged (ex: Espurta map)
 	
-- How to replace TROOOOOOOOLLLLLLS, I mean CRE?
 * How to replace TROOOOOOOOLLLLLLS, I mean CRE? *
 	. In TDDz, there is a folder for each component, edit CreaturesContract.2da, change its RESNAME column, add scripts, add deathvar but MODIFY existing deathvar/scripts/dialog at your own risks.
 	
-- How to report bugs?	
 * How to report bugs? *	
 	. Contact me at Beamdog forum or SHS forum	    
 
-- Notes:
 * Notes *
     .These lines are to translate in setup.tra:
         @901000 = ~TDD - Core~
@@ -77,7 +58,6 @@ For now, I focus on adventure, I have no time nor experience to deal/test rules 
     .Every languages of TDD is supported; however, I try to use handle_charsets but it seems verrrry slow for TDD and its many translation files, I suppose you have to deal with them manually...                    
 
 
-- Fixes/Tweaks/Changes:
 * Fixes/Tweaks/Changes *
 	. XP granted by scripts are reduced to 10%
 	. XP granted by TDD creatures are reduded to 20% (creatures from vanilla game that appear in TDD keep their vanilla XP); Graz'zt XP set to 50k rather than 100k due to poor combat script
@@ -96,7 +76,6 @@ For now, I focus on adventure, I have no time nor experience to deal/test rules 
 	. Remove some regions of interests (legacy from originator areas and not used in new areas)
 	. Interaction with Riatavin/Nameless.cre remove due to Helmrat.itm bug(?)
 
-- TODO:		
 * TODO *
 	. Enable compatibility with BG2/SoS/RoT/CtB
 	. handle_charsets	
