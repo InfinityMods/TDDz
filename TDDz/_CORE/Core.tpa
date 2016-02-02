@@ -91,7 +91,12 @@ BEGIN
 			READ_2DA_ENTRY (count -1) 3 7 unidentifiedDesc
 			READ_2DA_ENTRY (count -1) 4 7 desc
 			READ_2DA_ENTRY (count -1) 5 7 iconS
+<<<<<<< .merge_file_a00804
 			READ_2DA_ENTRY (count -1) 6 7 policy //undroppable column
+=======
+			READ_2DA_ENTRY (count -1) 6 7 undroppable
+			READ_2DA_ENTRY (count -1) 8 7 path_to_file
+>>>>>>> .merge_file_a02388
 			SET count = count -1
 			
 			TO_UPPER resname
@@ -104,8 +109,13 @@ BEGIN
 				BEGIN SPRINT newItem ~SCRL75~ END
 										
 			INNER_ACTION BEGIN					
+<<<<<<< .merge_file_a00804
 				ACTION_IF ~%unchanged%~ BEGIN 
 					COPY ~TDD/Itm/%resname%.itm~ ~override~ 					
+=======
+				ACTION_IF ~%undroppable%~ STRING_EQUAL ~+~ || ~%undroppable%~ STRING_EQUAL ~++++++++~ BEGIN 
+					COPY ~TDD/%path_to_file%/%resname%.itm~ ~override~ 					
+>>>>>>> .merge_file_a02388
 						PATCH_IF IS_AN_INT name1 BEGIN SET strref = RESOLVE_STR_REF ((AT name1)) WRITE_LONG NAME1 %strref% END
 						PATCH_IF IS_AN_INT name2 BEGIN SET strref = RESOLVE_STR_REF ((AT name2)) WRITE_LONG NAME2 %strref% END
 						PATCH_IF IS_AN_INT unidentifiedDesc BEGIN SET strref = RESOLVE_STR_REF ((AT unidentifiedDesc)) WRITE_LONG UNIDENTIFIED_DESC %strref% END
@@ -120,8 +130,9 @@ BEGIN
 									ACTION_IF FILE_EXISTS ~TDD/BAM/%iconS%.bam~ BEGIN 
 										COPY ~TDD/BAM/%iconS%.bam~ ~override~ 
 									END ELSE BEGIN 
-										PRINT ~Warning: missing ressource from TDD and BG2EE: %iconS%.bam~ 
-										AT_NOW ~pause~
+										PRINT ~Warning: missing ressource from TDD and BG2EE: %iconS%.bam, to continue, please press Enter~ 
+										//AT_NOW ~pause~
+										ACTION_READLN  ~pause~
 									END
 								END
 							END									

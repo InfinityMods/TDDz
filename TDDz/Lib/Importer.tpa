@@ -5,9 +5,14 @@ DEFINE_ACTION_FUNCTION ImportComponent STR_VAR aComp = ~~
 BEGIN	
 	OUTER_TEXT_SPRINT COMP_FOLDER ~_%aComp%~
 	
+	MKDIR ~%MOD_FOLDER%/TEMP~
+	MKDIR ~%MOD_FOLDER%/Audio~
+	MKDIR ~%MOD_FOLDER%/tiz~
+	
 	MKDIR ~%MOD_FOLDER%/TEMP/%COMP_FOLDER%/~
 	GET_DIRECTORY_ARRAY component_existing_folders ~%MOD_FOLDER%/%COMP_FOLDER%~ ~.*~
 	
+	MKDIR ~%MOD_FOLDER%/TEMP/Translations~
 	LAM ImportTranslationsBeforeAnySAYandCOMPILE_FromTDD
 	LAF ImportResources_FromTDD STR_VAR res_type = ~BAM~ res_dest = ~override~ END
 	LAF CopyResources STR_VAR res_type = ~BAM~ res_dest = ~override~ END
@@ -119,7 +124,7 @@ END
 //=============================================================================
 DEFINE_ACTION_MACRO ImportITM_FromTDD
 BEGIN
-	ACTION_IF FILE_EXISTS ~%MOD_FOLDER%/Importer.exe~ BEGIN	
+	ACTION_IF (~%WEIDU_OS%~ STRING_EQUAL_CASE ~win32~) AND (FILE_EXISTS ~%MOD_FOLDER%/Importer.exe~) BEGIN	
 		AT_NOW ~START /b /wait "" "%MOD_FOLDER%/Importer.exe" "%MOD_FOLDER%/%COMP_FOLDER%/ItemsContract.2da" "TDD/ITM" "%MOD_FOLDER%/TEMP/%COMP_FOLDER%/ItemsByContract.tpa" "ITM"~ EXACT
 		INCLUDE ~%MOD_FOLDER%/TEMP/%COMP_FOLDER%/ItemsByContract.tpa~ LAM ImportItems
 	END
@@ -176,7 +181,7 @@ END
 //=============================================================================
 DEFINE_ACTION_MACRO ImportSPL_FromTDD
 BEGIN	
-	ACTION_IF FILE_EXISTS ~%MOD_FOLDER%/Importer.exe~ BEGIN	
+	ACTION_IF (~%WEIDU_OS%~ STRING_EQUAL_CASE ~win32~) AND (FILE_EXISTS ~%MOD_FOLDER%/Importer.exe~) BEGIN	
 		AT_NOW ~START /b /wait "" "%MOD_FOLDER%/Importer.exe" "%MOD_FOLDER%/%COMP_FOLDER%/SpellsContract.2da" "TDD/SPL" "%MOD_FOLDER%/TEMP/%COMP_FOLDER%/SpellsByContract.tpa" "SPL"~ EXACT
 		INCLUDE ~%MOD_FOLDER%/TEMP/%COMP_FOLDER%/SpellsByContract.tpa~ LAM ImportSpells
 	END
@@ -210,7 +215,7 @@ END
 //=============================================================================
 DEFINE_ACTION_MACRO ImportSTO_FromTDD
 BEGIN	
-	ACTION_IF FILE_EXISTS ~%MOD_FOLDER%/Importer.exe~ BEGIN	
+	ACTION_IF (~%WEIDU_OS%~ STRING_EQUAL_CASE ~win32~) AND (FILE_EXISTS ~%MOD_FOLDER%/Importer.exe~) BEGIN	
 		AT_NOW ~START /b /wait "" "%MOD_FOLDER%/Importer.exe" "%MOD_FOLDER%/%COMP_FOLDER%/StoresContract.2da" "TDD/STO" "%MOD_FOLDER%/TEMP/%COMP_FOLDER%/StoresByContract.tpa" "STO" "%MOD_FOLDER%/%COMP_FOLDER%/StoresContract.2da" "TDD/STO" ~ EXACT
 		INCLUDE ~%MOD_FOLDER%/TEMP/%COMP_FOLDER%/StoresByContract.tpa~ LAM ImportStores
 	END
@@ -239,7 +244,7 @@ END
 //=============================================================================
 DEFINE_ACTION_MACRO ImportCRE_FromTDD
 BEGIN	
-	ACTION_IF FILE_EXISTS ~%MOD_FOLDER%/Importer.exe~ BEGIN
+	ACTION_IF (~%WEIDU_OS%~ STRING_EQUAL_CASE ~win32~) AND (FILE_EXISTS ~%MOD_FOLDER%/Importer.exe~) BEGIN
 		AT_NOW ~START /b /wait "" "%MOD_FOLDER%/Importer.exe" "%MOD_FOLDER%/%COMP_FOLDER%/CreaturesContract.2da" "TDD/CRE" "%MOD_FOLDER%/TEMP/%COMP_FOLDER%/CreaturesByContract.tpa" "CRE"~ EXACT
 		INCLUDE ~%MOD_FOLDER%/TEMP/%COMP_FOLDER%/CreaturesByContract.tpa~ LAM ImportCreatures
 	END 
@@ -387,14 +392,36 @@ END
 //=============================================================================
 DEFINE_ACTION_MACRO HandleAudio
 BEGIN
-	LAF HANDLE_AUDIO END	
-	AT_NOW ~del /f /q .\TDDz\Audio\*.ogg 2> .\TDDz\Audio\error.txt~ EXACT // we redirect ugly error message when there is not file to delete		
+	LAF HANDLE_AUDIO 
+			STR_VAR
+				    oggdec_path = EVAL "%MOD_FOLDER%/tools/oggdec"
+					sox_path = EVAL "%MOD_FOLDER%/tools/sox"
+	END	
+	//AT_NOW ~del /f /q .\TDDz\Audio\*.ogg 2> .\TDDz\Audio\error.txt~ EXACT // we redirect ugly error message when there is not file to delete		
+	ACTION_FOR_EACH var IN ogg BEGIN
+			ACTION_BASH_FOR ~%MOD_FOLDER%/Audio~ ~^.+\.%var%$~ BEGIN
+				DELETE +  ~%BASH_FOR_FILESPEC%~
+			END
+	END
+	
+	LAF REMOVE_DIRECTORY STR_VAR dir_name = EVAL ~%MOD_FOLDER%/Audio~ END
 END
 
 //=============================================================================
 DEFINE_ACTION_MACRO HandleTileset
 BEGIN	
-	LAF HANDLE_TILESETS END
-	AT_NOW ~del /f /q .\TDDz\Tiz\*.tiz 2> .\TDDz\Tiz\error.txt~ EXACT // we redirect ugly error message when there is not file to delete		
+	//LAF HANDLE_TILESETS END
+	LAF HANDLE_TILECONV
+				STR_VAR
+					input_path    = EVAL "%MOD_FOLDER%/tiz"
+					output_path	  = "override"
+	END
+	//AT_NOW ~del /f /q .\TDDz\Tiz\*.tiz 2> .\TDDz\Tiz\error.txt~ EXACT // we redirect ugly error message when there is not file to delete		
+	ACTION_FOR_EACH var IN tiz BEGIN
+			ACTION_BASH_FOR ~%MOD_FOLDER%/tiz~ ~^.+\.%var%$~ BEGIN
+				DELETE +  ~%BASH_FOR_FILESPEC%~
+			END
+	END
+	LAF REMOVE_DIRECTORY STR_VAR dir_name = EVAL ~%MOD_FOLDER%/tiz~ END
 END
 

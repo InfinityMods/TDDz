@@ -1,21 +1,38 @@
 //=============================================================================
 DEFINE_ACTION_MACRO ForceClearTempFolder
 BEGIN			
-	AT_NOW ~%MOD_FOLDER%/ForceClearTempFolder.bat~
+	//AT_NOW ~%MOD_FOLDER%/ForceClearTempFolder.bat~	
+	ACTION_FOR_EACH var IN d baf 2da BEGIN
+			ACTION_BASH_FOR ~%MOD_FOLDER%/TEMP/_%aComp%~ ~^.+\.%var%$~ BEGIN
+				DELETE +  ~%BASH_FOR_FILESPEC%~
+			END
+	END
+	ACTION_FOR_EACH var IN tra BEGIN
+			ACTION_BASH_FOR ~%MOD_FOLDER%/TEMP/Translations~ ~^.+\.%var%$~ BEGIN
+				DELETE +  ~%BASH_FOR_FILESPEC%~
+			END
+	END
 END
 
 
 //=============================================================================
-DEFINE_ACTION_MACRO DeleteTempFolder
+DEFINE_ACTION_FUNCTION DeleteTempFolder
+	STR_VAR aComp = ~~
 BEGIN			
-	AT_NOW ~%MOD_FOLDER%/DeleteTempFolder.bat~
+	//AT_NOW ~%MOD_FOLDER%/DeleteTempFolder.bat~
+	LAM ForceClearTempFolder
+	LAF REMOVE_DIRECTORY STR_VAR dir_name = EVAL ~%MOD_FOLDER%/TEMP/_%aComp%~ END
+	LAF REMOVE_DIRECTORY STR_VAR dir_name = EVAL ~%MOD_FOLDER%/TEMP/Translations~ END
+	LAF REMOVE_DIRECTORY STR_VAR dir_name = EVAL ~%MOD_FOLDER%/TEMP~ END
 END
 
 //=============================================================================
 DEFINE_ACTION_FUNCTION Accept STR_VAR sender = ~~ target = ~~
 BEGIN	
 	ACTION_IF NOT ~%sender%~ STRING_EQUAL_CASE ~%target%~ BEGIN
-		AT_NOW ~echo !!!!! Accept Error: %sender% vs %target% !!!!! & PAUSE~				
+		//AT_NOW ~echo !!!!! Accept Error: %sender% vs %target% !!!!! & PAUSE~				
+		PRINT ~!!!!! Accept Error: %sender% vs %target% !!!!!, to continue, please press Enter~
+		ACTION_READLN  ~pause~
 		COPY_EXISTING ~shadowFramework_Error.txt~ ~%MOD_FOLDER%/shadowFramework_Error.txt~	
 	END
 	
