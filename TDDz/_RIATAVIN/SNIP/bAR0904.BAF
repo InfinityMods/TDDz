@@ -11,34 +11,21 @@ IF
 	Global("tz_tartaruscuta","GLOBAL",1)
 THEN
 	RESPONSE #100
+		SetGlobal("tz_tartaruscuta","GLOBAL",2)
 		StartCutSceneMode()
 		CutSceneId(Player1)
+		CreateVisualEffectObject("spsumgte",Player1)
+		CreateVisualEffectObject("spsumgte",Player2)
+		CreateVisualEffectObject("spsumgte",Player3)
+		CreateVisualEffectObject("spsumgte",Player4)
+		CreateVisualEffectObject("spsumgte",Player5)
+		CreateVisualEffectObject("spsumgte",Player6)
+		Wait(3)
 		FadeToColor([20.0],0)
 		Wait(2)
 		StartCutScene("tartfoil")
 END
 
-IF
-	Global("tz_tartaruscuta","GLOBAL",2)
-THEN
-	RESPONSE #100
-		SetGlobal("tz_tartaruscuta","GLOBAL",3)
-		StartCutSceneMode()
-		CutSceneId(Player1)
-		FadeToColor([20.0],0)
-		Wait(2)
-		ActionOverride("baurian",DestroySelf())
-		StartCutScene("gototart")
-END
-
-IF
-	Global("tz_demninvidlgb","GLOBAL",2)
-	!Exists("baurian2")
-THEN
-	RESPONSE #100
-		SetGlobal("tz_demninvidlgb","GLOBAL",3)
-		CreateCreature("baurian2",[864.897],0) // Baurian Arathor
-END
 
 IF
 	Global("tz_baurianbuggeroff","GLOBAL",1)

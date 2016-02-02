@@ -3,54 +3,27 @@ IF
 THEN
   RESPONSE #100
     CutSceneId(Player1)
-    FadeFromColor([20.0],0)
-    Wait(2)
-    LeaveAreaLUA("ar0904","GTRSK002",[0.0],12)
-    MultiPlayerSync()
-    SetMasterArea("ar1000")
-    MultiPlayerSync()
-    FadeFromColor([20.0],0)
-    EndCutSceneMode()
-    SetGlobal("tz_demninvidlgb","GLOBAL",2)
+	CreateVisualEffectObject("spsumgte",Player1)
+	CreateVisualEffectObject("spsumgte",Player2)
+	CreateVisualEffectObject("spsumgte",Player3)
+	CreateVisualEffectObject("spsumgte",Player4)
+	CreateVisualEffectObject("spsumgte",Player5)
+	CreateVisualEffectObject("spsumgte",Player6)
+	Wait(2)
+	FadeToColor([20.0],0)
+	Wait(2)
+	LeaveAreaLUA("ar0904","GTRSK002",[900.880],4)
+	ActionOverride(Player2,LeaveAreaLUA("ar0904","GTRSK002",[910.880],2))
+	ActionOverride(Player3,LeaveAreaLUA("ar0904","GTRSK002",[920.890],3))
+	ActionOverride(Player4,LeaveAreaLUA("ar0904","GTRSK002",[930.900],5))
+	ActionOverride(Player5,LeaveAreaLUA("ar0904","GTRSK002",[910.900],6))
+	ActionOverride(Player6,LeaveAreaLUA("ar0904","GTRSK002",[930.910],7))
+	MultiPlayerSync()
+	SetMasterArea("ar1000")
+	MultiPlayerSync()
+	ActionOverride("baurian",DestroySelf())
+	CreateCreature("baurian2",[864.897],S) // Baurian Arathor
+	FadeFromColor([20.0],0)
+	EndCutSceneMode()
+	SetGlobal("tz_demninvidlgb","GLOBAL",2)
 END
-
-IF
-  True()
-THEN
-  RESPONSE #100
-    CutSceneId(Player2)
-    LeaveAreaLUA("ar0904","GTRSK002",[0.0],12)
-END
-
-IF
-  True()
-THEN
-  RESPONSE #100
-    CutSceneId(Player3)
-    LeaveAreaLUA("ar0904","GTRSK002",[0.0],12)
-END
-
-IF
-  True()
-THEN
-  RESPONSE #100
-    CutSceneId(Player4)
-    LeaveAreaLUA("ar0904","GTRSK002",[0.0],12)
-END
-
-IF
-  True()
-THEN
-  RESPONSE #100
-    CutSceneId(Player5)
-    LeaveAreaLUA("ar0904","GTRSK002",[0.0],12)
-END
-
-IF
-  True()
-THEN
-  RESPONSE #100
-    CutSceneId(Player6)
-    LeaveAreaLUA("ar0904","GTRSK002",[0.0],12)
-END
-

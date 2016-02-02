@@ -3,54 +3,15 @@ IF
 THEN
   RESPONSE #100
     CutSceneId(Player1)
-    FadeFromColor([20.0],0)
-    Wait(2)
     LeaveAreaLUA("dd8002","GTRSK002",[544.1614],12)
+	ActionOverride(Player2,LeaveAreaLUA("DD8002","GTRSK002",[544.1614],2))
+	ActionOverride(Player3,LeaveAreaLUA("DD8002","GTRSK002",[544.1614],3))
+	ActionOverride(Player4,LeaveAreaLUA("DD8002","GTRSK002",[544.1614],5))
+	ActionOverride(Player5,LeaveAreaLUA("DD8002","GTRSK002",[544.1614],6))
+	ActionOverride(Player6,LeaveAreaLUA("DD8002","GTRSK002",[544.1614],7))
     MultiPlayerSync()
-    //SetMasterArea("ar1000") // TODO ????
-    SetMasterArea("dd8002") // TODO ????
+    SetMasterArea("ar1000")    
     MultiPlayerSync()
     FadeFromColor([20.0],0)
-    EndCutSceneMode()
+    EndCutSceneMode()		
 END
-
-IF
-  True()
-THEN
-  RESPONSE #100
-    CutSceneId(Player2)
-    LeaveAreaLUA("dd8002","GTRSK002",[544.1614],12)
-END
-
-IF
-  True()
-THEN
-  RESPONSE #100
-    CutSceneId(Player3)
-    LeaveAreaLUA("dd8002","GTRSK002",[544.1614],12)
-END
-
-IF
-  True()
-THEN
-  RESPONSE #100
-    CutSceneId(Player4)
-    LeaveAreaLUA("dd8002","GTRSK002",[544.1614],12)
-END
-
-IF
-  True()
-THEN
-  RESPONSE #100
-    CutSceneId(Player5)
-    LeaveAreaLUA("dd8002","GTRSK002",[544.1614],12)
-END
-
-IF
-  True()
-THEN
-  RESPONSE #100
-    CutSceneId(Player6)
-    LeaveAreaLUA("dd8002","GTRSK002",[544.1614],12)
-END
-

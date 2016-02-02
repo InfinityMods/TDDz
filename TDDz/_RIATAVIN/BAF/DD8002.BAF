@@ -58,9 +58,9 @@ IF
   Global("tz_demninvidlgb","GLOBAL",1)
 THEN
   RESPONSE #100
-    Wait(35)
-    FadeToColor([20.0],0)
-    Wait(2)
+    Wait(30)
+    //FadeToColor([20.0],0)
+    //Wait(2)
     StartCutSceneMode()
     StartCutScene("tartretn")
 END
