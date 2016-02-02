@@ -30,22 +30,6 @@ IF
 THEN
   RESPONSE #100
 	CreateCreatureObject("rabbit01",Player1,0,0,0) // Rabbit
-	ActionOverride("rabbit01", ChangeAIScript("DWITEMS",OVERRIDE))
-	SetGlobal("tz_DrowItems","GLOBAL",2)  
-END
-
-IF
-  GlobalTimerExpired("tz_DrowItemsTimer_Art","GLOBAL")
-  Global("tz_DrowItems_Art","GLOBAL",0) 
-  OR(2)
-	TimeOfDay(MORNING)
-	TimeOfDay(DAY)
-  OR(2)
-	AreaType(CITY)
-	AreaType(OUTDOOR)
-THEN
-  RESPONSE #100
-	CreateCreatureObject("rabbit01",Player1,0,0,0) // Rabbit
-	ActionOverride("rabbit01", ChangeAIScript("DWITEMS",OVERRIDE))
-	SetGlobal("tz_DrowItems_Art","GLOBAL",1)  
+	ActionOverride("rabbit01",ChangeAIScript("DWITEMS",OVERRIDE))	
+	SetGlobalTimer("tz_DrowItemsTimer","GLOBAL",ONE_DAY)  
 END

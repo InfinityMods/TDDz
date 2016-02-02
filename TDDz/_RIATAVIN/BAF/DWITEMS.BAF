@@ -1,5 +1,5 @@
 IF
-	Global("tz_DROWITEMCHECKDONE","LOCALS",0)
+	True()
 THEN
 	RESPONSE #100
 		MultiPlayerSync()
@@ -9,7 +9,6 @@ THEN
 END
 
 IF
-	Global("tz_DROWITEMCHECKDONE","LOCALS",0)
 	HasItem("DWCHAN01",Player1) // Drow Elven Chain +3
 THEN
 	RESPONSE #100
@@ -18,7 +17,6 @@ THEN
 END
 
 IF
-	Global("tz_DROWITEMCHECKDONE","LOCALS",0)
 	HasItem("DWCHAN01",Player2) // Drow Elven Chain +3
 THEN
 	RESPONSE #100
@@ -27,7 +25,6 @@ THEN
 END
 
 IF
-	Global("tz_DROWITEMCHECKDONE","LOCALS",0)
 	HasItem("DWCHAN01",Player3) // Drow Elven Chain +3
 THEN
 	RESPONSE #100
@@ -36,7 +33,6 @@ THEN
 END
 
 IF
-	Global("tz_DROWITEMCHECKDONE","LOCALS",0)
 	HasItem("DWCHAN01",Player4) // Drow Elven Chain +3
 THEN
 	RESPONSE #100
@@ -45,7 +41,6 @@ THEN
 END
 
 IF
-	Global("tz_DROWITEMCHECKDONE","LOCALS",0)
 	HasItem("DWCHAN01",Player5) // Drow Elven Chain +3
 THEN
 	RESPONSE #100
@@ -54,7 +49,6 @@ THEN
 END
 
 IF
-	Global("tz_DROWITEMCHECKDONE","LOCALS",0)
 	HasItem("DWCHAN01",Player6) // Drow Elven Chain +3
 THEN
 	RESPONSE #100
@@ -63,7 +57,6 @@ THEN
 END
 
 IF
-	Global("tz_DROWITEMCHECKDONE","LOCALS",0)
 	HasItem("DWCHAN02",Player1) // Drow Adamantine Chain +5
 THEN
 	RESPONSE #100
@@ -72,7 +65,6 @@ THEN
 END
 
 IF
-	Global("tz_DROWITEMCHECKDONE","LOCALS",0)
 	HasItem("DWCHAN02",Player2) // Drow Adamantine Chain +5
 THEN
 	RESPONSE #100
@@ -81,7 +73,6 @@ THEN
 END
 
 IF
-	Global("tz_DROWITEMCHECKDONE","LOCALS",0)
 	HasItem("DWCHAN02",Player3) // Drow Adamantine Chain +5
 THEN
 	RESPONSE #100
@@ -90,7 +81,6 @@ THEN
 END
 
 IF
-	Global("tz_DROWITEMCHECKDONE","LOCALS",0)
 	HasItem("DWCHAN02",Player4) // Drow Adamantine Chain +5
 THEN
 	RESPONSE #100
@@ -99,7 +89,6 @@ THEN
 END
 
 IF
-	Global("tz_DROWITEMCHECKDONE","LOCALS",0)
 	HasItem("DWCHAN02",Player5) // Drow Adamantine Chain +5
 THEN
 	RESPONSE #100
@@ -108,7 +97,6 @@ THEN
 END
 
 IF
-	Global("tz_DROWITEMCHECKDONE","LOCALS",0)
 	HasItem("DWCHAN02",Player6) // Drow Adamantine Chain +5
 THEN
 	RESPONSE #100
@@ -117,7 +105,6 @@ THEN
 END
 
 IF
-	Global("tz_DROWITEMCHECKDONE","LOCALS",0)
 	HasItem("DWSW1H01",Player1) // Drow Scimitar +3
 THEN
 	RESPONSE #100
@@ -126,7 +113,6 @@ THEN
 END
 
 IF
-	Global("tz_DROWITEMCHECKDONE","LOCALS",0)
 	HasItem("DWSW1H01",Player2) // Drow Scimitar +3
 THEN
 	RESPONSE #100
@@ -135,7 +121,6 @@ THEN
 END
 
 IF
-	Global("tz_DROWITEMCHECKDONE","LOCALS",0)
 	HasItem("DWSW1H01",Player3) // Drow Scimitar +3
 THEN
 	RESPONSE #100
@@ -144,7 +129,6 @@ THEN
 END
 
 IF
-	Global("tz_DROWITEMCHECKDONE","LOCALS",0)
 	HasItem("DWSW1H01",Player4) // Drow Scimitar +3
 THEN
 	RESPONSE #100
@@ -153,7 +137,6 @@ THEN
 END
 
 IF
-	Global("tz_DROWITEMCHECKDONE","LOCALS",0)
 	HasItem("DWSW1H01",Player5) // Drow Scimitar +3
 THEN
 	RESPONSE #100
@@ -162,7 +145,6 @@ THEN
 END
 
 IF
-	Global("tz_DROWITEMCHECKDONE","LOCALS",0)
 	HasItem("DWSW1H01",Player6) // Drow Scimitar +3
 THEN
 	RESPONSE #100
@@ -171,7 +153,6 @@ THEN
 END
 
 IF
-	Global("tz_DROWITEMCHECKDONE","LOCALS",0)
 	HasItem("DWSW1H02",Player1) // Drow Long Sword +3
 THEN
 	RESPONSE #100
@@ -180,7 +161,6 @@ THEN
 END
 
 IF
-	Global("tz_DROWITEMCHECKDONE","LOCALS",0)
 	HasItem("DWSW1H02",Player2) // Drow Long Sword +3
 THEN
 	RESPONSE #100
@@ -189,7 +169,6 @@ THEN
 END
 
 IF
-	Global("tz_DROWITEMCHECKDONE","LOCALS",0)
 	HasItem("DWSW1H02",Player3) // Drow Long Sword +3
 THEN
 	RESPONSE #100
@@ -198,7 +177,6 @@ THEN
 END
 
 IF
-	Global("tz_DROWITEMCHECKDONE","LOCALS",0)
 	HasItem("DWSW1H02",Player4) // Drow Long Sword +3
 THEN
 	RESPONSE #100
@@ -207,7 +185,6 @@ THEN
 END
 
 IF
-	Global("tz_DROWITEMCHECKDONE","LOCALS",0)
 	HasItem("DWSW1H02",Player5) // Drow Long Sword +3
 THEN
 	RESPONSE #100
@@ -216,7 +193,6 @@ THEN
 END
 
 IF
-	Global("tz_DROWITEMCHECKDONE","LOCALS",0)
 	HasItem("DWSW1H02",Player6) // Drow Long Sword +3
 THEN
 	RESPONSE #100
@@ -225,7 +201,6 @@ THEN
 END
 
 IF
-	Global("tz_DROWITEMCHECKDONE","LOCALS",0)
 	HasItem("DWBLUN01",Player1) // Drow Flail +3
 THEN
 	RESPONSE #100
@@ -234,7 +209,6 @@ THEN
 END
 
 IF
-	Global("tz_DROWITEMCHECKDONE","LOCALS",0)
 	HasItem("DWBLUN01",Player2) // Drow Flail +3
 THEN
 	RESPONSE #100
@@ -243,7 +217,6 @@ THEN
 END
 
 IF
-	Global("tz_DROWITEMCHECKDONE","LOCALS",0)
 	HasItem("DWBLUN01",Player3) // Drow Flail +3
 THEN
 	RESPONSE #100
@@ -252,7 +225,6 @@ THEN
 END
 
 IF
-	Global("tz_DROWITEMCHECKDONE","LOCALS",0)
 	HasItem("DWBLUN01",Player4) // Drow Flail +3
 THEN
 	RESPONSE #100
@@ -261,7 +233,6 @@ THEN
 END
 
 IF
-	Global("tz_DROWITEMCHECKDONE","LOCALS",0)
 	HasItem("DWBLUN01",Player5) // Drow Flail +3
 THEN
 	RESPONSE #100
@@ -270,7 +241,6 @@ THEN
 END
 
 IF
-	Global("tz_DROWITEMCHECKDONE","LOCALS",0)
 	HasItem("DWBLUN01",Player6) // Drow Flail +3
 THEN
 	RESPONSE #100
@@ -279,7 +249,6 @@ THEN
 END
 
 IF
-	Global("tz_DROWITEMCHECKDONE","LOCALS",0)
 	HasItem("DWHALB01",Player1) // Drow Halberd +3
 THEN
 	RESPONSE #100
@@ -288,7 +257,6 @@ THEN
 END
 
 IF
-	Global("tz_DROWITEMCHECKDONE","LOCALS",0)
 	HasItem("DWHALB01",Player2) // Drow Halberd +3
 THEN
 	RESPONSE #100
@@ -297,7 +265,6 @@ THEN
 END
 
 IF
-	Global("tz_DROWITEMCHECKDONE","LOCALS",0)
 	HasItem("DWHALB01",Player3) // Drow Halberd +3
 THEN
 	RESPONSE #100
@@ -306,7 +273,6 @@ THEN
 END
 
 IF
-	Global("tz_DROWITEMCHECKDONE","LOCALS",0)
 	HasItem("DWHALB01",Player4) // Drow Halberd +3
 THEN
 	RESPONSE #100
@@ -315,7 +281,6 @@ THEN
 END
 
 IF
-	Global("tz_DROWITEMCHECKDONE","LOCALS",0)
 	HasItem("DWHALB01",Player5) // Drow Halberd +3
 THEN
 	RESPONSE #100
@@ -324,7 +289,6 @@ THEN
 END
 
 IF
-	Global("tz_DROWITEMCHECKDONE","LOCALS",0)
 	HasItem("DWHALB01",Player6) // Drow Halberd +3
 THEN
 	RESPONSE #100
@@ -333,7 +297,6 @@ THEN
 END
 
 IF
-	Global("tz_DROWITEMCHECKDONE","LOCALS",0)
 	HasItem("DWSPER01",Player1) // Drow Lance +3
 THEN
 	RESPONSE #100
@@ -342,7 +305,6 @@ THEN
 END
 
 IF
-	Global("tz_DROWITEMCHECKDONE","LOCALS",0)
 	HasItem("DWSPER01",Player2) // Drow Lance +3
 THEN
 	RESPONSE #100
@@ -351,7 +313,6 @@ THEN
 END
 
 IF
-	Global("tz_DROWITEMCHECKDONE","LOCALS",0)
 	HasItem("DWSPER01",Player3) // Drow Lance +3
 THEN
 	RESPONSE #100
@@ -360,7 +321,6 @@ THEN
 END
 
 IF
-	Global("tz_DROWITEMCHECKDONE","LOCALS",0)
 	HasItem("DWSPER01",Player4) // Drow Lance +3
 THEN
 	RESPONSE #100
@@ -369,7 +329,6 @@ THEN
 END
 
 IF
-	Global("tz_DROWITEMCHECKDONE","LOCALS",0)
 	HasItem("DWSPER01",Player5) // Drow Lance +3
 THEN
 	RESPONSE #100
@@ -378,7 +337,6 @@ THEN
 END
 
 IF
-	Global("tz_DROWITEMCHECKDONE","LOCALS",0)
 	HasItem("DWSPER01",Player6) // Drow Lance +3
 THEN
 	RESPONSE #100
@@ -387,7 +345,6 @@ THEN
 END
 
 IF
-	Global("tz_DROWITEMCHECKDONE","LOCALS",0)
 	HasItem("DWXBOW01",Player1) // Drow Crossbow of Speed
 THEN
 	RESPONSE #100
@@ -396,7 +353,6 @@ THEN
 END
 
 IF
-	Global("tz_DROWITEMCHECKDONE","LOCALS",0)
 	HasItem("DWXBOW01",Player2) // Drow Crossbow of Speed
 THEN
 	RESPONSE #100
@@ -405,7 +361,6 @@ THEN
 END
 
 IF
-	Global("tz_DROWITEMCHECKDONE","LOCALS",0)
 	HasItem("DWXBOW01",Player3) // Drow Crossbow of Speed
 THEN
 	RESPONSE #100
@@ -414,7 +369,6 @@ THEN
 END
 
 IF
-	Global("tz_DROWITEMCHECKDONE","LOCALS",0)
 	HasItem("DWXBOW01",Player4) // Drow Crossbow of Speed
 THEN
 	RESPONSE #100
@@ -423,7 +377,6 @@ THEN
 END
 
 IF
-	Global("tz_DROWITEMCHECKDONE","LOCALS",0)
 	HasItem("DWXBOW01",Player5) // Drow Crossbow of Speed
 THEN
 	RESPONSE #100
@@ -432,7 +385,6 @@ THEN
 END
 
 IF
-	Global("tz_DROWITEMCHECKDONE","LOCALS",0)
 	HasItem("DWXBOW01",Player6) // Drow Crossbow of Speed
 THEN
 	RESPONSE #100
@@ -441,7 +393,6 @@ THEN
 END
 
 IF
-	Global("tz_DROWITEMCHECKDONE","LOCALS",0)
 	HasItem("DWSHLD01",Player1) // Drow Shield +3
 THEN
 	RESPONSE #100
@@ -450,7 +401,6 @@ THEN
 END
 
 IF
-	Global("tz_DROWITEMCHECKDONE","LOCALS",0)
 	HasItem("DWSHLD01",Player2) // Drow Shield +3
 THEN
 	RESPONSE #100
@@ -459,7 +409,6 @@ THEN
 END
 
 IF
-	Global("tz_DROWITEMCHECKDONE","LOCALS",0)
 	HasItem("DWSHLD01",Player3) // Drow Shield +3
 THEN
 	RESPONSE #100
@@ -468,7 +417,6 @@ THEN
 END
 
 IF
-	Global("tz_DROWITEMCHECKDONE","LOCALS",0)
 	HasItem("DWSHLD01",Player4) // Drow Shield +3
 THEN
 	RESPONSE #100
@@ -477,7 +425,6 @@ THEN
 END
 
 IF
-	Global("tz_DROWITEMCHECKDONE","LOCALS",0)
 	HasItem("DWSHLD01",Player5) // Drow Shield +3
 THEN
 	RESPONSE #100
@@ -486,7 +433,6 @@ THEN
 END
 
 IF
-	Global("tz_DROWITEMCHECKDONE","LOCALS",0)
 	HasItem("DWSHLD01",Player6) // Drow Shield +3
 THEN
 	RESPONSE #100
@@ -495,7 +441,6 @@ THEN
 END
 
 IF
-	Global("tz_DROWITEMCHECKDONE","LOCALS",0)
 	HasItem("DWCLCK01",Player1) // Drow Piwafwi Cloak
 THEN
 	RESPONSE #100
@@ -504,7 +449,6 @@ THEN
 END
 
 IF
-	Global("tz_DROWITEMCHECKDONE","LOCALS",0)
 	HasItem("DWCLCK01",Player2) // Drow Piwafwi Cloak
 THEN
 	RESPONSE #100
@@ -513,7 +457,6 @@ THEN
 END
 
 IF
-	Global("tz_DROWITEMCHECKDONE","LOCALS",0)
 	HasItem("DWCLCK01",Player3) // Drow Piwafwi Cloak
 THEN
 	RESPONSE #100
@@ -522,7 +465,6 @@ THEN
 END
 
 IF
-	Global("tz_DROWITEMCHECKDONE","LOCALS",0)
 	HasItem("DWCLCK01",Player4) // Drow Piwafwi Cloak
 THEN
 	RESPONSE #100
@@ -531,7 +473,6 @@ THEN
 END
 
 IF
-	Global("tz_DROWITEMCHECKDONE","LOCALS",0)
 	HasItem("DWCLCK01",Player5) // Drow Piwafwi Cloak
 THEN
 	RESPONSE #100
@@ -540,7 +481,6 @@ THEN
 END
 
 IF
-	Global("tz_DROWITEMCHECKDONE","LOCALS",0)
 	HasItem("DWCLCK01",Player6) // Drow Piwafwi Cloak
 THEN
 	RESPONSE #100
@@ -549,7 +489,6 @@ THEN
 END
 
 IF
-	Global("tz_DROWITEMCHECKDONE","LOCALS",0)
 	HasItem("DWBOLT01",Player1) // Drow Bolt of Sleep
 THEN
 	RESPONSE #100
@@ -558,7 +497,6 @@ THEN
 END
 
 IF
-	Global("tz_DROWITEMCHECKDONE","LOCALS",0)
 	HasItem("DWBOLT01",Player2) // Drow Bolt of Sleep
 THEN
 	RESPONSE #100
@@ -567,7 +505,6 @@ THEN
 END
 
 IF
-	Global("tz_DROWITEMCHECKDONE","LOCALS",0)
 	HasItem("DWBOLT01",Player3) // Drow Bolt of Sleep
 THEN
 	RESPONSE #100
@@ -576,7 +513,6 @@ THEN
 END
 
 IF
-	Global("tz_DROWITEMCHECKDONE","LOCALS",0)
 	HasItem("DWBOLT01",Player4) // Drow Bolt of Sleep
 THEN
 	RESPONSE #100
@@ -585,7 +521,6 @@ THEN
 END
 
 IF
-	Global("tz_DROWITEMCHECKDONE","LOCALS",0)
 	HasItem("DWBOLT01",Player5) // Drow Bolt of Sleep
 THEN
 	RESPONSE #100
@@ -594,7 +529,6 @@ THEN
 END
 
 IF
-	Global("tz_DROWITEMCHECKDONE","LOCALS",0)
 	HasItem("DWBOLT01",Player6) // Drow Bolt of Sleep
 THEN
 	RESPONSE #100
@@ -603,7 +537,6 @@ THEN
 END
 
 IF
-	Global("tz_DROWITEMCHECKDONE","LOCALS",0)
 	HasItem("DWBOLT02",Player1) // Drow Bolt of Stunning
 THEN
 	RESPONSE #100
@@ -612,7 +545,6 @@ THEN
 END
 
 IF
-	Global("tz_DROWITEMCHECKDONE","LOCALS",0)
 	HasItem("DWBOLT02",Player2) // Drow Bolt of Stunning
 THEN
 	RESPONSE #100
@@ -621,7 +553,6 @@ THEN
 END
 
 IF
-	Global("tz_DROWITEMCHECKDONE","LOCALS",0)
 	HasItem("DWBOLT02",Player3) // Drow Bolt of Stunning
 THEN
 	RESPONSE #100
@@ -630,7 +561,6 @@ THEN
 END
 
 IF
-	Global("tz_DROWITEMCHECKDONE","LOCALS",0)
 	HasItem("DWBOLT02",Player4) // Drow Bolt of Stunning
 THEN
 	RESPONSE #100
@@ -639,7 +569,6 @@ THEN
 END
 
 IF
-	Global("tz_DROWITEMCHECKDONE","LOCALS",0)
 	HasItem("DWBOLT02",Player5) // Drow Bolt of Stunning
 THEN
 	RESPONSE #100
@@ -648,7 +577,6 @@ THEN
 END
 
 IF
-	Global("tz_DROWITEMCHECKDONE","LOCALS",0)
 	HasItem("DWBOLT02",Player6) // Drow Bolt of Stunning
 THEN
 	RESPONSE #100
@@ -657,7 +585,6 @@ THEN
 END
 
 IF
-	Global("tz_DROWITEMCHECKDONE","LOCALS",0)
 	HasItem("DWBOLT03",Player1) // Drow Bolt +1
 THEN
 	RESPONSE #100
@@ -666,7 +593,6 @@ THEN
 END
 
 IF
-	Global("tz_DROWITEMCHECKDONE","LOCALS",0)
 	HasItem("DWBOLT03",Player2) // Drow Bolt +1
 THEN
 	RESPONSE #100
@@ -675,7 +601,6 @@ THEN
 END
 
 IF
-	Global("tz_DROWITEMCHECKDONE","LOCALS",0)
 	HasItem("DWBOLT03",Player3) // Drow Bolt +1
 THEN
 	RESPONSE #100
@@ -684,7 +609,6 @@ THEN
 END
 
 IF
-	Global("tz_DROWITEMCHECKDONE","LOCALS",0)
 	HasItem("DWBOLT03",Player4) // Drow Bolt +1
 THEN
 	RESPONSE #100
@@ -693,7 +617,6 @@ THEN
 END
 
 IF
-	Global("tz_DROWITEMCHECKDONE","LOCALS",0)
 	HasItem("DWBOLT03",Player5) // Drow Bolt +1
 THEN
 	RESPONSE #100
@@ -702,7 +625,6 @@ THEN
 END
 
 IF
-	Global("tz_DROWITEMCHECKDONE","LOCALS",0)
 	HasItem("DWBOLT03",Player6) // Drow Bolt +1
 THEN
 	RESPONSE #100
@@ -711,7 +633,6 @@ THEN
 END
 
 IF
-	Global("tz_DROWITEMCHECKDONE","LOCALS",0)
 	HasItem("DWPLAT01",Player1) // Drow Full Plate +5
 THEN
 	RESPONSE #100
@@ -720,7 +641,6 @@ THEN
 END
 
 IF
-	Global("tz_DROWITEMCHECKDONE","LOCALS",0)
 	HasItem("DWPLAT01",Player2) // Drow Full Plate +5
 THEN
 	RESPONSE #100
@@ -729,7 +649,6 @@ THEN
 END
 
 IF
-	Global("tz_DROWITEMCHECKDONE","LOCALS",0)
 	HasItem("DWPLAT01",Player3) // Drow Full Plate +5
 THEN
 	RESPONSE #100
@@ -738,7 +657,6 @@ THEN
 END
 
 IF
-	Global("tz_DROWITEMCHECKDONE","LOCALS",0)
 	HasItem("DWPLAT01",Player4) // Drow Full Plate +5
 THEN
 	RESPONSE #100
@@ -747,7 +665,6 @@ THEN
 END
 
 IF
-	Global("tz_DROWITEMCHECKDONE","LOCALS",0)
 	HasItem("DWPLAT01",Player5) // Drow Full Plate +5
 THEN
 	RESPONSE #100
@@ -756,7 +673,6 @@ THEN
 END
 
 IF
-	Global("tz_DROWITEMCHECKDONE","LOCALS",0)
 	HasItem("DWPLAT01",Player6) // Drow Full Plate +5
 THEN
 	RESPONSE #100
@@ -765,7 +681,6 @@ THEN
 END
 
 IF
-	Global("tz_DROWITEMCHECKDONE","LOCALS",0)
 	HasItem("MISC9W",Player1) // Drow Piwafwi Cloak
 THEN
 	RESPONSE #100
@@ -774,7 +689,6 @@ THEN
 END
 
 IF
-	Global("tz_DROWITEMCHECKDONE","LOCALS",0)
 	HasItem("MISC9W",Player2) // Drow Piwafwi Cloak
 THEN
 	RESPONSE #100
@@ -783,7 +697,6 @@ THEN
 END
 
 IF
-	Global("tz_DROWITEMCHECKDONE","LOCALS",0)
 	HasItem("MISC9W",Player3) // Drow Piwafwi Cloak
 THEN
 	RESPONSE #100
@@ -792,7 +705,6 @@ THEN
 END
 
 IF
-	Global("tz_DROWITEMCHECKDONE","LOCALS",0)
 	HasItem("MISC9W",Player4) // Drow Piwafwi Cloak
 THEN
 	RESPONSE #100
@@ -801,7 +713,6 @@ THEN
 END
 
 IF
-	Global("tz_DROWITEMCHECKDONE","LOCALS",0)
 	HasItem("MISC9W",Player5) // Drow Piwafwi Cloak
 THEN
 	RESPONSE #100
@@ -810,7 +721,6 @@ THEN
 END
 
 IF
-	Global("tz_DROWITEMCHECKDONE","LOCALS",0)
 	HasItem("MISC9W",Player6) // Drow Piwafwi Cloak
 THEN
 	RESPONSE #100
@@ -819,17 +729,10 @@ THEN
 END
 
 IF
-	Global("tz_DROWITEMCHECKDONE","LOCALS",0)
+	True()
 THEN
 	RESPONSE #100
-		SetInterrupt(TRUE)
-END
-
-IF
-	Global("tz_DROWITEMCHECKDONE","LOCALS",0)
-THEN
-	RESPONSE #100
-		SetGlobal("tz_DROWITEMCHECKDONE","LOCALS",1)
+		SetInterrupt(TRUE)		
 		DestroySelf()
 END
 

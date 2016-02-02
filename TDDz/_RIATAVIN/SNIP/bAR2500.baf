@@ -1,0 +1,7 @@
+IF
+	Global("tz_DrowItems","GLOBAL",0)	
+THEN
+	RESPONSE #100
+		SetGlobalTimer("tz_DrowItemsTimer","GLOBAL",ONE_DAY)  
+		SetGlobal("tz_DrowItems","GLOBAL",1)
+END

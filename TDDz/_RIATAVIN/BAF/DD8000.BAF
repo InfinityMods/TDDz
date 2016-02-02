@@ -192,6 +192,7 @@ THEN
     SetGlobal("tz_githleev","GLOBAL",4)
 END
 
+
 IF
   GlobalGT("tz_githleev","GLOBAL",0)  
   Global("tz_DrowItems","GLOBAL",0)  
@@ -200,4 +201,5 @@ THEN
 	SetGlobalTimer("tz_DrowItemsTimer","GLOBAL",ONE_DAY)  
 	SetGlobal("tz_DrowItems","GLOBAL",1)  
 END
+
 
