@@ -54,17 +54,15 @@ For now, I focus on adventure, I have no time nor experience to deal/test rules 
         @901002 = ~TDD - Espurta~ 
         @901003 = ~TDD - Purskal~ 
         @901004 = ~TDD - Riatavin~ 
-        @999999 = ~Intruders! Kill the intruders!~
-    .Every languages of TDD is supported; however, I try to use handle_charsets but it seems verrrry slow for TDD and its many translation files, I suppose you have to deal with them manually...                    
-
+        @999999 = ~Intruders! Kill the intruders!~    
 
 * Fixes/Tweaks/Changes *
 	. XP granted by scripts are reduced to 10%
 	. XP granted by TDD creatures are reduded to 20% (creatures from vanilla game that appear in TDD keep their vanilla XP); Graz'zt XP set to 50k rather than 100k due to poor combat script
-	. Remove easy STR/WIS/INT granted by Riatavin/Fleeques.cre after killing Graz'zt
+	. Remove easy +1 STR/WIS/INT granted by Riatavin/Fleeques.cre after killing Graz'zt
 	. All TDD spell scrolls are replaced by SCRL75.ITM (Identify scroll but few quest items)
 	. All TDD items are undroppable (but few quest items), meaning creatures use these items
-	. Drow items trun to dust after ONE_DAY and (MORNING or DAY) and (OUTDOOR or CITY)
+	. Drow items decay after ONE_DAY and (MORNING or DAY) and (OUTDOOR or CITY)
 	. Remake cutscenes with Cutspy.cre
 	. Merge Bgarive.baf with Bgarive2.baf with Bgarive3.baf with Bgarive4.baf into Bgarive.baf with Cutspy.cre	
 	. Prefixed every TDD timers and variables with "tz_"
@@ -74,11 +72,12 @@ For now, I focus on adventure, I have no time nor experience to deal/test rules 
 	. Disable few areas spawners (DD8000.are-Deep Mir Forest, DD8001.are-Haunted Forest) that freeze game	
 	. Decrease some unnecessary very long Wait(x) that make game semmingly bugged
 	. Remove some regions of interests (legacy from originator areas and not used in new areas)
-	. Interaction with Riatavin/Nameless.cre remove due to Helmrat.itm bug(?)
+	. Interaction with Riatavin/Nameless.cre removed due to Helmrat.itm bug(?)
+	. Set Animation During Combat Flag
+	. UTF8 compliant (with handle_charsets)
 
 * TODO *
-	. Enable compatibility with BG2/SoS/RoT/CtB
-	. handle_charsets	
+	. Enable compatibility with BG2/SoS/RoT/CtB	
 	. Better combat scripts for creatures (Espurta/DuegAbis.cre, cf. TDD walkthrough notes for more cre)
 	. Graz'zt combat script (in solo Kensai/Thief-Celestial Fury, he attacks demon before being stunned to death)
 	. Find better animation from Enhanced Animation for some creatures (cf. creaturesContract.2DAs)

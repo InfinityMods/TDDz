@@ -22,8 +22,10 @@ BEGIN
 	MKDIR ~%MOD_FOLDER%/TEMP/Translations~	
 	MKDIR ~%MOD_FOLDER%/TEMP/%COMP_FOLDER%/~
 	LAM GetComponentFolders	
-			
-	LAM FetchTranslationsBeforeAnySAYandCOMPILE		
+	
+	
+	LAM FetchTranslationsBeforeAnySAYandCOMPILE
+	INCLUDE ~%MOD_FOLDER%/Lib/Translations.tpa~ LAM UTF8Chores
 	LAM ImportSPL_FromTDD
 	LAM ImportCRE_FromTDD
 	LAM ImportITM_FromTDD
@@ -298,8 +300,7 @@ BEGIN
 			STR_VAR
 				    oggdec_path = EVAL "%MOD_FOLDER%/tools/oggdec"
 					sox_path = EVAL "%MOD_FOLDER%/tools/sox"
-	END	
-	//AT_NOW ~del /f /q .\TDDz\Audio\*.ogg 2> .\TDDz\Audio\error.txt~ EXACT // we redirect ugly error message when there is not file to delete		
+	END		
 	ACTION_FOR_EACH var IN ogg BEGIN
 			ACTION_BASH_FOR ~%MOD_FOLDER%/Audio~ ~^.+\.%var%$~ BEGIN
 				DELETE +  ~%BASH_FOR_FILESPEC%~

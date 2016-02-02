@@ -3,10 +3,10 @@ AUTHOR ~shadowlich~
 VERSION ~v1.0~
 
 ALWAYS
-	INCLUDE ~%MOD_FOLDER%/Lib/Helpers.tpa~ LAM ForceClearTempFolder
+	INCLUDE ~%MOD_FOLDER%/Lib/Helpers.tpa~ 
+		LAM ForceClearTempFolder
 	
-	INCLUDE ~%MOD_FOLDER%/Lib/a7_tools.tpa~
-	
+	INCLUDE ~%MOD_FOLDER%/Lib/a7_tools.tpa~	
 	ACTION_IF (GAME_IS ~eet~) AND (FILE_CONTAINS ~override/EET.flag~ ~EET_JOURNAL~) BEGIN
 		OUTER_SET bg2_chapter = 14
 	END ELSE BEGIN
@@ -45,8 +45,8 @@ LANGUAGE 	~German(Leonardo Watson)~
 
 LANGUAGE 	~Francais(Isaya)~
 			~French~
-			~TDDz/Translations/French/setup00.tra~
-			~TDDz/Translations/French/tp2.tra~
+			~TDDz/Translations/french/setup.tra~
+			~TDDz/Translations/french/tp2.tra~
 
 LANGUAGE 	~Italian(ilot)~
 			~Italian~
