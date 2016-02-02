@@ -5,21 +5,21 @@ THEN
 		CutSceneId(Player1)
 		StorePartyLocations()
 		FadeToColor([15.0],0)
-		LeaveAreaLUAPanic("DDCT19","",[850.100],S)
+		LeaveAreaLUAPanic("DDCT19","",[850.100],0) // Note: for BG2 compatibility don't use direction alias from BG2EE/DIR.IDS
 		Explore()
-		LeaveAreaLUA("DDCT19","",[850.100],N)
+		LeaveAreaLUA("DDCT19","",[850.100],8)
 		Explore()
 		MoveViewPoint([450.750],INSTANT)
 		MultiPlayerSync()
-		CreateCreature("CUTSPY",[450.750],S) // No such index
+		CreateCreature("CUTSPY",[450.750],0) // No such index
 		Wait(1)
 		MoveViewObject("cutspy",INSTANT)
 		Explore()
-		CreateCreature("bgctboss",[274.749],S) // Amroch
+		CreateCreature("bgctboss",[274.749],0) // Amroch
 		FadeFromColor([30.0],0)
 		Wait(2)
 		DisplayStringHead("bgctboss",104203) // The coast is clear, master.
-		CreateCreature("enteri01",[600.600],W) // Artemis Entreri
+		CreateCreature("enteri01",[600.600],4) // Artemis Entreri
 		Wait(2)
 		ActionOverride("enteri01",MoveToPoint([450.750]))
 		Wait(2)

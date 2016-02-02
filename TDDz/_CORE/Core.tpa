@@ -8,6 +8,12 @@ BEGIN
 	APPEND ~GTIMES.IDS~ ~36 SIX_ROUNDS~ 	UNLESS ~SIX_ROUNDS~
 	APPEND ~GTIMES.IDS~ ~54 NINE_ROUNDS~ 	UNLESS ~NINE_ROUNDS~
 	
+	
+	COPY_EXISTING ~SPELL.IDS~ ~override~
+		REPLACE_TEXTUALLY ~2302 WIZARD_DISPEL_MAGIC~ ~2302 WIZARD_REMOVE_MAGIC~ 
+	BUT_ONLY
+	APPEND ~SPELL.IDS~ ~2326 WIZARD_DISPEL_MAGIC~ UNLESS ~2326 WIZARD_DISPEL_MAGIC~
+ 
 	ADD_SPELL ~TDD/Spl/SPPR736.spl~ 1 7 CLERIC_SUMMON_LAVA_ELEMENTAL 
 		SAY NAME1 @20739
 		SAY UNIDENTIFIED_DESC @20740
@@ -25,9 +31,26 @@ BEGIN
 	
 	LAM ImportSpellScrolls_FromTDD
 	
-	ACTION_IF GAME_IS ~bg2~ BEGIN
-		// TODO
-	END
+	ACTION_IF GAME_IS ~tob~ BEGIN		
+		ACTION_IF NOT FILE_EXISTS ~data/ROT-RULE.BIF~ BEGIN    // Compatibility with RoT	
+			COPY ~TDD/Compat/anim/MCYC~ ~override~          //CYCLOP
+			COPY ~TDD/Compat/anim/MTAN~ ~override~          //MARILITH graphics
+			COPY ~TDD/Compat/anim/MNO2~ ~override~          //FROST GIANT
+
+			COPY_EXISTING 	~ORC06.cre~     ~override~
+							~HLOLAF.cre~    ~override~
+							~CHAK.cre~      ~override~
+							~AR18FIG.cre~   ~override~
+				WRITE_LONG 0x28  0xE700   //IC_OROG1 instead of IC_OROG2
+			BUT_ONLY_IF_IT_CHANGES
+  
+			ACTION_IF (FILE_EXISTS_IN_GAME ~ULIGAR.CRE~) BEGIN
+				COPY_EXISTING ~ULIGAR.CRE~        ~override~    //NeJ2
+					WRITE_LONG 0x28  0xE700   //IC_OROG1 instead of IC_OROG2
+				BUT_ONLY_IF_IT_CHANGES
+			END
+		END
+	END	
 	
 	ACTION_IF GAME_IS ~bg2ee eet~ BEGIN
 		LAM InstallFrostGiantAnimation

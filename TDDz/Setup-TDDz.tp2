@@ -71,7 +71,7 @@ LANGUAGE 	~Spanish(Clan REO)~
 // TODO DDPOTNP1.itm @AR0402.baf
 
 BEGIN @901000 
-	REQUIRE_PREDICATE GAME_IS ~bg2ee eet~ ~~	
+	REQUIRE_PREDICATE GAME_IS ~tob bg2ee eet~ ~~	
 	
 	INCLUDE ~%MOD_FOLDER%/Lib/Importer.tpa~
 		LAF ImportComponent STR_VAR aComp = ~CORE~ END
@@ -79,7 +79,7 @@ BEGIN @901000
 		LAF DeleteTempFolder STR_VAR aComp = ~CORE~ END
 	
 BEGIN @901001
-	REQUIRE_PREDICATE GAME_IS ~bg2ee eet~ ~~
+	REQUIRE_PREDICATE GAME_IS ~tob bg2ee eet~ ~~
 	REQUIRE_COMPONENT "setup-TDDz.tp2" "0" "You must have TDD - Core installed"
 		
 	INCLUDE ~%MOD_FOLDER%/Lib/Importer.tpa~ 
@@ -88,7 +88,7 @@ BEGIN @901001
 		LAF DeleteTempFolder STR_VAR aComp = ~TROLLFORD~ END
 	
 BEGIN @901002
-	REQUIRE_PREDICATE GAME_IS ~bg2ee eet~ ~~
+	REQUIRE_PREDICATE GAME_IS ~tob bg2ee eet~ ~~
 	REQUIRE_COMPONENT "setup-TDDz.tp2" "0" "You must have TDD - Core installed"
 
 	INCLUDE ~%MOD_FOLDER%/Lib/Importer.tpa~ 
@@ -97,7 +97,7 @@ BEGIN @901002
 		LAF DeleteTempFolder STR_VAR aComp = ~ESPURTA~ END
 		
 BEGIN @901003
-	REQUIRE_PREDICATE GAME_IS ~bg2ee eet~ ~~	
+	REQUIRE_PREDICATE GAME_IS ~tob bg2ee eet~ ~~	
 	REQUIRE_COMPONENT "setup-TDDz.tp2" "0" "You must have TDD - Core installed"
 		
 	INCLUDE ~%MOD_FOLDER%/Lib/Importer.tpa~ 
@@ -106,7 +106,7 @@ BEGIN @901003
 		LAF DeleteTempFolder STR_VAR aComp = ~PURSKAL~ END
 
 //BEGIN @901004
-//	REQUIRE_PREDICATE GAME_IS ~bg2ee eet~ ~~	
+//	REQUIRE_PREDICATE GAME_IS ~tob bg2ee eet~ ~~	
 //	REQUIRE_COMPONENT "setup-TDDz.tp2" "0" "You must have TDD - Core installed"		
 //		
 //	INCLUDE ~%MOD_FOLDER%/Lib/Importer.tpa~ 
@@ -115,7 +115,7 @@ BEGIN @901003
 //		LAF DeleteTempFolder STR_VAR aComp = ~RIATAVIN~ END
 	
 //BEGIN @901010
-//	REQUIRE_PREDICATE GAME_IS ~bg2ee eet~ ~~	
+//	REQUIRE_PREDICATE GAME_IS ~tob bg2ee eet~ ~~	
 //	REQUIRE_COMPONENT "setup-TDDz.tp2" "0" "You must have TDD - Core installed"
 //		
 //	INCLUDE ~%MOD_FOLDER%/Lib/Importer.tpa~ 

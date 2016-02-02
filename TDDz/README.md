@@ -75,9 +75,9 @@ For now, I focus on adventure, I have no time nor experience to deal/test rules 
 	. Interaction with Riatavin/Nameless.cre removed due to Helmrat.itm bug(?)
 	. Set Animation During Combat Flag
 	. UTF8 compliant (with handle_charsets)
+	. Should be compatible with ToB/SoS/RoT/CtB	
 
-* TODO *
-	. Enable compatibility with BG2/SoS/RoT/CtB	
+* TODO *	
 	. Better combat scripts for creatures (Espurta/DuegAbis.cre, cf. TDD walkthrough notes for more cre)
 	. Graz'zt combat script (in solo Kensai/Thief-Celestial Fury, he attacks demon before being stunned to death)
 	. Find better animation from Enhanced Animation for some creatures (cf. creaturesContract.2DAs)

@@ -11,7 +11,7 @@ THEN
 		CreateCreature("CUTSPY",[500.1000],0) // No such index
 		Wait(1)		
 		MoveViewObject("cutspy",8)
-		CreateCreature("mykakol",[436.1071],S) // Tutor	
+		CreateCreature("mykakol",[436.1071],0) // Tutor	
 		Explore()
 		MoveViewPoint([436.1071],INSTANT)
 		ApplySpell(Player1,1964)
@@ -29,8 +29,8 @@ THEN
 		CreateVisualEffect("sppolymp",[550.1177])
 		CreateVisualEffect("spplanar",[622.1032])
 		CreateVisualEffect("spplanar",[622.1032])
-		CreateCreature("artcutx1",[622.1032],W) // Artemis Entreri
-		CreateCreature("jarcutx1",[550.1177],W) // Jarlaxle
+		CreateCreature("artcutx1",[622.1032],4) // Artemis Entreri
+		CreateCreature("jarcutx1",[550.1177],4) // Jarlaxle
 		Wait(2)
 		ActionOverride("mykakol",FaceObject("artcutx1"))
 		ActionOverride("artcutx1",FaceObject("mykakol"))
