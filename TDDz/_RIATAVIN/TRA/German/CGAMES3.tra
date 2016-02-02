@@ -1,0 +1,15 @@
+@0    = ~Hier haben wir das Roulette in seiner reinsten Form. Ihr setzt auf eine Zahl und vertraut auf Euer Glück. Wenn Eure Zahl fällt, dann ist der Gewinn 36-fach.~
+@1    = ~Setzt 1 Goldstück.~
+@2    = ~Setzt 2 Goldstücke.~
+
+@3    = ~Setzt 5 Goldstücke.~
+@4    = ~Setzt 10 Goldstücke.~
+@5    = ~Nein Danke.~
+
+@6    = ~Ihr habt gewonnen! Ich nehme Euren Einsatz und Ihr bekommt 36 Goldstücke zurück!~
+@7    = ~Ihr habt gewonnen! Ich nehme Euren Einsatz und Ihr bekommt 72 Goldstücke zurück!~
+@8    = ~Ihr habt gewonnen! Ich nehme Euren Einsatz und Ihr bekommt 180 Goldstücke zurück!~
+@9    = ~Ihr habt gewonnen! Ich nehme Euren Einsatz und Ihr bekommt 360 Goldstücke zurück!~
+
+@10   = ~Oooooh, das tut mir aber Leid. Der Nächste!~
+@11   = ~Dann tretet zur Seite. Ich brauche diesen Platz für zahlende Spieler.~

@@ -1,4 +1,7 @@
 RESNAME 	NAME1	NAME2	UNIDENTIFIED_DESC	DESC	ICON		UNDROPPABLE 	COMMENTS
-BLOOD		+		20993	+					20994	IBLOOD		+				Bathed in Blood; Used many many times...
-BOULDER		21005	21005	21006				21006	IBOULDER	+
-SCALBLUE	21331	21331	+					21332	0			+				Blue Dragon Scales
+BLOOD		+		20993	+					20994	IBLOOD		.				Bathed in Blood; Used many many times...
+BOULDER		21005	21005	21006				21006	IBOULDER	++++++++
+LOHVAR		+		21219	+					21220	0			.				Lohvar
+MAGBOTXX	21227	21227	21228				21228	MAGBOTTX	.				Enchanted Beverage
+SCALBLUE	21331	21331	+					21332	0			++++++++		Blue Dragon Scales
+TROLSIND	+		21407	+					21408	0			.				Troll Cinder

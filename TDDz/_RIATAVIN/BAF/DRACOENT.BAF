@@ -1,0 +1,17 @@
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId(Player1)
+    MoveViewPoint([1094.445],FAST)
+    ActionOverride(Player2,MoveToPoint([1094.445]))
+    ActionOverride(Player3,MoveToPoint([1135.491]))
+    ActionOverride(Player4,MoveToPoint([1161.550]))
+    ActionOverride(Player5,MoveToPoint([1174.623]))
+    ActionOverride(Player6,MoveToPoint([1138.696]))
+    MoveToPoint([1030.400])
+    Wait(3)
+    EndCutSceneMode()
+    SetGlobal("tz_dd8000d","GLOBAL",1)
+END
+

@@ -1,38 +1,72 @@
 RESNAME 	NAME1	NAME2	UNIDENTIFIED_DESC	DESC	ICON		UNDROPPABLE COMMENTS
-AEGISRNG	+		20964	+					20965	0			+			Aegis of Torment
-AMAROS		20967	20968	20969				20970	BUCCEPIE	+			Amaros
-AMAUNMAC	+		20971	+					20972	0			+			Smoldering Mace of Ember
-AMULRAT		+		+		+					+		+			+
-ARAMIS		+		20975	+					20976	0			+			Staff of Aramis
-ARQUINXX	+		20983	+					20984	ARQUINB		+			Axe of Arquin
-B3-18		+		+		+					+		+			+			
+AEGISRNG	+		20964	+					20965	0			.			Aegis of Torment
+AFIRE		+		+		+					+		+			++++++++	CRE Amulet
+AMAROS		20967	20968	20969				20970	BUCCEPIE	.			Amaros
+AMAUNMAC	+		20971	+					20972	0			.			Smoldering Mace of Ember
+AMULRAT		+		+		+					+		+			++++++++
+ARAMIS		+		20975	+					20976	0			.			Staff of Aramis
+ARQUINXX	+		20983	+					20984	ARQUINB		.			Axe of Arquin
+B3-18		+		+		+					+		+			.			
+BLADETRM	+		20991	+					20992	BLADETRM	.			Blade of Tremors
+BONEMASK	+		21001	+					21002	+			.			Bone Mask
+BOTABODE	+		21003	+					21004	0			.			Mezakain's Enchanted Abode
+BRAC04X		+		+		+					+		+			.			Jarlaxe's bracers
 CALHEART	21024	21024	21024				21024	+			++++++++	Heart				
 CALIWOLF	+		+		+					+		+			++++++++	
-CERBSW2H	+		21030	+					21031	0			+			Psionic Denial;TODO DDBERBAR.sto
+CELEBRA		+		21026	+					21027	ICELEBRA	.			The Celebrants Blade
+CERBSW2H	+		21030	+					21031	0			.			Psionic Denial
+CREATE		+		21042	+					21043	+			.			Bow of Creation
+DAGGASP		+		21047	+					21048	IKRIS		.			Asp's Tooth
+DEATHREB	+		21102	+					21103	0			.			Death Reborn
 DDNOIMPR	+		+		+					+		+			++++++++	
-ELVHUNTB	+		21141	+					21142	0			+			Huntsman's Soft Touch;TODO DDBERNAR.sto
-ENTERI1		+		21143	+					+		+			+			Entreri Saber
-ENTERI2		+		21144	+					+		+			+			Entreri Jeweled Dagger
-ENTROBE		+		21145	+					21146	IENTROBE	+			Entropic Robe
-FLAMPLAT	+		21162	+					21163	+			SCRL75		Plate of Smoldering, DONT_USE_USE_TDD_SPELL
-HAMFORCE	+		21180	+					21181	IGSLEEP		+			Hammer of Force
-IOUNX3		+		21195	+					21196	0			+			Tredyhedron of the Mind
-IOUNX7		+		21197	+					21198	0			+			Ioun Stone Of Hard Skin
-IOUNX8		+		21199	+					21200	0			+			Static Stone
+DEMCLAWZ	21106	21106	21107				21107	+			++++++++	Demon claw
+DHORNX		+		21112	+					21113	+			.			Rage Horn
+ELVHUNTB	+		21141	+					21142	0			.			Huntsman's Soft Touch
+ELSHUKAR	+		21139	+					21140	0			.			Elshukar
+ENTERI1		+		21143	+					+		+			.			Entreri Saber
+ENTERI2		+		21144	+					+		+			.			Entreri Jeweled Dagger
+ENTROBE		+		21145	+					21146	IENTROBE	.			Entropic Robe
+FLAMPLAT	+		21162	+					21163	+			SCRL75		Plate of Smoldering, USE TDD SPELL
+GHARBOOT	+		21166	+					21167	0			.			Elven Tracking Boots
+GHARSW		+		21168 	+					21169	GHARBLAD 	.			Dark Emissary
+GLORY		+		21172	+					21173	IGLORY		.			The Glory of Suffering
+HAGHND		+		+		+					+		+			++++++++			
+HAMFORCE	+		21180	+					21181	IGSLEEP		.			Hammer of Force
+HELMRAT		+		+		+					+		+			++++++++	Helm of NAMELESS.cre, Disable cre animation, TODO BUG
+IOUNX3		+		21195	+					21196	0			.			Tredyhedron of the Mind
+IOUNX7		+		21197	+					21198	0			.			Ioun Stone Of Hard Skin
+IOUNX8		+		21199	+					21200	0			.			Static Stone
 KEYOR		21076	21209	21210				21211	+			++++++++	Wardstone for Orgoth's Tower
 KEYOR2		21076	21209	21210				21212	+			++++++++	Wardstone for Orgoth's Tower
-LEATRAT		+		+		+					+		+			+
-MAGBOTXX	21227	21227	21228				21228	MAGBOTTX	+			Enchanted Beverage
-MARKBOWX	+		21231	+					21232	0			+			Bow of Elegance +4
-MIELIKKI	+		21233	+					21234	IQUIVER0	SCRL75		Quiver of Mielikki; TODO BUG
-MONGOVIA	+		21256	+					21257	MONGOVE		+			Mace of Mongovia
+LEATRAT		+		+		+					+		+			++++++++	Disable cre animation
+LIGHTHND	+		+		+					+		+			++++++++	CRE Attack
+MALICE		+		21229	+					21230	ICELEBRA	.			Dwarven Malice
+MARKBOWX	+		21231	+					21232	0			.			.Bow of Elegance +4
+MIELIKKI	+		21233	+					21234	IQUIVER0	SCRL75		Quiver of Mielikki; BUG DO NOT USE IT
+MONGOVIA	+		21256	+					21257	MONGOVE		.			Mace of Mongovia
+MOORSX		+		20061	+					21260	ICAIRN		.			Greymane of the Moors
 ORGOBODY	21265	21265	+					21266	+			++++++++	Body of Prison Slave
 ORGOHEAL	21267	21267	21268				21268	+			++++++++	Healing Salve
-ORRSHLD		+		21269	+					21270	IORRSHLD	+			Orrick's Rhino Beetle Shield
+ORRSHLD		+		21269	+					21270	IORRSHLD	.			Orrick's Rhino Beetle Shield
 PLATBLUE	+		21277	+					21278	0			++++++++	Blue Dragon Scale; Forge from 3314FRGE.dlg
-SHOON		+		21349	+					21350	SHOON		+			Staff of Shoon
-SWZZZ1		+		21386	+					21387	+			+			Elemental Life
-UHALB5A		+		21422	+					21423	+			+			Tundra Halberd +4
-UMSTR5A		+		21426	+					21427	+			+			Morning Star of Action +4
-USHLD3B		+		21428	+					21429	+			+			Storming Shield +3
+RING97X		+		+		+					+		+			++++++++	Gold Dragon Ring
+RING97Y		+		+		+					+		+			++++++++	Green Dragon Ring
+RING97Z		+		+		+					+		+			++++++++	Bronze Dragon Ring
+ROBE2		21295	21296	+					21297	ICLCKXX		.			Robe of Holy Magic
+SHLDGRAZ	+		+		+					+		+			.			Graz'zt shield
+SHOON		+		21349	+					21350	SHOON		.			Staff of Shoon
+SILBLADE	+		21351	+					21352	0			.			Silent Blade
+DIVER		+		21114	+					21115	IDIVER		.			Spell Diver
+STARYM		+		21374	+					21375	0			.			Starym Moonblade
+SW1HGRAZ	+		+		+					+		+			.			Graz't sword
+SWZZZ1		+		21386	+					21387	+			.			Elemental Life
+SWZZZ2		+		21388	+					21389	+			.			Elemental Death
+TOOTHA1		21398	21398	21399				21399	TOOTHA1		++++++++	Gold Dragon Tooth
+TOOTHA2		21400	21400	21401				21401	+			++++++++	Bronze Dragon Tooth
+TOOTHA3		21402	21402	21403				21403	+			++++++++	Dracolich Tooth
+UHALB5A		+		21422	+					21423	+			.			Tundra Halberd +4
+UMSTR5A		+		21426	+					21427	+			.			Morning Star of Action +4
+USHLD3B		+		21428	+					21429	+			.			Storming Shield +3
 WATBLOOD	21435	21435	21436				21436	+			++++++++	Blood of a Wererat
+WEAVER		+		21439	+					21440	+			.			Dream Weaver (Jarlaxe's long sword) TODO patch
+WYVCROWN	+		21441	+					21442	WYVCROWN	.			Wyvern Crown

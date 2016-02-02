@@ -1,4 +1,4 @@
-DEFINE_ACTION_MACRO FinalizeImport
+DEFINE_ACTION_MACRO InstallSpecificContents
 BEGIN		
 	EXTEND_TOP ~AR0300.bcs~ ~%MOD_FOLDER%/%COMP_FOLDER%/Snip/bAR0300.baf~
 	EXTEND_BOTTOM ~baldur.bcs~ ~%MOD_FOLDER%/%COMP_FOLDER%/Snip/bbaldur.baf~

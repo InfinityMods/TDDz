@@ -1,0 +1,262 @@
+IF
+  Global("tz_dd8000b","GLOBAL",0)
+THEN
+  RESPONSE #100
+    CreateCreature("dwgard01",[1322.824],4)
+    CreateCreature("dwgard02",[1362.897],4)
+    CreateCreature("dwgard03",[1570.930],4)
+    CreateCreature("dwgard04",[1681.887],4)
+    CreateCreature("jarlaxe2",[1402.908],4)
+    CreateCreature("dwwond01",[2171.1216],4)
+    CreateCreature("dwwond02",[2534.1060],4)
+    CreateCreature("dwwond03",[1605.843],4)
+    CreateCreature("dwwond04",[2913.1339],4)
+    CreateCreature("dwwond05",[3236.1366],4)
+    CreateCreature("dwwond06",[3441.1011],4)
+    CreateCreature("dwwond07",[2319.300],4)
+    CreateCreature("dwwond08",[2152.354],4)
+    CreateCreature("dwwond09",[1808.362],4)
+    CreateCreature("dwwond10",[3303.983],4)
+    CreateCreature("dwwond11",[3719.622],4)
+    CreateCreature("dwwond12",[4268.314],4)
+    CreateCreature("dwwond13",[4197.154],4)
+    CreateCreature("dwwond14",[2790.538],4)
+    CreateCreature("dwwond15",[2586.381],4)
+    CreateCreature("dwwond16",[1752.341],4)
+    CreateCreature("dwwond17",[1229.528],4)
+    CreateCreature("dwbrg01",[836.787],4)
+    CreateCreature("dwbrg02",[1013.859],4)
+    CreateCreature("razak01",[3201.1639],4)
+    CreateCreature("mummyx1",[601.1645],4)
+    CreateCreature("mummyx1",[696.1622],4)
+    CreateCreature("mummyx1",[764.1746],4)
+    CreateCreature("mummyx1",[603.1801],4)
+    CreateCreature("mummyx1",[669.1713],4)
+    CreateCreature("mummyx1",[672.2259],4)
+    CreateCreature("mummyx1",[847.2259],4)
+    CreateCreature("mummyx1",[1341.2430],4)
+    CreateCreature("mummyx1",[1438.2319],4)
+    CreateCreature("elearg01",[1598.2286],4)
+    CreateCreature("elearg01",[1322.2430],4)
+    CreateCreature("acidele1",[1697.2118],4)
+    CreateCreature("acidele1",[1912.2198],4)
+    CreateCreature("mistcd01",[724.2437],4)
+    CreateCreature("mistcd01",[832.2365],4)
+    CreateCreature("mistcd01",[1001.2256],4)
+    CreateCreature("mummyx1",[1813.2516],4)
+    CreateCreature("mummyx1",[1945.2673],4)
+    CreateCreature("skelwa02",[1840.2819],4)
+    CreateCreature("skelwa02",[2024.2830],4)
+    CreateCreature("skelwa03",[2165.2582],4)
+    CreateCreature("acidele1",[1863.2043],4)
+    CreateCreature("acidele1",[1960.2101],4)
+    CreateCreature("elearg01",[2142.1920],4)
+    CreateCreature("elearg01",[2282.2113],4)
+    CreateCreature("elearg01",[2131.2151],4)
+    CreateCreature("mindul01",[2525.2511],4)
+    CreateCreature("mindul01",[2613.2600],4)
+    CreateCreature("mindul01",[2780.2537],4)
+    CreateCreature("mistcd01",[2554.2966],4)
+    CreateCreature("mistcd01",[2596.3064],4)
+    CreateCreature("mistho01",[2396.2929],4)
+    CreateCreature("mistho01",[2226.2930],4)
+    CreateCreature("lavaele1",[2195.3194],4)
+    CreateCreature("lavaele1",[2150.3315],4)
+    CreateCreature("lavaele1",[2276.3406],4)
+    CreateCreature("lavaele1",[2474.3346],4)
+    CreateCreature("elearg01",[981.2876],4)
+    CreateCreature("elearg01",[811.2840],4)
+    CreateCreature("elearg01",[638.2845],4)
+    CreateCreature("elearg01",[615.2950],4)
+    CreateCreature("elearg01",[805.2961],4)
+    CreateCreature("mummyx1",[215.3153],4)
+    CreateCreature("mummyx1",[111.3295],4)
+    CreateCreature("skelwa02",[192.3235],4)
+    CreateCreature("skelwa02",[189.3426],4)
+    CreateCreature("skelwa03",[347.3405],4)
+    CreateCreature("spidsw01",[4029.1044],4)
+    CreateCreature("spidsw01",[4153.1165],4)
+    CreateCreature("spidph01",[4061.1228],4)
+    CreateCreature("spidsw01",[4251.1285],4)
+    CreateCreature("spidph01",[4415.1380],4)
+    CreateCreature("spidph01",[4206.1458],4)
+    CreateCreature("kuopri01",[4065.3445],4)
+    CreateCreature("kuowhi01",[4254.3560],4)
+    CreateCreature("kuopri01",[4302.3357],4)
+    CreateCreature("kuolie01",[4052.3271],4)
+    CreateCreature("kuowhi01",[4132.3211],4)
+    CreateCreature("kuopri01",[4436.3197],4)
+    CreateCreature("kuolie01",[4333.3053],4)
+    CreateCreature("umbhul01",[4576.3213],4)
+    CreateCreature("umbhul01",[4687.3143],4)
+    CreateCreature("umbhul01",[4543.3040],4)
+    CreateCreature("umbhul01",[4779.3044],4)
+    CreateCreature("umbhul01",[4875.3284],4)
+    CreateCreature("umbhul01",[4692.3211],4)
+    CreateCreature("duegsal1",[1424.3606],4)
+    CreateCreature("duegsal2",[1578.3572],4)
+    CreateCreature("duegsal3",[1709.3783],4)
+    SetGlobal("tz_dd8000b","GLOBAL",1)
+END
+
+IF
+  Global("tz_dd8000b","GLOBAL",1)
+THEN
+  RESPONSE #100
+    ActionOverride(Player2,FaceObject("jarlaxe2"))
+    ActionOverride(Player3,FaceObject("jarlaxe2"))
+    ActionOverride(Player4,FaceObject("jarlaxe2"))
+    ActionOverride(Player5,FaceObject("jarlaxe2"))
+    ActionOverride(Player6,FaceObject("jarlaxe2"))
+    ActionOverride("dwgard01",FaceObject(Player1))
+    ActionOverride("dwgard02",FaceObject(Player1))
+    ActionOverride("dwgard03",FaceObject(Player1))
+    ActionOverride("dwgard04",FaceObject(Player1))
+    Wait(2)
+    ActionOverride("jarlaxe2",StartDialogNoSet(Player1))
+    SetGlobal("tz_dd8000b","GLOBAL",2)
+END
+
+IF
+  Global("tz_grazztmeeting","GLOBAL",1)
+THEN
+  RESPONSE #100
+    StartCutSceneMode()
+    StartCutScene("grazint")
+END
+
+IF
+  Global("tz_grazztmeeting","GLOBAL",2)
+THEN
+  RESPONSE #100
+    ActionOverride("grazzt01",StartDialogue("grazzt01",Player1))
+    SetGlobal("tz_grazztmeeting","GLOBAL",3)
+END
+
+IF
+  Global("tz_grazztmeeting","GLOBAL",4)
+THEN
+  RESPONSE #100
+    CreateVisualEffectObject("sppolymp","jarlaxe2")
+    CreateVisualEffectObject("spplanar","jarlaxe2")
+    ActionOverride("jarlaxe2",DestroySelf())
+    CreateVisualEffectObject("sppolymp","grazzt01")
+    CreateVisualEffectObject("spplanar","grazzt01")
+    ActionOverride("grazzt01",DestroySelf())
+    SetGlobal("tz_grazztmeeting","GLOBAL",5)
+END
+
+IF
+  Global("tz_grazztmeeting","GLOBAL",5)
+THEN
+  RESPONSE #100
+    ScreenShake([1560.695],3)
+    ApplySpell("dwgard01",WIZARD_FLESH_TO_STONE_IGNORE_RESISTANCE)
+    ApplySpell("dwgard02",WIZARD_FINGER_OF_DEATH_IGNORE_RESISTANCE)
+    ApplySpell("dwgard03",WIZARD_FINGER_OF_DEATH_IGNORE_RESISTANCE)
+    ApplySpell("dwgard04",WIZARD_FLESH_TO_STONE_IGNORE_RESISTANCE)
+    SetGlobal("tz_grazztmeeting","GLOBAL",6)
+END
+
+IF
+  Global("tz_grazztmeeting","GLOBAL",6)
+THEN
+  RESPONSE #100
+    Kill("dwbrg01")
+    Kill("dwbrg02")
+    Kill("dwwond01")
+    Kill("dwwond02")
+    Kill("dwwond03")
+    Kill("dwwond04")
+    Kill("dwwond05")
+    Kill("dwwond06")
+    Kill("dwwond07")
+    Kill("dwwond08")
+    Kill("dwwond09")
+    Kill("dwwond10")
+    Kill("dwwond11")
+    Kill("dwwond12")
+    Kill("dwwond13")
+    Kill("dwwond14")
+    Kill("dwwond15")
+    Kill("dwwond16")
+    Kill("dwwond17")
+    Kill("razak01")
+    SetGlobal("tz_grazztmeeting","GLOBAL",7)
+END
+
+IF
+  Global("tz_grazztmeeting","GLOBAL",7)
+THEN
+  RESPONSE #100
+    CreateCreature("grazinvi",[1257.2390],4)
+    CreateCreature("gelugon1",[1011.904],4)
+    CreateCreature("Demnabsu",[889.735],4)
+    CreateCreature("gelugon1",[1420.435],4)
+    CreateCreature("Demnabsu",[1773.308],4)
+    CreateCreature("elfirg01",[2114.306],4)
+    CreateCreature("gelugon1",[2413.343],4)
+    CreateCreature("dempit01",[2697.468],4)
+    CreateCreature("gelugon1",[2685.854],4)
+    CreateCreature("dempit01",[2554.981],4)
+    CreateCreature("elfirg01",[2051.1462],4)
+    CreateCreature("lavaele1",[1462.866],4)
+    SetGlobal("tz_grazztmeeting","GLOBAL",8)
+END
+
+IF
+  Global("tz_grazinvi","GLOBAL",1)
+THEN
+  RESPONSE #100
+    StartCutSceneMode()
+    StartCutScene("grazfite")
+END
+
+IF
+  Global("tz_grazinvi","GLOBAL",2)
+THEN
+  RESPONSE #100
+    ActionOverride("grazzt02",StartDialogNoSet([PC]))
+    SetGlobal("tz_grazinvi","GLOBAL",3)
+END
+
+IF
+  Global("tz_grazztslay","GLOBAL",0)
+  Dead("grazzt02")
+THEN
+  RESPONSE #100
+    CreateCreature("fleeinv1",[777.2858],4)
+    CreateCreature("fleeinv2",[2394.3290],4)
+    CreateCreature("fleeinv3",[2724.3017],4)
+    SetGlobal("tz_grazztslay","GLOBAL",1)
+END
+
+IF
+  Global("tz_fleeinvi","GLOBAL",1)
+THEN
+  RESPONSE #100
+    ActionOverride("fleeinv1",DestroySelf())
+    ActionOverride("fleeinv2",DestroySelf())
+    ActionOverride("fleeinv3",DestroySelf())
+    SetGlobal("tz_fleeinvi","GLOBAL",2)
+END
+
+IF
+  Global("tz_fleeinvi","GLOBAL",2)
+THEN
+  RESPONSE #100
+    CreateCreatureObject("fleeques",Player1,0,0,0)
+    SetGlobal("tz_fleeinvi","GLOBAL",3)
+END
+
+IF
+  Global("tz_githleev","GLOBAL",1)
+THEN
+  RESPONSE #100
+    FadeToColor([20.0],0)
+    Wait(3)
+    StartCutSceneMode()
+    StartCutScene("githleev")
+    SetGlobal("tz_githleev","GLOBAL",2)
+END
+

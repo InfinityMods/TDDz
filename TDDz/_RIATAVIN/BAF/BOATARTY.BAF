@@ -1,0 +1,25 @@
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId(Player1)
+    StorePartyLocations()
+    FadeToColor([30.0],0)
+    Wait(1)
+    Rest()
+    Wait(1)
+    //LeaveAreaLUAPanic("dd3319c1","",[514.656],0)
+    LeaveAreaLUAPanic("DDC119","",[514.656],0)
+    //LeaveAreaLUA("dd3319c1","",[514.656],8)
+    LeaveAreaLUA("DDC119","",[514.656],8)
+    MultiPlayerSync()
+    CreateCreature("riatjail",[377.689],4)
+    CreateCreature("enteri01",[491.530],4)
+    ApplySpell(Player1,1964)
+    Explore()
+    MoveViewPoint([765.772],INSTANT)
+    FadeFromColor([30.0],0)
+    Wait(3)
+    StartCutScene("boatart2")
+END
+

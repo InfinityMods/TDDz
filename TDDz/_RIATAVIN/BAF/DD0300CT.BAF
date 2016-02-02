@@ -1,0 +1,73 @@
+IF
+	Global("tz_dd0300ct","GLOBAL",0)
+THEN
+	RESPONSE #100
+		Explore()
+		CreateCreature("qcaptain",[1862.3603],4)
+		CreateCreature("dockmeet",[1778.2965],4)
+		SetGlobal("tz_dd0300ct","GLOBAL",1)
+END
+
+IF
+	Global("tz_dd0300ct","GLOBAL",1)
+	Global("tz_qcapsee","GLOBAL",0)
+THEN
+	RESPONSE #100
+		ActionOverride("qcaptain",StartDialog("qcaptain",Player1))
+		SetGlobal("tz_qcapsee","GLOBAL",1)
+END
+
+IF
+	Global("tz_dockactiontime","GLOBAL",1)
+THEN
+	RESPONSE #100
+		SetGlobal("tz_dockactiontime","GLOBAL",2)
+		StartCutSceneMode()
+		StartCutScene("dockwarn")
+END
+
+IF
+	Global("tz_dockattk","GLOBAL",1)
+THEN
+	RESPONSE #100
+		FadeToColor([20.0],0)
+		Wait(1)
+		CreateCreature("pirebd01",[1216.3059],4)
+		CreateCreature("pirebd02",[1387.3207],4)
+		CreateCreature("pirebd03",[1719.3219],4)
+		CreateCreature("pirebd04",[2008.3271],4)
+		CreateCreature("pirebd05",[2299.2949],4)
+		CreateCreature("pirebd06",[1570.2814],4)
+		CreateCreature("pirebd07",[1973.2732],4)
+		CreateCreature("pirebd08",[2382.2608],4)
+		CreateCreature("pirebd09",[2625.2774],4)
+		CreateCreature("pirebd10",[2303.2973],4)
+		CreateCreature("pirebd11",[1886.2475],4)
+		CreateCreature("pirebd12",[2529.2539],4)
+		CreateCreature("pirebd13",[2358.2731],4)
+		CreateCreature("pirebd14",[1987.2947],4)
+		CreateCreature("pirebd15",[1461.3019],4)
+		CreateCreature("pirebd16",[1494.2915],4)
+		CreateCreature("pirebd17",[1964.2645],4)
+		CreateCreature("dockhlp1",[1624.2931],4)
+		CreateCreature("dockhlp2",[1944.2645],4)
+		CreateCreature("dockhlp3",[2569.2796],4)
+		CreateCreature("dockhlp4",[1545.3159],4)
+		CreateCreature("dockhlp2",[1384.3200],4)
+		CreateCreature("dockhlp2",[2310.2960],4)
+		CreateCreature("dockhlp2",[1964.2900],4)
+		CreateCreature("dockpriz",[1980.380],4)
+		CreateCreature("dockpriz",[3190.490],4)
+		SetGlobal("tz_dockattk","GLOBAL",2)
+		Wait(1)
+		FadeFromColor([20.0],0)
+END
+
+IF
+	Global("tz_dockgold","GLOBAL",1)
+THEN
+	RESPONSE #100
+		StartCutSceneMode()
+		StartCutScene("dockmeet")
+END
+

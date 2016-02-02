@@ -1,0 +1,23 @@
+IF
+  !Range(Player1,10)
+THEN
+  RESPONSE #100
+    MoveToObject(Player1)
+END
+
+IF
+  Global("tz_jarlcavefound","AR1100",0)
+  See([PC])
+  Range([PC],15)
+THEN
+  RESPONSE #100
+    StartDialogNoSet([PC])
+END
+
+IF
+  Global("tz_jarlcavefound","AR1100",1)
+THEN
+  RESPONSE #100
+    EscapeArea()
+END
+

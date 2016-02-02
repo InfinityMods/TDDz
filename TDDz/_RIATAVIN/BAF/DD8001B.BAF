@@ -1,0 +1,8 @@
+IF
+  Global("tz_dd8001b","dd8001b",0)
+THEN
+  RESPONSE #100
+    CreateCreature("sandrain",[348.284],4)
+    SetGlobal("tz_dd8001b","dd8001b",1)
+END
+

@@ -1,0 +1,45 @@
+@0    = ~Hello there, wayfarer. Do you wish me to enchant an item?~
+@1    = ~Yes... if I have anything you can enchant, that is.~
+@2    = ~What is it you do?~
+@3    = ~Hmm... let me take a look then... hrm...erm...~
+@4    = ~I take simple amulets and enchant them with special properties. For a price, of course. One must make a living.~
+@5    = ~Interesting, I might return to see what you can do later.~
+@6    = ~Have I anything you could possibly enchant?~
+@7    = ~No, you don't have any amulets that I can use as a base. If you find yourself with some and want one enchanted, then return and I'll see what I can do for you.~
+@8    = ~Yes, you have a simple necklace here. I can enchant it for you if you wish me to.~
+@9    = ~How can you enchant it?~
+@10   = ~No, I've changed my mind. I don't want anything enchanted.~
+@11   = ~There are a number of ways... I shall list them to give you some options.~
+@12   = ~I can either make you a......
+Necklace of many missiles for 6000 gp
+A green stone amulet of mental protection for 8000 gp.
+An amulet that gives 5% magic resistance for 7000 gp.
+An amulet that gives 10% magic resistance for 13000 gp.
+An amulet of power with level drain protection and a 5 % magic immunity for 23000 gp.
+Amulet of poison protection for 7000 gp.
+Amulet that gives +3 saves vs breath weapons for 13000 gp.
+Amulet that gives +5 saves vs polymorph for 16000 gp.
+Amulet that gives +2 saves vs spells for 14000 gp.~
+@13   = ~Ah, you have a zios studded gem necklace here. I can use this as a base.~
+@14   = ~You have a Blue stone necklace here. I can use this for sure.~
+@15   = ~You have an Agni mani necklace... a fine base, indeed.~
+@16   = ~Rainbow Obsidian Necklace you have. This looks promising...~
+@17   = ~A Tiger Cowrie Shell Necklace will do nicely.~
+@18   = ~A Silver Necklace, eh? Not great, but it will suffice.~
+@19   = ~You have a Gold Necklace. Perfect...~
+@20   = ~You have a pearl necklace... most aesthetic and useful. Let me see...~
+@21   = ~Laeral's Tear Necklace... this is a fine piece of work. This would make a wondrous base...~
+@22   = ~You have a Bloodstone Amulet. Excellent.~
+@23   = ~Do any of those catch your eye? The one's you can afford, of course. Hehehe... the wizards always tell me my prices are too high, but they certainly can't do this as well as I.~
+@24   = ~No. I might return. Stay right here.~
+@25   = ~I would like to have a Necklace of Many Missiles.~
+@26   = ~I think a Green Stone Amulet would be most useful.~
+@27   = ~An amulet of 5% magic resistance catches my eye.~
+@28   = ~An amulet of 10% magic resistance catches my eye.~
+@29   = ~I need an Amulet of Power~
+@30   = ~An Amulet of Poison Protection would do nicely.~
+@31   = ~+3 saves vs breath weapons would prove useful.~
+@32   = ~+ 5 vs polymorph is good.~
+@33   = ~I want the amulet of +2 saves vs spells.~
+@34   = ~Bring a necklace and some money! We'll be best friends!~
+@35   = ~Than it shall be done.~

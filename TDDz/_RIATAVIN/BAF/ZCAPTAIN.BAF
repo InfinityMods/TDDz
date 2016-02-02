@@ -1,0 +1,9 @@
+IF
+  Global("tz_zcaptainsee","GLOBAL",0)
+  See([PC])
+  Range([PC],10)
+THEN
+  RESPONSE #100
+    StartDialogue("zcaptain",Player1)
+END
+

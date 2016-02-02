@@ -66,7 +66,7 @@ Wait(2)
 ActionOverride("elmin02",DestroySelf())
 ActionOverride("khelb02",DestroySelf())
 ActionOverride("wardmagc",DestroySelf())
-AddExperienceParty(400000)~ EXIT
+AddExperienceParty(ELMIN02_D_400000_A)~ EXIT
   IF ~~ THEN REPLY @22 DO ~CreateVisualEffectObject("spdimndr","elmin02")
 CreateVisualEffectObject("spdimndr","khelb02")
 CreateVisualEffectObject("spdimndr","wardmagc")
@@ -74,5 +74,5 @@ Wait(2)
 ActionOverride("elmin02",DestroySelf())
 ActionOverride("khelb02",DestroySelf())
 ActionOverride("wardmagc",DestroySelf())
-AddExperienceParty(400000)~ EXIT
+AddExperienceParty(ELMIN02_D_400000_B)~ EXIT
 END

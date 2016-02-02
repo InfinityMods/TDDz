@@ -1,0 +1,61 @@
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId(Player1)
+    //LeaveAreaLUA("dd0300ct","GTRSK002",[1733.3623],12)
+    LeaveAreaLUA("DDCT03","GTRSK002",[1733.3623],12)
+    MultiPlayerSync()
+    //SetMasterArea("dd0300ct")
+    SetMasterArea("DDCT03")
+    MultiPlayerSync()
+    FadeFromColor([20.0],0)
+    EndCutSceneMode()
+    SetGlobal("tz_zcaptainsee","GLOBAL",9)
+END
+
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId(Player2)
+    //LeaveAreaLUA("dd0300ct","GTRSK002",[1733.3623],12)
+    LeaveAreaLUA("DDCT03","GTRSK002",[1733.3623],12)
+END
+
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId(Player3)
+    //LeaveAreaLUA("dd0300ct","GTRSK002",[1733.3623],12)
+    LeaveAreaLUA("DDCT03","GTRSK002",[1733.3623],12)
+END
+
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId(Player4)
+    //LeaveAreaLUA("dd0300ct","GTRSK002",[1733.3623],12)
+    LeaveAreaLUA("DDCT03","GTRSK002",[1733.3623],12)
+END
+
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId(Player5)
+    //LeaveAreaLUA("dd0300ct","GTRSK002",[1733.3623],12)
+    LeaveAreaLUA("DDCT03","GTRSK002",[1733.3623],12)
+END
+
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId(Player6)
+    //LeaveAreaLUA("dd0300ct","GTRSK002",[1733.3623],12)
+    LeaveAreaLUA("DDCT03","GTRSK002",[1733.3623],12)
+END
+

@@ -1,15 +1,15 @@
 RESNAME 	NAME1	NAME2	UNIDENTIFIED_DESC	DESC	ICON		UNDROPPABLE COMMENTS
 BELTXX		+		20989	+					20990	+			++++++++	Girdle of Storm Giant Strength;DO NOT CHANGE, DD3503.baf use it in a trigger
 BUDGIE		21016	21016	+					21017	IBIRDS		++++++++	DD1900.are
-CITTERNZ	+		21035	21036				21037	ICITTERN	+			DD2016.are/PKSTORE2.sto
-CRYPTXX		+		21044	+					21045	BONECHM		+			Crypt Charm, DD3501.are@0xA34!
+CITTERNZ	+		21035	21036				21037	ICITTERN	.			DD2016.are/PKSTORE2.sto
+CRYPTXX		+		21044	+					21045	BONECHM		.			Crypt Charm, DD3501.are@0xA34!
 DDPKMAP		21071	21071	21071				21074	+			++++++++	Map to Purskal, pAR0509.BAF
 GHHAND		+		+		+					+		ICHILL		++++++++	DD3501.are
 LOTUS		21223	21223	21224				21224	IMISC1I		++++++++	ALAGAR.cre
-MISERY		+		21250	+					21251	IZZM5MH		+			Misery's Herald, DD3501.are@0xB4C!
+MISERY		+		21250	+					21251	IZZM5MH		.			Misery's Herald, DD3501.are@0xB4C!
 NIGHTHND	+		+		+					+		+			++++++++	DD3503.are
 NIGHTRNG    +		+		+					+		+			++++++++	DD3503.are
 ORFALOG		21263	21263	21264				21264	IMISC86		++++++++	DD1900.are
 QUAKEHAM	+		20063	+					21286	QUAKEB		++++++++	DD1900.are
-SAPHIREX	+		21327	+					21328	0			+			DD2016.are/PKSTORE2.sto
-TYRANT		+		20076	+					21413	+			+			Blade of the Tyrant, DD3501.are@0xC50!
+SAPHIREX	+		21327	+					21328	0			.			DD2016.are/PKSTORE2.sto
+TYRANT		+		20076	+					21413	+			.			Blade of the Tyrant, DD3501.are@0xC50!

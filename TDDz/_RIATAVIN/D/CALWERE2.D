@@ -48,8 +48,9 @@ END
 
 IF ~~ THEN BEGIN 8 // from: 9.1 7.0
   SAY @19
-  IF ~~ THEN DO ~AddExperienceParty(5000) // original=10000
+  IF ~~ THEN DO ~AddExperienceParty(CALWERE2_D_10000) // TDD xp=10000
 ReputationInc(1)
+TakePartyItem("WATBLOOD") // Fixed
 ActionOverride("calwere1",DestroySelf())
 ActionOverride("calwere2",EscapeArea())~ EXIT
 END
@@ -62,8 +63,9 @@ END
 
 IF ~~ THEN BEGIN 10 // from: 9.0
   SAY @23
-  IF ~~ THEN DO ~AddExperienceParty(6000)
+  IF ~~ THEN DO ~AddExperienceParty(CALWERE2_D_6000)	// TDD xp=6000
 GivePartyGold(400)
+TakePartyItem("WATBLOOD") // Fixed
 ActionOverride("calwere1",DestroySelf())
 ActionOverride("calwere2",EscapeArea())~ EXIT
 END

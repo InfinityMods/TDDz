@@ -1,0 +1,10 @@
+IF
+  Global("tz_xcapsee","GLOBAL",0)
+  See([PC])
+  Range([PC],20)
+THEN
+  RESPONSE #100
+    StartDialogNoSet([PC])
+    SetGlobal("tz_xcapsee","GLOBAL",1)
+END
+

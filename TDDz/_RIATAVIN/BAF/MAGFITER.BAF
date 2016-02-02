@@ -67,7 +67,7 @@ THEN
     Kill("orgoth02")
     ActionOverride("orgoth02",DestroySelf())
     Wait(2)
-    AddexperienceParty(300000)
+    AddexperienceParty(MAGFITER_BAF_300000)
     ReputationInc(2)
     SetGlobal("tz_orgothover","GLOBAL",1)
     EndCutSceneMode()

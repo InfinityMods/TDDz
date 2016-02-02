@@ -1,0 +1,39 @@
+IF
+  Global("tz_dd0300x1","GLOBAL",0)
+THEN
+  RESPONSE #100
+    CreateCreature("zprize1",[675.813],4)
+    CreateCreature("zprize2",[759.743],4)
+    CreateCreature("zprize3",[878.677],4)
+    SetGlobal("tz_dd0300x1","GLOBAL",1)
+END
+
+IF
+  Global("tz_dd0300x1","GLOBAL",1)
+THEN
+  RESPONSE #100
+    StartCutSceneMode()
+    StartCutScene("govapol")
+END
+
+IF
+  Global("tz_dd0300x1","GLOBAL",2)
+THEN
+  RESPONSE #100
+    GiveItemCreate("silblade",Player1,0,0,0)
+    GiveItemCreate("elshukar",Player1,0,0,0)
+    GiveItemCreate("botabode",Player1,0,0,0)
+    AddexperienceParty(DD1002X1_BAF_300000)
+    ReputationInc(1)
+    SetGlobal("tz_dd0300x1","GLOBAL",3)
+END
+
+IF
+  Global("tz_dd0300x1","GLOBAL",3)
+THEN
+  RESPONSE #100
+    Wait(3)
+    StartCutSceneMode()
+    StartCutScene("govamove")
+END
+

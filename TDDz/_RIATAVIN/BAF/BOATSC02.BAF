@@ -1,0 +1,27 @@
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId(Player1)
+    DisplayStringHead("riat01",@10041)
+    Wait(6)
+    DisplayStringHead("riat04",@10042)
+    DisplayStringHead("riat02",@10042)
+    DisplayStringHead("riat03",@10042)
+    DisplayStringHead("riat05",@10042)
+    Wait(4)
+    DisplayStringHead("riat01",@10043)
+    Wait(12)
+    MoveViewPoint([1080.707],VERY_FAST)
+    Wait(5)
+    DisplayStringHead("riatjail",@10044)
+    Wait(6)
+    FadeToColor([30.0],0)
+    TakePartyItem("amulrat")
+    Wait(3)
+    RestorePartyLocations()
+    MultiPlayerSync()
+    EndCutSceneMode()
+    SetGlobal("tz_zcaptainsee","GLOBAL",2)
+END
+

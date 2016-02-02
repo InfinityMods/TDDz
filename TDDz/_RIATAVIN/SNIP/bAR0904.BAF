@@ -1,0 +1,68 @@
+IF
+	Global("tz_bansheetalos","GLOBAL",1)
+	!Exists("baurian")
+THEN
+	RESPONSE #100
+		SetGlobal("tz_bansheetalos","GLOBAL",2)
+		CreateCreature("baurian",[864.897],4) // Baurian Arathor
+END
+
+IF
+	Global("tz_tartaruscuta","GLOBAL",1)
+THEN
+	RESPONSE #100
+		StartCutSceneMode()
+		CutSceneId(Player1)
+		FadeToColor([20.0],0)
+		Wait(2)
+		StartCutScene("tartfoil")
+END
+
+IF
+	Global("tz_tartaruscuta","GLOBAL",2)
+THEN
+	RESPONSE #100
+		SetGlobal("tz_tartaruscuta","GLOBAL",3)
+		StartCutSceneMode()
+		CutSceneId(Player1)
+		FadeToColor([20.0],0)
+		Wait(2)
+		ActionOverride("baurian",DestroySelf())
+		StartCutScene("gototart")
+END
+
+IF
+	Global("tz_demninvidlgb","GLOBAL",2)
+	!Exists("baurian2")
+THEN
+	RESPONSE #100
+		SetGlobal("tz_demninvidlgb","GLOBAL",3)
+		CreateCreature("baurian2",[864.897],0) // Baurian Arathor
+END
+
+IF
+	Global("tz_baurianbuggeroff","GLOBAL",1)
+THEN
+	RESPONSE #100
+		SetGlobal("tz_baurianbuggeroff","GLOBAL",2)
+		ActionOverride("baurian2",EscapeArea())
+END
+
+IF
+	Global("tz_baurianbuggeroff","GLOBAL",2)
+	!Exists("demninv2")
+THEN
+	RESPONSE #100
+		SetGlobal("tz_baurianbuggeroff","GLOBAL",3)
+		CreateCreatureObject("demninv2",Player1,0,0,0) // Barl
+END
+
+IF
+	Global("tz_drowarty","GLOBAL",1)
+THEN
+	RESPONSE #100
+		SetGlobal("tz_drowarty","GLOBAL",2)
+		ActionOverride("demninv2",DestroySelf())
+END
+
+

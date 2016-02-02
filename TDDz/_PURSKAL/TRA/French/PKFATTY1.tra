@@ -1,0 +1,8 @@
+@0     = ~Bonjour, l'ami. Besoin de quelque chose ?~ ~Bonjour, l'amie. Besoin de quelque chose ?~
+@1     = ~J'apprends juste à connaître le village et la couleur locale.~
+@2     = ~Je voudrais savoir où je peux trouver le chef du village. Je souhaite lui parler avant de traverser.~
+@3     = ~Eh bien, ce n'est pas courant dans le coin. Je m'appelle Branthorl, voici ma femme, Faith ; et voici mon garçon, Nielias. Vous êtes le bienvenu ici, mais comme vous pouvez le voir, notre vie est très différente de celle que procure Athkatla.~ ~Eh bien, ce n'est pas courant dans le coin. Je m'appelle Branthorl, voici ma femme, Faith ; et voici mon garçon, Nielias. Vous êtes la bienvenue ici, mais comme vous pouvez le voir, notre vie est très différente de celle que procure Athkatla.~
+@4     = ~Alors c'est Thorknar que vous voulez voir. Il est le chef des mineurs ici, et comme la plupart d'entre eux, c'est un demi-orque. Vous devriez le trouver dans le hall principal, sans doute. Sur votre route, ne soyez pas effrayé par les squelettes... ce sont juste des animaux dépecés pour leur fourrure. Je ne voudrais pas que vous pensiez que nous sommes des barbares...~ ~Alors c'est Thorknar que vous voulez voir. Il est le chef des mineurs ici, et comme la plupart d'entre eux, c'est un demi-orque. Vous devriez le trouver dans le hall principal, sans doute. Sur votre route, ne soyez pas effrayée par les squelettes... ce sont juste des animaux dépecés pour leur fourrure. Je ne voudrais pas que vous pensiez que nous sommes des barbares...~
+@5     = ~Merci. Je vais aller le voir tout de suite.~
+@6     = ~Pourriez-vous m'en dire davantage sur vous-même et les autres qui vivent ici.~
+@7     = ~Ça suffit. Adieu.~

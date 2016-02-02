@@ -1,0 +1,11 @@
+@0     = ~Bien, bien... Nous nous rencontrons enfin, Enfant de Bhaal.~ [ARTCAVE1]
+@1     = ~Dans des circonstances préparées, je le sens.~
+@2     = ~Que diable voulez-vous, voleur ? Pourquoi me suivez-vous ?~
+@3     = ~Vous m'avez manifestement pisté. Votre intention était encore plus évidente. Je ne peux pas vous laisser ruiner ma réputation une deuxième fois.~
+@4     = ~Ruiner votre réputation ? Est-ce ce dont il est question ? Vous avez échoué dans votre tentative de perturber le commerce d'Athkatla, et votre fierté est blessée. Ça semble être une raison bien pauvre pour vouloir me tuer.~
+@5     = ~Je n'ai pas besoin de raison pour plonger ma lame à travers votre coeur. Vous avez marché en travers de ma route, et personne ne s'en sort après avoir fait cette erreur.~ [ARTCAVE2]
+@6     = ~Vous ne pouvez pas gagner, voleur. Je suis plus fort que vous.~ ~Vous ne pouvez pas gagner, voleur. Je suis plus forte que vous.~
+@7     = ~Je vais percer votre coeur avant que vous ne frappiez le mien, voleur.~
+@8     = ~Vous semblez sûr... Mais vous n'avez jamais rencontré Artemis Entreri. Les bardes ne savent rien de mon talent car ils ne m'ont jamais croisé. On ne connaît mon talent que lorsqu'on en a été victime.~ ~Vous semblez sûre... Mais vous n'avez jamais rencontré Artemis Entreri. Les bardes ne savent rien de mon talent car ils ne m'ont jamais croisé. On ne connaît mon talent que lorsqu'on en a été victime.~
+@9     = ~Vous souhaitez régler ça au combat, mais vous êtes seul et vous allez mourir pour vos crimes envers moi.~
+@10    = ~La solitude est la voie d'Entreri, mais pas cette fois-ci. Préparez-vous à affronter votre supérieur.~ [ARTCAVE3]

@@ -1,0 +1,45 @@
+@0    = ~¡Buenas!, caminante. ¿Deseáis que os encante algún objeto?~
+@1    = ~Sí... si es que tengo algo que podáis encantar.~
+@2    = ~¿Qué queréis hacer?~
+@3    = ~Hmm... dejadme mirar entonces... hrm... erm...~
+@4    = ~Cojo los amuletos normales y los encanto con propiedades especiales. Por un precio, desde luego. Uno tiene que ganarse la vida.~
+@5    = ~Interesante, podría regresar más tarde para ver lo que podéis hacer.~
+@6    = ~¿Poseo algo que podáis encantar?~
+@7    = ~No, no tenéis ningún amuleto que pudiera usar como base. Si encontráis alguno y queréis encantarlo, regresad y veré qué puedo hacer por vos.~
+@8    = ~Sí, por aquí tenéis un collar normal. Puedo encantarla para vos si tenéis interés.~
+@9    = ~¿Cómo podéis encantarlo?~
+@10   = ~No, he cambiado de idea. No quiero encantar nada.~
+@11   = ~Hay una cierta cantidad de formas... Os mostaré una lista sobre la que podréis escoger.~
+@12   = ~Puedo haceros un.....
+Collar de proyectiles por 6.000 po.
+Amuleto de piedra verde de protección mental por 8.000 po.
+Amuleto que concede 5% de resistencia a la magia por 7.000 po.
+Amuleto que concede 10% de resistencia a la magia por 13.000 po.
+Amuleto de poder con protección de drenado de niveles y 5% de inmunidad mágica po 23.000 po.
+Amuleto de procección contra venenos por 7.000 po.
+Amuleto que otorga +3 de salvación contra armas de aliento por 13.000 po.
+Amuleto que otorga +5 de salvación contra polimorfización por 16.000 po.
+Amuleto que otorga +2 de salvación contra conjuros por 14.000 po.~
+@13   = ~Oh, aquí tenéis un Collar tachonado con gemas de cíos. Puedo usarlo como base.~
+@14   = ~Aquí tenéis un Collar de lapislázuli. Seguro que puedo usarlo.~
+@15   = ~Aquí tenéis un Collar de Agni mani... una base muy refinada en verdad.~
+@16   = ~Tenéis un Collar de la obsidiana del arco iris. Esto parece prometedor...~
+@17   = ~Un Collar de caparazón de cauri atigrado lo hará bastante bién.~
+@18   = ~Un Collar de plata, ¿eh? No es una maravilla, pero será suficiente.~
+@19   = ~Tenéis un Collar de oro, Perfecto...~
+@20   = ~Tenéis un Collar de perlas... de muy buen gusto y conveniente. Dejadme ver...~
+@21   = ~Un Collar de lágrimas de Laeral... es una pieza muy fina. Será una base maravillosa...~
+@22   = ~Tenéis un Amuleto de hematites. Excelente.~
+@23   = ~¿Cuál es de vuestro agrado? Estoy seguro que alguien como vos puede permitirselo. Jejeje... los magos siempre dicen que mis precios son muy altos, pero la verdad es que no pueden hacerlo mejor tan bien como yo.~
+@24   = ~No. Puede que regrese. Quedáos aquí.~
+@25   = ~Me gustaría tener un Collar de proyectiles.~
+@26   = ~Creo que un Amuleto de piedra verde me sería muy útil.~
+@27   = ~El Amuleto que concede 5% de resistencia a la magia me ha guiñado el ojo.~
+@28   = ~El Amuleto que concede 10% de resistencia a la magia me ha guiñado el ojo.~
+@29   = ~Necesito un Amuleto de poder.~
+@30   = ~Un Amuleto de protección contra venenos estaría bastante bien.~
+@31   = ~+3 de salvación contra armas de aliento demostrará su utilidad.~
+@32   = ~+5 contra la polimorfización está bien.~
+@33   = ~Quiero el Amuleto de +2 de salvación contra conjuros.~
+@34   = ~¡Traed un collar y algo de dinero! ¡Seremos los mejores amigos!~
+@35   = ~Así se hará.~

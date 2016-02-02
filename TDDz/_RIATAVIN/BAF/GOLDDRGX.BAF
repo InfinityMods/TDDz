@@ -1,0 +1,19 @@
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId(Player1)
+    Wait(1)
+    MoveViewPoint([1400.1280],VERY_FAST)
+    ActionOverride("draggld1",MoveToPoint([1250.1280]))
+    ActionOverride(Player2,FaceObject("draggld1"))
+    ActionOverride(Player3,FaceObject("draggld1"))
+    ActionOverride(Player4,FaceObject("draggld1"))
+    ActionOverride(Player5,FaceObject("draggld1"))
+    ActionOverride(Player6,FaceObject("draggld1"))
+    FaceObject("draggld1")
+    Wait(8)
+    SetGlobal("tz_draggoldinvi","GLOBAL",3)
+    EndCutSceneMode()
+END
+

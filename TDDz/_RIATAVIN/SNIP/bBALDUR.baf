@@ -1,0 +1,51 @@
+IF
+  Global("tz_artraise","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobalTimer("tz_artjarlrise","GLOBAL",ONE_DAY)
+    SetGlobal("tz_artraise","GLOBAL",2)
+END
+
+IF
+  Global("tz_risetimex","GLOBAL",0)
+  GlobalTimerExpired("tz_artjarlrise","GLOBAL")
+THEN
+  RESPONSE #100
+    FadeToColor([20.0],0)
+    Wait(2)
+    SetGlobal("tz_risetimex","GLOBAL",1)
+    StartCutSceneMode()
+    StartCutScene("raiseart")
+END
+
+IF
+  GlobalTimerExpired("tz_DrowItemsTimer","GLOBAL")
+  Global("tz_DrowItems","GLOBAL",1) 
+  OR(2)
+	TimeOfDay(MORNING)
+	TimeOfDay(DAY)
+  OR(2)
+	AreaType(CITY)
+	AreaType(OUTDOOR)
+THEN
+  RESPONSE #100
+	CreateCreatureObject("rabbit01",Player1,0,0,0) // Rabbit
+	ActionOverride("rabbit01", ChangeAIScript("DWITEMS",OVERRIDE))
+	SetGlobal("tz_DrowItems","GLOBAL",2)  
+END
+
+IF
+  GlobalTimerExpired("tz_DrowItemsTimer_Art","GLOBAL")
+  Global("tz_DrowItems_Art","GLOBAL",0) 
+  OR(2)
+	TimeOfDay(MORNING)
+	TimeOfDay(DAY)
+  OR(2)
+	AreaType(CITY)
+	AreaType(OUTDOOR)
+THEN
+  RESPONSE #100
+	CreateCreatureObject("rabbit01",Player1,0,0,0) // Rabbit
+	ActionOverride("rabbit01", ChangeAIScript("DWITEMS",OVERRIDE))
+	SetGlobal("tz_DrowItems_Art","GLOBAL",1)  
+END

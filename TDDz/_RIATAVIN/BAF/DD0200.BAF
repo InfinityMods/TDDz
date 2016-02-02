@@ -2,7 +2,7 @@ IF
   Global("tz_creature","dd0200",0)
 THEN
   RESPONSE #100
-    CreateCreature("nameless",[557.1144],4) // TODO NOW
+    // CreateCreature("nameless",[557.1144],4) // TODO should have no animation but HELMRAT.itm seems buggy... 
     CreateCreature("wardabi1",[1064.944],4)
     CreateCreature("wardabi2",[1419.1831],4)
     CreateCreature("wardtief",[2513.2202],4)

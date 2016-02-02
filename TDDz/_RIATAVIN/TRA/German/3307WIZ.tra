@@ -1,0 +1,38 @@
+@0    = ~Willkommen, Reisender. Ich bin Avrabar, ein Magierlehrling. Wollt Ihr etwas Bestimmtes von mir?~ ~Willkommen, Reisende. Ich bin Avrabar, ein Magierlehrling. Wollt Ihr etwas Bestimmtes von mir?~
+@1    = ~So, ein Magier? Habt Ihr Zaubersprüche oder Gegenstände, die wir erwerben können?~
+@2    = ~Nicht jetzt. Wir werden später zurückkommen.~
+
+@3    = ~Rivaldo sagte uns, dass wir Euch aufsuchen sollen. Sucht Ihr nach Abenteurern?~
+
+@4    = ~In der Tat habe ich eine Auswahl an Zaubersprüchen hier. Seht Euch ruhig um, aber lasst Eure Finger da, wo sie sind! Mein Meister wäre nicht sehr erfreut, wenn seine Schriftrollen verschmutzt wären.~
+
+@5    = ~Ja, das tue ich. Es wird aber eine Weile dauern, Euch alles zu erklären. Seid Ihr bereit, Euch alles anzuhören?~
+
+@6    = ~Ja, natürlich... Ich höre gerne immer wieder neue Geschichten.~
+@7    = ~Nein, momentan habe ich keine Zeit.~
+@8    = ~Vor langer Zeit herrschte in Amn ein grosses politisches Durcheinander. Man machte wieder einmal die Magier zum Sündenbock. Deswegen wurden die Magier aus den grossen Städten verbannt und in die Wildnis geschickt.~
+@9    = ~Viele der Magier konnten der Wildnis nicht sehr lange trotzen, aber einige überlebten. Einer von ihnen hatte besonderes Glück und fand eine verlassene Befestigung, die er zu seinem Heim machte. Dort führte er seine arkanen Studien fort.~
+
+@10   = ~Orgoth war sein Name. Er war ein mächtiger Magier, der durch seine Studien noch mächtiger wurde. Seine Behausung ist unter dem namen "Orgoths Turm" bekannt.~
+
+@11   = ~Er hatte die Zauberkünste perfektioniert, aber er war verbittert wegen der Tatsache, dass Amn ihn verstossen hatte. Er sann nach Rache.~
+
+@12   = ~Eines dunklen Tages begann er, sehr mächtige Dämonen der Hölle zu beschwören, die ihm dienen sollten. Er war in der Lage, einige der dämonischen Biester an seine Worte zu binden, aber er beschwörte sie gleich zu Dutzenden.~
+
+@13   = ~Wie es der Zufall wollte, war einer dieser Dämonen ziemlich verschlagen und hinterlistig... Errtu war, glaube ich, sein Name. Er führte den Angriff gegen den überheblichen Magier, und viele Dämonen wurden vernichtet, bevor Errtu den Kopf von Orgoth in seinen Klauen hielt.~
+@14   = ~Ein schöne Geschichte, aber das ist alles lange her. Was wollt Ihr also von uns?~
+
+@15   = ~Nun, Orgoth war sicherlich kein Dummkopf. Er traf Vorkehrungen, um gegen alle Eventualitäten gewappnet zu sein. Es wird behauptet, dass er, als er starb, seine grösste Vorbereitung traf. Jedes Wesen, das seinen Tod mit angesehen hatte, war dem langsamen Zerfall ausgesetzt und endete in einem grausamen, qualvollen Tod.~
+
+@16   = ~Jeder Dämon, der überlebt hatte, war davon betroffen. Aber es ist ja weitgehend bekannt, dass jeder Dämon, der auf der materiellen Ebene getötet wird, hundert Jahre in der Hölle dienen muss. Diese Jahre sind nun vorüber und ich spüre, dass diese Biester zurückgekehrt sind.~
+
+@17   = ~Wie könnt Ihr dies wissen?~
+
+@18   = ~Ich fühle es tief in mir... Ich kann spüren, wie das Böse in dem Turm, der nicht weit weg von hier ist, zu erwachen beginnt. Vor langer Zeit wurde er versiegelt, um die eventuell wieder erscheinenden Kreaturen und auch Plüderer davon abzuhalten, in oder aus dem Turm zu gelangen. Nur wenige kennen den Standort des Turmes, dennoch habe ich das Gefühl, dass die Dämonen auf Dauer von den Siegeln nicht zurückgehalten werden können.~
+
+@19   = ~Ich muss mich vergewissern, dass diese Dämonen nicht zurückgekehrt sind und die Bannzauber nicht durchbrechen, während wir uns unterhalten. Auch kann ich nicht genau sagen, ob sie zu dem genauen Ort ihres Todes zurückkehren werden. Ich muss sicher sein. Da der Turm in der Nähe ist, wäre Riatavin verloren, falls die Siegel von diesen Kreturen durchbrochen würden...~
+@20   = ~Ich möchte, dass Ihr diese zwei Schutzsteine nehmt. Einer ist für den Haupteingang, der den stärksten Bannzauber hat. Der Stein wird den Eingang öffnen, aber danach wahrscheinlich zerfallen. Der zweite Stein wird Euch die Bannzauber der Türen im inneren passieren lassen. Geht hinein und berichtet mir über Eure Entdeckungen. Und wenn Ihr auf Dämonen trefft... seht zu, dass sie nicht ausbrechen... zumindest für die nächsten 100 Jahre.~
+@21   = ~Euer Anliegen scheint annehmbar zu sein. Ich werde mich dorthin begeben, wenn ich einige andere Dinge erledigt habe.~
+
+@22   = ~Ich bin mir nicht sicher. Ich werde die Steine nehmen, kann aber nicht sicher versprechen, dass ich die Aufgabe erledigen werde.~
+@23   = ~Sehr schön. Es eilt nicht so sehr. Wenn sie diese Bannzauber brechen wollen, dann wird dies einige Zeit in Anspruch nehmen.~

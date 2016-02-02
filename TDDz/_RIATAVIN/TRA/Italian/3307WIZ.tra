@@ -1,0 +1,25 @@
+@0    = ~Benvenuto, viaggiatore. Io sono Avrabar, un mago apprendista. C'è qualcosa che vuoi in particolare?~
+@1    = ~Un mago, eh? Hai qualche incantesimo od oggetto che si può acquistare?~
+@2    = ~Per ora nulla. Magari tornerò più tardi.~
+@3    = ~Rivaldo mi ha detto di cercarti. Stai cercando avventurieri?~
+@4    = ~In verità, ho una collezione di pergamene qui. Sentiti libero di darci un'occhiata, ma tieni a posto le mani! Al mio maestro non fa piacere se le sue pergamene vengono sporcate.~
+@5    = ~Ah si. Tutto ciò richiederà un po' di tempo per spiegarti la cosa, sei disposto ad ascoltare quello che dovresti fare?~
+@6    = ~Si, certamente... Sono sempre disposto ad ascoltare una storia.~
+@7    = ~No, non ho tempo in questo momento.~
+@8    = ~Tanto tempo fa, quando Amn fu coinvolta in un grande disordine politico, la colpa fu data agli stregoni. Per questo motivo, i maghi furono esiliati dalle grandi città ed inviati lontano in luoghi selvaggi.~
+@9    = ~Naturalmente, molti maghi non durarono molto in quei luoghi selvaggi, ma alcuni si trovarono bene. Uno in particolare si ambientò molto bene, riuscì a scoprire una fortezza abbandonata e ne fece la sua casa per proseguire i suoi studi arcani.~
+@10   = ~Si chiamava Orgoth; un potente mago che riceveva la maggior parte del suo potere dai suoi faticosi studi. La dimora dove abitava è ora conosciuta come la Torre di Orgoth.~
+@11   = ~Siccome raggiungeva livelli di conoscenza sempre più alti, la sua sicurezza si fece sempre più audace. Perfezionò la sua arte, ma era amareggiato nei confronti della gente dell'Amn che lo aveva esiliato. Voleva vendicarsi.~
+@12   = ~Un giorno oscuro, iniziò ad evocare dei demoni di grande potenza dagli Abissi, per servirlo. Era, in effetti, in grado di sottometterne alcuni al suo volere, ma iniziò ad evocarne a dozzine.~
+@13   = ~Il caso volle che uno dei demoni era uno dei più grandi corruttori e perfidi... Errtu, credo che questo fosse il suo nome. Lui portò l'attacco contro il potente e superbo mago, e molti demoni morirono prima che Errtu mise il suo artiglio nel cuore di Orgoth.~
+@14   = ~Una storia molto interessante. Ma tutto questo fa parte del passato. Qual'é il punto principale del racconto?~
+@15   = ~Beh, Orgoth non era un uomo stupido. Aveva studiato molti imprevisti che sarebbero potuti succedere e fissò delle contingenze. Si dice che, come morì, scattarono la maggior parte delle contingenze che aveva fissato. Il corpo di tutti quelli che avevano visto la sua morte iniziarono ad imputridirsi in una lenta e dolorosa agonia.~
+@16   = ~Ogni demone che sopravvisse fu comunque influenzato da tutto ciò, ma come si sa, un demone che rimane ucciso nel piano materiale dovrà rimanere ad espiare un centinaio di anni nell'Abisso. Questi anni sono passati, ed io sento che le bestie sono ritornate.~
+@17   = ~Come fai a saperlo?~
+@18   = ~Lo sento dal profondo di me stesso...Io posso sentire la malvagità provenire da quella torre, che si trova non lontano da qui. Essa fu sigillata molto tempo fa, nella speranza che se le creature fossero ritornate, o se qualche furfante avesse provato a saccheggiarla, non si sarebbe potuto né entrare e né uscire. Pochi conoscono l'esatto luogo della torre, tuttavia io non posso ignorare di avere la sensazione che se tornassero i demoni sarebbero troppo potenti e non sarebbero ostacolati da semplici difese.~
+@19   = ~Vorrei assicurarmi che quei demoni non siano ritornati, e che non siano state rimosse le difese di cui ho parlato. Sebbene non possa dire con certezza se torneranno nel punto esatto dove sono stati uccisi, ho bisogno tuttavia di saperlo con esattezza. Stando così vicino alla torre, Riatavin sarebbe condannata se i sigilli fossero aperti da quelle terribili creature...~
+@20   = ~Voglio che tu prenda queste due pietre sigillo. Una è per la porta principale che ha la difesa maggiore e più forte. La pietra aprirà la porta, anche se potrebbe rompersi. La seconda non si romperà, ed aprirà tutte le difese delle porte interne. Vai là e dimmi quello che scoprirai. E se i demoni saranno là... assicurati che non sfuggano... almeno per altri 100 anni.~
+@21   = ~Il tuo incarico sembra chiaro ma rischioso. Mi avventurerò là quando avrò terminato i miei affari.~
+@22   = ~Non sono molto sicuro. Prenderò le pietre, ma non so se accetterò l'incarico.~
+@23   = ~Molto bene. Non c'è fretta. Anche se romperanno quelle difese riuscirò comunque a prenderli in tempo.~
+

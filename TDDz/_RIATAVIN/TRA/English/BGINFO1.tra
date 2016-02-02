@@ -1,0 +1,17 @@
+@0    = ~Hullo there. Pleased ta meet ya and welcome to Riatavin. I know my way around here pretty well. If ya want to know something, just ask.~
+@1    = ~No thank you, I can find my own way.~
+@2    = ~Yes, I would like to ask a few questions.~
+@3    = ~Ask away, then. Are you seeking a pub, a forge, or any people in particular?~
+@4    = ~I would like to find rest. Could you point me to an inn?~
+@5    = ~Are there any smiths in this town?~
+@6    = ~Has this town any groups of power?~
+@7    = ~Never mind, I don't have any questions for you.~
+@8    = ~There is a very expensive inn to the southwest, but it is well worth the gold. A more cozy one lies to the southeast.~
+@9    = ~Thank you, I'll be off in those directions.~
+@10   = ~I have some more questions.~
+@11   = ~We have a most renowned smithy in the Northeastern corner of town. The smith, Edheldor, should have an impressive stock of arms and armour...not to mention what he could forge for you, given the adequate materials and compensation.~
+@12   = ~Wonderful. I will go there straight away.~
+@13   = ~Well there are a few that dwell here in Riatavin. There is the corrupted Silent Blade clan. Then there is the roaming guards of Riatavin who try to maintain the law. But then again, they have no trouble taking bribes from the thieves.~
+@14   = ~Do they have some building or stronghold in the area?~
+@15   = ~The guards stay at the large manor to the north east, far from a strong hold as you can surely see. The thieves...well no body knows of their head quarters' location.~
+@16   = ~Okay, I'll keep and eye out on my travels.~

@@ -1,0 +1,29 @@
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId(Player1)
+    MoveViewPoint([640.507],INSTANT)
+    ActionOverride("riatjail",FaceObject(Player1))
+    FaceObject("riatjail")
+    Wait(4)
+    DisplayStringHead("riatjail",@10028)
+    Wait(6)
+    DisplayStringHead(Player1,@10029)
+    Wait(7)
+    DisplayStringHead("riatjail",@10030)
+    Wait(6)
+    DisplayStringHead("riatjail",@10031)
+    Wait(8)
+    DisplayStringHead("riatjail",@10032)
+    Wait(9)
+    DisplayStringHead(Player1,@10033)
+    Wait(5)
+    DisplayStringHead("riatjail",@10034)
+    Wait(7)
+    ActionOverride("riatjail",EscapeArea())
+    Wait(4)
+    EndCutSceneMode()
+    SetGlobal("tz_riatlock","GLOBAL",5)
+END
+

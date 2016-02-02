@@ -1,0 +1,6 @@
+BEGIN ~DWGARD02~
+
+IF ~!Allegiance(Myself,ENEMY)~ THEN BEGIN 0
+  SAY @0
+  IF ~~ THEN REPLY @1 EXIT
+END

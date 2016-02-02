@@ -1,0 +1,45 @@
+@0    = ~Witaj, podró¿niku. Chcesz abym umagiczni³ jakiœ przedmiot?~ ~Witaj, podró¿niczko. Chcesz abym umagiczni³ jakiœ przedmiot?~
+@1    = ~Tak... to jest, jeœli mam coœ co mo¿esz umagiczniæ.~
+@2    = ~Jak to wygl¹da?~
+@3    = ~Hmm... daj mi spojrzeæ... hm...er...~
+@4    = ~Biorê proste amulety i nadajê im specjalne w³aœciwoœci. Za odpowiedni¹ cenê, oczywiœcie. Muszê jakoœ zarabiaæ.~
+@5    = ~Interesuj¹ce, mo¿e wrócê póŸniej i zobaczê co mo¿esz jeszcze zrobiæ.~
+@6    = ~Mam coœ co mo¿esz umagiczniæ?~
+@7    = ~Nie, nie masz ¿adnych amuletów, których móg³bym u¿yæ. Jeœli jakieœ znajdziesz i bêdziesz chcia³ umagiczniæ, wróæ a ja zobaczê co da siê zrobiæ.~ ~Nie, nie masz ¿adnych amuletów, których móg³bym u¿yæ. Jeœli jakieœ znajdziesz i bêdziesz chcia³a umagiczniæ, wróæ a ja zobaczê co da siê zrobiæ.~
+@8    = ~Tak, masz tu prosty naszyjnik. Mogê go dla ciebie umagiczniæ, jeœli chcesz.~
+@9    = ~W jaki sposób nadajesz magiê?~
+@10   = ~Nie, zmieni³em zdanie. Nie chcê nic umagiczniaæ.~ ~Nie, zmieni³am zdanie. Nie chcê nic umagiczniaæ.~
+@11   = ~Jest wiele sposobów... Wymieniê je, byœ móg³ wybraæ.~ ~Jest wiele sposobów... Wymieniê je, byœ mog³a wybraæ.~
+@12   = ~Mogê wykonaæ.....
+Naszyjnik pocisków za 6000 sztuk z³ota.
+Amulet z zielonym kamieniem ochrony umys³u za 8000 sztuk z³ota.
+Amulet daj¹cy 5% odpornoœci na magiê za 7000 sztuk z³ota.
+Amulet daj¹cy 10% odpornoœci na magiê za 13000 sztuk z³ota.
+Amulet mocy z ochron¹ przed wyssaniem poziomów i 5% niewra¿liwoœci¹ na magiê za 23000 sztuk z³ota.
+Amulet ochrony przed trucizn¹ za 7000 sztuk z³ota.
+Amulet daj¹cy +3 do rzutów przeciwko broniom oddechu za 13000 sztuk z³ota.
+Amulet daj¹cy +5 do rzutów przeciwko polimorfii za 16000 sztuk z³ota.
+Amulet daj¹cy +2 do rzutów przeciwko zaklêciom za 14000 sztuk z³ota.~
+@13   = ~Ach, masz naszyjnik wysadzany kamieniami Zios. Mogê go u¿yæ.~
+@14   = ~Masz naszyjnik z nefrytami. Z pewnoœci¹ coœ z tego bêdzie.~
+@15   = ~Masz naszyjnik Agni Mani... œwietny jako baza wyjœciowa.~
+@16   = ~Naszyjnik z têczowym obsydianem. To wygl¹da obiecuj¹co...~
+@17   = ~Naszyjnik z muszelkami œwietnie siê nada.~
+@18   = ~Srebrny naszyjnik, eh? Nic szczególnego, ale wystarczy.~
+@19   = ~Masz z³oty naszyjnik. Idealny...~
+@20   = ~Masz per³owy naszyjnik... najpiêkniejszy i najbardziej u¿yteczny. Niech spojrzê...~
+@21   = ~Naszyjnik £za Laeral... Œwietna robota. Bêdzie cudownym punktem wyjœcia...~
+@22   = ~Masz amulet z krwawnikiem. Wyœmienicie.~
+@23   = ~Któryœ wpad³ ci w oko? Taki, na który ciê staæ, oczywiœcie. Hehehe... czarownicy zawsze mówi¹ mi, ¿e ceny s¹ zbyt wysokie, ale z pewnoœci¹ nie potrafi¹ ich wykonaæ tak jak ja.~
+@24   = ~Nie. Mo¿e wrócê póŸniej. Zostañ tutaj.~
+@25   = ~Chcia³bym naszyjnik pocisków.~ ~Chcia³abym naszyjnik pocisków.~
+@26   = ~Myœlê, ¿e najbardziej siê przyda Amulet z Zielonym Kamieniem.~
+@27   = ~Wpad³ mi w oko amulet z 5% odpornoœci¹ na magiê.~
+@28   = ~Wpad³ mi w oko amulet z 10% odpornoœci¹ na magiê.~
+@29   = ~Potrzebujê amuletu mocy.~
+@30   = ~Niez³y by³by amulet ochrony przed trucizn¹.~
+@31   = ~+3 do rzutów przeciwko zioniêciom bêdzie u¿yteczne.~
+@32   = ~+5 przeciwko polimorfii to dobre rozwi¹zanie.~
+@33   = ~Chcê amulet +2 przeciwko zaklêciom.~
+@34   = ~Przynieœ naszyjnik i pieni¹dze! Zostaniemy najlepszymi przyjació³mi!~
+@35   = ~Zrobi siê.~

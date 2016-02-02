@@ -1,0 +1,19 @@
+IF
+  Global("tz_demninvi01","GLOBAL",0)
+  See([PC])
+  Range([PC],25)
+THEN
+  RESPONSE #100
+    StartDialogue("demninvi",Player1)
+    SetGlobal("tz_demninvi01","GLOBAL",1)
+END
+
+IF
+  Global("tz_demninvidlga","GLOBAL",2)
+THEN
+  RESPONSE #100
+    Wait(7)
+    StartDialogue("demnport",Player1)
+    SetGlobal("tz_demninvidlga","GLOBAL",3)
+END
+

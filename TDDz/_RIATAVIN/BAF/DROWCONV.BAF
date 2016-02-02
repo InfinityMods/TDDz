@@ -1,0 +1,35 @@
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId(Player1)  // 
+    DisplayStringHead(Player1,@10206)	// ~No, not now.~
+    Wait(3)
+    CreateVisualEffectObject("sppolymp",Player1)
+    CreateVisualEffectObject("sppolymp",Player2)
+    CreateVisualEffectObject("sppolymp",Player3)
+    CreateVisualEffectObject("sppolymp",Player4)
+    CreateVisualEffectObject("sppolymp",Player5)
+    CreateVisualEffectObject("sppolymp",Player6)
+    Wait(2)
+    FadeToColor([20.0],0)
+    ApplySpell(Player1,DROW_CHANGE)
+    ApplySpell(Player2,DROW_CHANGE)
+    ApplySpell(Player3,DROW_CHANGE)
+    ApplySpell(Player4,DROW_CHANGE)
+    ApplySpell(Player5,DROW_CHANGE)
+    ApplySpell(Player6,DROW_CHANGE)
+    Wait(1)
+    ActionOverride(Player2,PlayDead(6))
+    ActionOverride(Player3,PlayDead(6))
+    ActionOverride(Player4,PlayDead(6))
+    ActionOverride(Player5,PlayDead(6))
+    ActionOverride(Player6,PlayDead(6))
+    PlayDead(8)
+    FadeFromColor([20.0],0)
+    Wait(3)
+    DisplayStringHead(Player1,@10207) // ~Yes.~
+    Wait(3)
+    EndCutSceneMode()
+END
+

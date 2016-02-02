@@ -1,0 +1,10 @@
+IF
+  Global("tz_dragdl3","GLOBAL",0)
+  See([PC])
+  Range([PC],25)
+THEN
+  RESPONSE #100
+    StartDialogNoSet([PC])
+    SetGlobal("tz_dragdl3","GLOBAL",1)
+END
+

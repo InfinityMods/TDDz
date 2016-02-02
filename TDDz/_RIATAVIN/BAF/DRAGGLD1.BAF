@@ -1,0 +1,10 @@
+IF
+  Global("tz_goldsee","GLOBAL",0)
+  See([PC])
+  Range(Nearest(Myself),35)
+THEN
+  RESPONSE #100
+    StartDialogNoSet([PC])
+    SetGlobal("tz_goldsee","GLOBAL",1)
+END
+

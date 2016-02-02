@@ -1,5 +1,5 @@
 //=============================================================================
-DEFINE_ACTION_MACRO FinalizeImport
+DEFINE_ACTION_MACRO InstallSpecificContents
 BEGIN
 	INCLUDE ~%MOD_FOLDER%/Lib/Areas.tpa~
 
@@ -13,7 +13,7 @@ BEGIN
 	COPY ~%MOD_FOLDER%/%COMP_FOLDER%/BAM/DDPOTNP2.BAM~ ~override~	
 	COPY_EXISTING ~CITTERNZ.itm~ ~override~ SAY NAME1 #38789
 		
-	LAM HandleBathedInBlood	
+	LAM HandleCoreItemsContract
 	LAM HandleSpellScrollsContract
 	LAM HandleItemsContract		
 	
@@ -26,8 +26,7 @@ BEGIN
 	ELSE BEGIN
 		COPY ~%MOD_FOLDER%/%COMP_FOLDER%/Snip/xAR0509.baf~ ~%MOD_FOLDER%/TEMP/%COMP_FOLDER%/AR0509.baf~		
 		COPY_EXISTING ~AR0509.ARE~ ~override~ 
-			WRITE_ASCII 0x94 ~AR0509~ #8
-			LPM SetAnimationsInCombatFlag
+			WRITE_ASCII 0x94 ~AR0509~ #8			
 	END
 	
 	OUTER_TEXT_SPRINT sender ~%COMP_FOLDER%~
@@ -41,21 +40,24 @@ BEGIN
 		COUNT_2DA_ROWS 7 count
 		WHILE (count > 1) BEGIN
 			READ_2DA_ENTRY (count -1) 0 7 resname				
-			READ_2DA_ENTRY (count -1) 6 7 undroppable
+			READ_2DA_ENTRY (count -1) 6 7 policy //undroppable column
 			SET count = count -1
-						
-			PATCH_IF NOT ~%undroppable%~ STRING_EQUAL ~+~ BEGIN			
-				TO_UPPER resname				
-				INNER_ACTION BEGIN					
-					ACTION_IF ~%undroppable%~ STRING_EQUAL ~.~ 
-						BEGIN OUTER_SPRINT value ~SCRL75~ END 
-						ELSE BEGIN OUTER_SPRINT value ~%undroppable%~ END
-					
-					ACTION_MATCH ~%resname%~ 
+			
+			TO_UPPER resname
+			TO_UPPER policy
+			SET customize = NOT (~%policy%~ STRING_EQUAL ~+~ || ~%policy%~ STRING_EQUAL ~++++++++~)
+			SET undroppable = (~%policy%~ STRING_EQUAL ~.~)
+			SPRINT newItem ~%policy%~
+			PATCH_IF (~%undroppable%~)
+				BEGIN SPRINT newItem ~SCRL75~ END
+			
+			PATCH_IF (~%customize%~) BEGIN			
+				INNER_ACTION BEGIN
+					ACTION_MATCH ~%resname%~
 					WITH
-						~CRYPTXX~ 	BEGIN COPY_EXISTING ~DD3501.ARE~ ~override~ WRITE_ASCII 0xA34 ~%value%~ #8 END
-						~MISERY~ 	BEGIN COPY_EXISTING ~DD3501.ARE~ ~override~ WRITE_ASCII 0xB4C ~%value%~ #8 END						
-						~TYRANT~ 	BEGIN COPY_EXISTING ~DD3501.ARE~ ~override~ WRITE_ASCII 0xC50 ~%value%~ #8 END						
+						~CRYPTXX~ 	BEGIN COPY_EXISTING ~DD3501.ARE~ ~override~ WRITE_ASCII 0xA34 ~%newItem%~ #8 END
+						~MISERY~ 	BEGIN COPY_EXISTING ~DD3501.ARE~ ~override~ WRITE_ASCII 0xB4C ~%newItem%~ #8 END						
+						~TYRANT~ 	BEGIN COPY_EXISTING ~DD3501.ARE~ ~override~ WRITE_ASCII 0xC50 ~%newItem%~ #8 END						
 						DEFAULT
 					END
 				END
@@ -65,24 +67,62 @@ BEGIN
 END
 
 //=============================================================================
-DEFINE_ACTION_MACRO HandleBathedInBlood
+//DEFINE_ACTION_MACRO HandleBathedInBlood
+//BEGIN
+//	COPY ~%MOD_FOLDER%/_CORE/ItemsContract.2da~ ~%MOD_FOLDER%/TEMP/%COMP_FOLDER%/ItemsContract.2da~
+//		COUNT_2DA_ROWS 7 count
+//		WHILE (count > 1) BEGIN
+//			READ_2DA_ENTRY (count -1) 0 7 resname				
+//			READ_2DA_ENTRY (count -1) 6 7 undroppable
+//			SET count = count -1
+//				
+//			TO_UPPER resname
+//			PATCH_IF ~%resname%~ STRING_EQUAL ~BLOOD~ && NOT ~%undroppable%~ STRING_EQUAL ~+~ && NOT ~%undroppable%~ STRING_EQUAL ~.~ BEGIN				
+//				INNER_ACTION BEGIN
+//					ACTION_FOR_EACH cre IN ~THORK1~ ~THORK2~ ~THORK3~ ~THORK4~ ~WTTHORK5~ ~WTTHORK6~ 
+//						BEGIN COPY_EXISTING ~%cre%.cre~ ~override~ WRITE_ASCII 0x3E4 ~%undroppable%~ #8 END
+//				END
+//			END
+//		END
+//	BUT_ONLY
+//END
+
+//=============================================================================
+DEFINE_ACTION_MACRO HandleCoreItemsContract
 BEGIN
-	COPY ~%MOD_FOLDER%/_CORE/ItemsContract.2da~ ~%MOD_FOLDER%/TEMP/%COMP_FOLDER%/ItemsContract.2da~
+	COPY ~%MOD_FOLDER%/_CORE/ItemsContract.2da~ ~%MOD_FOLDER%/TEMP/%COMP_FOLDER%/CoreItemsContract.2da~
 		COUNT_2DA_ROWS 7 count
 		WHILE (count > 1) BEGIN
 			READ_2DA_ENTRY (count -1) 0 7 resname				
-			READ_2DA_ENTRY (count -1) 6 7 undroppable
+			READ_2DA_ENTRY (count -1) 6 7 policy //undroppable column
 			SET count = count -1
-				
+			
 			TO_UPPER resname
-			PATCH_IF ~%resname%~ STRING_EQUAL ~BLOOD~ && NOT ~%undroppable%~ STRING_EQUAL ~+~ && NOT ~%undroppable%~ STRING_EQUAL ~.~ BEGIN				
+			TO_UPPER policy
+			SET customize = NOT (~%policy%~ STRING_EQUAL ~+~ || ~%policy%~ STRING_EQUAL ~++++++++~)
+			SET undroppable = (~%policy%~ STRING_EQUAL ~.~)
+			SET replace = (~%customize%~ && NOT ~%undroppable%~)
+			SPRINT newItem ~%policy%~
+			PATCH_IF (~%undroppable%~)
+				BEGIN SPRINT newItem ~SCRL75~ END
+			
+			PATCH_IF (~%customize%~) BEGIN
 				INNER_ACTION BEGIN
-					ACTION_FOR_EACH cre IN ~THORK1~ ~THORK2~ ~THORK3~ ~THORK4~ ~WTTHORK5~ ~WTTHORK6~ 
-						BEGIN COPY_EXISTING ~%cre%.cre~ ~override~ WRITE_ASCII 0x3E4 ~%undroppable%~ #8 END
+					ACTION_MATCH ~%resname%~
+					WITH
+						~BLOOD~ 	
+							BEGIN
+								ACTION_IF (~%replace%~) THEN BEGIN
+									ACTION_FOR_EACH cre IN ~THORK1~ ~THORK2~ ~THORK3~ ~THORK4~ ~WTTHORK5~ ~WTTHORK6~ 
+										BEGIN COPY_EXISTING ~%cre%.cre~ ~override~ WRITE_ASCII 0x3E4 ~%newItem%~ #8 END
+								END								
+							END						
+						DEFAULT
+					END
 				END
 			END
 		END
-	BUT_ONLY
+	BUT_ONLY	
 END
 
 
@@ -93,24 +133,28 @@ BEGIN
 		COUNT_2DA_ROWS 8 count
 		WHILE (count > 1) BEGIN
 			READ_2DA_ENTRY (count -1) 0 8 resname				
-			READ_2DA_ENTRY (count -1) 6 8 undroppable
+			READ_2DA_ENTRY (count -1) 6 8 policy
 			SET count = count -1
-						
-			PATCH_IF NOT ~%undroppable%~ STRING_EQUAL ~+~ BEGIN			
-				TO_UPPER resname				
-				INNER_ACTION BEGIN					
-					ACTION_IF ~%undroppable%~ STRING_EQUAL ~.~ // '.' means undroppable
-						BEGIN OUTER_SPRINT value ~SCRL75~ END 
-						ELSE BEGIN OUTER_SPRINT value ~%undroppable%~ END
-					
-					ACTION_MATCH ~%resname%~ 
+				
+			TO_UPPER resname	
+			TO_UPPER policy	
+			SET customize = NOT (~%policy%~ STRING_EQUAL ~+~ || ~%policy%~ STRING_EQUAL ~++++++++~)	
+			SET undroppable = (~%policy%~ STRING_EQUAL ~.~)
+			SET replace = (~%customize%~ && NOT ~%undroppable%~)
+			SPRINT newItem ~%policy%~
+			PATCH_IF (~%undroppable%~)
+				BEGIN SPRINT newItem ~SCRL75~ END
+			
+			PATCH_IF ~%customize%~ BEGIN
+				INNER_ACTION BEGIN
+					ACTION_MATCH ~%resname%~
 					WITH
-						~SCRX3~ 	BEGIN COPY_EXISTING ~DD3501.ARE~ ~override~ WRITE_ASCII 0xA98 ~%value%~ #8 END
-						~SCRX7~ 	BEGIN COPY_EXISTING ~DD3503.ARE~ ~override~ WRITE_ASCII 0xAD4 ~%value%~ #8 END
-						~SCRX8~ 	BEGIN COPY_EXISTING ~DD3501.ARE~ ~override~ WRITE_ASCII 0xB24 ~%value%~ #8 END
-						~SCRX13~ 	BEGIN COPY_EXISTING ~DD3501.ARE~ ~override~ WRITE_ASCII 0xC14 ~%value%~ #8 END
-						~SCRX22~ 	BEGIN COPY_EXISTING ~DD3501.ARE~ ~override~ WRITE_ASCII 0xA5C ~%value%~ #8 END
-						~SCRX32~ 	BEGIN COPY_EXISTING ~DD3503.ARE~ ~override~ WRITE_ASCII 0xC00 ~%value%~ #8 END
+						~SCRX3~ 	BEGIN COPY_EXISTING ~DD3501.ARE~ ~override~ WRITE_ASCII 0xA98 ~%newItem%~ #8 END
+						~SCRX7~ 	BEGIN COPY_EXISTING ~DD3503.ARE~ ~override~ WRITE_ASCII 0xAD4 ~%newItem%~ #8 END
+						~SCRX8~ 	BEGIN COPY_EXISTING ~DD3501.ARE~ ~override~ WRITE_ASCII 0xB24 ~%newItem%~ #8 END
+						~SCRX13~ 	BEGIN COPY_EXISTING ~DD3501.ARE~ ~override~ WRITE_ASCII 0xC14 ~%newItem%~ #8 END
+						~SCRX22~ 	BEGIN COPY_EXISTING ~DD3501.ARE~ ~override~ WRITE_ASCII 0xA5C ~%newItem%~ #8 END
+						~SCRX32~ 	BEGIN COPY_EXISTING ~DD3503.ARE~ ~override~ WRITE_ASCII 0xC00 ~%newItem%~ #8 END
 						DEFAULT
 					END
 				END

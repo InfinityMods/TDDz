@@ -1,0 +1,67 @@
+IF
+  Global("tz_dd8002","GLOBAL",0)
+THEN
+  RESPONSE #100
+    CreateCreature("icsalfir",[1861.2608],4)
+    CreateCreature("icsalfir",[1927.2532],4)
+    CreateCreature("icsalfir",[2011.2588],4)
+    CreateCreature("icsalfir",[2046.2738],4)
+    CreateCreature("icsalfir",[2234.2661],4)
+    CreateCreature("icsalfir",[2353.2568],4)
+    CreateCreature("blood01",[1118.2352],4)
+    CreateCreature("blood01",[1206.2317],4)
+    CreateCreature("blood02",[1206.2237],4)
+    CreateCreature("blood01",[1337.2258],4)
+    CreateCreature("blood01",[1325.2358],4)
+    CreateCreature("yachol",[3027.2416],4)
+    CreateCreature("yachol",[2152.2509],4)
+    CreateCreature("icsalfir",[3181.1980],4)
+    CreateCreature("icsalfir",[3244.1966],4)
+    CreateCreature("lavaele1",[3156.1733],4)
+    CreateCreature("lavaele1",[2881.1791],4)
+    CreateCreature("lavaele1",[2542.1734],4)
+    CreateCreature("elfirg01",[2599.1606],4)
+    CreateCreature("redabi01",[2784.1496],4)
+    CreateCreature("grenabi1",[3065.1520],4)
+    CreateCreature("elfirg01",[2335.1082],4)
+    CreateCreature("gelugon1",[1995.1234],4)
+    CreateCreature("lavaele1",[2171.2171],4)
+    CreateCreature("elfirg01",[1870.1388],4)
+    CreateCreature("lavaele1",[1714.1596],4)
+    CreateCreature("gelugon1",[2080.1729],4)
+    CreateCreature("tartar01",[1746.778],4)
+    SetGlobal("tz_dd8002","GLOBAL",1)
+END
+
+IF
+  Global("tz_clawzsending","GLOBAL",0)
+  PartyHasItem("Demclawz")
+THEN
+  RESPONSE #100
+    CreateCreatureObject("demninvi",Player1,0,0,0)
+    SetGlobal("tz_clawzsending","GLOBAL",1)
+END
+
+IF
+  Global("tz_demninvidlga","GLOBAL",1)
+THEN
+  RESPONSE #100
+    ApplySpell(Player2,CLERIC_RESURRECTION)
+    ApplySpell(Player3,CLERIC_RESURRECTION)
+    ApplySpell(Player4,CLERIC_RESURRECTION)
+    ApplySpell(Player5,CLERIC_RESURRECTION)
+    ApplySpell(Player6,CLERIC_RESURRECTION)
+    SetGlobal("tz_demninvidlga","GLOBAL",2)
+END
+
+IF
+  Global("tz_demninvidlgb","GLOBAL",1)
+THEN
+  RESPONSE #100
+    Wait(35)
+    FadeToColor([20.0],0)
+    Wait(2)
+    StartCutSceneMode()
+    StartCutScene("tartretn")
+END
+

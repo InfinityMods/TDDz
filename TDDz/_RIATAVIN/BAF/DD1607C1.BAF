@@ -1,0 +1,158 @@
+IF
+  Global("tz_dd1607c1","GLOBAL",0)
+THEN
+  RESPONSE #100
+    CreateCreature("xcaptain",[1075.1263],4)
+    CreateCreature("xcrew01",[938.1220],4)
+    CreateCreature("xcrew02",[993.1240],4)
+    CreateCreature("xcrew03",[1114.1315],4)
+    CreateCreature("xcrew04",[1174.1352],4)
+    SetGlobal("tz_dd1607c1","GLOBAL",1)
+END
+
+IF
+  Global("tz_boatchat","GLOBAL",1)
+THEN
+  RESPONSE #100
+    FadeToColor([20.0],0)
+    Wait(2)
+    ActionOverride("xcaptain",DestroySelf())
+    ActionOverride("xcrew01",DestroySelf())
+    ActionOverride("xcrew02",DestroySelf())
+    ActionOverride("xcrew03",DestroySelf())
+    ActionOverride("xcrew04",DestroySelf())
+    Wait(2)
+    FadeFromColor([20.0],0)
+    Wait(1)
+    SetGlobal("tz_boatchat","GLOBAL",2)
+END
+
+IF
+  InParty("viconia")
+  Global("tz_boatchat","GLOBAL",2)
+THEN
+  RESPONSE #100
+    FadeToColor([20.0],0)
+    Wait(2)
+    CreateCreature("vicyboat",[1075.1263],0)
+    FadeFromColor([20.0],0)
+    Wait(2)
+    SetGlobal("tz_boatchat","GLOBAL",3)
+    SetGlobal("tz_vicychat","GLOBAL",1)
+END
+
+IF
+  Global("tz_vicychat","GLOBAL",1)
+THEN
+  RESPONSE #100
+    ActionOverride("viconia",StartDialogue("vicyboat",Player1))
+    SetGlobal("tz_vicychat","GLOBAL",2)
+END
+
+IF
+  !InParty("viconia")
+  Global("tz_boatchat","GLOBAL",2)
+THEN
+  RESPONSE #100
+    SetGlobal("tz_boatchat","GLOBAL",3)
+END
+
+IF
+  InParty("minsc")
+  Global("tz_boatchat","GLOBAL",3)
+THEN
+  RESPONSE #100
+    Wait(3)
+    ActionOverride("minsc",StartDialogue("miscwoos",Player1))
+    SetGlobal("tz_boatchat","GLOBAL",4)
+END
+
+IF
+  !InParty("minsc")
+  Global("tz_boatchat","GLOBAL",3)
+THEN
+  RESPONSE #100
+    SetGlobal("tz_boatchat","GLOBAL",4)
+END
+
+IF
+  Global("tz_boatchat","GLOBAL",4)
+THEN
+  RESPONSE #100
+    FadeToColor([20.0],0)
+    Wait(8)
+    CreateCreature("Zcaptain",[1075.1263],0)
+    FadeFromColor([20.0],0)
+    SetGlobal("tz_boatchat","GLOBAL",5)
+END
+
+IF
+  Global("tz_zcaptainsee","GLOBAL",1)
+THEN
+  RESPONSE #100
+    StartCutSceneMode()
+    StartCutScene("boatscop")
+END
+
+IF
+  Global("tz_zcaptainsee","GLOBAL",2)
+THEN
+  RESPONSE #100
+    StartCutSceneMode()
+    StartCutScene("boatarty")
+END
+
+IF
+  Global("tz_zcaptainsee","GLOBAL",3)
+  Global("tz_zseex","GLOBAL",0)
+THEN
+  RESPONSE #100
+    ActionOverride("zcaptain",StartDialogue("zcapwarn",Player1))
+    SetGlobal("tz_zseex","GLOBAL",1)
+END
+
+IF
+  Global("tz_zcaptainsee","GLOBAL",4)
+THEN
+  RESPONSE #100
+    CreateCreature("xcrew01",[1073.1275],4)
+    SetGlobal("tz_zcaptainsee","GLOBAL",5)
+END
+
+IF
+  Global("tz_zcaptainsee","GLOBAL",5)
+THEN
+  RESPONSE #100
+    ActionOverride("xcrew01",MoveToObject("zcaptain"))
+    SetGlobal("tz_zcaptainsee","GLOBAL",6)
+END
+
+IF
+  Global("tz_zcaptainsee","GLOBAL",6)
+  Global("tz_zcaptainsf","GLOBAL",0)
+THEN
+  RESPONSE #100
+    ActionOverride("zcaptain",SetDialogue("zcaptain"))
+    ActionOverride("xcrew01",SetDialogue("crewspot"))
+    ActionOverride("xcrew01",StartDialogue("crewspot","zcaptain"))
+    SetGlobal("tz_zcaptainsf","GLOBAL",1)
+END
+
+IF
+  Global("tz_zcaptainsee","GLOBAL",7)
+THEN
+  RESPONSE #100
+    ScreenShake([1073.1275],15)
+    SetGlobal("tz_zcaptainsee","GLOBAL",8)
+END
+
+IF
+  Global("tz_zcaptainsee","GLOBAL",8)
+THEN
+  RESPONSE #100
+    FadeToColor([20.0],0)
+    Wait(2)
+    StartCutSceneMode()
+    StartCutScene("dockraid")
+END
+

@@ -1,0 +1,15 @@
+@0     = ~Bonjour voyageurs. Je suis un barde errant, Rivaldo. Vous avez sans doute entendu parler de moi ? J'ai aussi entendu parler de vous et de votre victoire à la Porte de Baldur.~
+@1     = ~Eh bien, je suis surpris d'être si connu sur la Côte des Epées. Vous vouliez quelque chose, l'ami ?~ ~Eh bien, je suis surprise d'être si connue sur la Côte des Epées. Vous vouliez quelque chose, l'ami ?~
+@2     = ~Bien sûr que vous avez entendu parler de moi. Je suis le plus grand héros de l'histoire. Peuh.~ ~Bien sûr que vous avez entendu parler de moi. Je suis la plus grande héroïne de l'histoire. Peuh.~
+@3     = ~J'ai entendu dire que vous approchiez de la région de Riatavin et j'ai pensé vous informer des dangers qui résident actuellement dans cette ville.~
+@4     = ~Je vous remercie Rivaldo. Eclairez-nous s'il vous plaît.~
+@5     = ~Allez mon petit gars ! Videz votre sac ! Il semble que quelques crânes ont besoin d'être défoncés !~
+@6     = ~La ville est en train d'être envahie - quoique très furtivement - par des filous. Ce sont des tueurs habiles et ils ont déjà tué plusieurs commerçants et des figures locales de renom. Bien que je ne sache pas pourquoi ils font ça, je pense que vous devriez être informé - et lassé - de ceci.~ ~La ville est en train d'être envahie - quoique très furtivement - par des filous. Ce sont des tueurs habiles et ils ont déjà tué plusieurs commerçants et des figures locales de renom. Bien que je ne sache pas pourquoi ils font ça, je pense que vous devriez être informée - et lassée - de ceci.~
+@7     = ~Hum... ça semble peu commun. Puis-je trouver quelque part des informations plus approfondies ?~
+@8     = ~Est-ce que ces meurtres se produisent *partout* ? Ne pourrait-il pas y avoir juste une ville qui ne connaîtrait *pas* de meurtres ?~
+@9     = ~Vous aurez peu d'informations de la part des gardes de la ville, aussi votre meilleure chance est de questionner les paysans dans les rues. Ils voient les formes furtives la nuit quand les autres dorment. Vous devriez rencontrer le mage à côté de l'auberge au sud-est. Il a dit que c'était important. Bellach, un tavernier, pourrait lui aussi en savoir plus sur les meurtres. Si vous le souhaitez, je peux vous amener à sa taverne tout de suite.~
+@10    = ~Non, c'est très bien. Je me débrouillerai tout seul.~ ~Non, c'est très bien. Je me débrouillerai toute seule.~
+@11    = ~J'apprécierais beaucoup, l'ami.~
+@12    = ~Entendu. Je dois y aller maintenant, Adieu, héros de la Porte de Baldur.~ ~Entendu. Je dois y aller maintenant, Adieu, héroïne de la Porte de Baldur.~
+@13    = ~Voilà la taverne de Bellach. Il a des oreilles partout, donc prenez bonne note de ses informations. Cet enfoiré avide vous fera sans doute payer, mais c'est le lot d'un pauvre homme. Je dois y aller maintenant. Adieu, héros de la Porte de Baldur.~ ~Voilà la taverne de Bellach. Il a des oreilles partout, donc prenez bonne note de ses informations. Cet enfoiré avide vous fera sans doute payer, mais c'est le lot d'un pauvre homme. Je dois y aller maintenant. Adieu, héroïne de la Porte de Baldur.~
+@14    = ~Adieu bon barde et faites attention à vous pendant vos voyages.~

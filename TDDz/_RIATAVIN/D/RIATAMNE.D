@@ -66,7 +66,7 @@ IF ~~ THEN BEGIN 10 // from: 9.1 9.0
   SAY @26
   IF ~~ THEN DO ~ActionOverride("riatamne",EscapeArea())
 GivePartyGold(2000)
-AddExperienceParty(5000) // original=10000
+AddExperienceParty(RIATAMNE_D_10000)
 TakePartyItem("POTN08")
 TakePartyItem("POTN29")
 TakePartyItem("MISC16")~ EXIT

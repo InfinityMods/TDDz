@@ -1,0 +1,25 @@
+IF
+  Global("tz_jarlaxe1move","GLOBAL",0)
+THEN
+  RESPONSE #100
+    MoveToPoint([4440.273])
+    SetGlobal("tz_jarlaxe1move","GLOBAL",1)
+END
+
+IF
+  !Range(Player1,5)
+THEN
+  RESPONSE #100
+    MoveToObject(Player1)
+END
+
+IF
+  Global("tz_jarlaxe1see","GLOBAL",0)
+  See([PC])
+  Range([PC],10)
+THEN
+  RESPONSE #100
+    StartDialogNoSet([PC])
+    SetGlobal("tz_jarlaxe1see","GLOBAL",1)
+END
+

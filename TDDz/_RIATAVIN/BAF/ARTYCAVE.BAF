@@ -1,0 +1,18 @@
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId(Player1)
+    Wait(1)
+    MoveViewPoint([1138.449],VERY_FAST)
+    ActionOverride(Player2,MoveToPoint([959.441]))
+    ActionOverride(Player3,MoveToPoint([1058.449]))
+    ActionOverride(Player4,MoveToPoint([1138.460]))
+    ActionOverride(Player5,MoveToPoint([1219.527]))
+    ActionOverride(Player6,MoveToPoint([1266.602]))
+    MoveToPoint([869.456])
+    Wait(7)
+    SetGlobal("tz_caveartjarl","AR1106",1)
+    EndCutSceneMode()
+END
+

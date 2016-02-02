@@ -113,17 +113,17 @@ IF ~~ THEN BEGIN 20 // from: 19.0
   IF ~~ THEN REPLY @42 GOTO 21
   IF ~~ THEN REPLY @43 DO ~SetGlobal("tz_pashapassing","GLOBAL",1)
 TakePartyItem("calheart")
-AddExperienceParty(30000)~ EXIT
+AddExperienceParty(SALAM01_D_30000_A)~ EXIT
 END
 
 IF ~~ THEN BEGIN 21 // from: 20.0
   SAY @44
   IF ~~ THEN REPLY @43 DO ~SetGlobal("tz_pashapassing","GLOBAL",1)
 TakePartyItem("calheart")
-AddExperienceParty(30000)~ EXIT
+AddExperienceParty(SALAM01_D_30000_B)~ EXIT
   IF ~~ THEN REPLY @45 DO ~SetGlobal("tz_pashapassing","GLOBAL",1)
 TakePartyItem("calheart")
-AddExperienceParty(30000)~ EXIT
+AddExperienceParty(SALAM01_D_30000_C)~ EXIT
 END
 
 IF ~Global("tz_pashtravdone","GLOBAL",1)~ THEN BEGIN 22
@@ -154,6 +154,6 @@ IF ~~ THEN BEGIN 26 // from: 25.1 25.0
   IF ~~ THEN DO ~CreateVisualEffectObject("spportal","salam01")
 Wait(2)
 ActionOverride("salam01",DestroySelf())
-AddExperienceParty(20000)
+AddExperienceParty(SALAM01_D_20000)
 SetGlobal("tz_pashacircle","GLOBAL",1)~ EXIT
 END

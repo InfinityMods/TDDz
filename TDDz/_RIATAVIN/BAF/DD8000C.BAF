@@ -1,0 +1,27 @@
+IF
+  Global("tz_dd8000c","GLOBAL",0)
+THEN
+  RESPONSE #100
+    CreateCreature("draginvG",[1825.1680],4)
+    SetGlobal("tz_dd8000c","GLOBAL",1)
+END
+
+IF
+  Global("tz_draggoldinvi","GLOBAL",1)
+THEN
+  RESPONSE #100
+    ScreenShake([1523.1502],10)
+    CreateCreature("draggold",[1007.1190],4)
+    SetGlobal("tz_draggoldinvi","GLOBAL",2)
+END
+
+IF
+  Global("tz_draggoldinvi","GLOBAL",2)
+THEN
+  RESPONSE #100
+    Explore()
+    Wait(3)
+    StartCutSceneMode()
+    StartCutScene("golddrgx")
+END
+

@@ -1,0 +1,15 @@
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId(Player1)
+    MoveViewPoint([1257.2390],VERY_FAST)
+    Wait(1)
+    CreateVisualEffect("spsummon",[1257.2390])
+    CreateVisualEffect("sppolymp",[1257.2390])
+    Wait(1)
+    CreateCreature("grazzt02",[1257.2390],4)
+    SetGlobal("tz_grazinvi","GLOBAL",2)
+    EndCutSceneMode()
+END
+

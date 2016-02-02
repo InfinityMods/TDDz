@@ -1,0 +1,29 @@
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId(Player1)
+    StorePartyLocations()
+    FadeToColor([30.0],0)
+    Wait(1)
+    Rest()
+    Wait(1)
+    //LeaveAreaLUAPanic("dd1002c1","",[765.790],0)
+    LeaveAreaLUAPanic("DDC110","",[765.790],0)
+    //LeaveAreaLUA("dd1002c1","",[765.790],8)
+    LeaveAreaLUA("DDC110","",[765.790],8)
+    MultiPlayerSync()
+    CreateCreature("riat01",[765.772],0)
+    CreateCreature("riat02",[903.681],0)
+    CreateCreature("riat03",[639.856],0)
+    CreateCreature("riat04",[695.708],0)
+    CreateCreature("riat05",[844.824],0)
+    CreateCreature("riatjail",[1159.707],4)
+    ApplySpell(Player1,1964)
+    Explore()
+    MoveViewPoint([765.772],INSTANT)
+    FadeFromColor([30.0],0)
+    Wait(3)
+    StartCutScene("boatsc02")
+END
+

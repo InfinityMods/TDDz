@@ -1,0 +1,9 @@
+IF
+  See([PC])
+  Range([PC],15)
+THEN
+  RESPONSE #100
+    DestroySelf()
+    SetGlobal("tz_bansheelair2","GLOBAL",2)
+END
+

@@ -1,0 +1,46 @@
+@0    = ~Salve, viandante. Vuoi che ti incanti un oggetto?~
+@1    = ~Si... cioè, vedi se ho qualcosa che puoi incantare.~
+@2    = ~Cos'è che fai?~
+@3    = ~Hmm... lasciami dare un'occhiata allora... hrm...erm...~
+@4    = ~Prendo dei semplici amuleti e li incanto fornendogli proprietà speciali. Ad un prezzo, naturalmente. Sai, bisogna guadagnarsi da vivere.~
+@5    = ~Interessante, Potrei tornare più tardi con qualcosa e vedere quello che puoi fare.~
+@6    = ~Ho qualcosa che potresti incantare?~
+@7    = ~No, non hai nessun amuleto che potrei utilizzare, come base. Se ne troverai e vorrai incantarne, allora ritorna e vedrò quello che posso fare per te.~
+@8    = ~Si, hai una semplice collana qui. Posso incantartela se lo desideri.~
+@9    = ~Come puoi incantare?~
+@10   = ~No, ho cambiato idea. Non voglio incantare niente.~
+@11   = ~Ci sono diversi modi... te li elencherò per darti la possibilità discegliere.~
+@12   = ~Io posso farti......
+Una collana di proiettili per 6000 monete d'oro
+Un amuleto dalla Pietra Verde di protezione mentale per 8000 monete d'oro.
+Un amuleto che dona il 5% di resistenza alla magia per 7000 monete d'oro.
+Un amuleto che dona il 10% di resistenza alla magia per 13000 monete d'oro.
+Un amuleto del Potere con protezione dal Risucchio del Livello e un 5 % di immunità alla magia per 23000 monete d'oro.
+Un amuleto di protezione dal veleno per 7000 monete d'oro.
+Un amuleto che dona +3 ai tiri salvezza contro soffio per 13000 monete d'oro.
+Un amuleto che dona +5 ai tiri salvezza contro metamorfosi per 16000 monete d'oro.
+Un amuleto che dona +2 ai tiri salvezza contro gli incantesimi per 14000 monete d'oro.~
+@13   = ~Ah, hai una collana collana tempestata di zoisite qui. Io posso utilizzarla come base.~
+@14   = ~Hai una Collana di solfato di rame qui. Posso sicuramente utilizzarla.~
+@15   = ~Hai una Collana di Agni Mani... davvero un'ottima base.~
+@16   = ~Hai una Collana di ossidiana arcobaleno. Sembra promettente...~
+@17   = ~Una Collana di conchiglia di ciprea tigrata, andrà bene.~
+@18   = ~Una Collana d'argento, eh? Non è un gran che, ma sarà sufficiente.~
+@19   = ~Possiedi una Collana d'oro. Perfetto...~
+@20   = ~Hai una Collana di perle... molto bella e utile. Lasciami vedere...~
+@21   = ~Una Collana di lacrime di Laeral... è un ottimo pezzo su cui lavorare. Farebbe una base meravigliosa...~
+@22   = ~Hai un Amuleto di eliotropio. Eccellente.~
+@23   = ~Qualcuna di queste cose attira la tua attenzione? Quello che puoi permetterti, naturalmente. Hehehe... i maghi mi dicono sempre che i miei prezzi sono molto alti, ma loro certamente non possono fare il lavoro bene come me.~
+@24   = ~No. Magari ritornerò. Rimani qui.~
+@25   = ~Mi piacerebbe avere una Collana di Proiettili.~
+@26   = ~Credo che un Amuleto dalla Pietra Verde mi sarebbe molto utile.~
+@27   = ~Un amuleto che fornisce un 5% di resistenza alla magia attira la mia attenzione.~
+@28   = ~Un amuleto che fornisce un 10% di resistenza alla magia attira la mia attenzione.~
+@29   = ~Vorrei un Amuleto del Potere.~
+@30   = ~Mi piacerebbe avere un Amuleto di Protezione dal Veleno.~
+@31   = ~Un Talismano di Protezione della Vita con un +3 ai tiri salvezza contro soffio si dimostrerebbe sicuramente utile.~
+@32   = ~Una collana con un + 5 ai tiri salvezza contro metamorfosi andrà bene.~
+@33   = ~Vorrei un amuleto con +2 ai tiri salvezza contro gli incantesimi.~
+@34   = ~Portami un amuleto ed un po' di soldi! E noi saremo i migliori amici!~
+@35   = ~Allora sarà fatto.~
+

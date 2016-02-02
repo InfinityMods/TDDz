@@ -1,0 +1,56 @@
+IF
+	True()
+THEN
+	RESPONSE #100
+		CutSceneId(Player1)
+		StorePartyLocations()
+		Wait(1)				
+		LeaveAreaLUAPanic("ARCT11","",[0.0],0)
+		LeaveAreaLUA("ARCT11","",[0.0],0)
+		MultiPlayerSync()
+		CreateCreature("CUTSPY",[500.1000],0) // No such index
+		Wait(1)		
+		MoveViewObject("cutspy",8)
+		CreateCreature("mykakol",[436.1071],S) // Tutor	
+		Explore()
+		MoveViewPoint([436.1071],INSTANT)
+		ApplySpell(Player1,1964)
+		Explore()
+		MoveViewPoint([436.1071],INSTANT)
+		FadeFromColor([30.0],0)
+		Wait(2)
+		DisplayStringHead("mykakol",106096) // You are too useful to let rot on the bellies of rats.
+		Wait(5)
+		DisplayStringHead("mykakol",106097) // You shall make excellent tools for the master.
+		Wait(5)
+		ActionOverride("mykakol",ForceSpell(Myself,CLERIC_RESURRECTION)) // SPPR712.SPL (Resurrection)
+		Wait(6)
+		CreateVisualEffect("sppolymp",[622.1032])
+		CreateVisualEffect("sppolymp",[550.1177])
+		CreateVisualEffect("spplanar",[622.1032])
+		CreateVisualEffect("spplanar",[622.1032])
+		CreateCreature("artcutx1",[622.1032],W) // Artemis Entreri
+		CreateCreature("jarcutx1",[550.1177],W) // Jarlaxle
+		Wait(2)
+		ActionOverride("mykakol",FaceObject("artcutx1"))
+		ActionOverride("artcutx1",FaceObject("mykakol"))
+		ActionOverride("jarcutx1",FaceObject("mykakol"))
+		Wait(2)
+		DisplayStringHead("mykakol",106098) // Resurrection is a wonderful thing.
+		Wait(3)
+		DisplayStringHead("mykakol",106099) // You are the Master's spirit-wraiths now, and you shall serve him as he wishes. Are you clear?
+		Wait(3)
+		DisplayStringHead("artcutx1",106100) // Fully.
+		DisplayStringHead("jarcutx1",106101) // I shall serve.
+		Wait(2)
+		DisplayStringHead("mykakol",106102) // Deadly and obedient; The Master shall treasure you in his goal for the return.
+		Wait(3)
+		FadeToColor([20.0],0)
+		Wait(1)
+		ActionOverride("cutspy",DestroySelf())
+		Wait(1)
+		RestorePartyLocations()
+		MultiPlayerSync()
+		EndCutSceneMode()
+END
+

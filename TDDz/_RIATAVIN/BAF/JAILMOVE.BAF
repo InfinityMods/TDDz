@@ -1,0 +1,23 @@
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId(Player1)
+    FadeToColor([20.0],0)
+    Wait(2)
+    CreateCreature("riatjail",[727.571],4)
+    Wait(1)
+    MoveViewObject([ANYONE],INSTANT)
+    FadeFromColor([20.0],0)
+    Wait(2)
+    FaceObject("riatjail")
+    ActionOverride("riatjail",FaceObject(Player1))
+    DisplayStringHead(Player1,@10007)
+    Wait(7)
+    DisplayStringHead("riatjail",@10008)
+    Wait(10)
+    FadeToColor([20.0],0)
+    Wait(2)
+    StartCutScene("jailmov2")
+END
+

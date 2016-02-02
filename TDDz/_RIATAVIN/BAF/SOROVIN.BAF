@@ -1,0 +1,17 @@
+IF
+  !Range([PC],3)
+THEN
+  RESPONSE #100
+    MoveToObject([PC])
+END
+
+IF
+  Global("tz_sorovinsee","GLOBAL",0)
+  See([PC])
+  Range([PC],7)
+THEN
+  RESPONSE #100
+    StartDialogNoSet([PC])
+    SetGlobal("tz_sorovinsee","GLOBAL",1)
+END
+

@@ -1,0 +1,8 @@
+IF
+	Global("tz_jarlaxe1home","GLOBAL",2)
+THEN
+	RESPONSE #100
+		Explore()
+		CreateCreature("jarlboy",[4167.1001],4) // Branden
+		SetGlobal("tz_jarlaxe1home","GLOBAL",3)
+END

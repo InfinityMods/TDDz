@@ -1,0 +1,25 @@
+BEGIN ~RIATGATE~
+
+IF ~NumTimesTalkedTo(0)
+!Allegiance(Myself,ENEMY)~ THEN BEGIN 0
+  SAY @0
+  IF ~~ THEN REPLY @1 GOTO 1
+END
+
+IF ~~ THEN BEGIN 1 // from: 0.0
+  SAY @2
+  IF ~~ THEN REPLY @3 GOTO 2
+END
+
+IF ~~ THEN BEGIN 2 // from: 1.0
+  SAY @4
+  IF ~~ THEN REPLY @5 DO ~SetGlobal("tz_bgarival","GLOBAL",6)
+SetGlobal("tz_riatgatesee","GLOBAL",1)~ EXIT
+  IF ~~ THEN REPLY @6 GOTO 3
+END
+
+IF ~~ THEN BEGIN 3 // from: 2.1
+  SAY @7
+  IF ~~ THEN DO ~SetGlobal("tz_bgarival","GLOBAL",6)
+SetGlobal("tz_riatgatesee","GLOBAL",1)~ EXIT
+END

@@ -1,0 +1,64 @@
+IF
+	Global("tz_dd0300x1","GLOBAL",4)
+	InParty("viconia")
+THEN
+	RESPONSE #100
+		SetGlobal("tz_dd0300x1","GLOBAL",5)
+		SetGlobal("tz_raperev","GLOBAL",1)
+		SetGlobal("tz_oldinfox","GLOBAL",1)
+		ActionOverride("viconia",StartDialog("raperev",Player1))
+END
+
+IF
+	Global("tz_dd0300x1","GLOBAL",4)
+	!InParty("viconia")
+THEN
+	RESPONSE #100
+		SetGlobal("tz_dd0300x1","GLOBAL",5)
+		SetGlobal("tz_oldinfox","GLOBAL",1)
+END
+
+IF
+	Global("tz_oldinfox","GLOBAL",1)
+THEN
+	RESPONSE #100
+		CreateCreatureObject("zprize4",Player1,0,0,0) // Shadow Thief
+		SetGlobal("tz_oldinfox","GLOBAL",2)
+END
+
+IF
+	Global("tz_raperev","GLOBAL",6)
+THEN
+	RESPONSE #100
+		StartCutSceneMode()
+		StartCutScene("revburn2")
+END
+
+IF
+	Gender(Player1,FEMALE)
+	Global("tz_raperev","GLOBAL",7)
+THEN
+	RESPONSE #100
+		SetGlobal("tz_raperev","GLOBAL",8)
+		ActionOverride("viconia",StartDialog("vicyrapT",Player1))
+END
+
+IF
+	Global("tz_vicylovinL","GLOBAL",1)
+THEN
+	RESPONSE #100
+		FadeToColor([20.0],0)
+		Wait(2)
+		StartCutSceneMode()
+		StartCutScene("vicythxl")
+END
+
+//IF
+//	Global("sharplot","GLOBAL",0)
+//THEN
+//	RESPONSE #100
+//		CreateCreature("sharthug",[2529.304],4) // Tyrian
+//		SetGlobal("sharplot","GLOBAL",1)
+//END
+
+

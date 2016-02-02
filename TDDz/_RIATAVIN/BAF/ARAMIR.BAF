@@ -1,0 +1,16 @@
+IF
+  Name("aramir",Myself)
+  GlobalGT("tz_riatlock","GLOBAL",0)
+THEN
+  RESPONSE #100
+    EscapeArea()
+END
+
+IF
+  Name("riatjail",Myself)
+  GlobalGT("tz_riatlock","GLOBAL",2)
+THEN
+  RESPONSE #100
+    EscapeArea()
+END
+

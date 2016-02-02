@@ -1,0 +1,33 @@
+IF
+	Global("tz_riatgatesee","GLOBAL",1)
+THEN
+	RESPONSE #100
+		CreateCreature("aramir",[961.584],4) // Aramir Estel
+		CreateCreature("riatjail",[1341.806],4) // Jailer
+		SetGlobal("tz_riatgatesee","GLOBAL",2)
+		Continue()
+END
+
+IF
+	Global("tz_riatlock","GLOBAL",1)
+THEN
+	RESPONSE #100
+		StartCutSceneMode()
+		StartCutScene("cutrjail")
+		Continue()
+END
+
+IF
+	Global("tz_riatlock","GLOBAL",2)
+THEN
+	RESPONSE #100
+		SetGlobal("tz_riatlock","GLOBAL",4)
+		StartCutSceneMode()
+		CutSceneId(Player1)
+		ActionOverride("riatjail",EscapeArea())
+		ActionOverride("aramir",EscapeArea())
+		StartCutScene("bgjailmv")
+		Continue()
+END
+
+

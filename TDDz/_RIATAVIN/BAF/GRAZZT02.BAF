@@ -1,0 +1,127 @@
+IF
+  Global("tz_start","LOCALS",0)
+THEN
+  RESPONSE #100
+    ReallyForceSpell(Myself,WIZARD_DETECT_INVISIBILITY)
+    ReallyForceSpell(NearestEnemyOf(Myself),2326)//WIZARD_DISPEL_MAGIC)
+    ApplySpell(Myself,WIZARD_STONE_SKIN)
+    ApplySpell(Myself,WIZARD_SPELL_TURNING)
+    SetGlobal("tz_start","LOCALS",1)
+END
+
+IF
+  Global("tz_prep2","LOCALS",0)
+THEN
+  RESPONSE #100
+    ApplySpell(Myself,WIZARD_HASTE)
+    ReallyForceSpell(NearestEnemyOf(Myself),COM_DRUID_SUMMON_LIGHTNING_ELEMENTAL)
+    ReallyForceSpell(NearestEnemyOf(Myself),COM_DRUID_SUMMON_LIGHTNING_ELEMENTAL)
+    SetGlobal("tz_prep2","LOCALS",1)
+END
+
+IF
+  Global("tz_weak","GLOBAL",0)
+  HPLT(Myself,85)
+THEN
+  RESPONSE #100
+    ReallyForceSpell(Myself,WIZARD_STONE_SKIN)
+    ReallyForceSpell(Myself,WIZARD_HASTE)
+    SetGlobal("tz_weak","GLOBAL",1)
+END
+
+IF
+  HPLT(Myself,50)
+  Global("tz_dire","LOCALS",0)
+THEN
+  RESPONSE #100
+    ApplySpell(Myself,CLERIC_CURE_CRITICAL_WOUNDS)
+    ApplySpell(Myself,CLERIC_REGENERATE)
+    SetGlobal("tz_dire","LOCALS",1)
+END
+
+IF
+  Global("tz_grazprep","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobalTimer("tz_magicmissile","GLOBAL",14)
+    SetGlobal("tz_grazprep","LOCALS",1)
+END
+
+IF
+  Global("tz_fearme","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobalTimer("tz_fear","GLOBAL",20)
+    SetGlobal("tz_fearme","LOCALS",1)
+END
+
+IF
+  Global("tz_grazprep","LOCALS",1)
+  GlobalTimerExpired("tz_magicmissile","GLOBAL")
+THEN
+  RESPONSE #100
+    ForceSpell(NearestEnemyOf(Myself),BEHOLDER_MAGIC_MISSILE)
+    ForceSpell(SecondNearestEnemyOf(Myself),BEHOLDER_MAGIC_MISSILE)
+    SetGlobal("tz_grazprep","LOCALS",0)
+END
+
+IF
+  Global("tz_fearme","LOCALS",1)
+  GlobalTimerExpired("tz_fear","GLOBAL")
+THEN
+  RESPONSE #100
+    ForceSpell(NearestEnemyOf(Myself),WIZARD_SYMBOL_FEAR)
+    SetGlobal("tz_fearme","LOCALS",0)
+END
+
+IF
+  Global("tz_bleed","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobalTimer("tz_bleeder","GLOBAL",10)
+    SetGlobal("tz_bleed","LOCALS",1)
+END
+
+IF
+  Global("tz_Bleed","LOCALS",1)
+  GlobalTimerExpired("tz_bleeder","GLOBAL")
+THEN
+  RESPONSE #100
+    ForceSpell(NearestEnemyOf(Myself),COM_HEMOPHILIA)
+    ForceSpell(SecondNearestEnemyOf(Myself),COM_HEMOPHILIA)
+    SetGlobal("tz_Bleed","LOCALS",2)
+END
+
+IF
+  Global("tz_lava","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("tz_lava","LOCALS",1)
+    SetGlobalTimer("tz_lavaaid","GLOBAL",28)
+END
+
+IF
+  Global("tz_lava","LOCALS",1)
+  GlobalTimerExpired("tz_lavaaid","GLOBAL")
+THEN
+  RESPONSE #100
+    ReallyForceSpell(Myself,CLERIC_SUMMON_LAVA_ELEMENTAL)
+    ReallyForceSpell(Myself,CLERIC_SUMMON_LAVA_ELEMENTAL)
+    SetGlobal("tz_lava","LOCALS",2)
+END
+
+IF
+  AttackedBy([GOODCUTOFF],DEFAULT)
+THEN
+  RESPONSE #100
+    MoveToObject(NearestEnemyOf(Myself))
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+THEN
+  RESPONSE #100
+    EquipMostDamagingMelee()
+    Attack(NearestEnemyOf(Myself))
+END
+

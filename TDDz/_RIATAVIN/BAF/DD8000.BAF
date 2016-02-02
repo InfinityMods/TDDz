@@ -1,0 +1,203 @@
+IF
+  Global("tz_dd8000","GLOBAL",0)
+THEN
+  RESPONSE #100
+    CreateCreature("trolgi01",[844.856],4)
+    CreateCreature("trolgi01",[942.760],4)
+    CreateCreature("trolgi01",[1148.713],4)
+    CreateCreature("trolgi01",[515.944],4)
+    CreateCreature("trolgi01",[2770.506],4)
+    CreateCreature("bugarch",[2046.1631],4)
+    CreateCreature("bugbear",[2330.1540],4)
+    CreateCreature("bugbear",[2696.1773],4)
+    CreateCreature("bugarch",[820.3371],4)
+    CreateCreature("bugbear",[4431.3092],4)
+    CreateCreature("bugbear",[4982.3059],4)
+    CreateCreature("bugarch",[4753.2647],4)
+    CreateCreature("bugbear",[4336.2526],4)
+    CreateCreature("ghogr01",[2334.1606],4)
+    CreateCreature("ghogr01",[1243.2394],4)
+    CreateCreature("ghogr01",[771.2536],4)
+    CreateCreature("ghogr01",[4606.1961],4)
+    CreateCreature("minttrog",[1117.2295],4)
+    CreateCreature("minttrog",[1377.2031],4)
+    CreateCreature("minttrog",[493.2546],4)
+    CreateCreature("minttrog",[600.2694],4)
+    CreateCreature("minttrog",[2595.2068],4)
+    CreateCreature("minttrog",[2815.2265],4)
+    CreateCreature("minttrog",[3426.2295],4)
+    CreateCreature("minttrog",[3374.1974],4)
+    CreateCreature("ogredd1",[2370.1784],4)
+    CreateCreature("ogredd1",[2169.1974],4)
+    CreateCreature("ogredd1",[895.2734],4)
+    CreateCreature("ogredd1",[983.3160],4)
+    CreateCreature("ogredd1",[1148.3403],4)
+    CreateCreature("ogredd1",[2274.369],4)
+    CreateCreature("sorovin",[400.400],4)
+    CreateCreature("drowinvi",[4208.1063],4)
+    CreateCreature("r800001",[4493.2740],4)
+    CreateCreature("r800002",[4622.2605],4)
+    CreateCreature("r800003",[4516.2481],4)
+    CreateCreature("r800004",[4408.2884],4)
+    CreateCreature("r800005",[4225.2917],4)
+    SetGlobal("tz_dd8000","GLOBAL",1)
+END
+
+IF        
+  Global("tz_drowinvi01","GLOBAL",1)
+  False() // Bregan D'aerth
+THEN
+  RESPONSE #100
+    CreateCreature("drowbd01",[3417.643],4)
+    CreateCreature("drowbd02",[3221.997],4)
+    CreateCreature("drowbd03",[3286.1159],4)
+    CreateCreature("drowbd04",[3527.1444],4)
+    CreateCreature("drowbd05",[3875.1495],4)
+    CreateCreature("drowbd06",[4327.1490],4)
+    CreateCreature("drowbd07",[4605.1509],4)
+    CreateCreature("drowbd08",[4507.315],4)
+    CreateCreature("drowbd09",[4781.314],4)
+    CreateCreature("drowbd10",[4999.404],4)
+    CreateCreature("drowbd11",[5073.692],4)
+    ClearAllActions()
+    StartCutSceneMode()
+    StartCutScene("drowbddt") // Bregan D'aerth
+END
+
+IF
+  Global("tz_demninv2","GLOBAL",1)
+THEN
+  RESPONSE #100
+    Wait(7)
+    MoveViewObject(Player1,INSTANT)
+    ClearAllActions()
+    StartCutSceneMode()
+    StartCutScene("drowconv")
+    SetGlobal("tz_demninv2","GLOBAL",2)
+END
+
+IF
+  Global("tz_drowinvi01b","GLOBAL",1)
+THEN
+  RESPONSE #100
+    CreateCreature("jarlaxe1",[5032.273],0)
+    SetGlobal("tz_drowinvi01b","GLOBAL",2)
+END
+
+IF
+  Global("tz_drowinvi01b","GLOBAL",2)
+THEN
+  RESPONSE #100
+    Explore()
+    ApplySpell("jarlaxe1",DROW_CHANGE)
+    SetGlobal("tz_drowinvi01b","GLOBAL",3)
+END
+
+IF
+  Global("tz_jarlaxe1home","GLOBAL",1)
+THEN
+  RESPONSE #100
+    Wait(3)
+    FadeToColor([20.0],0)
+    Wait(1)
+    ActionOverride("jarlaxe1",DestroySelf())
+    Wait(1)
+    ClearAllActions()
+    StartCutSceneMode()
+    StartCutScene("bragdert")
+    SetGlobal("tz_jarlaxe1home","GLOBAL",2)
+END
+
+IF
+  Global("tz_rebelpissedx","GLOBAL",1)
+THEN
+  RESPONSE #100
+    ActionOverride("r800001",Enemy())
+    ActionOverride("r800002",Enemy())
+    ActionOverride("r800003",Enemy())
+    ActionOverride("r800004",Enemy())
+    ActionOverride("r800005",Enemy())
+    SetGlobal("tz_rebelpissedx","GLOBAL",2)
+END
+
+IF
+  Global("tz_githleev","GLOBAL",2)
+  InParty("minsc")
+THEN
+  RESPONSE #100
+    SetGlobal("tz_githleev","GLOBAL",3)
+    ActionOverride("minsc",StartDialogue("jarltrak",Player1))
+END
+
+IF
+  Global("tz_githleev","GLOBAL",2)
+  !InParty("minsc")
+THEN
+  RESPONSE #100
+    SetGlobal("tz_valytrakjarl","GLOBAL",1)
+END
+
+IF
+  Global("tz_valytrakjarl","GLOBAL",1)
+  InParty("valygar")
+THEN
+  RESPONSE #100
+    SetGlobal("tz_valytrakjarl","GLOBAL",2)
+    ActionOverride("valygar",StartDialogue("jarltrak",Player1))
+END
+
+IF
+  Global("tz_valytrakjarl","GLOBAL",1)
+  !InParty("valygar")
+THEN
+  RESPONSE #100
+    SetGlobal("tz_jartrakjarl","GLOBAL",1)
+END
+
+IF
+  Global("tz_jartrakjarl","GLOBAL",1)
+  InParty("jaheira")
+THEN
+  RESPONSE #100
+    SetGlobal("tz_jartrakjarl","GLOBAL",2)
+    ActionOverride("jaheira",StartDialogue("jarltrak",Player1))
+END
+
+IF
+  !InParty("jaheira")
+  !InParty("valygar")
+  !InParty("minsc")
+  Global("tz_githleev","GLOBAL",2)
+THEN
+  RESPONSE #100
+    SetGlobal("tz_githleev","GLOBAL",3)
+END
+
+IF
+  Global("tz_githleev","GLOBAL",3)
+  InParty("viconia")
+THEN
+  RESPONSE #100
+    ActionOverride("viconia",StartDialogue("vicyexle",Player1))
+    SetGlobal("tz_githleev","GLOBAL",4)
+END
+
+
+IF
+  Global("tz_githleev","GLOBAL",3)
+  InParty("viconia")
+THEN
+  RESPONSE #100
+    ActionOverride("viconia",StartDialogue("vicyexle",Player1))
+    SetGlobal("tz_githleev","GLOBAL",4)
+END
+
+IF
+  GlobalGT("tz_githleev","GLOBAL",0)  
+  Global("tz_DrowItems","GLOBAL",0)  
+THEN
+  RESPONSE #100
+	SetGlobalTimer("tz_DrowItemsTimer","GLOBAL",ONE_DAY)  
+	SetGlobal("tz_DrowItems","GLOBAL",1)  
+END
+

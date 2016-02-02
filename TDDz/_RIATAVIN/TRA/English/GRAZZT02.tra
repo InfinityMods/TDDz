@@ -1,0 +1,13 @@
+@0    = ~Stop right there, Drow--or false Drow, I should say.~ [GRAZT3]
+@1    = ~What do you want? You see through my disguise, but I don't want any trouble from you.~
+@2    = ~What are you talking about?~
+@3    = ~I am Graz'zt, a great demon prince of Hell. The name may strike a chord as will other enemies of mine like Orcus and Demogorgon. With enemies like that, I would be wise to return to my realm as soon as possible. But... I sense something in you that holds me back.~ [GRAZT4]
+@4    = ~What do you want from me?~
+@5    = ~You are not Drow. That much is obvious. I feel the spirit of one like I in your veins, but I cannot put a name to the memories.~
+@6    = ~It is from the almighty God of Murder, Bhaal.~
+@7    = ~As much as it disgusts me, I am a child of Bhaal, the God of Murder.~
+@8    = ~Bhaal... Yes, a true menace from what tales bring. And one with his blood would prove most challenging.~ [GRAZT5]
+@9    = ~I have no need to fight you, demon prince.~
+@10   = ~If you feel you must die to prove your power then step ahead.~
+@11   = ~You speak weakly despite your impressive pedigree. Come and let me show you the power of rage. Your scalp will put great fear in the heart of Demogorgon and Orcus.~
+@12   = ~If you live up to your heritage, your scalp will be a great trophy for me.~

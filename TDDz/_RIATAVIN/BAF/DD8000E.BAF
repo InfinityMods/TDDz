@@ -1,0 +1,39 @@
+IF
+  Global("tz_dd8000e","GLOBAL",0)
+THEN
+  RESPONSE #100
+    CreateCreature("dragbr1",[695.779],4)
+    SetGlobal("tz_dd8000e","GLOBAL",1)
+END
+
+IF
+  Global("tz_bronmeet2","GLOBAL",1)
+THEN
+  RESPONSE #100
+    CreateVisualEffect("spdimndr",[578.953])
+    CreateCreature("dragbr2",[578.953],4)
+    SetGlobal("tz_bronmeet2","GLOBAL",2)
+END
+
+IF
+  Global("tz_bronmeet2","GLOBAL",3)
+  Global("tz_adhtyyethe5","GLOBAL",0)
+THEN
+  RESPONSE #100
+    CreateVisualEffect("spdimndr",[909.696])
+    CreateCreature("dragbr3",[909.696],4)
+    SetGlobal("tz_adhtyyethe5","GLOBAL",1)
+END
+
+IF
+  Global("tz_bronmeet2","GLOBAL",4)
+THEN
+  RESPONSE #100
+    CreateVisualEffect("sppolymp",[360.820])
+    CreateVisualEffect("sppolymp",[340.800])
+    CreateVisualEffect("sppolymp",[380.840])
+    CreateVisualEffect("sppolymp",[350.810])
+    CreateCreature("DDRAGBRW",[360.820],4)
+    SetGlobal("tz_bronmeet2","GLOBAL",5)
+END
+

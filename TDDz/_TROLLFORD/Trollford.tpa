@@ -1,4 +1,4 @@
-DEFINE_ACTION_MACRO FinalizeImport
+DEFINE_ACTION_MACRO InstallSpecificContents
 BEGIN		
 	EXTEND_TOP ~AR1100.bcs~ ~%MOD_FOLDER%/%COMP_FOLDER%/Snip/bAR1100.baf~
 	EXTEND_TOP ~AR1105.bcs~ ~%MOD_FOLDER%/%COMP_FOLDER%/Snip/bAR1105.baf~			
@@ -23,19 +23,21 @@ BEGIN
 		COUNT_2DA_ROWS 7 count
 		WHILE (count > 1) BEGIN
 			READ_2DA_ENTRY (count -1) 0 7 resname				
-			READ_2DA_ENTRY (count -1) 6 7 undroppable
+			READ_2DA_ENTRY (count -1) 6 7 policy //undroppable column
 			SET count = count -1
-						
-			PATCH_IF NOT ~%undroppable%~ STRING_EQUAL ~+~ BEGIN			
-				TO_UPPER resname				
-				INNER_ACTION BEGIN					
-					ACTION_IF ~%undroppable%~ STRING_EQUAL ~.~ 
-						BEGIN OUTER_SPRINT value ~SCRL75~ END 
-						ELSE BEGIN OUTER_SPRINT value ~%undroppable%~ END
-					
-					//ACTION_MATCH ~%resname%~ 
-					//WITH		
-					//	// TODO
+			
+			TO_UPPER resname
+			TO_UPPER policy
+			SET customize = NOT (~%policy%~ STRING_EQUAL ~+~ || ~%policy%~ STRING_EQUAL ~++++++++~)
+			SET undroppable = (~%policy%~ STRING_EQUAL ~.~)
+			SPRINT newItem ~%policy%~
+			PATCH_IF (~%undroppable%~)
+				BEGIN SPRINT newItem ~SCRL75~ END
+			
+			PATCH_IF (~%customize%~) BEGIN			
+				INNER_ACTION BEGIN
+					//ACTION_MATCH ~%resname%~					
+					//WITH							
 					//	DEFAULT
 					//END
 				END
@@ -52,25 +54,29 @@ BEGIN
 		COUNT_2DA_ROWS 8 count
 		WHILE (count > 1) BEGIN
 			READ_2DA_ENTRY (count -1) 0 8 resname				
-			READ_2DA_ENTRY (count -1) 6 8 undroppable
+			READ_2DA_ENTRY (count -1) 6 8 policy
 			SET count = count -1
-						
-			PATCH_IF NOT ~%undroppable%~ STRING_EQUAL ~+~ BEGIN			
-				TO_UPPER resname				
-				INNER_ACTION BEGIN					
-					ACTION_IF ~%undroppable%~ STRING_EQUAL ~.~ // '.' means undroppable
-						BEGIN OUTER_SPRINT value ~SCRL75~ END 
-						ELSE BEGIN OUTER_SPRINT value ~%undroppable%~ END
-					
-					ACTION_MATCH ~%resname%~ 
+				
+			TO_UPPER resname	
+			TO_UPPER policy	
+			SET customize = NOT (~%policy%~ STRING_EQUAL ~+~ || ~%policy%~ STRING_EQUAL ~++++++++~)	
+			SET undroppable = (~%policy%~ STRING_EQUAL ~.~)
+			SET replace = (~%customize%~ && NOT ~%undroppable%~)
+			SPRINT newItem ~%policy%~
+			PATCH_IF (~%undroppable%~)
+				BEGIN SPRINT newItem ~SCRL75~ END
+			
+			PATCH_IF ~%customize%~ BEGIN
+				INNER_ACTION BEGIN
+					ACTION_MATCH ~%resname%~
 					WITH
-						~SCRX4~ 	BEGIN COPY_EXISTING ~DD9005.ARE~ ~override~ WRITE_ASCII 0x1FB0 	~%value%~ #8 END
-						~SCRX12~ 	BEGIN COPY_EXISTING ~DD9008.ARE~ ~override~ WRITE_ASCII 0x4C0 	~%value%~ #8 END
-						~SCRX15~	BEGIN COPY_EXISTING ~DD9005.ARE~ ~override~ WRITE_ASCII 0x2280 	~%value%~ #8 END
-						~SCRX60~	BEGIN COPY_EXISTING ~QLOOT4.cre~ ~override~ WRITE_ASCII 0x680 	~%value%~ #8 END
-						~SCRX64~	BEGIN COPY_EXISTING ~DD9009.ARE~ ~override~ WRITE_ASCII 0xAB0 	~%value%~ #8 END
-						~SCRX68~	BEGIN COPY_EXISTING ~DD9009.ARE~ ~override~ WRITE_ASCII 0xAEC 	~%value%~ #8 END						
-						~SCRX73~	BEGIN COPY_EXISTING ~DD9005.ARE~ ~override~ WRITE_ASCII 0x1FC4 	~%value%~ #8 END												
+						~SCRX4~ 	BEGIN COPY_EXISTING ~DD9005.ARE~ ~override~ WRITE_ASCII 0x1FB0 	~%newItem%~ #8 END
+						~SCRX12~ 	BEGIN COPY_EXISTING ~DD9008.ARE~ ~override~ WRITE_ASCII 0x4C0 	~%newItem%~ #8 END
+						~SCRX15~	BEGIN COPY_EXISTING ~DD9005.ARE~ ~override~ WRITE_ASCII 0x2280 	~%newItem%~ #8 END
+						~SCRX60~	BEGIN COPY_EXISTING ~QLOOT4.cre~ ~override~ WRITE_ASCII 0x680 	~%newItem%~ #8 END
+						~SCRX64~	BEGIN COPY_EXISTING ~DD9009.ARE~ ~override~ WRITE_ASCII 0xAB0 	~%newItem%~ #8 END
+						~SCRX68~	BEGIN COPY_EXISTING ~DD9009.ARE~ ~override~ WRITE_ASCII 0xAEC 	~%newItem%~ #8 END						
+						~SCRX73~	BEGIN COPY_EXISTING ~DD9005.ARE~ ~override~ WRITE_ASCII 0x1FC4 	~%newItem%~ #8 END												
 						DEFAULT
 					END
 				END

@@ -1,0 +1,33 @@
+@0    = ~Ihr seid mit dem Stein zurückgekehrt?~
+@1    = ~Habt Ihr jemals daran gezweifelt?~
+@2    = ~Natürlich. Ein Gegenstand mit einem solchen Potential würde immer sicher in meinen Händen zurückkehren.~
+@3    = ~Hahaha... Natürlich nicht, junger Mann. Das habt Ihr gut gemacht.~
+ ~Hahaha... Natürlich nicht, junge Frau. Das habt Ihr gut gemacht.~
+
+@4    = ~Ihr habt ein wahres Wunder mit dieser Aufgabe vollbracht. In den falschen Händen kann ein antimagischer Stein viel Unheil verursachen.~
+
+@5    = ~Ich war mir der Gefahren bewusst, habe sie aber ignoriert. Die Belohnung war meine Triebfeder.~
+@6    = ~Es musste getan werden. Ein solch böser Mann mit solch einem Stein war nicht annehmbar.~
+@7    = ~So, und nun kommen wir zu Eurer Belohnung...~
+@8    = ~Wir haben die Macht, Dinge zu verändern. Die Frage ist nur,  was Ihr verbessern wollt?~
+
+@9    = ~Seid Ihr begierig darauf, Stärke zu gewinnen, die bei physischen Kampf hilfreich ist? Oder vielleicht mehr Geschicklichkeit und Schnelligkeit? Wollt Ihr gesünder sein?~
+
+@10   = ~Wollt Ihr intelligenter werden, oder wollt Ihr weisere Entscheidungen treffen können? Wie wäre es, Euren sozialen Status zu erhöhen? Ihr habt die Wahl, Kind des Bhaal.~
+
+@11   = ~In diesem Falle möchte ich Stärke erlangen.~
+
+@12   = ~Geschicklichkeit wäre für mich von grossem Nutzen.~
+
+@13   = ~Eine bessere Konstitution wäre nicht schlecht.~
+
+@14   = ~Meine Intelligenz soll verbessert werden.~
+@15   = ~Ein wenig Weisheit täte mir ganz gut.~
+@16   = ~Mit einem hohen Charisma könnte ich viel besser auftreten.~
+@17   = ~Dies war eine sehr gute Wahl. Ich kann nur hoffen, dass Euch dies ibei zukünftigen Ereignissen helfen wird.~
+@18   = ~Jetzt ist es aber wieder an der Zeit, sich auf den Weg zu machen. Ich kann die Anwesenheit so vieler anderer Magier nicht allzu lange ertragen. Hahaha...~
+@19   = ~Und was Euch betrifft, es gibt noch viel zu tun. Und ich weiss, dass Ihr in Eurem tiefsten Inneren den Wunsch habt, es zu tun. Bald wird Euch nichts mehr aufhalten.~
+@20   = ~Lebt wohl, Kind des Bhaal, und viel Glück!~
+
+@21   = ~Ich danke Euch allen.~
+@22   = ~Ich werde aufpassen.~

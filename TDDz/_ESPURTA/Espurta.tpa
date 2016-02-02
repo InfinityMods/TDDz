@@ -1,4 +1,4 @@
-DEFINE_ACTION_MACRO FinalizeImport
+DEFINE_ACTION_MACRO InstallSpecificContents
 BEGIN		
 	APPEND ~MASTAREA.2DA~
 ~DD2300   value
@@ -7,14 +7,7 @@ DD2500   value
 DD1200   value
 DX2001   value~
 	UNLESS ~DD2300~
-		
-	ADD_SPELL ~TDD/Spl/SPPR962.spl~ 1 7 TOPAZ_DRAGON_BREATH 
-		SAY NAME1 @20813
-	ADD_SPELL ~TDD/Spl/SPWI428.spl~ 2 4 COM_ICE_SHARD
-		SAY NAME1 @20843
 	
-	COPY_EXISTING ~%MOD_FOLDER%/%COMP_FOLDER%/_copy/DD0903.are~ ~override/DD0903.ARE~
-		
 	COPY_EXISTING ~DD0334.are~ 		~override~ WRITE_ASCII 0x94 ~DD0334~ #8
 	COPY_EXISTING ~FROST01.cre~ 	~override~ WRITE_LONG  0x28 57935 // Animation
 	COPY_EXISTING ~DDFROST1.cre~ 	~override~ WRITE_LONG  0x28 57935 // Animation	
@@ -23,7 +16,7 @@ DX2001   value~
 	LAM HandleSpellScrollsContract	
 	LAM HandleItemsContract	
 	
-	EXTEND_TOP ~AR0020.bcs~ ~%MOD_FOLDER%/%COMP_FOLDER%/Snip/tAR0020.baf~		
+	EXTEND_TOP ~AR0020.bcs~ ~%MOD_FOLDER%/%COMP_FOLDER%/Snip/tAR0020.baf~
 	
 	OUTER_TEXT_SPRINT sender ~%COMP_FOLDER%~
 	INCLUDE ~%MOD_FOLDER%/Lib/Helpers.tpa~ LAF Accept STR_VAR sender target = ~_ESPURTA~ END
@@ -37,24 +30,27 @@ BEGIN
 		COUNT_2DA_ROWS 7 count
 		WHILE (count > 1) BEGIN
 			READ_2DA_ENTRY (count -1) 0 7 resname				
-			READ_2DA_ENTRY (count -1) 6 7 undroppable
+			READ_2DA_ENTRY (count -1) 6 7 policy //undroppable column
 			SET count = count -1
-						
-			PATCH_IF NOT ~%undroppable%~ STRING_EQUAL ~+~ BEGIN			
-				TO_UPPER resname				
-				INNER_ACTION BEGIN					
-					ACTION_IF ~%undroppable%~ STRING_EQUAL ~.~ 
-						BEGIN OUTER_SPRINT value ~SCRL75~ END 
-						ELSE BEGIN OUTER_SPRINT value ~%undroppable%~ END
-					
+			
+			TO_UPPER resname
+			TO_UPPER policy
+			SET customize = NOT (~%policy%~ STRING_EQUAL ~+~ || ~%policy%~ STRING_EQUAL ~++++++++~)
+			SET undroppable = (~%policy%~ STRING_EQUAL ~.~)
+			SPRINT newItem ~%policy%~
+			PATCH_IF (~%undroppable%~)
+				BEGIN SPRINT newItem ~SCRL75~ END
+			
+			PATCH_IF (~%customize%~) BEGIN			
+				INNER_ACTION BEGIN
 					ACTION_MATCH ~%resname%~ 
 					WITH
-						~ARDEADX~ 	BEGIN COPY_EXISTING ~DD4003.ARE~ 	~override~ WRITE_ASCII 0x12F4 	~%value%~ #8 END
-						~DDPOTNP1~ 	BEGIN COPY_EXISTING ~DDTEMPL1.STO~ 	~override~ WRITE_ASCII 0x274 	~%value%~ #8 END
-						~DDPOTNP2~ 	BEGIN COPY_EXISTING ~DDTEMPL1.STO~ 	~override~ WRITE_ASCII 0x290 	~%value%~ #8 END
-						~DORATH~ 	BEGIN COPY_EXISTING ~BARGOOD.STO~ 	~override~ WRITE_ASCII 0x20C 	~%value%~ #8 END
-						~EREBOS~ 	BEGIN COPY_EXISTING ~BARGOOD.STO~ 	~override~ WRITE_ASCII 0x1F0 	~%value%~ #8 END						
-						~ICEPLAT~ 	BEGIN COPY ~%MOD_FOLDER%/TEMP/DD2500.BAF~ ~%MOD_FOLDER%/TEMP/DD2500.BAF~ REPLACE_TEXTUALLY ~%resname%~ ~%value%~ END						
+						~ARDEADX~ 	BEGIN COPY_EXISTING ~DD4003.ARE~ 	~override~ WRITE_ASCII 0x12F4 	~%newItem%~ #8 END
+						~DDPOTNP1~ 	BEGIN COPY_EXISTING ~DDTEMPL1.STO~ 	~override~ WRITE_ASCII 0x274 	~%newItem%~ #8 END
+						~DDPOTNP2~ 	BEGIN COPY_EXISTING ~DDTEMPL1.STO~ 	~override~ WRITE_ASCII 0x290 	~%newItem%~ #8 END
+						~DORATH~ 	BEGIN COPY_EXISTING ~BARGOOD.STO~ 	~override~ WRITE_ASCII 0x20C 	~%newItem%~ #8 END
+						~EREBOS~ 	BEGIN COPY_EXISTING ~BARGOOD.STO~ 	~override~ WRITE_ASCII 0x1F0 	~%newItem%~ #8 END						
+						~ICEPLAT~ 	BEGIN COPY ~%MOD_FOLDER%/TEMP/%COMP_FOLDER%/DD2500.BAF~ ~%MOD_FOLDER%/TEMP/%COMP_FOLDER%/DD2500.BAF~ REPLACE_TEXTUALLY ~%resname%~ ~%newItem%~ END
 						DEFAULT
 					END
 				END
@@ -71,22 +67,26 @@ BEGIN
 		COUNT_2DA_ROWS 8 count
 		WHILE (count > 1) BEGIN
 			READ_2DA_ENTRY (count -1) 0 8 resname				
-			READ_2DA_ENTRY (count -1) 6 8 undroppable
+			READ_2DA_ENTRY (count -1) 6 8 policy
 			SET count = count -1
-						
-			PATCH_IF NOT ~%undroppable%~ STRING_EQUAL ~+~ BEGIN			
-				TO_UPPER resname				
-				INNER_ACTION BEGIN					
-					ACTION_IF ~%undroppable%~ STRING_EQUAL ~.~ // '.' means undroppable
-						BEGIN OUTER_SPRINT value ~SCRL75~ END 
-						ELSE BEGIN OUTER_SPRINT value ~%undroppable%~ END
-					
-					ACTION_MATCH ~%resname%~ 
+				
+			TO_UPPER resname	
+			TO_UPPER policy	
+			SET customize = NOT (~%policy%~ STRING_EQUAL ~+~ || ~%policy%~ STRING_EQUAL ~++++++++~)	
+			SET undroppable = (~%policy%~ STRING_EQUAL ~.~)
+			SET replace = (~%customize%~ && NOT ~%undroppable%~)
+			SPRINT newItem ~%policy%~
+			PATCH_IF (~%undroppable%~)
+				BEGIN SPRINT newItem ~SCRL75~ END
+			
+			PATCH_IF ~%customize%~ BEGIN								
+				INNER_ACTION BEGIN
+					ACTION_MATCH ~%resname%~ 					
 					WITH
-						~SCRX10~ 	BEGIN COPY_EXISTING ~BARHEAL.sto~ 	~override~ WRITE_ASCII 0x1CC 	~%value%~ #8 END
-						~SCRX25~ 	BEGIN COPY_EXISTING ~BARHEAL.sto~ 	~override~ WRITE_ASCII 0x1B0 	~%value%~ #8 END
-						~SCRX29~ 	BEGIN COPY_EXISTING ~DD1800.are~ 	~override~ WRITE_ASCII 0x54C 	~%value%~ #8 END	
-						~SCRX51~ 	BEGIN COPY_EXISTING ~BARHEAL.sto~ 	~override~ WRITE_ASCII 0x1E8 	~%value%~ #8 END
+						~SCRX10~ 	BEGIN COPY_EXISTING ~BARHEAL.sto~ 	~override~ WRITE_ASCII 0x1CC 	~%newItem%~ #8 END
+						~SCRX25~ 	BEGIN COPY_EXISTING ~BARHEAL.sto~ 	~override~ WRITE_ASCII 0x1B0 	~%newItem%~ #8 END
+						~SCRX29~ 	BEGIN COPY_EXISTING ~DD1800.are~ 	~override~ WRITE_ASCII 0x54C 	~%newItem%~ #8 END	
+						~SCRX51~ 	BEGIN COPY_EXISTING ~BARHEAL.sto~ 	~override~ WRITE_ASCII 0x1E8 	~%newItem%~ #8 END
 						DEFAULT
 					END
 				END

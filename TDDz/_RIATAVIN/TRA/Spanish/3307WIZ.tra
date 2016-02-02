@@ -1,0 +1,27 @@
+@0    = ~Bienvenidos, viajeros. Soy Avrabar, un aprendiz de mago. ¿Necesitáis alguna cosa en particular?~
+@1    = ~¿Un mago, eh? ¿Tenéis algunos conjuros u objetos que pudiera comprar?~
+@2    = ~Ahora no. Volveremos después.~
+@3    = ~Rivaldo nos dijo que os buscáramos. ¿Andábais buscando aventureros?~
+@4    = ~De hecho, tengo una colección de pergaminos. ¡Mirad cuanto deseéis, pero mantened lejos vuestras sucias manos! Mi maestro no estaria contento si sus pergaminos se ensuciasen.~
+@5    = ~Ah si, en efecto. Esto me llevará contaroslo algo de tiempo así que decidme, ¿estáis dispuesto a escuchar el cometido?~
+~Ah si, en efecto. Esto me llevará contaroslo algo de tiempo así que decidme, ¿estáis dispuesta a escuchar el cometido?~
+@6    = ~Si, por supuesto... Siempre estoy dispuesto a escuchar una buena historia.~
+~Si, por supuesto... Siempre estoy dispuesta a escuchar una buena historia.~
+@7    = ~No, no tengo tiempo ahora.~
+@8    = ~Largo tiempo atrás, cuando Amn atravesaba una gran lucha política, la culpa se les fue echada a los hechiceros. Conforme a esto, los magos fueron exiliados de las grandes ciudades y enviados a las regiones salvajes.~
+@9    = ~Ni qué decir hay que muchos magos no pasaron mucho tiempo en las regiones salvajes, pero algunos se adaptaron bien. Uno en particular lo hizo mejor que la mayoría y se encontró a sí mismo en un baluarte abandonado y lo hizo su hogar para seguir con sus estudios arcanos.~
+@10   = ~Orgoth era su nombre; un poderoso mago que se fue haciendo más poderoso a base de sus estudios. La morada que reclamó como suya se la conoce como la Torre de Orgoth.~
+@11   = ~Mientras se volvía uno de los más poderosos, su confianza en sí mismo crecía incluso más que su poder. Había perfeccionado el arte pero estaba amargado con los amnianos por exiliarle. Quería venganza.~
+@12   = ~Un haciago día, empezó una invocación que llamaría a poderosos demonios del Abismo para servirle. Era capaz de mantener a algunas bestias demoníacas doblegadas a sus palabras, pero las invocaba por docenas.~
+@13   = ~Mientras la historia seguía, un demonio fue más depravado que los demás... Errtu, creo que era su nombre. Él dirigió el ataque contra el mago que les había invocado, y muchos demonios murieron antes de que Errtu sostuviera el corazón de Orgoth en su garra.~
+@14   = ~Una historia muy bonita, pero está totalmente en pasado. ¿Cuál es el sentido de la narración?~
+@15   = ~Bien, Orgoth no era un estúpido. Había establecido alternativas para la mayoría de los imprevistos que pudieran ocurrir. Se dice que, como él murió, se activó la mayor de sus contingencias, provocando que todo aquel que hubiera presenciado su muerte se pudriera, cayendo lentamente en una muerte dolorosa.~
+@16   = ~Todos los demonios que sobrevivieron estaban afectados, pero como es bien sabido, un demonio asesinado en el plano material sirve unos cien años en el Abismo. Esos años ya han pasado, y percibo que las bestias han regresado.~
+@17   = ~¿Cómo lo sabéis?~
+@18   = ~Lo noto en lo más profundo de mi ser... Puedo percibir claramente el mal que emana de la torre situada no muy lejos de aquí. Se selló hace tiempo con la esperanza, de que si las criaturas volvieran o algún ladrón intentara saquearla, nadie pudiera encontrar una forma de entrar o de salir. Pocos conocen la situación exacta de la torre, y no puedo ignorar el pensamiento de que cualquier sello puede no sea suficiente para contener a esos demonios.~
+@19   = ~Tengo que veríficar que los demonios no hayan regresado, y que no estén destruyendo las guardas de las que hablamos. Aunque no puedo decir con seguridad que vayan a regresar al lugar exacto de su asesinato, necesito saberlo con certeza. Estando tan cerca de la torre, si esas criaturas rompieran los sellos Riatavin estaría condenada...~
+@20   = ~Quiero que cojáis estas dos piedras de guardia. Una es para la puerta principal la cual posee una gran protección. La piedra la abrirá, pero puede desintegrarse. La segunda se mantendrá firme, y abrirá todas las puertas protegidas. Id e infórmame sobre lo que veáis. Y si los demonios están allí... no los dejéis escapar libres... al menos para otros cien años más.~
+@21   = ~Vuestra tarea parece sencilla. Me aventuraré alli en cuanto termine con otros asuntos.~
+@22   = ~No estoy seguro. Cogeré las piedras, pero puede que la haga o puede que no.~
+~No estoy segura. Cogeré las piedras, pero puede que la haga o puede que no.~
+@23   = ~Muy bien. No hay ninguna prisa. Les llevará algún tiempo si deséan romper esas protecciones.~

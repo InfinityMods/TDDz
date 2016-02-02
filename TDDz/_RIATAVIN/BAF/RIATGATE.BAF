@@ -1,0 +1,17 @@
+IF
+  Global("tz_riatgatesee","GLOBAL",0)
+  See([PC])
+  Range([PC],15)
+THEN
+  RESPONSE #100
+    StartDialogNoSet([PC])
+    SetGlobal("tz_riatgatesee","GLOBAL",1)
+END
+
+IF
+  Global("tz_riatgatesee","GLOBAL",1)
+THEN
+  RESPONSE #100
+    EscapeArea()
+END
+

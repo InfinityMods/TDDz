@@ -1,5 +1,11 @@
 BEGIN ~RIATENCH~
 
+//IF ~True()~ THEN BEGIN 0
+//  SAY @0
+//  IF ~~ THEN REPLY @1 GOTO 1
+//  IF ~~ THEN REPLY @2 GOTO 2
+//END
+
 IF ~True()~ THEN BEGIN 0
   SAY @0
   IF ~~ THEN REPLY @1 GOTO 1
@@ -30,18 +36,18 @@ IF ~~ THEN BEGIN 1 // from: 2.1 0.0
 !PartyHasItem("RING17")
 !PartyHasItem("RING18")
 !PartyHasItem("RING19")
-!PartyHasItem("RING32")~ THEN GOTO 3
-  IF ~PartyHasItem("AMUL02")~ THEN GOTO 4
-  IF ~PartyHasItem("AMUL04")~ THEN GOTO 7
-  IF ~PartyHasItem("AMUL05")~ THEN GOTO 8
-  IF ~PartyHasItem("AMUL06")~ THEN GOTO 9
-  IF ~PartyHasItem("AMUL07")~ THEN GOTO 10
-  IF ~PartyHasItem("AMUL08")~ THEN GOTO 11
-  IF ~PartyHasItem("AMUL09")~ THEN GOTO 12
-  IF ~PartyHasItem("AMUL10")~ THEN GOTO 13
-  IF ~PartyHasItem("AMUL11")~ THEN GOTO 14
+!PartyHasItem("RING32")~ THEN GOTO 3 
+  //IF ~PartyHasItem("AMUL02")~ THEN GOTO 4
+  //IF ~PartyHasItem("AMUL04")~ THEN GOTO 7
+  //IF ~PartyHasItem("AMUL05")~ THEN GOTO 8
+  //IF ~PartyHasItem("AMUL06")~ THEN GOTO 9
+  //IF ~PartyHasItem("AMUL07")~ THEN GOTO 10
+  //IF ~PartyHasItem("AMUL08")~ THEN GOTO 11
+  //IF ~PartyHasItem("AMUL09")~ THEN GOTO 12
+  //IF ~PartyHasItem("AMUL10")~ THEN GOTO 13
+  //IF ~PartyHasItem("AMUL11")~ THEN GOTO 14
   IF ~PartyHasItem("AMUL12")~ THEN GOTO 15
-  IF ~PartyHasItem("AMUL13")~ THEN GOTO 16
+  //IF ~PartyHasItem("AMUL13")~ THEN GOTO 16  
 END
 
 IF ~~ THEN BEGIN 2 // from: 0.1
@@ -155,6 +161,7 @@ END
 IF ~~ THEN BEGIN 19 // from: 17.1
   SAY @35
   IF ~~ THEN DO ~ActionOverride("riatench",ForceSpell(Player1,WIZARD_DISPEL_MAGIC_VISUALS_ONLY))
+TakePartyItem("AMUL12")  
 GiveItemCreate("AMUL01",Player1,0,0,0)
 TakePartyGold(6000)~ EXIT
 END
@@ -162,6 +169,7 @@ END
 IF ~~ THEN BEGIN 20 // from: 17.2
   SAY @35
   IF ~~ THEN DO ~ActionOverride("riatench",ForceSpell(Player1,WIZARD_DISPEL_MAGIC_VISUALS_ONLY))
+TakePartyItem("AMUL12")  
 GiveItemCreate("AMUL17",Player1,0,0,0)
 TakePartyGold(8000)~ EXIT
 END
@@ -169,6 +177,7 @@ END
 IF ~~ THEN BEGIN 21 // from: 17.3
   SAY @35
   IF ~~ THEN DO ~ActionOverride("riatench",ForceSpell(Player1,WIZARD_DISPEL_MAGIC_VISUALS_ONLY))
+TakePartyItem("AMUL12")  
 GiveItemCreate("AMUL19",Player1,0,0,0)
 TakePartyGold(7000)~ EXIT
 END
@@ -176,6 +185,7 @@ END
 IF ~~ THEN BEGIN 22 // from: 17.4
   SAY @35
   IF ~~ THEN DO ~ActionOverride("riatench",ForceSpell(Player1,WIZARD_DISPEL_MAGIC_VISUALS_ONLY))
+TakePartyItem("AMUL12")  
 GiveItemCreate("AMUL20",Player1,0,0,0)
 TakePartyGold(13000)~ EXIT
 END
@@ -183,6 +193,7 @@ END
 IF ~~ THEN BEGIN 23 // from: 17.5
   SAY @35
   IF ~~ THEN DO ~ActionOverride("riatench",ForceSpell(Player1,WIZARD_DISPEL_MAGIC_VISUALS_ONLY))
+TakePartyItem("AMUL12")  
 GiveItemCreate("AMUL21",Player1,0,0,0)
 TakePartyGold(23000)~ EXIT
 END
@@ -190,6 +201,7 @@ END
 IF ~~ THEN BEGIN 24 // from: 17.6
   SAY @35
   IF ~~ THEN DO ~ActionOverride("riatench",ForceSpell(Player1,WIZARD_DISPEL_MAGIC_VISUALS_ONLY))
+TakePartyItem("AMUL12")  
 GiveItemCreate("AMUL22",Player1,0,0,0)
 TakePartyGold(7000)~ EXIT
 END
@@ -197,6 +209,7 @@ END
 IF ~~ THEN BEGIN 25 // from: 17.7
   SAY @35
   IF ~~ THEN DO ~ActionOverride("riatench",ForceSpell(Player1,WIZARD_DISPEL_MAGIC_VISUALS_ONLY))
+TakePartyItem("AMUL12")  
 GiveItemCreate("AMUL23",Player1,0,0,0)
 TakePartyGold(13000)~ EXIT
 END
@@ -204,6 +217,7 @@ END
 IF ~~ THEN BEGIN 26 // from: 17.8
   SAY @35
   IF ~~ THEN DO ~ActionOverride("riatench",ForceSpell(Player1,WIZARD_DISPEL_MAGIC_VISUALS_ONLY))
+TakePartyItem("AMUL12")
 GiveItemCreate("AMUL24",Player1,0,0,0)
 TakePartyGold(16000)~ EXIT
 END
@@ -211,7 +225,7 @@ END
 IF ~~ THEN BEGIN 27 // from: 17.9
   SAY @35
   IF ~~ THEN DO ~ActionOverride("riatench",ForceSpell(Player1,WIZARD_DISPEL_MAGIC_VISUALS_ONLY))
-Wait(4)
+TakePartyItem("AMUL12")
 GiveItemCreate("AMUL25",Player1,0,0,0)
 TakePartyGold(14000)~ EXIT
 END

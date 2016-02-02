@@ -4,17 +4,6 @@ VERSION ~v1.0~
 
 ALWAYS
 	INCLUDE ~%MOD_FOLDER%/Lib/Helpers.tpa~ LAM ForceClearTempFolder
-	
-	ACTION_IF (GAME_IS ~eet~) AND (FILE_CONTAINS ~override/EET.flag~ ~EET_JOURNAL~) BEGIN
-		OUTER_SET bg2_chapter = 14
-	END ELSE BEGIN
-		OUTER_SET bg2_chapter = 0
-	END
-		OUTER_FOR (i=1; i<=10; i=i+1) BEGIN
-		OUTER_SET bg2_chapter = bg2_chapter + 1
-		OUTER_SPRINT name_source ~bg2_chapter_%i%~
-		OUTER_SET EVAL ~%name_source%~ = bg2_chapter
-	END
 END
 
 AUTO_EVAL_STRINGS
@@ -23,8 +12,8 @@ AUTO_TRA ~TDDz/TEMP/Translations~
 
 LANGUAGE 	~English~ 
 			~English~ 
-			~TDDz/Translations/English/Tp2.tra~ 
-			~TDDz/Translations/English/Setup.tra~ 			
+			~TDDz/Translations/English/Setup.tra~
+			~TDDz/Translations/English/Tp2.tra~			
 
 LANGUAGE 	~Russian(aerie-ru)~
 			~Russian~
@@ -62,11 +51,22 @@ LANGUAGE 	~Spanish(Clan REO)~
 // Notes:
 // - DDTROLL1.BAF makes trolls killable
 // - Is GTRSK002 useless? ex: LeaveAreaLUA("dd9007","GTRSK002",[381.331],12)
-// - Used by script: SCRX41.ITM-Rary's Mnemonic Enhancer @MADEEL.sto, DD4003.are@1380, DD4003.baf
 
 
-// TODO BLOOD.itm @BGCTBOSS.CRE, @BGSHBOSS.CRE, @DD8001D.ARE
+// TODO BLOOD.itm @BGSHBOSS.CRE
 // TODO DDPOTNP1.itm @AR0402.baf
+
+// TODO ~DEATHREB~ BEGIN COPY_EXISTING ~DDPOTEN1.sto~ ~override~ WRITE_ASCII 0x708 ~%newItem%~ #8 END
+// TODO ~MAGBOTXX~ BEGIN COPY_EXISTING ~DDPOTEN1.sto~ ~override~ WRITE_ASCII 0x6B4 ~%newItem%~ #8 END
+// TODO ~MALICE~ BEGIN COPY_EXISTING ~DDPOTEN1.sto~ ~override~ WRITE_ASCII 0x698 ~%newItem%~ #8 END
+
+// TODO ~AEGISRNG~ BEGIN COPY_EXISTING ~MADEEL.sto~ ~override~ WRITE_ASCII 0x944 ~%newItem%~ #8 END 
+
+// TODO ~AMAUNMAC~ BEGIN COPY_EXISTING ~DDBERNAR.sto~ ~override~ WRITE_ASCII 0x4C4 ~%newItem%~ #8 END
+// TODO ~CERBSW2H~ BEGIN COPY_EXISTING ~DDBERNAR.sto~ ~override~ WRITE_ASCII 0x144 ~%newItem%~ #8 END
+// TODO ~ELVHUNTB~ BEGIN COPY_EXISTING ~DDBERNAR.sto~ ~override~ WRITE_ASCII 0x2E8 ~%newItem%~ #8 END
+// TODO ~MARKBOWX~ BEGIN COPY_EXISTING ~DDBERNAR.sto~ ~override~ WRITE_ASCII 0x33C ~%newItem%~ #8 END
+// TODO ~BLADETRM~ BEGIN COPY_EXISTING ~DDBERNAR.sto~ ~override~ WRITE_ASCII 0x3C8 ~%newItem%~ #8 END
 
 BEGIN @901000 
 	REQUIRE_PREDICATE GAME_IS ~bg2ee eet~ ~~	
@@ -75,6 +75,9 @@ BEGIN @901000
 		LAF ImportComponent STR_VAR aComp = ~CORE~ END
 	INCLUDE ~%MOD_FOLDER%/Lib/Helpers.tpa~ 
 		LAM DeleteTempFolder
+			
+	//INCLUDE ~%MOD_FOLDER%/Lib/Translations.tpa~
+		//LAM DispatchTraFiles
 	
 BEGIN @901001
 	REQUIRE_PREDICATE GAME_IS ~bg2ee eet~ ~~

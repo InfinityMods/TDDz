@@ -1,0 +1,25 @@
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId(Player1)
+    StorePartyLocations()
+    //LeaveAreaLUAPanic("dd0508c1","",[440.279],0)
+    LeaveAreaLUAPanic("ddc105","",[440.279],0)
+    //LeaveAreaLUA("dd0508c1","",[440.279],8)
+    LeaveAreaLUA("ddc105","",[440.279],8)
+    MultiPlayerSync()
+    MoveViewPoint([100.100],INSTANT)
+    FadeFromColor([30.0],0)
+    StartCutScene("vicythx2")
+END
+
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId("viconia")
+    //LeaveAreaLUA("dd0508c1","GTRSK002",[515.385],12)
+    LeaveAreaLUA("ddc105","GTRSK002",[515.385],12)
+END
+

@@ -1,0 +1,45 @@
+@0     = ~Bonjour, guerrier. Souhaitez-vous que j'enchante un objet ?~ ~Bonjour, guerrière. Souhaitez-vous que j'enchante un objet ?~
+@1     = ~Oui... c'est à dire, si j'ai quelque chose que vous pouvez enchanter.~
+@2     = ~Qu'est-ce que vous faites ?~
+@3     = ~Hmm... laissez-moi jeter un coup d'oeil... hmm... eum...~
+@4     = ~Je prends de simples amulettes et les enchante avec des propriétés spéciales. A un certain prix, bien sûr. Il faut bien vivre.~
+@5     = ~Intéressant. Je reviendrai peut-être voir ce que vous pouvez faire plus tard.~
+@6     = ~Ai-je quelque chose que vous pourriez éventuellement enchanter ?~
+@7     = ~Vous n'avez aucune amulette dont je puisse me servir comme base. Si vous en trouvez et que vous voulez en enchanter, revenez et je verrai ce que je peux faire pour vous.~
+@8     = ~Oui, vous avez un collier simple ici. Je peux l'enchanter pour vous si vous le souhaitez.~
+@9     = ~Comment pouvez-vous l'enchanter ?~
+@10    = ~Non, j'ai changé d'avis. Je ne veux rien enchanter.~
+@11    = ~Il y a plusieurs façons... Je vais vous les énumérer pour vous donner quelques options.~
+@12    = ~Je peux vous faire...
+Un collier de projectiles pour 6000 po.
+Une amulette de pierre verte de protection mentale pour 8000 po.
+Une amulette qui donne 5 % de résistance à la magie pour 7000 po.
+Une amulette qui donne 10 % de résistance à la magie pour 13000 po.
+Une amulette de pouvoir avec immunité à l'absorption de niveaux et une immunité à la magie de 5 % pour 23000 po.
+Une amulette de protection contre le poison pour 7000 po.
+Une amulette qui accorde +3 aux jets de sauvegarde contre les Souffles pour 13000 po.
+Une amulette qui accorde +5 aux jets de sauvegarde contre la Métamorphose pour 16000 po.
+Une amulette qui accorde +2 aux jets de sauvegarde contre les Sorts pour 14000 po.~
+@13    = ~Ah, vous avez un collier orné de gemmes zoïses. Je peux m'en servir de base.~
+@14    = ~Vous avez un collier de roche bleue. Je peux sûrement l'utiliser.~
+@15    = ~Vous avez un collier d'agni mani... Une belle base, en effet.~
+@16    = ~Vous avez un collier d'obsidienne arc-en-ciel. Ça semble prometteur...~
+@17    = ~Un collier de coquillages de porcelaine tigrée ira très bien.~
+@18    = ~Un collier d'argent, hein ? Pas super, mais ça suffira.~
+@19    = ~Vous avez un collier d'or. Parfait...~
+@20    = ~Vous avez un collier de perles... très esthétique et utile. Faites-moi voir...~
+@21    = ~Un collier de larmes de Laérale... c'est une belle pièce. Ce serait une base merveilleuse...~
+@22    = ~Vous avez une amulette héliotrope. Excellent.~
+@23    = ~Est-ce que quelque chose vous attire ? Parmi ceux que vous pouvez vous offrir, bien sûr. Héhéhé... les magiciens me disent toujours que mes prix sont trop élevés, mais ils ne peuvent certainement pas faire ça aussi bien que moi.~
+@24    = ~Non, mais il se pourrait que je revienne. Restez par ici.~
+@25    = ~J'aimerais avoir un Collier de Projectiles.~
+@26    = ~Je pense qu'une Amulette de Pierre Verte serait très utile.~
+@27    = ~Une amulette de 5 % de résistance à la magie m'intéresse.~
+@28    = ~Une amulette de 10 % de résistance à la magie m'intéresse.~
+@29    = ~J'ai besoin d'une Amulette de Pouvoir.~
+@30    = ~Une Amulette de Protection contre le Poison ferait l'affaire.~
+@31    = ~+3 contre les Souffles s'avèrerait utile.~
+@32    = ~+5 contre la Métamorphose est bien.~
+@33    = ~Je veux l'amulette avec +2 aux jets de sauvegarde contre les Sorts.~
+@34    = ~Apportez un collier et de l'argent ! Nous serons les meilleurs amis !~
+@35    = ~Alors il sera ainsi fait.~

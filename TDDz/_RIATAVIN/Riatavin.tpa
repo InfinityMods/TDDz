@@ -1,55 +1,92 @@
-DEFINE_ACTION_MACRO FinalizeImport
+DEFINE_ACTION_MACRO InstallSpecificContents
 BEGIN
 	INCLUDE ~%MOD_FOLDER%/Lib/Areas.tpa~
 	
-	COPY ~%MOD_FOLDER%/%COMP_FOLDER%/_copy/DD3334.are~ ~override~ // Fixed: phantom door removed
+	// TODO check DD8000... spawners
+	
+	LAM TDDPatchAR1106Area	
+	LAM TDDPatchDD8000Area	
+	LAM TDDPatchDD8001Area
+	
+	ACTION_FOR_EACH area IN ~DD8000~ ~DD8001~ BEGIN		
+		COPY_EXISTING ~%area%.are~ ~override~
+			LPM SetAnimationsInCombatFlag
+			READ_LONG 0x60 spawnersBaseOffset
+			READ_LONG 0x64 spawnersCount
+			// Disable max buggy spawners...
+			FOR(i=0; i<%spawnersCount%; ++i) BEGIN
+				WRITE_ASCII (%spawnersBaseOffset% + 200*i +24) ~~ #80
+				WRITE_SHORT (%spawnersBaseOffset% + 200*i +134) 0
+				WRITE_LONG (%spawnersBaseOffset% + 200*i +136) 0
+			END		
+	END		
+	
+	// Fixed/Tweaked .AREs
+	COPY 	~%MOD_FOLDER%/%COMP_FOLDER%/ARE/DD3334.are~ 	~override~ // Fixed: phantom door removed
+			~%MOD_FOLDER%/%COMP_FOLDER%/ARE/DD8001C.are~ 	~override~ // remove unused points of interest
 		LPM SetAnimationsInCombatFlag
 		
-	COPY_EXISTING ~DD3300.ARE~ ~override~		
+	COPY_EXISTING ~DD3300.ARE~ ~override~
 		SAY 0X1B88 @20085
 		SAY 0X1C4C @20086
 		SAY 0X1D10 @20087
-		LPM SetAnimationsInCombatFlag
 		
-	COPY ~override/DD3300CT.are~ ~override/DDCT33.are~
-		LPM SetAnimationsInCombatFlag
-	DELETE ~override/DD3300CT.are~
+		
+	ACTION_DEFINE_ASSOCIATIVE_ARRAY areas BEGIN
+		AR1106CT => ARCT11
+		DD0300CT => DDCT03
+		DD0508C1 => DDC105
+		DD1005CT => DDCT10
+		DD1002C1 => DDC110
+		DD1002X1 => DDX110
+		DD1607C1 => DDC160
+		DD3300C1 => DDC133
+		DD3300CT => DDCT33
+		DD3319C1 => DDC119
+		DD3319CT => DDCT19
+		DD8002ct => DDCT80
+		DD9X00C1 =>	DDC19X
+	END
+	ACTION_PHP_EACH areas AS old => newname BEGIN			
+		COPY ~override/%old%.are~ ~override/%newname%.are~		
+		DELETE ~override/%old%.are~
+	END		
+			
+	ACTION_IF FILE_EXISTS_IN_GAME ~MIELIKKI.itm~ THEN BEGIN
+		COPY_EXISTING ~MIELIKKI.itm~ ~override~
+			WRITE_SHORT 0x1C 5 // Fixed: set categorie to Arrows
+	END
 	
-	COPY ~override/DD3300C1.are~ ~override/DDC133.are~
-		LPM SetAnimationsInCombatFlag
-	DELETE ~override/DD3300C1.are~
+	// Invisible .CREs
+	COPY	~override/BANINVI.cre~ ~override~
+			~override/DEMNINVI.cre~ ~override~
+			~override/DEMNINV2.cre~ ~override~
+			~override/DROWINVI.cre~ ~override~
+			~override/FLEEINV1.cre~ ~override~
+			~override/FLEEINV2.cre~ ~override~
+			~override/FLEEINV3.cre~ ~override~
+			~override/GRAZINVI.cre~ ~override~
+			~override/MAPRINVI.cre~ ~override~
+			~override/ORGOINVI.cre~ ~override~
+		SAY NAME1 #30
+		SAY NAME2 #30
 	
-	COPY_EXISTING ~MIELIKKI.itm~ ~override~
-		WRITE_SHORT 0x1C	5 // Fixed: set categorie to Arrows	
-	
-	// => TODO dd3319CT.ARE, bgarive2.BAF, BGCTBOSS.cre
-	
-	// TODO
-	// Notes: DD9X01.are
-	// SCRX76.ITM (Otiluke's Acid Cloud)
-	// SCRX77.ITM (Otiluke's Death Screen)
-	// SCRX81.ITM (Khelben's Dweomerdoom)
-	
-	// TODO
-	// Notes: DD0206.are
-	// SCRX1.ITM (Azragan's Channeling)
-	// SCRX19.ITM (Black Death)
-	// SCRX27.ITM (Soul of Kalan-Zhar)
-	// SCRX33.ITM (Gravity
-	// SCRX72.ITM (Emotion: Fear)
-	// SCRX74.ITM (Melf's Prismatic Shards)		
-	
-		// TODO
-		//~DDCT01~ // aka DD3319CT => DD3318
-		//~DD0201~
-		//~DD9X00~ // => DD9X01, DD9X02, DD9X03, DD9X04,  DD9X05, dd9x00c1 (aka DDC19X)
-		//~DDC19X~		
-		//~DD3319~ // DD3319C1 ? DD3319CT?		
-	
+	COPY_EXISTING ~override/ZPRIZE4.cre~ ~override~	
+		WRITE_SHORT 0x270 0x80 // Fixed: set allegiance to neutral
+				
 	LAM HandleSpellScrollsContract
-	LAM HandleItemsContract	
-	
-	EXTEND_TOP ~AR0406.bcs~ ~%MOD_FOLDER%/%COMP_FOLDER%/Snip/bAR0406.baf~			
+	LAM HandleItemsContract
+	LAM HandleCoreItemsContract
+		
+	EXTEND_TOP ~AR0020.bcs~ ~%MOD_FOLDER%/%COMP_FOLDER%/Snip/tAR0020.baf~
+	EXTEND_BOTTOM ~AR0406.bcs~ ~%MOD_FOLDER%/%COMP_FOLDER%/Snip/bAR0406.baf~	
+	EXTEND_BOTTOM ~AR0904.bcs~ ~%MOD_FOLDER%/%COMP_FOLDER%/Snip/bAR0904.baf~	
+	EXTEND_BOTTOM ~AR1000.bcs~ ~%MOD_FOLDER%/%COMP_FOLDER%/Snip/bAR1000.baf~			
+	EXTEND_TOP ~AR1002.bcs~ ~%MOD_FOLDER%/%COMP_FOLDER%/Snip/tAR1002.baf~	
+	EXTEND_BOTTOM ~AR1005.bcs~ ~%MOD_FOLDER%/%COMP_FOLDER%/Snip/bAR1005.baf~
+	EXTEND_BOTTOM ~AR1100.bcs~ ~%MOD_FOLDER%/%COMP_FOLDER%/Snip/bAR1100.baf~
+	EXTEND_BOTTOM ~AR1106.bcs~ ~%MOD_FOLDER%/%COMP_FOLDER%/Snip/bAR1106.baf~
+	EXTEND_BOTTOM ~BALDUR.bcs~ ~%MOD_FOLDER%/%COMP_FOLDER%/Snip/bBALDUR.baf~
 	
 	OUTER_TEXT_SPRINT sender ~%COMP_FOLDER%~ 
 	INCLUDE ~TDDz/Lib/Helpers.tpa~ LAF Accept STR_VAR sender target = ~_RIATAVIN~ END
@@ -57,59 +94,127 @@ END
 
 
 //=============================================================================
+DEFINE_ACTION_MACRO HandleCoreItemsContract
+BEGIN
+	COPY ~%MOD_FOLDER%/_CORE/ItemsContract.2da~ ~%MOD_FOLDER%/TEMP/%COMP_FOLDER%/CoreItemsContract.2da~
+		COUNT_2DA_ROWS 7 count
+		WHILE (count > 1) BEGIN
+			READ_2DA_ENTRY (count -1) 0 7 resname				
+			READ_2DA_ENTRY (count -1) 6 7 policy //undroppable column
+			SET count = count -1
+			
+			TO_UPPER resname
+			TO_UPPER policy
+			SET customize = NOT (~%policy%~ STRING_EQUAL ~+~ || ~%policy%~ STRING_EQUAL ~++++++++~)
+			SET undroppable = (~%policy%~ STRING_EQUAL ~.~)
+			SET replace = (~%customize%~ && NOT ~%undroppable%~)
+			SPRINT newItem ~%policy%~
+			PATCH_IF (~%undroppable%~)
+				BEGIN SPRINT newItem ~SCRL75~ END
+			
+			PATCH_IF (~%customize%~) BEGIN
+				INNER_ACTION BEGIN
+					ACTION_MATCH ~%resname%~
+					WITH
+						~BLOOD~ 	
+							BEGIN 
+								ACTION_IF (~%replace%~) BEGIN COPY_EXISTING ~BGCTBOSS.cre~ ~override~ WRITE_ASCII 0x3E4 ~%newItem%~ #8 END 
+								COPY_EXISTING ~DD8001D.are~ ~override~ WRITE_ASCII 0x3C8 ~%newItem%~ #8
+							END
+						~LOHVAR~ 	BEGIN COPY_EXISTING ~DD8001D.are~ ~override~ WRITE_ASCII 0x418 ~%newItem%~ #8 END
+						~MAGBOTXX~ 	BEGIN ACTION_IF (~%replace%~)BEGIN COPY_EXISTING ~WARDWIZS.sto~ ~override~ WRITE_ASCII 0x230 ~%newItem%~ #8 END END
+						~TROLSIND~ 	BEGIN ACTION_IF (~%replace%~)BEGIN COPY_EXISTING ~SANDRAIN.sto~ ~override~ WRITE_ASCII 0x690 ~%newItem%~ #8 END END
+						DEFAULT
+					END
+				END
+			END
+		END
+	BUT_ONLY	
+END
+
+//=============================================================================
 DEFINE_ACTION_MACRO HandleItemsContract
 BEGIN
 	COPY ~%MOD_FOLDER%/%COMP_FOLDER%/ItemsContract.2da~ ~%MOD_FOLDER%/TEMP/%COMP_FOLDER%/ItemsContract.2da~
 		COUNT_2DA_ROWS 7 count
 		WHILE (count > 1) BEGIN
-			READ_2DA_ENTRY (count -1) 0 7 resname				
-			READ_2DA_ENTRY (count -1) 6 7 undroppable
+			READ_2DA_ENTRY (count -1) 0 7 resname
+			READ_2DA_ENTRY (count -1) 6 7 policy //undroppable column
 			SET count = count -1
+			
+			TO_UPPER resname
+			TO_UPPER policy
+			SET customize = NOT (~%policy%~ STRING_EQUAL ~+~ || ~%policy%~ STRING_EQUAL ~++++++++~)
+			SET undroppable = (~%policy%~ STRING_EQUAL ~.~)
+			SPRINT newItem ~%policy%~
+			PATCH_IF (~%undroppable%~)
+				BEGIN SPRINT newItem ~SCRL75~ END
 						
-			PATCH_IF NOT ~%undroppable%~ STRING_EQUAL ~+~ BEGIN			
-				TO_UPPER resname				
+			PATCH_IF (~%customize%~) BEGIN
 				INNER_ACTION BEGIN					
-					ACTION_IF ~%undroppable%~ STRING_EQUAL ~.~ 
-						BEGIN OUTER_SPRINT value ~SCRL75~ END 
-						ELSE BEGIN OUTER_SPRINT value ~%undroppable%~ END
-					
-					ACTION_MATCH ~%resname%~ 
-					WITH
-						~AEGISRNG~ 
-							BEGIN 
-								COPY_EXISTING ~CALITEMP.sto~ ~override~ WRITE_ASCII 0x278 ~%value%~ #8 
-								COPY_EXISTING ~DDBERNAR.sto~ ~override~ WRITE_ASCII 0x4C4 ~%value%~ #8 
-							END
-						~AMAUNMAC~ BEGIN COPY_EXISTING ~CALITEMP.sto~ ~override~ WRITE_ASCII 0x31C ~%value%~ #8 END // TODO ~MADEEL.sto
-						~AMAROS~ 	BEGIN COPY_EXISTING ~DD7002.are~ 	~override~ WRITE_ASCII 0x1750 	~%value%~ #8 END
-						~ARAMIS~ 	BEGIN COPY_EXISTING ~3307WIZ.sto~ 	~override~ WRITE_ASCII 0x1F8 	~%value%~ #8 END
-						~ARQUINXX~ 	BEGIN COPY_EXISTING ~3314FRGE.sto~ 	~override~ WRITE_ASCII 0x428 	~%value%~ #8 END
-						~CERBSW2H~ 	BEGIN COPY_EXISTING ~3307WIZ.sto~ 	~override~ WRITE_ASCII 0x84C 	~%value%~ #8 END						
-						~ELVHUNTB~ 	BEGIN COPY_EXISTING ~DD7002.are~ 	~override~ WRITE_ASCII 0x1764 	~%value%~ #8 END
-						~ENTROBE~ 	BEGIN COPY_EXISTING ~3307WIZ.sto~ 	~override~ WRITE_ASCII 0x214 	~%value%~ #8 END
-						~HAMFORCE~ 	BEGIN COPY_EXISTING ~3307WIZ.sto~ 	~override~ WRITE_ASCII 0x444 	~%value%~ #8 END
-						~FLAMPLAT~ 	BEGIN COPY_EXISTING ~3314FRGE.sto~ 	~override~ WRITE_ASCII 0x47C 	~%value%~ #8 END						
-						~IOUNX3~ 	BEGIN COPY_EXISTING ~DD7001.are~ 	~override~ WRITE_ASCII 0x8F8 	~%value%~ #8 END
-						~IOUNX7~ 	BEGIN COPY_EXISTING ~CALITEMP.sto~ 	~override~ WRITE_ASCII 0x2E4 	~%value%~ #8 END
-						~IOUNX8~ 	BEGIN COPY_EXISTING ~CALITEMP.sto~ 	~override~ WRITE_ASCII 0x300 	~%value%~ #8 END						
-						~MARKBOWX~ 
-							BEGIN 
-								COPY_EXISTING ~CALIMART.sto~ ~override~ WRITE_ASCII 0x770 ~%value%~ #8 
-								COPY_EXISTING ~DDBERNAR.sto~ ~override~ WRITE_ASCII 0x33C ~%value%~ #8 
-							END
-						~MAGBOTXX~ 
-							BEGIN 
-								COPY_EXISTING ~DDPOTEN1.sto~ ~override~ WRITE_ASCII 0x6B4 ~%value%~ #8 
-								COPY_EXISTING ~WARDWIZS.sto~ ~override~ WRITE_ASCII 0x230 ~%value%~ #8 
-							END
-						~MIELIKKI~ 	BEGIN COPY_EXISTING ~3314FRGE.sto~ 	~override~ WRITE_ASCII 0x498 ~%value%~ #8 END
-						~MONGOVE~ 	BEGIN COPY_EXISTING ~3314FRGE.sto~ 	~override~ WRITE_ASCII 0x460 ~%value%~ #8 END
-						~ORRSHLD~ 	BEGIN COPY_EXISTING ~CALITEMP.sto~ 	~override~ WRITE_ASCII 0x338 ~%value%~ #8 END						
-						~SHOON~ 	BEGIN COPY_EXISTING ~DD7001.are~ 	~override~ WRITE_ASCII 0x920 ~%value%~ #8 END						
-						~SWZZZ1~ 	BEGIN COPY_EXISTING ~CALIMART.sto~ 	~override~ WRITE_ASCII 0x71C ~%value%~ #8 END
-						~SWZZZ1~ 	BEGIN COPY_EXISTING ~CALIMART.sto~ 	~override~ WRITE_ASCII 0x71C ~%value%~ #8 END
-						~USHLD3B~ 	BEGIN COPY_EXISTING ~DD7004.are~ 	~override~ WRITE_ASCII 0x8C4 ~%value%~ #8 END
-						~UMSTR5A~ 	BEGIN COPY_EXISTING ~CALIMART.sto~ 	~override~ WRITE_ASCII 0x754 ~%value%~ #8 END						
+					ACTION_MATCH ~%resname%~
+					WITH			
+						~AEGISRNG~ 	BEGIN COPY_EXISTING ~CALITEMP.sto~ 	~override~ WRITE_ASCII 0x2C8 	~%newItem%~ #8 END
+						~AMAUNMAC~ 	BEGIN COPY_EXISTING ~CALITEMP.sto~ 	~override~ WRITE_ASCII 0x31C 	~%newItem%~ #8 END
+						~AMAROS~ 	BEGIN COPY_EXISTING ~DD7002.are~ 	~override~ WRITE_ASCII 0x1750 	~%newItem%~ #8 END
+						~ARAMIS~ 	BEGIN COPY_EXISTING ~3307WIZ.sto~ 	~override~ WRITE_ASCII 0x1F8 	~%newItem%~ #8 END
+						~ARQUINXX~ 	BEGIN COPY_EXISTING ~3314FRGE.sto~ 	~override~ WRITE_ASCII 0x428 	~%newItem%~ #8 END
+						~BLADETRM~ 	BEGIN ACTION_IF NOT ~%undroppable%~ BEGIN COPY_EXISTING ~R800001.cre~ ~override~ WRITE_ASCII 0x3F8 ~%newItem%~ #8 END END
+						~BONEMASK~ 	BEGIN COPY_EXISTING ~DUEGSAL3.sto~ 	~override~ WRITE_ASCII 0x2CC 	~%newItem%~ #8 END												
+						~BOTABODE~  BEGIN COPY ~%MOD_FOLDER%/TEMP/%COMP_FOLDER%/DD1002X1.baf~ ~%MOD_FOLDER%/TEMP/%COMP_FOLDER%~ REPLACE_TEXTUALLY ~BOTABODE~ ~%newItem%~ END
+						~CELEBRA~ 	BEGIN COPY_EXISTING ~RAZAK01.sto~ 	~override~ WRITE_ASCII 0x398 	~%newItem%~ #8 END
+						~CERBSW2H~ 	BEGIN COPY_EXISTING ~DD7004.are~ 	~override~ WRITE_ASCII 0x84C 	~%newItem%~ #8 END
+						~CREATE~ 	BEGIN COPY_EXISTING ~SANDRAIN.sto~ 	~override~ WRITE_ASCII 0x620 	~%newItem%~ #8 END
+						~DAGGASP~ 	BEGIN COPY_EXISTING ~RAZAK01.sto~ 	~override~ WRITE_ASCII 0x3B4 	~%newItem%~ #8 END
+						~DEATHREB~ 	BEGIN COPY_EXISTING ~DUEGSAL3.sto~ 	~override~ WRITE_ASCII 0x25C 	~%newItem%~ #8 END
+						~DHORNX~ 	BEGIN COPY_EXISTING ~DUEGSAL3.sto~ 	~override~ WRITE_ASCII 0x2B0 	~%newItem%~ #8 END
+						~DIVER~ 	BEGIN COPY_EXISTING ~AR1106.are~ 	~override~ WRITE_ASCII 0xE84 	~%newItem%~ #8 END						
+						~ELVHUNTB~ 	BEGIN COPY_EXISTING ~DD7002.are~ 	~override~ WRITE_ASCII 0x1764 	~%newItem%~ #8 END
+						~ELSHUKAR~  BEGIN COPY ~%MOD_FOLDER%/TEMP/%COMP_FOLDER%/DD1002X1.baf~ ~%MOD_FOLDER%/TEMP/%COMP_FOLDER%~ REPLACE_TEXTUALLY ~ELSHUKAR~ ~%newItem%~ END
+						~ENTROBE~ 	BEGIN COPY_EXISTING ~3307WIZ.sto~ 	~override~ WRITE_ASCII 0x214 	~%newItem%~ #8 END
+						~FLAMPLAT~ 	BEGIN COPY_EXISTING ~3314FRGE.sto~ 	~override~ WRITE_ASCII 0x47C 	~%newItem%~ #8 END
+						~GHARBOOT~ 	BEGIN COPY_EXISTING ~SANDRAIN.sto~ 	~override~ WRITE_ASCII 0x63C 	~%newItem%~ #8 END
+						~GHARSW~ 	BEGIN COPY_EXISTING ~RAZAK01.sto~ 	~override~ WRITE_ASCII 0x3D0 	~%newItem%~ #8 END
+						~GLORY~ 	BEGIN ACTION_IF NOT ~%undroppable%~ BEGIN COPY_EXISTING ~R800001.cre~ ~override~ WRITE_ASCII 0x3E4 ~%newItem%~ #8 END END
+						~HAMFORCE~ 	BEGIN COPY_EXISTING ~3314FRGE.sto~ 	~override~ WRITE_ASCII 0x444 	~%newItem%~ #8 END
+						~IOUNX3~ 	BEGIN COPY_EXISTING ~DD7001.are~ 	~override~ WRITE_ASCII 0x8F8 	~%newItem%~ #8 END
+						~IOUNX7~ 	BEGIN COPY_EXISTING ~CALITEMP.sto~ 	~override~ WRITE_ASCII 0x2E4 	~%newItem%~ #8 END
+						~IOUNX8~ 	BEGIN COPY_EXISTING ~CALITEMP.sto~ 	~override~ WRITE_ASCII 0x300 	~%newItem%~ #8 END
+						~MALICE~ 	BEGIN COPY_EXISTING ~DUEGSAL3.sto~ 	~override~ WRITE_ASCII 0x294 	~%newItem%~ #8 END
+						~MARKBOWX~ 	BEGIN COPY_EXISTING ~CALIMART.sto~ 	~override~ WRITE_ASCII 0x770 	~%newItem%~ #8 END
+						~MIELIKKI~ 	BEGIN COPY_EXISTING ~3314FRGE.sto~ 	~override~ WRITE_ASCII 0x498 	~%newItem%~ #8 END
+						~MONGOVE~ 	BEGIN COPY_EXISTING ~3314FRGE.sto~ 	~override~ WRITE_ASCII 0x460 	~%newItem%~ #8 END
+						~MOORSX~ 	BEGIN COPY_EXISTING ~SANDRAIN.sto~ 	~override~ WRITE_ASCII 0x658 	~%newItem%~ #8 END
+						~ORRSHLD~ 	BEGIN COPY_EXISTING ~CALITEMP.sto~ 	~override~ WRITE_ASCII 0x338 	~%newItem%~ #8 END
+						~ROBE2~ 	BEGIN COPY_EXISTING ~DUEGSAL3.sto~ 	~override~ WRITE_ASCII 0x278 	~%newItem%~ #8 END
+						~SHLDGRAZ~ 	BEGIN ACTION_IF NOT ~%undroppable%~ 
+										BEGIN 
+											COPY_EXISTING ~GRAZZT01.cre~ 	~override~ WRITE_ASCII 0x660 ~%newItem%~ #8 
+											COPY_EXISTING ~GRAZZT02.cre~ 	~override~ WRITE_ASCII 0x660 ~%newItem%~ #8 
+										END	
+									END
+						~SILBLADE~  BEGIN COPY ~%MOD_FOLDER%/TEMP/%COMP_FOLDER%/DD1002X1.baf~ ~%MOD_FOLDER%/TEMP/%COMP_FOLDER%~ REPLACE_TEXTUALLY ~SILBLADE~ ~%newItem%~ END
+						~SHOON~ 	BEGIN COPY_EXISTING ~DD7001.are~ 	~override~ WRITE_ASCII 0x920 	~%newItem%~ #8 END
+						~STARYM~ 	BEGIN COPY_EXISTING ~RAZAK01.sto~ 	~override~ WRITE_ASCII 0x408 	~%newItem%~ #8 END
+						~SW1HGRAZ~ 	BEGIN ACTION_IF NOT ~%undroppable%~ 
+										BEGIN 
+											COPY_EXISTING ~GRAZZT01.cre~ 	~override~ 
+												WRITE_ASCII 0x688 ~%newItem%~ #8 
+												WRITE_ASCII 0x69C ~%newItem%~ #8 
+												WRITE_ASCII 0x6B0 ~%newItem%~ #8 
+												WRITE_ASCII 0x6C4 ~%newItem%~ #8 
+											COPY_EXISTING ~GRAZZT02.cre~ 	~override~ 
+												WRITE_ASCII 0x688 ~%newItem%~ #8 
+												WRITE_ASCII 0x69C ~%newItem%~ #8 
+												WRITE_ASCII 0x6B0 ~%newItem%~ #8 
+												WRITE_ASCII 0x6C4 ~%newItem%~ #8
+										END	
+									END
+						~SWZZZ1~ 	BEGIN COPY_EXISTING ~CALIMART.sto~ 	~override~ WRITE_ASCII 0x71C 	~%newItem%~ #8 END
+						~SWZZZ2~ 	BEGIN COPY_EXISTING ~RAZAK01.sto~ 	~override~ WRITE_ASCII 0x3EC 	~%newItem%~ #8 END
+						~USHLD3B~ 	BEGIN COPY_EXISTING ~DD7004.are~ 	~override~ WRITE_ASCII 0x8C4 	~%newItem%~ #8 END
+						~UMSTR5A~ 	BEGIN COPY_EXISTING ~CALIMART.sto~ 	~override~ WRITE_ASCII 0x754 	~%newItem%~ #8 END						
+						~WYVCROWN~ 	BEGIN COPY_EXISTING ~DRAGGREN.cre~ 	~override~ WRITE_ASCII 0x58C 	~%newItem%~ #8 END						
 						DEFAULT
 					END
 				END
@@ -126,28 +231,60 @@ BEGIN
 		COUNT_2DA_ROWS 8 count
 		WHILE (count > 1) BEGIN
 			READ_2DA_ENTRY (count -1) 0 8 resname				
-			READ_2DA_ENTRY (count -1) 6 8 undroppable
+			READ_2DA_ENTRY (count -1) 6 8 policy
 			SET count = count -1
-						
-			PATCH_IF NOT ~%undroppable%~ STRING_EQUAL ~+~ BEGIN			
-				TO_UPPER resname				
-				INNER_ACTION BEGIN					
-					ACTION_IF ~%undroppable%~ STRING_EQUAL ~.~ // '.' means undroppable
-						BEGIN OUTER_SPRINT value ~SCRL75~ END 
-						ELSE BEGIN OUTER_SPRINT value ~%undroppable%~ END
-					
-					ACTION_MATCH ~%resname%~ 
+				
+			TO_UPPER resname	
+			TO_UPPER policy	
+			SET customize = NOT (~%policy%~ STRING_EQUAL ~+~ || ~%policy%~ STRING_EQUAL ~++++++++~)	
+			SET undroppable = (~%policy%~ STRING_EQUAL ~.~)
+			SET replace = (~%customize%~ && NOT ~%undroppable%~)
+			SPRINT newItem ~%policy%~
+			PATCH_IF (~%undroppable%~)
+				BEGIN SPRINT newItem ~SCRL75~ END
+			
+			PATCH_IF ~%customize%~ BEGIN
+				INNER_ACTION BEGIN
+					ACTION_MATCH ~%resname%~
 					WITH
+						~SCRM104~	BEGIN COPY_EXISTING ~RAZAK01.sto~ 	~override~ WRITE_ASCII 0x424 	~%newItem%~ #8 END
 						~SCRX1~ 	
 							BEGIN 
-								COPY_EXISTING ~3307WIZ.sto~ 	~override~ WRITE_ASCII 0x188 	~%value%~ #8
-								COPY_EXISTING ~WARDWIZS.sto~ 	~override~ WRITE_ASCII 0x188 	~%value%~ #8
-							END						
-						~SCRX15~	BEGIN COPY_EXISTING ~3307WIZ.sto~ 	~override~ WRITE_ASCII 0x1A4 	~%value%~ #8 END						
-						~SCRX17~ 	BEGIN COPY_EXISTING ~3307WIZ.sto~ 	~override~ WRITE_ASCII 0x1C0 	~%value%~ #8 END		
-						~SCRX26~ 	BEGIN COPY_EXISTING ~3307WIZ.sto~ 	~override~ WRITE_ASCII 0x1DC 	~%value%~ #8 END						
-						~SCRX35~ 	BEGIN COPY_EXISTING ~DD7001.are~ 	~override~ WRITE_ASCII 0x934 	~%value%~ #8 END						
-						~SCRX65~ 	BEGIN COPY_EXISTING ~DD7002.are~ 	~override~ WRITE_ASCII 0x187C	~%value%~ #8 END						
+								COPY_EXISTING ~3307WIZ.sto~ 	~override~ WRITE_ASCII 0x188 	~%newItem%~ #8
+								COPY_EXISTING ~WARDWIZS.sto~ 	~override~ WRITE_ASCII 0x188 	~%newItem%~ #8
+							END
+						~SCRX9~		BEGIN COPY_EXISTING ~AR1106.are~ 	~override~ WRITE_ASCII 0xE98 	~%newItem%~ #8 END
+						~SCRX15~	BEGIN COPY_EXISTING ~3307WIZ.sto~ 	~override~ WRITE_ASCII 0x1A4 	~%newItem%~ #8 END
+						~SCRX17~ 	BEGIN COPY_EXISTING ~3307WIZ.sto~ 	~override~ WRITE_ASCII 0x1C0 	~%newItem%~ #8 END
+						~SCRX19~ 	BEGIN COPY_EXISTING ~WARDWIZS.sto~ 	~override~ WRITE_ASCII 0x1A4 	~%newItem%~ #8 END
+						~SCRX20~ 	BEGIN COPY_EXISTING ~RAZAK01.sto~ 	~override~ WRITE_ASCII 0x4B0 	~%newItem%~ #8 END
+						~SCRX21~ 	BEGIN COPY_EXISTING ~DD8001D.are~ 	~override~ WRITE_ASCII 0x404 	~%newItem%~ #8 END
+						~SCRX26~ 	BEGIN COPY_EXISTING ~3307WIZ.sto~ 	~override~ WRITE_ASCII 0x1DC 	~%newItem%~ #8 END
+						~SCRX27~ 	BEGIN COPY_EXISTING ~WARDWIZS.sto~ 	~override~ WRITE_ASCII 0x214 	~%newItem%~ #8 END
+						~SCRX28~ 	BEGIN COPY_EXISTING ~DUEGSAL3.sto~ 	~override~ WRITE_ASCII 0x304 	~%newItem%~ #8 END
+						~SCRX33~ 	BEGIN COPY_EXISTING ~WARDWIZS.sto~ 	~override~ WRITE_ASCII 0x1F8 	~%newItem%~ #8 END
+						~SCRX34~ 	BEGIN COPY_EXISTING ~DUEGSAL3.sto~ 	~override~ WRITE_ASCII 0x320 	~%newItem%~ #8 END
+						~SCRX35~ 	BEGIN COPY_EXISTING ~DD7001.are~ 	~override~ WRITE_ASCII 0x934 	~%newItem%~ #8 END
+						~SCRX36~ 	BEGIN COPY_EXISTING ~DUEGSAL3.sto~ 	~override~ WRITE_ASCII 0x33C 	~%newItem%~ #8 END
+						~SCRX37~ 	BEGIN COPY_EXISTING ~DDRAGBRW.cre~ 	~override~ WRITE_ASCII 0x66C 	~%newItem%~ #8 END
+						~SCRX39~ 	BEGIN COPY_EXISTING ~RAZAK01.sto~ 	~override~ WRITE_ASCII 0x478 	~%newItem%~ #8 END
+						~SCRX42~ 	BEGIN COPY_EXISTING ~DRAGGOLD.cre~ 	~override~ WRITE_ASCII 0x564 	~%newItem%~ #8 END
+						~SCRX43~ 	BEGIN COPY_EXISTING ~RAZAK01.sto~ 	~override~ WRITE_ASCII 0x494 	~%newItem%~ #8 END
+						~SCRX46~ 	BEGIN COPY_EXISTING ~RAZAK01.sto~ 	~override~ WRITE_ASCII 0x440 	~%newItem%~ #8 END
+						~SCRX48~ 	BEGIN COPY_EXISTING ~DD8001D.are~ 	~override~ WRITE_ASCII 0x440 	~%newItem%~ #8 END
+						~SCRX49~ 	BEGIN COPY_EXISTING ~DDRAGBRW.cre~ 	~override~ WRITE_ASCII 0x658 	~%newItem%~ #8 END
+						~SCRX53~ 	BEGIN COPY_EXISTING ~DUEGSAL3.sto~ 	~override~ WRITE_ASCII 0x358 	~%newItem%~ #8 END
+						~SCRX55~ 	BEGIN COPY_EXISTING ~DRAGGREN.cre~ 	~override~ WRITE_ASCII 0x578 	~%newItem%~ #8 END
+						~SCRX56~ 	BEGIN COPY_EXISTING ~DUEGSAL3.sto~ 	~override~ WRITE_ASCII 0x2E8 	~%newItem%~ #8 END
+						~SCRX57~ 	BEGIN COPY_EXISTING ~RAZAK01.sto~ 	~override~ WRITE_ASCII 0x45C 	~%newItem%~ #8 END
+						~SCRX58~ 	BEGIN COPY_EXISTING ~DRAGGOLD.cre~ 	~override~ WRITE_ASCII 0x550 	~%newItem%~ #8 END
+						~SCRX65~ 	BEGIN COPY_EXISTING ~DD7002.are~ 	~override~ WRITE_ASCII 0x187C	~%newItem%~ #8 END
+						~SCRX67~ 	BEGIN COPY_EXISTING ~DRAGGREN.cre~ 	~override~ WRITE_ASCII 0x564 	~%newItem%~ #8 END
+						~SCRX72~ 	BEGIN COPY_EXISTING ~WARDWIZS.sto~ 	~override~ WRITE_ASCII 0x1DC	~%newItem%~ #8 END
+						~SCRX74~ 	BEGIN COPY_EXISTING ~WARDWIZS.sto~ 	~override~ WRITE_ASCII 0x1C0	~%newItem%~ #8 END
+						~SCRX76~ 	BEGIN COPY_EXISTING ~CALIMART.sto~ 	~override~ WRITE_ASCII 0x6E4	~%newItem%~ #8 END
+						~SCRX77~ 	BEGIN COPY_EXISTING ~CALIMART.sto~ 	~override~ WRITE_ASCII 0x700	~%newItem%~ #8 END
+						~SCRX81~ 	BEGIN COPY_EXISTING ~CALIMART.sto~ 	~override~ WRITE_ASCII 0x6C8	~%newItem%~ #8 END
 						DEFAULT			
 					END
 				END
@@ -156,4 +293,579 @@ BEGIN
 	BUT_ONLY	
 END
 
+//=============================================================================
+DEFINE_ACTION_MACRO TDDPatchDD8000Area
+BEGIN
+	COPY ~TDD/ARE/DD8000.are~ ~override~
+READ_LONG  0x54  "actors_offset"
+ READ_SHORT 0x58  "actors_num"
+ READ_SHORT 0x5a  "infotrig_num"
+ READ_LONG  0x5c  "infotrig_offset"
+ READ_LONG  0x60  "spawns_offset"
+ READ_LONG  0x64  "spawns_num"
+ READ_LONG  0x68  "entrances_offset"
+ READ_LONG  0x6c  "entrances_num"
+ READ_LONG  0x70  "cont_offset"
+ READ_SHORT 0x74  "cont_num"
+ READ_SHORT 0x76  "items_num"
+ READ_LONG  0x78  "items_offset"
+ READ_LONG  0x7c  "vert_offset"
+ READ_SHORT 0x80  "vert_num"
+ READ_SHORT 0x82  "amb_num"
+ READ_LONG  0x84  "amb_offset"
+ READ_LONG  0x88  "vars_offset"
+ READ_LONG  0x8c  "vars_num"
+ READ_LONG  0xa0  "expbmp_offset"
+ READ_LONG  0xa4  "doors_num"
+ READ_LONG  0xa8  "doors_offset"
+ READ_LONG  0xac  "anim_num"
+ READ_LONG  0xb0  "anim_offset"
+ READ_LONG  0xb4  "tiled_num"
+ READ_LONG  0xb8  "tiled_offset"
+ READ_LONG  0xbc  "songs_offset"
+ READ_LONG  0xc0  "rest_spawns_offset"
+ READ_LONG  0xc4  "automap_offset"
+ READ_LONG  0xc8  "automap_num"
 
+//adding new trigger ************************************************
+   SET offset = ("%infotrig_offset%"+0xc4*"%infotrig_num%")
+   INSERT_BYTES offset 0xc4
+   WRITE_ASCII offset ~Tran8001~
+   WRITE_SHORT (offset+0x20) 2            //travel trigger
+   WRITE_SHORT (offset+0x22) 3871         //bounding box
+   WRITE_SHORT (offset+0x24) 3702         //bounding box
+   WRITE_SHORT (offset+0x26) 3971         //bounding box
+   WRITE_SHORT (offset+0x28) 3802         //bounding box
+   WRITE_SHORT (offset+0x2a) 4            //vertices number
+   WRITE_LONG  (offset+0x2c) "%vert_num%" //first vertex index
+   WRITE_LONG  (offset+0x34) 34           //cursor
+   WRITE_ASCII (offset+0x38) ~DD8001~     //destination area
+   WRITE_ASCII (offset+0x40) ~EXIT8000~   //destination area's entrance name
+   WRITE_LONG  (offset+0x60) 0x00000004   //flags - party required
+   WRITE_SHORT (offset+0x70) 3921         //Trap location X
+   WRITE_SHORT (offset+0x72) 3752         //Trap location Y
+   SET "infotrig_num"="%infotrig_num%"+1
+   WRITE_SHORT 0x5a  "%infotrig_num%"
+
+   SET "info_ext"=0xc4
+   PATCH_IF ("%actors_offset%">="%infotrig_offset%") BEGIN
+     "actors_offset"="%actors_offset%"+"%info_ext%"
+     WRITE_LONG  0x54 "%actors_offset%"
+   END
+   PATCH_IF ("%spawns_offset%">="%infotrig_offset%") BEGIN
+     "spawns_offset"="%spawns_offset%"+"%info_ext%"
+     WRITE_LONG  0x60  "%spawns_offset%"
+   END
+   PATCH_IF ("%entrances_offset%">="%infotrig_offset%") BEGIN
+     "entrances_offset"="%entrances_offset%"+"%info_ext%"
+     WRITE_LONG  0x68  "%entrances_offset%"
+   END
+   PATCH_IF ("%cont_offset%">="%infotrig_offset%") BEGIN
+     "cont_offset"="%cont_offset%"+"%info_ext%"
+     WRITE_LONG  0x70  "%cont_offset%"
+   END
+   PATCH_IF ("%items_offset%">="%infotrig_offset%") BEGIN
+     "items_offset"="%items_offset%"+"%info_ext%"
+     WRITE_LONG  0x78  "%items_offset%"
+   END
+   PATCH_IF ("%vert_offset%">="%infotrig_offset%") BEGIN
+     "vert_offset"="%vert_offset%"+"%info_ext%"
+     WRITE_LONG  0x7c  "%vert_offset%"
+   END
+   PATCH_IF ("%amb_offset%">="%infotrig_offset%") BEGIN
+     "amb_offset"="%amb_offset%"+"%info_ext%"
+     WRITE_LONG  0x84  "%amb_offset%"
+   END
+   PATCH_IF ("%vars_offset%">="%infotrig_offset%") BEGIN
+     "vars_offset"="%vars_offset%"+"%info_ext%"
+     WRITE_LONG  0x88  "%vars_offset%"
+   END
+   PATCH_IF ("%expbmp_offset%">="%infotrig_offset%") BEGIN
+     "expbmp_offset"="%expbmp_offset%"+"%info_ext%"
+     WRITE_LONG  0xa0  "%expbmp_offset%"
+   END
+   PATCH_IF ("%doors_offset%">="%infotrig_offset%") BEGIN
+     "doors_offset"="%doors_offset%"+"%info_ext%"
+     WRITE_LONG  0xa8  "%doors_offset%"
+   END
+   PATCH_IF ("%anim_offset%">="%infotrig_offset%") BEGIN
+     "anim_offset"="%anim_offset%"+"%info_ext%"
+     WRITE_LONG  0xb0  "%anim_offset%"
+   END
+   PATCH_IF ("%tiled_offset%">="%infotrig_offset%") BEGIN
+     "tiled_offset"="%tiled_offset%"+"%info_ext%"
+     WRITE_LONG  0xb8  "%tiled_offset%"
+   END
+   PATCH_IF ("%songs_offset%">="%infotrig_offset%") BEGIN
+     "songs_offset"="%songs_offset%"+"%info_ext%"
+     WRITE_LONG  0xbc  "%songs_offset%"
+   END
+   PATCH_IF ("%rest_spawns_offset%">="%infotrig_offset%") BEGIN
+     "rest_spawns_offset"="%rest_spawns_offset%"+"%info_ext%"
+     WRITE_LONG  0xc0  "%rest_spawns_offset%"
+   END
+   PATCH_IF ("%automap_offset%">="%infotrig_offset%") BEGIN
+     "automap_offset"="%automap_offset%"+"%info_ext%"
+     WRITE_LONG  0xc4  "%automap_offset%"
+   END
+
+  //adding 4 new vertices for triggers
+   SET offset = ("%vert_offset%"+0x04*"%vert_num%")
+   INSERT_BYTES offset (0x04*4)
+   WRITE_SHORT  offset      3871
+   WRITE_SHORT  (offset+2)  3702
+   WRITE_SHORT  (offset+4)  3971
+   WRITE_SHORT  (offset+6)  3702
+   WRITE_SHORT  (offset+8)  3971
+   WRITE_SHORT  (offset+10) 3802
+   WRITE_SHORT  (offset+12) 3871
+   WRITE_SHORT  (offset+14) 3802
+   SET "vert_num"="%vert_num%"+4
+   WRITE_SHORT 0x80  "%vert_num%"
+
+   SET "info_ext"=0x04*4
+   PATCH_IF ("%actors_offset%">="%vert_offset%") BEGIN
+     "actors_offset"="%actors_offset%"+"%info_ext%"
+     WRITE_LONG  0x54 "%actors_offset%"
+   END
+   PATCH_IF ("%spawns_offset%">="%vert_offset%") BEGIN
+     "spawns_offset"="%spawns_offset%"+"%info_ext%"
+     WRITE_LONG  0x60  "%spawns_offset%"
+   END
+   PATCH_IF ("%entrances_offset%">="%vert_offset%") BEGIN
+     "entrances_offset"="%entrances_offset%"+"%info_ext%"
+     WRITE_LONG  0x68  "%entrances_offset%"
+   END
+   PATCH_IF ("%cont_offset%">="%vert_offset%") BEGIN
+     "cont_offset"="%cont_offset%"+"%info_ext%"
+     WRITE_LONG  0x70  "%cont_offset%"
+   END
+   PATCH_IF ("%items_offset%">="%vert_offset%") BEGIN
+     "items_offset"="%items_offset%"+"%info_ext%"
+     WRITE_LONG  0x78  "%items_offset%"
+   END
+   PATCH_IF ("%infotrig_offset%">="%vert_offset%") BEGIN
+     "infotrig_offset"="%infotrig_offset%"+"%info_ext%"
+     WRITE_LONG  0x5c  "%infotrig_offset%"
+   END
+   PATCH_IF ("%amb_offset%">="%vert_offset%") BEGIN
+     "amb_offset"="%amb_offset%"+"%info_ext%"
+     WRITE_LONG  0x84  "%amb_offset%"
+   END
+   PATCH_IF ("%vars_offset%">="%vert_offset%") BEGIN
+     "vars_offset"="%vars_offset%"+"%info_ext%"
+     WRITE_LONG  0x88  "%vars_offset%"
+   END
+   PATCH_IF ("%expbmp_offset%">="%vert_offset%") BEGIN
+     "expbmp_offset"="%expbmp_offset%"+"%info_ext%"
+     WRITE_LONG  0xa0  "%expbmp_offset%"
+   END
+   PATCH_IF ("%doors_offset%">="%vert_offset%") BEGIN
+     "doors_offset"="%doors_offset%"+"%info_ext%"
+     WRITE_LONG  0xa8  "%doors_offset%"
+   END
+   PATCH_IF ("%anim_offset%">="%vert_offset%") BEGIN
+     "anim_offset"="%anim_offset%"+"%info_ext%"
+     WRITE_LONG  0xb0  "%anim_offset%"
+   END
+   PATCH_IF ("%tiled_offset%">="%vert_offset%") BEGIN
+     "tiled_offset"="%tiled_offset%"+"%info_ext%"
+     WRITE_LONG  0xb8  "%tiled_offset%"
+   END
+   PATCH_IF ("%songs_offset%">="%vert_offset%") BEGIN
+     "songs_offset"="%songs_offset%"+"%info_ext%"
+     WRITE_LONG  0xbc  "%songs_offset%"
+   END
+   PATCH_IF ("%rest_spawns_offset%">="%vert_offset%") BEGIN
+     "rest_spawns_offset"="%rest_spawns_offset%"+"%info_ext%"
+     WRITE_LONG  0xc0  "%rest_spawns_offset%"
+   END
+   PATCH_IF ("%automap_offset%">="%vert_offset%") BEGIN
+     "automap_offset"="%automap_offset%"+"%info_ext%"
+     WRITE_LONG  0xc4  "%automap_offset%"
+   END
+
+ //adding 1 new entrance
+ SET offset = ("%entrances_offset%"+0x68*"%entrances_num%")
+ INSERT_BYTES offset 0x68
+ WRITE_ASCII  offset      ~EXIT8001~
+ WRITE_SHORT  (offset+0x20)  3921     //X
+ WRITE_SHORT  (offset+0x22)  3752     //Y
+ WRITE_LONG   (offset+0x24)  "8"      // facing
+ SET "entrances_num"="%entrances_num%"+1
+ WRITE_LONG 0x6c  "%entrances_num%"
+
+ SET "info_ext"=0x68
+ PATCH_IF ("%actors_offset%">="%entrances_offset%") BEGIN
+   "actors_offset"="%actors_offset%"+"%info_ext%"
+   WRITE_LONG  0x54 "%actors_offset%"
+ END
+ PATCH_IF ("%spawns_offset%">="%entrances_offset%") BEGIN
+   "spawns_offset"="%spawns_offset%"+"%info_ext%"
+   WRITE_LONG  0x60  "%spawns_offset%"
+ END
+ PATCH_IF ("%vert_offset%">="%entrances_offset%") BEGIN
+   "vert_offset"="%vert_offset%"+"%info_ext%"
+   WRITE_LONG  0x7c  "%vert_offset%"
+ END
+ PATCH_IF ("%cont_offset%">="%entrances_offset%") BEGIN
+   "cont_offset"="%cont_offset%"+"%info_ext%"
+   WRITE_LONG  0x70  "%cont_offset%"
+ END
+ PATCH_IF ("%items_offset%">="%entrances_offset%") BEGIN
+   "items_offset"="%items_offset%"+"%info_ext%"
+   WRITE_LONG  0x78  "%items_offset%"
+ END
+ PATCH_IF ("%infotrig_offset%">="%entrances_offset%") BEGIN
+   "infotrig_offset"="%infotrig_offset%"+"%info_ext%"
+   WRITE_LONG  0x5c  "%infotrig_offset%"
+ END
+ PATCH_IF ("%amb_offset%">="%entrances_offset%") BEGIN
+   "amb_offset"="%amb_offset%"+"%info_ext%"
+   WRITE_LONG  0x84  "%amb_offset%"
+ END
+ PATCH_IF ("%vars_offset%">="%entrances_offset%") BEGIN
+   "vars_offset"="%vars_offset%"+"%info_ext%"
+   WRITE_LONG  0x88  "%vars_offset%"
+ END
+ PATCH_IF ("%expbmp_offset%">="%entrances_offset%") BEGIN
+   "expbmp_offset"="%expbmp_offset%"+"%info_ext%"
+   WRITE_LONG  0xa0  "%expbmp_offset%"
+ END
+ PATCH_IF ("%doors_offset%">="%entrances_offset%") BEGIN
+   "doors_offset"="%doors_offset%"+"%info_ext%"
+   WRITE_LONG  0xa8  "%doors_offset%"
+ END
+ PATCH_IF ("%anim_offset%">="%entrances_offset%") BEGIN
+   "anim_offset"="%anim_offset%"+"%info_ext%"
+   WRITE_LONG  0xb0  "%anim_offset%"
+ END
+ PATCH_IF ("%tiled_offset%">="%entrances_offset%") BEGIN
+   "tiled_offset"="%tiled_offset%"+"%info_ext%"
+   WRITE_LONG  0xb8  "%tiled_offset%"
+ END
+ PATCH_IF ("%songs_offset%">="%entrances_offset%") BEGIN
+   "songs_offset"="%songs_offset%"+"%info_ext%"
+   WRITE_LONG  0xbc  "%songs_offset%"
+ END
+ PATCH_IF ("%rest_spawns_offset%">="%entrances_offset%") BEGIN
+   "rest_spawns_offset"="%rest_spawns_offset%"+"%info_ext%"
+   WRITE_LONG  0xc0  "%rest_spawns_offset%"
+ END
+ PATCH_IF ("%automap_offset%">="%entrances_offset%") BEGIN
+   "automap_offset"="%automap_offset%"+"%info_ext%"
+   WRITE_LONG  0xc4  "%automap_offset%"
+ END
+ 
+END
+
+
+//=============================================================================
+DEFINE_ACTION_MACRO TDDPatchDD8001Area
+BEGIN
+	COPY ~TDD/ARE/DD8001.are~           ~override~
+READ_LONG  0x54  "actors_offset"
+ READ_SHORT 0x58  "actors_num"
+ READ_SHORT 0x5a  "infotrig_num"
+ READ_LONG  0x5c  "infotrig_offset"
+ READ_LONG  0x60  "spawns_offset"
+ READ_LONG  0x64  "spawns_num"
+ READ_LONG  0x68  "entrances_offset"
+ READ_LONG  0x6c  "entrances_num"
+ READ_LONG  0x70  "cont_offset"
+ READ_SHORT 0x74  "cont_num"
+ READ_SHORT 0x76  "items_num"
+ READ_LONG  0x78  "items_offset"
+ READ_LONG  0x7c  "vert_offset"
+ READ_SHORT 0x80  "vert_num"
+ READ_SHORT 0x82  "amb_num"
+ READ_LONG  0x84  "amb_offset"
+ READ_LONG  0x88  "vars_offset"
+ READ_LONG  0x8c  "vars_num"
+ READ_LONG  0xa0  "expbmp_offset"
+ READ_LONG  0xa4  "doors_num"
+ READ_LONG  0xa8  "doors_offset"
+ READ_LONG  0xac  "anim_num"
+ READ_LONG  0xb0  "anim_offset"
+ READ_LONG  0xb4  "tiled_num"
+ READ_LONG  0xb8  "tiled_offset"
+ READ_LONG  0xbc  "songs_offset"
+ READ_LONG  0xc0  "rest_spawns_offset"
+ READ_LONG  0xc4  "automap_offset"
+ READ_LONG  0xc8  "automap_num"
+
+//adding new trigger ************************************************
+   SET offset = ("%infotrig_offset%"+0xc4*"%infotrig_num%")
+   INSERT_BYTES offset 0xc4
+   WRITE_ASCII offset ~Tranc020~
+   WRITE_SHORT (offset+0x20) 2            //travel trigger
+   WRITE_SHORT (offset+0x22) 461          //bounding box
+   WRITE_SHORT (offset+0x24) 62           //bounding box
+   WRITE_SHORT (offset+0x26) 561          //bounding box
+   WRITE_SHORT (offset+0x28) 162          //bounding box
+   WRITE_SHORT (offset+0x2a) 4            //vertices number
+   WRITE_LONG  (offset+0x2c) "%vert_num%" //first vertex index
+   WRITE_LONG  (offset+0x34) 34           //cursor
+   WRITE_ASCII (offset+0x38) ~DD8000~     //destination area
+   WRITE_ASCII (offset+0x40) ~EXIT8001~   //destination area's entrance name
+   WRITE_LONG  (offset+0x60) 0x00000004   //flags - party required
+   WRITE_SHORT (offset+0x70) 511          //Trap location X
+   WRITE_SHORT (offset+0x72) 112          //Trap location Y
+   SET "infotrig_num"="%infotrig_num%"+1
+   WRITE_SHORT 0x5a  "%infotrig_num%"
+
+   SET "info_ext"=0xc4
+   PATCH_IF ("%actors_offset%">="%infotrig_offset%") BEGIN
+     "actors_offset"="%actors_offset%"+"%info_ext%"
+     WRITE_LONG  0x54 "%actors_offset%"
+   END
+   PATCH_IF ("%spawns_offset%">="%infotrig_offset%") BEGIN
+     "spawns_offset"="%spawns_offset%"+"%info_ext%"
+     WRITE_LONG  0x60  "%spawns_offset%"
+   END
+   PATCH_IF ("%entrances_offset%">="%infotrig_offset%") BEGIN
+     "entrances_offset"="%entrances_offset%"+"%info_ext%"
+     WRITE_LONG  0x68  "%entrances_offset%"
+   END
+   PATCH_IF ("%cont_offset%">="%infotrig_offset%") BEGIN
+     "cont_offset"="%cont_offset%"+"%info_ext%"
+     WRITE_LONG  0x70  "%cont_offset%"
+   END
+   PATCH_IF ("%items_offset%">="%infotrig_offset%") BEGIN
+     "items_offset"="%items_offset%"+"%info_ext%"
+     WRITE_LONG  0x78  "%items_offset%"
+   END
+   PATCH_IF ("%vert_offset%">="%infotrig_offset%") BEGIN
+     "vert_offset"="%vert_offset%"+"%info_ext%"
+     WRITE_LONG  0x7c  "%vert_offset%"
+   END
+   PATCH_IF ("%amb_offset%">="%infotrig_offset%") BEGIN
+     "amb_offset"="%amb_offset%"+"%info_ext%"
+     WRITE_LONG  0x84  "%amb_offset%"
+   END
+   PATCH_IF ("%vars_offset%">="%infotrig_offset%") BEGIN
+     "vars_offset"="%vars_offset%"+"%info_ext%"
+     WRITE_LONG  0x88  "%vars_offset%"
+   END
+   PATCH_IF ("%expbmp_offset%">="%infotrig_offset%") BEGIN
+     "expbmp_offset"="%expbmp_offset%"+"%info_ext%"
+     WRITE_LONG  0xa0  "%expbmp_offset%"
+   END
+   PATCH_IF ("%doors_offset%">="%infotrig_offset%") BEGIN
+     "doors_offset"="%doors_offset%"+"%info_ext%"
+     WRITE_LONG  0xa8  "%doors_offset%"
+   END
+   PATCH_IF ("%anim_offset%">="%infotrig_offset%") BEGIN
+     "anim_offset"="%anim_offset%"+"%info_ext%"
+     WRITE_LONG  0xb0  "%anim_offset%"
+   END
+   PATCH_IF ("%tiled_offset%">="%infotrig_offset%") BEGIN
+     "tiled_offset"="%tiled_offset%"+"%info_ext%"
+     WRITE_LONG  0xb8  "%tiled_offset%"
+   END
+   PATCH_IF ("%songs_offset%">="%infotrig_offset%") BEGIN
+     "songs_offset"="%songs_offset%"+"%info_ext%"
+     WRITE_LONG  0xbc  "%songs_offset%"
+   END
+   PATCH_IF ("%rest_spawns_offset%">="%infotrig_offset%") BEGIN
+     "rest_spawns_offset"="%rest_spawns_offset%"+"%info_ext%"
+     WRITE_LONG  0xc0  "%rest_spawns_offset%"
+   END
+   PATCH_IF ("%automap_offset%">="%infotrig_offset%") BEGIN
+     "automap_offset"="%automap_offset%"+"%info_ext%"
+     WRITE_LONG  0xc4  "%automap_offset%"
+   END
+
+  //adding 4 new vertices for triggers
+   SET offset = ("%vert_offset%"+0x04*"%vert_num%")
+   INSERT_BYTES offset (0x04*4)
+   WRITE_SHORT  offset      461
+   WRITE_SHORT  (offset+2)  62
+   WRITE_SHORT  (offset+4)  561
+   WRITE_SHORT  (offset+6)  62
+   WRITE_SHORT  (offset+8)  561
+   WRITE_SHORT  (offset+10) 162
+   WRITE_SHORT  (offset+12) 461
+   WRITE_SHORT  (offset+14) 162
+   SET "vert_num"="%vert_num%"+4
+   WRITE_SHORT 0x80  "%vert_num%"
+
+   SET "info_ext"=0x04*4
+   PATCH_IF ("%actors_offset%">="%vert_offset%") BEGIN
+     "actors_offset"="%actors_offset%"+"%info_ext%"
+     WRITE_LONG  0x54 "%actors_offset%"
+   END
+   PATCH_IF ("%spawns_offset%">="%vert_offset%") BEGIN
+     "spawns_offset"="%spawns_offset%"+"%info_ext%"
+     WRITE_LONG  0x60  "%spawns_offset%"
+   END
+   PATCH_IF ("%entrances_offset%">="%vert_offset%") BEGIN
+     "entrances_offset"="%entrances_offset%"+"%info_ext%"
+     WRITE_LONG  0x68  "%entrances_offset%"
+   END
+   PATCH_IF ("%cont_offset%">="%vert_offset%") BEGIN
+     "cont_offset"="%cont_offset%"+"%info_ext%"
+     WRITE_LONG  0x70  "%cont_offset%"
+   END
+   PATCH_IF ("%items_offset%">="%vert_offset%") BEGIN
+     "items_offset"="%items_offset%"+"%info_ext%"
+     WRITE_LONG  0x78  "%items_offset%"
+   END
+   PATCH_IF ("%infotrig_offset%">="%vert_offset%") BEGIN
+     "infotrig_offset"="%infotrig_offset%"+"%info_ext%"
+     WRITE_LONG  0x5c  "%infotrig_offset%"
+   END
+   PATCH_IF ("%amb_offset%">="%vert_offset%") BEGIN
+     "amb_offset"="%amb_offset%"+"%info_ext%"
+     WRITE_LONG  0x84  "%amb_offset%"
+   END
+   PATCH_IF ("%vars_offset%">="%vert_offset%") BEGIN
+     "vars_offset"="%vars_offset%"+"%info_ext%"
+     WRITE_LONG  0x88  "%vars_offset%"
+   END
+   PATCH_IF ("%expbmp_offset%">="%vert_offset%") BEGIN
+     "expbmp_offset"="%expbmp_offset%"+"%info_ext%"
+     WRITE_LONG  0xa0  "%expbmp_offset%"
+   END
+   PATCH_IF ("%doors_offset%">="%vert_offset%") BEGIN
+     "doors_offset"="%doors_offset%"+"%info_ext%"
+     WRITE_LONG  0xa8  "%doors_offset%"
+   END
+   PATCH_IF ("%anim_offset%">="%vert_offset%") BEGIN
+     "anim_offset"="%anim_offset%"+"%info_ext%"
+     WRITE_LONG  0xb0  "%anim_offset%"
+   END
+   PATCH_IF ("%tiled_offset%">="%vert_offset%") BEGIN
+     "tiled_offset"="%tiled_offset%"+"%info_ext%"
+     WRITE_LONG  0xb8  "%tiled_offset%"
+   END
+   PATCH_IF ("%songs_offset%">="%vert_offset%") BEGIN
+     "songs_offset"="%songs_offset%"+"%info_ext%"
+     WRITE_LONG  0xbc  "%songs_offset%"
+   END
+   PATCH_IF ("%rest_spawns_offset%">="%vert_offset%") BEGIN
+     "rest_spawns_offset"="%rest_spawns_offset%"+"%info_ext%"
+     WRITE_LONG  0xc0  "%rest_spawns_offset%"
+   END
+   PATCH_IF ("%automap_offset%">="%vert_offset%") BEGIN
+     "automap_offset"="%automap_offset%"+"%info_ext%"
+     WRITE_LONG  0xc4  "%automap_offset%"
+   END
+
+ //adding 1 new entrance
+ SET offset = ("%entrances_offset%"+0x68*"%entrances_num%")
+ INSERT_BYTES offset 0x68
+ WRITE_ASCII  offset      ~EXIT8000~
+ WRITE_SHORT  (offset+0x20)  511      //X
+ WRITE_SHORT  (offset+0x22)  112      //Y
+ WRITE_LONG   (offset+0x24)  "14"     // facing
+ SET "entrances_num"="%entrances_num%"+1
+ WRITE_LONG 0x6c  "%entrances_num%"
+
+ SET "info_ext"=0x68
+ PATCH_IF ("%actors_offset%">="%entrances_offset%") BEGIN
+   "actors_offset"="%actors_offset%"+"%info_ext%"
+   WRITE_LONG  0x54 "%actors_offset%"
+ END
+ PATCH_IF ("%spawns_offset%">="%entrances_offset%") BEGIN
+   "spawns_offset"="%spawns_offset%"+"%info_ext%"
+   WRITE_LONG  0x60  "%spawns_offset%"
+ END
+ PATCH_IF ("%vert_offset%">="%entrances_offset%") BEGIN
+   "vert_offset"="%vert_offset%"+"%info_ext%"
+   WRITE_LONG  0x7c  "%vert_offset%"
+ END
+ PATCH_IF ("%cont_offset%">="%entrances_offset%") BEGIN
+   "cont_offset"="%cont_offset%"+"%info_ext%"
+   WRITE_LONG  0x70  "%cont_offset%"
+ END
+ PATCH_IF ("%items_offset%">="%entrances_offset%") BEGIN
+   "items_offset"="%items_offset%"+"%info_ext%"
+   WRITE_LONG  0x78  "%items_offset%"
+ END
+ PATCH_IF ("%infotrig_offset%">="%entrances_offset%") BEGIN
+   "infotrig_offset"="%infotrig_offset%"+"%info_ext%"
+   WRITE_LONG  0x5c  "%infotrig_offset%"
+ END
+ PATCH_IF ("%amb_offset%">="%entrances_offset%") BEGIN
+   "amb_offset"="%amb_offset%"+"%info_ext%"
+   WRITE_LONG  0x84  "%amb_offset%"
+ END
+ PATCH_IF ("%vars_offset%">="%entrances_offset%") BEGIN
+   "vars_offset"="%vars_offset%"+"%info_ext%"
+   WRITE_LONG  0x88  "%vars_offset%"
+ END
+ PATCH_IF ("%expbmp_offset%">="%entrances_offset%") BEGIN
+   "expbmp_offset"="%expbmp_offset%"+"%info_ext%"
+   WRITE_LONG  0xa0  "%expbmp_offset%"
+ END
+ PATCH_IF ("%doors_offset%">="%entrances_offset%") BEGIN
+   "doors_offset"="%doors_offset%"+"%info_ext%"
+   WRITE_LONG  0xa8  "%doors_offset%"
+ END
+ PATCH_IF ("%anim_offset%">="%entrances_offset%") BEGIN
+   "anim_offset"="%anim_offset%"+"%info_ext%"
+   WRITE_LONG  0xb0  "%anim_offset%"
+ END
+ PATCH_IF ("%tiled_offset%">="%entrances_offset%") BEGIN
+   "tiled_offset"="%tiled_offset%"+"%info_ext%"
+   WRITE_LONG  0xb8  "%tiled_offset%"
+ END
+ PATCH_IF ("%songs_offset%">="%entrances_offset%") BEGIN
+   "songs_offset"="%songs_offset%"+"%info_ext%"
+   WRITE_LONG  0xbc  "%songs_offset%"
+ END
+ PATCH_IF ("%rest_spawns_offset%">="%entrances_offset%") BEGIN
+   "rest_spawns_offset"="%rest_spawns_offset%"+"%info_ext%"
+   WRITE_LONG  0xc0  "%rest_spawns_offset%"
+ END
+ PATCH_IF ("%automap_offset%">="%entrances_offset%") BEGIN
+   "automap_offset"="%automap_offset%"+"%info_ext%"
+   WRITE_LONG  0xc4  "%automap_offset%"
+ END
+ 
+END
+
+
+//=============================================================================
+DEFINE_ACTION_MACRO TDDPatchAR1106Area
+BEGIN
+COPY_EXISTING ~AR1106.ARE~  ~override~
+	LPM SetAnimationsInCombatFlag
+ READ_SHORT  0x48 "flags"
+ WRITE_SHORT 0x48 ("%flags%" BOR 0x0020)  //Setting Dungeon flag
+
+ READ_LONG  0x70  "cont_offset"
+ READ_SHORT 0x74  "cont_num"
+ READ_SHORT 0x76  "items_num"
+ READ_LONG  0x78  "items_offset"
+ SET "first_item"=0
+ SET "items"=0
+ SET "one"=0
+ SET "two"=0
+ FOR( cnt=0; cnt<"%cont_num%"; cnt=cnt+1 ) BEGIN  //containers loop
+   READ_ASCII ("%cont_offset%"+0xc0*cnt)       "cont_name" (11)
+   PATCH_IF (("%cont_name%" STRING_COMPARE_CASE "Container 2")=0) BEGIN
+     READ_LONG ("%cont_offset%"+0xc0*cnt+0x40)  "first_item"
+     READ_LONG ("%cont_offset%"+0xc0*cnt+0x44)  "items"
+   END
+ END
+ PATCH_IF ("%items%">0 ) BEGIN
+   FOR( cnt=0; cnt<"%items%"; cnt=cnt+1 ) BEGIN       //items loop
+     READ_ASCII ("%items_offset%"+0x14*(cnt+"%first_item%")) "name"
+     PATCH_IF ( ("%name%" STRING_COMPARE_CASE "AX1H04")=0 AND "%one%"=0 ) BEGIN
+       WRITE_ASCII ("%items_offset%"+0x14*(cnt+"%first_item%"))     "DIVER" #8 //replacing item
+       WRITE_SHORT ("%items_offset%"+0x14*(cnt+"%first_item%")+0xa) 0
+       SET "name"=1
+       SET "one"=1
+     END
+     PATCH_IF ( ("%name%" STRING_COMPARE_CASE "AX1H04")=0 AND "%two%"=0 ) BEGIN
+       WRITE_ASCII ("%items_offset%"+0x14*(cnt+"%first_item%"))     "SCRX9" #8 //replacing item
+       WRITE_SHORT ("%items_offset%"+0x14*(cnt+"%first_item%")+0xa) 0
+       SET "two"=1
+     END
+   END
+ END
+BUT_ONLY_IF_IT_CHANGES //********************************************************  ~AR1106.are~
+
+END

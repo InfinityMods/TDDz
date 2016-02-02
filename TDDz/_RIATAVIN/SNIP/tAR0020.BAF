@@ -1,0 +1,12 @@
+
+IF
+	Global("tz_bgarival","GLOBAL",3)
+	!GlobalTimerExpired("tz_RiatavinPlague","GLOBAL")
+THEN
+	RESPONSE #100
+		SetGlobal("tz_bgarival","GLOBAL",5)
+		CreateCreature("riatgate",[766.467],4) // Gatesman
+		Continue()
+END
+
+

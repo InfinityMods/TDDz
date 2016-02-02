@@ -1,0 +1,36 @@
+//IF
+//        !Global("SharteelPartyBG1","GLOBAL",1)
+//	Global("SharTeel","GLOBAL",0)
+//THEN
+//	RESPONSE #100
+//		SetGlobal("SharTeel","GLOBAL",1)
+//		CreateCreature("SHARTE12",[1131.335],0) // Shar-Teel
+//END
+
+IF
+	Global("tz_raperev","GLOBAL",2)
+THEN
+	RESPONSE #100
+		CreateCreature("bgrape02",[819.591],4) // Prison Guard
+		SetGlobal("tz_raperev","GLOBAL",3)
+END
+
+IF
+	Global("tz_raperev","GLOBAL",4)
+THEN
+	RESPONSE #100
+		ActionOverride("bgrape02",DestroySelf())
+		SetGlobal("tz_raperev","GLOBAL",5)
+END
+
+IF
+	Global("tz_raperev","GLOBAL",5)
+	Global("tz_xrev","GLOBAL",0)
+THEN
+	RESPONSE #100
+		StartCutSceneMode()
+		StartCutScene("revburn")
+		SetGlobal("tz_xrev","GLOBAL",1)
+END
+
+

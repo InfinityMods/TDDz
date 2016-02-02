@@ -1,0 +1,45 @@
+IF
+  Global("tz_dd1005ct","GLOBAL",0)
+THEN
+  RESPONSE #100
+    CreateCreature("riatjail",[727.571],4)
+    SetGlobal("tz_dd1005ct","GLOBAL",1)
+END
+
+IF
+  Global("tz_riatlock","GLOBAL",4)
+THEN
+  RESPONSE #100
+    StartCutSceneMode()
+    StartCutScene("bgprison")
+END
+
+IF
+  Global("tz_riatlock","GLOBAL",5)
+  Global("tz_vicyrape","GLOBAL",0)
+  InParty("viconia")
+THEN
+  RESPONSE #100
+    CreateCreatureObject("bgrape01","Viconia",0,0,0)
+    Wait(1)
+    StartCutSceneMode()
+    StartCutScene("vicyrape")
+END
+
+IF
+  Global("tz_riatlock","GLOBAL",5)
+  Global("tz_vicyrape","GLOBAL",0)
+  !InParty("viconia")
+THEN
+  RESPONSE #100
+    SetGlobal("tz_vicyrape","GLOBAL",1)
+END
+
+IF
+  Global("tz_vicyrape","GLOBAL",1)
+THEN
+  RESPONSE #100
+    StartCutSceneMode()
+    StartCutScene("jailmove")
+END
+

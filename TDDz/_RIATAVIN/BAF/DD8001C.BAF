@@ -1,0 +1,26 @@
+IF
+  Global("tz_dd8001c","GLOBAL",0)
+THEN
+  RESPONSE #100
+    CreateCreature("mistwa01",[581.933],4)
+    CreateCreature("mistcd01",[751.837],4)
+    CreateCreature("mistva01",[997.597],4)
+    CreateCreature("mistcd01",[1740.844],4)
+    CreateCreature("mistcd01",[1542.563],4)
+    CreateCreature("mistho01",[2168.590],4)
+    CreateCreature("mistcd01",[2325.901],4)
+    CreateCreature("mistcd01",[2263.1467],0)
+    CreateCreature("mistho01",[1320.1540],4)
+    CreateCreature("mistpo01",[1445.1191],4)
+    CreateCreature("skelwa02",[3869.352],4)
+    CreateCreature("skelwa02",[3817.583],4)
+    CreateCreature("skelwa02",[4206.579],4)
+    CreateCreature("skelwa02",[4449.382],4)
+    CreateCreature("spspid07",[3975.1118],4)
+    CreateCreature("spspid07",[3232.1020],4)
+    CreateCreature("spspid07",[2679.844],4)
+    CreateCreature("spspid07",[2104.1171],4)
+    CreateCreature("spspid07",[2362.1630],4)
+    SetGlobal("tz_dd8001c","GLOBAL",1)
+END
+

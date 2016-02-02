@@ -1,0 +1,34 @@
+@0    = ~Hey! Was treibt Ihr Euch hier draussen herum? Wartet eine Minute, Ihr seid keine Mitglieder der Bregan D'aerth! Aber, wartet... ihr seid Drow!~ [JARL1]
+@1    = ~Ähh... ja... wir sind... ähh... Heimatlose, die an die Oberfläche geflohen sind.~
+
+@2    = ~Noch mehr Flüchtlinge, wie? Und warum treibt ihr Euch hier herum, Drow?~ [JARL2]
+@3    = ~Wir haben nur nach einem Ort gesucht, an dem wir der Verfolgung entgehen können.~
+@4    = ~Wir suchen nach Akzeptanz an der Oberfläche. Wir haben Gerüchte gehört, dass ein grosser Drow-Anführer sich hier in diesen Wäldern befinden soll. Und so haben wir beschlossen, nach ihm zu suchen.~
+
+@5    = ~Dann ist Eure Suche erfolgreich gewesen. Ich bin Jarlaxle, Anführer der Bregan D'aerth Söldnergruppe. Aus welchem Grund habt Ihr nach mir gesucht?~
+
+@6    = ~Wir wollten uns Euch anschliessen.~
+@7    = ~Die Mitglieder der Bregan D'aerth werden alle sehr sorgfältig ausgewählt. Bevor jemand aufgenommen wird, muss er mir seinen Wert beweisen.~
+@8    = ~Dann sollen wir Euch also unseren Wert und unsere Loyalität beweisen?~
+@9    = ~Dann sollen wir für Euch eine Aufgabe erledigen, um unsere Fähigkeiten zu demonstrieren?~
+@10   = ~Loyaltät ist eine Voraussetzung. Wenn ihr Mitglieder werden wollt, dann müsst Ihr schon eine besondere Aufgabe erledigen.~ [JARL3]
+@11   = ~Ich werde jede erfüllbare Aufgabe erledigen.~
+@12   = ~Seid Ihr sicher, dass ich nicht gleich Mitglied werden kann?~
+
+@13   = ~Nicht so schnell! Meine Augen beginnen zu brennen und Oberflächenbewohner könnten zuhören. Lasst Euch sagen, sobald wir unser Heim betreten und Ihr Eure Aufgabe nicht erfüllt, werde ich Euch persönlich töten.~
+
+@14   = ~Versucht es. Ich werde Euch Eure Arme herausreissen und Euch damit zu Tode prügeln.~
+
+@15   = ~Natürlich.~
+
+@16   = ~Was war das?~
+
+@17   = ~Nichts. Ich bin absolut Eurer Meinung, Jarlaxle.~
+@18   = ~Wir werden gleich gehen.~
+@19   = ~Wo ist der Eingang? Ich sehe weder eine Höhle, noch einen Tunnel in diesem Wald.~
+@20   = ~Ha ha! Er ist da... Er war schon immer da, mein Freund... unsichtbar für Neugierige.~
+
+@21   = ~Nein. Eine Aufgabe muss erfüllt werden. Wenn nicht, werdet Ihr hier sterben.~
+
+@22   = ~Na gut. Wie lautet die Aufgabe?~
+@23   = ~Dann schätze ich, werde ich heute meinen Tod finden!~

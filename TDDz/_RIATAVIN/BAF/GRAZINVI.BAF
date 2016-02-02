@@ -1,0 +1,10 @@
+IF
+  Global("tz_grazinvi","GLOBAL",0)
+  See([PC])
+  Range([PC],25)
+THEN
+  RESPONSE #100
+    DestroySelf()
+    SetGlobal("tz_grazinvi","GLOBAL",1)
+END
+

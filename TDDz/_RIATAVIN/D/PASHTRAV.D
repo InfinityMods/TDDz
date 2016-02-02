@@ -31,7 +31,7 @@ ActionOverride("travgrd2",DestroySelf())
 ActionOverride("travgrd3",DestroySelf())
 ActionOverride("travgrd4",DestroySelf())
 ActionOverride("travgrd5",DestroySelf())
-AddExperienceParty(40000)
+AddExperienceParty(PASHTRAV_D_40000)
 ReputationInc(1)
 SetGlobal("tz_pashtravdone","GLOBAL",1)~ EXIT
 END

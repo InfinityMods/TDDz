@@ -1,0 +1,19 @@
+IF
+  Global("tz_dockprizsee","GLOBAL",0)
+  See([PC])
+  Range([PC],15)
+THEN
+  RESPONSE #100
+    StartDialogue("dockprix",Player1)
+    SetGlobal("tz_dockprizsee","GLOBAL",1)
+	ChangeEnemyAlly(Myself,NEUTRAL)
+END
+
+IF
+  Global("tz_artyinfz","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("tz_artyinfz","GLOBAL",2)
+    EscapeArea()
+END
+

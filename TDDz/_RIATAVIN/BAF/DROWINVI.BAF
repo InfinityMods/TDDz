@@ -1,0 +1,11 @@
+IF
+  Global("tz_drowinvi01","GLOBAL",0)
+  Global("tz_demninv2","GLOBAL",2)
+  See([PC])
+  Range([PC],25)
+THEN
+  RESPONSE #100
+    DestroySelf()
+    SetGlobal("tz_drowinvi01b","GLOBAL",1)        
+END
+

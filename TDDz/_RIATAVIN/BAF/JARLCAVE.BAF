@@ -1,0 +1,68 @@
+IF
+  Global("tz_jarlcaveopen","GLOBAL",0)
+THEN
+  RESPONSE #100
+    ApplySpell(NearestEnemyOf(Myself),WIZARD_SPIDER_SPAWN)
+    ApplySpell(NearestEnemyOf(Myself),WIZARD_SPIDER_SPAWN)
+    ApplySpell(NearestEnemyOf(Myself),WIZARD_SPIDER_SPAWN)
+    SetGlobal("tz_jarlcaveopen","GLOBAL",1)
+END
+
+IF
+  Global("tz_jarlcaveprep","GLOBAL",0)
+THEN
+  RESPONSE #100
+    ApplySpell(Myself,WIZARD_MANTLE)
+    ReallyForceSpell(Myself,WIZARD_STONE_SKIN)
+    SetGlobalTimer("tz_spiders","GLOBAL",10)
+    SetGlobal("tz_jarlcaveprep","GLOBAL",1)
+END
+
+IF
+  Global("tz_cavejarldie","GLOBAL",0)
+  HPLT(Myself,50)
+THEN
+  RESPONSE #100
+    ReallyForceSpell(Myself,CLERIC_CURE_CRITICAL_WOUNDS)
+    ReallyForceSpell(Myself,CLERIC_CURE_CRITICAL_WOUNDS)
+    SetGlobal("tz_cavejarldie","GLOBAL",1)
+END
+
+IF
+  Global("tz_jarlcaveprep","GLOBAL",1)
+  GlobalTimerExpired("tz_spiders","GLOBAL")
+THEN
+  RESPONSE #100
+    ReallyForceSpell(NearestEnemyOf(Myself),WIZARD_SPIDER_SPAWN)
+    ApplySpell(Myself,WIZARD_STONE_SKIN)
+    SetGlobal("tz_jarlcaveprep","GLOBAL",2)
+    SetGlobalTimer("tz_spiders","GLOBAL",17)
+END
+
+IF
+  Global("tz_jarlcaveprep","GLOBAL",2)
+  GlobalTimerExpired("tz_spiders","GLOBAL")
+THEN
+  RESPONSE #100
+    ReallyForceSpell(NearestEnemyOf(Myself),WIZARD_SPIDER_SPAWN)
+    SetGlobal("tz_jarlcaveprep","GLOBAL",3)
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  !Range(NearestEnemyOf(Myself),15)
+THEN
+  RESPONSE #100
+    EquipRanged()
+    Attack(NearestEnemyOf(Myself))
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  Range(NearestEnemyOf(Myself),15)
+THEN
+  RESPONSE #100
+    EquipMostDamagingMelee()
+    Attack(NearestEnemyOf(Myself))
+END
+

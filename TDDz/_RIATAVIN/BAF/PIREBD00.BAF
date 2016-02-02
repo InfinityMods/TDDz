@@ -1,0 +1,56 @@
+IF
+  See([0.0.HUMAN])
+THEN
+  RESPONSE #100
+    Attack([0.0.HUMAN])
+END
+
+IF
+  See([0.0.ELF])
+THEN
+  RESPONSE #100
+    Attack([0.0.ELF])
+END
+
+IF
+  See([0.0.GNOME])
+THEN
+  RESPONSE #100
+    Attack([0.0.GNOME])
+END
+
+IF
+  See([0.0.HALFLING])
+THEN
+  RESPONSE #100
+    Attack([0.0.HALFLING])
+END
+
+IF
+  See([0.0.DWARF])
+THEN
+  RESPONSE #100
+    Attack([0.0.DWARF])
+END
+
+IF
+  See([0.0.HUMAN])
+THEN
+  RESPONSE #100
+    Attack([0.0.HUMAN])
+END
+
+IF
+  See([0.0.HALFORC])
+THEN
+  RESPONSE #100
+    Attack([0.0.HALFORC])
+END
+
+IF
+  See([0.0.HALF_ELF])
+THEN
+  RESPONSE #100
+    Attack([0.0.HALF_ELF])
+END
+

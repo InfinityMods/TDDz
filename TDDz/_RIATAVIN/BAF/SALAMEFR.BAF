@@ -12,7 +12,8 @@ IF
   Delay(18)
 THEN
   RESPONSE #100
-    ReallyForceSpell(SixthNearest([PC]),WIZARD_FIREBALL)
+    // Fixed : weird feature for solo game... ReallyForceSpell(SixthNearest([PC]),WIZARD_FIREBALL)
+	ReallyForceSpell(NearestEnemyOf(Myself),WIZARD_FIREBALL)
 END
 
 IF
@@ -20,7 +21,8 @@ IF
   Delay(4)
 THEN
   RESPONSE #100
-    ReallyForceSpell(SecondNearest([PC]),WIZARD_AGANNAZAR_SCORCHER)
+	// Fixed : weird feature for solo game... ReallyForceSpell(SecondNearest([PC]),WIZARD_AGANNAZAR_SCORCHER)
+	ReallyForceSpell(NearestEnemyOf(Myself),WIZARD_AGANNAZAR_SCORCHER)
 END
 
 IF

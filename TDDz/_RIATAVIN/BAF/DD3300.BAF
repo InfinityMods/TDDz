@@ -131,7 +131,7 @@ IF
   Global("tz_gwitness","GLOBAL",14)
 THEN
   RESPONSE #100
-    AddexperienceParty(2000)
+    AddexperienceParty(DD3300_BAF_2000)
     ReputationInc(1)
     SetGlobal("tz_gwitness","GLOBAL",15)
 END

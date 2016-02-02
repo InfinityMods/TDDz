@@ -1,0 +1,65 @@
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId(Player1)
+    ActionOverride("banshee1",MoveToPoint([1300.828]))
+    MoveToPoint([936.859])
+    Wait(6)
+    ActionOverride("banshee1",FaceObject(Player1))
+    FaceObject("banshee1")
+    Wait(1)
+    EndCutSceneMode()
+    SetGlobal("tz_bansheeend","GLOBAL",1)
+END
+
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId(Player2)
+    MoveToPoint([1017.790])
+    Wait(6)
+    FaceObject("BANSHEE1")
+END
+
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId(Player3)
+    MoveToPoint([988.684])
+    Wait(6)
+    FaceObject("BANSHEE1")
+END
+
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId(Player4)
+    MoveToPoint([903.719])
+    Wait(6)
+    FaceObject("BANSHEE1")
+END
+
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId(Player5)
+    MoveToPoint([804.774])
+    Wait(6)
+    FaceObject("BANSHEE1")
+END
+
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId(Player6)
+    MoveToPoint([825.869])
+    Wait(6)
+    FaceObject("BANSHEE1")
+END
+

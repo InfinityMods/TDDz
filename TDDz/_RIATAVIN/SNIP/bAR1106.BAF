@@ -1,0 +1,72 @@
+IF
+	Global("tz_jarlaxe1home","GLOBAL",3)
+THEN
+	RESPONSE #100
+		Explore()
+		StartCutSceneMode()
+		StartCutScene("artycave")
+		SetGlobal("tz_jarlaxe1home","GLOBAL",4)
+END
+
+IF
+	Global("tz_caveartjarl","AR1106",1)
+	InParty("jaheira")
+THEN
+	RESPONSE #100
+		SetGlobal("tz_caveartjarl","AR1106",2)
+		ActionOverride("Jaheira",StartDialog("cavesic1",Player1))
+END
+
+IF
+	Global("tz_caveartjarl","AR1106",1)
+	!InParty("jaheira")
+	InParty("viconia")
+THEN
+	RESPONSE #100
+		SetGlobal("tz_caveartjarl","AR1106",2)
+		ActionOverride("viconia",StartDialog("cavesic2",Player1))
+END
+
+IF
+	Global("tz_caveartjarl","AR1106",1)
+	!InParty("viconia")
+	!InParty("jaheira")
+	InParty("aerie")
+THEN
+	RESPONSE #100
+		SetGlobal("tz_caveartjarl","AR1106",2)
+		ActionOverride("aerie",StartDialog("cavesic3",Player1))
+END
+
+IF
+	Global("tz_caveartjarl","AR1106",1)
+	!InParty("viconia")
+	!InParty("jaheira")
+	!InParty("aerie")
+THEN
+	RESPONSE #100
+		SetGlobal("tz_caveartjarl","AR1106",2)
+		SetGlobal("tz_lonedualart","GLOBAL",1)
+END
+
+IF
+	Global("tz_lonedualart","GLOBAL",1)
+THEN
+	RESPONSE #100
+		CreateCreature("artcave4",[361.1032],4) // Artemis Entreri
+		SetGlobal("tz_lonedualart","GLOBAL",2)
+END
+
+IF
+	Global("tz_jarlcavecall","GLOBAL",1)
+THEN
+	RESPONSE #100
+		CreateCreatureObject("cavdrow1",Player1,0,0,0) // Drow
+		CreateCreatureObject("cavdrow2",Player1,0,0,0) // Drow
+		CreateCreatureObject("cavdrow3",Player1,0,0,0) // Drow
+		CreateVisualEffect("spsummon",[589.1189])
+		CreateCreature("jarlcave",[589.1189],4) // Jarlaxle
+		SetGlobal("tz_jarlcavecall","GLOBAL",2)
+END
+
+

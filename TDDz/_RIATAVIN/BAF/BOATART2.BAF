@@ -1,0 +1,31 @@
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId(Player1)
+    MoveViewPoint([491.530],INSTANT)
+    ActionOverride("enteri01",FaceObject("riatjail"))
+    ActionOverride("riatjail",FaceObject("enteri01"))
+    DisplayStringHead("riatjail",@10036)
+    Wait(10)
+    DisplayStringHead("enteri01",@10037)
+    Wait(7)
+    DisplayStringHead("riatjail",@10038)
+    Wait(9)
+    DisplayStringHead("enteri01",@10039)
+    Wait(7)
+    ActionOverride("enteri01",Attack("riatjail"))
+    ActionOverride("riatjail",Attack("enteri01"))
+    Wait(16)
+    DisplayStringHead("enteri01",@10040)
+    // TOOO LONG Wait(30)
+    Wait(5)
+    FadeToColor([30.0],0)
+    TakePartyItem("amulrat")
+    Wait(3)
+    RestorePartyLocations()
+    MultiPlayerSync()
+    EndCutSceneMode()
+    SetGlobal("tz_zcaptainsee","GLOBAL",3)
+END
+

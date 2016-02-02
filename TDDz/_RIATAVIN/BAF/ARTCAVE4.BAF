@@ -1,0 +1,9 @@
+IF
+  Global("tz_entcavesee","GLOBAL",0)
+  Range([PC],20)
+THEN
+  RESPONSE #100
+    SetGlobal("tz_entcavesee","GLOBAL",1)
+    StartDialogNoSet([PC])
+END
+

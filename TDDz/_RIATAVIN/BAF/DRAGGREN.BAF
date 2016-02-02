@@ -1,0 +1,165 @@
+IF
+  HPLT(Myself,2)
+THEN
+  RESPONSE #100
+    SetGlobal("tz_greensnuffed","GLOBAL",1)
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  Global("tz_DL1","LOCALS",0)
+  Global("tz_goldzhate","GLOBAL",0)
+THEN
+  RESPONSE #100
+    SetGlobal("tz_goldzhate","GLOBAL",1)
+    ForceSpell(Myself,WIZARD_STONE_SKIN)
+    ForceSpell(Myself,WIZARD_HASTE)
+    ForceSpell(LastSeenBy(Myself),DRAGON_WING_BUFFET)
+    SetGlobal("tz_DL1","LOCALS",1)
+END
+
+IF
+  !See(NearestEnemyOf(Myself))
+  HPPercentLT(Myself,95)
+THEN
+  RESPONSE #100
+    ForceSpell(Myself,CLERIC_CURE_SERIOUS_WOUNDS)
+END
+
+IF
+  HPLT(Myself,100)
+  Global("tz_DLDEATH","LOCALS",0)
+THEN
+  RESPONSE #100
+    ReallyForceSpell(Myself,CLERIC_CURE_CRITICAL_WOUNDS)
+    ReallyForceSpell(Myself,CLERIC_CURE_CRITICAL_WOUNDS)
+    ReallyForceSpell(Myself,WIZARD_STONE_SKIN)
+    SetGlobal("tz_DLDEATH","LOCALS",1)
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  Global("tz_DLFEAR","LOCALS",0)
+THEN
+  RESPONSE #100
+    ReallyForceSpell(NearestEnemyOf(Myself),WIZARD_SYMBOL_FEAR)
+    ReallyForceSpell(NearestEnemyOf(Myself),WIZARD_SYMBOL_FEAR)
+    ReallyForceSpell(SecondNearestEnemyOf(Myself),WIZARD_SYMBOL_STUN)
+    SetGlobal("tz_DLFEAR","LOCALS",1)
+    SetGlobalTimer("tz_DLDRAGONBREATH","GLOBAL",1)
+    ForceSpell(NearestEnemyOf(Myself),DRAGON_WING_BUFFET)
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  Global("tz_DL2","LOCALS",0)
+THEN
+  RESPONSE #100
+    ReallyForceSpell(NearestEnemyOf(Myself),WIZARD_POWER_WORD_BLIND)
+    ReallyForceSpell(ThirdNearestEnemyOf(Myself),WIZARD_POWER_WORD_BLIND)
+    ReallyForceSpell(SecondNearestEnemyOf(Myself),WIZARD_SYMBOL_STUN)
+    SetGlobal("tz_DL2","LOCALS",1)
+END
+
+IF
+  GlobalTimerExpired("tz_DLDRAGONBREATH","GLOBAL")
+  See(NearestEnemyOf(Myself))
+  Range(LastSeenBy(Myself),11)
+  Global("tz_WingBuffet","LOCALS",0)
+THEN
+  RESPONSE #100
+    ForceSpell(LastSeenBy(Myself),DRAGON_WING_BUFFET)
+    Wait(1)
+    SetGlobal("tz_WingBuffet","LOCALS",1)
+  RESPONSE #70
+    Continue()
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  !Range(LastSeenBy(Myself),10)
+  GlobalTimerExpired("tz_DLDRAGONBREATH","GLOBAL")
+THEN
+  RESPONSE #100
+    SetGlobal("tz_WingBuffet","LOCALS",0)
+    ForceSpell(LastSeenBy(Myself),TOPAZ_DRAGON_BREATH)
+    SetGlobalTimer("tz_DLDRAGONBREATH","GLOBAL",18)
+END
+
+IF
+  Global("tz_WingBuffet","LOCALS",1)
+  See(NearestEnemyOf(Myself))
+  Range(LastSeenBy(Myself),11)
+THEN
+  RESPONSE #100
+    SetGlobal("tz_WingBuffet","LOCALS",0)
+    SetGlobalTimer("tz_DLDRAGONBREATH","GLOBAL",18)
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  Global("tz_DLOffense","LOCALS",0)
+THEN
+  RESPONSE #100
+    ForceSpell(NearestEnemyOf(Myself),WIZARD_POWER_WORD_BLIND)
+    ForceSpell(SecondNearestEnemyOf(Myself),WIZARD_POWER_WORD_BLIND)
+    SetGlobal("tz_DLOffense","LOCALS",1)
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  Global("tz_Haste","LOCALS",0)
+THEN
+  RESPONSE #100
+    ForceSpell(Myself,WIZARD_HASTE)
+    SetGlobal("tz_Haste","LOCALS",1)
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  Global("tz_DLDOMINATE","LOCALS",0)
+THEN
+  RESPONSE #100
+    ForceSpell(WorstAC,WIZARD_SYMBOL_FEAR)
+    ForceSpell(BestAC,WIZARD_SYMBOL_FEAR)
+    SetGlobal("tz_DLDOMINATE","LOCALS",1)
+END
+
+IF
+  Global("tz_dlSilence","LOCALS",0)
+  OR(2)
+    See(NearestEnemyOfType([0.0.0.MAGE_ALL]))
+    See(NearestEnemyOfType([0.0.0.CLERIC_ALL]))
+THEN
+  RESPONSE #100
+    ForceSpell(LastSeenBy(Myself),DRAGON_SILENCE)
+    SetGlobal("tz_dlSilence","LOCALS",1)
+    AttackOneRound(LastSeenBy(Myself))
+    AttackOneRound(LastSeenBy(Myself))
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+THEN
+  RESPONSE #100
+    EquipMostDamagingMelee()
+    AttackReevaluate(NearestEnemyOf(Myself),35)
+  RESPONSE #10
+    ReallyForceSpell(Myself,WIZARD_SPELL_SHIELD)
+END
+
+IF
+  Allegiance(Myself,ENEMY)
+THEN
+  RESPONSE #100
+    MoveToObject(NearestEnemyOf(Myself))
+END
+
+IF
+  AttackedBy([GOODCUTOFF],DEFAULT)
+  Allegiance(Myself,NEUTRAL)
+THEN
+  RESPONSE #100
+    Enemy()
+END
+
