@@ -46,14 +46,15 @@ BEGIN
 	ADD_SPELL ~TDD/Spl/SPPR962.spl~ 1 7 TOPAZ_DRAGON_BREATH 
 		SAY NAME1 @20813				
 	
-	ACTION_IF NOT FILE_EXISTS ~data/CTB-RULE.BIF~ THEN BEGIN //CtB compatibility
+	//ACTION_IF NOT FILE_EXISTS ~data/CTB-RULE.BIF~ THEN BEGIN //CtB compatibility
+	// Hence we rename the spells, we HAVE TO do import them with or without CtB
 		COPY ~%MOD_FOLDER%/_CORE/SPL/SPWI823.spl~ ~override/SPTDD01.spl~ // ADD_SPELL failed for WIZARD_IRON_BODY...
 			SAY NAME1 @20948
 			SAY UNIDENTIFIED_DESC @20949
 		COPY ~%MOD_FOLDER%/_CORE/SPL/SPWI824.spl~ ~override/SPTDD02.spl~ // ADD_SPELL failed for WIZARD_MIND_BLANK...
 			SAY NAME1 @20950
 			SAY UNIDENTIFIED_DESC @20951
-	END
+	//END
 		
 		
 	LAM ImportSpellScrolls_FromTDD
