@@ -1,0 +1,68 @@
+IF
+  Global("tz_FireHit","LOCALS",0)
+  HasItem("DDgameFI",Myself)
+THEN
+  RESPONSE #100
+    DisplayStringHead(Myself,@10113)
+    SetGlobal("tz_FireHit","LOCALS",1)
+END
+
+IF
+  HasItem("DDgameCO",Myself)
+  Global("tz_ColdHit","LOCALS",0)
+THEN
+  RESPONSE #100
+    DisplayStringHead(Myself,@10113)
+    SetGlobal("tz_ColdHit","LOCALS",1)
+END
+
+IF
+  HasItem("DDgameEL",Myself)
+  Global("tz_ElectricityHit","LOCALS",0)
+THEN
+  RESPONSE #100
+    DisplayStringHead(Myself,@10113)
+    SetGlobal("tz_ElectricityHit","LOCALS",1)
+END
+
+IF
+  HasItem("DDgameMA",Myself)
+  Global("tz_MagicHit","LOCALS",0)
+THEN
+  RESPONSE #100
+    DisplayStringHead(Myself,@10113)
+    SetGlobal("tz_MagicHit","LOCALS",1)
+END
+
+IF
+  Global("tz_FireHit","LOCALS",1)
+  Global("tz_ColdHit","LOCALS",1)
+  Global("tz_ElectricityHit","LOCALS",1)
+  Global("tz_MagicHit","LOCALS",1)
+  Global("tz_SolvedMyRiddle","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("tz_SolvedMyRiddle","LOCALS",1)
+    StartDialogue("DDGAME01",[PC])
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  Allegiance(Myself,ENEMY)
+THEN
+  RESPONSE #100
+    Attack(NearestEnemyOf(Myself))
+  RESPONSE #100
+    Attack(NearestEnemyOf(Myself))
+  RESPONSE #100
+    Attack(NearestEnemyOf(Myself))
+  RESPONSE #100
+    Attack(WeakestOf(Myself))
+  RESPONSE #100
+    Attack(StrongestOf(Myself))
+  RESPONSE #100
+    Attack(WorstAC(Myself))
+  RESPONSE #100
+    Attack(SecondNearestEnemyOf(Myself))
+END
+

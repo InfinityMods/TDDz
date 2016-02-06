@@ -1,0 +1,9 @@
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId("DDMARY")
+    Wait(1)
+    StartDialogue("DDMary",Player1)
+END
+

@@ -1,0 +1,61 @@
+IF
+  Global("tz_prep","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("tz_prep","LOCALS",1)
+    UseItem("POTN14",Myself)
+    UseItem("POTN21",Myself)
+    Hide()
+    MoveToPoint([977.1135])
+  RESPONSE #100
+    SetGlobal("tz_prep","LOCALS",1)
+    UseItem("POTN14",Myself)
+    UseItem("POTN41",Myself)
+    Hide()
+    MoveToPoint([977.1135])
+  RESPONSE #100
+    SetGlobal("tz_prep","LOCALS",1)
+    UseItem("POTN14",Myself)
+    UseItem("POTN34",Myself)
+    Hide()
+    MoveToPoint([977.1135])
+END
+
+IF
+  Global("tz_prep","LOCALS",1)
+  See(NearestEnemyOf(Myself))
+  !Range(LastSeenBy(Myself),18)
+THEN
+  RESPONSE #100
+    SetGlobal("tz_prep","LOCALS",2)
+    UseItem("POTN26",LastSeenBy(Myself))
+END
+
+IF
+  HPPercentLT(Myself,70)
+  HasItem("POTN52",Myself)
+THEN
+  RESPONSE #100
+    UseItem("POTN52",Myself)
+    Continue()
+END
+
+IF
+  HPLT(Myself,30)
+  !StateCheck(Myself,STATE_INVISIBLE)
+  !StateCheck(Myself,STATE_IMPROVEDINVISIBILITY)
+  HasItem("POTN10",Myself)
+THEN
+  RESPONSE #100
+    UseItem("POTN10",Myself)
+END
+
+IF
+  !StateCheck(Myself,STATE_INVISIBLE)
+  !StateCheck(Myself,STATE_IMPROVEDINVISIBILITY)
+  See(NearestEnemyOf(Myself))
+THEN
+  RESPONSE #100
+    AttackReevaluate(NearestEnemyOf(Myself),15)
+END
+

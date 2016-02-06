@@ -1,0 +1,39 @@
+@0    = ~Ahh... wer ist das? Ein Besucher, so scheint es... wir haben nicht viele... Besucher.~ ~Ahh... wer ist das? Eine Besucherin, so scheint es... wir haben nicht viele... Besucher.~
+@1    = ~Ich bin nicht nur ein Besucher! Ich bin <CHARNAME>! Versteckt Euch in einem Mauseloch, so wie Ihr es solltet, Kreatur!~
+ ~Ich bin nicht nur eine Besucherin! Ich bin <CHARNAME>! Versteckt Euch in einem Mauseloch, so wie Ihr es solltet, Kreatur!~
+
+@2    = ~Ja, ein Besucher...~ ~Ja, eine Besucherin...~
+@3    = ~Ähmm... Verzeihung, ich muss mich wohl verlaufen haben... Ich werde jetzt wieder gehen.~
+@4    = ~Ich suche nach der Quelle dieser sich schnell verbreitenden Seuche und dieser schwarzen Wolken. Wart Ihr das vielleicht?~
+@5    = ~Eh... Ihr amüsiert mich, Besucher. Wollt Ihr vielleicht ein Spiel spielen? Ein Spiel, das zu Euch passt... Ja, es wird Euch gefallen...~ ~Eh... Ihr amüsiert mich, Besucherin. Wollt Ihr vielleicht ein Spiel spielen? Ein Spiel, das zu Euch passt... Ja, es wird Euch gefallen...~
+@6    = ~Spielt keine Spielchen mit mir! Ich werde Euch töten, das schwöre ich!~
+
+@7    = ~Ein Spielchen wäre jetzt zur Entspannung nicht schlecht. Was habt Ihr vor?~
+
+@8    = ~Ich bin nicht hier, um Euch zu amüsieren. Sagt mir, wer oder was diese Probleme verursacht hat, oder meine Waffen werden die Antwort aus Euch herauslocken.~
+@9    = ~RUHE, Besucher! Ihr werdet ein Spiel spielen! Ohne ein Spiel werdet Ihr nicht weiterkommen! Erlaubt mir, Euch die Spielregeln zu erklären...~ ~RUHE, Besucherin! Ihr werdet ein Spiel spielen! Ohne ein Spiel werdet Ihr nicht weiterkommen! Erlaubt mir, Euch die Spielregeln zu erklären...~
+@10   = ~Es ist ziemlich einfach. Seht Ihr den Behälter auf dem grossen Tisch? Dort werdet Ihr Euch einen Gegenstand nehmen. Wenn Ihr das getan habt, dann wird eine Kreatur irgendwo in diesem Gebiet auftauchen.~
+
+@11   = ~Zuerst müsst Ihr diese Kreatur finden. Doch der herausfordernde Teil dieses Spiels liegt darin, die Kreatur wieder dahin zu schicken, woher sie gekommen ist. Dies wird dadurch geschehen, das Ihr ein Puzzle zusammen setzen müsst, das Ihr von der Kreatur erhaltet.~
+
+@12   = ~Jedes Mal, wenn Ihr ein Rätsel gelöst habt, wird ein neuer Gegenstand in dem Behälter erschaffen. Dieser Gegenstand wird eine weitere Kreatur erschaffen. Das geht so lange, bis das Spiel zu Ende ist. Ihr werdet... informiert werden... wenn das Spiel vorbei ist.~
+
+@13   = ~Ausgezeichnet, fangen wir an.~
+@14   = ~Ich weigere mich, eine lächerliche Spielfigur in Euren dämlichen Spielen zu sein, Kreatur! Ihr könnt mich mal!~
+@15   = ~Lasset die Spiele beginnen, Besucher! Seid auf der Hut! Einige der Kreaturen, die Ihr sehen werdet, sind nicht besonders hübsch... oder freundlich...~ ~Lasset die Spiele beginnen, Besucherin! Seid auf der Hut! Einige der Kreaturen, die Ihr sehen werdet, sind nicht besonders hübsch... oder freundlich...~
+@16   = ~Ah, aber ich bin der einzige, der Euch erlauben kann, wieder zu gehen. Und wenn Ihr das Spiel nicht beendet, werdet Ihr hier sicher aus dem einen oder anderen Grund sterben... aber das ist Eure Entscheidung. Wenn Ihr umkommen möchtet, dann arbeitet nicht zusammen, Besucher.~ ~Ah, aber ich bin der einzige, der Euch erlauben kann, wieder zu gehen. Und wenn Ihr das Spiel nicht beendet, werdet Ihr hier sicher aus dem einen oder anderen Grund sterben... aber das ist Eure Entscheidung. Wenn Ihr umkommen möchtet, dann arbeitet nicht zusammen, Besucherin.~
+@17   = ~Gut, Besucher... Vielleicht erweist sich Eure Einstellung als nützlich. Dann lasst mich Euch das Spiel erklären...~
+ ~Gut, Besucherin... Vielleicht erweist sich Eure Einstellung als nützlich. Dann lasst mich Euch das Spiel erklären...~
+@18   = ~Nein, haltet ein! Ihr werdet ein Spiel spielen! Ihr könnt nicht gehen!~
+@19   = ~Ich? Eine Krankheit verursachen? Oder gar eine Plage? Warum, ich würde nicht einmal im Traum daran denken! Andererseits könnte der Meister anders darüber denken... Er kehrt zurück, müsst Ihr wissen...~
+
+@20   = ~Aber abgesehen davon sind Spiele und Rätsel besonders interessant... Möchtet Ihr teilnehmen? Ich dachte, dass Ihr es würdet, Besucher... Ich erkläre es für Euch...~ ~Aber abgesehen davon sind Spiele und Rätsel besonders interessant... Möchtet Ihr teilnehmen? Ich dachte, dass Ihr es würdet, Besucherin... Ich erkläre es für Euch...~
+@21   = ~Jetzt zum letzten Spiel... es ist ganz einfach. Macht Euch auf den Weg zu den Stufen auf der entgegengesetzten Seite dieses Zimmers.~
+@22   = ~Redet mit mir, wenn Ihr dorthin gekommen seid, um das Spiel zu beenden...~
+
+@23   = ~Ah, Besucher... Ihr habt es zu Ende gebracht, oder? Zu Eurem Leidwesen hat der Meister sich gerade an mich gewandt.~
+ ~Ah, Besucherin... Ihr habt es zu Ende gebracht, oder? Zu Eurem Leidwesen hat der Meister sich gerade an mich gewandt.~
+@24   = ~Er will, dass wir mit diesen Spielchen aufhören und Eurem Leben ein Ende gesetzt wird. Er spürt die Macht, die Euch inne wohnt... Euer Geist wäre allein schon genug für ihn, wieder auf Erden zu wandeln. Ich soll ihn zu Ihm bringen.~
+@25   = ~Ich komme auf keinen Fall mit Euch.~
+@26   = ~Sehr schön, ich werde mitkommen.~
+@27   = ~Wer sagte, dass Ihr eingeladen seid? Euer toter Körper ist so gut wie jeder lebende! Jetzt haltet still!~

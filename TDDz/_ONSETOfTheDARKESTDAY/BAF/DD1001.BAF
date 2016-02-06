@@ -1,0 +1,47 @@
+IF
+  Global("tz_creature","dd1001",0)
+THEN
+  RESPONSE #100
+    SetGlobal("tz_creature","dd1001",1)
+    CreateCreature("alust02",[654.710],4)
+    SetGlobal("tz_towneastpop","GLOBAL",1)
+END
+
+IF
+  Global("tz_errtusnuf","GLOBAL",1)
+THEN
+  RESPONSE #100
+    CreateCreature("errtu03",[929.899],4)
+    CreateCreature("alust03",[783.798],4)
+    SetGlobal("tz_errtusnuf","GLOBAL",2)
+END
+
+IF
+  Global("tz_errtusnuf","GLOBAL",2)
+THEN
+  RESPONSE #100
+    ActionOverride("errtu03",StartDialogue("errtulos","alust03"))
+    SetGlobal("tz_errtusnuf","GLOBAL",3)
+END
+
+IF
+  Global("tz_errtusnuf","GLOBAL",4)
+THEN
+  RESPONSE #100
+    Wait(6)
+    ActionOverride("alust03",StartDialogue("alustend",Player1))
+    SetGlobal("tz_errtusnuf","GLOBAL",5)
+END
+
+IF
+  Global("tz_errtugear","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("tz_errtugear","GLOBAL",2)
+    Wait(3)
+    FadeToColor([20.0],0)
+    Wait(2)
+    StartCutSceneMode()
+    StartCutScene("ertgear")
+END
+

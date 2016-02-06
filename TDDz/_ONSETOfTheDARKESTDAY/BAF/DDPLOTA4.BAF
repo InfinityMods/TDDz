@@ -1,0 +1,9 @@
+IF
+  Global("tz_talk","LOCALS",0)
+  See([PC])
+THEN
+  RESPONSE #100
+    SetGlobal("tz_talk","LOCALS",1)
+    StartDialogue("DDPLOTA4",LastSeenBy(Myself))
+END
+

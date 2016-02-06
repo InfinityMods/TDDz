@@ -1,0 +1,37 @@
+IF
+  Allegiance(Myself,ENEMY)
+  See(NearestEnemyOf(Myself))
+  Global("tz_spells","LOCALS",0)
+THEN
+  RESPONSE #100
+    ApplySpell(Myself,WIZARD_PROTECTION_FROM_MAGIC_WEAPONS)
+    ForceSpell(NearestEnemyOf(Myself),COM_PRIEST_VISIONS_OF_PAIN)
+    SetGlobal("tz_spells","LOCALS",1)
+    Continue()
+END
+
+IF
+  Global("tz_spells","LOCALS",1)
+THEN
+  RESPONSE #100
+    SetGlobal("tz_spells","LOCALS",2)
+    ForceSpell(NearestEnemyOf(Myself),COM_PRIEST_EMBALM)
+    Continue()
+END
+
+IF
+  Global("tz_spells","LOCALS",2)
+THEN
+  RESPONSE #100
+    SetGlobal("tz_spells","LOCALS",3)
+    ReallyForceSpell(NearestEnemyOf(Myself),WIZARD_ENERGY_DRAIN)
+    Continue()
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+THEN
+  RESPONSE #100
+    AttackOneRound(NearestEnemyOf(Myself))
+END
+

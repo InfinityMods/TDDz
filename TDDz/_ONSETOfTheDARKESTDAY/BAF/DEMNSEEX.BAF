@@ -1,0 +1,14 @@
+IF
+  See([GOODCUTOFF])
+THEN
+  RESPONSE #100
+    Attack([GOODCUTOFF])
+END
+
+IF
+  See([GOODCUTOFF])
+THEN
+  RESPONSE #100
+    MoveToObject(LastSeenBy(Myself))
+END
+

@@ -1,0 +1,5 @@
+@0    = ~¿Estáis listo para iros, <CHARNAME>?~
+~¿Estáis lista para iros, <CHARNAME>?~
+@1    = ~Sí, adelante con ello.~
+@2    = ~No, dadme sólo unos cuantos minutos más.~
+@3    = ~Maravilloso. Allá vamos...~

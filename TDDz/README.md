@@ -54,18 +54,21 @@ For now, I focus on adventure, I have no time nor experience to deal/test rules 
         @901002 = ~TDD - Espurta~ 
         @901003 = ~TDD - Purskal~ 
         @901004 = ~TDD - Riatavin~ 
-        @999999 = ~Intruders! Kill the intruders!~    
+        @999999 = ~Intruders! Kill the intruders!~
+	.DDSHEINA.tra/@11 = ~They were just outside, to the west of this inn. But I don't know... they've probably left by now.~ => ~They were just outside, to the east of this inn. But I don't know... they've probably left by now.~
 
 * Fixes/Tweaks/Changes *
+	. Entry point of Onset of the Darkest Day moved from Ellisime to Elhan (after Rillifan temple, talk to him)
 	. XP granted by scripts are reduced to 10%
 	. XP granted by TDD creatures are reduded to 20% (creatures from vanilla game that appear in TDD keep their vanilla XP); Graz'zt XP set to 50k rather than 100k due to poor combat script
 	. Remove easy +1 STR/WIS/INT granted by Riatavin/Fleeques.cre after killing Graz'zt
 	. All TDD spell scrolls are replaced by SCRL75.ITM (Identify scroll but few quest items)
 	. All TDD items are undroppable (but few quest items), meaning creatures use these items
 	. Drow items decay after ONE_DAY and (MORNING or DAY) and (OUTDOOR or CITY)
+	. Riatavin Inn 2nd floor is now accessible
 	. Remake cutscenes with Cutspy.cre
 	. Merge Bgarive.baf with Bgarive2.baf with Bgarive3.baf with Bgarive4.baf into Bgarive.baf with Cutspy.cre	
-	. Prefixed every TDD timers and variables with "tz_"
+	. Prefix every TDD timers and variables with "tz_"
 	. Relieve GLOBAL stacks by moving some of them to LOCALS/AREAs
 	. Minimaps are replaced by EE minimaps
 	. Ice search maps are replaced by sand search map (2 areas in Trollford)
@@ -76,6 +79,10 @@ For now, I focus on adventure, I have no time nor experience to deal/test rules 
 	. Set Animation During Combat Flag
 	. UTF8 compliant (with handle_charsets)
 	. Should be compatible with ToB/SoS/RoT/CtB	
+	. Cutscenes to Tartarus with Cutspy.cre and better transitions
+	. ARPO27.are/East stair entrance fixed
+	. Minor coding fixes and improvements
+	
 
 * TODO *	
 	. Better combat scripts for creatures (Espurta/DuegAbis.cre, cf. TDD walkthrough notes for more cre)
@@ -83,7 +90,7 @@ For now, I focus on adventure, I have no time nor experience to deal/test rules 
 	. Find better animation from Enhanced Animation for some creatures (cf. creaturesContract.2DAs)
 	. Riatavin/Nameless.cre/Helmrat.itm seems bugged	
 	. DD9X00.are EE minimap	
-
+	
 	
 A BIG THANKS TO TEAMBG for this mega-mod and every one about Weidu, Worldmap and Extended Animation.
 Special thanks: WhiteAgnus, agb1

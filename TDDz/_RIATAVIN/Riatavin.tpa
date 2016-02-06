@@ -1,10 +1,21 @@
 DEFINE_ACTION_MACRO InstallSpecificContents
 BEGIN
+APPEND ~MASTAREA.2DA~
+~DD3300   value
+DD0200   value
+DDCT03   value
+DDC133   value
+DDCT33   value
+DD8000   value
+DD9x00   value
+DDC19X   value~
+UNLESS ~DD3300~	
+
 	INCLUDE ~%MOD_FOLDER%/Lib/Areas.tpa~
 		
 	COPY_EXISTING ~CYCCALI1.CRE~ 	~override~ WRITE_LONG 0x28 0xE000 // IC_CYCLOPS
-	COPY_EXISTING ~CYCCALI2.CRE~ 	~override~ WRITE_LONG 0x28 0xE000 // IC_CYCLOPS	
-	COPY_EXISTING ~CYCCALI3.CRE~ 	~override~ WRITE_LONG 0x28 0xE000 // IC_CYCLOPS		
+	COPY_EXISTING ~CYCCALI2.CRE~ 	~override~ WRITE_LONG 0x28 0xE000 // IC_CYCLOPS
+	COPY_EXISTING ~CYCCALI3.CRE~ 	~override~ WRITE_LONG 0x28 0xE000 // IC_CYCLOPS
 	
 	LAM TDDPatchAR1106Area	
 	LAM TDDPatchDD8000Area	
@@ -26,13 +37,21 @@ BEGIN
 	// Fixed/Tweaked .AREs
 	COPY 	~%MOD_FOLDER%/%COMP_FOLDER%/ARE/DD3334.are~ 	~override~ // Fixed: phantom door removed
 			~%MOD_FOLDER%/%COMP_FOLDER%/ARE/DD8001C.are~ 	~override~ // remove unused points of interest
-		LPM SetAnimationsInCombatFlag
+		LPM SetAnimationsInCombatFlag			
+				
+	COPY_EXISTING ~DD3300.are~ ~override~
+		SAY 0x1b88 @20085
+		SAY 0x1c4c @20086
+		SAY 0x1d10 @20087
+
+	COPY_EXISTING 	~DD3300C1.are~  ~override~
+					~DD3300CT.are~	~override~
+		SAY 0x180 @20085
+		SAY 0x244 @20086
+		SAY 0x308 @20087	
 		
-	COPY_EXISTING ~DD3300.ARE~ ~override~
-		SAY 0X1B88 @20085
-		SAY 0X1C4C @20086
-		SAY 0X1D10 @20087
-		
+	COPY_EXISTING ~DD3309.are~ ~override~
+		WRITE_ASCII 0x94 ~~ #8 // clear area script
 		
 	ACTION_DEFINE_ASSOCIATIVE_ARRAY areas BEGIN
 		AR1106CT => ARCT11
@@ -52,7 +71,7 @@ BEGIN
 	ACTION_PHP_EACH areas AS old => newname BEGIN			
 		COPY ~override/%old%.are~ ~override/%newname%.are~		
 		DELETE ~override/%old%.are~
-	END		
+	END			
 			
 	ACTION_IF FILE_EXISTS_IN_GAME ~MIELIKKI.itm~ THEN BEGIN
 		COPY_EXISTING ~MIELIKKI.itm~ ~override~
@@ -124,6 +143,7 @@ BEGIN
 								ACTION_IF (~%replace%~) BEGIN COPY_EXISTING ~BGCTBOSS.cre~ ~override~ WRITE_ASCII 0x3E4 ~%newItem%~ #8 END 
 								COPY_EXISTING ~DD8001D.are~ ~override~ WRITE_ASCII 0x3C8 ~%newItem%~ #8
 							END
+						~DEATHREB~ 	BEGIN COPY_EXISTING ~DUEGSAL3.sto~ ~override~ WRITE_ASCII 0x25C ~%newItem%~ #8 END
 						~LOHVAR~ 	BEGIN COPY_EXISTING ~DD8001D.are~ ~override~ WRITE_ASCII 0x418 ~%newItem%~ #8 END
 						~MAGBOTXX~ 	BEGIN ACTION_IF (~%replace%~)BEGIN COPY_EXISTING ~WARDWIZS.sto~ ~override~ WRITE_ASCII 0x230 ~%newItem%~ #8 END END
 						~TROLSIND~ 	BEGIN ACTION_IF (~%replace%~)BEGIN COPY_EXISTING ~SANDRAIN.sto~ ~override~ WRITE_ASCII 0x690 ~%newItem%~ #8 END END
@@ -132,7 +152,7 @@ BEGIN
 				END
 			END
 		END
-	BUT_ONLY	
+	BUT_ONLY
 END
 
 //=============================================================================
@@ -168,8 +188,7 @@ BEGIN
 						~CELEBRA~ 	BEGIN COPY_EXISTING ~RAZAK01.sto~ 	~override~ WRITE_ASCII 0x398 	~%newItem%~ #8 END
 						~CERBSW2H~ 	BEGIN COPY_EXISTING ~DD7004.are~ 	~override~ WRITE_ASCII 0x84C 	~%newItem%~ #8 END
 						~CREATE~ 	BEGIN COPY_EXISTING ~SANDRAIN.sto~ 	~override~ WRITE_ASCII 0x620 	~%newItem%~ #8 END
-						~DAGGASP~ 	BEGIN COPY_EXISTING ~RAZAK01.sto~ 	~override~ WRITE_ASCII 0x3B4 	~%newItem%~ #8 END
-						~DEATHREB~ 	BEGIN COPY_EXISTING ~DUEGSAL3.sto~ 	~override~ WRITE_ASCII 0x25C 	~%newItem%~ #8 END
+						~DAGGASP~ 	BEGIN COPY_EXISTING ~RAZAK01.sto~ 	~override~ WRITE_ASCII 0x3B4 	~%newItem%~ #8 END						
 						~DHORNX~ 	BEGIN COPY_EXISTING ~DUEGSAL3.sto~ 	~override~ WRITE_ASCII 0x2B0 	~%newItem%~ #8 END
 						~DIVER~ 	BEGIN COPY_EXISTING ~AR1106.are~ 	~override~ WRITE_ASCII 0xE84 	~%newItem%~ #8 END						
 						~ELVHUNTB~ 	BEGIN COPY_EXISTING ~DD7002.are~ 	~override~ WRITE_ASCII 0x1764 	~%newItem%~ #8 END
@@ -261,7 +280,8 @@ BEGIN
 						~SCRX17~ 	BEGIN COPY_EXISTING ~3307WIZ.sto~ 	~override~ WRITE_ASCII 0x1C0 	~%newItem%~ #8 END
 						~SCRX19~ 	BEGIN COPY_EXISTING ~WARDWIZS.sto~ 	~override~ WRITE_ASCII 0x1A4 	~%newItem%~ #8 END
 						~SCRX20~ 	BEGIN COPY_EXISTING ~RAZAK01.sto~ 	~override~ WRITE_ASCII 0x4B0 	~%newItem%~ #8 END
-						~SCRX21~ 	BEGIN COPY_EXISTING ~DD8001D.are~ 	~override~ WRITE_ASCII 0x404 	~%newItem%~ #8 END
+						~SCRX21~ 	BEGIN COPY_EXISTING ~DD8001D.are~ 	~override~ WRITE_ASCII 0x404 	~%newItem%~ #8 END						
+						~SCRX24~ 	BEGIN COPY_EXISTING ~DD8001D.are~ 	~override~ WRITE_ASCII 0x454 	~%newItem%~ #8 END
 						~SCRX26~ 	BEGIN COPY_EXISTING ~3307WIZ.sto~ 	~override~ WRITE_ASCII 0x1DC 	~%newItem%~ #8 END
 						~SCRX27~ 	BEGIN COPY_EXISTING ~WARDWIZS.sto~ 	~override~ WRITE_ASCII 0x214 	~%newItem%~ #8 END
 						~SCRX28~ 	BEGIN COPY_EXISTING ~DUEGSAL3.sto~ 	~override~ WRITE_ASCII 0x304 	~%newItem%~ #8 END

@@ -1,0 +1,174 @@
+DEFINE_ACTION_MACRO InstallSpecificContents
+BEGIN
+	// TODO : BLOOD01X.cre-Barbazu better animation
+	// TODO : BLOOD02X.cre-Amnizu wizard better animation	
+	
+	APPEND ~MASTAREA.2DA~
+~ARPO05   value
+ARPO25   value
+DD1000   value
+DD1x12   value
+DD2300   value~
+UNLESS ~ARPO05~
+
+	
+	COPY ~override/ARPO05.are~ ~override~
+		SAY 0x3cc @20084
+		SAY 0x490 @20084
+	
+	COPY_EXISTING 	~EASTGOL1.cre~ ~override~
+					~EASTGOL2.cre~ ~override~
+		WRITE_LONG 0x28	0x7F04	// GOLEM_IRON
+	BUT_ONLY
+	
+	COPY_EXISTING 	~MINTSKEL.cre~ ~override~
+		WRITE_ASCII 0x3C ~MINSKELL~	// portrait L
+	BUT_ONLY
+	
+	COPY_EXISTING 	~DDMARY.cre~ ~override~
+		WRITE_ASCII 0x3C ~RAVENM~	// portrait L
+	BUT_ONLY
+	
+	COPY_EXISTING ~SUELLE2.cre~ ~override/DDSUELLE.cre~
+		WRITE_ASCII DEATHVAR ~DDSUELLE~ #32
+		WRITE_ASCII SCRIPT_OVERRIDE ~~ #8
+		WRITE_ASCII SCRIPT_CLASS ~~ #8
+		WRITE_ASCII SCRIPT_RACE ~~ #8
+		WRITE_ASCII SCRIPT_GENERAL ~~ #8
+		WRITE_ASCII SCRIPT_DEFAULT ~~ #8
+		WRITE_ASCII DIALOG ~DDSUELLE~ #8
+	BUT_ONLY	
+	
+	LAM HandleSpellScrollsContract
+	LAM HandleCoreItemsContract
+	LAM HandleItemsContract
+	
+	EXTEND_BOTTOM ~AR0300.bcs~ ~%MOD_FOLDER%/%COMP_FOLDER%/Snip/bAR0300.baf~
+	EXTEND_BOTTOM ~AR0902.bcs~ ~%MOD_FOLDER%/%COMP_FOLDER%/Snip/nAR0902.baf~
+		
+END
+
+
+//=============================================================================
+DEFINE_ACTION_MACRO HandleCoreItemsContract
+BEGIN
+	COPY ~%MOD_FOLDER%/_CORE/ItemsContract.2da~ ~%MOD_FOLDER%/TEMP/%COMP_FOLDER%/CoreItemsContract.2da~
+		COUNT_2DA_ROWS 7 count
+		WHILE (count > 1) BEGIN
+			READ_2DA_ENTRY (count -1) 0 7 resname				
+			READ_2DA_ENTRY (count -1) 6 7 policy //undroppable column
+			SET count = count -1
+			
+			TO_UPPER resname
+			TO_UPPER policy
+			SET customize = NOT (~%policy%~ STRING_EQUAL ~+~ || ~%policy%~ STRING_EQUAL ~++++++++~)
+			SET undroppable = (~%policy%~ STRING_EQUAL ~.~)
+			SET replace = (~%customize%~ && NOT ~%undroppable%~)
+			SPRINT newItem ~%policy%~
+			PATCH_IF (~%undroppable%~)
+				BEGIN SPRINT newItem ~SCRL75~ END
+			
+			PATCH_IF (~%customize%~) BEGIN
+				INNER_ACTION BEGIN
+					ACTION_MATCH ~%resname%~
+					WITH
+						~DEATHREB~ 	BEGIN COPY_EXISTING ~DDPOTEN1.sto~ ~override~ WRITE_ASCII 0x708 ~%newItem%~ #8 END
+						~MAGBOTXX~ 	BEGIN COPY_EXISTING ~DDPOTEN1.sto~ ~override~ WRITE_ASCII 0x6B4 ~%newItem%~ #8 END
+						DEFAULT
+					END
+				END
+			END
+		END
+	BUT_ONLY	
+END
+
+//=============================================================================
+DEFINE_ACTION_MACRO HandleItemsContract
+BEGIN
+	COPY ~%MOD_FOLDER%/%COMP_FOLDER%/ItemsContract.2da~ ~%MOD_FOLDER%/TEMP/%COMP_FOLDER%/ItemsContract.2da~
+		COUNT_2DA_ROWS 7 count
+		WHILE (count > 1) BEGIN
+			READ_2DA_ENTRY (count -1) 0 7 resname
+			READ_2DA_ENTRY (count -1) 6 7 policy //undroppable column
+			SET count = count -1
+			
+			TO_UPPER resname
+			TO_UPPER policy
+			SET customize = NOT (~%policy%~ STRING_EQUAL ~+~ || ~%policy%~ STRING_EQUAL ~++++++++~)
+			SET undroppable = (~%policy%~ STRING_EQUAL ~.~)
+			SPRINT newItem ~%policy%~
+			PATCH_IF (~%undroppable%~)
+				BEGIN SPRINT newItem ~SCRL75~ END
+						
+			PATCH_IF (~%customize%~) BEGIN
+				INNER_ACTION BEGIN					
+					ACTION_MATCH ~%resname%~
+					WITH
+						~CLCKBS~ 	BEGIN COPY_EXISTING ~DDPOTEN1.sto~ 	~override~ WRITE_ASCII 0x6EC 	~%newItem%~ #8 END
+						~FIGSILV~ 	BEGIN COPY_EXISTING ~%MOD_FOLDER%/TEMP/%COMP_FOLDER%/DDPOTEN1.d~ ~%MOD_FOLDER%/TEMP/%COMP_FOLDER%/DDPOTEN1.d~ REPLACE_TEXTUALLY ~"%resname%"~ ~"%newItem%"~ END
+						~MALICE~ 	BEGIN COPY_EXISTING ~DDPOTEN1.sto~ 	~override~ WRITE_ASCII 0x698 	~%newItem%~ #8 END
+						~MOONLITE~ 	BEGIN COPY_EXISTING ~DD9400.are~ 	~override~ WRITE_ASCII 0xCC8 	~%newItem%~ #8 END
+						~POLAW4A~ 	BEGIN COPY_EXISTING ~%MOD_FOLDER%/TEMP/%COMP_FOLDER%/DDPOTEN1.d~ ~%MOD_FOLDER%/TEMP/%COMP_FOLDER%/DDPOTEN1.d~ REPLACE_TEXTUALLY ~"%resname%"~ ~"%newItem%"~ END
+						~SLINGB2~ 	BEGIN COPY_EXISTING ~DDPOTEN1.sto~ 	~override~ WRITE_ASCII 0x6D0 	~%newItem%~ #8 END
+						~SVIAN~ 	BEGIN COPY_EXISTING ~DD9400.are~ 	~override~ WRITE_ASCII 0xD54 	~%newItem%~ #8 END
+						~TROLLARM~ 	BEGIN COPY_EXISTING ~DD9400.are~ 	~override~ WRITE_ASCII 0xD2C 	~%newItem%~ #8 END
+						~VIOLAX~ 	BEGIN COPY_EXISTING ~DDPOTEN1.sto~ 	~override~ WRITE_ASCII 0x724 	~%newItem%~ #8 END
+						DEFAULT
+					END
+				END
+			END
+		END
+	BUT_ONLY	
+END
+
+
+//=============================================================================
+DEFINE_ACTION_MACRO HandleSpellScrollsContract
+BEGIN
+	COPY ~%MOD_FOLDER%/_CORE/SpellScrollsContract.2da~ ~%MOD_FOLDER%/TEMP/%COMP_FOLDER%/SpellScrollsContract.2da~
+		COUNT_2DA_ROWS 8 count
+		WHILE (count > 1) BEGIN
+			READ_2DA_ENTRY (count -1) 0 8 resname				
+			READ_2DA_ENTRY (count -1) 6 8 policy
+			SET count = count -1
+				
+			TO_UPPER resname	
+			TO_UPPER policy	
+			SET customize = NOT (~%policy%~ STRING_EQUAL ~+~ || ~%policy%~ STRING_EQUAL ~++++++++~)	
+			SET undroppable = (~%policy%~ STRING_EQUAL ~.~)
+			SET replace = (~%customize%~ && NOT ~%undroppable%~)
+			SPRINT newItem ~%policy%~
+			PATCH_IF (~%undroppable%~)
+				BEGIN SPRINT newItem ~SCRL75~ END
+			
+			PATCH_IF ~%customize%~ BEGIN
+				INNER_ACTION BEGIN
+					ACTION_MATCH ~%resname%~
+					WITH	
+						~SCRX1~ 	BEGIN COPY_EXISTING ~DDPOTEN1.sto~ ~override~ WRITE_ASCII 0x67C ~%newItem%~ #8 END
+						~SCRX3~ 	BEGIN COPY_EXISTING ~%MOD_FOLDER%/TEMP/%COMP_FOLDER%/ARPO06.baf~ ~%MOD_FOLDER%/TEMP/%COMP_FOLDER%/ARPO06.baf~ REPLACE_TEXTUALLY ~"%resname%"~ ~"%newItem%"~ END
+						~SCRX4~ 	BEGIN COPY_EXISTING ~%MOD_FOLDER%/TEMP/%COMP_FOLDER%/ARPO29.baf~ ~%MOD_FOLDER%/TEMP/%COMP_FOLDER%/ARPO29.baf~ REPLACE_TEXTUALLY ~"%resname%"~ ~"%newItem%"~ END
+						~SCRX6~ 	BEGIN COPY_EXISTING ~%MOD_FOLDER%/TEMP/%COMP_FOLDER%/ARPO05.baf~ ~%MOD_FOLDER%/TEMP/%COMP_FOLDER%/ARPO05.baf~ REPLACE_TEXTUALLY ~"%resname%"~ ~"%newItem%"~ END
+						~SCRX12~ 	BEGIN COPY_EXISTING ~%MOD_FOLDER%/TEMP/%COMP_FOLDER%/ARPO05.baf~ ~%MOD_FOLDER%/TEMP/%COMP_FOLDER%/ARPO05.baf~ REPLACE_TEXTUALLY ~"%resname%"~ ~"%newItem%"~ END
+						~SCRX14~ 	BEGIN COPY_EXISTING ~%MOD_FOLDER%/TEMP/%COMP_FOLDER%/ARPO28.baf~ ~%MOD_FOLDER%/TEMP/%COMP_FOLDER%/ARPO28.baf~ REPLACE_TEXTUALLY ~"%resname%"~ ~"%newItem%"~ END
+						~SCRX18~ 	BEGIN COPY_EXISTING ~%MOD_FOLDER%/TEMP/%COMP_FOLDER%/ARPO29.baf~ ~%MOD_FOLDER%/TEMP/%COMP_FOLDER%/ARPO29.baf~ REPLACE_TEXTUALLY ~"%resname%"~ ~"%newItem%"~ END
+						~SCRX23~ 	BEGIN COPY_EXISTING ~%MOD_FOLDER%/TEMP/%COMP_FOLDER%/ARPO28.baf~ ~%MOD_FOLDER%/TEMP/%COMP_FOLDER%/ARPO28.baf~ REPLACE_TEXTUALLY ~"%resname%"~ ~"%newItem%"~ END
+						~SCRX31~ 	BEGIN COPY_EXISTING ~DD9400.are~ 	~override~ WRITE_ASCII 0xF48 	~%newItem%~ #8 END
+						~SCRX32~ 	BEGIN COPY_EXISTING ~%MOD_FOLDER%/TEMP/%COMP_FOLDER%/ARPO28.baf~ ~%MOD_FOLDER%/TEMP/%COMP_FOLDER%/ARPO28.baf~ REPLACE_TEXTUALLY ~"%resname%"~ ~"%newItem%"~ END
+						~SCRX39~ 	BEGIN COPY_EXISTING ~%MOD_FOLDER%/TEMP/%COMP_FOLDER%/ARPO28.baf~ ~%MOD_FOLDER%/TEMP/%COMP_FOLDER%/ARPO28.baf~ REPLACE_TEXTUALLY ~"%resname%"~ ~"%newItem%"~ END
+						~SCRX40~ 	BEGIN COPY_EXISTING ~DD9400.are~ 	~override~ WRITE_ASCII 0xF5C 	~%newItem%~ #8 END
+						~SCRX54~ 	BEGIN COPY_EXISTING ~DD9400.are~ 	~override~ WRITE_ASCII 0xD04 	~%newItem%~ #8 END
+						~SCRX60~ 	BEGIN COPY_EXISTING ~%MOD_FOLDER%/TEMP/%COMP_FOLDER%/ARPO28.baf~ ~%MOD_FOLDER%/TEMP/%COMP_FOLDER%/ARPO28.baf~ REPLACE_TEXTUALLY ~"%resname%"~ ~"%newItem%"~ END
+						~SCRX65~ 	BEGIN 
+										COPY_EXISTING ~%MOD_FOLDER%/TEMP/%COMP_FOLDER%/ARPO05.baf~ ~%MOD_FOLDER%/TEMP/%COMP_FOLDER%/ARPO05.baf~ REPLACE_TEXTUALLY ~"%resname%"~ ~"%newItem%"~
+										COPY_EXISTING ~%MOD_FOLDER%/TEMP/%COMP_FOLDER%/ARPO28.baf~ ~%MOD_FOLDER%/TEMP/%COMP_FOLDER%/ARPO28.baf~ REPLACE_TEXTUALLY ~"%resname%"~ ~"%newItem%"~ 
+									END
+						~SCRX72~ 	BEGIN COPY_EXISTING ~%MOD_FOLDER%/TEMP/%COMP_FOLDER%/ARPO28.baf~ ~%MOD_FOLDER%/TEMP/%COMP_FOLDER%/ARPO28.baf~ REPLACE_TEXTUALLY ~"%resname%"~ ~"%newItem%"~ END
+						DEFAULT			
+					END
+				END
+			END
+		END
+	BUT_ONLY	
+END
+

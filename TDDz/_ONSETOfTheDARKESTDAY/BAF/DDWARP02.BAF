@@ -1,0 +1,12 @@
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId(Player1)    
+	CreateCreatureObjectOffset("DDwarp01",Myself,[-150.-50]) // Elven Wizard	
+	ActionOverride("DDwarp01",MoveToObject(Player1))
+	Wait(3)
+	ActionOverride("DDwarp01",StartDialog("DDwarp01",Player1))
+	EndCutSceneMode()
+END
+

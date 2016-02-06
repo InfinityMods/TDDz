@@ -1,0 +1,64 @@
+@0    = ~Bienvenidos a la Posada del Lago del Sol... ¿Buscáis una habitación, o quizá algunos suministros?~
+@1    = ~Dejadme ver lo que tenéis.~
+@2    = ~No, ahora mismo no.~
+@3    = ~Una extraña aparicioón en el exterior me dijo que os viniera a ver.~
+@4    = ~¿Vuestro enviado decía que teníais algo que decirme?~
+@5    = ~¿Qué pasa con esta posada? ¡Estáis en medio de ninguna parte!~
+@6    = ~Ah sí, mi enviado. Entonces debéis ser <CHARNAME>. He oído hablar de vuestros logros por toda la tierra, y necesito pediros un favor.~
+@7    = ~Sí, sí, continuad. ¿De qué trata ese favor?~
+@8    = ~No, no estoy interesado en hacer más favores.~
+~No, no estoy interesada en hacer más favores.~
+@9    = ~Como véis, a los Magos encapuchados no les gusta cuando alguien, como yo, deja su puesto para perseguir sus propias metas. Lo consideran una traición.~
+@10   = ~Han contratado a numerosos mercenarios para seguirme y matarme. En consecuencia, he colocado un encantamiento alrededor de esta posada.~
+@11   = ~A causa de la naturaleza de este encantamiento, cualquiera que estuviera dentro de la posada cuando se lanzó no puede abandonarla sin ser golpeado por la muerte. Aquí es donde vos entráis.~
+@12   = ~Os pido que dejéis la posada, y capturéis o matéis a los mercenarios que me buscan. Sé que no pueden estar lejos, pero aún no han entendido la naturaleza del lago.~
+@13   = ~¿Habrá una recompensa?~
+@14   = ~¿Podéis repetir eso?~
+@15   = ~Por supuesto, lo haré. Permitedme ir a encargarme de ellos ahora mismo.~
+@16   = ~No, creo que no. No quiero involucrarme nunca más con los Magos encapuchados.~
+@17   = ~¿Estáis seguro sobre eso? No serán los Magos encapuchados directamente, sólo unos mercenarios...~
+~¿Estáis segura sobre eso? No serán los Magos encapuchados directamente, sólo unos mercenarios...~
+@18   = ~Ah... ¡No os escuché decir nada sobre una recompensa! Contad conmigo.~
+@19   = ~Los mercenarios puede que sean peores que los magos. No tomaré parte en esto.~
+@20   = ~He cambiado de opinión. No necesito ninguna recompensa, pero me desharé de los mercenarios ahora mismo.~
+@21   = ~Sí, sí... asumiendo que consigáis acabar el trabajo. Tengo una arma mágica excelente a la que sin duda encontraréis utilidad. Ahora id, y completad la tarea.~
+@22   = ~Por supuesto... aunque creo que no debéis de haberme prestado atención desde hace un momento.~
+@23   = ~Maravilloso... venid a contarme cómo os encargásteis de los mercenarios.~
+@24   = ~Haced lo que queráis. Estaré aquí si cambiáis de opinión. Al fin y al cabo, no puedo irme.~
+@25   = ~Supuse que podíais decir algo así... en términos de mapas, cartografía y similares. Pero en realidad, esta posada es lugar de reunión de muchos aventureros que sienten que no tienen un lugar al que ir.~
+@26   = ~Por desgracia, los descarriados HACEN su entrada (¿habéis visto a los dos tipos del piso superior? Realmente triste). Pero esa es la razón por la que estamos aislados de todo el mundo; para una sensación de seguridad y protección.~
+@27   = ~Yo probablemente encajaría aquí. No tengo muchos lugares a los que ir.~
+@28   = ~Ya sé porqué todos los de aquí son tan extraño... ¡están locos! ¡Eso es! ¡Y vos también estáis loco! ¡¡¡ARG!!! ¡Somos todos un hatajo de lunáticos!~
+@29   = ~Bueno, como sea, dejadme ver qué servicios tenéis.~
+@30   = ~Entonces me voy a ir.~
+@31   = ~(Todos los de aquí merecen un buen robo...)~
+@32   = ~Así que, ¿también sois mago, Potencius?~
+@33   = ~¡Sois un maldito mago! ¡Preparáos para sentir mi justa cólera!~
+@34   = ~¿Qué fue eso?~
+@35   = ~Oh... nada.~
+@36   = ~¡¡¡Dije que MERECEIS UN BUEN ROBO!!! ¿Es esto tan difícil de entender?~
+@37   = ~Bien. Sigamos como si nada.~
+@38   = ~No, os oí perfectamente bien la primera vez. Os sugiero que vigiléis vuestros dedos. Lo veo todo y sé todo lo que ocurre en mi posada... si bien parte de ellos es realmente repugnante. Si os cojo robando a cualquiera de mis invitados, esperad ser expulsado y majado a palos.~
+~No, os oí perfectamente bien la primera vez. Os sugiero que vigiléis vuestros dedos. Lo veo todo y sé todo lo que ocurre en mi posada... si bien parte de ellos es realmente repugnante. Si os cojo robando a cualquiera de mis invitados, esperad ser expulsada y majada a palos.~
+@39   = ~Efectivamente. He estudiado magia durante unos buenos 20 años, y ya he adquirido más conocimiento del que muchos magos tendrán nunca.~
+@40   = ~¿De verdad? ¿Cuál es vuestra especialidad?~
+@41   = ~Creo que podría con vos. ¡Nadie es más poderoso que yo!~
+@42   = ~Increible. ¡Potencius sois totalmente impresionante!~
+@43   = ~Manipulo el clima, el tiempo, y tengo breves conocimientos de las artes oscuras... Tales como posesiones y temas oscuros. No obstante, esas preguntas no van a ningún sitio. Si deseáis comprar algo, sólo decidlo. Si no, entonces iros.~
+@44   = ~Sí, en verdad lo soy.~
+@45   = ~Quizás... pero lo dudo. Creo que vos sois el único de aquí que está loco.~
+~Quizás... pero lo dudo. Creo que vos sois la única de aquí que está loca.~
+@46   = ~Estaría en desacuerdo. Estoy seguro que ahora deseáis probar vuestras "cosas" en mí, pero eso no será tolerado dentro de la posada. Causad cualquier problema, y no disfrutaréis de las consecuencias.~
+@47   = ~Aquí no se permiten las "limpiezas justas". Al menos a este lado de la puerta. Si se intenta una "limpieza justa", me aseguraré de que quedéis "limpios" de todo vuestro dinero y arrojados fuera de la posada. ¿Entendido?~
+@48   = ~Regresasteis. ¿Os habéis deshecho de los mercenarios? Estoy ansioso por reabrir mi posada.~
+@49   = ~Sí, aquí tenéis una carta que tomé del cuerpo del cabecilla. Está escrita y firmada por uno de los Magos encapuchados.~
+@50   = ~No, aún no. Sin embargo, los he dirigido a una trampa. Esperan justo en el exterior. Pensé que podría tener el honor de una batallar contra ellos con vos.~
+@51   = ~No. Aún estoy trabajando derrotarlos.~
+@52   = ~¿En serio? Sois astuto. Si los cogemos desprevenidos en nuestro propio territorio tendremos la ventaja a nuestro favor.~
+~¿En serio? Sois astuta. Si los cogemos desprevenidos en nuestro propio territorio tendremos la ventaja a nuestro favor.~
+@53   = ~Dadme sólo un momento mientras levanto las guardas de la posada.~
+@54   = ~Muy bien, regresad cuando se hayan ido.~
+@55   = ~Las guardas y el encantamiento están quitados. Decidle a los mercenarios que entren y les mostraremos cómo se gana una batalla.~
+@56   = ~Vuestro trabajo aquí es apreciado, <CHARNAME>, y os habéis ganado mis agradecimientos. Aquí está la recompensa por la que preguntasteis.~
+@57   = ~Ah, <CHARNAME>, habéis hecho un trabajo fantástico. Aquí tenéis la recompensa que creo merecéis.~
+@58   = ~¡Maravilloso! Habéis hecho un trabajo ejemplar, <CHARNAME>. Permitidme quitar las guardas de la posada.~

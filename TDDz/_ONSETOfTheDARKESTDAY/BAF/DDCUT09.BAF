@@ -1,0 +1,26 @@
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId(Player1)
+    CreateCreatureImpassable("DDcyric1",[1182.875],13)
+    ActionOverride(Player2,MoveToPoint([1439.104]))
+    ActionOverride(Player3,MoveToPoint([1439.110]))
+    ActionOverride(Player4,MoveToPoint([1484.106]))
+    ActionOverride(Player5,MoveToPoint([1475.113]))
+    ActionOverride(Player6,MoveToPoint([1526.108]))
+    MoveViewPoint([1394.1077],VERY_FAST)
+    MoveToPoint([1394.1077])
+    Wait(8)
+    ActionOverride("DDcyric1",FaceObject(Player1))
+    ActionOverride(Player2,FaceObject("DDcyric1"))
+    ActionOverride(Player3,FaceObject("DDcyric1"))
+    ActionOverride(Player4,FaceObject("DDcyric1"))
+    ActionOverride(Player5,FaceObject("DDcyric1"))
+    ActionOverride(Player6,FaceObject("DDcyric1"))
+    FaceObject("DDcyric1")
+    Wait(1)
+    ActionOverride("DDcyric1",StartDialogue("DDcyric1",Player1))
+    EndCutSceneMode()
+END
+

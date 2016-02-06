@@ -1,0 +1,18 @@
+IF
+  Global("tz_DD3202b","GLOBAL",0)
+THEN
+  RESPONSE #100
+    CreateCreature("bgtavst3",[735.833],4)
+    CreateCreature("bgtavst4",[1177.587],4)
+    CreateCreature("bgtavst4",[1176.851],4)
+    CreateCreature("bgtavst3",[1568.937],4)
+    CreateCreature("bgtavst3",[1498.1338],4)
+    CreateCreatureImpassable("sleepfh",[1120.1368],4)
+    CreateCreatureImpassable("sleepmh",[2179.642],4)
+    CreateCreatureImpassable("sleepfh",[184.1096],4)
+    CreateCreatureImpassable("sleepmh",[334.995],4)
+    CreateCreatureImpassable("sleepfh",[484.1273],4)
+    CreateCreatureImpassable("sleepmh",[612.1187],4)
+    SetGlobal("tz_DD3202b","GLOBAL",1)
+END
+

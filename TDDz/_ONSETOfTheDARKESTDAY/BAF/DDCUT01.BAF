@@ -1,0 +1,25 @@
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId(Player1)  // 
+    FadeToColor([20.0],0)
+    StorePartyLocations()
+    Wait(2)
+    LeaveAreaLUA("ARPO10","",[-1.-1],0)
+    ActionOverride(Player2,LeaveAreaLUA("ARPO10","",[-1.-1],0))
+    ActionOverride(Player3,LeaveAreaLUA("ARPO10","",[-1.-1],0))
+    ActionOverride(Player4,LeaveAreaLUA("ARPO10","",[-1.-1],0))
+    ActionOverride(Player5,LeaveAreaLUA("ARPO10","",[-1.-1],0))
+    ActionOverride(Player6,LeaveAreaLUA("ARPO10","",[-1.-1],0))
+    MultiPlayerSync()
+    SetMasterArea("ARPO10")
+    MultiPlayerSync()
+    CreateCreature("DDlarala",[322.214],13)
+    CreateCreature("DDhusban",[410.306],6)
+    CreateCreature("cutspy",[245.260],0)
+    Wait(1)
+    FadeFromColor([20.0],0)
+    StartCutScene("DDCUT02")
+END
+

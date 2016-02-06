@@ -1,0 +1,63 @@
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId(Player1)
+    FadeToColor([20.0],0)
+    StorePartyLocations()
+    Wait(2)
+    LeaveAreaLUA("ARPO05","",[4335.969],4)
+    MultiPlayerSync()
+    SetMasterArea("ARPO05")
+    MultiPlayerSync()
+    CreateCreature("DDTERO01",[4470.979],0)
+    Wait(1)
+    FadeFromColor([20.0],0)
+    EndCutSceneMode()
+END
+
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId(Player2)
+    Wait(2)
+    LeaveAreaLUA("ARPO05","",[4346.935],4)
+END
+
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId(Player3)
+    Wait(2)
+    LeaveAreaLUA("ARPO05","",[4380.1024],4)
+END
+
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId(Player4)
+    Wait(2)
+    LeaveAreaLUA("ARPO05","",[4424.909],4)
+END
+
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId(Player5)
+    Wait(2)
+    LeaveAreaLUA("ARPO05","",[4368.916],4)
+END
+
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId(Player6)
+    Wait(2)
+    LeaveAreaLUA("ARPO05","",[4346.935],4)
+END
+

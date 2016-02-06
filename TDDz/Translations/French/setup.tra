@@ -1,9 +1,10 @@
 @901000 = ~TDD - Core~
-@901001 = ~TDD - Trollford~
-@901002 = ~TDD - Espurta~ 
+@901001 = ~TDD - Gué du troll~
+@901002 = ~TDD - Eshpurta~ 
 @901003 = ~TDD - Purskal~ 
 @901004 = ~TDD - Riatavin~ 
-@999999 = ~Intruders! Kill the intruders!~
+@901005 = ~TDD - l'Avènement du Jour le plus Sombre~
+@999999 = ~Intrus! Tuer les intrus!~
 
 /////////////////////////////////////////////////////////////////////////////////////
 // Dialogues - unified Journal entries

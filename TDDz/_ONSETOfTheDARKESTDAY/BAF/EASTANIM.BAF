@@ -1,0 +1,24 @@
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId(Player1)
+    MoveViewPoint([2335.765],INSTANT)
+    Wait(1)
+    ActionOverride("eastmage",MoveToPoint([2550.680]))	
+    Wait(3)
+    ActionOverride("eastmage",ForceSpell("eastgol1",CLERIC_RESURRECTION))
+    Wait(6)
+    ActionOverride("eastmage",ForceSpell("eastgol1",CLERIC_RESURRECTION))
+    Wait(2)
+    FadeToColor([20.0],0)
+    Wait(2)
+    ActionOverride("eastgol1",DestroySelf())
+    Wait(2)
+    CreateCreature("eastgol2",[2559.660],4)
+    Wait(1)
+    FadeFromColor([20.0],0)
+    SetGlobal("tz_eastanimation","GLOBAL",4)
+    EndCutSceneMode()
+END
+

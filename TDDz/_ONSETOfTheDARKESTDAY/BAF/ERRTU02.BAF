@@ -1,0 +1,137 @@
+IF
+  HPLT(Myself,2)
+  Global("tz_errtusnuf","GLOBAL",0)
+THEN
+  RESPONSE #100
+    StartCutSceneMode()
+    FadeToColor([20.0],0)
+    Wait(2)
+    DestroySelf()
+    StartCutScene("alusterr")
+    SetGlobal("tz_errtusnuf","GLOBAL",1)
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  Global("tz_erttuprep","LOCALS",0)
+THEN
+  RESPONSE #100
+    ReallyForceSpell(Myself,WIZARD_STONE_SKIN)
+    ReallyForceSpell(Myself,WIZARD_ABSOLUTE_IMMUNITY)
+    SetGlobal("tz_erttuprep","LOCALS",1)
+END
+
+IF
+  Global("tz_timersa","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobalTimer("tz_fearerrtu","GLOBAL",14)
+    SetGlobal("tz_timersa","LOCALS",1)
+END
+
+IF
+  Global("tz_timersb","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobalTimer("tz_errtugaze","GLOBAL",34)
+    SetGlobal("tz_timersb","LOCALS",1)
+END
+
+IF
+  Global("tz_timersc","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobalTimer("tz_errtuscorch","GLOBAL",12)
+    SetGlobal("tz_timersc","LOCALS",1)
+END
+
+IF
+  Global("tz_timeb","LOCALS",0)
+  GlobalTimerExpired("tz_fearerrtu","GLOBAL")
+THEN
+  RESPONSE #100
+    ForceSpell(NearestEnemyOf(Myself),DEMON_FEAR)
+    SetGlobal("tz_timeb","LOCALS",1)
+    SetGlobalTimer("tz_retimeb","GLOBAL",14)
+END
+
+IF
+  Global("tz_timeb","LOCALS",1)
+  GlobalTimerExpired("tz_retimeb","GLOBAL")
+THEN
+  RESPONSE #100
+    SetGlobal("tz_timeb","LOCALS",0)
+    SetGlobal("tz_timersa","LOCALS",0)
+END
+
+IF
+  Global("tz_timea","LOCALS",0)
+  GlobalTimerExpired("tz_errtuscorch","GLOBAL")
+THEN
+  RESPONSE #100
+    SetGlobal("tz_timea","LOCALS",1)
+    SetGlobalTimer("tz_retimea","GLOBAL",11)
+    ForceSpell(Myself,WIZARD_SUN_FIRE)
+END
+
+IF
+  GlobalTimerExpired("tz_retimea","GLOBAL")
+  Global("tz_timea","LOCALS",1)
+THEN
+  RESPONSE #100
+    SetGlobal("tz_timea","LOCALS",0)
+    SetGlobal("tz_timersc","LOCALS",0)
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  Global("tz_erttuoffensea","LOCALS",0)
+THEN
+  RESPONSE #100
+    ForceSpell(LastSeenBy(Myself),DRAGON_FEAR)
+    ForceSpell(LastSeenBy(Myself),WIZARD_CHAIN_LIGHTNING)
+    SetGlobal("tz_erttuoffensea","LOCALS",1)
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  Global("tz_erttuoffenseb","LOCALS",0)
+THEN
+  RESPONSE #100
+    ForceSpell(LastSeenBy(Myself),DRAGON_FEAR)
+    ForceSpell(LastSeenBy(Myself),WIZARD_CHAIN_LIGHTNING)
+    SetGlobal("tz_erttuoffenseb","LOCALS",1)
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  Global("tz_erttuoffensec","LOCALS",0)
+THEN
+  RESPONSE #100
+    ForceSpell(LastSeenBy(Myself),WIZARD_FLESH_TO_STONE_IGNORE_RESISTANCE)
+    SetGlobal("tz_erttuoffensec","LOCALS",1)
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  Global("tz_erttuoffensed","LOCALS",0)
+THEN
+  RESPONSE #100
+    ForceSpell(LastSeenBy(Myself),WIZARD_MAZE)
+    SetGlobal("tz_erttuoffensed","LOCALS",1)
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+THEN
+  RESPONSE #100
+    Attack(NearestEnemyOf(Myself))
+END
+
+IF
+  AttackedBy([ANYONE],DEFAULT)
+THEN
+  RESPONSE #100
+    MoveToObject(LastAttackerOf(Myself))
+END
+

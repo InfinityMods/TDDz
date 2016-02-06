@@ -1,0 +1,310 @@
+IF
+  Global("tz_prep1","LOCALS",0)
+  Detect(NearestEnemyOf(Myself))
+THEN
+  RESPONSE #100
+    ApplySpell(Myself,WIZARD_STONE_SKIN)
+    ApplySpell(Myself,WIZARD_PROTECTION_FROM_MAGIC_WEAPONS)
+    ApplySpell(Myself,WIZARD_SPELL_TRAP)
+    ApplySpell(Myself,WIZARD_VOCALIZE)
+    SetGlobal("tz_prep1","LOCALS",1)
+END
+
+IF
+  Global("tz_prep2","LOCALS",0)
+  Detect(NearestEnemyOf(Myself))
+THEN
+  RESPONSE #100
+    ForceSpell(Myself,WIZARD_TIME_STOP)
+    Wait(1)
+    ForceSpell(Myself,COM_DAERRAGHS_AURA_OF_CLEANSING)
+    Wait(1)
+	//ForceSpell(Myself,WIZARD_MIND_BLANK)
+    ForceSpellRES("SPTDD02",Myself) // Fixed
+    Wait(1)
+    ForceSpell(Myself,WIZARD_SHADOW_DOOR)
+    Wait(1)
+    //ForceSpell(Myself,WIZARD_IRON_BODY)
+    ForceSpellRES("SPTDD01",Myself) // Fixed
+    SetGlobal("tz_prep2","LOCALS",1)
+END
+
+IF
+  Global("tz_FindTarget","LOCALS",0)
+THEN
+  RESPONSE #100
+    ChangeSpecifics([PC.0.0.MAGE],84)
+    ChangeSpecifics([PC.0.0.CLERIC_MAGE],84)
+    ChangeSpecifics([PC.0.0.FIGHTER_MAGE],84)
+    ChangeSpecifics([PC.0.0.MAGE_THIEF],84)
+    ChangeSpecifics([PC.0.0.CLERIC],84)
+    ChangeSpecifics([PC.0.0.CLERIC_THIEF],84)
+    ChangeSpecifics([PC.0.0.BARD],84)
+    ChangeSpecifics([PC.0.0.SORCERER],84)
+    ChangeSpecifics([PC.0.0.DRUID],84)
+    ChangeSpecifics([PC.0.0.FIGHTER_DRUID],360)
+    ChangeSpecifics([PC.0.0.FIGHTER_MAGE_THIEF],360)
+    ChangeSpecifics([PC.0.0.FIGHTER_CLERIC],360)
+    ChangeSpecifics([PC.0.0.FIGHTER],94)
+    ChangeSpecifics([PC.0.0.PALADIN],94)
+    ChangeSpecifics([PC.0.0.THIEF],94)
+    ChangeSpecifics([PC.0.0.RANGER],94)
+    ChangeSpecifics([PC.0.0.CLERIC_RANGER],94)
+    ChangeSpecifics([PC.0.0.FIGHTER_THIEF],94)
+    SetGlobal("tz_FindTarget","LOCALS",1)
+END
+
+IF
+  Global("tz_FindTarget","LOCALS",1)
+  HPLT([0.0.0.0.84],70)
+THEN
+  RESPONSE #100
+    ChangeSpecifics([0.0.0.0.84],85)
+    SetGlobal("tz_FindTarget","LOCALS",2)
+END
+
+IF
+  Global("tz_FindTarget","LOCALS",2)
+  !Detect([0.0.0.0.84])
+THEN
+  RESPONSE #100
+    SetGlobal("tz_FindTarget","LOCALS",1)
+END
+
+IF
+  Global("tz_SpellStrike","LOCALS",0)
+  OR(2)
+    See([0.0.0.0.84])
+    See([0.0.0.0.85])
+THEN
+  RESPONSE #100
+    IncrementGlobal("tz_SpellStrike","LOCALS",1)
+    Spell(LastSeenBy(Myself),WIZARD_SPELL_STRIKE)
+    Wait(1)
+    Continue()
+END
+
+IF
+  GlobalLT("tz_LowerResistance","LOCALS",3)
+  CheckStatGT([0.0.0.0.85],19,RESISTMAGIC)
+THEN
+  RESPONSE #100
+    ForceSpell([0.0.0.0.85],WIZARD_LOWER_RESISTANCE)
+    Wait(1)
+    IncrementGlobal("tz_LowerResistance","LOCALS",1)
+    Wait(1)
+    Continue()
+END
+
+IF
+  GlobalLT("tz_MagicMissileforStoneSkin","LOCALS",7)
+  OR(2)
+    CheckStatGT([0.0.0.0.85],0,STONESKINS)
+    StateCheck([0.0.0.0.85],STATE_MIRRORIMAGE)
+THEN
+  RESPONSE #100
+    ForceSpell([0.0.0.0.85],WIZARD_MAGIC_MISSILE)
+    Wait(1)
+    IncrementGlobal("tz_MagicMissileforStoneSkin","LOCALS",1)
+    Wait(1)
+    Continue()
+END
+
+IF
+  GlobalLT("tz_LowerResistance","LOCALS",3)
+  CheckStatGT([0.0.0.0.84],19,RESISTMAGIC)
+THEN
+  RESPONSE #100
+    ForceSpell([0.0.0.0.84],WIZARD_LOWER_RESISTANCE)
+    Wait(1)
+    IncrementGlobal("tz_LowerResistance","LOCALS",1)
+    Wait(1)
+    Continue()
+END
+
+IF
+  GlobalLT("tz_MagicMissileforStoneSkin","LOCALS",7)
+  OR(2)
+    CheckStatGT([0.0.0.0.84],0,STONESKINS)
+    StateCheck([0.0.0.0.84],STATE_MIRRORIMAGE)
+THEN
+  RESPONSE #100
+    ForceSpell([0.0.0.0.84],WIZARD_MAGIC_MISSILE)
+    Wait(1)
+    IncrementGlobal("tz_MagicMissileforStoneSkin","LOCALS",1)
+    Wait(1)
+    Continue()
+END
+
+IF
+  See([0.0.0.0.85])
+  GlobalLT("tz_PowerWordKill","LOCALS",2)
+THEN
+  RESPONSE #100
+    IncrementGlobal("tz_PowerWordKill","LOCALS",1)
+    ForceSpell([0.0.0.0.85],WIZARD_POWER_WORD_KILL)
+    Wait(1)
+    Continue()
+END
+
+IF
+  See([0.0.0.0.85])
+  GlobalLT("tz_PowerWordSilence","LOCALS",1)
+THEN
+  RESPONSE #100
+    IncrementGlobal("tz_PowerWordSilence","LOCALS",1)
+    ForceSpell([0.0.0.0.85],WIZARD_POWER_WORD_SILENCE)
+    Wait(1)
+    Continue()
+END
+
+IF
+  See([0.0.0.0.85])
+  GlobalLT("tz_PowerWordStun","LOCALS",1)
+THEN
+  RESPONSE #100
+    IncrementGlobal("tz_PowerWordStun","LOCALS",1)
+    ForceSpell([0.0.0.0.85],WIZARD_POWER_WORD_STUN)
+    Wait(1)
+    Continue()
+END
+
+IF
+  See([0.0.0.0.85])
+  GlobalLT("tz_HorridWilting","LOCALS",1)
+THEN
+  RESPONSE #100
+    IncrementGlobal("tz_HorridWilting","LOCALS",1)
+    ForceSpell([0.0.0.0.85],WIZARD_ABI_DALZIMS_HORRID_WILTING)
+    ReallyForceSpell([0.0.0.0.85],WIZARD_FIREBALL)
+    Wait(1)
+    Continue()
+END
+
+IF
+  OR(2)
+    See([0.0.0.0.85])
+    See([0.0.0.0.84])
+  GlobalLT("tz_Gravity","LOCALS",1)
+THEN
+  RESPONSE #100
+    ForceSpell(LastSeenBy(Myself),COM_GRAVITY)
+    IncrementGlobal("tz_Gravity","LOCALS",1)
+    Wait(1)
+    Continue()
+END
+
+IF
+  OR(2)
+    See([0.0.0.0.85])
+    See([0.0.0.0.84])
+  GlobalLT("tz_Suffocation","LOCALS",1)
+THEN
+  RESPONSE #100
+    ForceSpell(LastSeenBy(Myself),WIZARD_BIGBYS_CRUSHING_HAND)
+    IncrementGlobal("tz_Suffocation","LOCALS",1)
+    Wait(1)
+    Continue()
+END
+
+IF
+  See([PC])
+  GlobalLT("tz_ShatterBones","LOCALS",1)
+THEN
+  RESPONSE #100
+    // ForceSpell(LastSeenBy(Myself),KAISHAS_CHANGE) // Fixed: KAISHAS_CHANGE=2925=WIZARD_COMET
+    ForceSpell(LastSeenBy(Myself),WIZARD_COMET)
+    IncrementGlobal("tz_ShatterBones","LOCALS",1)
+    Wait(1)
+    Continue()
+END
+
+IF
+  See([PC])
+  !Range(LastSeenBy(Myself),19)
+  GlobalLT("tz_StinkingCloud","LOCALS",1)
+THEN
+  RESPONSE #100
+    ForceSpell(LastSeenBy(Myself),WIZARD_STINKING_CLOUD)
+    IncrementGlobal("tz_StinkingCloud","LOCALS",1)
+    Wait(1)
+    Continue()
+END
+
+IF
+  See([PC])
+  GlobalLT("tz_Chaos","LOCALS",2)
+THEN
+  RESPONSE #100
+    ForceSpell(LastSeenBy(Myself),WIZARD_CHAOS)
+    IncrementGlobal("tz_Chaos","LOCALS",1)
+    Wait(1)
+    Continue()
+END
+
+IF
+  See([PC])
+  GlobalLT("tz_ChainLightning","LOCALS",1)
+THEN
+  RESPONSE #100
+    ForceSpell(LastSeenBy(Myself),WIZARD_CHAIN_LIGHTNING)
+    IncrementGlobal("tz_ChainLightning","LOCALS",1)
+    Wait(1)
+    Continue()
+END
+
+IF
+  See([PC])
+  GlobalLT("tz_WyvernCall","LOCALS",1)
+THEN
+  RESPONSE #100
+    ForceSpell(LastSeenBy(Myself),WIZARD_WYVERN_CALL)
+    IncrementGlobal("tz_WyvernCall","LOCALS",1)
+    Wait(1)
+    Continue()
+END
+
+IF
+  See([PC])
+  GlobalLT("tz_GreaterMalison","LOCALS",2)
+THEN
+  RESPONSE #100
+    ForceSpell(LastSeenBy(Myself),WIZARD_GREATER_MALISON)
+    IncrementGlobal("tz_GreaterMalison","LOCALS",1)
+    Wait(1)
+    Continue()
+END
+
+IF
+  See([PC])
+  GlobalLT("tz_FleshToStone","LOCALS",1)
+THEN
+  RESPONSE #100
+    ForceSpell(LastSeenBy(Myself),WIZARD_FLESH_TO_STONE)
+    IncrementGlobal("tz_FleshToStone","LOCALS",1)
+    Wait(1)
+    Continue()
+END
+
+IF
+  See([PC])
+  GlobalLT("tz_PrismaticSpray","LOCALS",1)
+THEN
+  RESPONSE #100
+    ForceSpell(LastSeenBy(Myself),WIZARD_PRISMATIC_SPRAY)
+    IncrementGlobal("tz_PrismaticSpray","LOCALS",1)
+    Wait(1)
+    Continue()
+END
+
+IF
+  See([PC])
+  GlobalLT("tz_Maze","LOCALS",3)
+THEN
+  RESPONSE #100
+    ForceSpell(LastSeenBy(Myself),WIZARD_MAZE)
+    IncrementGlobal("tz_Maze","LOCALS",1)
+    Wait(1)
+    Continue()
+END
+

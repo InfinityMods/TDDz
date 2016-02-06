@@ -1,0 +1,266 @@
+IF
+  Global("tz_fight","LOCALS",1)
+  Global("tz_in_body","LOCALS",0)
+  !Detect(Player2)
+  !Detect(Player3)
+  !Detect(Player4)
+  !Detect(Player5)
+  !Detect(Player6)
+THEN
+  RESPONSE #100
+    DestroyItem("MINHP1")
+    SetGlobal("tz_in_body","LOCALS",1)
+END
+
+IF
+  Global("tz_in_body","LOCALS",0)
+  Global("tz_P2in_body","LOCALS",0)
+  Global("tz_fight","LOCALS",1)
+  HPGT(Player2,0)
+  Detect(Player2)
+THEN
+  RESPONSE #100
+    UseItem("DDrave02",Player2)
+    ChangeEnemyAlly(Player2,ENEMY)
+    SetGlobal("tz_P2in_body","LOCALS",1)
+    CreateVisualEffectObject("SPDEATH3",Myself)
+    SetGlobal("tz_in_body","LOCALS",1)
+  RESPONSE #100
+    Continue()
+END
+
+IF
+  Global("tz_in_body","LOCALS",0)
+  Global("tz_P3in_body","LOCALS",0)
+  Global("tz_fight","LOCALS",1)
+  HPGT(Player3,0)
+  Detect(Player3)
+THEN
+  RESPONSE #100
+    UseItem("DDrave02",Player3)
+    ChangeEnemyAlly(Player3,ENEMY)
+    SetGlobal("tz_P3in_body","LOCALS",1)
+    CreateVisualEffectObject("SPDEATH3",Myself)
+    SetGlobal("tz_in_body","LOCALS",1)
+  RESPONSE #100
+    Continue()
+END
+
+IF
+  Global("tz_in_body","LOCALS",0)
+  Global("tz_P4in_body","LOCALS",0)
+  Global("tz_fight","LOCALS",1)
+  HPGT(Player4,0)
+  Detect(Player4)
+THEN
+  RESPONSE #100
+    UseItem("DDrave02",Player4)
+    ChangeEnemyAlly(Player4,ENEMY)
+    SetGlobal("tz_P4in_body","LOCALS",1)
+    CreateVisualEffectObject("SPDEATH3",Myself)
+    SetGlobal("tz_in_body","LOCALS",1)
+  RESPONSE #100
+    Continue()
+END
+
+IF
+  Global("tz_in_body","LOCALS",0)
+  Global("tz_P5in_body","LOCALS",0)
+  Global("tz_fight","LOCALS",1)
+  HPGT(Player5,0)
+  Detect(Player5)
+THEN
+  RESPONSE #100
+    UseItem("DDrave02",Player5)
+    ChangeEnemyAlly(Player5,ENEMY)
+    SetGlobal("tz_P5in_body","LOCALS",1)
+    CreateVisualEffectObject("SPDEATH3",Myself)
+    SetGlobal("tz_in_body","LOCALS",1)
+  RESPONSE #100
+    Continue()
+END
+
+IF
+  Global("tz_in_body","LOCALS",0)
+  Global("tz_P6in_body","LOCALS",0)
+  Global("tz_fight","LOCALS",1)
+  HPGT(Player6,0)
+  Detect(Player6)
+THEN
+  RESPONSE #100
+    UseItem("DDrave02",Player6)
+    ChangeEnemyAlly(Player6,ENEMY)
+    SetGlobal("tz_P6in_body","LOCALS",1)
+    CreateVisualEffectObject("SPDEATH3",Myself)
+    SetGlobal("tz_in_body","LOCALS",1)
+  RESPONSE #100
+    Continue()
+END
+
+IF
+  Global("tz_P2in_body","LOCALS",1)
+  OR(2)
+    !Exists(Player2)
+    HPLT(Player2,2)
+THEN
+  RESPONSE #100
+    ActionOverride(Player2,DestroyItem("DDRAVE05"))
+    Kill(Player2)
+    ChangeEnemyAlly(Player2,PC)
+    SetGlobal("tz_P2in_body","LOCALS",0)
+    UseItem("DDrave04",Myself)
+    DestroyItem("DDRAVE03")
+    DestroyItem("MINHP1")
+    CreateVisualEffectObject("SPDEATH3",Player2)
+    SetGlobalTimer("tz_repossess","LOCALS",15)
+END
+
+IF
+  Global("tz_P3in_body","LOCALS",1)
+  OR(2)
+    !Exists(Player3)
+    HPLT(Player3,2)
+THEN
+  RESPONSE #100
+    ActionOverride(Player3,DestroyItem("DDRAVE05"))
+    Kill(Player3)
+    ChangeEnemyAlly(Player3,PC)
+    SetGlobal("tz_P3in_body","LOCALS",0)
+    UseItem("DDrave04",Myself)
+    DestroyItem("DDRAVE03")
+    DestroyItem("MINHP1")
+    CreateVisualEffectObject("SPDEATH3",Player3)
+    SetGlobalTimer("tz_repossess","LOCALS",15)
+END
+
+IF
+  Global("tz_P4in_body","LOCALS",1)
+  OR(2)
+    !Exists(Player4)
+    HPLT(Player4,2)
+THEN
+  RESPONSE #100
+    ActionOverride(Player4,DestroyItem("DDRAVE05"))
+    Kill(Player4)
+    ChangeEnemyAlly(Player4,PC)
+    SetGlobal("tz_P4in_body","LOCALS",0)
+    UseItem("DDrave04",Myself)
+    DestroyItem("DDRAVE03")
+    DestroyItem("MINHP1")
+    CreateVisualEffectObject("SPDEATH3",Player4)
+    SetGlobalTimer("tz_repossess","LOCALS",15)
+END
+
+IF
+  Global("tz_P5in_body","LOCALS",1)
+  OR(2)
+    !Exists(Player5)
+    HPLT(Player5,2)
+THEN
+  RESPONSE #100
+    ActionOverride(Player5,DestroyItem("DDRAVE05"))
+    Kill(Player5)
+    ChangeEnemyAlly(Player5,PC)
+    SetGlobal("tz_P5in_body","LOCALS",0)
+    UseItem("DDrave04",Myself)
+    DestroyItem("DDRAVE03")
+    DestroyItem("MINHP1")
+    CreateVisualEffectObject("SPDEATH3",Player5)
+    SetGlobalTimer("tz_repossess","LOCALS",15)
+END
+
+IF
+  Global("tz_P6in_body","LOCALS",1)
+  OR(2)
+    !Exists(Player6)
+    HPLT(Player6,2)
+THEN
+  RESPONSE #100
+    ActionOverride(Player6,DestroyItem("DDRAVE05"))
+    Kill(Player6)
+    ChangeEnemyAlly(Player6,PC)
+    SetGlobal("tz_P6in_body","LOCALS",0)
+    UseItem("DDrave04",Myself)
+    DestroyItem("DDRAVE03")
+    DestroyItem("MINHP1")
+    CreateVisualEffectObject("SPDEATH3",Player6)
+    SetGlobalTimer("tz_repossess","LOCALS",15)
+END
+
+IF
+  Global("tz_fight","LOCALS",1)
+  Global("tz_P2in_body","LOCALS",1)
+THEN
+  RESPONSE #100
+    ActionOverride(Player2,Attack([PC]))
+    Wait(5)
+END
+
+IF
+  Global("tz_fight","LOCALS",1)
+  Global("tz_P3in_body","LOCALS",1)
+THEN
+  RESPONSE #100
+    ActionOverride(Player3,Attack([PC]))
+    Wait(5)
+END
+
+IF
+  Global("tz_fight","LOCALS",1)
+  Global("tz_P4in_body","LOCALS",1)
+THEN
+  RESPONSE #100
+    ActionOverride(Player4,Attack([PC]))
+    Wait(5)
+END
+
+IF
+  Global("tz_fight","LOCALS",1)
+  Global("tz_P5in_body","LOCALS",1)
+THEN
+  RESPONSE #100
+    ActionOverride(Player5,Attack([PC]))
+    Wait(5)
+END
+
+IF
+  Global("tz_fight","LOCALS",1)
+  Global("tz_P6in_body","LOCALS",1)
+THEN
+  RESPONSE #100
+    ActionOverride(Player6,Attack([PC]))
+    Wait(5)
+END
+
+IF
+  OR(5)
+    HPGT(Player2,0)
+    HPGT(Player3,0)
+    HPGT(Player4,0)
+    HPGT(Player5,0)
+    HPGT(Player6,0)
+  !GlobalTimerNotExpired("tz_repossess","LOCALS")
+  Global("tz_P2in_body","LOCALS",0)
+  Global("tz_P3in_body","LOCALS",0)
+  Global("tz_P4in_body","LOCALS",0)
+  Global("tz_P5in_body","LOCALS",0)
+  Global("tz_P6in_body","LOCALS",0)
+  Global("tz_in_body","LOCALS",1)
+THEN
+  RESPONSE #100
+    SetGlobal("tz_in_body","LOCALS",0)
+END
+
+IF
+  Global("tz_fight","LOCALS",1)
+  Global("tz_P2in_body","LOCALS",0)
+  Global("tz_P3in_body","LOCALS",0)
+  Global("tz_P4in_body","LOCALS",0)
+  Global("tz_P5in_body","LOCALS",0)
+  Global("tz_P6in_body","LOCALS",0)
+  Global("tz_in_body","LOCALS",1)
+THEN
+  RESPONSE #100
+    AttackReevaluate(NearestEnemyOf(Myself),15)
+END
+

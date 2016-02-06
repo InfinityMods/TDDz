@@ -1,0 +1,21 @@
+IF
+  OnCreation()
+THEN
+  RESPONSE #100
+    Explore()
+END
+
+IF
+  Global("tz_TDD_Complete","GLOBAL",0)
+THEN
+  RESPONSE #100
+    TriggerActivation("DOOR0153",FALSE)
+END
+
+IF
+  Global("tz_TDD_Complete","GLOBAL",1)
+THEN
+  RESPONSE #100
+    TriggerActivation("DOOR0153",TRUE)
+END
+

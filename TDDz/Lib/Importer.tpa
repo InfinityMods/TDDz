@@ -26,7 +26,7 @@ BEGIN
 	
 	LAM FetchTranslationsBeforeAnySAYandCOMPILE
 	INCLUDE ~%MOD_FOLDER%/Lib/Translations.tpa~ LAM UTF8Chores
-	LAM ImportSPL_FromTDD
+	//LAM ImportSPL_FromTDD
 	LAM ImportCRE_FromTDD
 	LAM ImportITM_FromTDD
 	LAM ImportSTO_FromTDD
@@ -36,6 +36,7 @@ BEGIN
 		BAM	=> override
 		BMP	=> override
 		ITM	=> override
+		STO => override
 		MOS => override
 		BAF => ~%MOD_FOLDER%/TEMP/%COMP_FOLDER%~
 		D 	=> ~%MOD_FOLDER%/TEMP/%COMP_FOLDER%~
@@ -188,30 +189,30 @@ END
 
 
 //=============================================================================
-DEFINE_ACTION_MACRO ImportSPL_FromTDD
-BEGIN		
-	ACTION_IF FILE_EXISTS ~%MOD_FOLDER%/%COMP_FOLDER%/SpellsContract.2da~ BEGIN
-		COPY ~%MOD_FOLDER%/%COMP_FOLDER%/SpellsContract.2da~ ~%MOD_FOLDER%/TEMP/%COMP_FOLDER%/SpellsContract.2da~
-			COUNT_2DA_ROWS 5 count
-			WHILE (count > 1) BEGIN
-				READ_2DA_ENTRY (count -1) 0 5 resname
-				READ_2DA_ENTRY (count -1) 1 5 name1
-				READ_2DA_ENTRY (count -1) 2 5 name2
-				READ_2DA_ENTRY (count -1) 3 5 unidentifiedDesc
-				READ_2DA_ENTRY (count -1) 4 5 desc
-				SET count = count -1
-					
-				INNER_ACTION BEGIN
-					COPY ~TDD/SPL/%resname%.SPL~ ~override~
-						PATCH_IF IS_AN_INT name1 BEGIN SET strref = RESOLVE_STR_REF ((AT name1)) WRITE_LONG NAME1 %strref% END
-						PATCH_IF IS_AN_INT name2 BEGIN SET strref = RESOLVE_STR_REF ((AT name2)) WRITE_LONG NAME2 %strref% END
-						PATCH_IF IS_AN_INT unidentifiedDesc BEGIN SET strref = RESOLVE_STR_REF ((AT unidentifiedDesc)) WRITE_LONG UNIDENTIFIED_DESC %strref% END
-						PATCH_IF IS_AN_INT desc BEGIN SET strref = RESOLVE_STR_REF ((AT desc)) WRITE_LONG DESC %strref% END
-				END
-			END
-		BUT_ONLY
-	END	
-END
+//DEFINE_ACTION_MACRO ImportSPL_FromTDD
+//BEGIN		
+//	ACTION_IF FILE_EXISTS ~%MOD_FOLDER%/%COMP_FOLDER%/SpellsContract.2da~ BEGIN
+//		COPY ~%MOD_FOLDER%/%COMP_FOLDER%/SpellsContract.2da~ ~%MOD_FOLDER%/TEMP/%COMP_FOLDER%/SpellsContract.2da~
+//			COUNT_2DA_ROWS 5 count
+//			WHILE (count > 1) BEGIN
+//				READ_2DA_ENTRY (count -1) 0 5 resname
+//				READ_2DA_ENTRY (count -1) 1 5 name1
+//				READ_2DA_ENTRY (count -1) 2 5 name2
+//				READ_2DA_ENTRY (count -1) 3 5 unidentifiedDesc
+//				READ_2DA_ENTRY (count -1) 4 5 desc
+//				SET count = count -1
+//					
+//				INNER_ACTION BEGIN
+//					COPY ~TDD/SPL/%resname%.SPL~ ~override~
+//						PATCH_IF IS_AN_INT name1 BEGIN SET strref = RESOLVE_STR_REF ((AT name1)) WRITE_LONG NAME1 %strref% END
+//						PATCH_IF IS_AN_INT name2 BEGIN SET strref = RESOLVE_STR_REF ((AT name2)) WRITE_LONG NAME2 %strref% END
+//						PATCH_IF IS_AN_INT unidentifiedDesc BEGIN SET strref = RESOLVE_STR_REF ((AT unidentifiedDesc)) WRITE_LONG UNIDENTIFIED_DESC %strref% END
+//						PATCH_IF IS_AN_INT desc BEGIN SET strref = RESOLVE_STR_REF ((AT desc)) WRITE_LONG DESC %strref% END
+//				END
+//			END
+//		BUT_ONLY
+//	END	
+//END
 
 
 //=============================================================================

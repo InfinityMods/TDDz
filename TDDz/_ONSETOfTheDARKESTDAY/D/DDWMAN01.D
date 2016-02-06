@@ -1,0 +1,22 @@
+BEGIN ~DDWMAN01~
+
+IF ~RandomNum(3,1)~ THEN BEGIN 0
+  SAY @0
+  IF ~~ THEN EXIT
+END
+
+IF ~RandomNum(3,2)~ THEN BEGIN 1
+  SAY @1
+  IF ~~ THEN EXIT
+END
+
+IF ~RandomNum(3,3)~ THEN BEGIN 2
+  SAY @2
+  IF ~~ THEN REPLY @3 GOTO 3
+  IF ~~ THEN REPLY @4 EXIT
+END
+
+IF ~~ THEN BEGIN 3 // from: 2.0
+  SAY @5
+  IF ~~ THEN EXIT
+END

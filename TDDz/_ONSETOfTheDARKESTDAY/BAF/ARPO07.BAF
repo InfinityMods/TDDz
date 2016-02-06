@@ -1,0 +1,30 @@
+IF
+  Global("tz_spawn","ARPO07",0)
+THEN
+  RESPONSE #100
+    SetGlobal("tz_spawn","ARPO07",1)
+    CreateCreatureImpassable("DDsick01",[232.391],7)
+    CreateCreatureImpassable("DDsick02",[951.899],13)
+    CreateCreature("DDsheina",[307.378],4)
+END
+
+IF
+  Global("tz_containerspawn","ARPO07",0)
+THEN
+  RESPONSE #100
+    SetGlobal("tz_containerspawn","ARPO07",1)
+    ActionOverride("Container2",CreateItem("AMUL08",0,0,0))
+    ActionOverride("Container2",CreateItem("AMUL15",0,0,0))
+    ActionOverride("Container5",CreateItem("MISC72",0,0,0))
+  RESPONSE #100
+    SetGlobal("tz_containerspawn","ARPO07",1)
+    ActionOverride("Container5",CreateItem("MISC07",25,0,0))
+    ActionOverride("Container3",CreateItem("AMUL15",0,0,0))
+    ActionOverride("Container4",CreateItem("MISC73",0,0,0))
+  RESPONSE #100
+    SetGlobal("tz_containerspawn","ARPO07",1)
+    ActionOverride("Container3",CreateItem("WAND09",10,0,0))
+    ActionOverride("Container7",CreateItem("MISC07",19,0,0))
+    ActionOverride("Container1",CreateItem("MISC75",0,0,0))
+END
+

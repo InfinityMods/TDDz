@@ -1,0 +1,9 @@
+@0    = ~Well done <CHARNAME>, you have defeated the ambitions of none other than the god Cyric himself.~
+@1    = ~Don't worry about the people of the Village. You eliminated the source of their illness. They will get better soon even if they don't know it yet.~
+@2    = ~Good bye Potencius, goodbye Minto, see you around.~
+@3    = ~Come to see me when you desire to move on toward your destiny in the lands to the south. Allow me to mark the location of my home on your map.
+
+Farewell <CHARNAME> and company.~
+@4    = ~I can send you into the lands of the south if that is what you wish.~
+@5    = ~That is my wish.~
+@6    = ~Not at this time, thank you.~

@@ -1,0 +1,98 @@
+BEGIN ~DDPLOTA5~
+
+IF ~NumTimesTalkedTo(0)~ THEN BEGIN 0
+  SAY @0
+  IF ~~ THEN REPLY @1 GOTO 1
+  IF ~~ THEN REPLY @2 GOTO 1
+  IF ~~ THEN REPLY @3 GOTO 9
+  IF ~~ THEN REPLY @4 GOTO 10
+END
+
+IF ~~ THEN BEGIN 1 // from: 0.1 0.0
+  SAY @5
+  IF ~~ THEN REPLY @6 GOTO 2
+  IF ~~ THEN REPLY @7 GOTO 8
+  IF ~~ THEN REPLY @8 GOTO 2
+END
+
+IF ~~ THEN BEGIN 2 // from: 9.2 9.0 1.2 1.0
+  SAY @9
+  IF ~~ THEN GOTO 3
+END
+
+IF ~~ THEN BEGIN 3 // from: 11.0 8.0 2.0
+  SAY @10
+  IF ~~ THEN GOTO 4
+END
+
+IF ~~ THEN BEGIN 4 // from: 3.0
+  SAY @11
+  IF ~~ THEN GOTO 5
+END
+
+IF ~~ THEN BEGIN 5 // from: 4.0
+  SAY @12
+  IF ~~ THEN REPLY @13 GOTO 6
+  IF ~~ THEN REPLY @14 GOTO 7
+END
+
+IF ~~ THEN BEGIN 6 // from: 5.0
+  SAY @15
+  IF ~~ THEN DO ~SetGlobal("tz_GameActive","ARPO28",1)~ EXIT
+END
+
+IF ~~ THEN BEGIN 7 // from: 5.1
+  SAY @16
+  IF ~~ THEN DO ~SetGlobal("tz_GameActive","ARPO28",1)~ EXIT
+END
+
+IF ~~ THEN BEGIN 8 // from: 9.1 1.1
+  SAY @17
+  IF ~~ THEN GOTO 3
+END
+
+IF ~~ THEN BEGIN 9 // from: 0.2
+  SAY @18
+  IF ~~ THEN REPLY @6 GOTO 2
+  IF ~~ THEN REPLY @7 GOTO 8
+  IF ~~ THEN REPLY @8 GOTO 2
+END
+
+IF ~~ THEN BEGIN 10 // from: 0.3
+  SAY @19
+  IF ~~ THEN GOTO 11
+END
+
+IF ~~ THEN BEGIN 11 // from: 10.0
+  SAY @20
+  IF ~~ THEN GOTO 3
+END
+
+IF ~Global("tz_spawnDDGAME03","ARPO28",1)~ THEN BEGIN 12
+  SAY @21
+  IF ~~ THEN GOTO 13
+END
+
+IF ~~ THEN BEGIN 13 // from: 12.0
+  SAY @22
+  IF ~~ THEN DO ~SetGlobal("tz_spawnDDGAME03","ARPO28",2)
+CreateVisualEffectObject("SPDIMNDR",Myself)
+Wait(1)
+JumpToPoint([2202.810])~ EXIT
+END
+
+IF ~Global("tz_spawnDDGAME03","ARPO28",2)~ THEN BEGIN 14
+  SAY @23
+  IF ~~ THEN GOTO 15
+END
+
+IF ~~ THEN BEGIN 15 // from: 14.0
+  SAY @24
+  IF ~~ THEN REPLY @25 GOTO 16
+  IF ~~ THEN REPLY @26 GOTO 16
+END
+
+IF ~~ THEN BEGIN 16 // from: 15.1 15.0
+  SAY @27
+  IF ~~ THEN DO ~Enemy()~ EXIT
+END

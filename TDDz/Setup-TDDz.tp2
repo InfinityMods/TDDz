@@ -62,13 +62,14 @@ LANGUAGE 	~Spanish(Clan REO)~
 			
 
 // Notes:
+// - INITDLG.d @override!
 // - DDTROLL1.BAF makes trolls killable
 // - Is GTRSK002 useless? ex: LeaveAreaLUA("dd9007","GTRSK002",[381.331],12)
 // - Used by script: SCRX41.ITM-Rary's Mnemonic Enhancer @MADEEL.sto, DD4003.are@1380, DD4003.baf
 
 
-// TODO BLOOD.itm @BGCTBOSS.CRE, @BGSHBOSS.CRE, @DD8001D.ARE
-// TODO DDPOTNP1.itm @AR0402.baf
+// TODO Force add empty area.bcs
+
 
 BEGIN @901000 
 	REQUIRE_PREDICATE GAME_IS ~tob bg2ee eet~ ~~	
@@ -105,14 +106,23 @@ BEGIN @901003
 	INCLUDE ~%MOD_FOLDER%/Lib/Helpers.tpa~ 
 		LAF DeleteTempFolder STR_VAR aComp = ~PURSKAL~ END
 
-//BEGIN @901004
-//	REQUIRE_PREDICATE GAME_IS ~tob bg2ee eet~ ~~	
-//	REQUIRE_COMPONENT "setup-TDDz.tp2" "0" "You must have TDD - Core installed"		
-//		
-//	INCLUDE ~%MOD_FOLDER%/Lib/Importer.tpa~ 
-//		LAF ImportComponent STR_VAR aComp = ~RIATAVIN~ END
-//	INCLUDE ~%MOD_FOLDER%/Lib/Helpers.tpa~ 
-//		LAF DeleteTempFolder STR_VAR aComp = ~RIATAVIN~ END
+BEGIN @901004
+	REQUIRE_PREDICATE GAME_IS ~tob bg2ee eet~ ~~	
+	REQUIRE_COMPONENT "setup-TDDz.tp2" "0" "You must have TDD - Core installed"		
+		
+	INCLUDE ~%MOD_FOLDER%/Lib/Importer.tpa~ 
+		LAF ImportComponent STR_VAR aComp = ~RIATAVIN~ END
+	INCLUDE ~%MOD_FOLDER%/Lib/Helpers.tpa~ 
+		LAF DeleteTempFolder STR_VAR aComp = ~RIATAVIN~ END
+		
+BEGIN @901005
+	REQUIRE_PREDICATE GAME_IS ~tob bg2ee eet~ ~~	
+	REQUIRE_COMPONENT "setup-TDDz.tp2" "0" "You must have TDD - Core installed"		
+		
+	INCLUDE ~%MOD_FOLDER%/Lib/Importer.tpa~ 
+		LAF ImportComponent STR_VAR aComp = ~OnsetOfTheDarkestDay~ END
+	INCLUDE ~%MOD_FOLDER%/Lib/Helpers.tpa~ 
+		LAF DeleteTempFolder STR_VAR aComp = ~OnsetOfTheDarkestDay~ END
 	
 //BEGIN @901010
 //	REQUIRE_PREDICATE GAME_IS ~tob bg2ee eet~ ~~	

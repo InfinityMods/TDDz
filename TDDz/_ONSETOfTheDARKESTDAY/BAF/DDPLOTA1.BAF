@@ -1,0 +1,45 @@
+IF
+  !Range([PC],7)
+  OnCreation()
+THEN
+  RESPONSE #100
+    SetGlobal("tz_DD_KEEP_PLOT","GLOBAL",2)
+    MoveToObject([PC])
+END
+
+IF
+  Range([PC],7)
+  Global("tz_destroyself","LOCALS",0)
+  Global("tz_fight","LOCALS",0)
+THEN
+  RESPONSE #100
+    StartDialogue("DDPLOTA1",[PC])
+END
+
+IF
+  See([GOODCUTOFF])
+  Global("tz_fight","LOCALS",1)
+THEN
+  RESPONSE #100
+    Enemy()
+    RunAwayFrom([GOODCUTOFF],200)
+END
+
+IF
+  HitBy([ANYONE],CRUSHING)
+  Global("tz_fight","LOCALS",1)
+THEN
+  RESPONSE #100
+    Enemy()
+    RunAwayFrom(LastAttackerOf(Myself),200)
+END
+
+IF
+  Global("tz_destroyself","LOCALS",1)
+THEN
+  RESPONSE #100
+    DropItem("DDPLOTA1",[-1.-1])
+    Wait(1)
+    EscapeAreaDestroy(25)
+END
+

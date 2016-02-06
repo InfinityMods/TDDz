@@ -1,0 +1,12 @@
+IF
+  Global("tz_DD_FreeSoldiers","GLOBAL",1)
+THEN
+  RESPONSE #100
+    PlayDead(15)
+    Wait(2)
+    CreateVisualEffectObject("SPIMPFR",Myself)
+    ApplyDamage(Myself,3,FIRE)
+    SmallWait(7)
+    DestroySelf()
+END
+

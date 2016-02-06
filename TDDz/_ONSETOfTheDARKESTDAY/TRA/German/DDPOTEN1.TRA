@@ -1,0 +1,82 @@
+@0    = ~Willkommen im Gasthaus zum Sonnensee... Braucht Ihr ein Zimmer, oder vielleicht Ausrüstung?~
+@1    = ~Zeigt mir Eure Dienstleistungen.~
+@2    = ~Nein, nichts im Moment.~
+@3    = ~Irgend so ein komischer Typ da draussen sagte mir, dass Ihr mich sprechen wollt.~
+@4    = ~Euer Sendbote teilte mir mit, dass Ihr mir etwas zu sagen hättet?~
+@5    = ~Was ist das für ein komisches Gasthaus? Das liegt ja fast im Nirgendwo!~
+@6    = ~Ah ja, mein Sendbote. Dann müsst Ihr <CHARNAME> sein. Ich habe überall im Land von Euren Taten gehört, und ich möchte Euch bitten, mir einen Gefallen zu tun.~
+@7    = ~Ja, ja, fasst Euch kurz. Was ist das für ein Gefallen?~
+
+@8    = ~Nein, ich bin nicht daran interessiert irgendwelche Gefallen zu tun.~
+
+@9    = ~Die verhüllten Magier sehen es überhaupt nicht gerne, wenn jemand wie ich ihre Reihen verlässt und seine eigenen Ziele verfolgt. Das wird als Verrat angesehen.~
+
+@10   = ~Sie haben unzählige Söldner angeheuert, die mich verfolgen und töten sollen. Deswegen habe ich einen Bannzauber auf dieses Gasthaus gelegt.~
+@11   = ~Wegen der seltsamen Natur dieses Zaubers kann jeder, der sich im Gasthaus befand, während dieser Zauber ausgesprochen wurde, es nicht mehr verlassen, weil er sonst sterben würde. Deswegen kommt Ihr ins Spiel.~
+@12   = ~Ich würde Euch bitten, das Gasthaus zu verlassen und diese Söldner entweder zu fangen, oder zu beseitigen. Ich weiss, dass sie nicht mehr weit sein können, aber sie haben noch nicht herausbekommen, was es mit dem See auf sich hat.~
+
+@13   = ~Wie sieht es mit einer Belohnung aus?~
+@14   = ~Könntet Ihr das wiederholen?~
+@15   = ~Sicher werde ich das tun. Erlaubt mir, dass ich mich gleich um sie kümmere.~
+@16   = ~Nein, ich glaube nicht. Ich möchte nichts mit den verhüllten Magiern zu tun haben.~
+@17   = ~Seid Ihr Euch ganz sicher? Ihr hättet es nicht direkt mit den verhüllten Magiern zu tun, nur mit angeheuerten Söldnern...~
+@18   = ~Ah... Ihr habt noch gar nichts über eine Belohnung gesagt! Zählt auf mich.~
+
+@19   = ~Söldner können genauso übel wie Magier sein. Das ist nichts für mich.~
+@20   = ~Ich habe meine Meinung geändert. Eine Belohnung ist nicht notwendig, aber ich werde diese Söldner gleich beseitigen.~
+@21   = ~Ja, ja... vorausgesetzt, der Auftrag ist erledigt. Ich habe da eine wunderschöne, magische Waffe, die Ihr ohne Zweifel sehr nützlich finden werdet. Jetzt geht und erledigt Euren Auftrag.~
+@22   = ~Natürlich... obwohl ich glaube, dass Ihr mir vorhin nicht richtig zugehört habt.~
+
+@23   = ~Wundervoll... sprecht wieder mit mir, wenn Ihr Euch der Söldner angenommen habt.~
+@24   = ~Beherrscht Euch. Ich werde hier sein, falls Ihr es Euch anders überlegen solltet. Ich kann ja schliesslich nicht weg von hier.~
+
+@25   = ~Ich schätze, das könnte man so sagen... Aber dieses Gasthaus ist eigentlich ein Treffpunkt für viele Abenteurer, die kein Zuhause haben.~
+@26   = ~Unglücklicherweise kommen hier auch Streuner herein (habt Ihr die beiden Gestalten im ersten Stock gesehen? Wirklich traurig). Aber deswegen sind wir ja von allen anderen abgeschnitten. Für ein bisschen Sicherheit und Schutz.~
+
+@27   = ~Ich würde vielleicht auch hierher passen. Ich habe nicht viel, was ich aufgeben würde.~
+@28   = ~Ich weiss warum jeder hier so unheimlich ist... sie sind alle verrückt! Das ist es! Und Ihr seid ebenfalls verrückt! WAHA!!! Wir sind ein Haufen Irrer!~
+@29   = ~Nun, lasst mich dennoch sehen, was Ihr für Dienste anzubieten habt.~
+
+@30   = ~Ich war gerade dabei, zu gehen.~
+
+@31   = ~(Die Leute hier sollte man um etwas Geld erleichtern...)~
+@32   = ~So, dann seid Ihr also auch ein Magier, Potencius?~
+@33   = ~Ihr seid ein böser Magier! Bereitet Euch vor, meinen rechtschaffenen Zorn zu spüren!~
+@34   = ~Was war das?~
+@35   = ~Oh... nichts.~
+@36   = ~Ich sagte DIE LEUTE HIER SOLLTE MAN UM ETWAS GELD ERLEICHTERN!!! Ist das so schwer zu verstehen?~
+
+@37   = ~Gut. Tun wir so, als wäre nichts geschehen.~
+
+@38   = ~Nein, ich habe Euch das erste Mal korrekt verstanden. Ich rate Euch, Eure Finger bei Euch zu lassen. Ich sehe alles und weiss alles, was in meinem Gasthaus geschieht... obwohl einiges davon ziemlich abstossend ist. Wenn ich Euch dabei erwischen sollte, dass ihr meine Gäste beklaut, werdet Ihr rausgeworfen und mit Knüppeln geschlagen.~
+
+@39   = ~In der Tat. Ich habe die Magie über 20 Jahre lang studiert und habe schon mehr Wissen erlangt, als es viele andere Magier je haben werden.~
+
+@40   = ~Wirklich? Was ist Eure Spezialität?~
+@41   = ~Ich glaube, dass ich es mit Euch aufnehmen könnte. Niemand ist mächtiger als ich!~
+@42   = ~Klasse. Potencius zeigt es ihnen!~
+
+@43   = ~Ich manipuliere das Wetter, die Zeit, und habe mich mit einigen der dunklen Künste befasst... Wie Besessenheit und dunkle Beschwörungen. Doch diese Fragerei führt zu nichts. Wenn Ihr etwas kaufen wollt, dann sagt es mir. Wenn nicht, dann hinfort mit Euch.~
+@44   = ~Ja, das werde ich sicherlich tun.~
+
+@45   = ~Vielleicht... aber ich bezweifle es. Ich glaube, Ihr seid der einzige hier, der verrückt ist.~
+@46   = ~Damit wäre ich nicht einverstanden. Ich bin mir sicher, dass Ihr Euer "Zeug" an mir ausprobieren wollt, aber das wird in diesem Gasthaus nicht toleriert. Wenn Ihr Ärger machen solltet, werden Euch die Konsquenzen nicht gefallen.~
+
+@47   = ~Rechtschaffene Reinigungen sind hier drin nicht erlaubt. Steht sogar an der Tür. wenn jemand eine rechtschaffene Reinigung versucht, dann werde ich sicherstellen, dass all Euer Geld "gereinigt" wird und Ihr aus dem Gasthaus geworfen werdet. Verstanden?~
+
+@48   = ~Ihr seid zurück. Habt Ihr die Söldner abwimmeln können? Ich möchte mein Gasthaus schnellstmöglich wieder öffnen.~
+
+@49   = ~Ja, ich habe hier einen Brief, den ich dem Anführer der Gruppe abnehmen konnte. Er ist von einem der verhüllten Magier geschrieben und unterzeichnet.~
+
+@50   = ~Nein, noch nicht. Aber ich habe ihnen eine Falle gestellt. Sie warten draussen. Ich würde gerne die Ehre haben, sie mit Euch zusammen zu vernichten.~
+@51   = ~Nein. Ich arbeite noch daran.~
+@52   = ~Tatsächlich? Ihr seid ja wirklich ziemlich schlau. Die Lage steht zu unseren Gunsten, wenn wir sie unvorbereitet auf unserem Territorium erwischen.~
+
+@53   = ~Jetzt entschuldigt mich für einen Moment, denn ich muss den Bannzauber aufheben, der auf dem Gasthaus liegt.~
+@54   = ~Sehr gut! Kommt zurück, wenn Ihr damit fertig seid.~
+@55   = ~Die Bannzauber wurden entfernt. Sagt den Söldnern, dass sie reinkommen können, dann werden wir ihnen zeigen, wie man einen Kampf gewinnt.~
+@56   = ~Eure Arbeit hier weiss ich sehr zu schätzen, <CHARNAME>, und ich bin Euch zu Dank verpflichtet. Hier ist die Belohnung, nach der Ihr gefragt hattet.~
+
+@57   = ~Ah, <CHARNAME>, Ihr habt fantastische Arbeit geleistet. Hier ist eine Belohnung, die Ihr wahrlich verdient.~
+
+@58   = ~Wundervoll! Ihr habt ein wahres Exempel statuiert, <CHARNAME>. Erlaubt mir, die Bannzauber von dem Gasthaus zu nehmen.~

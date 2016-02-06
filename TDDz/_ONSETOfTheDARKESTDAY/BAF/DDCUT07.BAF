@@ -1,0 +1,23 @@
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId("DDTERO01")
+    Face(12)
+    ForceSpell(Myself,DO_NOTHING)
+    Wait(3)
+    ForceSpell(Myself,DO_NOTHING)
+    Wait(3)
+    ForceSpell(Myself,DO_NOTHING)
+    CreateVisualEffectObject("SPSUMGTE",Myself)
+    CreateVisualEffectObject("SPDIMNDR",Player1)
+    CreateVisualEffectObject("SPDIMNDR",Player2)
+    CreateVisualEffectObject("SPDIMNDR",Player3)
+    CreateVisualEffectObject("SPDIMNDR",Player4)
+    CreateVisualEffectObject("SPDIMNDR",Player5)
+    CreateVisualEffectObject("SPDIMNDR",Player6)
+    DisplayStringHead(Myself,@10112)
+    Wait(4)
+    StartCutScene("DDCUT08")
+END
+

@@ -1,0 +1,227 @@
+IF
+  Global("tz_spawn","ARPO28",0)
+THEN
+  RESPONSE #100
+    SetGlobal("tz_spawn","ARPO28",1)
+    CreateCreature("DDPLOTA5",[1410.1100],1)  // ~Monster~
+    ActionOverride("Contain1",CreateItem("SCRX14",0,0,0))  // ~Heavy Fog~
+    ActionOverride("Contain1",CreateItem("SCRX23",0,0,0))  // ~Execution~
+    ActionOverride("Contain2",CreateItem("SCRX32",0,0,0))  // ~Suffocation~
+    ActionOverride("Contain2",CreateItem("SCRX39",0,0,0))  // ~Sacrificial Transfer~
+    ActionOverride("Contain2",CreateItem("MISC26",0,0,0))  // ~Iol Gem~
+    ActionOverride("Contain3",CreateItem("SCRX60",0,0,0))  // ~Mordenkainen's Phantom Shield Maidens~
+    ActionOverride("Contain4",CreateItem("SCRX72",0,0,0))  // ~Emotion: Fear~
+    ActionOverride("Contain4",CreateItem("SCRX65",0,0,0))  // ~Otiluke's Diamond Screen~
+END
+
+IF
+  Global("tz_GameActive","ARPO28",1)
+THEN
+  RESPONSE #100
+    DisplayStringHead(Player1,@10010)
+    TriggerActivation("ExitPO27",FALSE)
+    TriggerActivation("ExitPO29",FALSE)
+    SetGlobal("tz_GameActive","ARPO28",2)
+END
+
+IF
+  Global("tz_KilledRiddler","ARPO28",0)
+  Dead("DDPLOTA5")  // ~Monster~
+THEN
+  RESPONSE #100
+    SetGlobal("tz_KilledRiddler","ARPO28",1)
+    SetGlobal("tz_GameActive","ARPO28",5)
+END
+
+IF
+  Global("tz_GameActive","ARPO28",5)
+THEN
+  RESPONSE #100
+    SetGlobal("tz_GameActive","ARPO28",6)
+    TriggerActivation("ExitPO27",TRUE)
+    TriggerActivation("ExitPO29",TRUE)
+    DisplayStringHead(Player1,@10011)
+END
+
+IF
+  PartyHasItem("DDGAME01")
+  Global("tz_SpawnDDGAME01","ARPO28",0)
+THEN
+  RESPONSE #100
+    SetGlobal("tz_SpawnDDGAME01","ARPO28",1)
+    CreateCreature("DDGAME01",[878.1124],5)  // ~Man~
+    ActionOverride("Contain1",CreateItem("DDFIREPT",0,0,0))  // ~Fire Pot~
+    ActionOverride("Contain2",CreateItem("DDCOLDPT",0,0,0))  // ~Cold Pot~
+    ActionOverride("Contain3",CreateItem("DDELECPT",0,0,0))  // ~Earth Pot~
+    ActionOverride("Contain4",CreateItem("DDMAGIPT",0,0,0))  // ~Rainbow Pot~
+END
+
+IF
+  PartyHasItem("DDGAME02")  // ~Garnet Gem~
+  Global("tz_MovePlayersDDGAME02","ARPO28",0)
+THEN
+  RESPONSE #100
+    FadeToColor([20.0],0)
+    Wait(2)
+    ActionOverride(Player1,JumpToPoint([585.1038]))
+    ActionOverride(Player2,JumpToPoint([1064.706]))
+    ActionOverride(Player3,JumpToPoint([1642.1079]))
+    ActionOverride(Player4,JumpToPoint([1207.1261]))
+    ActionOverride(Player5,JumpToPoint([1436.720]))
+    ActionOverride(Player6,JumpToPoint([1373.446]))
+    SetGlobal("tz_MovePlayersDDGAME02","ARPO28",1)
+    SetGlobal("tz_RiddlesSolved","ARPO28",2)
+    Wait(1)
+    FadeFromColor([20.0],0)
+END
+
+IF
+  Global("tz_MovePlayersDDGAME02","ARPO28",1)
+  Global("tz_DDGAME02_P1Monster","ARPO28",0)
+THEN
+  RESPONSE #100
+    SetGlobal("tz_DDGAME02_P1Monster","ARPO28",1)
+    CreateCreatureObject("VAMVER01",Player1,0,0,0)  // ~Vampire~
+  RESPONSE #100
+    SetGlobal("tz_DDGAME02_P1Monster","ARPO28",1)
+    CreateCreatureObject("MINDFL01",Player1,0,0,0)  // ~Mind Flayer~
+  RESPONSE #100
+    SetGlobal("tz_DDGAME02_P1Monster","ARPO28",1)
+    CreateCreatureObject("UMBHUL01",Player1,0,0,0)  // ~Umber Hulk~
+  RESPONSE #100
+    SetGlobal("tz_DDGAME02_P1Monster","ARPO28",1)
+    CreateCreatureObject("BUGBEAR",Player1,0,0,0)  // ~Bugbear~
+END
+
+IF
+  InParty(Player2)
+  Global("tz_MovePlayersDDGAME02","ARPO28",1)
+  Global("tz_DDGAME02_P2Monster","ARPO28",0)
+THEN
+  RESPONSE #100
+    SetGlobal("tz_DDGAME02_P2Monster","ARPO28",1)
+    CreateCreatureObject("VAMVER01",Player2,0,0,0)  // ~Vampire~
+  RESPONSE #100
+    SetGlobal("tz_DDGAME02_P2Monster","ARPO28",1)
+    CreateCreatureObject("MINDFL01",Player2,0,0,0)  // ~Mind Flayer~
+  RESPONSE #100
+    SetGlobal("tz_DDGAME02_P2Monster","ARPO28",1)
+    CreateCreatureObject("UMBHUL01",Player2,0,0,0)  // ~Umber Hulk~
+  RESPONSE #100
+    SetGlobal("tz_DDGAME02_P2Monster","ARPO28",1)
+    CreateCreatureObject("BUGBEAR",Player2,0,0,0)  // ~Bugbear~
+END
+
+IF
+  InParty(Player3)
+  Global("tz_MovePlayersDDGAME02","ARPO28",1)
+  Global("tz_DDGAME02_P3Monster","ARPO28",0)
+THEN
+  RESPONSE #100
+    SetGlobal("tz_DDGAME02_P3Monster","ARPO28",1)
+    CreateCreatureObject("VAMVER01",Player3,0,0,0)  // ~Vampire~
+  RESPONSE #100
+    SetGlobal("tz_DDGAME02_P3Monster","ARPO28",1)
+    CreateCreatureObject("MINDFL01",Player3,0,0,0)  // ~Mind Flayer~
+  RESPONSE #100
+    SetGlobal("tz_DDGAME02_P3Monster","ARPO28",1)
+    CreateCreatureObject("UMBHUL01",Player3,0,0,0)  // ~Umber Hulk~
+  RESPONSE #100
+    SetGlobal("tz_DDGAME02_P3Monster","ARPO28",1)
+    CreateCreatureObject("BUGBEAR",Player3,0,0,0)  // ~Bugbear~
+END
+
+IF
+  InParty(Player4)
+  Global("tz_MovePlayersDDGAME02","ARPO28",1)
+  Global("tz_DDGAME02_P4Monster","ARPO28",0)
+THEN
+  RESPONSE #100
+    SetGlobal("tz_DDGAME02_P4Monster","ARPO28",1)
+    CreateCreatureObject("VAMVER01",Player4,0,0,0)  // ~Vampire~
+  RESPONSE #100
+    SetGlobal("tz_DDGAME02_P4Monster","ARPO28",1)
+    CreateCreatureObject("MINDFL01",Player4,0,0,0)  // ~Mind Flayer~
+  RESPONSE #100
+    SetGlobal("tz_DDGAME02_P4Monster","ARPO28",1)
+    CreateCreatureObject("UMBHUL01",Player4,0,0,0)  // ~Umber Hulk~
+  RESPONSE #100
+    SetGlobal("tz_DDGAME02_P4Monster","ARPO28",1)
+    CreateCreatureObject("BUGBEAR",Player4,0,0,0)  // ~Bugbear~
+END
+
+IF
+  InParty(Player5)
+  Global("tz_MovePlayersDDGAME02","ARPO28",1)
+  Global("tz_DDGAME02_P5Monster","ARPO28",0)
+THEN
+  RESPONSE #100
+    SetGlobal("tz_DDGAME02_P5Monster","ARPO28",1)
+    CreateCreatureObject("VAMVER01",Player5,0,0,0)  // ~Vampire~
+  RESPONSE #100
+    SetGlobal("tz_DDGAME02_P5Monster","ARPO28",1)
+    CreateCreatureObject("MINDFL01",Player5,0,0,0)  // ~Mind Flayer~
+  RESPONSE #100
+    SetGlobal("tz_DDGAME02_P5Monster","ARPO28",1)
+    CreateCreatureObject("UMBHUL01",Player5,0,0,0)  // ~Umber Hulk~
+  RESPONSE #100
+    SetGlobal("tz_DDGAME02_P5Monster","ARPO28",1)
+    CreateCreatureObject("BUGBEAR",Player5,0,0,0)  // ~Bugbear~
+END
+
+IF
+  InParty(Player6)
+  Global("tz_MovePlayersDDGAME02","ARPO28",1)
+  Global("tz_DDGAME02_P6Monster","ARPO28",0)
+THEN
+  RESPONSE #100
+    SetGlobal("tz_DDGAME02_P6Monster","ARPO28",1)
+    CreateCreatureObject("VAMVER01",Player6,0,0,0)  // ~Vampire~
+  RESPONSE #100
+    SetGlobal("tz_DDGAME02_P6Monster","ARPO28",1)
+    CreateCreatureObject("MINDFL01",Player6,0,0,0)  // ~Mind Flayer~
+  RESPONSE #100
+    SetGlobal("tz_DDGAME02_P6Monster","ARPO28",1)
+    CreateCreatureObject("UMBHUL01",Player6,0,0,0)  // ~Umber Hulk~
+  RESPONSE #100
+    SetGlobal("tz_DDGAME02_P6Monster","ARPO28",1)
+    CreateCreatureObject("BUGBEAR",Player6,0,0,0)  // ~Bugbear~
+END
+
+IF
+  PartyHasItem("DDGAME03")  // ~Bloodstone Gem~
+  Global("tz_spawnDDGAME03","ARPO28",0)
+THEN
+  RESPONSE #100
+    SetGlobal("tz_spawnDDGAME03","ARPO28",1)
+    FadeToColor([20.0],0)
+    Wait(2)
+    ActionOverride(Player1,JumpToPoint([1207.1234]))
+    ActionOverride(Player2,JumpToPoint([1207.1234]))
+    ActionOverride(Player3,JumpToPoint([1207.1234]))
+    ActionOverride(Player4,JumpToPoint([1207.1234]))
+    ActionOverride(Player5,JumpToPoint([1207.1234]))
+    ActionOverride(Player6,JumpToPoint([1207.1234]))
+    CreateCreature("DDGAME03",[1535.1113],0)  // ~<No Text>~
+    CreateCreature("DDGAME03",[1341.1017],0)  // ~<No Text>~
+    CreateCreature("DDGAME03",[1462.913],0)  // ~<No Text>~
+    CreateCreature("DDGAME03",[1363.905],0)  // ~<No Text>~
+    CreateCreature("DDGAME03",[890.1001],0)  // ~<No Text>~
+    CreateCreature("DDGAME03",[952.807],0)  // ~<No Text>~
+    CreateCreature("DDGAME03",[841.878],0)  // ~<No Text>~
+    CreateCreature("DDGAME03",[1084.673],0)  // ~<No Text>~
+    Wait(1)
+    FadeFromColor([20.0],0)
+    Wait(2)
+    ActionOverride("DDPLOTA5",StartDialogue("DDPLOTA5",Player1))
+END
+
+IF
+  Global("tz_DDGAME01_Dead","ARPO28",0)
+  Dead("DDGAME01")  // ~Man~
+THEN
+  RESPONSE #100
+    SetGlobal("tz_DDGAME01_Dead","ARPO28",1)
+    IncrementGlobal("tz_RiddlesSolved","ARPO28",1)
+END
+

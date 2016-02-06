@@ -1,0 +1,47 @@
+BEGIN ~DDMAN01~
+
+IF ~RandomNum(7,1)~ THEN BEGIN 0
+  SAY @0
+  IF ~~ THEN EXIT
+END
+
+IF ~RandomNum(7,2)~ THEN BEGIN 1
+  SAY @1
+  IF ~~ THEN EXIT
+END
+
+IF ~RandomNum(7,3)~ THEN BEGIN 2
+  SAY @2
+  IF ~~ THEN EXIT
+END
+
+IF ~RandomNum(7,4)~ THEN BEGIN 3
+  SAY @3
+  IF ~~ THEN EXIT
+END
+
+IF ~RandomNum(7,5)~ THEN BEGIN 4
+  SAY @4
+  IF ~~ THEN EXIT
+END
+
+IF ~RandomNum(7,6)~ THEN BEGIN 5
+  SAY @5
+  IF ~~ THEN REPLY @6 GOTO 6
+  IF ~~ THEN REPLY @7 GOTO 7
+END
+
+IF ~~ THEN BEGIN 6 // from: 5.0
+  SAY @8
+  IF ~~ THEN EXIT
+END
+
+IF ~~ THEN BEGIN 7 // from: 5.1
+  SAY @9
+  IF ~~ THEN EXIT
+END
+
+IF ~RandomNum(7,7)~ THEN BEGIN 8
+  SAY @10
+  IF ~~ THEN EXIT
+END

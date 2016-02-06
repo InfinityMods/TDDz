@@ -1,0 +1,31 @@
+@0    = ~Ah... ¿Quién es? Un visitante, eso parece... No tenemos muchos... visitantes.~
+@1    = ~¡No soy un visitante cualquiera! ¡Soy <CHARNAME>! ¡Temblad de miedo cuanto podáis, criatura!~
+@2    = ~Si, un visitante...~
+@3    = ~Umm... Lo siento, debo haberme equivocado de camino... me iré ahora mismo.~
+@4    = ~Estoy buscando la causa de la veloz propagación de la plaga y de estas nubes negras. ¿Sois vos?~
+@5    = ~Eh... sois gracioso, visitante. ¿Quizás gustéis de jugar a un juego? Un juego que os convenga... Sí, os gustará...~
+~Eh... sois graciosa, visitante. ¿Quizás gustéis de jugar a un juego? Un juego que os convenga... Sí, os gustará...~
+@6    = ~¡No juguéis conmigo! ¡Os mataré, lo juro!~
+@7    = ~Un juego podría ser de lo más relajante ahora. ¿Qué tenéis en mente?~
+@8    = ~No estoy aquí para vuestro divertimento. Decidme cuál es la causa de los recientes problemas no sea que mi arma tome la respuesta.~
+@9    = ~¡SILENCIO, visitante! ¡Jugaréis a un juego! ¡Sin el juego, no seguiréis adelante! Permitidme que os explique las bases del juego...~
+@10   = ~Es muy simple. ¿Veis el recipiente sobre la mesa grande? Allí,recogeréis un objecto de algún tipo. Una vez lo hayáis hecho, en algún lugar de esta zona aparecerá una criatura.~
+@11   = ~Primero, deberéis encontrar a esa criatura, y luego, la parte complicada del juego, debéis enviar a la criatura de regreso a sus orígenes. Haréis esto para completar un puzle que se os entregará.~
+@12   = ~Cada vez completéis un acertijo, dentro del recipiente aparecerá un nuevo objeto, que a su vez creará otra criatura en la zona. Esto continuará hasta que se termine el juego. Seréis... informado... una vez el juego termine.~
+~Cada vez completéis un acertijo, dentro del recipiente aparecerá un nuevo objeto, que a su vez creará otra criatura en la zona. Esto continuará hasta que se termine el juego. Seréis... informada... una vez el juego termine.~
+@13   = ~Excelente, empecemos.~
+@14   = ~¡Me niego a ser un peón insignificante en vuestros estúpidos juegos, criatura! ¡Tenedlo por seguro!~
+@15   = ~¡Dejad que el juego comience, visitante! ¡Sed cuidadoso! Algunas de las criaturas que veréis no serán agradables... o amistosas...~
+@16   = ~Ah, pero yo soy el único que puede permitiros salir. Y si no completáis el juego, sin duda moriréis aquí, por una causa u otra... pero, es vuestra elecció. Si deseáis perecer, no cooperéis, visitante.~
+@17   = ~Bien, visitante... Quizás vuestra actitud os será de utilidad. Permitidme que os explique el juego...~
+@18   = ~¡No, deteneos! ¡Jugaréis a un juego! ¡No podéis salir!~
+@19   = ~¿Yo? ¿Provocar la enfermedad e incluso la plaga? ¿Por qué?, ¡yo no pensaría en ello! Por otra parte, el maestro podría tener una idea diferente... Está regresando, ¿sabéis?...~
+@20   = ~Pero, dejando eso a un lado, los juegos, los enigmas en especial, son interesantes... ¿Os gustaría jugar? Creo que os podríais, visitante... os lo explicaré...~
+@21   = ~Ahora el último juego... es bastante sencillo. Caminad hacia las escaleras del lado opuesto de esta sala.~
+@22   = ~Hablad conmigo cuando hayáis complete el juego...~
+@23   = ~Ah, visitante... al final lo habéis logrado, ¿no es así? Desafortunadamente para vos, el maestro me acaba de hablar.~
+@24   = ~Quiere que detenga estos juegos y ponga fin a vuestra vida. Él siente el poder que ostentáis... vuestro espíritu bastaría para hacerle caminar por la tierra una vez más. Debo llevarselo.~
+@25   = ~De ningún modo iré con vos.~
+@26   = ~Muy bien, iré.~
+@27   = ~¿Quién dijo que estábais invitado? ¡Vuestro cuerpo es tan bueno muerto como vivo! ¡Ahora, quedáos quieto!~
+~¿Quién dijo que estábais invitada? ¡Vuestro cuerpo es tan bueno muerto como vivo! ¡Ahora, quedáos quieta!~

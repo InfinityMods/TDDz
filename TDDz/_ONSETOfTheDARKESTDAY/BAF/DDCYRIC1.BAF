@@ -1,0 +1,20 @@
+IF
+  AttackedBy([ANYONE],DEFAULT)
+THEN
+  RESPONSE #100
+    SetNumTimesTalkedTo(0)
+    Wait(1)
+    ClearAllActions()
+    StartDialogNoSet(Player1)
+END
+
+IF
+  Range(Player1,3)
+  NumberOfTimesTalkedTo(0)
+  See(Player1)
+  Allegiance(Myself,NEUTRAL)
+THEN
+  RESPONSE #100
+    StartDialogNoSet(Player1)
+END
+

@@ -1,0 +1,22 @@
+IF
+  True()
+THEN
+  RESPONSE #100
+	// SHOULD BE NOT USED
+    CutSceneId(Player1)
+    //ActionOverride("DDSUELLE",MoveToPoint([203.675]))
+    //Wait(3)
+    //ActionOverride("DDSUELLE",DestroySelf())
+    //Wait(2)
+    //CreateCreature("DDSUELLE",[203.675],7)
+    //ActionOverride("DDSUELLE",SetNumTimesTalkedTo(1))
+    //ActionOverride("DDSUELLE",MoveToPoint([483.209]))
+    //Wait(2)
+    //ActionOverride("DDSUELLE",FaceObject(Player1))
+    CreateCreature("DDwarp01",[203.675],7)
+    ActionOverride("DDwarp01",MoveToPoint([318.294]))
+    Wait(2)
+    ActionOverride("DDwarp01",StartDialogue("DDwarp01",Player1))
+    EndCutSceneMode()
+END
+

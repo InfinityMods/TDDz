@@ -1,0 +1,45 @@
+IF
+  Clicked([ANYONE])
+  Range(LastTrigger,7)
+  Global("tz_RiddlesSolved","ARPO28",0)
+  Global("tz_GameGiveItems","ARPO28",0)
+  GlobalGT("tz_GameActive","ARPO28",1)
+THEN
+  RESPONSE #100
+    GiveItemCreate("DDGAME01",LastTrigger,0,0,0)
+    SetGlobal("tz_GameGiveItems","ARPO28",1)
+END
+
+IF
+  Clicked([ANYONE])
+  Range(LastTrigger,7)
+  Global("tz_RiddlesSolved","ARPO28",1)
+  Global("tz_GameGiveItems","ARPO28",1)
+  GlobalGT("tz_GameActive","ARPO28",1)
+THEN
+  RESPONSE #100
+    GiveItemCreate("DDGAME02",LastTrigger,0,0,0)
+    SetGlobal("tz_GameGiveItems","ARPO28",2)
+END
+
+IF
+  Clicked([ANYONE])
+  Range(LastTrigger,7)
+  Global("tz_RiddlesSolved","ARPO28",2)
+  Global("tz_GameGiveItems","ARPO28",2)
+  GlobalGT("tz_GameActive","ARPO28",1)
+THEN
+  RESPONSE #100
+    GiveItemCreate("DDGAME03",LastTrigger,0,0,0)
+    SetGlobal("tz_GameGiveItems","ARPO28",3)
+    TriggerActivation("ItemTrigger",FALSE)
+END
+
+IF
+  Clicked([ANYONE])
+  !Range(LastTrigger,7)
+THEN
+  RESPONSE #100
+    DisplayStringHead(LastTrigger,14702)
+END
+

@@ -1,0 +1,72 @@
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId(Player1)
+	CreateVisualEffectObject("SPCLOUD1",Player1)
+    Wait(3)
+    LeaveAreaLUA("dd6000","GTRSK002",[750.650],4)	
+    MultiPlayerSync()
+    //SetMasterArea("dd0201") // Note: replace by AR1000 because DD0201 is not in the same component
+    SetMasterArea("ar1000")
+    MultiPlayerSync()
+	CreateVisualEffectObject("SPCLOUD1",Player1)
+    FadeFromColor([20.0],0)
+    EndCutSceneMode()
+END
+
+
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId(Player2)
+	CreateVisualEffectObject("SPCLOUD1",Player2)
+    Wait(3)
+    LeaveAreaLUA("dd6000","GTRSK002",[757.659],12)
+END
+
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId(Player3)
+	CreateVisualEffectObject("SPCLOUD1",Player3)
+    Wait(3)
+    LeaveAreaLUA("dd6000","GTRSK002",[750.657],12)
+END
+
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId(Player4)
+	CreateVisualEffectObject("SPCLOUD1",Player4)
+    Wait(3)
+    LeaveAreaLUA("dd6000","GTRSK002",[757.659],0)
+END
+
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId(Player5)
+	CreateVisualEffectObject("SPCLOUD1",Player5)
+    Wait(3)
+    LeaveAreaLUA("dd6000","GTRSK002",[758.658],12)
+END
+
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId(Player6)
+	CreateVisualEffectObject("SPCLOUD1",Player6)
+    Wait(3)
+    LeaveAreaLUA("dd6000","GTRSK002",[759.653],12)
+END
+
+
+
+
+

@@ -1,0 +1,43 @@
+IF
+  Global("tz_spawn","ARPO06",0)
+THEN
+  RESPONSE #100
+    SetGlobal("tz_spawn","ARPO06",1)
+    CreateCreature("DDman01",[975.647],3)
+    CreateCreature("DDman01",[601.777],7)
+    CreateCreature("DDman01",[801.438],13)
+    CreateCreature("DDman01",[645.631],12)
+    CreateCreature("DDman01",[598.583],0)
+    CreateCreature("DDman01",[553.724],13)
+    CreateCreature("DDman01",[847.429],4)
+    CreateCreature("DDwman01",[907.609],0)
+    CreateCreature("DDwman01",[336.507],5)
+    CreateCreature("DDwman01",[470.718],6)
+    CreateCreature("DDinn01",[447.598],14)
+    CreateCreature("DDkid02",[775.652],15)
+    CreateCreature("DDkid03",[532.837],2)
+    CreateCreature("DDkid02",[517.351],11)
+    CreateCreature("DDkid03",[815.323],1)
+    CreateCreature("DDkid02",[278.745],8)
+END
+
+IF
+  Global("tz_containerspawn","ARPO06",0)
+THEN
+  RESPONSE #100
+    SetGlobal("tz_containerspawn","ARPO06",1)
+    ActionOverride("Container1",CreateItem("AMUL02",0,0,0))
+    ActionOverride("Container3",CreateItem("MISC07",2,0,0))
+    ActionOverride("Container6",CreateItem("MISC07",6,0,0))
+  RESPONSE #100
+    SetGlobal("tz_containerspawn","ARPO06",1)
+    ActionOverride("Container6",CreateItem("MISC07",25,0,0))
+    ActionOverride("Container3",CreateItem("MISC20",0,0,0))
+    ActionOverride("Container1",CreateItem("SCRX3",0,0,0))
+  RESPONSE #100
+    SetGlobal("tz_containerspawn","ARPO06",1)
+    ActionOverride("Container7",CreateItem("WAND06",10,0,0))
+    ActionOverride("Container2",CreateItem("MISC07",19,0,0))
+    ActionOverride("Container1",CreateItem("MISC30",2,0,0))
+END
+

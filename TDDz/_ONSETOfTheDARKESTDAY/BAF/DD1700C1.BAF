@@ -1,0 +1,36 @@
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId("DDpoten1")  // 
+    HideGUI()
+    ForceSpell(Myself,DO_NOTHING)
+    CreateVisualEffect("SPCLOUDI",[382.118])
+    CreateVisualEffect("SPCLOUDI",[73.468])
+    CreateVisualEffect("SPCLOUDI",[141.371])
+    CreateVisualEffect("SPCLOUDI",[585.192])
+    CreateVisualEffect("SPCLOUDI",[418.483])
+    CreateVisualEffect("SPCLOUDI",[480.427])
+    CreateVisualEffect("SPCLOUDI",[477.730])
+    CreateVisualEffect("SPCLOUDI",[383.678])
+    CreateVisualEffect("SPCLOUDI",[680.600])
+    CreateVisualEffect("SPCLOUDI",[743.527])
+    Wait(2)
+    ForceSpell(Myself,DO_NOTHING)
+    CreateVisualEffect("SPCLOUDI",[382.118])
+    CreateVisualEffect("SPCLOUDI",[73.468])
+    CreateVisualEffect("SPCLOUDI",[141.371])
+    CreateVisualEffect("SPCLOUDI",[585.192])
+    CreateVisualEffect("SPCLOUDI",[418.483])
+    CreateVisualEffect("SPCLOUDI",[480.427])
+    CreateVisualEffect("SPCLOUDI",[477.730])
+    CreateVisualEffect("SPCLOUDI",[383.678])
+    CreateVisualEffect("SPCLOUDI",[680.600])
+    CreateVisualEffect("SPCLOUDI",[743.527])
+    Wait(1)
+    SetGlobal("tz_talk_quest","LOCALS",2)
+    UnhideGUI()
+    EndCutSceneMode()
+    StartDialogue("DDpoten2",LastTalkedToBy(Myself))
+END
+

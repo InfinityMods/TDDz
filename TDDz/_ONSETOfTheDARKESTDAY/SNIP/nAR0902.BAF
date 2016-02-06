@@ -1,0 +1,31 @@
+IF
+	Global("tz_WeslunSpawn","AR0902",0)
+THEN
+	RESPONSE #100
+		CreateCreature("DDPLOTA2",[1528.737],0) // Weslun Tane
+		SetGlobal("tz_WeslunSpawn","AR0902",1)
+END
+
+IF
+	Global("tz_DDPLOT_talk","GLOBAL",0)
+THEN
+	RESPONSE #100
+		SetGlobal("tz_DDPLOT_talk","GLOBAL",1)
+END
+
+IF
+	OR(2)
+		Dead("DDPLOTA2") // Weslun Tane
+		!Exists("DDPLOTA2")
+	Global("tz_TURN_GREEN","AR0902",0)
+THEN
+	RESPONSE #100
+		ChangeEnemyAlly(Player1,PC)
+		ChangeEnemyAlly(Player2,PC)
+		ChangeEnemyAlly(Player3,PC)
+		ChangeEnemyAlly(Player4,PC)
+		ChangeEnemyAlly(Player5,PC)
+		ChangeEnemyAlly(Player6,PC)
+		SetGlobal("tz_TURN_GREEN","AR0902",1)
+END
+

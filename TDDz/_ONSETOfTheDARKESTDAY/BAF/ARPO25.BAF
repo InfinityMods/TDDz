@@ -1,0 +1,13 @@
+IF
+  Global("tz_spawn","ARPO25",0)
+THEN
+  RESPONSE #100
+    SetGlobal("tz_spawn","ARPO25",1)
+    CreateCreature("DDspectr",[1247.2005],4)
+    CreateCreature("DDspectr",[1304.210],3)
+    CreateCreature("DDspectr",[302.692],14)
+    CreateCreature("DDspectr",[2169.159],0)
+    CreateCreature("DDspectr",[2132.284],0)
+    CreateCreature("DDspectr",[2651.823],0)
+END
+

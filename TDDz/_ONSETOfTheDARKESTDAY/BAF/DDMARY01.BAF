@@ -1,0 +1,22 @@
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId("DDMARY")  // 
+    PlaySound("CAS_PP6F")
+    ForceSpell(Myself,DO_NOTHING)
+    Wait(3)
+    CreateVisualEffectObject("SPDIMNDR","DDMARY")
+    Wait(2)
+    ActionOverride("DDMARY",MoveBetweenAreas("MM5103",[539.498],14))
+END
+
+IF
+  True()
+THEN
+  RESPONSE #100
+    MoveViewObject(Player1,INSTANT)
+    Wait(5)
+    EndCutSceneMode()
+END
+

@@ -1,0 +1,24 @@
+IF
+  AreaCheck("ARPO05")
+  Global("tz_PartyAtCitadel","GLOBAL",1)
+THEN
+  RESPONSE #100
+    DestroySelf()
+END
+
+IF
+  Global("tz_fail_spells_Tero","ARPO05",0)
+THEN
+  RESPONSE #100
+    ForceSpell(Myself,DO_NOTHING)
+    CreateVisualEffectObject("SPBLESHI",Myself)
+    Wait(2)
+    CreateVisualEffectObject("SPCCMDSI",Myself)
+    Wait(3)
+    ForceSpell(Myself,DO_NOTHING)
+    CreateVisualEffectObject("SPBASERD",Myself)
+    Wait(3)
+    CreateVisualEffectObject("SPBASEWT",Myself)
+    Wait(3)
+END
+

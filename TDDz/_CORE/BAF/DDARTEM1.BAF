@@ -1,0 +1,112 @@
+IF
+  Global("tz_artystart","GLOBAL",0)
+  See(NearestEnemyOf(Myself))
+THEN
+  RESPONSE #100
+    DestroyItem("MINHP1")
+    ReallyForceSpell(Myself,WIZARD_INVISIBILITY)
+    SetGlobalTimer("tz_backstab","GLOBAL",8)
+    SetGlobal("tz_artystart","GLOBAL",1)
+END
+
+IF
+  Global("tz_stab1","GLOBAL",0)
+  GlobalTimerExpired("tz_backstab","GLOBAL")
+  See(NearestEnemyOf(Myself))
+THEN
+  RESPONSE #100
+    ReallyForceSpell(Myself,WIZARD_INVISIBILITY)
+    SetGlobalTimer("tz_backstab2","GLOBAL",8)
+    SetGlobal("tz_stab1","GLOBAL",1)
+END
+
+IF
+  Global("tz_stab2","GLOBAL",0)
+  GlobalTimerExpired("tz_backstab2","GLOBAL")
+  See(NearestEnemyOf(Myself))
+THEN
+  RESPONSE #100
+    ReallyForceSpell(Myself,WIZARD_INVISIBILITY)
+    SetGlobalTimer("tz_backstab3","GLOBAL",6)
+    SetGlobal("tz_stab2","GLOBAL",1)
+END
+
+IF
+  Global("tz_stab3","GLOBAL",0)
+  GlobalTimerExpired("tz_backstab3","GLOBAL")
+  See(NearestEnemyOf(Myself))
+THEN
+  RESPONSE #100
+    ReallyForceSpell(Myself,WIZARD_INVISIBILITY)
+    SetGlobalTimer("tz_backstab4","GLOBAL",6)
+    SetGlobal("tz_stab3","GLOBAL",1)
+END
+
+IF
+  Global("tz_stab4","GLOBAL",0)
+  GlobalTimerExpired("tz_backstab4","GLOBAL")
+  See(NearestEnemyOf(Myself))
+THEN
+  RESPONSE #100
+    ReallyForceSpell(Myself,WIZARD_INVISIBILITY)
+    SetGlobalTimer("tz_backstab5","GLOBAL",6)
+    SetGlobal("tz_stab4","GLOBAL",1)
+END
+
+IF
+  Global("tz_stab5","GLOBAL",0)
+  GlobalTimerExpired("tz_backstab5","GLOBAL")
+  See(NearestEnemyOf(Myself))
+THEN
+  RESPONSE #100
+    ReallyForceSpell(Myself,WIZARD_INVISIBILITY)
+    SetGlobalTimer("tz_backstab6","GLOBAL",6)
+    SetGlobal("tz_stab5","GLOBAL",1)
+END
+
+IF
+  Global("tz_stab6","GLOBAL",0)
+  GlobalTimerExpired("tz_backstab6","GLOBAL")
+  See(NearestEnemyOf(Myself))
+THEN
+  RESPONSE #100
+    ReallyForceSpell(Myself,WIZARD_INVISIBILITY)
+    SetGlobalTimer("tz_backstab7","GLOBAL",6)
+    SetGlobal("tz_stab6","GLOBAL",1)
+END
+
+IF
+  Global("tz_stab7","GLOBAL",0)
+  GlobalTimerExpired("tz_backstab7","GLOBAL")
+  See(NearestEnemyOf(Myself))
+THEN
+  RESPONSE #100
+    ReallyForceSpell(Myself,WIZARD_INVISIBILITY)
+    SetGlobalTimer("tz_backstab8","GLOBAL",6)
+    SetGlobal("tz_stab7","GLOBAL",1)
+END
+
+IF
+  Global("tz_stab8","GLOBAL",0)
+  GlobalTimerExpired("tz_backstab8","GLOBAL")
+  See(NearestEnemyOf(Myself))
+THEN
+  RESPONSE #100
+    ReallyForceSpell(Myself,WIZARD_INVISIBILITY)
+    SetGlobal("tz_stab8","GLOBAL",1)
+END
+
+IF
+  AttackedBy([ANYONE],DEFAULT)
+THEN
+  RESPONSE #100
+    MoveToObject(NearestEnemyOf(Myself))
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+THEN
+  RESPONSE #100
+    Attack(NearestEnemyOf(Myself))
+END
+

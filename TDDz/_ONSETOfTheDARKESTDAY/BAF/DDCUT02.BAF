@@ -1,0 +1,18 @@
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId("DDhusban")
+    FadeFromColor([20.0],0)
+    Wait(2)
+    ActionOverride("DDlarala",DisplayStringHead(Myself,@10098)
+    Wait(4)
+    DisplayStringHead("DDhusban",@10099)
+    Wait(4)
+    ActionOverride("DDlarala",DisplayStringHead(Myself,@10100)
+    Wait(4)
+    ActionOverride("DDlarala",MoveToPoint([258.356]))
+    ActionOverride("DDlarala",DestroySelf())
+    StartCutScene("DDCUT03")
+END
+

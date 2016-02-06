@@ -1,0 +1,22 @@
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId(Player1)  // 
+    ActionOverride("DDcyric1",CreateVisualEffectObject("SPFIREPI",Myself))
+    Wait(2)
+    ActionOverride("DDcyric1",CreateVisualEffectObject("SPFLSRIN",Myself))
+    Wait(2)
+    ActionOverride("DDcyric1",CreateVisualEffectObject("SPFLSRIN",Myself))
+    Kill("DDcyric1")
+    Wait(2)
+    CreateVisualEffectObject("SPFLSRIN","DDcyric1")
+    CreateCreature("DDcyric2",[1294.876],14)  // ~Larala~
+    CreateCreature("DDcyric3",[1145.988],14)  // ~Larala~
+    CreateCreature("DDcyric4",[1304.983],14)  // ~Larala~
+    CreateCreature("DDassa01",[867.1127],14)  // ~Assassin of Cyric~
+    CreateCreature("DDassa02",[1739.736],14)  // ~Assassin of Cyric~
+    Wait(2)
+    EndCutSceneMode()
+END
+

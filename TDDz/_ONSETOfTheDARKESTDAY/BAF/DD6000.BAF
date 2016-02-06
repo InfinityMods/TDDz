@@ -1,0 +1,16 @@
+IF
+  Global("tz_creature","dd6000",0)
+THEN
+  RESPONSE #100
+    CreateCreature("candx01",[1354.1120],4)
+    CreateCreature("candx02",[1519.1119],4)
+    CreateCreature("candx03",[1699.1246],4)
+    CreateCreature("candx04",[1350.692],4)
+    CreateCreature("candx05",[1824.821],4)
+    CreateCreature("candx06",[419.717],4)
+    CreateCreature("candx07",[777.537],4)
+    //CreateCreature("karan01",[1559.1472],4) // otherwise player can miss him
+    CreateCreature("karan01",[1250.1150],4)
+    SetGlobal("tz_creature","dd6000",1)
+END
+

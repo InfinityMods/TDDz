@@ -1,0 +1,8 @@
+IF
+  Global("tz_errtu","dd1x12",0)
+THEN
+  RESPONSE #100
+    CreateCreature("errtu01",[443.430],4)
+    SetGlobal("tz_errtu","dd1x12",1)
+END
+

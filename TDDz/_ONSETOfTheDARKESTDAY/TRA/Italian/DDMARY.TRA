@@ -1,0 +1,10 @@
+@0    = ~Ben fatto <CHARNAME>, hai sconfitto le ambizioni di niente meno che lo stesso dio Cyric.~
+@1    = ~Non temere per le persone del Villaggio. Tu hai eliminato l'origine dalla loro malattia. Presto si sentiranno meglio anche se ancora non lo sanno.~
+@2    = ~Arrivederci Potencius, arrivederci Minto, ci vediamo.~
+@3    = ~Vieni a trovarmi quando vuoi andare verso il tuo destino nelle terre del sud. Permettimi di segnalarti la locazione della mia casa sulla tua mappa.
+
+Ci vediamo <CHARNAME> e compagni.~
+@4    = ~Posso inviarti nelle terre del sud, se questo è quello che desideri.~
+@5    = ~Si, lo desidero.~
+@6    = ~Non ancora, grazie.~
+

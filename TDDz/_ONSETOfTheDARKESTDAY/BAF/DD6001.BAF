@@ -1,0 +1,29 @@
+IF
+  Global("tz_creature","dd6001",0)
+THEN
+  RESPONSE #100
+    CreateCreature("candx01",[1952.1104],4)
+    CreateCreature("candx03",[1532.932],4)
+    CreateCreature("candx07",[1077.734],4)
+    CreateCreature("candx05",[1001.1018],4)
+    CreateCreature("bendalis",[682.649],4)
+    CreateCreature("karan02",[719.597],4)
+    CreateCreature("phlydia",[784.560],4)
+    CreateCreature("tethtori",[828.509],4)
+    CreateCreature("firebead",[840.500],4)
+    CreateCreature("madeel",[1210.345],4)
+    CreateCreature("gandar",[1780.1261],4)
+    SetGlobal("tz_creature","dd6001",1)
+END
+
+IF
+  Global("tz_easthavenmove","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("tz_easthavenmove","GLOBAL",2)
+    FadeToColor([20.0],0)
+    Wait(2)
+    StartCutSceneMode()
+    StartCutScene("eastmove")
+END
+

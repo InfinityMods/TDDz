@@ -1,0 +1,12 @@
+@0     = ~(Toux)... Ugh... qui a fait ça ? Qui m'a... aidé... ?~
+@1     = ~C'est moi, <CHARNAME>, qui vous ai sauvé ! Haha !~
+@2     = ~Ah... personne.~
+@3     = ~Mon nom est <CHARNAME>, bonne dame. Dites-moi, comment tout cela est-il arrivé ?~
+@4     = ~M... Merci, <CHARNAME>... je ne peux pas dire plus... mon corps aurait dû mourir depuis longtemps... J'ai été habitée par cet... esprit... depuis si longtemps...~
+@5     = ~J'ai tué mon mari... mon enfant... et... tous les autres. Il n'y a rien ici pour moi sinon la mort. <CHARNAME>, quitter ce monde est une bénédiction. Merci... à vous...~
+@6     = ~Eh bien, qui que vous soyez, je ne pourrais assez vous remercier... je ne peux pas dire plus... mon corps aurait dû mourir depuis longtemps... J'ai été habitée par cet... esprit... depuis si longtemps...~
+@7     = ~J'ai tué mon mari... mon enfant... et... tous les autres. Il n'y a rien ici pour moi sinon la mort. Quitter ce monde est une bénédiction. Merci... à vous...~
+@8     = ~Une nuit... Je suis allée près du lac pour ramasser quelques herbes... J... J'ai été tuée, je pense. Je suis morte.~
+@9     = ~Quand je me suis réveillée, je n'avais aucun contrôle. J... J'ai été forcée de tuer mon mari !... Je-Je n'ai pas pu l'éviter.~
+@10    = ~Avant que je ne m'en rende compte, je commandais... cette armée de mort... et de destruction. Tout le mal que j'ai fait... c'est trop. Je suis si... reconnaissante d'être délivrée de ce monde.~
+@11    = ~Il ne me reste qu'à vous remercier... Merci de m'avoir sauvée d'une vie éternelle... de mort... de souffrance... quoi que c'était. <CHARNAME>, merci... à vous...~

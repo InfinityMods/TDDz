@@ -10,21 +10,17 @@ B3-18		+		+		+					+		+			.
 BLADETRM	+		20991	+					20992	BLADETRM	.			Blade of Tremors
 BONEMASK	+		21001	+					21002	+			.			Bone Mask
 BOTABODE	+		21003	+					21004	0			.			Mezakain's Enchanted Abode
-BRAC04X		+		+		+					+		+			.			Jarlaxe's bracers
 CALHEART	21024	21024	21024				21024	+			++++++++	Heart				
 CALIWOLF	+		+		+					+		+			++++++++	
 CELEBRA		+		21026	+					21027	ICELEBRA	.			The Celebrants Blade
 CERBSW2H	+		21030	+					21031	0			.			Psionic Denial
 CREATE		+		21042	+					21043	+			.			Bow of Creation
 DAGGASP		+		21047	+					21048	IKRIS		.			Asp's Tooth
-DEATHREB	+		21102	+					21103	0			.			Death Reborn
 DDNOIMPR	+		+		+					+		+			++++++++	
 DEMCLAWZ	21106	21106	21107				21107	+			++++++++	Demon claw
 DHORNX		+		21112	+					21113	+			.			Rage Horn
 ELVHUNTB	+		21141	+					21142	0			.			Huntsman's Soft Touch
 ELSHUKAR	+		21139	+					21140	0			.			Elshukar
-ENTERI1		+		21143	+					+		+			.			Entreri Saber
-ENTERI2		+		21144	+					+		+			.			Entreri Jeweled Dagger
 ENTROBE		+		21145	+					21146	IENTROBE	.			Entropic Robe
 FLAMPLAT	+		21162	+					21163	+			SCRL75		Plate of Smoldering, USE TDD SPELL
 GHARBOOT	+		21166	+					21167	0			.			Elven Tracking Boots
@@ -68,5 +64,4 @@ UHALB5A		+		21422	+					21423	+			.			Tundra Halberd +4
 UMSTR5A		+		21426	+					21427	+			.			Morning Star of Action +4
 USHLD3B		+		21428	+					21429	+			.			Storming Shield +3
 WATBLOOD	21435	21435	21436				21436	+			++++++++	Blood of a Wererat
-WEAVER		+		21439	+					21440	+			.			Dream Weaver (Jarlaxe's long sword) TODO patch
 WYVCROWN	+		21441	+					21442	WYVCROWN	.			Wyvern Crown

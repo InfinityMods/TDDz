@@ -1,0 +1,11 @@
+IF
+  Global("tz_spawn","ARPO30",0)
+THEN
+  RESPONSE #100
+    SetGlobal("tz_spawn","ARPO30",1)
+    CreateCreature("DDSOLD10",[1110.400],4)
+    CreateCreature("DDSOLD11",[1023.374],5)
+    CreateCreature("DDSOLD10",[949.516],8)
+    CreateCreature("DDSOLD11",[1065.692],2)
+END
+

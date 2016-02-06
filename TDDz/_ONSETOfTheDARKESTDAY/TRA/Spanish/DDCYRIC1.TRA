@@ -1,0 +1,25 @@
+@0    = ~<CHARNAME>...~
+@1    = ~¿Estáis aquí para ayudarme?~
+@2    = ~¿Vos sois Cyric?~
+@3    = ~¿Cómo sabéis mi nombre?~
+@4    = ~¿Qué hace una chica como tú en un paraje como este?~
+@5    = ~No lo sé... quizás lo sea... N-no puedo pensar ahora... solo ayudadme...~
+@6    = ~Vuestro... vuestro nombre es famoso a lo largo de la Costa de la Espada. Venid... más cerca. Dejadme ver el aspecto de mi salvador...~
+~Vuestro... vuestro nombre es famoso a lo largo de la Costa de la Espada. Venid... más cerca. Dejadme ver el aspecto de mi salvadora...~
+@7    = ~N-no lo sé... Me deben haber traido aquí... No... no puedo recordar.~
+@8    = ~Más cerca... el regreso es inminente, <CHARNAME>... Volveré a caminar una vez más... acercáos... así podré tocaros...~
+@9    = ~¡Alejáos de mí!~
+@10   = ~Sí... acercáos más.~
+@11   = ~¡Oh! ¡Puedo sentir la sangre de Bhaal en vuestro interior! ¡Sois al que he estado esperando!~
+~¡Oh! ¡Puedo sentir la sangre de Bhaal en vuestro interior! ¡Sois a la que he estado esperando!~
+@12   = ~¿Qué le ha pasado a la chica con la que estaba hablando? ¿¡Qué está sucediendo!?~
+@13   = ~¡Sí, y esa sangre me da el poder para mataros! ¡Retroceded!~
+@14   = ~Yo soy esa chica. ¿No os dais cuenta? Soy yo, Cyric.~
+@15   = ~¿No lo veis? No tenéis poder sobre mí. Más bien lo contrario. Yo soy Cyric.~
+@16   = ~Soy vuestro maestro, igual que soy el maestro de todo aquél que se ha cruzado en mi camino. Este cuerpo no es más que un recipiente hasta que pueda volver a pisar la tierra con mi propia forma una vez más.~
+@17   = ~No tenéis opción, <CHARNAME>.~
+@18   = ~¿Así que vos sois la causa de la plaga? ¿¡Cómo es eso posible!?~
+@19   = ~Estáis equivocado, Cyric. Caeréis ante mí.~
+@20   = ~¡La reliquia lo hace posible! ¡Me ha estado alimentando hasta ahora y lo continuará haciendo mientras lo necesite! Esta nube de oscuridad... sí, la que flota sobre nosotros... absorbe la vida de los que se encuentran debajo. La reliquia conduce la vida, ¡y yo la tomo para mí!~
+@21   = ~Lo dudo, <CHARNAME>.~
+@22   = ~Moriréis, <CHARNAME>. ¡Moriréis a mis manos! ¡Y vuestra muerte será la fuente de mi regreso!~

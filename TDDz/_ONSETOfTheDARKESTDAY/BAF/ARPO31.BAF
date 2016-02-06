@@ -1,0 +1,20 @@
+IF
+  Global("tz_EnteredArea","ARPO31",0)
+THEN
+  RESPONSE #100
+    SetGlobal("tz_EnteredArea","ARPO31",1)
+    StartCutSceneMode()
+    StartCutScene("DDCUT09")
+END
+
+IF
+  Global("tz_Dead_Cyric","GLOBAL",0)
+  Dead("DDcyric2")
+  Dead("DDcyric3")
+  Dead("DDcyric4")
+THEN
+  RESPONSE #100
+    SetGlobal("tz_Dead_Cyric","GLOBAL",1)
+    CreateCreatureObject("DDlaral2","DDcyric1",0,0,0)
+END
+

@@ -1,0 +1,19 @@
+IF
+	True()
+THEN
+	RESPONSE #100
+		CutSceneId(Player1)
+		FadeToColor([30.0],0)
+		Wait(2)
+		StartMovie("END15FPS")
+		SmallWait(1)
+		StartMovie("INTRO")
+		Wait(1)
+		MultiPlayerSync()
+		Wait(1)
+		MoveToExpansion()
+		MoveViewObject(Player1,-1)
+		EndCutSceneMode()
+END
+
+

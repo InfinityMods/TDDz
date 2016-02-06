@@ -1,0 +1,19 @@
+IF
+  Clicked([ANYONE])
+  !PartyHasItem("PO29KEY")
+THEN
+  RESPONSE #100
+    DisplayStringHead(LastTrigger,@10151)
+END
+
+IF
+  Clicked([ANYONE])
+  PartyHasItem("PO29KEY")
+THEN
+  RESPONSE #100
+    TakePartyItemAll("PO29KEY")
+    DisplayStringHead(LastTrigger,@10152)
+    TriggerActivation("ToARPO30",TRUE)
+    TriggerActivation("XXARPO30",FALSE)
+END
+

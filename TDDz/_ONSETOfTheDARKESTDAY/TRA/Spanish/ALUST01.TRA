@@ -1,0 +1,25 @@
+@0    = ~Sabía en mi corazón que vendríais por mí.~
+@1    = ~¿Sois la dama Alustriel de Luna Plateada?~
+@2    = ~¿Quién sois?~
+@3    = ~Sí, soy yo... y vos sois el héroe de Puerta de Baldur, el ejecutor de John Irenicus.~
+~Sí, soy yo... y vos sois la heroina de Puerta de Baldur, la ejecutora de John Irenicus.~
+@4    = ~Conocéis mucho sobre mí. ¿Podría preguntar cómo es eso?~
+@5    = ~Lo sé por mis fuentes. Os habéis labrado una buena reputación.~
+@6    = ~¿Sabéis de Irenicus?~
+@7    = ~Supongo que la tengo, pero al parecer, sabéis casi tanto como yo mismo sobre la cuestión.~
+~Supongo que la tengo, pero al parecer, sabeis casi tanto como yo misma sobre la cuestión.~
+@8    = ~Puede, pero no podemos hablar aquí... Estaréis exausto por vuestro viaje y batallas. Id y descansad en el pueblo. Buscadme en el templo cuando estéis recuperado y listo para escuchar la verdad de la situación.~
+~Puede, pero no podemos hablar aquí... Estaréis exausta por vuestro viaje y batallas. Id y descansad en el pueblo. Buscadme en el templo cuando estéis recuperada y lista para escuchar la verdad de la situación.~
+@9    = ~Soy la dama Alustriel de Luna Plateada.~
+@10   = ~Ah, lo siento mi señora. Debí de haberlo sabido...~
+@11   = ~Lo siento, nunca oí hablar de vos.~
+@12   = ~No, no lo sintáis. No necesito que me traten mejor por mi título. Sin embargo necesito hablaros, Héroe de Puerta de Baldur.~
+~No, no lo sintáis. No necesito que me traten mejor por mi título. Sin embargo necesito hablaros, Heroina de Puerta de Baldur.~
+@13   = ~He venido hasta aquí para encontraros.~
+@14   = ~Sé qué es lo que os trajo aquí. Además, parece que no sois vos el único que requiere de mis conocimientos.~
+~Sé qué es lo que os trajo aquí. Además, parece que no sois vos la única que requiere de mis conocimientos.~
+@15   = ~¿Me estáis diciendo que los demonios también os necesitan?~
+@16   = ~¿Quién más?~
+@17   = ~Los demonios son bestias que han sido enviadas aquí. Ellos necesitan de una información diferente, pero vuestras razones están relacionadas.~
+@18   = ~¿Qué os hizo estar tan segura de que vendría? Cualquier excusa habría sido lo bastante buena para mí como para largarme.~
+@19   = ~¿Cómo supisteis que estaba de camino?~

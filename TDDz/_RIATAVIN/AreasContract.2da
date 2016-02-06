@@ -19,6 +19,7 @@ DD3300CT	DD3300	DD3300	DD3300	DD3300HT	DD3300LM	DD3300SR		Replaced by DDCT33
 DD3301		+	+	+	+		+		+
 DD3301B		+	+	+	+		+		+
 DD3302		+	+	+	+		+		+
+DD3302B		+	+	+	+		+		+		
 DD3303		+	+	+	+		+		+
 DD3304		0	0	0	0		0		0
 DD3305		0	0	0	0		0		0
@@ -37,8 +38,8 @@ DD3316		+	+	+	+		+		+
 DD3317		+	+	+	+		+		+
 DD3318		+	+	+	+		+		+
 DD3319		+	+	+	+		+		+
-DD3319CT	+	+	+	+		+		+	Replaced by DDCT19
 DD3319C1	+	+	+	+		+		+	Replaced by DDC119 //DDC133 is already used!
+DD3319CT	+	+	+	+		+		+	Replaced by DDCT19
 DD3320		+	+	+	+		+		+
 DD3321		+	+	+	+		+		+
 DD3322		+	+	+	+		+		+

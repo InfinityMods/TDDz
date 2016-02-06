@@ -1,0 +1,25 @@
+// FROM bAR2800.baf
+
+IF
+	Global("tz_EastheavenDone","GLOBAL",1)	
+	Global("tz_SpawnDDtrav03","GLOBAL",0)
+THEN
+	RESPONSE #100
+		SetGlobal("tz_SpawnDDtrav03","GLOBAL",1)
+		CreateCreature("DDtrav03",[3000.400],0)
+END
+
+IF
+	Global("tz_EastheavenDone","GLOBAL",1)
+	Global("tz_DarkestDayCuts","GLOBAL",0)
+THEN
+	RESPONSE #100
+		SetGlobal("tz_EastheavenDone","GLOBAL",2)
+		DisplayStringHead(Player1,@10203)
+		Wait(3)
+		ClearAllActions()
+		SetGlobal("tz_DarkestDayCuts","GLOBAL",1)
+		SetGlobal("tz_DarkestDayStart","GLOBAL",2)
+		StartCutSceneMode()
+		StartCutScene("DDCUT01")
+END

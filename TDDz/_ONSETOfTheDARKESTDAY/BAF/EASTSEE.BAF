@@ -1,0 +1,10 @@
+IF
+  Global("tz_eastsee","LOCALS",0)
+  See([PC])
+  Range([PC],30)
+THEN
+  RESPONSE #100
+    SetGlobal("tz_eastsee","LOCALS",1)
+    StartDialogNoSet([PC])
+END
+

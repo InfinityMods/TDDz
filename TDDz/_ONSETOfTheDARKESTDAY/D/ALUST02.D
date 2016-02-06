@@ -1,0 +1,133 @@
+BEGIN ~ALUST02~
+
+IF ~True()~ THEN BEGIN 0
+  SAY @0
+  IF ~~ THEN REPLY @1 GOTO 1
+  IF ~~ THEN REPLY @2 GOTO 8
+END
+
+IF ~~ THEN BEGIN 1 // from: 0.0
+  SAY @3
+  IF ~~ THEN GOTO 2
+END
+
+IF ~~ THEN BEGIN 2 // from: 8.0 1.0
+  SAY @4
+  IF ~~ THEN REPLY @5 GOTO 3
+  IF ~~ THEN REPLY @6 GOTO 3
+END
+
+IF ~~ THEN BEGIN 3 // from: 2.1 2.0
+  SAY @7
+  IF ~~ THEN GOTO 4
+END
+
+IF ~~ THEN BEGIN 4 // from: 3.0
+  SAY @8
+  IF ~~ THEN REPLY @9 GOTO 5
+  IF ~~ THEN REPLY @10 GOTO 5
+END
+
+IF ~~ THEN BEGIN 5 // from: 4.1 4.0
+  SAY @11
+  IF ~~ THEN GOTO 6
+END
+
+IF ~~ THEN BEGIN 6 // from: 5.0
+  SAY @12
+  IF ~~ THEN REPLY @13 GOTO 7
+  IF ~~ THEN REPLY @14 GOTO 7
+END
+
+IF ~~ THEN BEGIN 7 // from: 6.1 6.0
+  SAY @15
+  IF ~~ THEN REPLY @16 GOTO 9
+  IF ~~ THEN REPLY @17 GOTO 9
+END
+
+IF ~~ THEN BEGIN 8 // from: 0.1
+  SAY @18
+  IF ~~ THEN GOTO 2
+END
+
+IF ~~ THEN BEGIN 9 // from: 7.1 7.0
+  SAY @19
+  IF ~~ THEN GOTO 10
+END
+
+IF ~~ THEN BEGIN 10 // from: 9.0
+  SAY @20
+  IF ~~ THEN GOTO 11
+END
+
+IF ~~ THEN BEGIN 11 // from: 10.0
+  SAY @21
+  IF ~~ THEN GOTO 12
+END
+
+IF ~~ THEN BEGIN 12 // from: 11.0
+  SAY @22
+  IF ~~ THEN GOTO 13
+END
+
+IF ~~ THEN BEGIN 13 // from: 12.0
+  SAY @23
+  IF ~~ THEN REPLY @24 GOTO 14
+END
+
+IF ~~ THEN BEGIN 14 // from: 13.0
+  SAY @25
+  IF ~~ THEN GOTO 15
+END
+
+IF ~~ THEN BEGIN 15 // from: 14.0
+  SAY @26
+  IF ~~ THEN REPLY @27 GOTO 16
+  IF ~~ THEN REPLY @28 GOTO 16
+END
+
+IF ~~ THEN BEGIN 16 // from: 15.1 15.0
+  SAY @29 /* #75585 */
+  IF ~~ THEN REPLY @30 GOTO 17
+END
+
+IF ~~ THEN BEGIN 17 // from: 16.0
+  SAY @31
+  IF ~~ THEN REPLY @32 GOTO 18
+END
+
+IF ~~ THEN BEGIN 18 // from: 17.0
+  SAY @33
+  IF ~~ THEN GOTO 19
+END
+
+IF ~~ THEN BEGIN 19 // from: 18.0
+  SAY @34 /* #75588 */
+  IF ~~ THEN REPLY @35 GOTO 20
+  IF ~~ THEN REPLY @36 GOTO 20
+END
+
+IF ~~ THEN BEGIN 20 // from: 19.1 19.0
+  SAY @37
+  IF ~~ THEN GOTO 21
+END
+
+IF ~~ THEN BEGIN 21 // from: 20.0
+  SAY @38
+  IF ~~ THEN REPLY @39 GOTO 22
+  IF ~~ THEN REPLY @40 GOTO 22
+END
+
+IF ~~ THEN BEGIN 22 // from: 21.1 21.0
+  SAY @41
+  IF ~~ THEN REPLY @42 GOTO 23
+  IF ~~ THEN REPLY @43 GOTO 23
+END
+
+IF ~~ THEN BEGIN 23 // from: 22.1 22.0
+  SAY @44
+  IF ~~ THEN DO ~CreateVisualEffectObject("spdimndr","alust02")
+Wait(1)
+ActionOverride("alust02",DestroySelf())
+GiveItemCreate("erturing",Player1,0,0,0)~ EXIT
+END

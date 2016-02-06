@@ -1,0 +1,21 @@
+IF
+  Global("tz_spawn","ARPO27",0)
+THEN
+  RESPONSE #100
+    SetGlobal("tz_spawn","ARPO27",1)
+    CreateCreature("DDPLOTA4",[977.249],0)
+    CreateCreature("DDmanarc",[940.217],0)
+    CreateCreature("DDmanarc",[1033.249],0)
+    CreateCreature("DDmanpea",[608.393],3)
+    CreateCreature("DDmanpea",[488.432],4)
+    CreateCreature("DDmanpea",[517.465],5)
+    CreateCreature("DDmanpea",[545.415],14)
+    CreateCreature("DDmanpea",[428.433],15)
+    CreateCreature("DDmanpea",[1105.578],0)
+    CreateCreature("DDmanpea",[938.584],1)
+    CreateCreature("DDmanpea",[896.718],13)
+    CreateCreature("DDmanpea",[1027.720],3)
+    CreateCreature("DDmanpea",[926.800],4)
+    CreateCreature("DDmanpea",[789.595],5)
+END
+

@@ -1,0 +1,41 @@
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId("DDMARY")  // 
+    MoveViewObject("MINTKSEL",INSTANT)
+    Wait(20)
+    StartDialogNoSet(Player1)
+END
+
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId("MINTKSEL")
+    Wait(1)
+    EscapeArea()
+END
+
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId("DDPOTEN1")
+    Wait(1)
+    PlaySound("CAS_PP6M")
+    ForceSpell(Myself,DO_NOTHING)
+    Wait(3)
+    CreateVisualEffectObject("SPDIMNDR",Myself)
+    Wait(1)
+    DestroySelf()
+END
+
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId("DDTERO01")
+    Wait(1)
+    EscapeArea()
+END

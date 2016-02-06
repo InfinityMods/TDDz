@@ -1,0 +1,29 @@
+@0    = ~Saludos, viajero. ¿Tenéis alguna dolencia? ¿Necesitáis algún servicio... uhh... curativo?~
+~Saludos, viajera. ¿Tenéis alguna dolencia? ¿Necesitáis algún servicio... uhh... curativo?~
+@1    = ~En efecto. Permitidme ver vuestros servicios.~
+@2    = ~No, no por ahora.~
+@3    = ~Encontré esta carta de vos a algún viajero. Necesito saber más sobre él y lo que provocó que perdiera la memoria.~
+@4    = ~Oh sí, este viajero me vio hace sólo unos días. Parecía sufrir algún tipo de amnesia. Fui incapaz de--¡UGH!--de... de encontrar la causa.~
+@5    = ~¿Estáis bien? Estáis temblando mucho.~
+@6    = ~Bueno, supongo que eso es todo. Lamento haberos molestado.~
+@7    = ~¡Tenéis un apretón chaval! ¡Si vuestro almuerzo quiere salir, al menos apartáos de mi vista!~
+@8    = ~¿Doler? ¡Yo ACERTAR! ¡Hacerlo mejor! ¡Golpear fuerte la cabeza contra la pared hace olvidar dolor!~
+@9    = ~¿Temblando? ¿Esto? No, no es... ningún problema. Yo solo tengo... uhh... escalofríos. Sí, escalofríos.~
+@10   = ~¡RrraaaaAAAGGGHHH! ¡Por favor! ¡Por favor, no escuchéis! ¡No! ¡Éste no soy yo! Ayudad...~
+@11   = ~(*Jadeo*) Ejem... perdón, mi buen señor. Acabo de tener una avenate... pasajera --NO ESCUCHEIS-- Lo lamento... pero por estas avenates puedo parecer un poco extraño. Perdonadme.~
+~(*Jadeo*) Ejem... perdón, mi buena señora. Acabo de tener una avenate... pasajera --NO ESCUCHEIS-- Lo lamento... pero por estas avenates puedo parecer un poco extraño. Perdonadme.~
+@12   = ~¿Pero qué...? ¡Sois un psicópata! ¡Es hora de que os envíen a la Prisión del Hechicero!~
+@13   = ~Claro, claro. Todos nosotros tenemos esas avenates pasajeras de vez en cuando. Estad tranquilo, sacerdote. Os dejaré con vos mismo.~
+@14   = ~¿Seguro que estáis bien? Podría ir a buscar otro sacerdote...~
+@15   = ~¿Qué? ¡No, no! ¡Os estáis equivocando! Yo soy un sacerdote, y sólo un sacerdote. Lo que... estos temblores... ellos, uhh... ellos son las señales de mi... sacerdocio.~
+@16   = ~De acuerdo... ¿Pero por qué os pusisteis tan nervioso cuando desconfié de vos?~
+@17   = ~Yo también soy sacerdote, pero no parece que "los temblores" señalen mis cualidades sacerdotales. ¿Estáis mintiéndome? ¿Qué estáis ocultando?~
+~Yo soy una sacerdotisa, pero no parece que "los temblores" señalen mis cualidades sacerdotales. ¿Estáis mintiéndome? ¿Qué estáis ocultando?~
+@18   = ~¡Ah, desde luego! ¡Los temblores! Lamento haber dudado de vos. Continuaré con mi camino.~
+@19   = ~Muy... uhh... muy bien, entonces. (¡Condenada lengua extranjera!)~
+@20   = ~¿Nervioso? No estoy nervioso. ¡Yo estoy, uhh--¡NO ESCUCHEIS! ¡MATADME AHORA!...~
+@21   = ~¡Cállaos! ¡Cállaos! ¡Oh, esta apariencia es inútil! ¡Vuestro cuerpo parece más habitable que este condenado clérigo!~
+@22   = ~Yo no tengo nada que ocultar. ¿Qué os hace pensar así? ¡YO--ESTE NO SOY YO! ¡NO ESCUCHEIS!~
+@23   = ~Yo...estoy bien. Sólo es un dolor de cabeza crónico, os lo aseguro.~
+@24   = ~Erm... No, creo que encontraré o... otro remedio. Gracias por (*sin aliento*) la sugerencia.~
+@25   = ~¡Estoy bien! ¡BIEN os digo!... rr... ¡rrRRAGHH!...¡NECESITO SALIR AFUERA!...~

@@ -1,0 +1,19 @@
+IF
+  True()
+THEN
+  RESPONSE #100	
+    CutSceneId(Player1)
+    Wait(2)
+    LeaveAreaLUA("ar0300","GTRSK002",[3000.302],12)
+	ActionOverride(Player2,LeaveAreaLUA("ar0300","GTRSK002",[3000.302],12))
+	ActionOverride(Player3,LeaveAreaLUA("ar0300","GTRSK002",[3000.302],12))
+	ActionOverride(Player4,LeaveAreaLUA("ar0300","GTRSK002",[3000.302],12))
+	ActionOverride(Player5,LeaveAreaLUA("ar0300","GTRSK002",[3000.302],12))
+	ActionOverride(Player6,LeaveAreaLUA("ar0300","GTRSK002",[3000.302],12))
+    MultiPlayerSync()
+    SetMasterArea("ar0300")
+	SetGlobal("tz_EastheavenDone","GLOBAL",1)
+    MultiPlayerSync()
+    FadeFromColor([20.0],0)
+    EndCutSceneMode()
+END

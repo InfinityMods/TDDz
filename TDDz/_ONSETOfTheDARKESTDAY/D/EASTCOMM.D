@@ -1,0 +1,82 @@
+BEGIN ~EASTCOMM~
+
+IF ~RandomNum(6,1)~ THEN BEGIN 0
+  SAY @0
+  IF ~~ THEN REPLY @1 GOTO 1
+  IF ~~ THEN REPLY @2 GOTO 2
+  IF ~~ THEN REPLY @3 GOTO 13
+END
+
+IF ~~ THEN BEGIN 1 // from: 0.0
+  SAY @4
+  IF ~~ THEN EXIT
+END
+
+IF ~~ THEN BEGIN 2 // from: 0.1
+  SAY @5
+  IF ~~ THEN EXIT
+END
+
+IF ~RandomNum(6,2)~ THEN BEGIN 3
+  SAY @6
+  IF ~~ THEN REPLY @7 GOTO 4
+  IF ~~ THEN REPLY @8 GOTO 5
+END
+
+IF ~~ THEN BEGIN 4 // from: 3.0
+  SAY @9
+  IF ~~ THEN EXIT
+END
+
+IF ~~ THEN BEGIN 5 // from: 3.1
+  SAY @10
+  IF ~~ THEN REPLY @11 GOTO 6
+  IF ~~ THEN REPLY @12 GOTO 14
+END
+
+IF ~~ THEN BEGIN 6 // from: 5.0
+  SAY @13
+  IF ~~ THEN EXIT
+END
+
+IF ~RandomNum(6,3)~ THEN BEGIN 7
+  SAY @14
+  IF ~~ THEN EXIT
+END
+
+IF ~RandomNum(6,4)~ THEN BEGIN 8
+  SAY @15
+  IF ~~ THEN REPLY @16 GOTO 9
+  IF ~~ THEN REPLY @17 GOTO 10
+END
+
+IF ~~ THEN BEGIN 9 // from: 8.0
+  SAY @18
+  IF ~~ THEN EXIT
+END
+
+IF ~~ THEN BEGIN 10 // from: 8.1
+  SAY @19
+  IF ~~ THEN EXIT
+END
+
+IF ~RandomNum(6,5)~ THEN BEGIN 11
+  SAY @20
+  IF ~~ THEN EXIT
+END
+
+IF ~RandomNum(6,6)~ THEN BEGIN 12
+  SAY @21
+  IF ~~ THEN REPLY @22 EXIT
+  IF ~~ THEN REPLY @23 EXIT
+END
+
+IF ~~ THEN BEGIN 13 // from: 0.2
+  SAY @24
+  IF ~~ THEN EXIT
+END
+
+IF ~~ THEN BEGIN 14 // from: 5.1
+  SAY @25
+  IF ~~ THEN EXIT
+END
