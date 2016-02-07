@@ -291,6 +291,7 @@ DEFINE_ACTION_FUNCTION HANDLE_TILECONV
     num_threads   = 0
     convert_mbc   = 1
     convert_tbc   = 1
+	convert_tiz   = 1
     exec_type     = 0
   STR_VAR
     input_path    = ~~
@@ -366,6 +367,33 @@ BEGIN
   // converting TBC -> TIS
   ACTION_IF (convert_tbc != 0) BEGIN
     ACTION_BASH_FOR ~%input_path%~ ~.+\.tbc$~ BEGIN
+      OUTER_SPRINT tbc_folder ~%output_path%/%folder_prefix%%BASH_FOR_RES%~
+      MKDIR ~%tbc_folder%~
+      OUTER_SPRINT tbc_file ~%tbc_folder%/%BASH_FOR_RES%.tis~
+      OUTER_SPRINT arg_4 ~-o %quote%%tbc_file%%quote%~
+      OUTER_SPRINT arg_5 ~%quote%%BASH_FOR_FILESPEC%%quote%~
+      LAF EXECUTE_TOOL
+        STR_VAR
+          tool_binary = EVAL ~%tileconv_path%~
+          arg_0       = EVAL ~%arg_0%~
+          arg_1       = EVAL ~%arg_1%~
+          arg_2       = EVAL ~%arg_2%~
+          arg_3       = EVAL ~%arg_3%~
+          arg_4       = EVAL ~%arg_4%~
+          arg_5       = EVAL ~%arg_5%~
+      END
+      ACTION_IF (FILE_EXISTS ~%tbc_file%~) BEGIN
+        OUTER_SET num_converted = num_converted + 1
+        COPY_LARGE ~%tbc_file%~ ~%output_path%~
+        DELETE + ~%tbc_file%~
+      END
+      LAF REMOVE_DIRECTORY STR_VAR dir_name = EVAL ~%tbc_folder%~ END
+    END
+  END
+  
+  // converting TIZ -> TIS
+  ACTION_IF (convert_tiz != 0) BEGIN
+    ACTION_BASH_FOR ~%input_path%~ ~.+\.tiz$~ BEGIN
       OUTER_SPRINT tbc_folder ~%output_path%/%folder_prefix%%BASH_FOR_RES%~
       MKDIR ~%tbc_folder%~
       OUTER_SPRINT tbc_file ~%tbc_folder%/%BASH_FOR_RES%.tis~
