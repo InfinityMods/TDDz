@@ -165,7 +165,7 @@ BEGIN
 						PATCH_IF NOT ~%iconS%~ STRING_EQUAL ~+~ BEGIN 
 							PATCH_IF IS_AN_INT iconS 
 								BEGIN SPRINT iconS ~%resname%~ END
-							WRITE_ASCII 0x3A ~%iconS%~ #8
+							WRITE_ASCIIE 0x3A ~%iconS%~ #8
 							
 							INNER_ACTION BEGIN
 								ACTION_IF NOT FILE_EXISTS_IN_GAME ~%iconS%.bam~ BEGIN

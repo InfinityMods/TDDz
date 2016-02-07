@@ -53,9 +53,9 @@ BEGIN
 				INNER_ACTION BEGIN
 					ACTION_MATCH ~%resname%~
 					WITH
-						~CRYPTXX~ 	BEGIN COPY_EXISTING ~DD3501.ARE~ ~override~ WRITE_ASCII 0xA34 ~%newItem%~ #8 END
-						~MISERY~ 	BEGIN COPY_EXISTING ~DD3501.ARE~ ~override~ WRITE_ASCII 0xB4C ~%newItem%~ #8 END						
-						~TYRANT~ 	BEGIN COPY_EXISTING ~DD3501.ARE~ ~override~ WRITE_ASCII 0xC50 ~%newItem%~ #8 END						
+						~CRYPTXX~ 	BEGIN COPY_EXISTING ~DD3501.ARE~ ~override~ WRITE_ASCIIE 0xA34 ~%newItem%~ #8 END
+						~MISERY~ 	BEGIN COPY_EXISTING ~DD3501.ARE~ ~override~ WRITE_ASCIIE 0xB4C ~%newItem%~ #8 END						
+						~TYRANT~ 	BEGIN COPY_EXISTING ~DD3501.ARE~ ~override~ WRITE_ASCIIE 0xC50 ~%newItem%~ #8 END						
 						DEFAULT
 					END
 				END
@@ -78,7 +78,7 @@ END
 //			PATCH_IF ~%resname%~ STRING_EQUAL ~BLOOD~ && NOT ~%undroppable%~ STRING_EQUAL ~+~ && NOT ~%undroppable%~ STRING_EQUAL ~.~ BEGIN				
 //				INNER_ACTION BEGIN
 //					ACTION_FOR_EACH cre IN ~THORK1~ ~THORK2~ ~THORK3~ ~THORK4~ ~WTTHORK5~ ~WTTHORK6~ 
-//						BEGIN COPY_EXISTING ~%cre%.cre~ ~override~ WRITE_ASCII 0x3E4 ~%undroppable%~ #8 END
+//						BEGIN COPY_EXISTING ~%cre%.cre~ ~override~ WRITE_ASCIIE 0x3E4 ~%undroppable%~ #8 END
 //				END
 //			END
 //		END
@@ -112,7 +112,7 @@ BEGIN
 							BEGIN
 								ACTION_IF (~%replace%~) THEN BEGIN
 									ACTION_FOR_EACH cre IN ~THORK1~ ~THORK2~ ~THORK3~ ~THORK4~ ~WTTHORK5~ ~WTTHORK6~ 
-										BEGIN COPY_EXISTING ~%cre%.cre~ ~override~ WRITE_ASCII 0x3E4 ~%newItem%~ #8 END
+										BEGIN COPY_EXISTING ~%cre%.cre~ ~override~ WRITE_ASCIIE 0x3E4 ~%newItem%~ #8 END
 								END								
 							END						
 						DEFAULT
@@ -147,12 +147,12 @@ BEGIN
 				INNER_ACTION BEGIN
 					ACTION_MATCH ~%resname%~
 					WITH
-						~SCRX3~ 	BEGIN COPY_EXISTING ~DD3501.ARE~ ~override~ WRITE_ASCII 0xA98 ~%newItem%~ #8 END
-						~SCRX7~ 	BEGIN COPY_EXISTING ~DD3503.ARE~ ~override~ WRITE_ASCII 0xAD4 ~%newItem%~ #8 END
-						~SCRX8~ 	BEGIN COPY_EXISTING ~DD3501.ARE~ ~override~ WRITE_ASCII 0xB24 ~%newItem%~ #8 END
-						~SCRX13~ 	BEGIN COPY_EXISTING ~DD3501.ARE~ ~override~ WRITE_ASCII 0xC14 ~%newItem%~ #8 END
-						~SCRX22~ 	BEGIN COPY_EXISTING ~DD3501.ARE~ ~override~ WRITE_ASCII 0xA5C ~%newItem%~ #8 END
-						~SCRX32~ 	BEGIN COPY_EXISTING ~DD3503.ARE~ ~override~ WRITE_ASCII 0xC00 ~%newItem%~ #8 END
+						~SCRX3~ 	BEGIN COPY_EXISTING ~DD3501.ARE~ ~override~ WRITE_ASCIIE 0xA98 ~%newItem%~ #8 END
+						~SCRX7~ 	BEGIN COPY_EXISTING ~DD3503.ARE~ ~override~ WRITE_ASCIIE 0xAD4 ~%newItem%~ #8 END
+						~SCRX8~ 	BEGIN COPY_EXISTING ~DD3501.ARE~ ~override~ WRITE_ASCIIE 0xB24 ~%newItem%~ #8 END
+						~SCRX13~ 	BEGIN COPY_EXISTING ~DD3501.ARE~ ~override~ WRITE_ASCIIE 0xC14 ~%newItem%~ #8 END
+						~SCRX22~ 	BEGIN COPY_EXISTING ~DD3501.ARE~ ~override~ WRITE_ASCIIE 0xA5C ~%newItem%~ #8 END
+						~SCRX32~ 	BEGIN COPY_EXISTING ~DD3503.ARE~ ~override~ WRITE_ASCIIE 0xC00 ~%newItem%~ #8 END
 						DEFAULT
 					END
 				END
