@@ -46,7 +46,7 @@ BEGIN
 			BEGIN COPY ~%MOD_FOLDER%/%COMP_FOLDER%/%restype%~ ~%to%~ END END
 	
 	LAM ApplyScriptedXpCustomization
-	LAF InstallComponentSpecificContents STR_VAR comp = ~%aComp%~ END
+	LAF InstallComponentSpecificContents STR_VAR comp = EVAL ~%aComp%~ END
 	LAM CompileBAFandDAfterCustomizationsApplied
 	
 	ACTION_IF FILE_EXISTS ~%MOD_FOLDER%/DebugOn.txt~ BEGIN 
@@ -69,7 +69,7 @@ END
 //=============================================================================
 DEFINE_ACTION_MACRO CompileBAFandDAfterCustomizationsApplied
 BEGIN	
-	COMPILE ~%MOD_FOLDER%/TEMP/%COMP_FOLDER%~
+	COMPILE ~%MOD_FOLDER%/TEMP/%COMP_FOLDER%~ EVAL
 END
 
 //=============================================================================
