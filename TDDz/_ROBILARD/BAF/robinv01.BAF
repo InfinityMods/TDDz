@@ -1,0 +1,11 @@
+IF
+Global("robinv01see","GLOBAL",0)
+See([PC])
+Range([PC],25)
+THEN
+RESPONSE #100
+DestroySelf()
+SetGlobal("robinv01see","GLOBAL",1)
+END
+
+

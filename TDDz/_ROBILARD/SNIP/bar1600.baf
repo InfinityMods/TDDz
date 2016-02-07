@@ -1,0 +1,27 @@
+IF
+  InParty("robilard")
+  Global("spawnrobilardinvi01","GLOBAL",0)
+THEN
+  RESPONSE #100
+    CreateCreature("robinv01",[2550.256],4)
+    SetGlobal("spawnrobilardinvi01","GLOBAL",1)
+END
+
+IF
+  Global("robinv01see","GLOBAL",1)
+THEN
+  RESPONSE #100
+    CreateVisualEffect("spportal",[2368.403])
+    CreateVisualEffect("spportal",[2505.341])
+    CreateVisualEffect("spportal",[2603.217])
+    CreateVisualEffect("spportal",[2614.260])
+    CreateVisualEffect("spportal",[2705.170])
+    Wait(1)
+    CreateCreature("robrad01",[2368.403],4)
+    CreateCreature("robrad02",[2505.341],4)
+    CreateCreature("robrad03",[2603.217],4)
+    CreateCreature("robrad04",[2614.260],4)
+    CreateCreature("robrad05",[2705.170],4)
+    SetGlobal("robinv01see","GLOBAL",2)
+END
+

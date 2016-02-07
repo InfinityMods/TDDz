@@ -1,0 +1,119 @@
+IF
+Global("robrad05see","GLOBAL",0)
+See(NearestEnemyOf(Myself))
+Range(NearestEnemyOf(Myself),25)
+THEN
+RESPONSE #100
+SetGlobal("robrad05see","GLOBAL",1)
+StartDialogueNoSet([PC])
+END
+
+IF
+Global("prep01","LOCALS",0)
+THEN
+RESPONSE #100
+ReallyForceSpell(Myself,WIZARD_SPELL_TRAP) 
+ReallyForceSpell(Myself,WIZARD_FIRE_SHIELD_RED) 
+ActionOverride("robrad01",ReallyForceSpell(Myself,WIZARD_FIRE_SHIELD_BLUE)) 
+ActionOverride("robrad02",ReallyForceSpell(Myself,WIZARD_FIRE_SHIELD_RED)) 
+ActionOverride("robrad04",ReallyForceSpell(Myself,WIZARD_FIRE_SHIELD_BLUE)) 
+ActionOverride("robrad03",ReallyForceSpell(Myself,WIZARD_FIRE_SHIELD_RED)) 
+SetGlobal("prep01","LOCALS",1)
+END
+
+IF
+HaveSpell(WIZARD_FINGER_OF_DEATH) 
+THEN
+RESPONSE #100
+Spell(NearestEnemyOf(Myself),WIZARD_FINGER_OF_DEATH) 
+Spell(Myself,WIZARD_STONE_SKIN) 
+END
+
+IF
+HPLT(Myself,30)
+HaveSpell(WIZARD_STONE_SKIN) 
+THEN
+RESPONSE #100
+Spell(Myself,WIZARD_STONE_SKIN) 
+END
+
+IF
+Global("summonbig","LOCALS",0)
+THEN
+RESPONSE #100
+ReallyForceSpell(NearestEnemyOf(Myself),WIZARD_SUMMON_EFREET) 
+ReallyForceSpell(NearestEnemyOf(Myself),WIZARD_SUMMON_DJINNI) 
+SetGlobal("summonbig","LOCALS",1)
+END
+
+IF
+HaveSpell(WIZARD_TIME_STOP) 
+THEN
+RESPONSE #100
+Spell(Myself,WIZARD_TIME_STOP) 
+END
+
+IF
+HaveSpell(WIZARD_DISINTEGRATE) 
+THEN
+RESPONSE #100
+Spell(NearestEnemyOf(Myself),WIZARD_DISINTEGRATE) 
+END
+
+IF
+HaveSpell(WIZARD_MAGIC_MISSILE) 
+THEN
+RESPONSE #100
+Spell(NearestEnemyOf(Myself),WIZARD_MAGIC_MISSILE) 
+END
+
+IF
+HaveSpell(WIZARD_INVISIBLE_STALKER) 
+THEN
+RESPONSE #100
+Spell(NearestEnemyOf(Myself),WIZARD_INVISIBLE_STALKER) 
+END
+
+IF
+HaveSpell(WIZARD_MAZE) 
+THEN
+RESPONSE #100
+Spell(NearestEnemyOf(Myself),WIZARD_MAZE) 
+END
+
+IF
+HaveSpell(WIZARD_IMPRISONMENT) 
+THEN
+RESPONSE #100
+Spell(NearestEnemyOf(Myself),WIZARD_IMPRISONMENT) 
+END
+
+IF
+HaveSpell(WIZARD_LIGHTNING_BOLT) 
+THEN
+RESPONSE #100
+Spell(NearestEnemyOf(Myself),WIZARD_LIGHTNING_BOLT) 
+END
+
+IF
+HaveSpell(WIZARD_CHAIN_LIGHTNING) 
+THEN
+RESPONSE #100
+Spell(NearestEnemyOf(Myself),WIZARD_CHAIN_LIGHTNING) 
+END
+
+IF
+HaveSpell(WIZARD_POWER_WORD_STUN) 
+THEN
+RESPONSE #100
+Spell(NearestEnemyOf(Myself),WIZARD_POWER_WORD_STUN) 
+END
+
+IF
+See(NearestEnemyOf(Myself))
+THEN
+RESPONSE #100
+Attack(NearestEnemyOf(Myself))
+END
+
+
