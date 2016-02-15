@@ -1,7 +1,7 @@
 DEFINE_ACTION_MACRO InstallSpecificContents
 BEGIN		
-	EXTEND_TOP ~AR0300.bcs~ ~%MOD_FOLDER%/%COMP_FOLDER%/Snip/bAR0300.baf~
-	EXTEND_BOTTOM ~baldur.bcs~ ~%MOD_FOLDER%/%COMP_FOLDER%/Snip/bbaldur.baf~
+	EXTEND_BOTTOM ~AR0300.bcs~ ~%MOD_FOLDER%/%COMP_FOLDER%/Snip/bAR0300.baf~
+	EXTEND_BOTTOM ~ar1600.bcs~ ~%MOD_FOLDER%/%COMP_FOLDER%/Snip/bar1600.baf~
 	APPEND ~PDIALOG.2DA~ ~ROBILARD     ROBILP             ***               ***                ***    	      ***    		    ***    		        ***~ UNLESS ~ROBILARD~
 	
 	COPY_EXISTING ~ROBILARD.cre~ ~override~
@@ -14,9 +14,16 @@ BEGIN
 				  ~robend02.cre~ ~override~
 	REMOVE_CRE_ITEM ~ZZSCRL01~ ~ZZSCRL02~ ~ZZSCRL03~
 	
-	APPEND ~SPELL.IDS~ ~1737 CLERIC_SUMMON_WATER_ELEMENTAL~ UNLESS ~1737~
-	APPEND ~SPELL.IDS~ ~2627 WIZARD_ANTIMAGIC_FIELD~ UNLESS ~2627~
-	
+	COPY ~%MOD_FOLDER%/%COMP_FOLDER%/cre/robinv01.CRE~ ~override~
+	COPY ~%MOD_FOLDER%/%COMP_FOLDER%/cre/robrad01.CRE~ ~override~
+		 ~%MOD_FOLDER%/%COMP_FOLDER%/cre/robrad02.CRE~ ~override~
+		 ~%MOD_FOLDER%/%COMP_FOLDER%/cre/robrad03.CRE~ ~override~
+		 ~%MOD_FOLDER%/%COMP_FOLDER%/cre/robrad04.CRE~ ~override~
+			SAY NAME1 @999997
+			SAY NAME2 @999997
+	COPY ~%MOD_FOLDER%/%COMP_FOLDER%/cre/robrad05.CRE~ ~override~
+			SAY NAME1 @999998
+			SAY NAME2 @999998
 	
 	OUTER_TEXT_SPRINT sender ~%COMP_FOLDER%~
 	INCLUDE ~%MOD_FOLDER%/Lib/Helpers.tpa~ LAF Accept STR_VAR sender target = ~_ROBILARD~ END

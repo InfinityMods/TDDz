@@ -16,3 +16,100 @@ THEN
     Dialog([PC])
 END
 
+IF
+  InParty(Myself)
+  Global("tz_Robilardattack01","GLOBAL",0)
+THEN
+  RESPONSE #100
+    SetGlobalTimer("tz_Robattack01","GLOBAL",THREE_DAYS)
+    SetGlobal("tz_Robilardattack01","GLOBAL",1)
+END
+
+IF
+  InParty(Myself)
+  Global("tz_Robilardattack01","GLOBAL",1)
+  GlobalTimerExpired("tz_Robattack01","GLOBAL")
+  AreaType(OUTDOOR)
+THEN
+  RESPONSE #100
+    CreateVisualEffectObject("spdimndr",Player1)
+    Wait(2)
+    CreateCreatureObject("roborb01",Player1,0,0,0)
+    SetGlobal("tz_Robilardattack01","GLOBAL",2)
+END
+
+IF
+  Dead("roborb01")
+  InParty(Myself)
+  Global("tz_Robilardattack01","GLOBAL",2)
+THEN
+  RESPONSE #100
+    SetGlobal("tz_RobilardAttack01","GLOBAL",3)
+	SetGlobalTimer("tz_Robattack02","GLOBAL",THREE_DAYS)
+    ActionOverride("robilard",StartDialogue("orbrob01",Player1))
+END
+
+IF
+  InParty(Myself)
+  GlobalTimerExpired("tz_Robattack02","GLOBAL")
+  Global("tz_Robilardattack01","GLOBAL",3)
+  LevelGT(Player1,16)
+THEN
+  RESPONSE #100
+    CreateVisualEffectObject("spplanar",Player1)
+    CreateVisualEffectObject("spportal",Player1)
+    Wait(1)
+    CreateVisualEffectObject("spdimndr",Player1)
+    Wait(1)
+    CreateCreatureObject("lv16rob1",Player1,0,0,0)
+    CreateCreatureObject("lv16rob2",Player1,0,0,0)
+    CreateCreatureObject("lv16rob3",Player1,0,0,0)
+    CreateCreatureObject("lv16rob4",Player1,0,0,0)
+    SetGlobal("tz_Robilardattack01","GLOBAL",4)
+END
+
+IF
+  Dead("lv16rob4")
+  Dead("lv16rob3")
+  Dead("lv16rob2")
+  Dead("lv16rob1")
+  Global("tz_Robilardattack01","GLOBAL",4)
+  !StateCheck(Myself,STATE_DEAD)
+THEN
+  RESPONSE #100
+    SetGlobal("tz_Robilardattack01","GLOBAL",5)
+    ActionOverride("robilard",StartDialogue("drowrob1",Player1))
+END
+
+IF
+  Global("tz_Robilardattack01","GLOBAL",5)
+  InParty(Myself)
+THEN
+  RESPONSE #100
+    SetGlobalTimer("tz_robishowdown","GLOBAL",FOUR_DAYS)
+    SetGlobal("tz_Robilardattack01","GLOBAL",6)
+END
+
+IF
+  Global("tz_Robilardattack01","GLOBAL",6)
+  GlobalTimerExpired("tz_robishowdown","GLOBAL")
+  InParty(Myself)
+THEN
+  RESPONSE #100
+    SetGlobal("tz_Robilardattack01","GLOBAL",7)
+    StartCutSceneMode()
+    StartCutScene("robimov1")
+END
+
+IF
+  InParty(Myself)
+  Dead("robend01")
+  Dead("robend02")
+  Global("tz_Robilardattack01","GLOBAL",7)
+  !StateCheck(Myself,STATE_DEAD)
+THEN
+  RESPONSE #100
+    SetGlobal("tz_Robilardattack01","GLOBAL",8)
+    ActionOverride("robilard",StartDialogue("endedrob",Player1))
+END
+

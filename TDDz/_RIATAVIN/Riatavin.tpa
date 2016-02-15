@@ -140,13 +140,13 @@ BEGIN
 					WITH
 						~BLOOD~ 	
 							BEGIN 
-								ACTION_IF (~%replace%~) BEGIN COPY_EXISTING ~BGCTBOSS.cre~ ~override~ WRITE_ASCII 0x3E4 ~%newItem%~ #8 END 
-								COPY_EXISTING ~DD8001D.are~ ~override~ WRITE_ASCII 0x3C8 ~%newItem%~ #8
+								ACTION_IF (~%replace%~) BEGIN COPY_EXISTING ~BGCTBOSS.cre~ ~override~ WRITE_ASCIIE 0x3E4 ~%newItem%~ #8 END 
+								COPY_EXISTING ~DD8001D.are~ ~override~ WRITE_ASCIIE 0x3C8 ~%newItem%~ #8
 							END
-						~DEATHREB~ 	BEGIN COPY_EXISTING ~DUEGSAL3.sto~ ~override~ WRITE_ASCII 0x25C ~%newItem%~ #8 END
-						~LOHVAR~ 	BEGIN COPY_EXISTING ~DD8001D.are~ ~override~ WRITE_ASCII 0x418 ~%newItem%~ #8 END
-						~MAGBOTXX~ 	BEGIN ACTION_IF (~%replace%~)BEGIN COPY_EXISTING ~WARDWIZS.sto~ ~override~ WRITE_ASCII 0x230 ~%newItem%~ #8 END END
-						~TROLSIND~ 	BEGIN ACTION_IF (~%replace%~)BEGIN COPY_EXISTING ~SANDRAIN.sto~ ~override~ WRITE_ASCII 0x690 ~%newItem%~ #8 END END
+						~DEATHREB~ 	BEGIN COPY_EXISTING ~DUEGSAL3.sto~ ~override~ WRITE_ASCIIE 0x25C ~%newItem%~ #8 END
+						~LOHVAR~ 	BEGIN COPY_EXISTING ~DD8001D.are~ ~override~ WRITE_ASCIIE 0x418 ~%newItem%~ #8 END
+						~MAGBOTXX~ 	BEGIN ACTION_IF (~%replace%~)BEGIN COPY_EXISTING ~WARDWIZS.sto~ ~override~ WRITE_ASCIIE 0x230 ~%newItem%~ #8 END END
+						~TROLSIND~ 	BEGIN ACTION_IF (~%replace%~)BEGIN COPY_EXISTING ~SANDRAIN.sto~ ~override~ WRITE_ASCIIE 0x690 ~%newItem%~ #8 END END
 						DEFAULT
 					END
 				END
@@ -177,66 +177,66 @@ BEGIN
 				INNER_ACTION BEGIN					
 					ACTION_MATCH ~%resname%~
 					WITH			
-						~AEGISRNG~ 	BEGIN COPY_EXISTING ~CALITEMP.sto~ 	~override~ WRITE_ASCII 0x2C8 	~%newItem%~ #8 END
-						~AMAUNMAC~ 	BEGIN COPY_EXISTING ~CALITEMP.sto~ 	~override~ WRITE_ASCII 0x31C 	~%newItem%~ #8 END
-						~AMAROS~ 	BEGIN COPY_EXISTING ~DD7002.are~ 	~override~ WRITE_ASCII 0x1750 	~%newItem%~ #8 END
-						~ARAMIS~ 	BEGIN COPY_EXISTING ~3307WIZ.sto~ 	~override~ WRITE_ASCII 0x1F8 	~%newItem%~ #8 END
-						~ARQUINXX~ 	BEGIN COPY_EXISTING ~3314FRGE.sto~ 	~override~ WRITE_ASCII 0x428 	~%newItem%~ #8 END
-						~BLADETRM~ 	BEGIN ACTION_IF NOT ~%undroppable%~ BEGIN COPY_EXISTING ~R800001.cre~ ~override~ WRITE_ASCII 0x3F8 ~%newItem%~ #8 END END
-						~BONEMASK~ 	BEGIN COPY_EXISTING ~DUEGSAL3.sto~ 	~override~ WRITE_ASCII 0x2CC 	~%newItem%~ #8 END												
+						~AEGISRNG~ 	BEGIN COPY_EXISTING ~CALITEMP.sto~ 	~override~ WRITE_ASCIIE 0x2C8 	~%newItem%~ #8 END
+						~AMAUNMAC~ 	BEGIN COPY_EXISTING ~CALITEMP.sto~ 	~override~ WRITE_ASCIIE 0x31C 	~%newItem%~ #8 END
+						~AMAROS~ 	BEGIN COPY_EXISTING ~DD7002.are~ 	~override~ WRITE_ASCIIE 0x1750 	~%newItem%~ #8 END
+						~ARAMIS~ 	BEGIN COPY_EXISTING ~3307WIZ.sto~ 	~override~ WRITE_ASCIIE 0x1F8 	~%newItem%~ #8 END
+						~ARQUINXX~ 	BEGIN COPY_EXISTING ~3314FRGE.sto~ 	~override~ WRITE_ASCIIE 0x428 	~%newItem%~ #8 END
+						~BLADETRM~ 	BEGIN ACTION_IF NOT ~%undroppable%~ BEGIN COPY_EXISTING ~R800001.cre~ ~override~ WRITE_ASCIIE 0x3F8 ~%newItem%~ #8 END END
+						~BONEMASK~ 	BEGIN COPY_EXISTING ~DUEGSAL3.sto~ 	~override~ WRITE_ASCIIE 0x2CC 	~%newItem%~ #8 END												
 						~BOTABODE~  BEGIN COPY ~%MOD_FOLDER%/TEMP/%COMP_FOLDER%/DD1002X1.baf~ ~%MOD_FOLDER%/TEMP/%COMP_FOLDER%~ REPLACE_TEXTUALLY ~BOTABODE~ ~%newItem%~ END
-						~CELEBRA~ 	BEGIN COPY_EXISTING ~RAZAK01.sto~ 	~override~ WRITE_ASCII 0x398 	~%newItem%~ #8 END
-						~CERBSW2H~ 	BEGIN COPY_EXISTING ~DD7004.are~ 	~override~ WRITE_ASCII 0x84C 	~%newItem%~ #8 END
-						~CREATE~ 	BEGIN COPY_EXISTING ~SANDRAIN.sto~ 	~override~ WRITE_ASCII 0x620 	~%newItem%~ #8 END
-						~DAGGASP~ 	BEGIN COPY_EXISTING ~RAZAK01.sto~ 	~override~ WRITE_ASCII 0x3B4 	~%newItem%~ #8 END						
-						~DHORNX~ 	BEGIN COPY_EXISTING ~DUEGSAL3.sto~ 	~override~ WRITE_ASCII 0x2B0 	~%newItem%~ #8 END
-						~DIVER~ 	BEGIN COPY_EXISTING ~AR1106.are~ 	~override~ WRITE_ASCII 0xE84 	~%newItem%~ #8 END						
-						~ELVHUNTB~ 	BEGIN COPY_EXISTING ~DD7002.are~ 	~override~ WRITE_ASCII 0x1764 	~%newItem%~ #8 END
+						~CELEBRA~ 	BEGIN COPY_EXISTING ~RAZAK01.sto~ 	~override~ WRITE_ASCIIE 0x398 	~%newItem%~ #8 END
+						~CERBSW2H~ 	BEGIN COPY_EXISTING ~DD7004.are~ 	~override~ WRITE_ASCIIE 0x84C 	~%newItem%~ #8 END
+						~CREATE~ 	BEGIN COPY_EXISTING ~SANDRAIN.sto~ 	~override~ WRITE_ASCIIE 0x620 	~%newItem%~ #8 END
+						~DAGGASP~ 	BEGIN COPY_EXISTING ~RAZAK01.sto~ 	~override~ WRITE_ASCIIE 0x3B4 	~%newItem%~ #8 END						
+						~DHORNX~ 	BEGIN COPY_EXISTING ~DUEGSAL3.sto~ 	~override~ WRITE_ASCIIE 0x2B0 	~%newItem%~ #8 END
+						~DIVER~ 	BEGIN COPY_EXISTING ~AR1106.are~ 	~override~ WRITE_ASCIIE 0xE84 	~%newItem%~ #8 END						
+						~ELVHUNTB~ 	BEGIN COPY_EXISTING ~DD7002.are~ 	~override~ WRITE_ASCIIE 0x1764 	~%newItem%~ #8 END
 						~ELSHUKAR~  BEGIN COPY ~%MOD_FOLDER%/TEMP/%COMP_FOLDER%/DD1002X1.baf~ ~%MOD_FOLDER%/TEMP/%COMP_FOLDER%~ REPLACE_TEXTUALLY ~ELSHUKAR~ ~%newItem%~ END
-						~ENTROBE~ 	BEGIN COPY_EXISTING ~3307WIZ.sto~ 	~override~ WRITE_ASCII 0x214 	~%newItem%~ #8 END
-						~FLAMPLAT~ 	BEGIN COPY_EXISTING ~3314FRGE.sto~ 	~override~ WRITE_ASCII 0x47C 	~%newItem%~ #8 END
-						~GHARBOOT~ 	BEGIN COPY_EXISTING ~SANDRAIN.sto~ 	~override~ WRITE_ASCII 0x63C 	~%newItem%~ #8 END
-						~GHARSW~ 	BEGIN COPY_EXISTING ~RAZAK01.sto~ 	~override~ WRITE_ASCII 0x3D0 	~%newItem%~ #8 END
-						~GLORY~ 	BEGIN ACTION_IF NOT ~%undroppable%~ BEGIN COPY_EXISTING ~R800001.cre~ ~override~ WRITE_ASCII 0x3E4 ~%newItem%~ #8 END END
-						~HAMFORCE~ 	BEGIN COPY_EXISTING ~3314FRGE.sto~ 	~override~ WRITE_ASCII 0x444 	~%newItem%~ #8 END
-						~IOUNX3~ 	BEGIN COPY_EXISTING ~DD7001.are~ 	~override~ WRITE_ASCII 0x8F8 	~%newItem%~ #8 END
-						~IOUNX7~ 	BEGIN COPY_EXISTING ~CALITEMP.sto~ 	~override~ WRITE_ASCII 0x2E4 	~%newItem%~ #8 END
-						~IOUNX8~ 	BEGIN COPY_EXISTING ~CALITEMP.sto~ 	~override~ WRITE_ASCII 0x300 	~%newItem%~ #8 END
-						~MALICE~ 	BEGIN COPY_EXISTING ~DUEGSAL3.sto~ 	~override~ WRITE_ASCII 0x294 	~%newItem%~ #8 END
-						~MARKBOWX~ 	BEGIN COPY_EXISTING ~CALIMART.sto~ 	~override~ WRITE_ASCII 0x770 	~%newItem%~ #8 END
-						~MIELIKKI~ 	BEGIN COPY_EXISTING ~3314FRGE.sto~ 	~override~ WRITE_ASCII 0x498 	~%newItem%~ #8 END
-						~MONGOVE~ 	BEGIN COPY_EXISTING ~3314FRGE.sto~ 	~override~ WRITE_ASCII 0x460 	~%newItem%~ #8 END
-						~MOORSX~ 	BEGIN COPY_EXISTING ~SANDRAIN.sto~ 	~override~ WRITE_ASCII 0x658 	~%newItem%~ #8 END
-						~ORRSHLD~ 	BEGIN COPY_EXISTING ~CALITEMP.sto~ 	~override~ WRITE_ASCII 0x338 	~%newItem%~ #8 END
-						~ROBE2~ 	BEGIN COPY_EXISTING ~DUEGSAL3.sto~ 	~override~ WRITE_ASCII 0x278 	~%newItem%~ #8 END
+						~ENTROBE~ 	BEGIN COPY_EXISTING ~3307WIZ.sto~ 	~override~ WRITE_ASCIIE 0x214 	~%newItem%~ #8 END
+						~FLAMPLAT~ 	BEGIN COPY_EXISTING ~3314FRGE.sto~ 	~override~ WRITE_ASCIIE 0x47C 	~%newItem%~ #8 END
+						~GHARBOOT~ 	BEGIN COPY_EXISTING ~SANDRAIN.sto~ 	~override~ WRITE_ASCIIE 0x63C 	~%newItem%~ #8 END
+						~GHARSW~ 	BEGIN COPY_EXISTING ~RAZAK01.sto~ 	~override~ WRITE_ASCIIE 0x3D0 	~%newItem%~ #8 END
+						~GLORY~ 	BEGIN ACTION_IF NOT ~%undroppable%~ BEGIN COPY_EXISTING ~R800001.cre~ ~override~ WRITE_ASCIIE 0x3E4 ~%newItem%~ #8 END END
+						~HAMFORCE~ 	BEGIN COPY_EXISTING ~3314FRGE.sto~ 	~override~ WRITE_ASCIIE 0x444 	~%newItem%~ #8 END
+						~IOUNX3~ 	BEGIN COPY_EXISTING ~DD7001.are~ 	~override~ WRITE_ASCIIE 0x8F8 	~%newItem%~ #8 END
+						~IOUNX7~ 	BEGIN COPY_EXISTING ~CALITEMP.sto~ 	~override~ WRITE_ASCIIE 0x2E4 	~%newItem%~ #8 END
+						~IOUNX8~ 	BEGIN COPY_EXISTING ~CALITEMP.sto~ 	~override~ WRITE_ASCIIE 0x300 	~%newItem%~ #8 END
+						~MALICE~ 	BEGIN COPY_EXISTING ~DUEGSAL3.sto~ 	~override~ WRITE_ASCIIE 0x294 	~%newItem%~ #8 END
+						~MARKBOWX~ 	BEGIN COPY_EXISTING ~CALIMART.sto~ 	~override~ WRITE_ASCIIE 0x770 	~%newItem%~ #8 END
+						~MIELIKKI~ 	BEGIN COPY_EXISTING ~3314FRGE.sto~ 	~override~ WRITE_ASCIIE 0x498 	~%newItem%~ #8 END
+						~MONGOVE~ 	BEGIN COPY_EXISTING ~3314FRGE.sto~ 	~override~ WRITE_ASCIIE 0x460 	~%newItem%~ #8 END
+						~MOORSX~ 	BEGIN COPY_EXISTING ~SANDRAIN.sto~ 	~override~ WRITE_ASCIIE 0x658 	~%newItem%~ #8 END
+						~ORRSHLD~ 	BEGIN COPY_EXISTING ~CALITEMP.sto~ 	~override~ WRITE_ASCIIE 0x338 	~%newItem%~ #8 END
+						~ROBE2~ 	BEGIN COPY_EXISTING ~DUEGSAL3.sto~ 	~override~ WRITE_ASCIIE 0x278 	~%newItem%~ #8 END
 						~SHLDGRAZ~ 	BEGIN ACTION_IF NOT ~%undroppable%~ 
 										BEGIN 
-											COPY_EXISTING ~GRAZZT01.cre~ 	~override~ WRITE_ASCII 0x660 ~%newItem%~ #8 
-											COPY_EXISTING ~GRAZZT02.cre~ 	~override~ WRITE_ASCII 0x660 ~%newItem%~ #8 
+											COPY_EXISTING ~GRAZZT01.cre~ 	~override~ WRITE_ASCIIE 0x660 ~%newItem%~ #8 
+											COPY_EXISTING ~GRAZZT02.cre~ 	~override~ WRITE_ASCIIE 0x660 ~%newItem%~ #8 
 										END	
 									END
 						~SILBLADE~  BEGIN COPY ~%MOD_FOLDER%/TEMP/%COMP_FOLDER%/DD1002X1.baf~ ~%MOD_FOLDER%/TEMP/%COMP_FOLDER%~ REPLACE_TEXTUALLY ~SILBLADE~ ~%newItem%~ END
-						~SHOON~ 	BEGIN COPY_EXISTING ~DD7001.are~ 	~override~ WRITE_ASCII 0x920 	~%newItem%~ #8 END
-						~STARYM~ 	BEGIN COPY_EXISTING ~RAZAK01.sto~ 	~override~ WRITE_ASCII 0x408 	~%newItem%~ #8 END
+						~SHOON~ 	BEGIN COPY_EXISTING ~DD7001.are~ 	~override~ WRITE_ASCIIE 0x920 	~%newItem%~ #8 END
+						~STARYM~ 	BEGIN COPY_EXISTING ~RAZAK01.sto~ 	~override~ WRITE_ASCIIE 0x408 	~%newItem%~ #8 END
 						~SW1HGRAZ~ 	BEGIN ACTION_IF NOT ~%undroppable%~ 
 										BEGIN 
 											COPY_EXISTING ~GRAZZT01.cre~ 	~override~ 
-												WRITE_ASCII 0x688 ~%newItem%~ #8 
-												WRITE_ASCII 0x69C ~%newItem%~ #8 
-												WRITE_ASCII 0x6B0 ~%newItem%~ #8 
-												WRITE_ASCII 0x6C4 ~%newItem%~ #8 
+												WRITE_ASCIIE 0x688 ~%newItem%~ #8 
+												WRITE_ASCIIE 0x69C ~%newItem%~ #8 
+												WRITE_ASCIIE 0x6B0 ~%newItem%~ #8 
+												WRITE_ASCIIE 0x6C4 ~%newItem%~ #8 
 											COPY_EXISTING ~GRAZZT02.cre~ 	~override~ 
-												WRITE_ASCII 0x688 ~%newItem%~ #8 
-												WRITE_ASCII 0x69C ~%newItem%~ #8 
-												WRITE_ASCII 0x6B0 ~%newItem%~ #8 
-												WRITE_ASCII 0x6C4 ~%newItem%~ #8
+												WRITE_ASCIIE 0x688 ~%newItem%~ #8 
+												WRITE_ASCIIE 0x69C ~%newItem%~ #8 
+												WRITE_ASCIIE 0x6B0 ~%newItem%~ #8 
+												WRITE_ASCIIE 0x6C4 ~%newItem%~ #8
 										END	
 									END
-						~SWZZZ1~ 	BEGIN COPY_EXISTING ~CALIMART.sto~ 	~override~ WRITE_ASCII 0x71C 	~%newItem%~ #8 END
-						~SWZZZ2~ 	BEGIN COPY_EXISTING ~RAZAK01.sto~ 	~override~ WRITE_ASCII 0x3EC 	~%newItem%~ #8 END
-						~USHLD3B~ 	BEGIN COPY_EXISTING ~DD7004.are~ 	~override~ WRITE_ASCII 0x8C4 	~%newItem%~ #8 END
-						~UMSTR5A~ 	BEGIN COPY_EXISTING ~CALIMART.sto~ 	~override~ WRITE_ASCII 0x754 	~%newItem%~ #8 END						
-						~WYVCROWN~ 	BEGIN COPY_EXISTING ~DRAGGREN.cre~ 	~override~ WRITE_ASCII 0x58C 	~%newItem%~ #8 END						
+						~SWZZZ1~ 	BEGIN COPY_EXISTING ~CALIMART.sto~ 	~override~ WRITE_ASCIIE 0x71C 	~%newItem%~ #8 END
+						~SWZZZ2~ 	BEGIN COPY_EXISTING ~RAZAK01.sto~ 	~override~ WRITE_ASCIIE 0x3EC 	~%newItem%~ #8 END
+						~USHLD3B~ 	BEGIN COPY_EXISTING ~DD7004.are~ 	~override~ WRITE_ASCIIE 0x8C4 	~%newItem%~ #8 END
+						~UMSTR5A~ 	BEGIN COPY_EXISTING ~CALIMART.sto~ 	~override~ WRITE_ASCIIE 0x754 	~%newItem%~ #8 END						
+						~WYVCROWN~ 	BEGIN COPY_EXISTING ~DRAGGREN.cre~ 	~override~ WRITE_ASCIIE 0x58C 	~%newItem%~ #8 END						
 						DEFAULT
 					END
 				END
@@ -269,45 +269,45 @@ BEGIN
 				INNER_ACTION BEGIN
 					ACTION_MATCH ~%resname%~
 					WITH
-						~SCRM104~	BEGIN COPY_EXISTING ~RAZAK01.sto~ 	~override~ WRITE_ASCII 0x424 	~%newItem%~ #8 END
+						~SCRM104~	BEGIN COPY_EXISTING ~RAZAK01.sto~ 	~override~ WRITE_ASCIIE 0x424 	~%newItem%~ #8 END
 						~SCRX1~ 	
 							BEGIN 
-								COPY_EXISTING ~3307WIZ.sto~ 	~override~ WRITE_ASCII 0x188 	~%newItem%~ #8
-								COPY_EXISTING ~WARDWIZS.sto~ 	~override~ WRITE_ASCII 0x188 	~%newItem%~ #8
+								COPY_EXISTING ~3307WIZ.sto~ 	~override~ WRITE_ASCIIE 0x188 	~%newItem%~ #8
+								COPY_EXISTING ~WARDWIZS.sto~ 	~override~ WRITE_ASCIIE 0x188 	~%newItem%~ #8
 							END
-						~SCRX9~		BEGIN COPY_EXISTING ~AR1106.are~ 	~override~ WRITE_ASCII 0xE98 	~%newItem%~ #8 END
-						~SCRX15~	BEGIN COPY_EXISTING ~3307WIZ.sto~ 	~override~ WRITE_ASCII 0x1A4 	~%newItem%~ #8 END
-						~SCRX17~ 	BEGIN COPY_EXISTING ~3307WIZ.sto~ 	~override~ WRITE_ASCII 0x1C0 	~%newItem%~ #8 END
-						~SCRX19~ 	BEGIN COPY_EXISTING ~WARDWIZS.sto~ 	~override~ WRITE_ASCII 0x1A4 	~%newItem%~ #8 END
-						~SCRX20~ 	BEGIN COPY_EXISTING ~RAZAK01.sto~ 	~override~ WRITE_ASCII 0x4B0 	~%newItem%~ #8 END
-						~SCRX21~ 	BEGIN COPY_EXISTING ~DD8001D.are~ 	~override~ WRITE_ASCII 0x404 	~%newItem%~ #8 END						
-						~SCRX24~ 	BEGIN COPY_EXISTING ~DD8001D.are~ 	~override~ WRITE_ASCII 0x454 	~%newItem%~ #8 END
-						~SCRX26~ 	BEGIN COPY_EXISTING ~3307WIZ.sto~ 	~override~ WRITE_ASCII 0x1DC 	~%newItem%~ #8 END
-						~SCRX27~ 	BEGIN COPY_EXISTING ~WARDWIZS.sto~ 	~override~ WRITE_ASCII 0x214 	~%newItem%~ #8 END
-						~SCRX28~ 	BEGIN COPY_EXISTING ~DUEGSAL3.sto~ 	~override~ WRITE_ASCII 0x304 	~%newItem%~ #8 END
-						~SCRX33~ 	BEGIN COPY_EXISTING ~WARDWIZS.sto~ 	~override~ WRITE_ASCII 0x1F8 	~%newItem%~ #8 END
-						~SCRX34~ 	BEGIN COPY_EXISTING ~DUEGSAL3.sto~ 	~override~ WRITE_ASCII 0x320 	~%newItem%~ #8 END
-						~SCRX35~ 	BEGIN COPY_EXISTING ~DD7001.are~ 	~override~ WRITE_ASCII 0x934 	~%newItem%~ #8 END
-						~SCRX36~ 	BEGIN COPY_EXISTING ~DUEGSAL3.sto~ 	~override~ WRITE_ASCII 0x33C 	~%newItem%~ #8 END
-						~SCRX37~ 	BEGIN COPY_EXISTING ~DDRAGBRW.cre~ 	~override~ WRITE_ASCII 0x66C 	~%newItem%~ #8 END
-						~SCRX39~ 	BEGIN COPY_EXISTING ~RAZAK01.sto~ 	~override~ WRITE_ASCII 0x478 	~%newItem%~ #8 END
-						~SCRX42~ 	BEGIN COPY_EXISTING ~DRAGGOLD.cre~ 	~override~ WRITE_ASCII 0x564 	~%newItem%~ #8 END
-						~SCRX43~ 	BEGIN COPY_EXISTING ~RAZAK01.sto~ 	~override~ WRITE_ASCII 0x494 	~%newItem%~ #8 END
-						~SCRX46~ 	BEGIN COPY_EXISTING ~RAZAK01.sto~ 	~override~ WRITE_ASCII 0x440 	~%newItem%~ #8 END
-						~SCRX48~ 	BEGIN COPY_EXISTING ~DD8001D.are~ 	~override~ WRITE_ASCII 0x440 	~%newItem%~ #8 END
-						~SCRX49~ 	BEGIN COPY_EXISTING ~DDRAGBRW.cre~ 	~override~ WRITE_ASCII 0x658 	~%newItem%~ #8 END
-						~SCRX53~ 	BEGIN COPY_EXISTING ~DUEGSAL3.sto~ 	~override~ WRITE_ASCII 0x358 	~%newItem%~ #8 END
-						~SCRX55~ 	BEGIN COPY_EXISTING ~DRAGGREN.cre~ 	~override~ WRITE_ASCII 0x578 	~%newItem%~ #8 END
-						~SCRX56~ 	BEGIN COPY_EXISTING ~DUEGSAL3.sto~ 	~override~ WRITE_ASCII 0x2E8 	~%newItem%~ #8 END
-						~SCRX57~ 	BEGIN COPY_EXISTING ~RAZAK01.sto~ 	~override~ WRITE_ASCII 0x45C 	~%newItem%~ #8 END
-						~SCRX58~ 	BEGIN COPY_EXISTING ~DRAGGOLD.cre~ 	~override~ WRITE_ASCII 0x550 	~%newItem%~ #8 END
-						~SCRX65~ 	BEGIN COPY_EXISTING ~DD7002.are~ 	~override~ WRITE_ASCII 0x187C	~%newItem%~ #8 END
-						~SCRX67~ 	BEGIN COPY_EXISTING ~DRAGGREN.cre~ 	~override~ WRITE_ASCII 0x564 	~%newItem%~ #8 END
-						~SCRX72~ 	BEGIN COPY_EXISTING ~WARDWIZS.sto~ 	~override~ WRITE_ASCII 0x1DC	~%newItem%~ #8 END
-						~SCRX74~ 	BEGIN COPY_EXISTING ~WARDWIZS.sto~ 	~override~ WRITE_ASCII 0x1C0	~%newItem%~ #8 END
-						~SCRX76~ 	BEGIN COPY_EXISTING ~CALIMART.sto~ 	~override~ WRITE_ASCII 0x6E4	~%newItem%~ #8 END
-						~SCRX77~ 	BEGIN COPY_EXISTING ~CALIMART.sto~ 	~override~ WRITE_ASCII 0x700	~%newItem%~ #8 END
-						~SCRX81~ 	BEGIN COPY_EXISTING ~CALIMART.sto~ 	~override~ WRITE_ASCII 0x6C8	~%newItem%~ #8 END
+						~SCRX9~		BEGIN COPY_EXISTING ~AR1106.are~ 	~override~ WRITE_ASCIIE 0xE98 	~%newItem%~ #8 END
+						~SCRX15~	BEGIN COPY_EXISTING ~3307WIZ.sto~ 	~override~ WRITE_ASCIIE 0x1A4 	~%newItem%~ #8 END
+						~SCRX17~ 	BEGIN COPY_EXISTING ~3307WIZ.sto~ 	~override~ WRITE_ASCIIE 0x1C0 	~%newItem%~ #8 END
+						~SCRX19~ 	BEGIN COPY_EXISTING ~WARDWIZS.sto~ 	~override~ WRITE_ASCIIE 0x1A4 	~%newItem%~ #8 END
+						~SCRX20~ 	BEGIN COPY_EXISTING ~RAZAK01.sto~ 	~override~ WRITE_ASCIIE 0x4B0 	~%newItem%~ #8 END
+						~SCRX21~ 	BEGIN COPY_EXISTING ~DD8001D.are~ 	~override~ WRITE_ASCIIE 0x404 	~%newItem%~ #8 END						
+						~SCRX24~ 	BEGIN COPY_EXISTING ~DD8001D.are~ 	~override~ WRITE_ASCIIE 0x454 	~%newItem%~ #8 END
+						~SCRX26~ 	BEGIN COPY_EXISTING ~3307WIZ.sto~ 	~override~ WRITE_ASCIIE 0x1DC 	~%newItem%~ #8 END
+						~SCRX27~ 	BEGIN COPY_EXISTING ~WARDWIZS.sto~ 	~override~ WRITE_ASCIIE 0x214 	~%newItem%~ #8 END
+						~SCRX28~ 	BEGIN COPY_EXISTING ~DUEGSAL3.sto~ 	~override~ WRITE_ASCIIE 0x304 	~%newItem%~ #8 END
+						~SCRX33~ 	BEGIN COPY_EXISTING ~WARDWIZS.sto~ 	~override~ WRITE_ASCIIE 0x1F8 	~%newItem%~ #8 END
+						~SCRX34~ 	BEGIN COPY_EXISTING ~DUEGSAL3.sto~ 	~override~ WRITE_ASCIIE 0x320 	~%newItem%~ #8 END
+						~SCRX35~ 	BEGIN COPY_EXISTING ~DD7001.are~ 	~override~ WRITE_ASCIIE 0x934 	~%newItem%~ #8 END
+						~SCRX36~ 	BEGIN COPY_EXISTING ~DUEGSAL3.sto~ 	~override~ WRITE_ASCIIE 0x33C 	~%newItem%~ #8 END
+						~SCRX37~ 	BEGIN COPY_EXISTING ~DDRAGBRW.cre~ 	~override~ WRITE_ASCIIE 0x66C 	~%newItem%~ #8 END
+						~SCRX39~ 	BEGIN COPY_EXISTING ~RAZAK01.sto~ 	~override~ WRITE_ASCIIE 0x478 	~%newItem%~ #8 END
+						~SCRX42~ 	BEGIN COPY_EXISTING ~DRAGGOLD.cre~ 	~override~ WRITE_ASCIIE 0x564 	~%newItem%~ #8 END
+						~SCRX43~ 	BEGIN COPY_EXISTING ~RAZAK01.sto~ 	~override~ WRITE_ASCIIE 0x494 	~%newItem%~ #8 END
+						~SCRX46~ 	BEGIN COPY_EXISTING ~RAZAK01.sto~ 	~override~ WRITE_ASCIIE 0x440 	~%newItem%~ #8 END
+						~SCRX48~ 	BEGIN COPY_EXISTING ~DD8001D.are~ 	~override~ WRITE_ASCIIE 0x440 	~%newItem%~ #8 END
+						~SCRX49~ 	BEGIN COPY_EXISTING ~DDRAGBRW.cre~ 	~override~ WRITE_ASCIIE 0x658 	~%newItem%~ #8 END
+						~SCRX53~ 	BEGIN COPY_EXISTING ~DUEGSAL3.sto~ 	~override~ WRITE_ASCIIE 0x358 	~%newItem%~ #8 END
+						~SCRX55~ 	BEGIN COPY_EXISTING ~DRAGGREN.cre~ 	~override~ WRITE_ASCIIE 0x578 	~%newItem%~ #8 END
+						~SCRX56~ 	BEGIN COPY_EXISTING ~DUEGSAL3.sto~ 	~override~ WRITE_ASCIIE 0x2E8 	~%newItem%~ #8 END
+						~SCRX57~ 	BEGIN COPY_EXISTING ~RAZAK01.sto~ 	~override~ WRITE_ASCIIE 0x45C 	~%newItem%~ #8 END
+						~SCRX58~ 	BEGIN COPY_EXISTING ~DRAGGOLD.cre~ 	~override~ WRITE_ASCIIE 0x550 	~%newItem%~ #8 END
+						~SCRX65~ 	BEGIN COPY_EXISTING ~DD7002.are~ 	~override~ WRITE_ASCIIE 0x187C	~%newItem%~ #8 END
+						~SCRX67~ 	BEGIN COPY_EXISTING ~DRAGGREN.cre~ 	~override~ WRITE_ASCIIE 0x564 	~%newItem%~ #8 END
+						~SCRX72~ 	BEGIN COPY_EXISTING ~WARDWIZS.sto~ 	~override~ WRITE_ASCIIE 0x1DC	~%newItem%~ #8 END
+						~SCRX74~ 	BEGIN COPY_EXISTING ~WARDWIZS.sto~ 	~override~ WRITE_ASCIIE 0x1C0	~%newItem%~ #8 END
+						~SCRX76~ 	BEGIN COPY_EXISTING ~CALIMART.sto~ 	~override~ WRITE_ASCIIE 0x6E4	~%newItem%~ #8 END
+						~SCRX77~ 	BEGIN COPY_EXISTING ~CALIMART.sto~ 	~override~ WRITE_ASCIIE 0x700	~%newItem%~ #8 END
+						~SCRX81~ 	BEGIN COPY_EXISTING ~CALIMART.sto~ 	~override~ WRITE_ASCIIE 0x6C8	~%newItem%~ #8 END
 						DEFAULT			
 					END
 				END

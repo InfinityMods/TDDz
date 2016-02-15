@@ -18,8 +18,8 @@ ALWAYS
 		OUTER_SET EVAL ~%name_source%~ = bg2_chapter
 	END
 END
-
-AUTO_EVAL_STRINGS
+//Don't use AUTO_EVAL_STRINGS, this would break the EXECUTE_TOOL macro
+//AUTO_EVAL_STRINGS
 //AUTO_TRA ~TDDz/Translations/%s~
 AUTO_TRA ~TDDz/TEMP/Translations~
 
@@ -125,7 +125,7 @@ BEGIN @901005
 		LAF DeleteTempFolder STR_VAR aComp = ~OnsetOfTheDarkestDay~ END
 	
 BEGIN @901010
-	REQUIRE_PREDICATE GAME_IS ~tob bg2ee eet~ ~~	
+	REQUIRE_PREDICATE GAME_IS ~tob bg2ee eet~ ~~
 	REQUIRE_COMPONENT "setup-TDDz.tp2" "0" @901011
 		
 	INCLUDE ~%MOD_FOLDER%/Lib/Importer.tpa~ 
