@@ -69,16 +69,16 @@ For now, I focus on adventure, I have no time nor experience to deal/test rules 
 	. Remake cutscenes with Cutspy.cre
 	. Merge Bgarive.baf with Bgarive2.baf with Bgarive3.baf with Bgarive4.baf into Bgarive.baf with Cutspy.cre	
 	. Prefix every TDD timers and variables with "tz_"
-	. Relieve GLOBAL stacks by moving some of them to LOCALS/AREAs
+	. Relieve GLOBAL stacks by moving some variables to LOCALS/AREAs
 	. Minimaps are replaced by EE minimaps
-	. Ice search maps are replaced by sand search map (2 areas in Trollford)
+	. Ice search maps are replaced by sand search map
 	. Disable few areas spawners (DD8000.are-Deep Mir Forest, DD8001.are-Haunted Forest) that freeze game	
 	. Decrease some unnecessary very long Wait(x) that make game semmingly bugged
 	. Remove some regions of interests (legacy from originator areas and not used in new areas)
 	. Interaction with Riatavin/Nameless.cre removed due to Helmrat.itm bug(?)
 	. Set Animation During Combat Flag
 	. UTF8 compliant (with handle_charsets)
-	. Should be compatible with ToB/SoS/RoT/CtB	
+	. Should be compatible with ToB/SoS/RoT/CtB
 	. Cutscenes to Tartarus with Cutspy.cre and better transitions
 	. ARPO27.are/East stair entrance fixed
 	. Minor coding fixes and improvements

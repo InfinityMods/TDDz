@@ -65,10 +65,10 @@ LANGUAGE 	~Spanish(Clan REO)~
 // - INITDLG.d @override!
 // - DDTROLL1.BAF makes trolls killable
 // - Is GTRSK002 useless? ex: LeaveAreaLUA("dd9007","GTRSK002",[381.331],12)
-// - Used by script: SCRX41.ITM-Rary's Mnemonic Enhancer @MADEEL.sto, DD4003.are@1380, DD4003.baf
 
 
 // TODO Force add empty area.bcs
+// TODO Re-check EE minimap
 
 
 BEGIN @901000 
@@ -77,11 +77,11 @@ BEGIN @901000
 	INCLUDE ~%MOD_FOLDER%/Lib/Importer.tpa~
 		LAF ImportComponent STR_VAR aComp = ~CORE~ END
 	INCLUDE ~%MOD_FOLDER%/Lib/Helpers.tpa~ 
-		LAF DeleteTempFolder STR_VAR aComp = ~CORE~ END
+		LAF DeleteTempFolder STR_VAR aComp = ~CORE~ END	
 	
 BEGIN @901001
 	REQUIRE_PREDICATE GAME_IS ~tob bg2ee eet~ ~~
-	REQUIRE_COMPONENT "setup-TDDz.tp2" "0" "You must have TDD - Core installed"
+	REQUIRE_COMPONENT "setup-TDDz.tp2" "0" @901011
 		
 	INCLUDE ~%MOD_FOLDER%/Lib/Importer.tpa~ 
 		LAF ImportComponent STR_VAR aComp = ~TROLLFORD~ END
@@ -90,7 +90,7 @@ BEGIN @901001
 	
 BEGIN @901002
 	REQUIRE_PREDICATE GAME_IS ~tob bg2ee eet~ ~~
-	REQUIRE_COMPONENT "setup-TDDz.tp2" "0" "You must have TDD - Core installed"
+	REQUIRE_COMPONENT "setup-TDDz.tp2" "0" @901011
 
 	INCLUDE ~%MOD_FOLDER%/Lib/Importer.tpa~ 
 		LAF ImportComponent STR_VAR aComp = ~ESPURTA~ END
@@ -99,7 +99,7 @@ BEGIN @901002
 		
 BEGIN @901003
 	REQUIRE_PREDICATE GAME_IS ~tob bg2ee eet~ ~~	
-	REQUIRE_COMPONENT "setup-TDDz.tp2" "0" "You must have TDD - Core installed"
+	REQUIRE_COMPONENT "setup-TDDz.tp2" "0" @901011
 		
 	INCLUDE ~%MOD_FOLDER%/Lib/Importer.tpa~ 
 		LAF ImportComponent STR_VAR aComp = ~PURSKAL~ END
@@ -108,7 +108,7 @@ BEGIN @901003
 
 BEGIN @901004
 	REQUIRE_PREDICATE GAME_IS ~tob bg2ee eet~ ~~	
-	REQUIRE_COMPONENT "setup-TDDz.tp2" "0" "You must have TDD - Core installed"		
+	REQUIRE_COMPONENT "setup-TDDz.tp2" "0" @901011
 		
 	INCLUDE ~%MOD_FOLDER%/Lib/Importer.tpa~ 
 		LAF ImportComponent STR_VAR aComp = ~RIATAVIN~ END
@@ -117,19 +117,26 @@ BEGIN @901004
 		
 BEGIN @901005
 	REQUIRE_PREDICATE GAME_IS ~tob bg2ee eet~ ~~	
-	REQUIRE_COMPONENT "setup-TDDz.tp2" "0" "You must have TDD - Core installed"		
+	REQUIRE_COMPONENT "setup-TDDz.tp2" "0" @901011
 		
 	INCLUDE ~%MOD_FOLDER%/Lib/Importer.tpa~ 
 		LAF ImportComponent STR_VAR aComp = ~OnsetOfTheDarkestDay~ END
 	INCLUDE ~%MOD_FOLDER%/Lib/Helpers.tpa~ 
 		LAF DeleteTempFolder STR_VAR aComp = ~OnsetOfTheDarkestDay~ END
 	
-//BEGIN @901010
-//	REQUIRE_PREDICATE GAME_IS ~tob bg2ee eet~ ~~	
-//	REQUIRE_COMPONENT "setup-TDDz.tp2" "0" "You must have TDD - Core installed"
-//		
-//	INCLUDE ~%MOD_FOLDER%/Lib/Importer.tpa~ 
-//		LAF ImportComponent STR_VAR aComp = ~Robilard~ END
-//	INCLUDE ~%MOD_FOLDER%/Lib/Helpers.tpa~ 
-//		LAF DeleteTempFolder STR_VAR aComp = ~Robilard~ END
+BEGIN @901010
+	REQUIRE_PREDICATE GAME_IS ~tob bg2ee eet~ ~~	
+	REQUIRE_COMPONENT "setup-TDDz.tp2" "0" @901011
+		
+	INCLUDE ~%MOD_FOLDER%/Lib/Importer.tpa~ 
+		LAF ImportComponent STR_VAR aComp = ~Robilard~ END
+	INCLUDE ~%MOD_FOLDER%/Lib/Helpers.tpa~ 
+		LAF DeleteTempFolder STR_VAR aComp = ~Robilard~ END
 	
+
+//BEGIN ~DEBUG~ 
+//	NO_LOG_RECORD
+//	DESIGNATED 99
+//	INCLUDE ~%MOD_FOLDER%/Lib/Translations.tpa~ 
+//		LAM DispatchTraFiles
+		
