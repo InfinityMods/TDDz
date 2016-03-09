@@ -18,7 +18,7 @@ THEN
 		CreateCreature("bgctboss",[274.749],0) // Amroch
 		FadeFromColor([30.0],0)
 		Wait(2)
-		DisplayStringHead("bgctboss",104203) // The coast is clear, master.
+		DisplayStringHead("bgctboss",@10013) // The coast is clear, master.
 		CreateCreature("enteri01",[600.600],4) // Artemis Entreri
 		Wait(2)
 		ActionOverride("enteri01",MoveToPoint([450.750]))
@@ -26,36 +26,36 @@ THEN
 		ActionOverride("enteri01",FaceObject("bgctboss"))
 		ActionOverride("bgctboss",FaceObject("enteri01"))
 		Wait(1)
-		DisplayStringHead("enteri01",104204) // You have done well, my dear. All seems to be falling into place.
+		DisplayStringHead("enteri01",@10014) // You have done well, my dear. All seems to be falling into place.
 		Wait(2)
-		DisplayStringHead("bgctboss",104205) // But you know that those sent to Athkatla are extremely powerful. My cleric sensed that one possessed the blood of a god in his veins.
+		DisplayStringHead("bgctboss",@10015) // But you know that those sent to Athkatla are extremely powerful. My cleric sensed that one possessed the blood of a god in his veins.
 		Wait(3)
-		DisplayStringHead("enteri01",104206) // That is the idea my dear. Athkatla will sense the aura that they now have on them, thanks to you. They will realize it makes sense that one so potentially powerful would attempt to cause so much chaos, and they will take the fall. Riatavin will lose all ties with Athkatla as they have the aura of Riatavin locals. Athkatla will lose trade from a main supplier, and Calimport will be back in total control of the seas.
+		DisplayStringHead("enteri01",@10016) // That is the idea my dear. Athkatla will sense the aura that they now have on them, thanks to you. They will realize it makes sense that one so potentially powerful would attempt to cause so much chaos, and they will take the fall. Riatavin will lose all ties with Athkatla as they have the aura of Riatavin locals. Athkatla will lose trade from a main supplier, and Calimport will be back in total control of the seas.
 		Wait(5)
-		DisplayStringHead("bgctboss",104207) // So what happens now, master?
+		DisplayStringHead("bgctboss",@10017) // So what happens now, master?
 		Wait(2)
-		DisplayStringHead("enteri01",104208) // Ha ha! Yes, I like the sound of "master." The gem has done wonders, indeed. The whole of Riatavin's force has bent to my will thanks to this simple gem. At a single command, they would rush in to war with Athkatla, you know? You are the only one who remains free of my will, for I needed you for the tasks.
+		DisplayStringHead("enteri01",@10018) // Ha ha! Yes, I like the sound of "master." The gem has done wonders, indeed. The whole of Riatavin's force has bent to my will thanks to this simple gem. At a single command, they would rush in to war with Athkatla, you know? You are the only one who remains free of my will, for I needed you for the tasks.
 		Wait(5)
-		DisplayStringHead("bgctboss",104209) // We had a deal, Entreri! You were going to grant our town riches from the finest Calimport guild for this deed. You will release your grasp on my soldiers now!
+		DisplayStringHead("bgctboss",@10019) // We had a deal, Entreri! You were going to grant our town riches from the finest Calimport guild for this deed. You will release your grasp on my soldiers now!
 		Wait(4)
-		DisplayStringHead("enteri01",104210) // Ah, but my dear... They are not your soldiers at all, and they never were. Your captain never made it to Athkatla for my dagger found his spine as soon as he departed.
+		DisplayStringHead("enteri01",@10020) // Ah, but my dear... They are not your soldiers at all, and they never were. Your captain never made it to Athkatla for my dagger found his spine as soon as he departed.
 		Wait(4)
-		DisplayStringHead("enteri01",104211) // After that, I was in control. You never even tasted power during the act.
+		DisplayStringHead("enteri01",@10021) // After that, I was in control. You never even tasted power during the act.
 		Wait(2)
-		DisplayStringHead("bgctboss",104212) // What happened to" Artemis Entreri works alone?"
+		DisplayStringHead("bgctboss",@10022) // What happened to" Artemis Entreri works alone?"
 		Wait(2)
-		DisplayStringHead("enteri01",104213) // 'When it comes to Calimport, I attain all the aid I can. When it gets personal, my dear, then I work alone. This is a personal moment, in which case you are breaking the trend. We can't have that, now can we?'
+		DisplayStringHead("enteri01",@10023) // 'When it comes to Calimport, I attain all the aid I can. When it gets personal, my dear, then I work alone. This is a personal moment, in which case you are breaking the trend. We can't have that, now can we?'
 		Wait(4)
-		DisplayStringHead("bgctboss",104214) // You fiend! We had a deal! You will pay dearly for such a foul act.
+		DisplayStringHead("bgctboss",@10024) // You fiend! We had a deal! You will pay dearly for such a foul act.
 		Wait(3)
-		DisplayStringHead("enteri01",104215) // Yes, come and taste Death. Let the Master of Death show you a fast exit from this sorry existence.
+		DisplayStringHead("enteri01",@10025) // Yes, come and taste Death. Let the Master of Death show you a fast exit from this sorry existence.
 		Wait(3)
 		ActionOverride("enteri01",Attack("bgctboss"))
 		ActionOverride("bgctboss",Attack("enteri01"))
 		Wait(2)
-		DisplayStringHead("enteri01",104216) // Now to finish the job. With Athkatla awaiting the travellers, I must prepare to further the break in the chain. The travellers have no choice but to travel to Athkatla, and seek a solution. If they fail, then every civilian in this town will die by my hand and the travellers will be skinned.
+		DisplayStringHead("enteri01",@10026) // Now to finish the job. With Athkatla awaiting the travellers, I must prepare to further the break in the chain. The travellers have no choice but to travel to Athkatla, and seek a solution. If they fail, then every civilian in this town will die by my hand and the travellers will be skinned.
 		Wait(6)
-		DisplayStringHead("enteri01",104217) // They will complete their duty or they will face a painful death. I shall make sure that Riatavin's force will be just behind to strike at Athkatla.
+		DisplayStringHead("enteri01",@10027) // They will complete their duty or they will face a painful death. I shall make sure that Riatavin's force will be just behind to strike at Athkatla.
 		Wait(6)
 		ActionOverride("cutspy",DestroySelf())
 		RestorePartyLocations()

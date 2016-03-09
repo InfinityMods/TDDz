@@ -1,12 +1,17 @@
 RESNAME 	NAME1	NAME2	UNIDENTIFIED_DESC	DESC	ICON		UNDROPPABLE COMMENTS
+AICE		+		+		+					+		+			++++++++	Water Elemental Item
+ALAVA		+		+		+					+		+			++++++++	Lava Elemental Item
 BLOOD		+		20993	+					20994	IBLOOD		.			Bathed in Blood; Used many many times...
 BOULDER		21005	21005	21006				21006	IBOULDER	++++++++
 BRAC04X		+		+		+					+		+			.			Jarlaxe's bracers
 DEATHREB	+		21102	+					21103	0			.			Death Reborn
 ENTERI1		+		21143	+					+		+			.			Entreri Saber
 ENTERI2		+		21144	+					+		+			.			Entreri Jeweled Dagger
+ICEHND		+		+		+					+		+			.			Water Elemental Item
+LAVAHND		+		+		+					+		+			.			Lava Elemental Item
 LOHVAR		+		21219	+					21220	0			.			Lohvar
 MAGBOTXX	21227	21227	21228				21228	MAGBOTTX	.			Enchanted Beverage
+RINGX2		+		+		+					+		+			++++++++	ZOMBX1.cre item
 SCALBLUE	21331	21331	+					21332	0			++++++++	Blue Dragon Scales
 SW1HBUG		+		+		+					+		+			++++++++	
 TROLSIND	+		21407	+					21408	0			.			Troll Cinder

@@ -55,7 +55,7 @@ For now, I focus on adventure, I have no time nor experience to deal/test rules 
         @901003 = ~TDD - Purskal~ 
         @901004 = ~TDD - Riatavin~ 
         @999999 = ~Intruders! Kill the intruders!~
-	.DDSHEINA.tra/@11 = ~They were just outside, to the west of this inn. But I don't know... they've probably left by now.~ => ~They were just outside, to the east of this inn. But I don't know... they've probably left by now.~
+	.DDSHEINA.tra/@11 = ~They were just outside, to the west of this inn. But I don't know... they've probably left by now.~ => ~They were just outside, to the east of this inn. But I don't know... they've probably left by now.~		
 
 * Fixes/Tweaks/Changes *
 	. Entry point of Onset of the Darkest Day moved from Ellisime to Elhan (after Rillifan temple, talk to him)
@@ -83,7 +83,18 @@ For now, I focus on adventure, I have no time nor experience to deal/test rules 
 	. ARPO27.are/East stair entrance fixed
 	. Minor coding fixes and improvements
 	
-
+* v1.2 Fixes/Tweaks/Changes *
+	CALIPES1.cre/Name/"Arabs" replace by "Calishite"
+	CALITHUG.cre/Name/"Arabic Thugs" replace by "Calishite Thugs"
+	CALIPRIG.cre/Name/"Arabic Thugs" replace by "Calishite Thugs"
+	DD0200.are: add NW Travel Region that goes to Riatavin directly rather than worldmap // SW Travel Region already goes to Riatavin directly
+	DDCT33.baf/Demriat1.bcs cutscene uses cutspy.cre rather than player1	
+	DD3300CT.baf change DEMGRDRX.cre by DEMGRDR1.cre // DEMGRDRX.cre don't attack demon whatever what...
+	BGARIVAL.baf, RAISEART.baf stringrefs fixed
+	ICEELE.cre imported (used by CLERIC_SUMMON_WATER_ELEMENTAL)
+	LAVAELE.cre imported (used by CLERIC_SUMMON_LAVA_ELEMENTAL)
+	
+	
 * TODO *	
 	. Better combat scripts for creatures (Espurta/DuegAbis.cre, cf. TDD walkthrough notes for more cre)
 	. Graz'zt combat script (in solo Kensai/Thief-Celestial Fury, he attacks demon before being stunned to death)
