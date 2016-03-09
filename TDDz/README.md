@@ -104,5 +104,5 @@ For now, I focus on adventure, I have no time nor experience to deal/test rules 
 	
 	
 A BIG THANKS TO TEAMBG for this mega-mod and every one about Weidu, Worldmap and Extended Animation.
-Special thanks: WhiteAgnus, agb1
+Special thanks: WhiteAgnus, agb1, Roxanne
 
