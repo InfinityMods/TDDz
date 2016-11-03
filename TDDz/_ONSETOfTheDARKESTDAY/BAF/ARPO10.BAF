@@ -5,17 +5,24 @@ THEN
     Explore()
 END
 
+// A travel trigger for DOOR0153 is defined in arp010.are but leads nowhere, so traversing it causes a crash
+// Door 153 was the old transition from TDD to ToB, which is no longer valid in TDDz
+// The following block disables that trigger, which prevents the crash; we use True() so it always applies
+// Because TDDz uses original assets from TDD, this method is simpler than patching the area file itself
+// But if in the future that DOOR0153 trigger is removed from the area, this block can be removed too
+// Thanks to Roxanne for reporting this problem - https://github.com/BiGWorldProject/TDDz/issues/2
 IF
-  Global("tz_TDD_Complete","GLOBAL",0)
+  True()
+//  Global("tz_TDD_Complete","GLOBAL",0)
 THEN
   RESPONSE #100
     TriggerActivation("DOOR0153",FALSE)
 END
 
-IF
-  Global("tz_TDD_Complete","GLOBAL",1)
-THEN
-  RESPONSE #100
-    TriggerActivation("DOOR0153",TRUE)
-END
-
+// The following block from the original TDD is commented out because it would allow the same crash
+//IF
+//  Global("tz_TDD_Complete","GLOBAL",1)
+//THEN
+//  RESPONSE #100
+//    TriggerActivation("DOOR0153",TRUE)
+//END
