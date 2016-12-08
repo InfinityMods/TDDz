@@ -1,50 +1,62 @@
 OUTER_TEXT_SPRINT COMP_FOLDER ~~
 
 //=============================================================================
-DEFINE_ACTION_MACRO GetComponentFolders
+DEFINE_ACTION_MACRO FetchTranslationsBeforeAnySAYandCOMPILE
 BEGIN
-	GET_DIRECTORY_ARRAY componentFolders ~%MOD_FOLDER%/%COMP_FOLDER%~ ~.*~		
-	ACTION_PHP_EACH componentFolders AS folderName => folderPath BEGIN		
-		OUTER_SPRINT $FOLDER_EXISTS("%folderPath%") ~%folderPath%~
-		//PRINT ~%FOLDER_EXISTS_folderPath%~
+	PRINT ~1~
+	ACTION_IF DIRECTORY_EXISTS "%MOD_FOLDER%/%COMP_FOLDER%/TRA" BEGIN
+		PRINT ~abc~
+		COPY ~%MOD_FOLDER%/%COMP_FOLDER%/TRA/%LANGUAGE%~ ~%MOD_FOLDER%/TEMP/Translations~
+		PRINT ~def~
+		LAF HANDLE_CHARSETS // convert tra files to UTF-8 encoding if needed
+			INT_VAR
+				infer_charsets = 1
+			STR_VAR
+				language = ~~
+				tra_path = EVAL ~%MOD_FOLDER%/TEMP/Translations~
+				iconv_path = EVAL ~%MOD_FOLDER%/tools/iconv/win32~
+		END
+		PRINT ~2~
 	END
+	PRINT ~3~
 END
 
 
 //=============================================================================
 DEFINE_ACTION_FUNCTION ImportComponent STR_VAR aComp = ~~
-BEGIN	
+BEGIN
 	OUTER_TEXT_SPRINT COMP_FOLDER ~_%aComp%~
-	
+
 	MKDIR ~%MOD_FOLDER%/Audio~
 	MKDIR ~%MOD_FOLDER%/tiz~
 	MKDIR ~%MOD_FOLDER%/TEMP~
-	MKDIR ~%MOD_FOLDER%/TEMP/Translations~	
-	MKDIR ~%MOD_FOLDER%/TEMP/%COMP_FOLDER%/~
-	LAM GetComponentFolders	
-	
-	
+	MKDIR ~%MOD_FOLDER%/TEMP/Translations~
+	MKDIR ~%MOD_FOLDER%/TEMP/%COMP_FOLDER%~
+
+	PRINT ~%aComp%~
 	LAM FetchTranslationsBeforeAnySAYandCOMPILE
-	INCLUDE ~%MOD_FOLDER%/Lib/Translations.tpa~ LAM UTF8Chores
+	PRINT ~%aComp%~
+
 	//LAM ImportSPL_FromTDD
 	LAM ImportCRE_FromTDD
 	LAM ImportITM_FromTDD
 	LAM ImportSTO_FromTDD
 	LAM ImportARE_FromTDD
-		
-	ACTION_DEFINE_ASSOCIATIVE_ARRAY dispatch BEGIN		
-		BAM	=> override
-		BMP	=> override
-		ITM	=> override
+	PRINT ~%aComp%~
+
+	ACTION_DEFINE_ASSOCIATIVE_ARRAY dispatch BEGIN
+		BAM => override
+		BMP => override
+		ITM => override
 		STO => override
 		MOS => override
 		BAF => ~%MOD_FOLDER%/TEMP/%COMP_FOLDER%~
-		D 	=> ~%MOD_FOLDER%/TEMP/%COMP_FOLDER%~
+		D   => ~%MOD_FOLDER%/TEMP/%COMP_FOLDER%~
 	END
 	ACTION_PHP_EACH dispatch AS restype => to BEGIN
-		ACTION_IF VARIABLE_IS_SET $FOLDER_EXISTS("%MOD_FOLDER%/%COMP_FOLDER%/%restype%")
+		ACTION_IF DIRECTORY_EXISTS "%MOD_FOLDER%/%COMP_FOLDER%/%restype%"
 			BEGIN COPY ~%MOD_FOLDER%/%COMP_FOLDER%/%restype%~ ~%to%~ END END
-	
+
 	LAM ApplyScriptedXpCustomization
 	LAF InstallComponentSpecificContents STR_VAR comp = EVAL ~%aComp%~ END
 	LAM CompileBAFandDAfterCustomizationsApplied
@@ -286,13 +298,6 @@ BEGIN
 	
 END
 
-
-//=============================================================================
-DEFINE_ACTION_MACRO FetchTranslationsBeforeAnySAYandCOMPILE
-BEGIN
-	ACTION_IF VARIABLE_IS_SET $FOLDER_EXISTS("%MOD_FOLDER%/%COMP_FOLDER%/TRA")
-		BEGIN COPY ~%MOD_FOLDER%/%COMP_FOLDER%/TRA/%LANGUAGE%~ ~%MOD_FOLDER%/TEMP/Translations~ END
-END
 
 //=============================================================================
 DEFINE_ACTION_MACRO HandleAudio

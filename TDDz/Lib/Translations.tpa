@@ -1,52 +1,33 @@
 //=============================================================================
+/* USED DURING INITIAL DEVELOPMENT - NOT USED NOW
 DEFINE_ACTION_MACRO DispatchTraFiles //copy translation files into their component folder based on English folder
 BEGIN
-	ACTION_FOR_EACH comp IN ~_Espurta~ ~_Purskal~ ~_Trollford~ ~_Riatavin~ ~_ROBILARD~ BEGIN
-		ACTION_BASH_FOR ~%MOD_FOLDER%/%comp%/TRA/English/~ ~.*\.tra~ BEGIN			
+	ACTION_FOR_EACH comp IN ~_Espurta~ ~_Purskal~ ~_Trollford~ ~_Riatavin~ ~_Robilard~ BEGIN
+		ACTION_BASH_FOR ~%MOD_FOLDER%/%comp%/TRA/English/~ ~.*\.tra~ BEGIN
 			ACTION_FOR_EACH language IN ~French~ ~German~ ~Italian~ ~Polish~ ~Russian~ ~Spanish~ BEGIN
-				COPY ~TDD/Language/%language%/%BASH_FOR_FILE%~ ~%MOD_FOLDER%/%comp%/TRA/%language%/%BASH_FOR_FILE%~				
+				COPY ~TDD/Language/%language%/%BASH_FOR_FILE%~ ~%MOD_FOLDER%/%comp%/TRA/%language%/%BASH_FOR_FILE%~
 			END
 		END
 	END		
-END
+END*/
 
 //=============================================================================
-DEFINE_ACTION_MACRO UTF8Chores // Borrowed from WhiteQueen then customized
+DEFINE_ACTION_MACRO UTF8Chores
 BEGIN
-	MKDIR ~%MOD_FOLDER%/TEMP/Translations/iconv~
-	
-	ACTION_MATCH ~%WEIDU_OS%~ WITH
-		win32
-			BEGIN
-				COPY ~%MOD_FOLDER%/tools/iconv/win32/iconv.exe~ ~%MOD_FOLDER%/TEMP/Translations/iconv/iconv.exe~
-				COPY ~%MOD_FOLDER%/tools/iconv/win32/libiconv2.dll~ ~%MOD_FOLDER%/TEMP/Translations/iconv/libiconv2.dll~
-				COPY ~%MOD_FOLDER%/tools/iconv/win32/libintl3.dll~ ~%MOD_FOLDER%/TEMP/Translations/iconv/libintl3.dll~
-			END
-		osx unix
-			BEGIN
-				// TODO
-			END      
-		DEFAULT
-	END
+	// any tra files used in LANGUAGE need to be reloaded after UTF-8 conversion
+	ACTION_DEFINE_ARRAY tra#reload BEGIN END
 
-	INCLUDE ~%MOD_FOLDER%/Lib/handle_charsets.tpa~	
-	
 	// No exception, everything needs to be converted
-	ACTION_DEFINE_ARRAY WQxnoconvert BEGIN END
+	ACTION_DEFINE_ARRAY tra#noconvert BEGIN END
 
-	// Only legacy setup.tra and tp2.tra needs to be reloaded
-	ACTION_DEFINE_ARRAY WQxreload BEGIN setup tp2 END
-
-	// There is no "language" folder so the root of all languages in %MOD_FOLDER%
 	LAF HANDLE_CHARSETS
 		INT_VAR
-			infer_charset = 1
+			infer_charsets = 1
 		STR_VAR
 			tra_path = EVAL ~%MOD_FOLDER%/TEMP/Translations~
-			// charset_table = WQxcharsets // Included for illustrative purposes.
-			noconvert_array = WQxnoconvert
-			reload_array = WQxreload
+			iconv_path = EVAL ~%MOD_FOLDER%/tools/iconv/win32~
+			reload_array = tra#reload
+			noconvert_array = tra#noconvert
 	END
-	
 END
 

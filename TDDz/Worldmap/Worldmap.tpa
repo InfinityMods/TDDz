@@ -23,13 +23,13 @@ BEGIN
 			END
 			
 		COPY ~Worldmap/map_mods_trans.tra~ ~Worldmap~
-			APPEND_FILE_EVALUATE ~%MOD_FOLDER%/Worldmap/%LANGUAGE%/worldmap.tra~
+			APPEND_FILE_EVALUATE ~%MOD_FOLDER%/Translations/%LANGUAGE%/worldmap.tra~
 	END
 	ELSE BEGIN
 		MKDIR ~Worldmap~
 		COPY ~%MOD_FOLDER%/Worldmap/areas.tbl~ ~Worldmap/map_mods_areas.tbl~
 		COPY ~%MOD_FOLDER%/Worldmap/links.tbl~ ~Worldmap/map_mods_links.tbl~
-		COPY ~%MOD_FOLDER%/Worldmap/%LANGUAGE%/worldmap.tra~ ~Worldmap/map_mods_trans.tra~
+		COPY ~%MOD_FOLDER%/Translations/%LANGUAGE%/worldmap.tra~ ~Worldmap/map_mods_trans.tra~
 	END
 	
 	//EET Worldmap
@@ -43,7 +43,7 @@ BEGIN
 						SPRINT EVAL ~%var%~ ~~
 					END ELSE BEGIN
 						INNER_ACTION BEGIN
-							COPY - ~TDDz/Worldmap/%LANGUAGE%/worldmap.tra~ ~.../TDDz/Worldmap/%LANGUAGE%~
+							COPY - ~TDDz/Translations/%LANGUAGE%/worldmap.tra~ ~.../TDDz-inlined/worldmap.tra~
 								REPLACE_EVALUATE CASE_INSENSITIVE ~~~~~^\([ %TAB%]*%match%[ %TAB%]*=[ %TAB%]*[~"]\)\([^~^"]+\)\([~"]\)~~~~~ BEGIN
 									INNER_PATCH_SAVE string "%MATCH2%" BEGIN
 										REPLACE_TEXTUALLY "###" " "
