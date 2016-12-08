@@ -17,6 +17,21 @@ ALWAYS
 		OUTER_SPRINT name_source ~bg2_chapter_%i%~
 		OUTER_SET EVAL ~%name_source%~ = bg2_chapter
 	END
+	
+	// any tra files used in LANGUAGE need to be reloaded after UTF-8 conversion
+	ACTION_DEFINE_ARRAY tra#reload BEGIN tp2 setup END
+
+	// No exception, everything needs to be converted
+	ACTION_DEFINE_ARRAY tra#noconvert BEGIN END
+
+	LAF HANDLE_CHARSETS
+		INT_VAR
+			infer_charsets = 1
+		STR_VAR
+			tra_path = EVAL ~%MOD_FOLDER%/Translations~
+			reload_array = tra#reload
+			noconvert_array = tra#noconvert
+	END
 END
 //Don't use AUTO_EVAL_STRINGS, this would break the EXECUTE_TOOL macro
 //AUTO_EVAL_STRINGS
