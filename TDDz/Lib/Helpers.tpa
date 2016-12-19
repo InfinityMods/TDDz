@@ -1,13 +1,8 @@
 //=============================================================================
 DEFINE_ACTION_MACRO ForceClearTempFolder
-BEGIN				
+BEGIN
 	ACTION_FOR_EACH var IN d baf 2da BEGIN
 			ACTION_BASH_FOR ~%MOD_FOLDER%/TEMP/_%aComp%~ ~^.+\.%var%$~ BEGIN
-				DELETE +  ~%BASH_FOR_FILESPEC%~
-			END
-	END
-	ACTION_FOR_EACH var IN exe dll BEGIN
-			ACTION_BASH_FOR ~%MOD_FOLDER%/TEMP/Translations/iconv~ ~^.+\.%var%$~ BEGIN
 				DELETE +  ~%BASH_FOR_FILESPEC%~
 			END
 	END
@@ -22,7 +17,7 @@ END
 //=============================================================================
 DEFINE_ACTION_FUNCTION DeleteTempFolder
 	STR_VAR aComp = ~~
-BEGIN				
+BEGIN
 	LAM ForceClearTempFolder
 	LAF REMOVE_DIRECTORY STR_VAR dir_name = EVAL ~%MOD_FOLDER%/TEMP/_%aComp%~ END
 	LAF REMOVE_DIRECTORY STR_VAR dir_name = EVAL ~%MOD_FOLDER%/TEMP/Translations~ END

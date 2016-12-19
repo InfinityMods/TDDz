@@ -1,6 +1,6 @@
 BACKUP ~TDDz/Backup~
 AUTHOR ~shadowlich~
-VERSION ~v1.2.4~
+VERSION ~v1.2.5~
 
 ALWAYS
 	INCLUDE ~%MOD_FOLDER%/Lib/Helpers.tpa~
@@ -42,8 +42,8 @@ AUTO_TRA ~TDDz/TEMP/Translations~
 
 LANGUAGE 	~English~ 
 			~English~ 
-			~TDDz/Translations/English/Tp2.tra~ 
 			~TDDz/Translations/English/Setup.tra~
+			~TDDz/Translations/English/tp2.tra~ 
 
 LANGUAGE 	~Russian(aerie-ru)~
 			~Russian~
@@ -137,23 +137,26 @@ BEGIN @901005
 	REQUIRE_COMPONENT "setup-TDDz.tp2" "0" @901011
 		
 	INCLUDE ~%MOD_FOLDER%/Lib/Importer.tpa~ 
-		LAF ImportComponent STR_VAR aComp = ~OnsetOfTheDarkestDay~ END
+		LAF ImportComponent STR_VAR aComp = ~ONSETOfTheDARKESTDAY~ END
 	INCLUDE ~%MOD_FOLDER%/Lib/Helpers.tpa~ 
-		LAF DeleteTempFolder STR_VAR aComp = ~OnsetOfTheDarkestDay~ END
+		LAF DeleteTempFolder STR_VAR aComp = ~ONSETOfTheDARKESTDAY~ END
 	
 BEGIN @901010
 	REQUIRE_PREDICATE GAME_IS ~tob bg2ee eet~ ~~
 	REQUIRE_COMPONENT "setup-TDDz.tp2" "0" @901011
 		
 	INCLUDE ~%MOD_FOLDER%/Lib/Importer.tpa~ 
-		LAF ImportComponent STR_VAR aComp = ~Robilard~ END
+		LAF ImportComponent STR_VAR aComp = ~ROBILARD~ END
 	INCLUDE ~%MOD_FOLDER%/Lib/Helpers.tpa~ 
-		LAF DeleteTempFolder STR_VAR aComp = ~Robilard~ END
+		LAF DeleteTempFolder STR_VAR aComp = ~ROBILARD~ END
 	
 
+//=============================================================================
+/* USED DURING INITIAL DEVELOPMENT - NOT USED NOW
 //BEGIN ~DEBUG~ 
 //	NO_LOG_RECORD
 //	DESIGNATED 99
 //	INCLUDE ~%MOD_FOLDER%/Lib/Translations.tpa~ 
 //		LAM DispatchTraFiles
+*/
 

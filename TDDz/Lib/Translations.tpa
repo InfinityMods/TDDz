@@ -12,6 +12,7 @@ BEGIN
 END*/
 
 //=============================================================================
+/* USED DURING INITIAL DEVELOPMENT - NOT USED NOW
 DEFINE_ACTION_MACRO UTF8Chores
 BEGIN
 	// any tra files used in LANGUAGE need to be reloaded after UTF-8 conversion
@@ -30,4 +31,6 @@ BEGIN
 			noconvert_array = tra#noconvert
 	END
 END
+
+*/
 
