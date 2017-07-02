@@ -1,12 +1,12 @@
 SHORT_NAME CONTENT    LONG_NAME  FLAGS      BAM_ANIM   X_POS      Y_POS      NAME       TOOLTIP    LOAD_IM
 //The Darkest Day
 ARPO05     ARPO05     ARPO05     4          10         1257       2830       @TDD_779011 @TDD_779011  N        //Rusted Scabbard
-DD1000     DD1000     DD1000     0          112        876        222        @TDD_779012 @TDD_779012  N        //Easthaven
+DD1000     DD1000     DD1000     0          135        872        242        @TDD_779012 @TDD_779012  N        //Easthaven
 DD1800     DD1800     DD1800     0          17         1025       2460       @TDD_779001 @TDD_779001  N        //Snake Woods
 DD1900     DD1900     DD1900     4          10         740        2550       @TDD_779010 @TDD_779010  N        //Purskal
 DD2300     DD2300     DD2300     4          12         1270       2565       @TDD_779003 @TDD_779003  N        //Eshpurta
 DD2500     DD2500     DD2500     0          10         1275       2360       @TDD_779002 @TDD_779002  N        //Troll Mountains
-DD3300     DD3300     DD3300     4          53         1300       2757       @TDD_779005 @TDD_779005  N        //Riatavin
+DD3300     DD3300     DD3300     4          13         1300       2757       @TDD_779005 @TDD_779005  N        //Riatavin
 DD5000     DD5000     DD5000     0          11         1165       2510       @TDD_779004 @TDD_779004  N        //Hall of Knowledge
 DD7000     DD7000     DD7000     4          6          1480       2820       @TDD_779009 @TDD_779009  N        //Orgoth's Tower
 DD8000     DD8000     DD8000     4          17         1375       3110       @TDD_779006 @TDD_779006  N        //Deep Mir Forest
