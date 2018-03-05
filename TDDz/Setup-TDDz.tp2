@@ -95,6 +95,12 @@ BEGIN @901000
 		LAF ImportComponent STR_VAR aComp = ~CORE~ END
 	INCLUDE ~%MOD_FOLDER%/Lib/Helpers.tpa~ 
 		LAF DeleteTempFolder STR_VAR aComp = ~CORE~ END	
+
+LAF HANDLE_AUDIO
+  STR_VAR
+    audio_path = ~TDD/ogg~ // the audio are from TDD
+    oggdec_path = ~TDDz/tools/oggdec~ // the oggdec is from TDDz
+END
 	
 BEGIN @901001
 	REQUIRE_PREDICATE GAME_IS ~tob bg2ee eet~ ~~
