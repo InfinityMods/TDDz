@@ -11,6 +11,7 @@
 @999000 = ~Calishite~
 @999001 = ~Calishite thugs~
 @999002 = ~Calishite citizen~
+@999003 = ~Calishite jailer~
 
 @999992 = ~Finally we have tracked you down Robillard of the Sea Sprite.~
 @999993 = ~Who are you and what do you want with him?~
@@ -27,312 +28,312 @@
 /////////////////////////////////////////////////////////////////////////////////////
 
 //3336TAV.DLG
-@50100 = ~Hablé con un informador llamado Bellach. Dice que en la calle se sospecha que Artemis Entreri de Puerto Calim puede estar detrás del asesinato de Riatavin. Yo no estoy seguro de que sea así, ya que no hay ninguna evidencia aparte de la limpieza del asesinato.~
+@50100 = ~HablÃ© con un informador llamado Bellach. Dice que en la calle se sospecha que Artemis Entreri de Puerto Calim puede estar detrÃ¡s del asesinato de Riatavin. Yo no estoy seguro de que sea asÃ­, ya que no hay ninguna evidencia aparte de la limpieza del asesinato.~
 
 //BAURIAN.DLG
-@50101 = ~He entrado en el mundo del Tartarus. La tierra aún no está explorada pero por lo que puedo ver parece ser montones de tierra con pozos sin fondo alrededor.~
-@50102 = ~Baurian, un Clérigo de Talos, me ha traído al reino del Tartarus. Aquí debo matar al demonio, conseguir su garra, y regresar.~
+@50101 = ~He entrado en el mundo del Tartarus. La tierra aÃºn no estÃ¡ explorada pero por lo que puedo ver parece ser montones de tierra con pozos sin fondo alrededor.~
+@50102 = ~Baurian, un ClÃ©rigo de Talos, me ha traÃ­do al reino del Tartarus. AquÃ­ debo matar al demonio, conseguir su garra, y regresar.~
 
 //BANDED.DLG
-@50103 = ~La banshee ha sido liberada de su tormento por mis manos pero el mal ya esta hecho. El demonio se alzará de las profundidades del infierno en un futuro no muy distante y deseo matar a la bestia cuando alcance un estado de vulnerabilidad en este plano de existencia para así poder conseguir la garra que nos permitirá disfrazarnos de drow, entonces debo viajar al corazón del planeta. Los clérigo de Talos saben más sobre esto. Su templo puede ser un buen lugar para comenzar a buscar.~
+@50103 = ~La banshee ha sido liberada de su tormento por mis manos pero el mal ya esta hecho. El demonio se alzarÃ¡ de las profundidades del infierno en un futuro no muy distante y deseo matar a la bestia cuando alcance un estado de vulnerabilidad en este plano de existencia para asÃ­ poder conseguir la garra que nos permitirÃ¡ disfrazarnos de drow, entonces debo viajar al corazÃ³n del planeta. Los clÃ©rigo de Talos saben mÃ¡s sobre esto. Su templo puede ser un buen lugar para comenzar a buscar.~
 
 //CAVDIEAR.DLG
-@50104 = ~El letal asesino, Artemis Entreri, al fin ha sido llevado ante la justicia tras caer delante de mis ojos. Las pocas palabras que dijo aún resuenan en mis oidos. Afirmó tan claramente como nunca antes había escuchado a nadie que no sería nuestro último encuentro, y que yo nunca sería libre. Algunos podrían decir que la amenaza era vacua, pero la historia demuestra que Entreri habla con convicción.~
+@50104 = ~El letal asesino, Artemis Entreri, al fin ha sido llevado ante la justicia tras caer delante de mis ojos. Las pocas palabras que dijo aÃºn resuenan en mis oidos. AfirmÃ³ tan claramente como nunca antes habÃ­a escuchado a nadie que no serÃ­a nuestro Ãºltimo encuentro, y que yo nunca serÃ­a libre. Algunos podrÃ­an decir que la amenaza era vacua, pero la historia demuestra que Entreri habla con convicciÃ³n.~
 
 //DDMARY.DLG
-@50106 = ~El Día más Oscuro ha llegado a su conclusión.~
+@50106 = ~El DÃ­a mÃ¡s Oscuro ha llegado a su conclusiÃ³n.~
 @50116 = ~Casa de Mary Magus~
 //DRAGGLD1.DLG
-@50105 = ~En la caverna de los Bregan D'aerthe encontré un dragón metálico dorado. A pesar del intento del dragón de ser pacífico, nuestra apariencia de elfos oscuros fue el catalizador para que el dragón atacase.~
+@50105 = ~En la caverna de los Bregan D'aerthe encontrÃ© un dragÃ³n metÃ¡lico dorado. A pesar del intento del dragÃ³n de ser pacÃ­fico, nuestra apariencia de elfos oscuros fue el catalizador para que el dragÃ³n atacase.~
 
 //KARAN01.DLG
-@50107 = ~Al parecer incluso después de cumplir las misiones al fin, la eterna pesadilla no se ha acabado. Algo más maligno parece acechar a lo lejos y al parecer, la gran orden del reino quiere hablar conmigo sobre ello.~
+@50107 = ~Al parecer incluso despuÃ©s de cumplir las misiones al fin, la eterna pesadilla no se ha acabado. Algo mÃ¡s maligno parece acechar a lo lejos y al parecer, la gran orden del reino quiere hablar conmigo sobre ello.~
 
 //SANDRAIN.DLG
-@50109 = ~Encontré un anciano elfo llamado Sandrain quien se ha convertido en una especie de ermitaño a causa de los crímenes cometidos por su raza en el pasado. Él me habló de los riesgos que las banshees comportan y le ofrecí mi ayuda a cambio. Estoy seguro de que liberando a la banshee podrá centrar su protección contra otras criaturas peligrosas. A pesar de todo, debo hacer todo lo que sea necesario para proseguir.~
+@50109 = ~EncontrÃ© un anciano elfo llamado Sandrain quien se ha convertido en una especie de ermitaÃ±o a causa de los crÃ­menes cometidos por su raza en el pasado. Ã‰l me hablÃ³ de los riesgos que las banshees comportan y le ofrecÃ­ mi ayuda a cambio. Estoy seguro de que liberando a la banshee podrÃ¡ centrar su protecciÃ³n contra otras criaturas peligrosas. A pesar de todo, debo hacer todo lo que sea necesario para proseguir.~
 
 //ZCAPWARN.DLG
-@50108 = ~Parece que los piratas de las Nelanther atacan sin razón los muelles de comercio de Athkatla. A pesar de mi corazonada ellos tenían la intención de matar a todo el que se pusiera por delante por lo que luchar era mi única opción. Es como si estuvieran bajo el influjo de una fuente poderosa y esa fuente es sin duda la razón de que yo fuera falsamente acusado.~
+@50108 = ~Parece que los piratas de las Nelanther atacan sin razÃ³n los muelles de comercio de Athkatla. A pesar de mi corazonada ellos tenÃ­an la intenciÃ³n de matar a todo el que se pusiera por delante por lo que luchar era mi Ãºnica opciÃ³n. Es como si estuvieran bajo el influjo de una fuente poderosa y esa fuente es sin duda la razÃ³n de que yo fuera falsamente acusado.~
 
 /////////////
 // BGT/Compat
 /////////////
 
 //LEAVE***.D
-/*@203301 = ~Quedarse con vos es buscarse una tumba antes de hora. Creo que llevaré mi hacha al sur, y chuparé algo del buen oro de los mercaderes.~
-@203302 = ~Me gusta el peligro tanto como a los compañeros, pero permanecer con vos es desear la muerte. Es hora de apuntar mis flechas en otra dirección.~
-@203303 = ~Mi lujuria por la batalla ha sido saciada por el momento. Creo que me aventuraré a climas mas cálidos antes de que las estaciones vuelvan a cambiar. Quizás el aire fresco revigorice de nuevo mis armas.~
-@203304 = ~Monty y yo hemos decidido que es hora de que vayamos a informar a nuestros superiores. Adiós, <CLASS>, y que la ineptitud atenace a vuestros enemigos.~
-@203305 = ~Me estoy volviendo demasiado viejo para todas estas emociones. Y de nuevo mi úlcera está atacandome de nuevo. Llegó la hora para un buen trago de calmante, y de un relajante baño caliente. Os deseo todo lo mejor, <CHARNAME>.~
+/*@203301 = ~Quedarse con vos es buscarse una tumba antes de hora. Creo que llevarÃ© mi hacha al sur, y chuparÃ© algo del buen oro de los mercaderes.~
+@203302 = ~Me gusta el peligro tanto como a los compaÃ±eros, pero permanecer con vos es desear la muerte. Es hora de apuntar mis flechas en otra direcciÃ³n.~
+@203303 = ~Mi lujuria por la batalla ha sido saciada por el momento. Creo que me aventurarÃ© a climas mas cÃ¡lidos antes de que las estaciones vuelvan a cambiar. QuizÃ¡s el aire fresco revigorice de nuevo mis armas.~
+@203304 = ~Monty y yo hemos decidido que es hora de que vayamos a informar a nuestros superiores. AdiÃ³s, <CLASS>, y que la ineptitud atenace a vuestros enemigos.~
+@203305 = ~Me estoy volviendo demasiado viejo para todas estas emociones. Y de nuevo mi Ãºlcera estÃ¡ atacandome de nuevo. LlegÃ³ la hora para un buen trago de calmante, y de un relajante baÃ±o caliente. Os deseo todo lo mejor, <CHARNAME>.~
 */
 /////////////////////////////////////////////////////////
 // Scripts
 /////////////////////////////////////////////////////////
 // DD7000.BAF
 @10000 = ~Entrada a la Torre~
-@10001 = ~Salida del área~
+@10001 = ~Salida del Ã¡rea~
 // DD7001.BAF
 @10002 = ~Escaleras descendentes~
 // DD7002.BAF
 @10003 = ~Al laboratorio~
-@10004 = ~Al sótano~
+@10004 = ~Al sÃ³tano~
 @10005 = ~Escaleras ascendentes~
 // DD7003.BAF
 @10006 = ~Salida~
 // JAILMOVE.BAF
-@10007 = ~Estáis cometiendo un error, anciano! Un gran error... porque el verdadero demonio todavía anda suelto.~
-@10008 = ~¡Es suficiente! ¡Iréis a la Prisión del hechicero en un barco esclavista! Id con viento fresco, y espero que los guardias os traten bien; no tendréis una travesía sencilla hasta el Sanatorio.~
+@10007 = ~EstÃ¡is cometiendo un error, anciano! Un gran error... porque el verdadero demonio todavÃ­a anda suelto.~
+@10008 = ~Â¡Es suficiente! Â¡IrÃ©is a la PrisiÃ³n del hechicero en un barco esclavista! Id con viento fresco, y espero que los guardias os traten bien; no tendrÃ©is una travesÃ­a sencilla hasta el Sanatorio.~
 // ARPO05.BAF
-@10009 = ~Mientras leéis leer las palabras en el libro, la reliquia se desintegra, dejando una nube de polvo donde una vez estuvo. El cielo empieza a clarearse y tenéis la sensación de que las nubes pasarán pronto. El Día más Oscuro ha terminado... por ahora~
+@10009 = ~Mientras leÃ©is leer las palabras en el libro, la reliquia se desintegra, dejando una nube de polvo donde una vez estuvo. El cielo empieza a clarearse y tenÃ©is la sensaciÃ³n de que las nubes pasarÃ¡n pronto. El DÃ­a mÃ¡s Oscuro ha terminado... por ahora~
 // ARPO28.BAF
-@10010 = ~Escucháis un agudo "CLINK" en la distancia. Una barrera mágica bloquea ahora ambas salidas.~
-@10011 = ~La barrera mágica que bloqueaba las salidas se ha disipado al morir la criatura.~
+@10010 = ~EscuchÃ¡is un agudo "CLINK" en la distancia. Una barrera mÃ¡gica bloquea ahora ambas salidas.~
+@10011 = ~La barrera mÃ¡gica que bloqueaba las salidas se ha disipado al morir la criatura.~
 //
-@10012 = ~Si, si. Ahora estoy listo. Vámonos.~
+@10012 = ~Si, si. Ahora estoy listo. VÃ¡monos.~
 // BGARIVE2.BAF
-@10013 = ~La costa está libre, maestro.~
+@10013 = ~La costa estÃ¡ libre, maestro.~
 // BGARIVE3.BAF
-@10014 = ~Habéis hecho bien, mi querido. Todo parece estar encajando en su lugar.~
-@10015 = ~Pero sabéis que aquellos enviados a Athkatla son extremadamente poderosos. Mi clérigo sintió que uno poseía la sangre de un dios en sus venas.~
-@10016 = ~Esa es la idea mi querido. Athkatla detectará el aura que ahora tienen entre ellos, gracias a vos. Se darán cuenta de que tiene sentido que tal poder en potencia intentará provocar tanto caos que, ellos también caerán. Riatavin perderá todos los lazos con Athkatla. Athkatla perderá el comercio con un suministrador principal, y Puerto Calim se hará con el control total de los mares.~
+@10014 = ~HabÃ©is hecho bien, mi querido. Todo parece estar encajando en su lugar.~
+@10015 = ~Pero sabÃ©is que aquellos enviados a Athkatla son extremadamente poderosos. Mi clÃ©rigo sintiÃ³ que uno poseÃ­a la sangre de un dios en sus venas.~
+@10016 = ~Esa es la idea mi querido. Athkatla detectarÃ¡ el aura que ahora tienen entre ellos, gracias a vos. Se darÃ¡n cuenta de que tiene sentido que tal poder en potencia intentarÃ¡ provocar tanto caos que, ellos tambiÃ©n caerÃ¡n. Riatavin perderÃ¡ todos los lazos con Athkatla. Athkatla perderÃ¡ el comercio con un suministrador principal, y Puerto Calim se harÃ¡ con el control total de los mares.~
 // BGARIVE4.BAF
-@10017 = ~Entonces ¿qué ocurrirá ahora, maestro?~
-@10018 = ~¡Ja ja! Sí, me gusta el sonido de "maestro". La gema ha hecho maravillas, de hecho. Toda la fuerza de Riatavin se ha doblegado por completo a mi voluntad gracias a esta simple gema. Con una sola orden, lucharían contra Athkatla, ¿sabéis? Vos sois el único que sigue libre de mi voluntad, ya que os necesito para mis quehaceres.~
-@10019 = ~¡Teníamos un acuerdo, Entreri! Ibais a conceder las riquezas de nuestra ciudad a los mejores gremios de Puerto Calim por este acto. ¡Ahora dareis a conocer vuestra valía con mis soldados!~
-@10020 = ~Ah, pero querido... No son vuestros soldados, y nunca lo fueron. Vuestro capitán nunca llegó a Athkatla, mi daga encontró su columna tan pronto partió.~
-@10021 = ~Después de eso, yo tuve el control. Vos nunca probasteis el poder durante la actuación.~
-@10022 = ~¿Qué pasó con "Artemis Entreri trabaja solo"?~
-@10023 = ~En lo que se refiere a Puerto Calim, tendré toda la ayuda que pueda. Cuando se hace personal, mi querido, entonces trabajo solo. Este es un momento personal, en el cuál estáis rompiendo la tendencia. No podemos permitir eso, ¿no?~
-@10024 = ~¡Maldito! ¡Teníamos un trato! Pagaréis caro vuestro estúpido acto.~ [WARRIOR3]
-@10025 = ~Sí, venid a probar la Muerte. Dejad que el Maestro de la Muerte os enseñe una rápida escapatoria de esta pesarosa existencia.~
-@10026 = ~Ahora a terminar el trabajo. Con Athkatla esperando a los viajeros, debo preparar el fomentar la ruptura de la cadena. Los viajeros no tienen más opción que viajar a Athkatla, y buscar una solución. Si fallan, hasta los civiles en esta ciudad morirán por mi mano y los viajeros serán despellejados.~
-@10027 = ~Completarán su cometido o se enfrentarán a una muerte dolorosa. Me aseguraré que las fuerzas de Riatavin estén alertas para atacar Athkatla.~
+@10017 = ~Entonces Â¿quÃ© ocurrirÃ¡ ahora, maestro?~
+@10018 = ~Â¡Ja ja! SÃ­, me gusta el sonido de "maestro". La gema ha hecho maravillas, de hecho. Toda la fuerza de Riatavin se ha doblegado por completo a mi voluntad gracias a esta simple gema. Con una sola orden, lucharÃ­an contra Athkatla, Â¿sabÃ©is? Vos sois el Ãºnico que sigue libre de mi voluntad, ya que os necesito para mis quehaceres.~
+@10019 = ~Â¡TenÃ­amos un acuerdo, Entreri! Ibais a conceder las riquezas de nuestra ciudad a los mejores gremios de Puerto Calim por este acto. Â¡Ahora dareis a conocer vuestra valÃ­a con mis soldados!~
+@10020 = ~Ah, pero querido... No son vuestros soldados, y nunca lo fueron. Vuestro capitÃ¡n nunca llegÃ³ a Athkatla, mi daga encontrÃ³ su columna tan pronto partiÃ³.~
+@10021 = ~DespuÃ©s de eso, yo tuve el control. Vos nunca probasteis el poder durante la actuaciÃ³n.~
+@10022 = ~Â¿QuÃ© pasÃ³ con "Artemis Entreri trabaja solo"?~
+@10023 = ~En lo que se refiere a Puerto Calim, tendrÃ© toda la ayuda que pueda. Cuando se hace personal, mi querido, entonces trabajo solo. Este es un momento personal, en el cuÃ¡l estÃ¡is rompiendo la tendencia. No podemos permitir eso, Â¿no?~
+@10024 = ~Â¡Maldito! Â¡TenÃ­amos un trato! PagarÃ©is caro vuestro estÃºpido acto.~ [WARRIOR3]
+@10025 = ~SÃ­, venid a probar la Muerte. Dejad que el Maestro de la Muerte os enseÃ±e una rÃ¡pida escapatoria de esta pesarosa existencia.~
+@10026 = ~Ahora a terminar el trabajo. Con Athkatla esperando a los viajeros, debo preparar el fomentar la ruptura de la cadena. Los viajeros no tienen mÃ¡s opciÃ³n que viajar a Athkatla, y buscar una soluciÃ³n. Si fallan, hasta los civiles en esta ciudad morirÃ¡n por mi mano y los viajeros serÃ¡n despellejados.~
+@10027 = ~CompletarÃ¡n su cometido o se enfrentarÃ¡n a una muerte dolorosa. Me asegurarÃ© que las fuerzas de Riatavin estÃ©n alertas para atacar Athkatla.~
 // BGPRISON.BAF
-@10028 = ~Hemos estado horas discutiendo en el Concilo sobre asuntos de la presente, y mucho se ha descubierto con en las últimas horas.~
-@10029 = ~Entonces seguramente podáis ver el error en la sentencia.~
-@10030 = ~El Concilio ha dialogado y debatido. Han llegado a una desición....~
-@10031 = ~Sois culpable de matar a los mercaderes y nobles inocentes de Riatavin. Además, sois culpable de conspirar contra las ciudades de Athkatla y Riatavin.~
-@10032 = ~Sin embargo, por falta de evidencias, no seréis sentenciado a muerte. En vez de ello, vuestro castigo será pasar el resto de vuestra vida dentro de la seguridad de la Prisión del hechicero.~ ~Sin embargo, por falta de evidencias, no seréis sentenciada a muerte. En vez de ello, vuestro castigo será pasar el resto de vuestra vida dentro de la seguridad de la Prisión del hechicero.~
-@10033 = ~Estáis comentiendo un verdadero error, anciano.~
-@10034 = ~Partiréis hacia la Prisión del hechicero en unas horas. Mientras tanto, recibiréis vuestro merecido a mano de los guardias. Adiós. Es una pena que alguien tan potencialmente útil esté condenado.~ ~Partiréis hacia la Prisión del hechicero en unas horas. Mientras tanto, recibiréis vuestro merecido a mano de los guardias. Adiós. Es una pena que alguien tan potencialmente útil esté condenada.~
+@10028 = ~Hemos estado horas discutiendo en el Concilo sobre asuntos de la presente, y mucho se ha descubierto con en las Ãºltimas horas.~
+@10029 = ~Entonces seguramente podÃ¡is ver el error en la sentencia.~
+@10030 = ~El Concilio ha dialogado y debatido. Han llegado a una desiciÃ³n....~
+@10031 = ~Sois culpable de matar a los mercaderes y nobles inocentes de Riatavin. AdemÃ¡s, sois culpable de conspirar contra las ciudades de Athkatla y Riatavin.~
+@10032 = ~Sin embargo, por falta de evidencias, no serÃ©is sentenciado a muerte. En vez de ello, vuestro castigo serÃ¡ pasar el resto de vuestra vida dentro de la seguridad de la PrisiÃ³n del hechicero.~ ~Sin embargo, por falta de evidencias, no serÃ©is sentenciada a muerte. En vez de ello, vuestro castigo serÃ¡ pasar el resto de vuestra vida dentro de la seguridad de la PrisiÃ³n del hechicero.~
+@10033 = ~EstÃ¡is comentiendo un verdadero error, anciano.~
+@10034 = ~PartirÃ©is hacia la PrisiÃ³n del hechicero en unas horas. Mientras tanto, recibirÃ©is vuestro merecido a mano de los guardias. AdiÃ³s. Es una pena que alguien tan potencialmente Ãºtil estÃ© condenado.~ ~PartirÃ©is hacia la PrisiÃ³n del hechicero en unas horas. Mientras tanto, recibirÃ©is vuestro merecido a mano de los guardias. AdiÃ³s. Es una pena que alguien tan potencialmente Ãºtil estÃ© condenada.~
 // BGWARD.BAF
-@10035 = ~Se os advirtió que os mantuvierais al margen. Ahora deberéis pagar por vuestra ignorancia.~
+@10035 = ~Se os advirtiÃ³ que os mantuvierais al margen. Ahora deberÃ©is pagar por vuestra ignorancia.~
 // BOATART2.BAF
-@10036 = ~Maestro, vine lo más rápido que pude. Vuestro plan ha fallado y los magos de Athkatla pueden sentir el mal aquí, en Riatavin.~
-@10037 = ~¿¡QUE!? ¡Viejo idiota! ¡Todo lo que teníais que hacer era aseguraros que creyeran que la causa de todo eran los viajeros!~
-@10038 = ~¡Por favor! Fue precisamente el grupo de viajeros quienes lo hicieron. Deben ser más poderosos de lo que habíais imaginado en un principio.~
-@10039 = ~Ya morirán bajo mi hoja, puedo asegurarlo. Pero me habéis fallado miserablemente, ¡viejo estúpido! Deberéis pagar el precio por fallar a Artemis Entreri.~
-@10040 = ~Debo iniciar el plan de contingencia, porque nadie debe saber que Puerto Calim es responsable. ¡Esta joya es útil obteniendo aliados! Tendré a los piratas de Nelanther invadiendo los muelles de Athkatla. Paralizarán la zona de comercio, y les echarán toda la culpa por hacerlo. Mientras tanto, tengo una cuenta que saldar; y, como siempre, Entreri trabaja sólo. No temáis viajeros, cuando nos encontremos, será breve y raudo.~
+@10036 = ~Maestro, vine lo mÃ¡s rÃ¡pido que pude. Vuestro plan ha fallado y los magos de Athkatla pueden sentir el mal aquÃ­, en Riatavin.~
+@10037 = ~Â¿Â¡QUE!? Â¡Viejo idiota! Â¡Todo lo que tenÃ­ais que hacer era aseguraros que creyeran que la causa de todo eran los viajeros!~
+@10038 = ~Â¡Por favor! Fue precisamente el grupo de viajeros quienes lo hicieron. Deben ser mÃ¡s poderosos de lo que habÃ­ais imaginado en un principio.~
+@10039 = ~Ya morirÃ¡n bajo mi hoja, puedo asegurarlo. Pero me habÃ©is fallado miserablemente, Â¡viejo estÃºpido! DeberÃ©is pagar el precio por fallar a Artemis Entreri.~
+@10040 = ~Debo iniciar el plan de contingencia, porque nadie debe saber que Puerto Calim es responsable. Â¡Esta joya es Ãºtil obteniendo aliados! TendrÃ© a los piratas de Nelanther invadiendo los muelles de Athkatla. ParalizarÃ¡n la zona de comercio, y les echarÃ¡n toda la culpa por hacerlo. Mientras tanto, tengo una cuenta que saldar; y, como siempre, Entreri trabaja sÃ³lo. No temÃ¡is viajeros, cuando nos encontremos, serÃ¡ breve y raudo.~
 // BOATSCO2.BAF
 @10041 = ~Me temo que hemos cometido un error en nuestro juicio, hermanos.~
 @10042 = ~Explicaos.~
-@10043 = ~Siento que el mal no esta en esa dirección. Sino... que todavía está en Amn y es muy fuerte. Parece ser que el grupo acusado al final no era malvado, tal como ellos denunciaban. Debemos avisar al Concilio de este error, así como de la existencia persistente del mal. Riatavin debe ser registrada de arriba a abajo.~
-@10044 = ~¡NO! Debo decirle al maestro que el plan ha fallado antes de que Athkatla registre Riatavin.~
+@10043 = ~Siento que el mal no esta en esa direcciÃ³n. Sino... que todavÃ­a estÃ¡ en Amn y es muy fuerte. Parece ser que el grupo acusado al final no era malvado, tal como ellos denunciaban. Debemos avisar al Concilio de este error, asÃ­ como de la existencia persistente del mal. Riatavin debe ser registrada de arriba a abajo.~
+@10044 = ~Â¡NO! Debo decirle al maestro que el plan ha fallado antes de que Athkatla registre Riatavin.~
 // CUTDARKS.BAF
-@10045 = ~Vos incluso habéis llegado más lejos. Es interesante cómo venis para ser devorados.~
-@10046 = ~¡Al diablo con vos maldito demonio! Hablad y tratad de encontrar respuestas que no nos lleven a ninguna parte.~
-@10047 = ~¡¡Demonio!! ¡Cómo os atreveis a llamarme demonio! Esas son bestias de otro plano, pero nosotros mandamos aquí. Hemos renacido gracias al poder de nuestro líder regresado, y caminaremos una vez más por las tierras de Faerûn.~
-@10048 = ~He oido muchas veces del Regresado. ¿¿Qué es exactamente?? Vuestra tumba ha sido profanada por accidente, pero no entiendo qué tiene que ver este regreso que urgís con aterrorizar Faerûn.~
-@10049 = ~Ha regresado desde la prisión de su alma, y esta vez él se quedará y gobernará estas tierras.~
-@10050 = ~Esperad. ¿Estáis diciendo que vuestro así llamado maestro ha regresado de una prisión del alma? ¿Una especie de reliquia? ¿Os dais cuenta de las consecuencias de lo que decís? Si ha regresado de una prisión del alma, ¿cuantos más han regresado y porqué? He oido de esas reliquias, y normalmente contienen hordas de espíritus malignos. Tengo pocas dedudas de que si han sido liberados más, vuestro maestro es el menor de los problemas de Faerûn~
-@10051 = ~¿Cómo os atrevéis a subestimar al maestro? El poderoso Beghael no tendrá el placer de aplastaros, porque lo haré yo mismo como un placer personal.~
+@10045 = ~Vos incluso habÃ©is llegado mÃ¡s lejos. Es interesante cÃ³mo venis para ser devorados.~
+@10046 = ~Â¡Al diablo con vos maldito demonio! Hablad y tratad de encontrar respuestas que no nos lleven a ninguna parte.~
+@10047 = ~Â¡Â¡Demonio!! Â¡CÃ³mo os atreveis a llamarme demonio! Esas son bestias de otro plano, pero nosotros mandamos aquÃ­. Hemos renacido gracias al poder de nuestro lÃ­der regresado, y caminaremos una vez mÃ¡s por las tierras de FaerÃ»n.~
+@10048 = ~He oido muchas veces del Regresado. Â¿Â¿QuÃ© es exactamente?? Vuestra tumba ha sido profanada por accidente, pero no entiendo quÃ© tiene que ver este regreso que urgÃ­s con aterrorizar FaerÃ»n.~
+@10049 = ~Ha regresado desde la prisiÃ³n de su alma, y esta vez Ã©l se quedarÃ¡ y gobernarÃ¡ estas tierras.~
+@10050 = ~Esperad. Â¿EstÃ¡is diciendo que vuestro asÃ­ llamado maestro ha regresado de una prisiÃ³n del alma? Â¿Una especie de reliquia? Â¿Os dais cuenta de las consecuencias de lo que decÃ­s? Si ha regresado de una prisiÃ³n del alma, Â¿cuantos mÃ¡s han regresado y porquÃ©? He oido de esas reliquias, y normalmente contienen hordas de espÃ­ritus malignos. Tengo pocas dedudas de que si han sido liberados mÃ¡s, vuestro maestro es el menor de los problemas de FaerÃ»n~
+@10051 = ~Â¿CÃ³mo os atrevÃ©is a subestimar al maestro? El poderoso Beghael no tendrÃ¡ el placer de aplastaros, porque lo harÃ© yo mismo como un placer personal.~
 // CUTRJAIL.BAF
-@10052 = ~Atrapad a esa persona de allí.~
-@10053 = ~¿El qué...? ¿Qué queréis anciano? No he hecho nada malo.~
-@10054 = ~¡¿Nada malo, decís?! Os diré que debéis saber que puedo percibir el aura de las personas a kilómetros de distancia, y percibo que "vos" sois la causa de los problemas del comercio. Sois la causa de las muertes de Riatavin, y se os impedirá cometer más actos malvados.~
-@10055 = ~¿Qué? Estáis en un terrible error. No tengo ningún aura sobre mí. ¡Esperad un minuto, la moza! Ella colocó un aura en mí diciendo que eso mostraría mis intenciones de ayudar, pero... ¡pero me ha engañado!~
-@10056 = ~Vuestras mentiras no serán escuchadas. Aquí y ahora encontraréis la justicia que merecéis yendo a la carcel. ¡GUARDIAS! Arrestad a este hombre y llevadlo a la cárcel.~ ~Vuestras mentiras no serán escuchadas. Aquí y ahora encontrareis la justicia que mereceis yendo a la carcel. ¡GUARDIAS! Arrestad a esta mujer y llevadla a la cárcel.~
+@10052 = ~Atrapad a esa persona de allÃ­.~
+@10053 = ~Â¿El quÃ©...? Â¿QuÃ© querÃ©is anciano? No he hecho nada malo.~
+@10054 = ~Â¡Â¿Nada malo, decÃ­s?! Os dirÃ© que debÃ©is saber que puedo percibir el aura de las personas a kilÃ³metros de distancia, y percibo que "vos" sois la causa de los problemas del comercio. Sois la causa de las muertes de Riatavin, y se os impedirÃ¡ cometer mÃ¡s actos malvados.~
+@10055 = ~Â¿QuÃ©? EstÃ¡is en un terrible error. No tengo ningÃºn aura sobre mÃ­. Â¡Esperad un minuto, la moza! Ella colocÃ³ un aura en mÃ­ diciendo que eso mostrarÃ­a mis intenciones de ayudar, pero... Â¡pero me ha engaÃ±ado!~
+@10056 = ~Vuestras mentiras no serÃ¡n escuchadas. AquÃ­ y ahora encontrarÃ©is la justicia que merecÃ©is yendo a la carcel. Â¡GUARDIAS! Arrestad a este hombre y llevadlo a la cÃ¡rcel.~ ~Vuestras mentiras no serÃ¡n escuchadas. AquÃ­ y ahora encontrareis la justicia que mereceis yendo a la carcel. Â¡GUARDIAS! Arrestad a esta mujer y llevadla a la cÃ¡rcel.~
 // CUTSCARL.BAF
-@10057 = ~¿Os atrevéis a imponer vuestro camino en estas antiguas tumbas? Nos habéis perturbado en nuestro momento de rejuvenecimiento, y deberéis pagar un alto precio.~
-@10058 = ~¿Os atrevéis a amenazarnos? Habéis matado a muchos inocentes, y seréis vosotros quienes pagaréis el precio por medio de mi espada.~
-@10059 = ~Duras palabras esas, pero este es un medio de vivir. Nos alimentamos de los jóvenes para mantener nuestra fuerza; sólo son un medio de vida. Y vos sois el estúpido que está amenazandome.~
-@10060 = ~Grrr... Ya habéis dicho bastantes sandeces. Moriréis por mi espada, demonio. ¡CARGAAAAD!~
-@10061 = ~¡No! ¡Thorknar! ¡Tendréis una muerte dolorosa, demonio!~
+@10057 = ~Â¿Os atrevÃ©is a imponer vuestro camino en estas antiguas tumbas? Nos habÃ©is perturbado en nuestro momento de rejuvenecimiento, y deberÃ©is pagar un alto precio.~
+@10058 = ~Â¿Os atrevÃ©is a amenazarnos? HabÃ©is matado a muchos inocentes, y serÃ©is vosotros quienes pagarÃ©is el precio por medio de mi espada.~
+@10059 = ~Duras palabras esas, pero este es un medio de vivir. Nos alimentamos de los jÃ³venes para mantener nuestra fuerza; sÃ³lo son un medio de vida. Y vos sois el estÃºpido que estÃ¡ amenazandome.~
+@10060 = ~Grrr... Ya habÃ©is dicho bastantes sandeces. MorirÃ©is por mi espada, demonio. Â¡CARGAAAAD!~
+@10061 = ~Â¡No! Â¡Thorknar! Â¡TendrÃ©is una muerte dolorosa, demonio!~
 // CUTTHOR6.BAF
-@10062 = ~¡No! ¡Thorknar! ¡Tendréis una muerte dolorosa, demonio!~
-@10063 = ~¡Debéis controlarlo!~
-@10064 = ~¡Traidor!~
-@10065 = ~¡Maldito seáis, Thorknar!~
-@10066 = ~Él no es Thorknar. Es la bestia que trajo esta plaga, y el ser que asesinó a Thorknar.~
-@10067 = ~Sí, ya estaba enfermo de este asqueroso cuerpo de orco. No necesito ninguna máscara para recorrer estas tierras.~
-@10068 = ~¿Qué infiernos es eso?~
-@10069 = ~Es un maldito liche, la bestia no muerta que causó esta plaga.~
-@10070 = ~¡Yo tendría más cuidado al hablarle a vuestro superior, enclenque! ¡Podría aplastaros aquí y ahora! Pero... No, mejor prolongaré vuestro sufrimiento. Seréis uno más en mi ejército de acólitos.  Me ayudaréis en mi corrupción de las tierras.~
-@10071 = ~¡Desgarraría mi propio corazón antes de caminar a vuestro lado, maldito!~
-@10072 = ~Pero erréis al comprenderlo. No podéis resistiros a mí. Venid conmigo... Venid... Venid y permaneced al lado de vuestro maestro.~
+@10062 = ~Â¡No! Â¡Thorknar! Â¡TendrÃ©is una muerte dolorosa, demonio!~
+@10063 = ~Â¡DebÃ©is controlarlo!~
+@10064 = ~Â¡Traidor!~
+@10065 = ~Â¡Maldito seÃ¡is, Thorknar!~
+@10066 = ~Ã‰l no es Thorknar. Es la bestia que trajo esta plaga, y el ser que asesinÃ³ a Thorknar.~
+@10067 = ~SÃ­, ya estaba enfermo de este asqueroso cuerpo de orco. No necesito ninguna mÃ¡scara para recorrer estas tierras.~
+@10068 = ~Â¿QuÃ© infiernos es eso?~
+@10069 = ~Es un maldito liche, la bestia no muerta que causÃ³ esta plaga.~
+@10070 = ~Â¡Yo tendrÃ­a mÃ¡s cuidado al hablarle a vuestro superior, enclenque! Â¡PodrÃ­a aplastaros aquÃ­ y ahora! Pero... No, mejor prolongarÃ© vuestro sufrimiento. SerÃ©is uno mÃ¡s en mi ejÃ©rcito de acÃ³litos.  Me ayudarÃ©is en mi corrupciÃ³n de las tierras.~
+@10071 = ~Â¡DesgarrarÃ­a mi propio corazÃ³n antes de caminar a vuestro lado, maldito!~
+@10072 = ~Pero errÃ©is al comprenderlo. No podÃ©is resistiros a mÃ­. Venid conmigo... Venid... Venid y permaneced al lado de vuestro maestro.~
 @10073 = ~No, yo no... Yo... Yo...~
-@10074 = ~¿Veis?, no podéis resistiros. Ahora volveos. Matad a vuestros amigos. Sé que poseéis unos poderes de gran índole. Puedo sentir la sangre de un dios en vos. Id, matad a vuestros pueblerinos amigos. Mostradme vuestra devoción hacia mí.~
+@10074 = ~Â¿Veis?, no podÃ©is resistiros. Ahora volveos. Matad a vuestros amigos. SÃ© que poseÃ©is unos poderes de gran Ã­ndole. Puedo sentir la sangre de un dios en vos. Id, matad a vuestros pueblerinos amigos. Mostradme vuestra devociÃ³n hacia mÃ­.~
 @10075 = ~No, yo no... Yo... Yo...~
-@10076 = ~Os daré un ejemplo de lo que deseo.~
-@10077 = ~Vuestro turno. ¡Masacrad a estos debiles idiotas! Mostradme lo que valéis.~
-@10078 = ~¡Id y matad! Vuestros amigos no pueden ayudaros, porque están congelados en mi estela. ¡Os observarán cómo masacráis esta aldea!~
+@10076 = ~Os darÃ© un ejemplo de lo que deseo.~
+@10077 = ~Vuestro turno. Â¡Masacrad a estos debiles idiotas! Mostradme lo que valÃ©is.~
+@10078 = ~Â¡Id y matad! Vuestros amigos no pueden ayudaros, porque estÃ¡n congelados en mi estela. Â¡Os observarÃ¡n cÃ³mo masacrÃ¡is esta aldea!~
 // CUTTHOR7.BAF
-@10079 = ~Beghael, habéis perdido el motivo de vuestra liberación. Teníais tareas que completar, pero habéis perdido vuestro camino. El maestro no tiene a bien a aquellos que no completan lo asignado.~
-@10080 = ~¿Qué? No podéis ser tan necios. Fuisteis liberados, ¿y ahora os vais a convertir en esclavos por la escritura? Yo no soy tan débil.~
-@10081 = ~No tenéis elección Beghael. Sois una propiedad de la reliquia, y el maestro puede devolveros a vuestro calvario eterno tan pronto como él lo desee. Debéis ser sabio y obedecer.~
-@10082 = ~¡Esta es vuestra última advertencia Beghael! El maestro os usa como una herramienta. Si os rehusáis, entonces no le servís para nada y se deshará de vos.~
-@10083 = ~Sois todos unos débiles; demasiado débiles para estar a mi presencia. Habéis sido avisados. Ahora iros, o me alimentaré con vuestras almas.~
-@10084 = ~Esta es vuestra última oportunidad de recapacitar Beghael.~
-@10085 = ~¿Qué? ¡¡Morid insectos, débiles estúpidos!!~
-@10086 = ~¿¡Por qué no os morís!?~
-@10087 = ~Tuvistéis vuestra oportunidad. Os mostraremos el dolor.~
-@10088 = ~¡Traidores!~
-@10089 = ~Tomad nota de lo que habéis presenciado aquí, y no tengáis duda alguna. Todo el mundo se enfratará al maestro en algún momento. No podéis correr, no podéis ocultaros, y no podéis ganar. Difundid la palabra, sino la gente verá el futuro por sí misma demasiado pronto.~
+@10079 = ~Beghael, habÃ©is perdido el motivo de vuestra liberaciÃ³n. TenÃ­ais tareas que completar, pero habÃ©is perdido vuestro camino. El maestro no tiene a bien a aquellos que no completan lo asignado.~
+@10080 = ~Â¿QuÃ©? No podÃ©is ser tan necios. Fuisteis liberados, Â¿y ahora os vais a convertir en esclavos por la escritura? Yo no soy tan dÃ©bil.~
+@10081 = ~No tenÃ©is elecciÃ³n Beghael. Sois una propiedad de la reliquia, y el maestro puede devolveros a vuestro calvario eterno tan pronto como Ã©l lo desee. DebÃ©is ser sabio y obedecer.~
+@10082 = ~Â¡Esta es vuestra Ãºltima advertencia Beghael! El maestro os usa como una herramienta. Si os rehusÃ¡is, entonces no le servÃ­s para nada y se desharÃ¡ de vos.~
+@10083 = ~Sois todos unos dÃ©biles; demasiado dÃ©biles para estar a mi presencia. HabÃ©is sido avisados. Ahora iros, o me alimentarÃ© con vuestras almas.~
+@10084 = ~Esta es vuestra Ãºltima oportunidad de recapacitar Beghael.~
+@10085 = ~Â¿QuÃ©? Â¡Â¡Morid insectos, dÃ©biles estÃºpidos!!~
+@10086 = ~Â¿Â¡Por quÃ© no os morÃ­s!?~
+@10087 = ~TuvistÃ©is vuestra oportunidad. Os mostraremos el dolor.~
+@10088 = ~Â¡Traidores!~
+@10089 = ~Tomad nota de lo que habÃ©is presenciado aquÃ­, y no tengÃ¡is duda alguna. Todo el mundo se enfratarÃ¡ al maestro en algÃºn momento. No podÃ©is correr, no podÃ©is ocultaros, y no podÃ©is ganar. Difundid la palabra, sino la gente verÃ¡ el futuro por sÃ­ misma demasiado pronto.~
 // CYC01.BAF
-@10090 = ~¡¡¡ Os VEEEEEEEEO !!!~
-@10091 = ~¡ Vos pequeño !  ¡ Mí hacer pedazos !~
-@10092 = ~¡ Vos quedar QUIETO ! RRrr... ¡ Mí destrozar cabeza vuestra !~
+@10090 = ~Â¡Â¡Â¡ Os VEEEEEEEEO !!!~
+@10091 = ~Â¡ Vos pequeÃ±o !  Â¡ MÃ­ hacer pedazos !~
+@10092 = ~Â¡ Vos quedar QUIETO ! RRrr... Â¡ MÃ­ destrozar cabeza vuestra !~
 // DD1200.BAF
-@10093 = ~Debemos movernos rápido.~
+@10093 = ~Debemos movernos rÃ¡pido.~
 // DD8013.BAF
 @10094 = ~Tengo el ojo. Debe ser enfocado hacia la luz.~
 // DD9601.BAF
-@10095 = ~Dejemos atrás estos endemoniados túneles olvidados para siempre.~
+@10095 = ~Dejemos atrÃ¡s estos endemoniados tÃºneles olvidados para siempre.~
 // DDARNIE.BAF
 @10096 = ~GrrRRrr...~
-@10097 = ~¡¡¡MooOOOOO!!!~
+@10097 = ~Â¡Â¡Â¡MooOOOOO!!!~
 // DDCUT02.BAF
-@10098 = ~Parece que nos hemos quedado sin hierbas de nuevo, cariño. Voy a recoger algunas.~
-@10099 = ~Vale, pero por favor... tened cuidado. Están pasando tantas cosas... no os entretengáis.~
-@10100 = ~Oh, no os preocupéis demasiado. Estaré de vuelta en un momentito.~
+@10098 = ~Parece que nos hemos quedado sin hierbas de nuevo, cariÃ±o. Voy a recoger algunas.~
+@10099 = ~Vale, pero por favor... tened cuidado. EstÃ¡n pasando tantas cosas... no os entretengÃ¡is.~
+@10100 = ~Oh, no os preocupÃ©is demasiado. EstarÃ© de vuelta en un momentito.~
 // DDCUT04.BAF
-@10101 = ~¡Mirad! ¡Ahí hay una! ¡Cogedla!~
-@10102 = ~¡No! ¡Alejaos! ¡No quiero problemas!~
-@10103 = ~¡Ja! Esto fue bastante fácil. Vamos a ver si tiene algo de valor encima.~
+@10101 = ~Â¡Mirad! Â¡AhÃ­ hay una! Â¡Cogedla!~
+@10102 = ~Â¡No! Â¡Alejaos! Â¡No quiero problemas!~
+@10103 = ~Â¡Ja! Esto fue bastante fÃ¡cil. Vamos a ver si tiene algo de valor encima.~
 // DDCUT05.BAF
-@10104 = ~¡Larala! ¡Larala, ya van cerca de dos horas! ¿¡Donde estáis!? ¡Larala!~
-@10105 = ~¡Oh no... no, Larala! ¿Qué ha pasado?... (*llanto*)~
-@10106 = ~¡NO! ¡Esto no está bien! Por favor, traedla de vuelta... alguien...~
+@10104 = ~Â¡Larala! Â¡Larala, ya van cerca de dos horas! Â¿Â¡Donde estÃ¡is!? Â¡Larala!~
+@10105 = ~Â¡Oh no... no, Larala! Â¿QuÃ© ha pasado?... (*llanto*)~
+@10106 = ~Â¡NO! Â¡Esto no estÃ¡ bien! Por favor, traedla de vuelta... alguien...~
 @10107 = ~Por favor...~
-@10108 = ~Estoy aquí. Rezad. La resucitaré.~
-@10109 = ~¡Oh sí! ¡Gracias! ¡Gracias! Traedmela de regreso... por favor...~
-@10110 = ~¡Silencio!~
-@10111 = ~Este cuerpo tendrá que servir por ahora... poco más puedo hacer.~
+@10108 = ~Estoy aquÃ­. Rezad. La resucitarÃ©.~
+@10109 = ~Â¡Oh sÃ­! Â¡Gracias! Â¡Gracias! Traedmela de regreso... por favor...~
+@10110 = ~Â¡Silencio!~
+@10111 = ~Este cuerpo tendrÃ¡ que servir por ahora... poco mÃ¡s puedo hacer.~
 // DDCUT07.BAF
-@10112 = ~Las fuerzas son demasiado poderosas. ¡No puedo controlarlas! ¡Preparaos!~
+@10112 = ~Las fuerzas son demasiado poderosas. Â¡No puedo controlarlas! Â¡Preparaos!~
 // DDGAME01.BAF
 @10113 = ~Puedo sentir uno de los cuatro ardiendo en la punta de mis dedos.~
 // DDHALL01.BAF
-@10114 = ~¡Se oferce viaje al Salón del Conocimiento!~
-@10115 = ~¡Venid, venid todos!~
+@10114 = ~Â¡Se oferce viaje al SalÃ³n del Conocimiento!~
+@10115 = ~Â¡Venid, venid todos!~
 // DDPOCT1A.BAF
-@10116 = ~¡Exelente! Lo habéis hecho bien, <CHARNAME>. Hace 20 años que los mercenarios me están buscando, y estos son los primeros a los que he tenido el placer de enfrentarme por mí mismo.~
-@10117 = ~Asi que... ¿estáis listos para una pelea, mercenarios? ¿O nunca regresaréis para matarme de nuevo? Los Magos Encapuchados seguramente os estén pagando una gran suma, y odiaría el impedir que la consiguierais (*risita*).~
-@10118 = ~¡Os combatiremos! Nunca retrocederemos... ¡especialmente por 10.000 piezas de oro!~
-@10119 = ~¿Entonces deseáis un combate? Muy bien, atacadme. Esto debería ser un juego interesante.~
-@10120 = ~Como podéis ver, mis defensas no estaban totalmente desactivadas. ¿Hay algún otro al que le gustaría atacarme?~
-@10121 = ~Umm... sí, creo yo...~
-@10122 = ~(*Suspiro*)... <CHARNAME>, ¿estáis bien como para haceros cargo de ellos? Sus aptitudes me aburren sobremanera.~
-@10123 = ~¿Qu-Qué? ¿<CHARNAME> esta a vuestro servicio? ¡Maldición, ya me temia que estuvierais jugando con nosotros!~
+@10116 = ~Â¡Exelente! Lo habÃ©is hecho bien, <CHARNAME>. Hace 20 aÃ±os que los mercenarios me estÃ¡n buscando, y estos son los primeros a los que he tenido el placer de enfrentarme por mÃ­ mismo.~
+@10117 = ~Asi que... Â¿estÃ¡is listos para una pelea, mercenarios? Â¿O nunca regresarÃ©is para matarme de nuevo? Los Magos Encapuchados seguramente os estÃ©n pagando una gran suma, y odiarÃ­a el impedir que la consiguierais (*risita*).~
+@10118 = ~Â¡Os combatiremos! Nunca retrocederemos... Â¡especialmente por 10.000 piezas de oro!~
+@10119 = ~Â¿Entonces deseÃ¡is un combate? Muy bien, atacadme. Esto deberÃ­a ser un juego interesante.~
+@10120 = ~Como podÃ©is ver, mis defensas no estaban totalmente desactivadas. Â¿Hay algÃºn otro al que le gustarÃ­a atacarme?~
+@10121 = ~Umm... sÃ­, creo yo...~
+@10122 = ~(*Suspiro*)... <CHARNAME>, Â¿estÃ¡is bien como para haceros cargo de ellos? Sus aptitudes me aburren sobremanera.~
+@10123 = ~Â¿Qu-QuÃ©? Â¿<CHARNAME> esta a vuestro servicio? Â¡MaldiciÃ³n, ya me temia que estuvierais jugando con nosotros!~
 // DDPOCT1B.BAF
-@10124 = ~¿Sois lo bastante estúpidos para pensar que no os escuché al otro lado de mi puerta? ¡Le hablasteis de la trampa! ¡Esto no se puede permitir!~
-@10125 = ~Habéis intentado traicionarme... ¡y VOSOTROS habéis intentado asesinarme! ¡Todos seréis castigados!~
-@10126 = ~El primer castigo ira a quién atentó contra mi bienestar.~
-@10127 = ~Desde ahora, seréis conocido como <CHARNAME> el Extravagante por todos aquellos se os acerquen y quienes os conocen.~
-~Desde ahora, seréis conocida como <CHARNAME> la Extravagante por todos aquellos se os acerquen y quienes os conocen.~
-@10128 = ~En cuanto a los mercenarios... Viviréis sin preocupaciones durante una semana. Sentiros libres de vagar por la posada.~
-@10129 = ~Encontrar comida y un lugar para dormir es cosa vuestra. Me imagino que Paul el Gato pasaría un buen rato con vos...~
-@10130 = ~Y... oh, sí... ¡Vos! ¡Sí, vos; el mercenario! Nunca seréis capáz de dirigir una sola palabra a un Mago Encapuchado de nuevo.~
-@10131 = ~Eso es todo. Si alguno tenéis algún problema más, presentaos ante mí. No haré nada, pero estaré interesado en oir vuestros argumentos.~
+@10124 = ~Â¿Sois lo bastante estÃºpidos para pensar que no os escuchÃ© al otro lado de mi puerta? Â¡Le hablasteis de la trampa! Â¡Esto no se puede permitir!~
+@10125 = ~HabÃ©is intentado traicionarme... Â¡y VOSOTROS habÃ©is intentado asesinarme! Â¡Todos serÃ©is castigados!~
+@10126 = ~El primer castigo ira a quiÃ©n atentÃ³ contra mi bienestar.~
+@10127 = ~Desde ahora, serÃ©is conocido como <CHARNAME> el Extravagante por todos aquellos se os acerquen y quienes os conocen.~
+~Desde ahora, serÃ©is conocida como <CHARNAME> la Extravagante por todos aquellos se os acerquen y quienes os conocen.~
+@10128 = ~En cuanto a los mercenarios... VivirÃ©is sin preocupaciones durante una semana. Sentiros libres de vagar por la posada.~
+@10129 = ~Encontrar comida y un lugar para dormir es cosa vuestra. Me imagino que Paul el Gato pasarÃ­a un buen rato con vos...~
+@10130 = ~Y... oh, sÃ­... Â¡Vos! Â¡SÃ­, vos; el mercenario! Nunca serÃ©is capÃ¡z de dirigir una sola palabra a un Mago Encapuchado de nuevo.~
+@10131 = ~Eso es todo. Si alguno tenÃ©is algÃºn problema mÃ¡s, presentaos ante mÃ­. No harÃ© nada, pero estarÃ© interesado en oir vuestros argumentos.~
 // DDYOLKUM.BAF
-@10132 = ~¡¡¡RrraaAAGGHH!!!~
-@10133 = ~¡Ahí voy otra vez, estúpido!~
-@10134 = ~¡Jaja! ¡Que divertido!~
-@10135 = ~¡BabababaBOOM!~
-@10136 = ~¡Me luciré para los aventureros ahora!~
+@10132 = ~Â¡Â¡Â¡RrraaAAGGHH!!!~
+@10133 = ~Â¡AhÃ­ voy otra vez, estÃºpido!~
+@10134 = ~Â¡Jaja! Â¡Que divertido!~
+@10135 = ~Â¡BabababaBOOM!~
+@10136 = ~Â¡Me lucirÃ© para los aventureros ahora!~
 // DEMRIAT1.BAF
-@10137 = ~¿Qué deminios es esto?~
+@10137 = ~Â¿QuÃ© deminios es esto?~
 // DOCKWARN.BAF
-@10138 = ~¡Aprisa! ¡Va a haber una invasión por el puerto!~
-@10139 = ~¿¡Una invasión?! ¿De quienes?~
+@10138 = ~Â¡Aprisa! Â¡Va a haber una invasiÃ³n por el puerto!~
+@10139 = ~Â¿Â¡Una invasiÃ³n?! Â¿De quienes?~
 @10140 = ~De los piratas de las Nelanther... todos ellos, por lo que pudimos ver.~
-@10141 = ~Dice la verdad. Esto demuestra el terrible error que cometísteis al inculparnos.~
-@10142 = ~¡Maldición! Estamos más que arrepentidos por nuestro mal hacer, pero debemos prepararnos. Están casi encima nuestra. ¡Mirad! Puedo verlos en la lejanía. ¡Preparaos para responder al acero con acero!~
+@10141 = ~Dice la verdad. Esto demuestra el terrible error que cometÃ­steis al inculparnos.~
+@10142 = ~Â¡MaldiciÃ³n! Estamos mÃ¡s que arrepentidos por nuestro mal hacer, pero debemos prepararnos. EstÃ¡n casi encima nuestra. Â¡Mirad! Puedo verlos en la lejanÃ­a. Â¡Preparaos para responder al acero con acero!~
 // DX2001.BAF
-@10143 = ~Puedo sentir el poder en las inmediaciones. Debemos continuar a través de la caverna.~
+@10143 = ~Puedo sentir el poder en las inmediaciones. Debemos continuar a travÃ©s de la caverna.~
 // GOVAPOL.BAF
-@10144 = ~Habéis hecho ostentación de un gran coraje y de grandes proezas en el día de hoy. Habéis auxiliado estos muelles del peligro y el trato que recibiréis será dificil de olvidar.~
-@10145 = ~Vuestras acusasiones estaban infundadas, y el venir en vuestro auxilio ha dado lugar a la razón.~
-@10146 = ~En este día, os habéis ganado el favor de los Ladrones de la Sombra. Os obsequiamos con este artefacto, para mostraros la gratitud del gremio. No hay honor incluso entre nosotros, los pícaros, y estar en buenos términos con alguien tan poderoso como vos debe estar entre nuestros intereses.~
-@10147 = ~A nadie habéis complacido más que al Radiante Corazón. Os hemos traido un objeto finamente trabajado para mostraros nuestro aprecio. En un plazo tan breve, el Radiante Corazón no podría haber presentado batalla a solas.~
-@10148 = ~A pesar del sentimiento de haber sido traicionado, la ciudad reconoce sin dudas su error. Acepto vuestros regalos y espero que podamos caminar por estas calles de nuevo sin llamar la atención.~
-~A pesar del sentimiento de haber sido traicionada, la ciudad reconoce sin dudas su error. Acepto vuestros regalos y espero que podamos caminar por estas calles de nuevo sin llamar la atención.~
-@10149 = ~Seréis tratados tan bien como os merecéis, velaremos por ello. Sobre lo de la atención, no estoy tan seguro. En poco tiempo, he oido que muchos grupos os están rondando para que les sirváis en tareas en las que los aventureros como vos sois los más adecuados. Parece ser que vuestros días de aventuras están muy vivos y espero que nuestros regalos os ayuden mucho.~
+@10144 = ~HabÃ©is hecho ostentaciÃ³n de un gran coraje y de grandes proezas en el dÃ­a de hoy. HabÃ©is auxiliado estos muelles del peligro y el trato que recibirÃ©is serÃ¡ dificil de olvidar.~
+@10145 = ~Vuestras acusasiones estaban infundadas, y el venir en vuestro auxilio ha dado lugar a la razÃ³n.~
+@10146 = ~En este dÃ­a, os habÃ©is ganado el favor de los Ladrones de la Sombra. Os obsequiamos con este artefacto, para mostraros la gratitud del gremio. No hay honor incluso entre nosotros, los pÃ­caros, y estar en buenos tÃ©rminos con alguien tan poderoso como vos debe estar entre nuestros intereses.~
+@10147 = ~A nadie habÃ©is complacido mÃ¡s que al Radiante CorazÃ³n. Os hemos traido un objeto finamente trabajado para mostraros nuestro aprecio. En un plazo tan breve, el Radiante CorazÃ³n no podrÃ­a haber presentado batalla a solas.~
+@10148 = ~A pesar del sentimiento de haber sido traicionado, la ciudad reconoce sin dudas su error. Acepto vuestros regalos y espero que podamos caminar por estas calles de nuevo sin llamar la atenciÃ³n.~
+~A pesar del sentimiento de haber sido traicionada, la ciudad reconoce sin dudas su error. Acepto vuestros regalos y espero que podamos caminar por estas calles de nuevo sin llamar la atenciÃ³n.~
+@10149 = ~SerÃ©is tratados tan bien como os merecÃ©is, velaremos por ello. Sobre lo de la atenciÃ³n, no estoy tan seguro. En poco tiempo, he oido que muchos grupos os estÃ¡n rondando para que les sirvÃ¡is en tareas en las que los aventureros como vos sois los mÃ¡s adecuados. Parece ser que vuestros dÃ­as de aventuras estÃ¡n muy vivos y espero que nuestros regalos os ayuden mucho.~
 // GUTSEXPL.BAF
-@10150 = ~¡No... No. NOOOOOOOO!~
+@10150 = ~Â¡No... No. NOOOOOOOO!~
 // XXARPO30.BAF
-@10151 = ~La puerta está cerrada. Necesitáis alguna clase de llave para entrar en la habitación contigua.~
-@10152 = ~Cuando insertáis la llave en la cerradura, la llave desaparece en un pequeño estallido de luz, y la puerta se abre sola.~
+@10151 = ~La puerta estÃ¡ cerrada. NecesitÃ¡is alguna clase de llave para entrar en la habitaciÃ³n contigua.~
+@10152 = ~Cuando insertÃ¡is la llave en la cerradura, la llave desaparece en un pequeÃ±o estallido de luz, y la puerta se abre sola.~
 // JOINLOOT.BAF 
-@10153 = ~Tuvisteis vuestra oportunidad. Ahora os enseñaremos el dolor.~
+@10153 = ~Tuvisteis vuestra oportunidad. Ahora os enseÃ±aremos el dolor.~
 // PAULCAT.BAF
-@10154 = ~¡Mi nombre es Paul! ¡Sentiréis mi ir-ooh... Auuu! ¡Eso duele!~
-@10155 = ~¡La victoria esta cerca, debiluchos! ¡Meoahaha!~
+@10154 = ~Â¡Mi nombre es Paul! Â¡SentirÃ©is mi ir-ooh... Auuu! Â¡Eso duele!~
+@10155 = ~Â¡La victoria esta cerca, debiluchos! Â¡Meoahaha!~
 @10156 = ~Purr... prrr...~
 // PKLOTHX.BAF
-@10157 = ~Ha sido un éxito. Los espiritus han regresado a su plano. Mi trabajo aqui ha terminado.~
-@10158 = ~Gracias, gentil Sacerdote de Lathander. Este pueblo os está en deuda.~
-@10159 = ~Para nada, amigos. Esto sólo ha sido un día de trabajo. Ahora si me disculpáis me pondré en marcha. Adiós viajeros.~
+@10157 = ~Ha sido un Ã©xito. Los espiritus han regresado a su plano. Mi trabajo aqui ha terminado.~
+@10158 = ~Gracias, gentil Sacerdote de Lathander. Este pueblo os estÃ¡ en deuda.~
+@10159 = ~Para nada, amigos. Esto sÃ³lo ha sido un dÃ­a de trabajo. Ahora si me disculpÃ¡is me pondrÃ© en marcha. AdiÃ³s viajeros.~
 // RAISEART.BAF
-@10160 = ~Sois demasiado útiles como para dejar que os pudráis en los estómagos de las ratas.~
-@10161 = ~Seréis unas herramientras excelentes para el Maestro.~
-@10162 = ~La resurrección es algo maravilloso.~
-@10163 = ~Ahora sois los espíritus fantasmales del Maestro, y le serviréis como guste. ¿Está claro?~
+@10160 = ~Sois demasiado Ãºtiles como para dejar que os pudrÃ¡is en los estÃ³magos de las ratas.~
+@10161 = ~SerÃ©is unas herramientras excelentes para el Maestro.~
+@10162 = ~La resurrecciÃ³n es algo maravilloso.~
+@10163 = ~Ahora sois los espÃ­ritus fantasmales del Maestro, y le servirÃ©is como guste. Â¿EstÃ¡ claro?~
 @10164 = ~Totalmente.~
-@10165 = ~Serviré.~
-@10166 = ~letales y obedientes, el Maestro os apreciará en su objetivo de regresar.~
+@10165 = ~ServirÃ©.~
+@10166 = ~letales y obedientes, el Maestro os apreciarÃ¡ en su objetivo de regresar.~
 // REVBURN2.BAF
-@10167 = ~¡POR FAVOR! ¡¡NO!! Lo siento... lo siento mucho... Por favor no me matéis... Por favor...~
-@10168 = ~¡Silencio, cerdo! Os estoy mostrando una gran misercordia. Debería desollaros vivo y dejar que los insectos os devoraran, pero os daré una muerte mucho más agradable. Estoy segura que el olor de vuestra piel quemada me resultará más agradable, pero para vos, no estoy tan segura de ello.~
-@10169 = ~¡Hacedlo! Deseo ver el placer en vuestros ojos, Viconia. Quiero ver la lujuria en vos cuando le hagáis sufrir, eso me encanta. Quemadlo vivo. ¡Mostradme vuestro deseo de venganza! Mostradme lo que deseo.~
-@10170 = ~¡Sentid el dolor que os merecéis, cerdo! ¡Arded!~
+@10167 = ~Â¡POR FAVOR! Â¡Â¡NO!! Lo siento... lo siento mucho... Por favor no me matÃ©is... Por favor...~
+@10168 = ~Â¡Silencio, cerdo! Os estoy mostrando una gran misercordia. DeberÃ­a desollaros vivo y dejar que los insectos os devoraran, pero os darÃ© una muerte mucho mÃ¡s agradable. Estoy segura que el olor de vuestra piel quemada me resultarÃ¡ mÃ¡s agradable, pero para vos, no estoy tan segura de ello.~
+@10169 = ~Â¡Hacedlo! Deseo ver el placer en vuestros ojos, Viconia. Quiero ver la lujuria en vos cuando le hagÃ¡is sufrir, eso me encanta. Quemadlo vivo. Â¡Mostradme vuestro deseo de venganza! Mostradme lo que deseo.~
+@10170 = ~Â¡Sentid el dolor que os merecÃ©is, cerdo! Â¡Arded!~
 // RIATPLG2.BAF
 @10171 = ~Hemos rastreado la causa del caos y los problemas mercantiles, por no hablar de las muertes.~
 @10172 = ~Debemos actuar.~
 @10173 = ~Mostradnos al demonio para que podamos ponerle fin a esto.~
-@10174 = ~No necesito mostraroslo, sino que vamos a ponerle fin aquí y ahora. Uníos a mí en este ritual para poder devastar esa alma enferma y solitaria y así poner fin a estos problemas.~
+@10174 = ~No necesito mostraroslo, sino que vamos a ponerle fin aquÃ­ y ahora. UnÃ­os a mÃ­ en este ritual para poder devastar esa alma enferma y solitaria y asÃ­ poner fin a estos problemas.~
 // RIATSLAY.BAF
-@10175 = ~*Tos-tos* ¡Mi pecho... está... siento que está ardiendo!~
-@10176 = ~¿Qué-- qué está ocurriendo? ¡Me estoy muriendo! ¡No! ¡Ah-- Aahhh!~
+@10175 = ~*Tos-tos* Â¡Mi pecho... estÃ¡... siento que estÃ¡ ardiendo!~
+@10176 = ~Â¿QuÃ©-- quÃ© estÃ¡ ocurriendo? Â¡Me estoy muriendo! Â¡No! Â¡Ah-- Aahhh!~
 // TARTFOI2.BAF
 @10177 = ~Grr...~
-@10178 = ~¡Silencio, demonios insignificantes!~
+@10178 = ~Â¡Silencio, demonios insignificantes!~
 @10179 = ~Bien, ha pasado mucho tiempo desde que vi a otros como vosotros. Debo decir que he esperado muchas generaciones para este momento.~
-@10180 = ~¿Tenéis idea de quién soy yo? He esperado mucho más que vos, puedo garantizaroslo. Seríais sabio si os echáis a un lado.~
-@10181 = ~¿Os atrevéis a amenazarme? Soy tan viejo como el tiempo. He visto el nacimiento de todos los planetas que deseéis gobernar. Y conozco a los de vuestra especie.~
-@10182 = ~Sé que con algo de tiempo sois indestructible. Pero acabo de presenciar vuestro nacimiento, y vuestro tiempo aún no ha llegado.~
-@10183 = ~Puedo aseguraros que vos sólo sois otro objeto que caerá ante mí, demonio insignificante.~
-@10184 = ~¡Demonio! ¡DEMONIO! No soy un demonio, idiota. Esas mezquinas criaturas me sirven porque no tienen elección. Este es mi plano pues yo soy Tartarus, el Asesino de Demonios. ¿Os atrevéis a compararme con esas...  soy un Asesino de Demonios, ellos me sirven, este es mi plano y me llamo Tartarus, y tu me comparas con esos... desgraciados?~
-@10185 = ~¿Convencido, idiota?~
-@10186 = ~¡Ja, ja, ja! ¡Semejante demostración es lamentable en comparación con lo que puedo realizar!~
-@10187 = ~Ya basta de cháchara. Tenéis algo que quiero. Vuestra garra es por lo que he esperado. Esta es la entrada de mi reino, y vos pereceréis por ese don.~
+@10180 = ~Â¿TenÃ©is idea de quiÃ©n soy yo? He esperado mucho mÃ¡s que vos, puedo garantizaroslo. SerÃ­ais sabio si os echÃ¡is a un lado.~
+@10181 = ~Â¿Os atrevÃ©is a amenazarme? Soy tan viejo como el tiempo. He visto el nacimiento de todos los planetas que deseÃ©is gobernar. Y conozco a los de vuestra especie.~
+@10182 = ~SÃ© que con algo de tiempo sois indestructible. Pero acabo de presenciar vuestro nacimiento, y vuestro tiempo aÃºn no ha llegado.~
+@10183 = ~Puedo aseguraros que vos sÃ³lo sois otro objeto que caerÃ¡ ante mÃ­, demonio insignificante.~
+@10184 = ~Â¡Demonio! Â¡DEMONIO! No soy un demonio, idiota. Esas mezquinas criaturas me sirven porque no tienen elecciÃ³n. Este es mi plano pues yo soy Tartarus, el Asesino de Demonios. Â¿Os atrevÃ©is a compararme con esas...  soy un Asesino de Demonios, ellos me sirven, este es mi plano y me llamo Tartarus, y tu me comparas con esos... desgraciados?~
+@10185 = ~Â¿Convencido, idiota?~
+@10186 = ~Â¡Ja, ja, ja! Â¡Semejante demostraciÃ³n es lamentable en comparaciÃ³n con lo que puedo realizar!~
+@10187 = ~Ya basta de chÃ¡chara. TenÃ©is algo que quiero. Vuestra garra es por lo que he esperado. Esta es la entrada de mi reino, y vos perecerÃ©is por ese don.~
 // TARTFOIL.BAF
-@10188 = ~Al fin alguien me ha dado los espíritus que necesito para mi nacimiento. Ha llegado el momento para reclamar mi reino.~
+@10188 = ~Al fin alguien me ha dado los espÃ­ritus que necesito para mi nacimiento. Ha llegado el momento para reclamar mi reino.~
 // TOPAZCUT.BAF
 @10189 = ~Creo que hemos encontrado el cubil del Tirano.~
 // TROLBOYS.BAF
-@10190 = ~¡Ahh! ¡Socorro!~
+@10190 = ~Â¡Ahh! Â¡Socorro!~
 // VICYRAPE.BAF
-@10191 = ~Alejaos de mí, sucio puerco.~
-@10192 = ~Vaya, una hermosa elfa drow con ganas de pelear. Os enseñaré a respetarme, perra oscura.~
-@10193 = ~¡Manteneos alejado, puerco! Tengo las manos atadas a la espalda. Dejadme las manos libres si sois hombre y mostradme vuestra valía en combate.~
-@10194 = ~No lo haré mediante la lucha, drow. ¡Os mostraré lo que soy conforme pase toda la noche!~
-@10195 = ~No... No. ¡NOOOOOOOO!~
-@10196 = ~Viconia, ¿estáis bien? Oí vuestros gritos. ¿Acaso os torturaron?~
-@10197 = ~La tortura habría sido mejor. El guardia... él... él me violó. Ese humano mugriento me violó. Tenía las manos atadas a la espalda., no había nada que pudiera hacer.~
-@10198 = ~¡Por los dioses! Lo lamento muchísimo Viconia. ¡Debemos encontrar una forma de vengar eso!~
-@10199 = ~He sido violada por un humano. No descansaré hasta colgar su pellejo en mi pared como un recordatorio de cuán diabólicas pueden ser las razas de la superfície.~
+@10191 = ~Alejaos de mÃ­, sucio puerco.~
+@10192 = ~Vaya, una hermosa elfa drow con ganas de pelear. Os enseÃ±arÃ© a respetarme, perra oscura.~
+@10193 = ~Â¡Manteneos alejado, puerco! Tengo las manos atadas a la espalda. Dejadme las manos libres si sois hombre y mostradme vuestra valÃ­a en combate.~
+@10194 = ~No lo harÃ© mediante la lucha, drow. Â¡Os mostrarÃ© lo que soy conforme pase toda la noche!~
+@10195 = ~No... No. Â¡NOOOOOOOO!~
+@10196 = ~Viconia, Â¿estÃ¡is bien? OÃ­ vuestros gritos. Â¿Acaso os torturaron?~
+@10197 = ~La tortura habrÃ­a sido mejor. El guardia... Ã©l... Ã©l me violÃ³. Ese humano mugriento me violÃ³. TenÃ­a las manos atadas a la espalda., no habÃ­a nada que pudiera hacer.~
+@10198 = ~Â¡Por los dioses! Lo lamento muchÃ­simo Viconia. Â¡Debemos encontrar una forma de vengar eso!~
+@10199 = ~He sido violada por un humano. No descansarÃ© hasta colgar su pellejo en mi pared como un recordatorio de cuÃ¡n diabÃ³licas pueden ser las razas de la superfÃ­cie.~
 // VICYTHX2.BAF
-@10200 = ~Me agrada que tengamos este momento juntas, pero tengo que aseguraros que ésto es sólo para desfogarnos. Nada más surgirá de esto.~
-@10201 = ~Estoy satisfecha con esa elección, ¿aunque quién sabe lo que deparará el tiempo?~
-@10202 = ~Y sabed que jugaremos con mis reglas. Os mostraré algunas cosas que de hecho hacen deseable Menzoberranzan. Yo era bien conocida por mis habilidades en este tema.~
+@10200 = ~Me agrada que tengamos este momento juntas, pero tengo que aseguraros que Ã©sto es sÃ³lo para desfogarnos. Nada mÃ¡s surgirÃ¡ de esto.~
+@10201 = ~Estoy satisfecha con esa elecciÃ³n, Â¿aunque quiÃ©n sabe lo que depararÃ¡ el tiempo?~
+@10202 = ~Y sabed que jugaremos con mis reglas. Os mostrarÃ© algunas cosas que de hecho hacen deseable Menzoberranzan. Yo era bien conocida por mis habilidades en este tema.~
 // bAR2800.BAF
 @10203 = ~El aturdimiento azota vuestra mente sin previo aviso. La oscuridad os abruma y las visiones os sacan de vuestro cuerpo...~
 // bBALDUR.BAF
-@10204 = ~El cuerpo se desvanece en el aire. Es reemplazado con una estatuilla cálida.~
-@10205 = ~Empezáis a sentir una gran fatiga. Vuestra visión se nubla y no podréis pensar con claridad. Parece que habéis caido bajo algún tipo de enfermedad.~
+@10204 = ~El cuerpo se desvanece en el aire. Es reemplazado con una estatuilla cÃ¡lida.~
+@10205 = ~EmpezÃ¡is a sentir una gran fatiga. Vuestra visiÃ³n se nubla y no podrÃ©is pensar con claridad. Parece que habÃ©is caido bajo algÃºn tipo de enfermedad.~
 // DROWCONV.BAF (previously hardcoded in the BAF file)
 // Same as @8 in TOPESLAV.TRA
 @10206 = ~No, ahora no.~
 // Same as @20151 in TP2.TRA (question mark to replace by dot)
-@10207 = ~Sí.~
+@10207 = ~SÃ­.~
