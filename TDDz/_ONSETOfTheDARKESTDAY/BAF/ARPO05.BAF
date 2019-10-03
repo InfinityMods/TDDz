@@ -48,6 +48,7 @@ IF
 THEN
   RESPONSE #100
     SetGlobal("tz_DarkestDaySickness","GLOBAL",1)
+    TriggerActivation("ICM EXIT trigger",FALSE)
 END
 
 IF
