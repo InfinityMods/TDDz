@@ -1,6 +1,6 @@
 BACKUP ~TDDz/Backup~
 AUTHOR ~shadowlich~
-VERSION ~v1.2.6~
+VERSION ~v1.2.7~
 
 ALWAYS
 	INCLUDE ~%MOD_FOLDER%/Lib/Helpers.tpa~
@@ -166,3 +166,14 @@ BEGIN @901010
 //		LAM DispatchTraFiles
 */
 
+BEGIN ~Start Onset quest ouside Suldanessalar~
+
+REQUIRE_COMPONENT "setup-TDDz.tp2" "5" ~Requires Onset component~
+
+EXTEND_TOP ~ar2800.bcs~ ~%MOD_FOLDER%/Delay/delay2800.baf~
+EXTEND_TOP ~ar2500.bcs~ ~%MOD_FOLDER%/Delay/delay5003.baf~
+
+COPY_EXISTING ~ddwarp01.cre~ ~override~
+              WRITE_ASCII 0x248 ~initdlg~
+              
+COMPILE ~%MOD_FOLDER%/Delay/delay.d~

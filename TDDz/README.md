@@ -59,6 +59,7 @@ For now, I focus on adventure, I have no time nor experience to deal/test rules 
 
 * Fixes/Tweaks/Changes *
 	. Entry point of Onset of the Darkest Day moved from Ellisime to Elhan (after Rillifan temple, talk to him)
+	. Alternative component allows to change Elhan to Underdark exit for undisrupted Suldanessalar experience.
 	. XP granted by scripts are reduced to 10%
 	. XP granted by TDD creatures are reduded to 20% (creatures from vanilla game that appear in TDD keep their vanilla XP); Graz'zt XP set to 50k rather than 100k due to poor combat script
 	. Remove easy +1 STR/WIS/INT granted by Riatavin/Fleeques.cre after killing Graz'zt

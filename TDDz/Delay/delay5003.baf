@@ -1,0 +1,17 @@
+IF
+Global("tz_StartOnsetOfTDD","GLOBAL",0)
+Global("ElhanFinishedSpeaking","GLOBAL",1)
+THEN
+RESPONSE #100
+SetGlobal("tz_StartOnsetOfTDD","GLOBAL",1)
+CreateCreature("DDwarp01",[380.890],12)
+Continue()
+END
+
+IF
+Global("tz_StartOnsetOfTDD","GLOBAL",2)
+InMyArea("ddwarp01")
+THEN
+RESPONSE #100
+ActionOverride("ddwarp01",DestroySelf())
+END
