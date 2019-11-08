@@ -5,10 +5,15 @@ END
 ++~Yes, I would like to visit my home once again. Maybe I will see some old friends...~+ Delay3
 ++~I'm always up for some more traveling.~+ Delay3
 ++~There is no way I'm ever going back to that hellhole.~+ Delay2
+++~I may come back to your offer in a little while.~+ Delay4
 
 CHAIN
 IF~~THEN DDWarp01 Delay2
 ~I wasn't aware that you felt that way about your home. However, my offer still stands if you change your mind.~EXIT
+
+CHAIN
+IF~~THEN DDWarp01 Delay4
+~Understandable. My offer still stands if you change your mind.~EXIT
 
 CHAIN
 IF~~THEN DDWarp01 Delay3
