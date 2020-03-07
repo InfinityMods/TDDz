@@ -10,7 +10,6 @@ I (shadowlich) am NOT the author of TDD, I just try write an weidu setup to not 
 Thanks to Max Schnur for allowing us to release an updated version of this mod!
 
 https://twitter.com/MaxSchnur/status/691754073893249025
-https://forums.beamdog.com/discussion/38136/how-one-christmas-can-change-everything-an-amazing-story-of-one-of-the-darkest-day-creators
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
@@ -45,7 +44,7 @@ For now, I focus on adventure, I have no time nor experience to deal/test rules 
 	. In TDDz, there is a folder for each component, edit CreaturesContract.2da, change its RESNAME column, add scripts, add deathvar but MODIFY existing deathvar/scripts/dialog at your own risks.
 	
 * How to report bugs? *	
-	. Contact me at Beamdog forum or SHS forum	    
+	. Report at http://baldursextendedworld.com/Vanilla_Forums/categories/-the-big-mods    
 
 * Notes *
     .These lines are to translate in setup.tra:
