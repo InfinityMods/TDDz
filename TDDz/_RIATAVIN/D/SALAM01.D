@@ -151,10 +151,9 @@ END
 
 IF ~~ THEN BEGIN 26 // from: 25.1 25.0
   SAY @56
-  IF ~~ THEN DO ~SetGlobal("tz_pashacircle","GLOBAL",1) Wait(1)
-  CreateVisualEffectObject("spportal","salam01")
+  IF ~~ THEN DO ~CreateVisualEffectObject("spportal","salam01")
 Wait(2)
 ActionOverride("salam01",DestroySelf())
 AddExperienceParty(SALAM01_D_20000)
-~ EXIT
+SetGlobal("tz_pashacircle","GLOBAL",1)~ EXIT
 END
