@@ -90,7 +90,7 @@ LANGUAGE 	~Spanish(Clan REO)~
 
 BEGIN @901000 
 	REQUIRE_PREDICATE GAME_IS ~tob bg2ee eet~ ~~
-	COPY ~TDD/Bam~ ~override~
+	
 	INCLUDE ~%MOD_FOLDER%/Lib/Importer.tpa~
 		LAF ImportComponent STR_VAR aComp = ~CORE~ END
 	INCLUDE ~%MOD_FOLDER%/Lib/Helpers.tpa~ 
