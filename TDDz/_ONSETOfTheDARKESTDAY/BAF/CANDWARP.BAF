@@ -66,13 +66,7 @@ THEN
     LeaveAreaLUA("dd6000","GTRSK002",[759.653],12)
 END
 
-IF
-  True()
-THEN
-  RESPONSE #100
-    CutSceneId("ddwarp01")
-    DestroySelf()
-END
+
 
 
 
