@@ -60,7 +60,6 @@ END
 
 IF
   Global("tz_Bansheeyield","GLOBAL",3)
-  Global("tz_bansheetalos","GLOBAL",0)
 THEN
   RESPONSE #100
     SetGlobal("tz_bansheetalos","GLOBAL",1)
