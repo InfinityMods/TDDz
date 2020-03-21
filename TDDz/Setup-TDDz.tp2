@@ -84,9 +84,6 @@ BEGIN @901000
 	INCLUDE ~%MOD_FOLDER%/Lib/Helpers.tpa~ 
 		LAF DeleteTempFolder STR_VAR aComp = ~CORE~ END	
 
-COPY_EXISTING ~sahoty.cre~ ~override/tzhoty01.cre~
-              WRITE_ASCII 0x280 ~tzhoty01~ #8
-
 LAF HANDLE_AUDIO
   STR_VAR
     audio_path = ~TDD/ogg~ // the audio are from TDD
@@ -98,8 +95,8 @@ COPY ~TDDz/PVRZ~ ~override~
 BEGIN @901001
 	REQUIRE_PREDICATE GAME_IS ~tob bg2ee eet~ ~~
 	REQUIRE_COMPONENT "setup-TDDz.tp2" "0" @901011
-
-	INCLUDE ~%MOD_FOLDER%/Lib/Importer.tpa~
+		
+	INCLUDE ~%MOD_FOLDER%/Lib/Importer.tpa~ 
 		LAF ImportComponent STR_VAR aComp = ~TROLLFORD~ END
 	INCLUDE ~%MOD_FOLDER%/Lib/Helpers.tpa~ 
 		LAF DeleteTempFolder STR_VAR aComp = ~TROLLFORD~ END
