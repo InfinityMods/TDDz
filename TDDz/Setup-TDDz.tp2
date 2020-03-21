@@ -1,6 +1,6 @@
 BACKUP ~TDDz/Backup~
 AUTHOR ~shadowlich~
-VERSION ~v1.2.9~
+VERSION ~v1.2.8~
 
 ALWAYS
 	INCLUDE ~%MOD_FOLDER%/Lib/Helpers.tpa~
@@ -75,11 +75,23 @@ LANGUAGE 	~Spanish(Clan REO)~
 			~TDDz/Translations/Spanish/setup.tra~
 			~TDDz/Translations/Spanish/tp2.tra~
 
+// TODO: TTPOT.itm has weird name in vanilla BG2EE...is it normal???
+
+
+// Notes:
+// - INITDLG.d @override!
+// - DDTROLL1.BAF makes trolls killable
+// - Is GTRSK002 useless? ex: LeaveAreaLUA("dd9007","GTRSK002",[381.331],12)
+
+
+// TODO Force add empty area.bcs
+// TODO Re-check EE minimap
+
 
 BEGIN @901000 
 	REQUIRE_PREDICATE GAME_IS ~tob bg2ee eet~ ~~
 	COPY ~TDD/Bam~ ~override~
-        INCLUDE ~%MOD_FOLDER%/Lib/Importer.tpa~
+	INCLUDE ~%MOD_FOLDER%/Lib/Importer.tpa~
 		LAF ImportComponent STR_VAR aComp = ~CORE~ END
 	INCLUDE ~%MOD_FOLDER%/Lib/Helpers.tpa~ 
 		LAF DeleteTempFolder STR_VAR aComp = ~CORE~ END	
@@ -89,8 +101,6 @@ LAF HANDLE_AUDIO
     audio_path = ~TDD/ogg~ // the audio are from TDD
     oggdec_path = ~TDDz/tools/oggdec~ // the oggdec is from TDDz
 END
-
-COPY ~TDDz/PVRZ~ ~override~
 	
 BEGIN @901001
 	REQUIRE_PREDICATE GAME_IS ~tob bg2ee eet~ ~~
@@ -100,8 +110,6 @@ BEGIN @901001
 		LAF ImportComponent STR_VAR aComp = ~TROLLFORD~ END
 	INCLUDE ~%MOD_FOLDER%/Lib/Helpers.tpa~ 
 		LAF DeleteTempFolder STR_VAR aComp = ~TROLLFORD~ END
-		
-COPY ~TDDz/PVRZ~ ~override~
 	
 BEGIN @901002
 	REQUIRE_PREDICATE GAME_IS ~tob bg2ee eet~ ~~
@@ -111,8 +119,6 @@ BEGIN @901002
 		LAF ImportComponent STR_VAR aComp = ~ESPURTA~ END
 	INCLUDE ~%MOD_FOLDER%/Lib/Helpers.tpa~ 
 		LAF DeleteTempFolder STR_VAR aComp = ~ESPURTA~ END
-		
-COPY ~TDDz/PVRZ~ ~override~
 		
 BEGIN @901003
 	REQUIRE_PREDICATE GAME_IS ~tob bg2ee eet~ ~~
@@ -132,8 +138,6 @@ BEGIN @901004
 	INCLUDE ~%MOD_FOLDER%/Lib/Helpers.tpa~ 
 		LAF DeleteTempFolder STR_VAR aComp = ~RIATAVIN~ END
 		
-COPY ~TDDz/PVRZ~ ~override~
-		
 BEGIN @901005
 	REQUIRE_PREDICATE GAME_IS ~tob bg2ee eet~ ~~
 	REQUIRE_COMPONENT "setup-TDDz.tp2" "0" @901011
@@ -142,8 +146,6 @@ BEGIN @901005
 		LAF ImportComponent STR_VAR aComp = ~ONSETOfTheDARKESTDAY~ END
 	INCLUDE ~%MOD_FOLDER%/Lib/Helpers.tpa~ 
 		LAF DeleteTempFolder STR_VAR aComp = ~ONSETOfTheDARKESTDAY~ END
-		
-COPY ~TDDz/PVRZ~ ~override~
 	
 BEGIN @901010
 	REQUIRE_PREDICATE GAME_IS ~tob bg2ee eet~ ~~
@@ -154,6 +156,15 @@ BEGIN @901010
 	INCLUDE ~%MOD_FOLDER%/Lib/Helpers.tpa~ 
 		LAF DeleteTempFolder STR_VAR aComp = ~ROBILARD~ END
 	
+
+//=============================================================================
+/* USED DURING INITIAL DEVELOPMENT - NOT USED NOW
+//BEGIN ~DEBUG~ 
+//	NO_LOG_RECORD
+//	DESIGNATED 99
+//	INCLUDE ~%MOD_FOLDER%/Lib/Translations.tpa~ 
+//		LAM DispatchTraFiles
+*/
 
 BEGIN ~Start Onset quest ouside Suldanessalar~
 
