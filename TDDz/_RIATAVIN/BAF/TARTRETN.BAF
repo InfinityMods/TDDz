@@ -22,7 +22,7 @@ THEN
 	SetMasterArea("ar1000")
 	MultiPlayerSync()
 	ActionOverride("baurian",DestroySelf())
-	CreateCreature("baurian2",[864.897],S) // Baurian Arathor
+	CreateCreature("baurian2",[864.897],0) // Baurian Arathor
 	FadeFromColor([20.0],0)
 	EndCutSceneMode()
 	SetGlobal("tz_demninvidlgb","GLOBAL",2)

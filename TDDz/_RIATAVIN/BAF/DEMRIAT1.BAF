@@ -11,13 +11,13 @@ THEN
 		//LeaveAreaLUA("ddC133","",[2405.2506],N)
 		MultiPlayerSync()
 		//ApplySpell(Player1,1964)
-		CreateCreature("cutspy",[2405.2406],W)
+		CreateCreature("cutspy",[2405.2406],4)
 		CutSceneId("cutspy")
 		Explore()		
-		CreateCreature("demgrdr1",[2216.2489],W) // Amnish Soldier
-		CreateCreature("demgrdr2",[2163.2211],W) // Amnish Soldier
-		CreateCreature("demgrdr3",[2722.2308],W) // Amnish Soldier
-		CreateCreature("demgrdr4",[2660.2521],W) // Amnish Soldier
+		CreateCreature("demgrdr1",[2216.2489],4) // Amnish Soldier
+		CreateCreature("demgrdr2",[2163.2211],4) // Amnish Soldier
+		CreateCreature("demgrdr3",[2722.2308],4) // Amnish Soldier
+		CreateCreature("demgrdr4",[2660.2521],4) // Amnish Soldier
 		//MoveViewPoint([2408.2349],INSTANT)
 		MoveViewPoint([2408.2450],INSTANT)
 		FadeFromColor([30.0],0)
@@ -26,9 +26,9 @@ THEN
 		CreateVisualEffect("spsumgte",[2277.2237])
 		CreateVisualEffect("spsumgte",[2593.2342])
 		Wait(3)
-		CreateCreature("riattan1",[2408.2349],E) // Balor
-		CreateCreature("riattan2",[2277.2237],E) // Balor
-		CreateCreature("riattan3",[2593.2342],E) // Balor
+		CreateCreature("riattan1",[2408.2349],12) // Balor
+		CreateCreature("riattan2",[2277.2237],12) // Balor
+		CreateCreature("riattan3",[2593.2342],12) // Balor
 		Wait(1)
 		DisplayStringHead("demgrdr1",103170) // What the hell is it?
 		DisplayStringHead("demgrdr3",103170) // What the hell is it?
@@ -71,9 +71,9 @@ THEN
 		CreateVisualEffect("spsumgte",[2277.2237])
 		CreateVisualEffect("spsumgte",[2593.2342])
 		Wait(2)
-		CreateCreature("riattan1",[2408.2349],E) // Balor
-		CreateCreature("riattan2",[2277.2237],E) // Balor
-		CreateCreature("riattan3",[2593.2342],E) // Balor
+		CreateCreature("riattan1",[2408.2349],12) // Balor
+		CreateCreature("riattan2",[2277.2237],12) // Balor
+		CreateCreature("riattan3",[2593.2342],12) // Balor
 		Wait(2)
 		CreateVisualEffect("spsumgte",[2408.2349])
 		CreateVisualEffect("spsumgte",[2277.2237])
