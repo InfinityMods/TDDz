@@ -5,7 +5,7 @@ TDDz is not a mod, it is just an way to install TDD for BG2EE with Worldmap and 
 You NEED to download TDD v1.14, you can find it here:
  - http://www.shsforums.net/files/category/65-the-darkest-day/
 
-I (shadowlich) am NOT the author of TDD, I just try to write a weidu setup to not let it die, all credits go for its authors TeamBG.
+I (shadowlich) am NOT the author of TDD, I just try to write a WeiDU setup to not let it die, all credits go for its authors TeamBG.
 
 Thanks to Max Schnur for allowing us to release an updated version of this mod!
 - https://twitter.com/MaxSchnur/status/691754073893249025
@@ -88,9 +88,9 @@ These lines are to translate in setup.tra:
 
 **How to install TDDz?**
 
-- Download TDDv1.14 and unzip it, move the `TDD` folder into your BG2EE folder, skip `Setup-TDD.exe` and `Setup-TDD.tp2`
+- Download `TDD v1.14` and unzip it, move the `TDD` folder into your BG2EE folder, skip `Setup-TDD.exe` and `Setup-TDD.tp2`
 - Do not run `BiG World Fixpack`, TDDz patches/fixes TDD files on its own
-- Run `Setup-TDDz.exe` as any other weidu mod
+- Run `Setup-TDDz.exe` as any other WeiDU mod
 
 **How to change CRE xp?**
 
@@ -126,4 +126,4 @@ These lines are to translate in setup.tra:
 
 ## Thanks
 
-A BIG THANKS TO TEAMBG for this mega-mod and every one about Weidu, Worldmap and Extended Animation. Special thanks: WhiteAgnus, agb1, Roxanne
+A BIG THANKS TO TEAMBG for this mega-mod and every one about WeiDU, Worldmap and Extended Animation. Special thanks: WhiteAgnus, agb1, Roxanne
