@@ -1,5 +1,6 @@
-BACKUP ~TDDz/Backup~
-AUTHOR ~shadowlich~
+BACKUP ~TDDz/backup~
+//AUTHOR ~shadowlich~
+SUPPORT ~https://forums.beamdog.com/discussion/4841/the-darkest-day/~
 VERSION ~v1.2.6~
 
 ALWAYS
@@ -165,4 +166,3 @@ BEGIN @901010
 //	INCLUDE ~%MOD_FOLDER%/Lib/Translations.tpa~
 //		LAM DispatchTraFiles
 */
-
