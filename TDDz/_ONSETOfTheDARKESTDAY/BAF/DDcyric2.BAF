@@ -17,15 +17,13 @@ THEN
   RESPONSE #100
     ForceSpell(Myself,WIZARD_TIME_STOP)
     Wait(1)
-    ForceSpell(Myself,COM_DAERRAGHS_AURA_OF_CLEANSING)
+    ReallyForceSpellRES("TZWI430",Myself)
     Wait(1)
-	//ForceSpell(Myself,WIZARD_MIND_BLANK)
-    ForceSpellRES("SPTDD02",Myself) // Fixed
+    ForceSpellRES("SPTDD02",Myself)
     Wait(1)
     ForceSpell(Myself,WIZARD_SHADOW_DOOR)
     Wait(1)
-    //ForceSpell(Myself,WIZARD_IRON_BODY)
-    ForceSpellRES("SPTDD01",Myself) // Fixed
+    ForceSpellRES("SPTDD01",Myself)
     SetGlobal("tz_prep2","LOCALS",1)
 END
 
@@ -188,7 +186,7 @@ IF
   GlobalLT("tz_Gravity","LOCALS",1)
 THEN
   RESPONSE #100
-    ForceSpell(LastSeenBy(Myself),COM_GRAVITY)
+    ReallyForceSpellRES("TZWI827",LastSeenBy(Myself))
     IncrementGlobal("tz_Gravity","LOCALS",1)
     Wait(1)
     Continue()

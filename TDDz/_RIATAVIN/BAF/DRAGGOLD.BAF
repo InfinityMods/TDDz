@@ -135,8 +135,8 @@ THEN
     EquipMostDamagingMelee()
     AttackReevaluate(NearestEnemyOf(Myself),35)
   RESPONSE #10
-    ReallyForceSpell(LastSeenBy(Myself),COM_DRUID_SUMMON_LIGHTNING_ELEMENTAL)
-    ReallyForceSpell(LastSeenBy(Myself),COM_DRUID_SUMMON_LIGHTNING_ELEMENTAL)
+    ReallyForceSpellRES("TZPR629",LastSeenBy(Myself))
+    ReallyForceSpellRES("TZPR629",LastSeenBy(Myself))
 	Continue()
 END
 

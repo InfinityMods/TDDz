@@ -55,7 +55,7 @@ END
 
 IF
   Global("tz_duegdemon","GLOBAL",0)
-  PartyHasItem("scrx41")
+  PartyHasItem("ddddbook")
 THEN
   RESPONSE #100
     CreateCreature("duegabis",[3133.2230],4)

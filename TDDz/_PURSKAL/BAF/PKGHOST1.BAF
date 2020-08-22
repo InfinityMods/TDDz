@@ -14,7 +14,7 @@ IF
   Global("tz_pkghost1","LOCALS",0)
 THEN
   RESPONSE #100
-    ForceSpell(NearestEnemyOf(Myself),FRIGHTFUL_MOAN)
+    ReallyForceSpellRES("TZPR963",NearestEnemyOf(Myself))
     SetGlobal("tz_pkghost1","LOCALS",1)
 END
 

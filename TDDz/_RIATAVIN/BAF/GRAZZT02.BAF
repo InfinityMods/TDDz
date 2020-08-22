@@ -14,8 +14,8 @@ IF
 THEN
   RESPONSE #100
     ApplySpell(Myself,WIZARD_HASTE)
-    ReallyForceSpell(NearestEnemyOf(Myself),COM_DRUID_SUMMON_LIGHTNING_ELEMENTAL)
-    ReallyForceSpell(NearestEnemyOf(Myself),COM_DRUID_SUMMON_LIGHTNING_ELEMENTAL)
+    ReallyForceSpellRES("TZPR629",NearestEnemyOf(Myself))
+    ReallyForceSpellRES("TZPR629",NearestEnemyOf(Myself))
     SetGlobal("tz_prep2","LOCALS",1)
 END
 
@@ -87,8 +87,8 @@ IF
   GlobalTimerExpired("tz_bleeder","GLOBAL")
 THEN
   RESPONSE #100
-    ForceSpell(NearestEnemyOf(Myself),COM_HEMOPHILIA)
-    ForceSpell(SecondNearestEnemyOf(Myself),COM_HEMOPHILIA)
+    ReallyForceSpellRES("TZWI820",NearestEnemyOf(Myself))
+    ReallyForceSpellRES("TZWI820",SecondNearestEnemyOf(Myself))
     SetGlobal("tz_Bleed","LOCALS",2)
 END
 
@@ -105,8 +105,8 @@ IF
   GlobalTimerExpired("tz_lavaaid","GLOBAL")
 THEN
   RESPONSE #100
-    ReallyForceSpell(Myself,CLERIC_SUMMON_LAVA_ELEMENTAL)
-    ReallyForceSpell(Myself,CLERIC_SUMMON_LAVA_ELEMENTAL)
+    ReallyForceSpellRES("TZPR736",Myself)
+    ReallyForceSpellRES("TZPR736",Myself)
     SetGlobal("tz_lava","LOCALS",2)
 END
 

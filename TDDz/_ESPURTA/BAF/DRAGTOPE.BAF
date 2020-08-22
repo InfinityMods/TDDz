@@ -45,7 +45,7 @@ IF
 THEN
   RESPONSE #100
     Changeclass(Myself,MAGE)
-    Reallyforcespell(Lastseenby(Myself),TOPAZ_DRAGON_BREATH)
+    ReallyforcespellRES("TZPR962",Lastseenby(Myself))
     Forcespell(Myself,WIZARD_STONE_SKIN)
     Applyspell(Myself,BEHOLDER_SPELL_TURNING)
     Forcespell(Myself,CLERIC_CURE_CRITICAL_WOUNDS)
@@ -76,7 +76,7 @@ THEN
     Changeclass(Myself,MAGE)
     Forcespell(Myself,WIZARD_STONE_SKIN)
     Reallyforcespell(Myself,WIZARD_IMPROVED_INVISIBILITY)
-    Reallyforcespell(Secondnearestenemyof(Myself),TOPAZ_DRAGON_BREATH)
+    ReallyforcespellRES("TZPR962",Lastseenby(Myself))
     Continue()
 END
 
@@ -121,7 +121,7 @@ IF
   !Globaltimernotexpired("tz_TOPAZDRAGONBREATH","GLOBAL")
 THEN
   RESPONSE #100    
-	Reallyforcespell(Lastseenby(Myself),TOPAZ_DRAGON_BREATH)
+    ReallyforcespellRES("TZPR962",Lastseenby(Myself))
     Reallyforcespell(Nearestenemyof(Myself),DRAGON_WING_BUFFET)
     Setglobaltimer("tz_WINGBUFFET","GLOBAL",TWO_ROUNDS)
     Setglobaltimer("tz_TOPAZDRAGONBREATH","GLOBAL",THREE_ROUNDS)
@@ -280,7 +280,7 @@ THEN
     Equipmostdamagingmelee()
     Attackreevaluate(Nearestenemyof(Myself),35)
   RESPONSE #10
-    Forcespell(Lastseenby(Myself),COM_ICE_SHARD)
+    ReallyForcespellRES("TZWI427",Lastseenby(Myself))
     Reallyforcespell(Nearestenemyof(Myself),DRAGON_WING_BUFFET)
 END
 

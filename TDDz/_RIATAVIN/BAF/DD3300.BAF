@@ -2,6 +2,7 @@ IF
   Global("tz_creature","DD3300",0)
 THEN
   RESPONSE #100
+  SetGlobal("tz_creature","DD3300",1)
     CreateCreature("townc01",[1997.2532],4)
     CreateCreature("bginfo2",[955.1331],4)
     CreateCreature("bginfo1",[2093.1417],4)
@@ -46,7 +47,6 @@ THEN
     CreateCreature("riatmov3",[4927.1798],4)
     CreateCreature("riatmov4",[5024.1622],4)
     CreateCreature("riatmov5",[5003.1893],4)
-    SetGlobal("tz_creature","DD3300",1)
 END
 
 IF
@@ -86,27 +86,11 @@ THEN
 END
 
 IF
-  GlobalLT("tz_Riat_donations","DD3300",2)
-THEN
-  RESPONSE #100
-    ReputationInc(-1)
-    SetGlobal("tz_Riat_donations","DD3300",3)
-END
-
-IF
-  GlobalGT("tz_Riat_donations","DD3300",9)
-THEN
-  RESPONSE #100
-    ReputationInc(1)
-    SetGlobal("tz_Riat_donations","DD3300",3)
-END
-
-IF
   Global("tz_bgwitness","GLOBAL",1)
 THEN
   RESPONSE #100
-    CreateCreature("bgsavior",[1867.2434],4)
     SetGlobal("tz_bgwitness","GLOBAL",2)
+    CreateCreature("bgsavior",[1867.2434],4)
 END
 
 IF
@@ -123,17 +107,17 @@ IF
   Global("tz_gwitness","GLOBAL",6)
 THEN
   RESPONSE #100
-    CreateCreature("bgstab1b",[1885.1505],4)
-    SetGlobal("tz_gwitness","GLOBAL",8)
+   SetGlobal("tz_gwitness","GLOBAL",8) 
+   CreateCreature("bgstab1b",[1885.1505],4)
 END
 
 IF
   Global("tz_gwitness","GLOBAL",14)
 THEN
   RESPONSE #100
+    SetGlobal("tz_gwitness","GLOBAL",15)
     AddexperienceParty(DD3300_BAF_2000)
     ReputationInc(1)
-    SetGlobal("tz_gwitness","GLOBAL",15)
 END
 
 IF
