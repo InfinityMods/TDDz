@@ -1,4 +1,4 @@
-# Descriptoin
+# Description
 
 TDDz is not a mod, it is just an way to install TDD for BG2EE with Worldmap and Extended Animation.
 
