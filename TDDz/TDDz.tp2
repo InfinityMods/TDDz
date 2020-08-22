@@ -5,7 +5,7 @@ VERSION ~v1.2.6~
 ALWAYS
 	INCLUDE ~%MOD_FOLDER%/Lib/Helpers.tpa~
 		LAM ForceClearTempFolder
-	
+
 	INCLUDE ~%MOD_FOLDER%/Lib/a7_tools.tpa~
 
 	ACTION_IF GAME_IS ~eet~ BEGIN
@@ -40,10 +40,10 @@ END
 //AUTO_TRA ~TDDz/Translations/%s~
 AUTO_TRA ~TDDz/TEMP/Translations~
 
-LANGUAGE 	~English~ 
-			~English~ 
+LANGUAGE 	~English~
+			~English~
 			~TDDz/Translations/English/Setup.tra~
-			~TDDz/Translations/English/tp2.tra~ 
+			~TDDz/Translations/English/tp2.tra~
 
 LANGUAGE 	~Russian(aerie-ru)~
 			~Russian~
@@ -69,7 +69,7 @@ LANGUAGE 	~Italian(ilot)~
 			~Italian~
 			~TDDz/Translations/Italian/setup.tra~
 			~TDDz/Translations/Italian/tp2.tra~
-         
+
 LANGUAGE 	~Spanish(Clan REO)~
 			~Spanish~
 			~TDDz/Translations/Spanish/setup.tra~
@@ -88,81 +88,81 @@ LANGUAGE 	~Spanish(Clan REO)~
 // TODO Re-check EE minimap
 
 
-BEGIN @901000 
+BEGIN @901000
 	REQUIRE_PREDICATE GAME_IS ~tob bg2ee eet~ ~~
-	
+	COPY ~TDD/Bam~ ~override~
 	INCLUDE ~%MOD_FOLDER%/Lib/Importer.tpa~
 		LAF ImportComponent STR_VAR aComp = ~CORE~ END
-	INCLUDE ~%MOD_FOLDER%/Lib/Helpers.tpa~ 
-		LAF DeleteTempFolder STR_VAR aComp = ~CORE~ END	
+	INCLUDE ~%MOD_FOLDER%/Lib/Helpers.tpa~
+		LAF DeleteTempFolder STR_VAR aComp = ~CORE~ END
 
 LAF HANDLE_AUDIO
   STR_VAR
     audio_path = ~TDD/ogg~ // the audio are from TDD
     oggdec_path = ~TDDz/tools/oggdec~ // the oggdec is from TDDz
 END
-	
+
 BEGIN @901001
 	REQUIRE_PREDICATE GAME_IS ~tob bg2ee eet~ ~~
 	REQUIRE_COMPONENT "setup-TDDz.tp2" "0" @901011
-		
-	INCLUDE ~%MOD_FOLDER%/Lib/Importer.tpa~ 
+
+	INCLUDE ~%MOD_FOLDER%/Lib/Importer.tpa~
 		LAF ImportComponent STR_VAR aComp = ~TROLLFORD~ END
-	INCLUDE ~%MOD_FOLDER%/Lib/Helpers.tpa~ 
+	INCLUDE ~%MOD_FOLDER%/Lib/Helpers.tpa~
 		LAF DeleteTempFolder STR_VAR aComp = ~TROLLFORD~ END
-	
+
 BEGIN @901002
 	REQUIRE_PREDICATE GAME_IS ~tob bg2ee eet~ ~~
 	REQUIRE_COMPONENT "setup-TDDz.tp2" "0" @901011
 
-	INCLUDE ~%MOD_FOLDER%/Lib/Importer.tpa~ 
+	INCLUDE ~%MOD_FOLDER%/Lib/Importer.tpa~
 		LAF ImportComponent STR_VAR aComp = ~ESPURTA~ END
-	INCLUDE ~%MOD_FOLDER%/Lib/Helpers.tpa~ 
+	INCLUDE ~%MOD_FOLDER%/Lib/Helpers.tpa~
 		LAF DeleteTempFolder STR_VAR aComp = ~ESPURTA~ END
-		
+
 BEGIN @901003
 	REQUIRE_PREDICATE GAME_IS ~tob bg2ee eet~ ~~
 	REQUIRE_COMPONENT "setup-TDDz.tp2" "0" @901011
-		
-	INCLUDE ~%MOD_FOLDER%/Lib/Importer.tpa~ 
+
+	INCLUDE ~%MOD_FOLDER%/Lib/Importer.tpa~
 		LAF ImportComponent STR_VAR aComp = ~PURSKAL~ END
-	INCLUDE ~%MOD_FOLDER%/Lib/Helpers.tpa~ 
+	INCLUDE ~%MOD_FOLDER%/Lib/Helpers.tpa~
 		LAF DeleteTempFolder STR_VAR aComp = ~PURSKAL~ END
 
 BEGIN @901004
 	REQUIRE_PREDICATE GAME_IS ~tob bg2ee eet~ ~~
 	REQUIRE_COMPONENT "setup-TDDz.tp2" "0" @901011
-		
-	INCLUDE ~%MOD_FOLDER%/Lib/Importer.tpa~ 
+
+	INCLUDE ~%MOD_FOLDER%/Lib/Importer.tpa~
 		LAF ImportComponent STR_VAR aComp = ~RIATAVIN~ END
-	INCLUDE ~%MOD_FOLDER%/Lib/Helpers.tpa~ 
+	INCLUDE ~%MOD_FOLDER%/Lib/Helpers.tpa~
 		LAF DeleteTempFolder STR_VAR aComp = ~RIATAVIN~ END
-		
+
 BEGIN @901005
 	REQUIRE_PREDICATE GAME_IS ~tob bg2ee eet~ ~~
 	REQUIRE_COMPONENT "setup-TDDz.tp2" "0" @901011
-		
-	INCLUDE ~%MOD_FOLDER%/Lib/Importer.tpa~ 
+
+	INCLUDE ~%MOD_FOLDER%/Lib/Importer.tpa~
 		LAF ImportComponent STR_VAR aComp = ~ONSETOfTheDARKESTDAY~ END
-	INCLUDE ~%MOD_FOLDER%/Lib/Helpers.tpa~ 
+	INCLUDE ~%MOD_FOLDER%/Lib/Helpers.tpa~
 		LAF DeleteTempFolder STR_VAR aComp = ~ONSETOfTheDARKESTDAY~ END
-	
+
 BEGIN @901010
 	REQUIRE_PREDICATE GAME_IS ~tob bg2ee eet~ ~~
 	REQUIRE_COMPONENT "setup-TDDz.tp2" "0" @901011
-		
-	INCLUDE ~%MOD_FOLDER%/Lib/Importer.tpa~ 
+
+	INCLUDE ~%MOD_FOLDER%/Lib/Importer.tpa~
 		LAF ImportComponent STR_VAR aComp = ~ROBILARD~ END
-	INCLUDE ~%MOD_FOLDER%/Lib/Helpers.tpa~ 
+	INCLUDE ~%MOD_FOLDER%/Lib/Helpers.tpa~
 		LAF DeleteTempFolder STR_VAR aComp = ~ROBILARD~ END
-	
+
 
 //=============================================================================
 /* USED DURING INITIAL DEVELOPMENT - NOT USED NOW
-//BEGIN ~DEBUG~ 
+//BEGIN ~DEBUG~
 //	NO_LOG_RECORD
 //	DESIGNATED 99
-//	INCLUDE ~%MOD_FOLDER%/Lib/Translations.tpa~ 
+//	INCLUDE ~%MOD_FOLDER%/Lib/Translations.tpa~
 //		LAM DispatchTraFiles
 */
 
