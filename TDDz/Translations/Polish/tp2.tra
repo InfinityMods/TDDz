@@ -103,7 +103,7 @@ Kagain myœla³ o zamkniêciu interesu i skierowaniu siê do Saradush albo Riatavin,
 @20103  = ~Instalowanie nowych stworzen...~
 @20104  = ~Hobgoblin ³ucznik~
 @20105  = ~Hobgoblin czarodziej~
-@20106  = ~Kapitan koboldów~
+@20106  = ~Kapitan koboldów~
 @20107  = ~Kobold weteran~
 @20108  = ~Szaman koboldów~
 @20109  = ~Znachor koboldów~
@@ -190,7 +190,7 @@ Avaunis w³aœnie otrzyma³ tytu³ rycerza, maj¹c nadziejê, ¿e dokona czynów przynos
 @20190  = ~Sir Mardus~
 @20191  = ~DŸgniêty handlarz~
 @20192  = ~OdŸwierny~
-@20193  = ~Recepcjonistka~
+@20193  = ~Recepcjonistka~
 @20194  = ~Szlachetny goœæ~
 @20195  = ~Goœæ~
 @20196  = ~Barbazu~
@@ -772,7 +772,7 @@ Czas rzucania: 4
 Obszar dzia³ania: rzucaj¹cy
 Rzut obronny: brak
 
-Czar stanowi potê¿n¹ formê bia³ej magii z rozmaitymi magicznymi efektami powoduj¹cymi u wroga obra¿enia. Po rzuceniu przez maga owego dweomeru, wznosi siê œciana p³omieni koloru oœlepiaj¹cej bieli, sycz¹cych dooko³a jego cia³a. Zas³ona ta nie stanowi dla rzucaj¹cego fizycznej ochrony, jest to bowiem istna nieprzewidywalna "maszyna" do rzucania czarów. Ka¿dy wróg który zbli¿y siê na odleg³oœæ ciosu i wykona zamach aby uderzyæ maga w czasie gdy œciana jest aktywna, zostanie zaatakowany jednym z wygenerowanych przez ni¹ zaklêæ. Zaklêcia rzucane s¹ ca³kowicie losowo. Czasami u¿ycie tej magii mo¿e ryzykowne dla rzucaj¹cego poniewa¿ wygenerowany czar mo¿e okazaæ siê pomocny dla agresora.
+Czar stanowi potê¿n¹ formê bia³ej magii z rozmaitymi magicznymi efektami powoduj¹cymi u wroga obra¿enia. Po rzuceniu przez maga owego dweomeru, wznosi siê œciana p³omieni koloru oœlepiaj¹cej bieli, sycz¹cych dooko³a jego cia³a. Zas³ona ta nie stanowi dla rzucaj¹cego fizycznej ochrony, jest to bowiem istna nieprzewidywalna "maszyna" do rzucania czarów. Ka¿dy wróg który zbli¿y siê na odleg³oœæ ciosu i wykona zamach aby uderzyæ maga w czasie gdy œciana jest aktywna, zostanie zaatakowany jednym z wygenerowanych przez ni¹ zaklêæ. Zaklêcia rzucane s¹ ca³kowicie losowo. Czasami u¿ycie tej magii mo¿e ryzykowne dla rzucaj¹cego poniewa¿ wygenerowany czar mo¿e okazaæ siê pomocny dla agresora.
 Zaklêcia:
 Magiczny pocisk
 P³on¹ce d³onie
@@ -828,7 +828,7 @@ Rzut obronny: brak
 Czar umo¿liwia czarodziejowi miotaæ ma³e magiczne pociski(1 na ka¿d¹ rundê doœwiadczenia) które powoduj¹ nie tylko fizyczne obra¿enia ale i wywo³uj¹ magiczne efekty. Ka¿dy pocisk zadaje 1K2+3 obra¿eñ i takie dzia³anie pocisków wystêpuje z prawdopodobieñstwem 50%. Istnieje poza tym 50% szansa na wywo³anie któregoœ z kilku magicznych efektów wed³ug schematu:
 
 41/50% = 1K4 Obra¿eñ od ognia (bez rzutu obronnego)
-31/40% = 1K4 Obra¿eñ od zimna (bez rzutu obronnego)
+31/40% = 1K4 Obra¿eñ od zimna (bez rzutu obronnego)
 26/30% = Og³uszony na 2 rundy (rzut przeciw czarom neguje)
 21/25% = Spowolniony na 3 rundy (rzut przeciw czarom neguje)
 16/20% = Otruty na 2 rundy (rzut przeciw czarom neguje)
@@ -1597,7 +1597,7 @@ Zasiêg: pole widzenia
 Czas dzia³ania: specjalny
 Czas rzucania: 5
 Obszar dzia³ania: szeœcian o boku 9 metrów
-Rzut obronny: specjalny
+Rzut obronny: specjalny
 Wiêksze rozproszenie magii usuwa magiczne efekty z ka¿dego stworzenia znajduj¹cego siê w zasiêgu dzia³ania czaru. Wlicza siê w to efekty pochodz¹ce od czarów, eliksirów oraz niektórych magicznych przedmiotów, takich jak ró¿d¿ki. Równie¿ w odró¿nieniu od zwyk³ego Rozproszenia, zaklêcie to usuwa ochronne magiczne efekty, takie jak Kamienna Skóra, ochrony ¿ywio³ów lub magiczne zbroje i p³aszcze. Nie dzia³a jednak na umagicznione przedmioty. Szansa na udane rozproszenie jest uzale¿niona od poziomu czaruj¹cego i poziomu rozpraszanego czaru. Bazowo szansa ta wynosi 50%. Jeœli rzucaj¹cy ma wy¿szy poziom ni¿ twórca rozpraszanego zaklêcia, szansa ta wzrasta o 5% na poziom ró¿nicy. Jeœli rzucaj¹cy ma ni¿szy poziom, szansa ta zmniejsza siê o 10% na poziom. Jednak pomimo ró¿nicy w poziomach zawsze istnieje 1% na powodzenie lub pora¿kê. A zatem, jeœli poziom czaruj¹cego jest o 10 wy¿szy ni¿ poziom magii, któr¹ próbuje rozproszyæ jest tylko 1% szansê na niepowodzenie. Adekwatnie, jeœli poziom czaruj¹cego jest o 4 ni¿szy ni¿ poziom czaru, który próbuje rozproszyæ jest tylko 10% szansê na sukces. Tak wiêc, zaklêcie to jest praktycznie bezu¿yteczne jeœli cel ma o 5 lub wiêcej poziomów ponad poziom maga.
 
 Uwaga: mimo, i¿ ten czar rozprasza efekty dzia³ania Œliskoœci, Pajêczyny i Œmierdz¹cej chmury to nie obejmie on ca³ego obszaru dzia³ania tych czarów.~
@@ -2386,7 +2386,7 @@ Czas dzia³ania: 40 tur
 Czas rzucania: 10
 Obszar dzia³ania: wybrany obszar
 Rzut obronny: brak
-
+
 Czar ten przeznaczony jest dla doœwiadczonych magów. To ulepszona wersja czaru Animacja martwego bowiem rzucaj¹cy, wykonuj¹c majestatyczne gesty d³oñmi, mo¿e przywo³aæ groŸn¹ armiê martwiaków. Przywo³uje trzech szkieletów wojowników, gotowych spe³niæ wszystkie jego rozkazy. Istoty te trwaj¹ przy nim bardzo d³ugo i s¹ odporne na wszelkie zaklêcia dzia³aj¹ce na umys³.~
 @20902  = ~Tatua¿~
 @20903  = ~Tatua¿ (Przemiany)
@@ -3749,7 +3749,7 @@ Mo¿e u¿ywaæ:
 @21143  = ~Szabla Entreriego~
 @21144  = ~Kosztowny sztylet Entreriego~
 @21145  = ~P³aszcz entropii~
-@21146  = ~Ta szata jest idealnym przyk³adem niezwyk³ego rzemios³a najprecyzyjniejszych elfich krawców. Posiada on niesamowicie potê¿n¹ i trwa³¹ tarczê entropii, która go otacza. To pole odbija wszystkie strza³y i inne pociski z powrotem w atakuj¹cego.
+@21146  = ~Ta szata jest idealnym przyk³adem niezwyk³ego rzemios³a najprecyzyjniejszych elfich krawców. Posiada on niesamowicie potê¿n¹ i trwa³¹ tarczê entropii, która go otacza. To pole odbija wszystkie strza³y i inne pociski z powrotem w atakuj¹cego.
 
 PARAMETRY:
 
@@ -3784,7 +3784,7 @@ Nie mo¿e u¿ywaæ:
 @21151  = ~Wekiera wiary~
 @21152  = ~Ta wekiera jest zwykle wrêczana obroñcom wiary by wspomóc ich w s³u¿bie. Wekiera jest umagiczniona, b³ogos³awi dzier¿¹cego i jego sprzymierzeñców, zapewnia mu równie¿ premiê +1 do wszystkich rzutów obronnych.
 
-PARAMETRY:
+PARAMETRY:
 Obra¿enia: 1K6 +3
 TraK0: +3
 Typ obra¿eñ: obuchowe
@@ -4710,7 +4710,7 @@ Wymagana si³a: 9
 Mo¿e u¿ywaæ:
  Krasnolud~
 @21287  = ~Kostur ¿ywio³ów Quosta~
-@21288  = ~Twórc¹ tego kostura by³ czarodziej, Quost Curion. By³ on zach³annym magiem lubuj¹cym siê w przyzywaniu sojuszników wymierzaj¹cych karê jego wrogom. Jednak¿e czêsto zdarza³o siê, ¿e pozostawa³ bez zaklêæ, których najbardziej potrzebowa³. Ponosz¹c wielkie wydatki, Quost przez okres siedmiu lat tworzy³ ten kostur. Broñ ta by³a niezwykle skuteczna, dopóki jej w³aœciciel nie wda³ siê w walkê z mistrzem odrzucania, który by³ przygotowany do "zajêcia siê" przyzwanymi stworzeniami. Quost zosta³ zabity w walce w 1063 r., a do jego kostura roœci³ sobie pretensje jego zabójca, Balder Renold.
+@21288  = ~Twórc¹ tego kostura by³ czarodziej, Quost Curion. By³ on zach³annym magiem lubuj¹cym siê w przyzywaniu sojuszników wymierzaj¹cych karê jego wrogom. Jednak¿e czêsto zdarza³o siê, ¿e pozostawa³ bez zaklêæ, których najbardziej potrzebowa³. Ponosz¹c wielkie wydatki, Quost przez okres siedmiu lat tworzy³ ten kostur. Broñ ta by³a niezwykle skuteczna, dopóki jej w³aœciciel nie wda³ siê w walkê z mistrzem odrzucania, który by³ przygotowany do "zajêcia siê" przyzwanymi stworzeniami. Quost zosta³ zabity w walce w 1063 r., a do jego kostura roœci³ sobie pretensje jego zabójca, Balder Renold.
 
 PARAMETRY:
 
@@ -4931,7 +4931,7 @@ Czas rzucania: 8
 Obszar dzia³ania: 1 istota
 Rzut obronny: neguje
 
-Grupowe zauroczenie oddzia³ywuje b¹dŸ to na osoby, b¹dŸ na potwory zupe³nie jak zaklêcie Zauroczenie czy te¿ Zauroczenie potwora. W odró¿nieniu jednak do tych czarów wywiera wp³yw na pewn¹ liczbê istot, których suma poziomów doœwiadczenia czy te¿ Kostek, nie mo¿e przekroczyæ dwukrotnie doœwiadczenia rzucaj¹cego. Wszystkie poddane dzia³aniu czaru istoty musz¹ siê znaleŸæ w jego zasiêgu i w szeœcianie o boku 10 m. Warto pamiêtaæ, ¿e czar nie ró¿nicuje rzutów obronnych dla poszczególnych istot (porównaj czary Zauroczenie i Zauroczenie potwora), bowiem wszyscy podlegaj¹ tej samej karze -2 do ich rzutów obronnych ze wzglêdu na wysok¹ skutecznoœæ i potêgê tego zaklêcia. Premia M¹droœci przeciw zauroczeniom znajduje tu zastosowanie.~
+Grupowe zauroczenie oddzia³ywuje b¹dŸ to na osoby, b¹dŸ na potwory zupe³nie jak zaklêcie Zauroczenie czy te¿ Zauroczenie potwora. W odró¿nieniu jednak do tych czarów wywiera wp³yw na pewn¹ liczbê istot, których suma poziomów doœwiadczenia czy te¿ Kostek, nie mo¿e przekroczyæ dwukrotnie doœwiadczenia rzucaj¹cego. Wszystkie poddane dzia³aniu czaru istoty musz¹ siê znaleŸæ w jego zasiêgu i w szeœcianie o boku 10 m. Warto pamiêtaæ, ¿e czar nie ró¿nicuje rzutów obronnych dla poszczególnych istot (porównaj czary Zauroczenie i Zauroczenie potwora), bowiem wszyscy podlegaj¹ tej samej karze -2 do ich rzutów obronnych ze wzglêdu na wysok¹ skutecznoœæ i potêgê tego zaklêcia. Premia M¹droœci przeciw zauroczeniom znajduje tu zastosowanie.~
 @21339  = ~Mistyczna bariera (Odrzucanie)
 Poziom: 8
 Zasiêg: 0

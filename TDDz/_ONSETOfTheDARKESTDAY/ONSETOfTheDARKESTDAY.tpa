@@ -13,8 +13,8 @@ UNLESS ~ARPO05~
 
 	
 	COPY ~override/ARPO05.are~ ~override~
+		SAY 0x308 @20084
 		SAY 0x3cc @20084
-		SAY 0x490 @20084
 	
 	COPY_EXISTING 	~EASTGOL1.cre~ ~override~
 					~EASTGOL2.cre~ ~override~

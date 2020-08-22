@@ -10,15 +10,24 @@
 @9    = ~Come puoi incantare?~
 @10   = ~No, ho cambiato idea. Non voglio incantare niente.~
 @11   = ~Ci sono diversi modi... te li elencherò per darti la possibilità discegliere.~
-@12   = ~Io posso farti......
-Una collana di proiettili per 6000 monete d'oro
-Un amuleto dalla Pietra Verde di protezione mentale per 8000 monete d'oro.
-Un amuleto che dona il 5% di resistenza alla magia per 7000 monete d'oro.
-Un amuleto che dona il 10% di resistenza alla magia per 13000 monete d'oro.
-Un amuleto del Potere con protezione dal Risucchio del Livello e un 5 % di immunità alla magia per 23000 monete d'oro.
-Un amuleto di protezione dal veleno per 7000 monete d'oro.
-Un amuleto che dona +3 ai tiri salvezza contro soffio per 13000 monete d'oro.
-Un amuleto che dona +5 ai tiri salvezza contro metamorfosi per 16000 monete d'oro.
+@12   = ~Io posso farti......
+
+Una collana di proiettili per 6000 monete d'oro
+
+Un amuleto dalla Pietra Verde di protezione mentale per 8000 monete d'oro.
+
+Un amuleto che dona il 5% di resistenza alla magia per 7000 monete d'oro.
+
+Un amuleto che dona il 10% di resistenza alla magia per 13000 monete d'oro.
+
+Un amuleto del Potere con protezione dal Risucchio del Livello e un 5 % di immunità alla magia per 23000 monete d'oro.
+
+Un amuleto di protezione dal veleno per 7000 monete d'oro.
+
+Un amuleto che dona +3 ai tiri salvezza contro soffio per 13000 monete d'oro.
+
+Un amuleto che dona +5 ai tiri salvezza contro metamorfosi per 16000 monete d'oro.
+
 Un amuleto che dona +2 ai tiri salvezza contro gli incantesimi per 14000 monete d'oro.~
 @13   = ~Ah, hai una collana collana tempestata di zoisite qui. Io posso utilizzarla come base.~
 @14   = ~Hai una Collana di solfato di rame qui. Posso sicuramente utilizzarla.~
@@ -43,4 +52,3 @@ Un amuleto che dona +2 ai tiri salvezza contro gli incantesimi per 14000 monete 
 @33   = ~Vorrei un amuleto con +2 ai tiri salvezza contro gli incantesimi.~
 @34   = ~Portami un amuleto ed un po' di soldi! E noi saremo i migliori amici!~
 @35   = ~Allora sarà fatto.~
-
