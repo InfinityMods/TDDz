@@ -1,4 +1,4 @@
-# Description
+## Description
 
 TDDz is not a mod, it is just an way to install TDD for BG2EE with Worldmap and Extended Animation.
 
@@ -10,7 +10,6 @@ I (shadowlich) am NOT the author of TDD, I just try to write a WeiDU setup to no
 Thanks to Max Schnur for allowing us to release an updated version of this mod!
 - https://twitter.com/MaxSchnur/status/691754073893249025
 - https://forums.beamdog.com/discussion/38136/how-one-christmas-can-change-everything-an-amazing-story-of-one-of-the-darkest-day-creators
-
 
 ## Content
 
@@ -24,7 +23,24 @@ I split TDD into components:
  - _ROBILARD
  - _TROLLFORD
 
-**Fixes/Tweaks/Changes**
+## Changelog
+
+**v1.2.x and above**
+ - please read releases description: https://github.com/InfinityMods/TDDz/releases
+
+**v1.2 Fixes/Tweaks/Changes**
+
+- CALIPES1.cre/Name/"Arabs" replace by "Calishite"
+- CALITHUG.cre/Name/"Arabic Thugs" replace by "Calishite Thugs"
+- CALIPRIG.cre/Name/"Arabic Thugs" replace by "Calishite Thugs"
+- DD0200.are: add NW Travel Region that goes to Riatavin directly rather than worldmap // SW Travel Region already goes to Riatavin directly
+- DDCT33.baf/Demriat1.bcs cutscene uses cutspy.cre rather than player1
+- DD3300CT.baf change DEMGRDRX.cre by DEMGRDR1.cre // DEMGRDRX.cre don't attack demon whatever what...
+- BGARIVAL.baf, RAISEART.baf stringrefs fixed
+- ICEELE.cre imported (used by CLERIC_SUMMON_WATER_ELEMENTAL)
+- LAVAELE.cre imported (used by CLERIC_SUMMON_LAVA_ELEMENTAL)
+
+**Fixes/Tweaks/Changes for initial version**
 
 - The entry point of Onset of the Darkest Day moved from Ellisime to Elhan (after Rillifan temple, talk to him)
 - XP granted by scripts are reduced to 10%
@@ -51,18 +67,6 @@ I split TDD into components:
 - Cutscenes to Tartarus with Cutspy.cre and better transitions
 - ARPO27.are/East stair entrance fixed
 - Minor coding fixes and improvements
-	
-**v1.2 Fixes/Tweaks/Changes**
-
-- CALIPES1.cre/Name/"Arabs" replace by "Calishite"
-- CALITHUG.cre/Name/"Arabic Thugs" replace by "Calishite Thugs"
-- CALIPRIG.cre/Name/"Arabic Thugs" replace by "Calishite Thugs"
-- DD0200.are: add NW Travel Region that goes to Riatavin directly rather than worldmap // SW Travel Region already goes to Riatavin directly
-- DDCT33.baf/Demriat1.bcs cutscene uses cutspy.cre rather than player1
-- DD3300CT.baf change DEMGRDRX.cre by DEMGRDR1.cre // DEMGRDRX.cre don't attack demon whatever what...
-- BGARIVAL.baf, RAISEART.baf stringrefs fixed
-- ICEELE.cre imported (used by CLERIC_SUMMON_WATER_ELEMENTAL)
-- LAVAELE.cre imported (used by CLERIC_SUMMON_LAVA_ELEMENTAL)
 
 For now, I focus on adventure, I have no time nor experience to deal/test rules modifications, new spells, or kits.
 
