@@ -30,7 +30,7 @@ THEN
     CreateCreature("spidph01",[2742.758],4)
     CreateCreature("spidph01",[2856.627],4)
     CreateCreature("quadkid1",[410.644],4)
-    CreateCreature("quadtol1",[513.686],4)
+	CreateCreature("quadtol1",[580.760],4)
     SetGlobal("tz_creature","dd9004",1)
 END
 
