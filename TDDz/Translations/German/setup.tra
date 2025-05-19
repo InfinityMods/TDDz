@@ -4,8 +4,12 @@
 @901003 = ~TDD - Purskal~ 
 @901004 = ~TDD - Riatavin~ 
 @901005 = ~TDD - Der Beginn des dunkelsten Tages~
-@901010 = ~TDD - Robilard~
-@901011 = ~You must have TDD - Core installed~
+@901006 = ~TDD - Robilard~
+@901007 = ~Use BGGO extended BG1 areas for TDDz~
+@901111 = ~You must have TDD - Core installed~
+@901112 = ~No BGGO is installed~
+@901113 = ~No TDD component detected.~
+@901114 = ~Only for BGT or EET~
 
 @999000 = ~Calishite~
 @999001 = ~Calishite thugs~
@@ -277,4 +281,3 @@
 @10205 = ~Ihr beginnt, Euch sehr erschöpft zu fühlen. Alles beginnt zu verschwimmen und Ihr könnt nicht mehr klar denken. Es scheint, als hättet Ihr Euch mit einer Art Krankheit angesteckt.~
 @10206 = ~Nein, jetzt nicht.~
 @10207 = ~Ja. ~
-
