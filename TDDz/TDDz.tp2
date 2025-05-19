@@ -1,7 +1,7 @@
 BACKUP ~TDDz/backup~
 //AUTHOR ~shadowlich~
 SUPPORT ~https://forums.beamdog.com/discussion/4841/the-darkest-day/~
-VERSION ~v1.3.2~
+VERSION ~v1.3.3~
 
 ALWAYS
 	INCLUDE ~%MOD_FOLDER%/Lib/Helpers.tpa~
